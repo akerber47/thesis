@@ -6,3 +6,5 @@ Agol*
 *.ps
 *.dvi
 *.log
+*.out
+*.gz
