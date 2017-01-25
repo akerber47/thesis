@@ -1,16 +1,17 @@
 \documentclass[12pt]{amsart}
+\usepackage{amsmath,amscd,amssymb,amsthm,amsfonts}
 %\documentstyle[12pt,theorem,amscd]{amsart}
 %\pagestyle{empty}
 % NMD additions
-\usepackage{graphicx, overpic}
-\usepackage[below]{placeins}
-\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue]{hyperref}
+%\usepackage{graphicx, overpic}
+%\usepackage[below]{placeins}
+%\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue]{hyperref}
 
 %\DeclareMathOperator{\sech}{sech}
 % end NMD additions
-\usepackage[T1]{fontenc}
+%\usepackage[T1]{fontenc}
 
-\usepackage{amsmath,amscd,amssymb, epsfig,psfrag,subfigure}
+%\usepackage{amsmath,amscd,amssymb, epsfig,psfrag,subfigure}
 
 \setlength{\topmargin}{0.5cm}
 \setlength{\oddsidemargin}{-0.2cm}
@@ -19,9 +20,9 @@
 \textwidth = 16.2cm
 
 
-\usepackage{enumerate, amsfonts, latexsym, color, url}
+%\usepackage{enumerate, amsfonts, latexsym, color, url}
 %\usepackage[pdftex]{graphicx}
-\usepackage{epstopdf}
+%\usepackage{epstopdf}
 
 %\input xy
 %\xyoption{all}
@@ -33,42 +34,38 @@
 
 \usepackage{amsthm}
 
-\makeatletter
-\newtheorem*{rep@theorem}{\rep@title}
-\newcommand{\newreptheorem}[2]{%
-\newenvironment{rep#1}[1]{%
- \def\rep@title{#2 \ref{##1}}%
- \begin{rep@theorem}}%
- {\end{rep@theorem}}}
-\makeatother
+%\makeatletter
+%\newtheorem*{rep@theorem}{\rep@title}
+%\newcommand{\newreptheorem}[2]{%
+%\newenvironment{rep#1}[1]{%
+% \def\rep@title{#2 \ref{##1}}%
+% \begin{rep@theorem}}%
+% {\end{rep@theorem}}}
+%\makeatother
 
 
-%\newtheorem{theorem}{Theorem}
-\newreptheorem{theorem}{Theorem}
-%\newtheorem{lemma}{Lemma}
-\newreptheorem{lemma}{Lemma}
+%%\newtheorem{theorem}{Theorem}
+%\newreptheorem{theorem}{Theorem}
+%%\newtheorem{lemma}{Lemma}
+%\newreptheorem{lemma}{Lemma}
 
 
 %%\renewcommand{\baselinestretch}{1.1}
 
-%\newtheorem{Theorem}{Theorem}
-\newtheorem{theorem}{Theorem}[section]
+\newtheorem{theorem}{Theorem}
+\newtheorem{thm}[theorem]{Theorem}
 \newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{lem}[theorem]{Lemma}
 \newtheorem{prop}[theorem]{Proposition}
 \newtheorem{cor}[theorem]{Corollary}
 \theoremstyle{definition}
 %{\theorembodyfont{\rmfamily}
-\newtheorem{definition}[theorem]{Definition}
 \newtheorem{Def}[theorem]{Definition}
-\newtheorem{prob}[theorem]{Problem}
 \newtheorem{rmk}[theorem]{Remark}
 \newtheorem{example}[theorem]{Example}
 \newtheorem{claim}[theorem]{Claim}
-\newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem {proposition} [theorem] {Proposition}
+\newtheorem{conj}[theorem]{Conjecture}
 
-
+\def\x{\times}
 
 \newcommand{\BB}{\mathbb{B}}
 \newcommand{\ZZ}{\mathbb{Z}}
@@ -510,39 +507,69 @@ addressed a particular example of this case.
 
 \section{More background - pared manifolds and stuff}
 
-Definition and important facts about pared manifolds. After Morgan, The Smith
-Conjecture, V ("Uniformization Theorem for Three-Dimensional Manifolds"),
-p 58-60. Or Canary-McCullough, Homotopy Equivalences of 3-Manifolds and
-Deformation Theory of Kleinian Groups, Ch 5 p. 87-92. Also Ch 7 p.105-107. Note
-that Canary-McCullough is much more recent.
+%Definition and important facts about pared manifolds. After Morgan, The Smith
+%Conjecture, V ("Uniformization Theorem for Three-Dimensional Manifolds"),
+%p 58-60. Or Canary-McCullough, Homotopy Equivalences of 3-Manifolds and
+%Deformation Theory of Kleinian Groups, Ch 5 p. 87-92. Also Ch 7 p.105-107.
+%Note that Canary-McCullough is much more recent.
+%
+%(Morgan p58) (Canary-McCullough p87)
+\begin{Def}
 
-(Morgan p58) (Canary-McCullough p87)
-Def. A pared manifold $(M,P)$ is a compact orientable irreducible 3-manifold
-$M$,
-together with $P$ in $dM$, such that the following conditions hold:
+A \emph{pared manifold} $(M,P)$ is a compact orientable irreducible 3-manifold
+$M$, together with $P\in\d M$, such that the following conditions hold:
 
-(1) Every component of P is a torus or annulus, incompressible in M.
-(2) Every noncyclic abelian subgroup of pi1M is peripheral with respect to P,
-ie, conjugate to the pi1 of a component of P.
-(3) (M,P) is "annulus-incompressible": every pi1-injective map (A2, dA2) ->
-(M,P) is homotopic (as a map of pairs) to a map into P.
+\begin{enumerate}
+\item Every component of $P$ is a torus or annulus, incompressible in $M$.
+\item Every noncyclic abelian subgroup of $\pi_1M$ is peripheral with respect to
+$P$ --
+ie, conjugate to the fundamental group of a component of $P$.
+\item $(M,P)$ is ``annulus-incompressible'': every $\pi_1$-injective map $(A^2,
+\d A^2) \to
+(M,P)$ is homotopic (as a map of pairs) to a map into $P$.
+\end{enumerate}
 
-We call P the pared locus or parabolic locus of the pared manifold (M,P).
+We call $P$ the \emph{pared locus} or \emph{parabolic locus} of the pared
+manifold $(M,P)$.
 
-Note that there are a few pared manifolds that are sometimes special cases,
-like with elementary Kleinian groups. (In fact, these are precisely the pared
-manifolds that correspond to elementary Kleinian groups under the construction
-below).
+\end{Def}
 
-Def. A pared manifold (M,P) is elementary if it is one of the following:
-(T2xI,T2x0), (A2xI,A2x0), (A2xI,empty), (or (Morgan only) (S3, empty)).
+Note that there are a few pared manifolds that are special cases,
+like with elementary Kleinian groups. In fact, these are precisely the pared
+manifolds that correspond to elementary Kleinian groups when we construct pared
+3-manifolds from Kleinian groups below.
 
-(Morgan p59, Canary-McCullough p88)
-Prop. Let (M,P) nonelementary. Every component of dM-P has negative Euler
-characteristic. In fact, Canary-McCullough makes some stronger statements:
-(i) M is not a T2xI, K2 I-bundle, or A2xI (solid torus).
-(ii) M does not contain an embedded K2
-(iii) For every component Q of P, pi1Q is a maximal abelian subgroup of pi1M.
+%(Canary-McCullough p88)
+\begin{Def}
+
+A pared manifold $(M,P)$ is \emph{elementary} if it is homeomorphic (as a pair)
+to one of the following: $(T^2\x I,T^2\x 0)$, $(A^2\x I,A^2\x 0)$, or $(A^2\x
+I,\emptyset)$.
+%(or (Morgan only) (S3,empty)).
+
+\end{Def}
+
+%(Morgan p59, Canary-McCullough p88)
+\begin{prop}
+
+Let $(M,P)$ nonelementary. The following facts hold:
+
+%In fact, Canary-McCullough makes these 3 statements. Morgan only has the 4th.
+\begin{enumerate}
+\item M is not a $T^2\x I$, $K^2$ $I$-bundle, or $A^2\x I$ (solid torus).
+\item M does not contain an embedded $K^2$
+\item For every component $Q$ of $P$, $\pi_1Q$ is a maximal abelian subgroup of
+$\pi_1M$.
+\item Every component of $\d M-P$ has negative Euler characteristic.
+% IS THIS CORRECT? Check Canary-McCullough and Morgan. This might allow me to
+% simplify my argument considerably... I may have just paraphrased it wrong...
+% ie does anything apply to the annular components cuttin gup the dM boundaries
+% or do I really just mean to say "every component has negative Euler
+% characteristic, except the ones which are T2, and that T2 is in the pared
+% structure" TODO XXX
+\end{enumerate}
+
+\end{prop}
 
 Pared manifolds arise naturally in the study of Kleinian groups. Given
 a geometrically finite torsion-free Kleinian group G, we construct (M,P) by
