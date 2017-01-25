@@ -1,0 +1,1095 @@
+\documentclass[12pt]{amsart}
+%\documentstyle[12pt,theorem,amscd]{amsart}
+%\pagestyle{empty}
+% NMD additions 
+\usepackage{graphicx, overpic}
+\usepackage[below]{placeins}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue]{hyperref}
+
+\DeclareMathOperator{\sech}{sech}
+% end NMD additions 
+\usepackage[T1]{fontenc}
+
+\usepackage{amsmath,amscd,amssymb, epsfig,psfrag,subfigure}
+
+\setlength{\topmargin}{0.5cm}
+\setlength{\oddsidemargin}{-0.2cm}
+\setlength{\evensidemargin}{-0.2cm}
+\textheight = 22cm  
+\textwidth = 16.2cm
+
+
+\usepackage{enumerate, amsfonts, latexsym, color, url}
+%\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf}
+
+\input xy
+\xyoption{all}
+\newcommand{\cd}[1]{\begin{equation*}{\xymatrix{#1}}\end{equation*}}
+\newcommand{\cdlabel}[2]{\begin{equation}\label{#1}{\xymatrix{#2}}\end{equation}}
+
+
+%\usepackage[notref,notcite]{showkeys} %adds useful marginal notes
+ 
+\usepackage{amsthm}
+
+\makeatletter
+\newtheorem*{rep@theorem}{\rep@title}
+\newcommand{\newreptheorem}[2]{%
+\newenvironment{rep#1}[1]{%
+ \def\rep@title{#2 \ref{##1}}%
+ \begin{rep@theorem}}%
+ {\end{rep@theorem}}}
+\makeatother
+
+
+%\newtheorem{theorem}{Theorem}
+\newreptheorem{theorem}{Theorem}
+%\newtheorem{lemma}{Lemma}
+\newreptheorem{lemma}{Lemma}
+ 
+
+%%\renewcommand{\baselinestretch}{1.1} 
+
+%\newtheorem{Theorem}{Theorem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{lem}[theorem]{Lemma}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{cor}[theorem]{Corollary}
+\theoremstyle{definition}
+%{\theorembodyfont{\rmfamily}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{Def}[theorem]{Definition}
+\newtheorem{prob}[theorem]{Problem}
+\newtheorem{rmk}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem {proposition} [theorem] {Proposition}
+
+
+
+\newcommand{\BB}{\mathbb{B}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\psl}{PSL_2(\ZZ)}
+\newcommand{\qp}{\mathbb{QP}^1}
+\newcommand{\fp}{\mathbb{F}_N\mathbb{P}^1}
+\newcommand{\bbslash}{\backslash\backslash}
+
+\def\rn{\mathcal{N}}
+\def\vol{\mbox{\rm{Vol}}}
+\def\Area{\mbox{\rm{Area}}}
+\def\inj{\mbox{\rm{inj}}}
+\def\span{\mbox{\rm{span}}}
+\def\onto{\twoheadrightarrow}
+\def\into{\hookrightarrow}
+\def\sig{$\sigma$}
+\def\del{$\partial$}
+\def\L{\Lambda }
+\def\T{\Theta}
+\def\a{\alpha}
+\def\b{\beta}
+\def\d{\partial}
+\def\D{\Delta}
+
+\def\disc{\mathcal{D}}
+\def\deg{\mbox{\rm{deg}}}
+\def\cO{{\mathcal O}}
+
+\def\e{\epsilon}
+\def\g{\gamma}
+\def\n{\nu}
+\def\G{\Gamma}
+\def\th{\theta}
+\def\l{\lambda}
+\def\k{\kappa}
+\def\p{\partial}
+\def\s{\sigma}
+\def\z{\zeta}
+\def\i{\iota}
+\def\m{\mu}
+\def\w{\omega}
+\def\S{\Sigma}
+\def\dd{\delta}
+\def\eg{{\it e.g.}\ }
+\def\ie{{\it i.e.}\ }
+\def\ol{\overline{\lambda}}
+
+\newenvironment{pf}{{\it Proof:}\quad}{\square \vskip 12pt}
+\newcommand{\dt}{\ensuremath{\text{det}}}
+\newcommand{\U}{\ensuremath{\widetilde}}
+\newcommand{\Hn}{\ensuremath{\mathbb{H}^3}}
+\newcommand{\h}{{\text{hyp}}}
+%\newcommand{\vol}{\ensuremath{\text{Vol}}}
+\newcommand{\Hess}{\ensuremath{{\text{Hess} \ }}}
+%\newcommand{\l}{\ensuremath{\lambda}}
+%\newcommand{\e}{\ensuremath{\varepsilon}}
+%\newcommand{\dd}{\ensuremath{\delta}}
+%\newcommand{\D}{\ensuremath{\Delta}}
+
+
+\def\tr{\mbox{\rm{tr}}}
+\def\sign{\mbox{\rm{sign}}}
+\def\rank{\mbox{\rm{rank}}}
+
+\def\Hom{\mbox{\rm{Hom}}}
+\def\Ram{\mbox{\rm{Ram}}}
+\def\PSL{\mbox{\rm{PSL}}}
+\def\P{\mbox{\rm{P}}}
+\def\N{\mbox{\rm{N}}}
+\def\SL{\mbox{\rm{SL}}}
+\def\SO{\mbox{\rm{SO}}}
+\def\PO{\mbox{\rm{PO}}}
+\def\SU{\mbox{\rm{SU}}}
+\def\Isom{\mbox{Isom}}
+\def\Mob{\mbox{M\"ob}}
+\def\PGL{\mbox{\rm{PGL}}}
+\def\rk{\mbox{\rm{rk}}}
+\def\GL{\mbox{\rm{GL}}}
+\def\isomorphic{\cong}
+\def\qed{ $\Box$}
+\def\O{\mbox{\rm{O}}}
+\def\OO{\mathcal{O}}
+\def\A{\cal A}
+\def\det{\mbox{\rm{det}}}
+\def\stab{\mbox{\rm{Stab}}}
+\def\Vol{\mbox{\rm{Vol}}}
+\def\Comm{\mbox{\rm{Comm}}}
+\def\min{\mbox{\text{min}}}
+\def\dim{\mbox{\rm{dim}}}
+\def\iM{\mbox{injrad(M)}}
+\def\mod{\mbox{mod}}
+\def\demo{ {\bf Proof.} }
+\def\HH{\mathbb{H}}
+\def\SS{\mathbb{S}}
+\def\AA{\mathbb{A}}
+\def\ddt{\frac{\partial}{\partial t}}
+\def\F{\mathcal{F}}
+\def\MN{\mathcal{N}}
+\def\MM{\mathcal{M}}
+\def\PP{\mathbb{P}}
+\def\CC{\mathbb{C}}
+\def\EE{\mathbb{E}}
+\def\neigh{\mathcal{N}}
+\def\interior{{\rm int}}
+\def\grad{\nabla}
+
+\def\det{\mbox{\rm{det}}}
+\def\stab{\mbox{\rm{Stab}}}
+\def\Vol{\mbox{\rm{Vol}}}
+\def\min{\mbox{\rm{min}}}
+\def\dim{\mbox{\rm{dim}}}
+\def\iM{\mbox{injrad(M)}}
+\def\Int{\mbox{int}\ }
+\def\exp{\mbox{\rm{exp}}\ }
+\def\mod{\mbox{mod}\ }
+\def\demo{ {\bf Proof.} }
+\def\H{{\bf H}^3}
+\def\HH{\mathbb{H}}
+\def\AA{\mathbf{A}}
+\def\ddt{\frac{\partial}{\partial t}}
+\def\F{\mathcal{F}}
+\def\MC{\mathcal{C}}
+\def\MN{\mathcal{N}}
+\def\MO{\mathcal{O}}
+\def\PP{\mathbb{P}}
+\def\CC{\mathbb{C}}
+\def\CH{\mathcal{CH}}
+
+%Groves-Manning definitions
+\newtheorem {corollary} [theorem] {Corollary}
+\newtheorem {problem}	{Problem}
+\newtheorem {application} [theorem] {Application}
+\newtheorem {case}{Case}[theorem]
+
+\newtheorem {remark} [theorem] {Remark}
+\newtheorem {note} [theorem] {Note}
+\newtheorem {question} {Question}
+\newtheorem {notation} [theorem] {Notation}
+\newtheorem {terminology} [theorem] {Terminology}
+\newtheorem {construction} [theorem] {Construction}
+\newtheorem {observation} [theorem] {Observation}
+\newtheorem {convention} [theorem] {Convention}
+
+
+
+\def\N {\mathbb N}
+\def\R {\mathbb R}
+\def\Core {\mathrm{Core}}
+\def\Isom {\mathrm{Isom}}
+\def\Diam {\mathrm{Diam}}
+\def\ker {\mathrm{ker}}
+\def\cP {\mathcal P}
+\def\cH {\mathcal H}
+\def\cO {\mathcal O}
+\def\Xcph {X \cup \partial_{\cH} X}
+
+\def\mc {\mathcal}
+\def\Hpairs {\mc{H}}
+\def\Stab {\mathrm{Stab}}
+
+\newcommand{\jfm}[1]{\marginpar{\tiny {#1}  --jfm}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\Fix}{\mathrm{Fix}}
+\newcommand{\TODO}[1]{\footnote{TODO: {#1}}}
+\newcommand{\co}{\colon\thinspace}
+%end Groves-Manning defs
+
+
+
+\def\split{\backslash\backslash}
+
+% Macro to generate the # symbol in html specials
+\edef\t@mp{\catcode`\noexpand\#=\the\catcode`\#}%
+    \catcode`\#=12
+    \def\h@sh{#}%
+    \t@mp
+
+% Macro to generate the ~ symbol in html specials
+\edef\t@mp{\catcode`\noexpand\~=\the\catcode`\~}%
+    \catcode`\~=12
+    \def\tild@{~}%
+    \t@mp
+
+
+\begin{document}
+
+\title{Quasifuchsian subgroups of a book of I-bundles}
+
+\author{Alvin Kerber}
+%\address{University of California, Berkeley\\
+%970 Evans Hall \\
+%Berkeley, CA, 94720}
+    \email{alvin@math.berkeley.edu}
+%\thanks{Agol supported by something or other}
+%\date{%
+%\today}
+
+\begin{abstract}
+We prove that for a particular book of I-bundles, every Kleinian group
+realizing this topological manifold contains a quasifuchsian subgroup.
+\end{abstract}
+
+\maketitle
+\section{Introduction}
+
+Let $M$ be a hyperbolic 3-manifold. $M$ has many possible realizations as
+a Kleinian group $G$ quotient manifold. By work of Jorgensen (Characteristic
+Submanifold theory?) the study of hyperbolic structures on a 3-manifold can be
+reduced to studying pared 3-manifold structures on the boundary. The pared
+structure gives data specifying the loci on the boundary corresponding to the
+cusps of the Kleinian group / hyperbolic manifold.
+
+To ask whether the Kleinian group contains a quasifuchsian subgroup in this
+case boils down to asking whether we can find a closed immersed
+$\pi_1$-injective surface which avoids these parabolics up to homotopy. That
+is, we're trying to choose a surface subgroup of $G=\pi_1(M)$ which does not
+contain any of the peripherial elements in the image of the embedding $P\toM$,
+where $(M,P)$ is the pared 3-manifold structure with $P$ the parabolic locus.
+Or any multiples of those elements.
+
+There is some existing work related to this. Cooper, Long, and Reid addressed
+the underlying topological problem, showing that a compact connected
+irreducible 3-manifold with non-empty incompressible boundary  must contain an
+essential closed surface, unless it's covered by a product $F\times I$.
+However, this surface may contain accidental parabolics, and fail to be
+quasifuchsian.  In the closed hyperbolic case, Kahn and Markovic proved that
+there always exists an immersed closed hyperbolic $\pi_1$-injective surface in
+any closed hyperbolic 3-manifold. Such a surface is necessarily quasifuchsian
+because the hyperbolic 3-manifold is closed, hence contains no parabolics.
+Finally, Baker and Cooper (re-proving work of Masters and Zhang) showed that
+every finite volume hyperbolic 3-manifold with cusps contains a quasifuchsian
+subgroup.
+
+The remaining case is infinite volume hyperbolic 3-manifolds. So far we've only
+addressed a particular example of this case.
+
+Let M be a hyperbolic 3-manifold which is a book of I-bundles. That is, it is
+constructed as follows. Begin with a set of disjoint copies of S1 - these are
+the spines. Attach compact surfaces with boundary, the pages, to these spines
+with attaching maps (which can map one of more times around, in either
+direction). However, we insist that the attaching map wrap the same number of
+times in the same direction for each spine (ie, if we look at just one spine,
+all the pages are "parallel"). Then thicken the resulting 2-complex, to obtain
+a 3-manifold. If a surface wraps more han once around a spine, we will further
+have to make a choice of the transverse "spiralling" direction which we use to
+make sure the attaching maps is a hmeomorphism onto its image. The thickened
+surface boundary component (a copy of S1xI) maps to the boundary of the
+thickened spine (S1xS1).  Noete that we also use "spine" and "page" to refer to
+the thickened boundary components. We call the result a book of I-bundles by
+analogy with building a book by gluing pages to a spine parallel along one side
+- here, we glue thickened surfaces, or I-bundles, to a spine in order parallel
+along one boundary component.
+
+Almost all books of I-bundles are hyperbolic (why?). For now, let's just say
+it's because almost all 3-manifolds are hyperbolic. As discussed above, given
+a Kleinian group realization (representation?) of a given book of I-bxundlem M,
+we can exhibit a quasifuchsian subgroup recisely when we can produce
+a pi1-injective immersed closed surface which pi1-avoids the pared locus
+associated to the Kleinian group structure on M - this is a locus representing
+the curves that descend down to the parabolic fixed points? See Morgan-Bass and
+Canary-McCullough for details on the basics of pared 3-manifolds.
+
+At the very least, let's define pared 3-manifolds. A pared 3-manifold is ...
+something (TODO)
+
+Ian Agol has provided a lemma which we'll use repeatedly to construct these
+pi1-injective immersed surfaces, or prove that it's impossible.
+
+Agol Lemma: Let f:S1->S2 be a pi1-injective immersion between two surfaces.
+Then f is (homotopic to) a covering map.
+
+Proof: (TODO - look in old notes and write it down!)
+
+The basic idea is as follows. A pi1-injective immersed surface in
+M corresponds, after cutting the book of I-bundles back up along the gluing
+annuli into spines and pages, to a set of pi1-injective surfaces in each page
+(an I-bundle), along with an attachment between these pages along each spine.
+In order to be pi1-injective, the attachment between pages at the spine must be
+simple - the spine has just a simple homotopy group S1, and so the page
+attachments cannot be along a complicated surface embedded in the spine, but
+must just be the obvious union of annuli. So a quasifuchsian candidate surface
+inside a book of I-bundles can be represented by a union of immersed
+pi1-injective surfaces, one in each page, together with identifications among
+the boundary components of these surface pieces that line up with a given
+spine.
+
+But now, because each surface piece is a pi1-injective immersion into an
+I-bundle, we can contract the I-bundle (by orientability, all the I-bundles are
+actually trivial - at least in the cases I want to consider for now - if not,
+can probably use covering space trickery to fix it) to a surafec. Applying the
+lemma, we see that every surface piece is homotopic to a covering surface of
+that page (viewed as a surface, before thickening).
+
+Now let's look at the pared 3-manifold condition we need to check to make sure
+our resulting surface is quasifuchsian. Our parabolic locus will consist of
+a set of disjoint embedded annuli and tori in the boundary of our book of
+I-bundles. Now, none of these components can be tori, because the boundary
+components of a book of I-bundles ll have genus at least two, by construction
+(in order to produce a boundary component of smaller genus, since boundary
+components "follow through" cores along adjacent pages, we'd have to have at
+least one page of genus zero - and we can just pass through a homotopy that
+eliminates them (or a homeomorphism? Mostow rigidity etc. It's easier to see
+the homotopy though I think). That argument seems like mild BS, but anyway
+we're only considering books of I-bundles where all the bundles have genus >=
+1, and of course at least one boundary component. So there cannot be any pared
+tori, ie rank 2 cusps, in a book of I-bundles.
+
+For the rank 1 cusps, or pared annuli, each annulus traces out a core curve on
+the boundary component. If we're looking in pi1, it suffices to avoid these
+curves. If we can construct a quasifuchsian candidate surface that avoids these
+parabolic locus curves, it'll be quasifuchsian, as desired. And any
+quasifuchsian surface must descend to a cover on each page, and those covers
+must glue together across the spines, so if we can show that there is NO choice
+of covers that glues and avoids the parabolics, then that book of I-bundles
+cannot contain a quasifuchsian surface.
+
+So, to summarize, the problem of finding a quasifuchsian surface subgroup of
+a book of I-bundles M is equivalent to the following problem: given a set of
+disjoint non-parallel simple closed curves on each component of dM, find
+a cover of each core surface Ei of the pages Mi and an identification of the
+boundary components dEij of these surfaces that meet at each spine Nj, such
+that the resulting glued surface doesn't contain any of the elements of pi1M
+corresponding to the given parabolic locus curves.
+
+Finally, to ensure the surface doesn't contain the parabolic locus curves,
+since the surface is locally a cover on each I-bundle and the immersion is
+homotopic to a covering of the core, any homotopy of a parabolic locus curve
+into the quasifuchsian candidate surface would correspond on each I-bundle to
+a homotopy (rel cut boundary) of the corresponding arcs into arcs on the
+covering surface, ie lifts of these arcs rel boundary viewed as retracted arcs
+on the core surface of this I-bundle. So to prove this cover does not contain
+pi1M elements corresponding to parabolic locus curves, it suffices to show that
+there do not exist lifts of the arc components in each I-bundle of the locus
+curves that connect up to form closed curves, when connected across the mouth
+gluings of the quasifuchsian surface.
+
+A picture of this (or many pictures!) would be really helpful.
+
+We believe that the following conjecture holds, but we haven't proven it in all
+cases yet.
+
+Conjecture: Let M be a book of I-bundles, and P any pared locus. Then (M,P)
+contains a quasifuchsian surface subgroup.
+
+Careful! This definitely isn't right. For instance, if the pared locus consists
+entirely of curves that stay inside a single I-bundle, one for each I-bundle,
+then we're totally stuck. Otherwise, we need to "cross that one off". What's
+that mean? I think we can get away with remove that page from the book of
+I-bundles, along with all parabolics that pass through it. If it's still
+possible to construct a surface on what's remaining, that one will work.
+
+We'll go through what we've proven so far, case by case.
+
+\section{Background details}
+
+These are some background facts that we'll need to go through the examples in
+detail.
+
+Arcs in surfaces with boundary - from Fathi-Laudenback-Poenaru, Exposes 2 and
+4 (see p. 21-24, 43-52).
+This is an exposition of coordinates for classes of arcs in a surface
+with boundary, aka Dehn-Thurston coordinates.
+
+Let A(N) be the set of isotopy classe sof simple closed proper arcs I\in N such
+that they represent nontrivial elements of pi1 rel boundary. We isotope them
+with the ends of the arcs free to move within the boundary components they are
+contained in. Similarly A'(N) with simple closed multi-arcs, up to isotopy.
+
+Theorem (FLP 2.11). Let P2 be the standard pair of pants. A(P2) consists of
+exactly six elements, classified by the boundary components of their endpoints.
+
+Theorem (FLP 2.12). A'(P2) is isomorphic to
+A'={(a1,a2,a3) in Z | sum ai is even }
+via the map
+i:A'(P2)->A'
+i(tau) = (i(tau, d1),i(tau,d2),i(tau,d3)) where d1,d2,d3 are the boundary
+components of P2, and i(,) is geometric intersection number.
+
+That is, simple closed multicurves exist and are uniquely determined, for each
+choice of boundary intersection numbers of the correct parity.
+
+Finally, given a closed surface, let N, let S(N) be the set of isotopy classes
+of simple closed curves on N, and S'(N) simple closed multicurves.
+
+Theorem (FLP 4.8). Let N be a closed surface of negative Euler characteristic.
+Fix a pants decomposition of N into 2g-2 pairs of pants along 3g-3 disjoint
+simple closed curves K1,...,K3g-3. Then
+
+S'(N) is isomorphic to B0 = {(mi,si,ti) in Z, i = 1,...,3g-3 | all coords >= 0,
+and for each pair of pants the corresponding mi sum is even}
+where the mi measure intersection numbers with the curves K1,...,K3g-3, and the
+si,ti measure twisting around at each intersection curve as a rational number.
+See FLP for details of the calculation of the twisting coordinates - we won't
+be needing it here (at least, not yet!).
+
+We actually require a slight generalization of this result, but the proof is
+identical.
+
+Theorem. Let SA'(N) be the set of disjoint multi-curves or arcs on N, a surface
+possibly with boundary. That is, each element of SA'(N) corresponds to a union
+of simple closed curves and simple arcs on N, all disjoint, such that the arcs
+are properly embedded, up to isotopy where the arcs are permitted to slide on
+each boundary component. Then SA'(N) is isomorphic to the obvious choice, where
+we again decompose into pairs of pants, have mi for each boundary curve or
+decomposition curve, but si,ti only for each decomposition curve.
+
+Finally, let A''(N) (or maybe some better notation, etc) be the set of simple
+proper multi-arcs satisfying the condition that no two components of the
+multi-arc are parallel, ie, isotopic. Alternatively we can think of A''(N) as
+consisting of simplices in the arc complex of N, or as a quotient of A'(N)
+where we identify multicurves along splitting / joining of parallel arcs. In
+general, A''(N) is more difficult to parametrize, as purely from the
+coordinates it is difficult to determine which multicurves or multiarcs will
+contain parallel components.
+
+We define S''(N), SA''(N) similarly.
+
+Example. Consider the pair of pants P2. We know A(P2) has 6 elements, so
+A''(P2) has at most 2**6 elements, corresponding to which arcs are present in
+our multi-arc. It suffices to check that all 6 arcs can be
+embedded in P2 without intersecting.
+
+Example. Consider the punctured torus S1,1. We first compute SA'(S1,1). By the
+generalized Dehn-Thurston coordinates theorem above, (work this out on paper
+first)
+
+\section{More background - pared manifolds and stuff}
+
+Definition and important facts about pared manifolds. After Morgan, The Smith
+Conjecture, V ("Uniformization Theorem for Three-Dimensional Manifolds"),
+p 58-60. Or Canary-McCullough, Homotopy Equivalences of 3-Manifolds and
+Deformation Theory of Kleinian Groups, Ch 5 p. 87-92. Also Ch 7 p.105-107. Note
+that Canary-McCullough is much more recent.
+
+(Morgan p58) (Canary-McCullough p87)
+Def. A pared manifold (M,P) is a compact orientable irreducible 3-manifold M,
+together with P in dM, such that the following conditions hold:
+
+(1) Every component of P is a torus or annulus, incompressible in M.
+(2) Every noncyclic abelian subgroup of pi1M is peripheral with respect to P,
+ie, conjugate to the pi1 of a component of P.
+(3) (M,P) is "annulus-incompressible": every pi1-injective map (A2, dA2) ->
+(M,P) is homotopic (as a map of pairs) to a map into P.
+
+We call P the pared locus or parabolic locus of the pared manifold (M,P).
+
+Note that there are a few pared manifolds that are sometimes special cases,
+like with elementary Kleinian groups. (In fact, these are precisely the pared
+manifolds that correspond to elementary Kleinian groups under the construction
+below).
+
+Def. A pared manifold (M,P) is elementary if it is one of the following:
+(T2xI,T2x0), (A2xI,A2x0), (A2xI,empty), (or (Morgan only) (S3, empty)).
+
+(Morgan p59, Canary-McCullough p88)
+Prop. Let (M,P) nonelementary. Every component of dM-P has negative Euler
+characteristic. In fact, Canary-McCullough makes some stronger statements:
+(i) M is not a T2xI, K2 I-bundle, or A2xI (solid torus).
+(ii) M does not contain an embedded K2
+(iii) For every component Q of P, pi1Q is a maximal abelian subgroup of pi1M.
+
+Pared manifolds arise naturally in the study of Kleinian groups. Given
+a geometrically finite torsion-free Kleinian group G, we construct (M,P) by
+truncating small neighborhoods of the cusps of the quotient manifold MG
+= H3uO(G)/G.  Then we let M be the resulting compact manifold with boundary,
+and P the boundary locus along which we truncated. That is, we can rebuild the
+quotient manifold from (M,P) by gluing cusp neighborhoods onto each component
+of P. It follows from basic Kleinian group theory that the resulting (M,P) will
+satisfy conditions 1-3 above, making it a pared manifold. The parabolic
+elements of G precisely correspond to (conjugacy classes of) the peripheral
+subgroups piP in pi1M.
+
+Conversely, Thurston's famous uniformization theorem states that for every
+pared manifold (M,P) with M Haken, there exists a finite volume (in particular,
+geometrically finite) hyperbolic 3-manifold structure on the interior
+satisfying the appropriate conditions for a pared 3-manifold! (see Morgan for
+details of this construction)
+
+To be precise:
+
+(Morgan p60, but his statement is confusing / less modern definitions. He does
+state the more general theorem for Haken pared manifolds though.)
+(Canary-McCullough p105-106)
+Theorem. If (M,P) is an oriented pared 3-manifold with nonempty boundary, then
+there exists a geometrically finite uniformization of (M,P), that is, a map
+rho: pi1M -> PSL2C such that rho(g) is parabolic if g in pi1(P), and an
+orientation-preserving homeomorphism M-P -> (H3
+u Omega(rho(pi1M)))/(rho(pi1M)).
+
+See discussion on (CMc p106, bottom of page) for why this definition of
+geometrically finite is equivalent to the standard one.
+
+Example. Maybe?
+
+\section{Our reduction}
+
+In our result, we study the problem of finding quasifuchsian surface subgroups
+of Kleinian groups from the topological perspective. We convert our given
+Kleinian group to a pared 3-manifold, and look for surface subgroups of this
+Kleinian group that avoid the peripheral pared structure.
+
+Theorem / Statement of plan. Finding a quasifuchsian surface subgroup of
+a Kleinian group is reduced by the following theorem:
+
+Theorem (Baker-Cooper Theorem 1.7 - "work of Bonahon and Thurston"). Let M be
+a complete hyperbolic 3-manifold with finite volume, and S a closed oriented
+pi1-injective immersed surface of negative Euler characteristic. Then either
+S is a virtual fiber, or S is geometrically finite. In the second case, it's
+either quasiFuchsian or some element of pi1S is parabolic.
+
+We assume this reduction still works in our cases (which are not finite
+volume). I hope some reference to Thurston can fix this.
+
+So in our case, since the parabolic elements precisely correspond to the pared
+structure, our problem becomes a purely topological one: can we find a
+closed immersed pi1-injective surface of negative Euler characteristic, that
+doesn't contain any of the pared locus, up to homotopy?
+
+Since we're working in the case of books of I-bundles, we can reduce the pared
+locus by observing that there are no torus boundary components of M, so all the
+components of the pared locus must be annuli (as they're pi1-injective). For
+each annulus, since we're only concerned with its homotopy class, it suffices
+to consider the core curve.
+
+\section{Our first example - take 2}
+
+We construct a book of I-bundles M as follows. In the following we take S1,1 to
+be the compact surface of genus 1 with a single boundary component, a circle.
+Abusing terminology slightly, we'll call this the punctured torus.
+Let M1,M2,M3 be 3 punctured
+torus I-bundles. M1,M2,M3=S1,1xI. or each Mi, write dMi = dS1,1xI u S1,1x0
+u S1,1 x 1. We write these boundary pieces as dMi = Ai u d-Mi u d+Mi. Let Mc
+= S1xD2 be a solid torus. Attach the Mi to Mc by gluing the Ai to parallel
+annuli in dMc, each with longitudinal core curve. The result is a compact
+3-manifold with boundary M. We choose orientations and a cyclic order for the
+gluing such that the 3 boundary components of M are precisely
+dM=d12M u d23M u d31M = (d+M1 uS1 d-M2) u (d+M2 uS1 d-M3) u (d+M3 uS1 d-M1).
+Each boundary component of M consists of two punctured tori glued along their
+boundary circles, topologically a genus two surface.
+
+We consider possible pared structures P on M. Our goal is to find a closed
+immersed pi1-injective surface S in M such that pi1Pk intersect pi1S = empty
+for each component Pk of P. We'll call this condition (*).
+
+Note that since we
+haven't fixed a basepoint, these subgroups are really only defined up to
+conjugacy - what we're saying is they fail to intersect for an arbitrary choice
+of conjugacy class for each subgroup. (ask Ian about this? seems fuzzy)
+
+Lemma. ("Ian's covering lemma") Let S be a surface satisfying (*). Homotope
+S to have minimal intersection with each Ai, that is, so there are no "bumps".
+Then for each Mi, each component of S intersect Mi is a finite-sheeted covering
+of the core surface. That is, given such a component S' in Mi, the map S' -> Mi
+= S1,1xI -> S1,1x{1/2} is homotopic to a finite-sheeted covering
+map. Conversely, given any finite-sheeted covering Stilde -> S1,1, there
+exists a corresponding proper immersed pi1-injective surface S in S1,1xI.
+
+Proof. S is compact, so every such component S' is a compact surface with
+boundary, properly immersed in Mi. Since S is pi1-injective in M, S' must be
+pi1-injective in Mi. Otherwise, we'd have a nontrivial element of pi1S' which
+is trivial in pi1Mi, hence in pi1M, hence in pi1S, contradicting the minimal
+position homotopy above. So the map phi : S'->S1,1x{1,2} is also pi1-injective,
+since Mi deformation retracts to its core. Let H = phi*(pi1S'), and let S1,1H
+be the cover of S1,1 associated to H<pi1S1,1. phi lifts to phitilde : S' ->
+S1,1H. This is a proper map of compact surfaces which is an isomorphism on pi1.
+By the classification of surfaces, it must be homotopic (as a proper map) to
+a homeomorphism. So phi is homotopic to a covering map. It must be
+finite-sheeted as S' is compact (by classification of surfaces again).
+
+Conversely, given a finite-sheeted cover Stilde -> S1,1, compose with the
+embedding S1,1 = S1,1x{1/2} in S1,1xI. This is proper and pi1-injective.
+Perturb locally to obtain an immersion.
+
+Lemma. Let P be a pared structure on M. P cannot contain any tori. That is,
+P consists entirely of annuli.
+
+Proof. We can compute pi1M directly from the van Kampen theorem. Let ai,bi be
+the generators of pi1(Mi), and c be the generator of pi1(Mc). Our gluing yields
+pi1(M) = <a1,b1,a2,b2,a3,b3,c| [a1,b1]=[a2,b2]=[a3,b3]=c>. It immediately
+follows that pi1M contains no rank 2 abelian subgroups, as no two elements
+commute. Since every component of P is pi1-injective, they must all be annuli.
+
+Proposition. Suppose P contains a component P0 that, up to homotopy, is
+contained entirely within one "I-bundle half" of a boundary component. That is,
+P0 in dMi, for some i. Without loss of generality we can let P0 in dM1. Then
+there exists a surface satisfying (*) if and only if P contains no components
+that are (up to homotopy) contained in dM2 u dM3 = d-M2 u d23M u d+M3.
+
+Proof. (<=) Take S=d23M. Intuitively, it's easy to see that the conditions on
+P force all its components to lie on surfaces where they can't be homotoped
+into S.
+
+Algebraically, pi1S is the subgroup generated by
+a2,b2,a3,b3 in pi1M. pi1S = <a2,b2,a3,b3 | [a2,b3]=[a3,b3]>. P contains no
+components in d23M, so an arbitrary component Pk of P  must be contained in
+d12M or d31M, which have fundamental groups generated by (a1,b1,a2,b2) and
+(a3,b3,a1,b1) respectively. pi1Pk is cyclic, so let g be its generator. No
+matter if it's contained in d12M or d31M, we can see that in order for pi1Pk to
+overlap with pi1S, it must have generator some word in a2,b2 (if Pk in d12M),
+or some word in a3,b3 (if Pk in d31M). In either case, this is precisely the
+condition for such a word to correspond to a curve contained in dM2 or dM3,
+respectively, contradicting our assumption on P.
+
+(=>) Let S be a surface satisfying (*). Cut S into components in M1,M2,M3
+(after homotoping to minimal intersections with the annuli). Applying Ian's
+covering lemma, we can see that S intersect M1 = empty, as otherwise since it's
+a finite-sheeted cover it would have to contain a multiple of P0.
+So S in M2 u M3 u Mc, which is homeomorphic to S2 x I. Deformation retracting
+this to a surface S2 and applying a covering argument like in Ian's lemma, we
+can see that S is a cover of S2. Since it's a finite-sheeted cover, it will
+have to have pi1 intersecting any component Pk that violates the conditions
+stated above. This completes the proof.
+
+Theorem. Let P be a pared structure containing no components P0 as in the above
+proposition. Then there exists a surface satisfying (*).
+
+This is the main theorem we prove for this example. A few preliminary facts are
+required. Note that we can first isotope P such that it's in minimal position
+on each boundary component with respect to the gluing circle.
+
+Lemma. Under the hypotheses of the theorem, each "I-bundle half" P intersect
+d+Mi (or d-Mi) is a thickening of a set of disjoint essential arcs, each arc
+connecting d(d+Mi) to itself. The arcs form at most 3 "bands", where all the
+arcs in each band are parallel.  Furthermore, if we choose a representative arc
+from each band (yielding a set of at most 3 disjoint non-parallel arcs in
+S1,1), there exists an automorphism of S1,1 taking these arcs to a standard set
+of 3 disjoint non-parallel arcs.  See diagram for an illustration of the
+standard set.
+
+Proof. We first need a preliminary definition. After cutting a surface with
+boundary along arcs, we'll obtain one or more connected surfaces, each with one
+or more boundary components. Each boundary component after cutting will have
+pieces from the original boundary as well as pieces from the arcs that we cut
+along. Given labels gamma1,...,gammak for the boundary components and
+alpha1,...,alphal for the arcs (on the original surface with boundary), we can
+describe each boundary component of the cut surfaces as a union of arcs, each
+labeled with gamma1,...,gammak,alpha1,...,alphal. We call this an arc pattern
+for that boundary.
+
+We first show that S1,1 admitts at most 3 disjoint essential non-parallel arcs,
+and the possible surfaces and arc patterns obtained by cutting along these arcs
+are very restricted.
+
+Label the boundary component of S1,1 by gamma. Consider a proper essential arc
+alpha1 in S1,1. Fix an orientation for alpha1. Since S1,1 is orientable, we can
+look at local neighborhoods of alpha1 and see that alpha1 has a well-defined
+"left side" and "right side" as we travel along it. Looking at the endpoints of
+alpha1 along gamma, we are forced to connect certain endpoints in the cut-up
+gamma with alpha1, in order to preserve the parity. This tells us the (possibly
+disconnected) cut surface S1 will have two boundary components. Each will have
+an arc pattern consisting of two arcs, one labeled gamma and one labeled
+alpha1.
+
+Since we cut along a properly embedded arc, the Euler characteristic increases
+by one. x(S1)=0 and S1 has two boundary components. By classification of
+surfaces, S1 = S0,2 or S0,1 u S1,1. But if S1 contained a disk with the arc
+pattern described above, embedding that disk back in S1,1 would describe
+a homotopy of alpha1 into the boundary. So S1 = S0,2.
+
+Now suppose we had a second proper essential arc alpha2 in S1,1, disjoint from
+and non-parallel to alpha1. Since it's disjoint from alpha1, alpha2 induces
+a proper arc in S1 which connects two regions in the arc pattern labeled gamma.
+alpha2 must have one endpoint on each boundary component of S1. If both are on
+the same side, it's either homotopic to the boundary of S1,1 or parallel to
+alpha1. Cutting along alpha2 yields a new surface S2. Topologically S2=D2, with
+arc pattern consisting of 8 components in the cyclic order
+(gamma,alpha1,gamma,alpha2,gamma,alpha1,gamma,alpha2).
+
+Finally, adding our 3rd proper essential arc alpha3, disjoint and non-parallel
+to the first two arcs, a similar argument shows that alpha3 must connect
+opposite gamma pieces in the arc pattern. Cutting along alpha3 yields two disks
+with the same arc pattern. Depending on the choice of alpha3, the arc pattern
+on these disks is either (gamma,alpha1,gamma,alpha2,gamma,alpha3) or
+(gamma,alpha1,gamma,alpha3,gamma,alpha2). So up to relabeling
+alpha1,alpha2,alpha3, cutting along 3 proper essential disjoint non-parallel
+arcs has only one possible choice of cut surfaces and arc patterns.
+
+Observe that it is not possible to add any more disjoint non-parallel arcs. In
+particular, any arc we draw between gamma components of the arc pattern on
+either disk is homotopic to the boundary or parallel to an existing arc.
+Furthermore, if we add new disjoint arcs and allow them to be parallel, we can
+see that they must form "bands" around the existing 3 arcs in order to remain
+disjoint. That is, we can homotope all the arcs parallel to a given arc into
+a small neighborhood of that arc in the disk, without intersecting any of the
+non-parallel arcs.
+
+We claim there exists an automorphism of S1,1 taking any set of 3 such arcs to
+any other set (in particular, to the standard set, as illustrated). Since there
+is only one topological result of cutting along the arcs, choose
+a homeomorphism of the cut surfaces. Up to relabeling the arcs, we can choose
+a homeomorphism that identifies matching arcs in the arc patterns (as shown
+above, there is only one possible arc pattern up to relabeling). Glue both
+sides along the arcs to obtain the desired automorphism of S1,1.
+
+We now consider P intersect d+Mi in d+Mi = S1,1. As shown, P is a union of
+annuli. By the assumptions of the theorem, no annulus of P is contained in
+d+Mi, so each annulus intersects d+Mi in a union of rectangles, where two sides
+of the rectangle are embedded in the boundary d(d+Mi). Since we homotoped P to
+have minimal intersections, all the core arcs of the rectangles (pieces of the
+core curve of the annulus) must be essential. They are disjoint by definition
+of P. The statement of the lemma follows from applying the above argument to
+these core arcs.
+
+We consider a connected cover S1,1tilde -> S1,1 homeom d+Mi (or d-Mi) with two
+boundary components. Every core arc (as in above lemma) of P intersect d+Mi
+lifts to arcs in S1,1tilde. We say such an arc is cis for a given cover if
+both endpoints of any (ie all) lifts of that arc lie in the same boundary
+component upstairs. Otherwise, we say it's trans for that cover.
+
+Lemma. Given any 3 disjoint non-parallel proper arcs in S1,1, and any double
+cover of S1,1, 2 of the 3 arcs are trans, and the 3rd is cis.
+Furthermore, we can choose any two of the three we wish to be trans with an
+appropriate cover.
+
+Proof. As in earlier lemma, there exists an automorphism of S1,1
+taking these 3 arcs to the standard set of 3 disjoint non-parallel proper arcs.
+Now it suffices to observe, by looking at relative first homology or just by
+construction, that each of the three standard connected double covers
+(corresponding to nonzero maps Z2 -> Z/2) makes two of the three arcs trans and
+the third cis.
+
+Proof of theorem.
+
+Since P has no components P0, every P intersect d+Mi is a union of thickened
+arcs (that is, there are no full annulus components in any d+Mi or d-Mi). Apply
+the first lemma to break these into bands. The problem is most constrained when
+there are 3 bands, so we'll consider that case (if there are fewer than 3, just
+draw some more arcs on that component arbitrarily, and the proof still works).
+
+We will build our surface S by taking a double cover of the core S1,1 surface
+for each I-bundle page M1,M2,M3. Call these covers S1,S2,S3. Each of these has
+two boundary components. We'll then attach the boundary components such that
+each of S1,S2,S3 has exactly one boundary component connected to each of the
+others.  See diagram.
+
+Choose an arbitrary connected double cover for S1. We can view this as a cover
+of d+M1 or d-M1, deformation retracting either way. By the lemma, two of the
+3 bands on d+M1 are trans, and the other is cis. The same holds for d-M1.
+
+We cannot choose S2 arbitrarily, as a cis arc for S1 in d+M1 may connect (in S)
+to a cis arc for S2 in d-M2. These together would form a closed curve that
+lifts to S, which once S is immersed in M will yield a violation of condition
+(*). Instead, observe that there is at most one band of the three in d-M2
+containing arcs that, when glued across the core circle, match up to arcs in
+the cis band of d+M1 to form closed curves containing only arcs in those two
+bands. This is because once one band has that behavior, by endpoint parity the
+vertices can't also match up for a different band, if the arcs they have to
+match with on the other side are parallel. Looking at the boundary circle,
+non-parallel arcs have endpoints in cyclic order, but parallel arcs don't). See
+diagram. It suffices to check this for our standard set of non-parallel arcs,
+by the same automorphism argument.
+
+Since there is only one such band on d-M2, choose S2 such that this band is not
+cis.  Finally, for S3 we have two connecting constraints. We have a cis band on
+d-M1 from our choice of S1, and a cis band on d+M2 from our choice of S2.
+Applying the same argument, there is at most one band on d-M3 and one band on
+d+M3 that will connect to form closed curves. But we can choose S3 such that
+both of these bands are trans. (This requires a slight modification to the
+lemma - since these bands are on different boundary surfaces, they may not be
+disjoint non-parallel. If they aren't disjoint, we can tweak them by local
+modifications so they are, and then "untweak" them in the cover. If they are
+parallel, just ignore one set of bands)
+
+Glue S1,S2,S3 as described to obtain S. We claim that S satisfies condition
+(*). S is closed and immersed by construction (as in Ian's covering lemma). It
+is pi1-injective inside each I-bundle by Ian's covering lemma, and inside the
+core Mc because it's just a union of incompressible gluing annuli there. It
+suffices to show that pi1S intersect pi1Pk = 1 for each component Pk of the
+pared locus. Looking at the core curve of the annulus Pk, this implies that
+some multiple of that core curve is homotopic into S.
+
+But this is impossibly by the above construction. Every such curve contains at
+least two bands, on two different components d+-Mi. By the construction of S,
+of any two bands which connect up when the boundary components are glued across
+circles, at least one must be trans. This means that when we try to homotope
+the core curve multiple into S, in order to follow along S locally (in each
+page, where S is locally a cover of the core surface, it must be a lift from
+that core surface) it would have to traverse between all three pieces of the
+cover, as that's how we connected up the Si. Every trans arc lifts to an arc
+that connects two different boundary components of an Si, which are "pointed in
+different directions". But this is obviously impossible, as our Pk is
+restricted to be in a single boundary component, so up to homotopy it must be
+generated by those two I-bundle pages only.
+
+This completes the proof.
+
+\section{Some generalizations}
+
+We use the following general notation for books of I-bundles. Let Mc1,...,Mcm
+be the spines, all solid tori. Let M1,...,Mn be the pages, all thickened
+surfaces. Each Mi has boundary components Ai1,...,Aiki all annuli. We glue each
+annulus to a boundary annulus on some spine. For each spine, all these gluing
+annuli must be disjoint and parallel. We can assume without loss of generality
+that all pages have negative Euler characteristic, and all spines have at least
+3 pages glued to them (otherwise, just consolidate into fewer pages / spines).
+
+Given such a book of I-bundles M, let G=(V,E) be the graph associated to the
+embedded surface A = Ui,j Aij in M which is the union of all the page gluing
+annuli. Combinatorially, G has a vertex for each spine or page, and an edge for
+each gluing of a page to a spine along an annulus. We call G the gluing graph
+of the book of I-bundles.
+
+We say a book of I-bundles M is tree-shaped if its gluing graph is a tree.
+
+Conjecture. Let M be a tree-shaped book of I-bundles. Suppose P has no
+components P0 in d+Mi or d-Mi for some i. Then there exists a surface
+satisfying (*).
+
+We're almost certain that this is true. It should just be a hairy inductive
+adaptation of the above argument.
+
+Theorem. Let M be a tree-shaped book of I-bundles. Suppose P has no components
+P0 in d+Mi or d-Mi for some i - that is, every component of P crosses at least
+one gluing circle of the boundary component it's on. Suppose further that every
+component of P crosses at least one gluing circle at a spine where at least
+4 pages are attached. Then there exists a surface satisfying (*).
+
+In particular, note that if all spines are at least valence 4, the technical
+crossing condition must be satisfied.
+
+Proof.
+
+Our construction of S is very simple. In fact, in this case, S embeds in our
+book of I-bundles. Construct S by starting with a single page's core surface,
+and traversing the tree-shaped gluing as follows. For each boundary component
+of S, look at the valence of the associated spine. If it's valence 3, choose an
+arbitrary one of the other two pages. If it's valence at least 4, choose a page
+that's non-boundary-adjacent to S, in that neither boundary component of the
+incoming page attaches to a boundary component of the newly chosen page when we
+glue the book of I-bundles. This is always possible for valence at least 4,
+because at a spine, each incoming boundary component connects to a single
+outgoing boundary component, and there are only 2 incoming boundary components
+but at least 3 new pages to choose from. Attach the core surface of the chosen
+page to S with an annulus across the core. Since M is tree-shaped, we can build
+S inductively without it running into itself.
+
+We claim S satisfies (*). S is immediately properly immersed (in fact,
+embedded) and pi1-injective, as it's a union of page cores and spine annuli. It
+suffices to check the pared locus. Suppose some Pk had pi1S intersect pi1Pk neq
+1, ie some multiple of its core curve was homotopic into S. By the crossing
+condition, Pk must traverse a gluing circle on a spine of valence at least 4.
+But at such a spine, Pk, which is contained in a boundary component of M, must
+connect two boundary-adjacent pages. But we chose S so it would
+connect at such a spine to a non-boundary-adjacent page. Since M is
+tree-shaped, applying van Kampen shows that these pages correspond to
+different pieces of the amalgamated free product for pi1M, so it's impossble
+for this curve to be in pi1S. This completes the proof.
+
+Finally, we have one more technical intermediate result. We hoped this would
+extend to more cases, but we haven't been able to do anything with it yet.
+
+Let M be a book of I-bundles. Associated to every surface we construct in an
+analogous way to what we've been doing (taking covers of the page core surfaces
+and gluing them together), there's a set of fairly complicated graphs we can
+construct as follows. For each (Mi,Aij,Sitilde), where Mi is a page, Aij gluing
+annulus of that page, and Sitilde finite-sheeted cover of the page core
+surface, we can draw a local pared-arc graph G=G(Mi,Aij,Sitilde).
+
+The vertices are boundary components of Sitilde which sit above Aij. Two
+vertices are connected by an edge if there is an arc in the pared locus which
+lifts to connect those two boundary components. For instance, a double cover of
+the punctured torus page, with 3 disjoint non-parallel arcs on each boundary,
+has a graph, over the single boundary annulus downstairs,  with 2 vertices and
+3 edges (one between the two vertices, and one loop at each vertex). This graph
+is a generalization of the cis-trans terminology we used in that example.
+
+We say a cover Sitilde is pared-bipartite if each of its local pared-arc
+graphs is bipartite. Note that none of the covers we constructed in our first
+example are pared-bipartite. This is a very specialized condition. Note also
+that if the pared locus does not intersect a page, all covers of that page are
+pared-bipartite.
+
+Theorem. Let M be a tree-shaped book of I-bundles. Suppose that P has no
+components in d+Mi or d-Mi for any i. Suppose that every page of M has
+a pared-bipartite cover of its core surface. Then M contains a surface
+satisfying (*).
+
+Proof.
+
+First observe that every cover of a pared-bipartite cover is itself
+pared-bipartite. Simply lift the partition of the vertices to obtain a new
+partition of each local pared-arc graph. The arcs cannot break this
+partition because otherwise they wouldn't cover arcs in the downstairs cover.
+
+Choose a sufficiently large cover of a pared-bipartite cover of each page such
+that at each spine, the number of incoming cover boundary components above each
+incident page equal for that spine. We can do this taking a "least common
+multiple cover", unless pages are glued to the same spine multiple times. In
+that case, choose a finite-sheeted cover of the book of I-bundles itself that
+doesn't have this issue, lift the pared locus, and construct a surface there.
+Afterwards, we can push it down and it will still satisfy (*).
+
+Now, we construct S by gluing these large covers. For each Sitilde and
+downstairs gluing annulus Aij there will be two adjacent annuli in the
+associated spine. For each Sitilde, attach half the boundary components above
+Aij to the boundary components coming from each of the "neighboring" Sitilde,
+via annuli. Use the pared-bipartite structure to split the set of boundary
+components above Aij in half. Since the number of incoming boundary components
+match at each spine, as constructed above, the boundary components will match
+up. We have a "cover boundary component bipartition" above each Aij. Note that
+once we have the bipartition, the details of how we glue the pieces inside the
+bipartition are irrelevant.
+
+We claim the resulting S satisfies (*). We already know it's proper immersed
+pi1-injective by the same arguments. To show it doesn't overlap with the pared
+locus, observe that by the definition of local pared-arc graphs, every core
+curve in the pared structure must correspond to a sequence of arcs in covers,
+where each arc either connects boundary components above different annuli Aij,
+Aij', or it connects 2 boundary components above the same annulus Aij. But it
+cannot connect two boundary components above the same annulus, as we glued
+those according to the pared bipartition in such a way that the pared arc
+component, which is locally restricted to a single boundary component of the
+I-bundles, can't follow. This is a generalization of the first argument in our
+simplest case.
+
+Note that if the arc connects boundary components above different annuli, these
+annuli must attach to different spines (by our earlier simplifying assumption).
+But now because M is tree-shaped, no arc that's been redirected toward
+different spines can possibly form a closed loop. This completes the proof.
+
+We tried to do this proof in the non-tree-shaped case, but it doesn't work!
+There are counterexamples of pared-bipartite covers where the obvious fix
+relies on messy combinatorics inside the boundary component matching.
+
+\section{Our first example}
+
+Let $M$ be the book of I-bundles obtained by attaching 3 thickened
+once-punctured tori to a single spine (a solid torus), in such a way that the
+attaching maps all wrap around the solid torus longitude exactly once). That
+is, we attach the thickened boundary component of the tori along 3 parallel
+annuli representing a generator of $\pi(core)$. This is the simplest nontrivial
+book of I-bundles available for us to study. That is, it's a book of I-bundles
+that isn't itself an I-bundle, which will be homotopic to a surface, hence
+Fuchsian. Notice that $M$ has 3 boundary components, each a closed genus
+2 surface.
+
+A pared 3-manifold structure on $M$ will consist of a union of disjoint
+non-parallel simple closed curves on each of the three boundary components of
+$M$. Cut along the 3 gluing annuli, breaking each boundary component into
+2 pieces (glued along a circle where they meet the core). Each piece is
+a once-punctured torus, ie, one of the boundaries of the corresponding
+I-bundle page. Using Dehn-Thurston coordinates and other general facts about
+curves on surfaces, we can compute that at most 3 disjoint non-parallel
+proper arcs can be drawn on a punctured torus. Of course, since we began with
+3 disjoint non-parallel curves on a genus two surface and then cut the
+surface in half, we may have more than 3 arcs on our punctured torus.
+However, since all the arcs are disjoint and properly embedded, they will
+necessarily break up into at most
+3 disjoint families, and all the arcs in each family will be parallel.
+
+However, we should first observe that any simple closed curve that isn't cut by
+this separation - ie, that is contained only in a single I-bundle - means that
+that page is useless for our purposes. Any surface that contained
+a homotopically nontrivial piece inside that page would, by Agol's Lemma, be
+a cover, to which a closed curve would obviously always lift. So no
+quasifuchsian surface subgroup can pass through such a page, and we might as
+well "cross it off" entirely. (It's not entirely clear what this means? We
+can't actually solve it otherwise - can we? Should be clear about when crossing
+it off still lets us have a solution vs when it's impossible - clear up
+conjecture above). So we'll only consider books of I-bundles which don't have
+such curves.
+
+IN THIS BOOK OF I-BUNDLES, if we have such a curve, cutting out that page
+yields just a single (thickened) surface. So if there is even a single other
+parabolic, we're sunk. Otherwise, that surface (or a cover of it) will yield
+a desired quasifuchsian subgroup.
+
+Now it suffices to draw a specific example of these arcs and their lifting
+behavior. Since there exists a homeomorphism of the pnctured torus rel boundary
+taking these 3 arcs to any other set of 3 arcs, passing through this
+homeomorphism will give us a corresponding cover for any desired set of 3 arcs.
+
+Looking at this set (see picture), the trick is that of the 3 connected double
+covers of the punctured torus (corresponding to the 3 nontrivial maps of piS1,1
+to Z/2, based on where the generators go), each cover lifts two of the arcs to
+"trans" arcs and one to a "cis" arc. I should probably use different words for
+these but these seem clear enough.
+
+So, we have (at most) 3 arc families on each punctured torus. These are
+identified, somehow, with 3 arc families on the other punctured torus, which
+together makes up the genus two boundary component. Looking at our book of
+I-bundles overall, we will choose a double cover of each I-bundle piece. This
+gives us 6 cover mouths that need to be identified at the one core. We will do
+the simplest approach and identify them "in a circle", ie, one edge of each
+cover will match with one of the other two covers, and the other with the
+other. See diagram. Note that it doesn't matter which mouth of each cover we
+choose to point which way, because that just modifies the local picture by
+a covering transformation.
+
+To ensure this avoids the parabolic curves, we just need to choose which double
+cover to take over each I-bundle so that the "cis" arcs don't match up. Notice
+that the trans arcs cannot possibly connect up, because they'll connect
+2 different mouths of a double cover, and the other mouth points toward the 3rd
+I-bundle component which our chosen parabolic curve cannot reach! (because our
+parabolic curve is stuck on a given boundary component of the book, it can only
+reach 2 of the 3 I-bundles).
+
+Arbitrarily choose a double cover of E1. Looking at the (at most) 3 parabolic
+locus curves on the E1-E2 boundary, we can see that at most one curve contains
+no trans arc segments (each curve has to have at least one segment in E1, or
+we'd hit the trivial nonexistence as earlier).
+
+\section{More general stuff}
+
+Ian Agol chose to study books of I-bundles - the other infinite volume cases
+ought to be easier. What about acylindrical manifolds? Books of I-bundles are
+somehow the opposite of acylindrical - they're glued together along a bunch of
+cylinders (ie annuli). If we can address the acylindrical and book of I-bundle
+cases we ought to be able to put these together to solve the entire problem.
+Agol told me (at some point) that the acylindrical case should be easier, but
+I don't remember what strategy he had or why this should be true.
+
+
+\bibliographystyle{hamsplain.bst}
+\bibliography{refs}
+
+
+
+\end{document}
