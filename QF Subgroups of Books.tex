@@ -318,123 +318,6 @@ subgroup.
 The remaining case is infinite volume hyperbolic 3-manifolds. So far we've only
 addressed a particular example of this case.
 
-%Let M be a hyperbolic 3-manifold which is a book of I-bundles. That is, it is
-%constructed as follows. Begin with a set of disjoint copies of S1 - these are
-%the spines. Attach compact surfaces with boundary, the pages, to these spines
-%with attaching maps (which can map one of more times around, in either
-%direction). However, we insist that the attaching map wrap the same number of
-%times in the same direction for each spine (ie, if we look at just one spine,
-%all the pages are "parallel"). Then thicken the resulting 2-complex, to obtain
-%a 3-manifold. If a surface wraps more han once around a spine, we will further
-%have to make a choice of the transverse "spiralling" direction which we use to
-%make sure the attaching maps is a hmeomorphism onto its image. The thickened
-%surface boundary component (a copy of S1xI) maps to the boundary of the
-%thickened spine (S1xS1).  Noete that we also use "spine" and "page" to refer to
-%the thickened boundary components. We call the result a book of I-bundles by
-%analogy with building a book by gluing pages to a spine parallel along one side
-%- here, we glue thickened surfaces, or I-bundles, to a spine in order parallel
-%along one boundary component.
-%
-%Almost all books of I-bundles are hyperbolic (why?). For now, let's just say
-%it's because almost all 3-manifolds are hyperbolic. As discussed above, given
-%a Kleinian group realization (representation?) of a given book of I-bxundlem M,
-%we can exhibit a quasifuchsian subgroup recisely when we can produce
-%a pi1-injective immersed closed surface which pi1-avoids the pared locus
-%associated to the Kleinian group structure on M - this is a locus representing
-%the curves that descend down to the parabolic fixed points? See Morgan-Bass and
-%Canary-McCullough for details on the basics of pared 3-manifolds.
-%
-%At the very least, let's define pared 3-manifolds. A pared 3-manifold is ...
-%something (TODO)
-%
-%Ian Agol has provided a lemma which we'll use repeatedly to construct these
-%pi1-injective immersed surfaces, or prove that it's impossible.
-%
-%Agol Lemma: Let f:S1->S2 be a pi1-injective immersion between two surfaces.
-%Then f is (homotopic to) a covering map.
-%
-%Proof: (TODO - look in old notes and write it down!)
-%
-%The basic idea is as follows. A pi1-injective immersed surface in
-%M corresponds, after cutting the book of I-bundles back up along the gluing
-%annuli into spines and pages, to a set of pi1-injective surfaces in each page
-%(an I-bundle), along with an attachment between these pages along each spine.
-%In order to be pi1-injective, the attachment between pages at the spine must be
-%simple - the spine has just a simple homotopy group S1, and so the page
-%attachments cannot be along a complicated surface embedded in the spine, but
-%must just be the obvious union of annuli. So a quasifuchsian candidate surface
-%inside a book of I-bundles can be represented by a union of immersed
-%pi1-injective surfaces, one in each page, together with identifications among
-%the boundary components of these surface pieces that line up with a given
-%spine.
-%
-%But now, because each surface piece is a pi1-injective immersion into an
-%I-bundle, we can contract the I-bundle (by orientability, all the I-bundles are
-%actually trivial - at least in the cases I want to consider for now - if not,
-%can probably use covering space trickery to fix it) to a surafec. Applying the
-%lemma, we see that every surface piece is homotopic to a covering surface of
-%that page (viewed as a surface, before thickening).
-%
-%Now let's look at the pared 3-manifold condition we need to check to make sure
-%our resulting surface is quasifuchsian. Our parabolic locus will consist of
-%a set of disjoint embedded annuli and tori in the boundary of our book of
-%I-bundles. Now, none of these components can be tori, because the boundary
-%components of a book of I-bundles ll have genus at least two, by construction
-%(in order to produce a boundary component of smaller genus, since boundary
-%components "follow through" cores along adjacent pages, we'd have to have at
-%least one page of genus zero - and we can just pass through a homotopy that
-%eliminates them (or a homeomorphism? Mostow rigidity etc. It's easier to see
-%the homotopy though I think). That argument seems like mild BS, but anyway
-%we're only considering books of I-bundles where all the bundles have genus >=
-%1, and of course at least one boundary component. So there cannot be any pared
-%tori, ie rank 2 cusps, in a book of I-bundles.
-%
-%For the rank 1 cusps, or pared annuli, each annulus traces out a core curve on
-%the boundary component. If we're looking in pi1, it suffices to avoid these
-%curves. If we can construct a quasifuchsian candidate surface that avoids these
-%parabolic locus curves, it'll be quasifuchsian, as desired. And any
-%quasifuchsian surface must descend to a cover on each page, and those covers
-%must glue together across the spines, so if we can show that there is NO choice
-%of covers that glues and avoids the parabolics, then that book of I-bundles
-%cannot contain a quasifuchsian surface.
-%
-%So, to summarize, the problem of finding a quasifuchsian surface subgroup of
-%a book of I-bundles M is equivalent to the following problem: given a set of
-%disjoint non-parallel simple closed curves on each component of dM, find
-%a cover of each core surface Ei of the pages Mi and an identification of the
-%boundary components dEij of these surfaces that meet at each spine Nj, such
-%that the resulting glued surface doesn't contain any of the elements of pi1M
-%corresponding to the given parabolic locus curves.
-%
-%Finally, to ensure the surface doesn't contain the parabolic locus curves,
-%since the surface is locally a cover on each I-bundle and the immersion is
-%homotopic to a covering of the core, any homotopy of a parabolic locus curve
-%into the quasifuchsian candidate surface would correspond on each I-bundle to
-%a homotopy (rel cut boundary) of the corresponding arcs into arcs on the
-%covering surface, ie lifts of these arcs rel boundary viewed as retracted arcs
-%on the core surface of this I-bundle. So to prove this cover does not contain
-%pi1M elements corresponding to parabolic locus curves, it suffices to show that
-%there do not exist lifts of the arc components in each I-bundle of the locus
-%curves that connect up to form closed curves, when connected across the mouth
-%gluings of the quasifuchsian surface.
-%
-%A picture of this (or many pictures!) would be really helpful.
-%
-%We believe that the following conjecture holds, but we haven't proven it in all
-%cases yet.
-%
-%Conjecture: Let M be a book of I-bundles, and P any pared locus. Then (M,P)
-%contains a quasifuchsian surface subgroup.
-%
-%Careful! This definitely isn't right. For instance, if the pared locus consists
-%entirely of curves that stay inside a single I-bundle, one for each I-bundle,
-%then we're totally stuck. Otherwise, we need to "cross that one off". What's
-%that mean? I think we can get away with remove that page from the book of
-%I-bundles, along with all parabolics that pass through it. If it's still
-%possible to construct a surface on what's remaining, that one will work.
-%
-%We'll go through what we've proven so far, case by case.
-
 % XXX figure out if I need the Fathi-Laudenbach-Poenaru stuff or not. Right now
 % it looks like I don't, at least for the cases I've done so far. But it might
 % come in handy later for more complicated pages? Not sure.
@@ -567,13 +450,11 @@ Let $(M,P)$ nonelementary. The following facts hold:
 \item M does not contain an embedded $K^2$
 \item For every component $Q$ of $P$, $\pi_1Q$ is a maximal abelian subgroup of
 $\pi_1M$.
-\item Every component of $\d M-P$ has negative Euler characteristic.
-% IS THIS CORRECT? Check Canary-McCullough and Morgan. This might allow me to
-% simplify my argument considerably... I may have just paraphrased it wrong...
-% ie does anything apply to the annular components cuttin gup the dM boundaries
-% or do I really just mean to say "every component has negative Euler
-% characteristic, except the ones which are T2, and that T2 is in the pared
-% structure" TODO XXX
+\item Every component of $\bd M-P$ has negative Euler characteristic.
+% Yes this is correct. But the only extra info we get is that there's no
+% parallel annuli. Canary-McCullough includes the statement:
+% "Every toroidal component of dM is contained in P"
+% but this is redundant with item 4 above (from Morgan)
 \end{enumerate}
 
 \end{prop}
@@ -593,11 +474,10 @@ $\pi_1M$.
 Conversely, Thurston's famous uniformization theorem states that for every
 pared manifold $(M,P)$ with $M$ Haken, there exists a finite volume (in
 particular, geometrically finite) hyperbolic 3-manifold structure on the
-interior satisfying the appropriate conditions for a pared 3-manifold!
+interior satisfying the appropriate conditions for a pared 3-manifold! To be
+precise:
 
 %(see Morgan for details of this construction)
-
-To be precise:
 
 %(Morgan p60, but his statement is confusing / less modern definitions. He does
 %state the more general theorem for Haken pared manifolds though.)
@@ -674,12 +554,12 @@ result is a compact 3-manifold with boundary. This is our $M$. We choose
 orientations and a cyclic order for the gluing such that the 3 boundary
 components of M are precisely
 \[
-\bd M = (\bd_+M_1 \cup_{S^1} \bd_-M_2) \cup (\bd_+M_2 \cup_{S^1} \bd_-M_3)
-u (\bd_+M_3 \cup_{S^1} \bd_-M_1)
+\bd M = (\bd_+M_1 \cup_{S^1} \bd_-M_2) \sqcup (\bd_+M_2 \cup_{S^1} \bd_-M_3)
+\sqcup (\bd_+M_3 \cup_{S^1} \bd_-M_1)
 \]
 and label these
 \[
-\bd M=\bd_{12}M \cup \bd_{23}Mu \bd_{31}M
+\bd M=\bd_{12}M \sqcup \bd_{23}M \sqcup \bd_{31}M
 \].
 Each boundary
 component of $M$ consists of two punctured tori glued along their boundary
@@ -703,9 +583,9 @@ Let $S$ be a surface satisfying (*). Homotope
 $S$ to have minimal intersection with each $A_i$, that is, so there are no "bumps".
 Then for each $M_i$, each component of $S \cap M_i$ is a finite-sheeted covering
 of the core surface. That is, given such a component $S' \cin M_i$, the map $S'
-\to M_i = \Si_{1,1}\x I -> \Si_{1,1}\x{1/2}$ is homotopic to a finite-sheeted covering
-map. Conversely, given any finite-sheeted covering $\widetilde{S} -> \Si_{1,1}$, there
-exists a corresponding proper immersed $\pi_1$-injective surface $S in \Si_{1,1}\x I$.
+\to M_i = \Si_{1,1}\x I \to \Si_{1,1}\x{1/2}$ is homotopic to a finite-sheeted covering
+map. Conversely, given any finite-sheeted covering $\widetilde{S} \to \Si_{1,1}$, there
+exists a corresponding proper immersed $\pi_1$-injective surface $S \cin \Si_{1,1}\x I$.
 
 \end{lemma}
 \begin{proof}
@@ -754,8 +634,8 @@ contained entirely within one "I-bundle half" of a boundary component. That is,
 $P_0 in \bd M_i$, for some i. Without loss of generality we can let $P_0 in
 \bd M_1$. Then
 there exists a surface satisfying (*) if and only if $P$ contains no components
-that are (up to homotopy) contained in $\bd M_2 \cup \bd M_3 = \bd_-M_2 \cup
-\bd_{23}M \cup \bd_+M_3$.
+that are (up to homotopy) contained in $\bd M_2 \cup \bd M_3 = \bd_-M_2 \sqcup
+\bd_{23}M \sqcup \bd_+M_3$.
 
 \end{prop}
 \begin{proof}
@@ -781,7 +661,7 @@ respectively, contradicting our assumption on $P$.
 (after homotoping to minimal intersections with the annuli). Applying Ian's
 covering lemma, we can see that $S \cap M_1 = empty$, as otherwise since it's
 a finite-sheeted cover it would have to contain a multiple of $P_0$.
-So $S in M_2 \cup M_3 \cup M_c$, which is homeomorphic to $S_2 x I$. Deformation retracting
+So $S in M_2 \cup M_3 \cup M_c$, which is homeomorphic to $S_2 \x I$. Deformation retracting
 this to a surface $S_2$ and applying a covering argument like in Ian's lemma, we
 can see that $S$ is a cover of $S_2$. Since it's a finite-sheeted cover, it will
 have to have $\pi_1$ intersecting any component $P_k$ that violates the conditions
@@ -840,7 +720,7 @@ $\alpha_1$.
 
 Since we cut along a properly embedded arc, the Euler characteristic increases
 by one. $x(S_1)=0$ and $S_1$ has two boundary components. By classification of
-surfaces, $S_1 = \Si_{0,2}$ or $\Si_{0,1} \cup \Si_{1,1}$. But if $S_1$ contained a disk with the arc
+surfaces, $S_1 = \Si_{0,2}$ or $\Si_{0,1} \sqcup \Si_{1,1}$. But if $S_1$ contained a disk with the arc
 pattern described above, embedding that disk back in $\Si_{1,1}$ would describe
 a homotopy of $\alpha_1$ into the boundary. So $S_1 = \Si_{0,2}$.
 
@@ -1007,7 +887,7 @@ We say a book of I-bundles is tree-shaped if its gluing graph is a tree.
 \begin{conj}
 
 % XXX This isn't my latest conjecture with the iterative process. FIXME
-Conjecture. Let $M$ be a tree-shaped book of I-bundles. Suppose $P$ has no
+Let $M$ be a tree-shaped book of I-bundles. Suppose $P$ has no
 components $P_0$ in $\bd_+M_i$ or $\bd_-M_i$ for some $i$. Then there exists a surface
 satisfying (*).
 
@@ -1018,7 +898,7 @@ adaptation of the above argument. In particular, it is totally unclear how
 
 \begin{thm}
 
-Theorem. Let $M$ be a tree-shaped book of I-bundles. Suppose $P$ has no components
+Let $M$ be a tree-shaped book of I-bundles. Suppose $P$ has no components
 $P_0 in \bd_+M_i$ or $\bd_-M_i$ for some $i$ - that is, every component of $P$ crosses at least
 one gluing circle of the boundary component it's on. Suppose further that every
 component of $P$ crosses at least one gluing circle at a spine where at least
@@ -1029,8 +909,6 @@ crossing condition must be satisfied.
 
 \end{thm}
 \begin{proof}
-
-Proof.
 
 Our construction of $S$ is very simple. In fact, in this case, $S$ embeds in our
 book of I-bundles. Construct $S$ by starting with a single page's core surface,
@@ -1087,7 +965,7 @@ pared-bipartite.
 
 \begin{thm}
 
-Theorem. Let $M$ be a tree-shaped book of I-bundles. Suppose that $P$ has no
+Let $M$ be a tree-shaped book of I-bundles. Suppose that $P$ has no
 components in $\bd_+M_i$ or $d-M_i$ for any $i$. Suppose that every page of $M$ has
 a pared-bipartite cover of its core surface. Then $M$ contains a surface
 satisfying (*).
@@ -1142,84 +1020,6 @@ different spines can possibly form a closed loop. This completes the proof.
 We tried to do this proof in the non-tree-shaped case, but it doesn't work!
 There are counterexamples of pared-bipartite covers where the obvious fix
 relies on messy combinatorics inside the boundary component matching.
-
-%\section{Our first example}
-%
-%Let $M$ be the book of I-bundles obtained by attaching 3 thickened
-%once-punctured tori to a single spine (a solid torus), in such a way that the
-%attaching maps all wrap around the solid torus longitude exactly once). That
-%is, we attach the thickened boundary component of the tori along 3 parallel
-%annuli representing a generator of $\pi(core)$. This is the simplest nontrivial
-%book of I-bundles available for us to study. That is, it's a book of I-bundles
-%that isn't itself an I-bundle, which will be homotopic to a surface, hence
-%Fuchsian. Notice that $M$ has 3 boundary components, each a closed genus
-%2 surface.
-%
-%A pared 3-manifold structure on $M$ will consist of a union of disjoint
-%non-parallel simple closed curves on each of the three boundary components of
-%$M$. Cut along the 3 gluing annuli, breaking each boundary component into
-%2 pieces (glued along a circle where they meet the core). Each piece is
-%a once-punctured torus, ie, one of the boundaries of the corresponding
-%I-bundle page. Using Dehn-Thurston coordinates and other general facts about
-%curves on surfaces, we can compute that at most 3 disjoint non-parallel
-%proper arcs can be drawn on a punctured torus. Of course, since we began with
-%3 disjoint non-parallel curves on a genus two surface and then cut the
-%surface in half, we may have more than 3 arcs on our punctured torus.
-%However, since all the arcs are disjoint and properly embedded, they will
-%necessarily break up into at most
-%3 disjoint families, and all the arcs in each family will be parallel.
-%
-%However, we should first observe that any simple closed curve that isn't cut by
-%this separation - ie, that is contained only in a single I-bundle - means that
-%that page is useless for our purposes. Any surface that contained
-%a homotopically nontrivial piece inside that page would, by Agol's Lemma, be
-%a cover, to which a closed curve would obviously always lift. So no
-%quasifuchsian surface subgroup can pass through such a page, and we might as
-%well "cross it off" entirely. (It's not entirely clear what this means? We
-%can't actually solve it otherwise - can we? Should be clear about when crossing
-%it off still lets us have a solution vs when it's impossible - clear up
-%conjecture above). So we'll only consider books of I-bundles which don't have
-%such curves.
-%
-%IN THIS BOOK OF I-BUNDLES, if we have such a curve, cutting out that page
-%yields just a single (thickened) surface. So if there is even a single other
-%parabolic, we're sunk. Otherwise, that surface (or a cover of it) will yield
-%a desired quasifuchsian subgroup.
-%
-%Now it suffices to draw a specific example of these arcs and their lifting
-%behavior. Since there exists a homeomorphism of the pnctured torus rel boundary
-%taking these 3 arcs to any other set of 3 arcs, passing through this
-%homeomorphism will give us a corresponding cover for any desired set of 3 arcs.
-%
-%Looking at this set (see picture), the trick is that of the 3 connected double
-%covers of the punctured torus (corresponding to the 3 nontrivial maps of pi\Si_{1,1}
-%to Z/2, based on where the generators go), each cover lifts two of the arcs to
-%"trans" arcs and one to a "cis" arc. I should probably use different words for
-%these but these seem clear enough.
-%
-%So, we have (at most) 3 arc families on each punctured torus. These are
-%identified, somehow, with 3 arc families on the other punctured torus, which
-%together makes up the genus two boundary component. Looking at our book of
-%I-bundles overall, we will choose a double cover of each I-bundle piece. This
-%gives us 6 cover mouths that need to be identified at the one core. We will do
-%the simplest approach and identify them "in a circle", ie, one edge of each
-%cover will match with one of the other two covers, and the other with the
-%other. See diagram. Note that it doesn't matter which mouth of each cover we
-%choose to point which way, because that just modifies the local picture by
-%a covering transformation.
-%
-%To ensure this avoids the parabolic curves, we just need to choose which double
-%cover to take over each I-bundle so that the "cis" arcs don't match up. Notice
-%that the trans arcs cannot possibly connect up, because they'll connect
-%2 different mouths of a double cover, and the other mouth points toward the 3rd
-%I-bundle component which our chosen parabolic curve cannot reach! (because our
-%parabolic curve is stuck on a given boundary component of the book, it can only
-%reach 2 of the 3 I-bundles).
-%
-%Arbitrarily choose a double cover of E1. Looking at the (at most) 3 parabolic
-%locus curves on the E1-E2 boundary, we can see that at most one curve contains
-%no trans arc segments (each curve has to have at least one segment in E1, or
-%we'd hit the trivial nonexistence as earlier).
 
 \section{More general stuff}
 

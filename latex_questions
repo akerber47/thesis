@@ -13,7 +13,8 @@ A: \colon
 minus vs setminus (need to figure this out. Minus is really ugly - spaced too
 wide. What to do?)
 
-how to type disjoint union
+Q: how to type disjoint union
+A: \sqcup
 
 how to format "condition (*)"
 (want it centered with the * on the side where equation numbering would be.
