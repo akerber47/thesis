@@ -1,7 +1,18 @@
-How to build index of terms
 How to build bibliography
 
-Formatting of theorems and stuff (what does newtheorem do?)
+Q: Formatting of theorems and stuff (what does newtheorem do?)
+A: These are called proclamations. Define at top with
+\newtheorem{myid}{MyTheoremThing}
+Use with
+\begin{myid}
+...
+\end{myid}
+To number consecutively
+\newtheorem{mynewid}[otherid]{MyNewTheoremThing}
+to get MyNewTheoremThing and MyTheoremThing to use same numbers
+To number with section dots
+\newtheorem{mynewid}{MyNewTheoremThing}[section]
+AMS has 3 theorem styles: plain, definition, remark
 
 Correct formatting of citations
 
@@ -38,6 +49,12 @@ A: \Longleftarrow and \Longrightarrow (careful! They're math symbols)
 for both ways there's \Longleftrightarrow = \iff
 
 Q: generators / relations for groups <a,b|[a,b]>, etc
+A: \langle and \rangle. Might want \mid in the middle instead of |
 
 Q: how to give theorems custom names and use those (instead of "theorem 5",
 because no one remembers what that is)
+A: just put right after eg
+\begin{thm}[Fermat's Last Theorem]
+
+Q: isomorphisms?
+A: \cong (GRR)
