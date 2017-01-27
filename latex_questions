@@ -7,7 +7,8 @@ Correct formatting of citations
 
 def vs newcommand
 
-stupid colon thing for functions
+Q: stupid colon thing for functions
+A: \colon
 
 minus vs setminus (need to figure this out. Minus is really ugly - spaced too
 wide. What to do?)
@@ -20,4 +21,5 @@ how to format "condition (*)"
 How to do INTERNAL references (eg "by Ian's lemma") - I give them names or
 something, right?
 
-Tildes above symbols
+Q: Tildes above symbols
+A: \tilde or \widetilde
