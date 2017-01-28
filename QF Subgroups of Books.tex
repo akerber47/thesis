@@ -47,49 +47,52 @@
 Given a Kleinian group $\Gamma$, one can ask whether the group contains any
 quasifuchsian surface subgroups. Equivalently, given a pared 3-manifold
 $(M,P)$, one can ask whether there exists a closed immersed $\pi_1$-injective
-surface in $M$ that avoids the peripheral subgroups associated to $P$.  This
-question is already known for closed hyperbolic 3-manifolds (Kahn-Markovic),
-and for finite volume hyperbolic 3-manifolds (Masters-Zhang).  We derive
-explicit results for pared 3-manifolds $(M,P)$ where $M$ is a book of
-$I$-bundles.
+surface in $M$ that avoids the peripheral subgroups associated to $P$.  This is
+known to be true for closed hyperbolic 3-manifolds, and more generally for
+finite volume hyperbolic 3-manifolds. We derive explicit results for pared
+3-manifolds $(M,P)$ where $M$ is a book of $I$-bundles.
 
 \end{abstract}
 
 \maketitle
 \section{Introduction}
 
-Let $M$ be a hyperbolic 3-manifold. $M$ has many possible realizations as
-a Kleinian group $G$ quotient manifold. By work of Jorgensen (Characteristic
-Submanifold theory?) the study of hyperbolic structures on a 3-manifold can be
-reduced to studying pared 3-manifold structures on the boundary. The pared
-structure gives data specifying the loci on the boundary corresponding to the
-cusps of the Kleinian group / hyperbolic manifold.
+Let $M$ be a complete hyperbolic 3-manifold. $M$ can be realized as the
+quotient manifold of a Kleinian group $\Gamma$. One can ask whether $\pi_1M$
+contains any quasifuchsian surface subgroups. To tackle this problem
+topologically, we represent a Kleinian group with a pared 3-manifold $(M,P)$.
+The pared structure $P\cin\bd M$ specifies the boundary locus corresponding to
+cusps of the parabolic group elements.
 
-To ask whether the Kleinian group contains a quasifuchsian subgroup in this
-case boils down to asking whether we can find a closed immersed
-$\pi_1$-injective surface which avoids these parabolics up to homotopy. That
-is, we're trying to choose a surface subgroup of $G=\pi_1(M)$ which does not
-contain any of the peripherial elements in the image of the embedding $P\to M$,
-where $(M,P)$ is the pared 3-manifold structure with $P$ the parabolic locus.
-Or any multiples of those elements.
+Finding a quasifuchsian surface subgroup of the Kleinian group boils down to
+asking whether we can find a closed immersed $\pi_1$-injective surface which
+avoids this pared locus up to homotopy. That is, we're trying to choose
+a surface subgroup of $\pi_1M$ which does not contain any of the peripherial
+subgroups associated to components of $P$. The general question is: for which
+choices of $(M,P)$ can we find such a surface subgroup?
 
-There is some existing work related to this. Cooper, Long, and Reid addressed
-the underlying topological problem, showing that a compact connected
+There is some existing work on this problem. Cooper-Long-Reid \cite{CLR}
+addressed the underlying topological problem, showing that a compact connected
 irreducible 3-manifold with non-empty incompressible boundary  must contain an
 essential closed surface, unless it's covered by a product $F\times I$.
-However, this surface may contain accidental parabolics, and fail to be
-quasifuchsian.  In the closed hyperbolic case, Kahn and Markovic proved that
-there always exists an immersed closed hyperbolic $\pi_1$-injective surface in
-any closed hyperbolic 3-manifold. Such a surface is necessarily quasifuchsian
-because the hyperbolic 3-manifold is closed, hence contains no parabolics.
-Finally, Baker and Cooper (re-proving work of Masters and Zhang) showed that
-every finite volume hyperbolic 3-manifold with cusps contains a quasifuchsian
-subgroup.
+However, this surface may contain accidental parabolics, that is, overlap with
+the pared locus $P$. If this occurs it will not be quasifuchsian.
+
+In the closed case, there is the work of Kahn-Markovic \cite{KM}. They proved
+that there always exists an immersed closed $\pi_1$-injective surface in any
+closed hyperbolic 3-manifold.  Such a surface is necessarily quasifuchsian
+because the surface is closed, so the pared structure is empty. Finally,
+Masters-Zhang \cite{MZ} showed that every finite volume hyperbolic 3-manifold
+with cusps contains a quasifuchsian surface subgroup. An alternate proof was
+provided by Baker-Cooper \cite{BC}.
 
 The remaining case is infinite volume hyperbolic 3-manifolds. So far we've only
-addressed a particular example of this case.
+addressed a particular example of this case --- books of $I$-bundles. We
+conjecture that all books of $I$-bundles admit quasifuchsian surface subgroups,
+except for a few obvious negative cases where the pared locus is too large. We
+prove this in a few special cases, so far.
 
-% XXX figure out if I need the Fathi-Laudenbach-Poenaru stuff or not. Right now
+% I'll figure out if I need the Fathi-Laudenbach-Poenaru stuff or not. Right now
 % it looks like I don't, at least for the cases I've done so far. But it might
 % come in handy later for more complicated pages? Not sure.
 
@@ -168,6 +171,9 @@ addressed a particular example of this case.
 
 \section{Background}
 
+Material in this section is from \cite{Mo} and \cite{CMc}. Look there for
+further details.
+
 %Definition and important facts about pared manifolds. After Morgan, The Smith
 %Conjecture, V ("Uniformization Theorem for Three-Dimensional Manifolds"),
 %p 58-60. Or Canary-McCullough, Homotopy Equivalences of 3-Manifolds and
@@ -230,6 +236,9 @@ $\pi_1M$.
 \end{enumerate}
 
 \end{prop}
+\begin{proof}
+See \cite{CMc} or \cite{Mo}.
+\end{proof}
 
 Pared manifolds arise naturally in the study of Kleinian groups. Given
 a geometrically finite torsion-free Kleinian group $G$, we construct $(M,P)$ by
@@ -264,11 +273,15 @@ if $g \in \pi_1(P)$, and an orientation-preserving homeomorphism $M-P \to
 \left(\mathbb{H}^3 \cup \Om(\rho(\pi_1M))\right)/\rho(\pi_1M)$.
 
 \end{thm}
+\begin{proof}
 
-See discussion on (CMc p106, bottom of page) for why this definition of
+See \cite{CMc}.
+Also see discussion on (CMc p106, bottom of page) for why this definition of
 geometrically finite is equivalent to the standard one.
 
-Example. Maybe? % XXX TODO
+\end{proof}
+
+% Example. Maybe? XXX TODO
 
 \section{Our reduction}
 
@@ -289,9 +302,11 @@ finite. In the second case, it's either quasifuchsian or some element of
 $\pi_1S$ is parabolic.
 
 \end{thm}
+% XXX I need a reference or explanation of why qf sfc subgp <=> closed immersed
+% pi1-injective sfc IN MY CASE TOO
 
 We assume this reduction still works in our cases (which are not finite
-volume). I hope some reference to Thurston can fix this.
+volume). I hope some reference can fix this! TODO
 
 So in our case, since the parabolic elements precisely correspond to the pared
 structure, our problem becomes a purely topological one: can we find a closed
@@ -334,17 +349,17 @@ We consider possible pared structures $P$ on $M$. Our goal is to find
 a surface $S \cin M$ such that
 \begin{equation}\label{E:qf}
 S \text{ is closed immersed $\pi_1$-injective, and  $\pi_1P_k \cap \pi_1S
-= \emptyset$
+= 1$
 for each component $P_k$ of $P$} \tag{\textasteriskcentered}
 \end{equation}
 
-Note that since we
-haven't fixed a basepoint, these subgroups are really only defined up to
-conjugacy - what we're saying is they fail to intersect for an arbitrary choice
-of conjugacy class for each subgroup. (ask Ian about this? seems fuzzy)
+% XXX straighten this out
+%Note that since we
+%haven't fixed a basepoint, these subgroups are really only defined up to
+%conjugacy - what we're saying is they fail to intersect for an arbitrary choice
+%of conjugacy class for each subgroup. (ask Ian about this? seems fuzzy)
 
-%("Ian's covering lemma") Do I really want a custom name here?
-\begin{lemma}%[The Surface Covering Lemma]
+\begin{lemma}\label{L:sc}
 
 Let $S$ be a surface satisfying \eqref{E:qf}. Homotope $S$ to have minimal
 intersection with each $A_i$, that is, so there are no ``bumps''.  Then for
@@ -397,6 +412,10 @@ It immediately follows that $\pi_1M$ contains no rank 2 abelian subgroups, as
 no two elements commute. Since every component of $P$ is $\pi_1$-injective,
 they must all be annuli.
 
+Alternatively, simply observe that all the boundary components of $M$ have
+negative Euler characteristic, so they don't admit $\pi_1$-injective maps from
+a torus.
+
 \end{proof}
 
 \begin{prop}
@@ -433,14 +452,14 @@ on $P$.
 
 ($\Longrightarrow$) Let $S$ be a surface satisfying \eqref{E:qf}. Cut $S$ into
 components in $M_1,M_2,M_3$ (after homotoping to minimal intersections with the
-annuli).  Applying Ian's covering lemma, we can see that $S \cap M_1
-= \emptyset$, as otherwise since it's a finite-sheeted cover it would have to
-contain a multiple of $P_0$.  So $S \cin M_2 \cup M_3 \cup M_c$, which is
-homeomorphic to $S_2 \x I$. Deformation retracting this to a surface $S_2$ and
-applying a covering argument like in Ian's lemma, we can see that $S$ is
-a cover of $S_2$. Since it's a finite-sheeted cover, it will have to have
-$\pi_1$ intersecting any component $P_k$ that violates the conditions stated
-above.  This completes the proof.
+annuli).  Applying Lemma~\ref{L:sc}, we can see that $S \cap M_1 = \emptyset$,
+as otherwise since it's a finite-sheeted cover it would have to contain
+a multiple of $P_0$.  So $S \cin M_2 \cup M_3 \cup M_c$, which is homeomorphic
+to $S_2 \x I$.  Deformation retracting this to a surface $S_2$ and applying
+a covering argument like in Lemma~\ref{L:sc}, we can see that $S$ is a cover of
+$S_2$.  Since it's a finite-sheeted cover, it will have to have $\pi_1$
+intersecting any component $P_k$ that violates the conditions stated above.
+This completes the proof.
 
 \end{proof}
 
@@ -627,9 +646,9 @@ then ``untweak'' them in the cover. If they are parallel, just ignore one set
 of bands)
 
 Glue $S_1,S_2,S_3$ as described to obtain $S$. We claim that $S$ satisfies
-condition \eqref{E:qf}. $S$ is closed and immersed by construction (as in Ian's
-covering lemma). It is $\pi_1$-injective inside each $I$-bundle by Ian's
-covering lemma, and inside the core $M_c$ because it's just a union of
+condition \eqref{E:qf}. $S$ is closed and immersed by construction (as in
+Lemma~\ref{L:sc}). It is $\pi_1$-injective inside each $I$-bundle by
+Lemma~\ref{L:sc}, and inside the core $M_c$ because it's just a union of
 incompressible gluing annuli there. It suffices to show that $\pi_1S \cap
 \pi_1P_k = 1$ for each component $P_k$ of the pared locus. Looking at the core
 curve of the annulus $P_k$, this implies that some multiple of that core curve
@@ -671,7 +690,12 @@ call $G$ the gluing graph of the book of $I$-bundles.
 We say a book of $I$-bundles is \emph{tree-shaped} if its gluing graph is
 a tree.
 
-% XXX need something about stupid cases, negative example, etc.
+As above, if the pared locus $P$ contains any components that fit inside
+a single $I$-bundle, then we can ``cross off that page.'' Just like in our
+earlier lemma, any $\pi_1$-injective surface that passed through that page
+would have would have to contain the component of the pared locus. By
+repeatedly crossing off pages and consolidating into fewer pages / spines, we
+can reduce any pared book of $I$-bundles to one with no such components.
 
 \begin{conj}
 
@@ -681,14 +705,15 @@ $P_0\cin \bd_\pm M_i$ for any $i$. Then there exists a surface satisfying
 
 \end{conj}
 
-We're almost certain that this is true. It should just be a hairy inductive
+We're quite certain that this is true. It should just be a hairy inductive
 adaptation of the above argument. In particular, it is totally unclear how one
-might construct a counterexample.
+might construct a counterexample. However, we haven't completed a full proof
+yet.
 
 \begin{thm}
 
 Let $M$ be a tree-shaped book of $I$-bundles. Suppose $P$ has no components
-$P_0 \cin \bd_\pm M_i$ or $\bd_-M_i$ for any $i$. Suppose further that every
+$P_0 \cin \bd_\pm M_i$ for any $i$. Suppose further that every
 component of $P$ crosses at least one gluing circle at a spine where at least
 4 pages are attached. Then there exists a surface satisfying \eqref{E:qf}.
 
@@ -746,7 +771,7 @@ with 2 vertices and 3 edges (one between the two vertices, and one loop at each
 vertex). This graph is a generalization of the cis-trans terminology we used in
 that example.
 
-We say a cover $\widetilde{S_i}$ is pared-bipartite if each of its local
+We say a cover $\widetilde{S_i}$ is \emph{pared-bipartite} if each of its local
 pared-arc graphs is bipartite. Note that none of the covers we constructed in
 our first example are pared-bipartite. This is a very specialized condition.
 Note also that if the pared locus does not intersect a page, all covers of that
@@ -755,7 +780,7 @@ page are pared-bipartite.
 \begin{thm}
 
 Let $M$ be a tree-shaped book of $I$-bundles. Suppose that $P$ has no
-components in $\bd_+M_i$ or $d-M_i$ for any $i$. Suppose that every page of $M$
+components in $\bd_\pm M_i$ for any $i$. Suppose that every page of $M$
 has a pared-bipartite cover of its core surface. Then $M$ contains a surface
 satisfying \eqref{E:qf}.
 
@@ -813,15 +838,26 @@ We tried to do this proof in the non-tree-shaped case, but it doesn't work!
 There are counterexamples of pared-bipartite covers where the obvious fix
 relies on messy combinatorics inside the boundary component matching.
 
-\section{More general stuff}
+\section{Next steps}
 
-Ian Agol chose to study books of $I$-bundles - the other infinite volume cases
-ought to be easier. What about acylindrical manifolds? Books of $I$-bundles are
-somehow the opposite of acylindrical - they're glued together along a bunch of
-cylinders (ie annuli). If we can address the acylindrical and book of
+% XXX talk a bit about my ideas for cis/trans and gen bipartition
+It should be possible to prove the case of general tree-shaped books of
+$I$-bundles. In fact, combinatorially, it seems that all books of $I$-bundles
+(satisfying an appropriate condition on components of $P$) should admit these
+surfaces. But we haven't proved anything yet. The general case is much messier
+(combinatorially) than the tree-shaped case, because in addition to cis arcs
+we'll also need to consider trans arcs that ``wrap around'' a loop in the
+gluing graph. So even ensuring that every closed curve in the pared structure
+is broken into arcs, at least one of which is trans, is insufficient.
+
+We chose to study books of $I$-bundles first. Ian thinks the other infinite
+volume cases ought to be easier. What about acylindrical manifolds?  Books of
+$I$-bundles are somehow the opposite end of the spectrum of acylindrical
+- they're glued together along a bunch of cylinders, and the pieces are all
+very simple ($I$-bundles).  If we can address the acylindrical and book of
 $I$-bundle cases we ought to be able to put these together to solve the entire
-problem.  Agol told me (at some point) that the acylindrical case should be
-easier, but I don't remember what strategy he had or why this should be true.
+problem. Ian thinks maybe the acylindrical case can be addressed by a variant
+of the Baker-Cooper argument.
 
 
 \bibliographystyle{hamsplain.bst}

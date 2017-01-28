@@ -1,5 +1,8 @@
 How to build bibliography
 
+Q: Citation syntax
+A: \cite{ABC}
+
 Q: Formatting of theorems and stuff (what does newtheorem do?)
 A: These are called proclamations. Define at top with
 \newtheorem{myid}{MyTheoremThing}
@@ -13,8 +16,6 @@ to get MyNewTheoremThing and MyTheoremThing to use same numbers
 To number with section dots
 \newtheorem{mynewid}{MyNewTheoremThing}[section]
 AMS has 3 theorem styles: plain, definition, remark
-
-Correct formatting of citations
 
 Q: def vs newcommand
 A: use newcommand. def overrides stuff.
