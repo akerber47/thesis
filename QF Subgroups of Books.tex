@@ -775,7 +775,25 @@ a surface satisfying (*).
 
 Proof.
 
+This is the main proof, and is quite involved. We proceed somewhat similarly to
+the first example. We take covers over the pages and glue them together
+cleverly to construct our surface. We check that the parabolic locus arcs on
+each page lift to arcs on these covers that do not connect up to form a closed
+curve. As in the first example, this suffices to prove that our surface
+satisfies (*). We first need to take the correct cover over each page.
 
+Lemma.
+
+Let S be a surface with boundary, and P a union of disjoint proper arcs on S.
+Then there exists a finite-sheeted cover S' of S such that the preimage pi-1(P)
+consists of arcs each of which connects 2 different boundary components of S'.
+
+Proof.
+
+Subgroup separability again. The eyeglasses trick. Look up and fill in.
+
+
+Fix some large integer N>0.
 
 Theorem.
 
@@ -786,15 +804,25 @@ such pages from M, and P' by removing all components of the pared locus that
 intersect those pages. Then (M,P) contains a surface satisfying (*) if and only
 if (M',P') is nonempty and contains a surface satisfying (*).
 
-Proof. First observe that if (M,P) contains a surface satisfying (*), it cannot
+Proof.
+
+First observe that if (M,P) contains a surface satisfying (*), it cannot
 traverse any of the pages we deleted to obtain M', by the same argument as in
-our first example.  Since our surface exists, M' must be nonempty. Furthermore,
-since (M',P') cin (M,P), it satisfies (*) for M',P' as well. Conversely, if
+our first example.  Since our surface exists, M' must be nonempty.
+Furthermore, since (M',P') cin (M,P), it satisfies (*) for M',P' as well.
+Conversely, if we have such a surface, we can obviously view it as contained in
+(M,P), where it must satisfy (*) because it doesn't intersect the deleted pages
+at all.
 
 Note that (M',P') may be nonelementary, or it still may not satisfy (0), (1),
 and (2).  However, we can repeat the steps needed to guarantee (0), (1), and
 (2), and obtain a manifold where we can either apply this theorem again, or use
-the first theorem.
+the first theorem. It is not immediately clear that this process terminates,
+because taking the finite-sheeted cover we use for (1) and (2) makes the
+manifold more complicated, possibly increasing the number of parabolics. We'll
+have to do this carefully. Possibly we should do this step BEFORE the other
+simplification, but then we'll have to make sure the parabolics pass through
+that simplification nicely.
 
 \section{Some generalizations - SCRUBBED}
 
