@@ -8,3 +8,5 @@ Agol*
 *.log
 *.out
 *.gz
+*.bbl
+*.blg
