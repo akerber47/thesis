@@ -721,14 +721,32 @@ an annulus parallel to this curve. Obviously if we glue our pages along
 meridian curves (0,1), we'll have a boundary compression along a parallel
 meridian disk.
 
-Now we have a general book of I-bundles. There are a number of topological
-simplifications we make, by passing to an appropriate finite-sheeted cover of
-the book of I-bundles. Once we can construct a surface satisfying (*) inside
-this cover, we can push it down and perturb slightly to obtain a surface
-satisfying (*) downstairs (since it pi1-injects into a subgroup, it will
-definitely still be pi1-injective).
+% I believe all other possibilities are ok, as long as we don't violate the
+% one-point intersection constraint Ian mentioned.
+
+Lemma ("One-point intersection lemma").
+
+Consider a solid torus, or more generally a handlebody, with a collection of
+I-bundles glued to it along annuli. The resulting manifold has a boundary
+compression iff there exists a meridian disk that intersects the boundary
+gluing curves exactly once.
+
+Proof.
+
+Not immediately obvious. Use some cut and paste topology? % TODO
+
+Anyway, now we have a general book of I-bundles. Observe first that the pared
+locus P must be a union of annuli, just as in the specific example above.  Now
+there are a number of topological simplifications we make, by passing to an
+appropriate finite-sheeted cover of the book of I-bundles.  Once we can
+construct a surface satisfying (*) inside this cover, we can push it down and
+perturb slightly to obtain a surface satisfying (*) downstairs (since it
+pi1-injects into a subgroup, it will definitely still be pi1-injective).
 
 We pass to a book of I-bundles satisfying the following conditions:
+
+(0) M has incompressible boundary, every page core surface has negative Euler
+characteristic, and every spine has at least 3 gluing annuli.
 
 (1) Each page is glued to a given spine at most once.
 
@@ -746,8 +764,37 @@ We use subgroup separability. Look at Long-Reid, fill in details here.
 
 \section{Main theorem}
 
-Suppose we have a book of I-bundles satisfying (1) and (2). Then we have an
-immediate condition that prevents
+Suppose we have a book of I-bundles satisfying (1) and (2).
+
+Theorem.
+
+Let M be a book of I-bundles Kleinian manifold with incompressible boundary
+satisfying (0), (1) and (2). Suppose further that no components of the
+parabolic locus P are contained in a single page's boundary. Then M contains
+a surface satisfying (*).
+
+Proof.
+
+
+
+Theorem.
+
+Let M be a book of I-bundles Kleinian manifold with incompressible boundary
+satisfying (0), (1) and (2). Suppose M does contain a component of the
+parabolic locus P inside a single page's boundary. Construct M' by deleting all
+such pages from M, and P' by removing all components of the pared locus that
+intersect those pages. Then (M,P) contains a surface satisfying (*) if and only
+if (M',P') is nonempty and contains a surface satisfying (*).
+
+Proof. First observe that if (M,P) contains a surface satisfying (*), it cannot
+traverse any of the pages we deleted to obtain M', by the same argument as in
+our first example.  Since our surface exists, M' must be nonempty. Furthermore,
+since (M',P') cin (M,P), it satisfies (*) for M',P' as well. Conversely, if
+
+Note that (M',P') may be nonelementary, or it still may not satisfy (0), (1),
+and (2).  However, we can repeat the steps needed to guarantee (0), (1), and
+(2), and obtain a manifold where we can either apply this theorem again, or use
+the first theorem.
 
 \section{Some generalizations - SCRUBBED}
 
