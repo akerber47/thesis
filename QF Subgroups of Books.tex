@@ -792,8 +792,87 @@ Proof.
 
 Subgroup separability again. The eyeglasses trick. Look up and fill in.
 
+Proof of Theorem:
 
-Fix some large integer N>0.
+Fix some large integer N>0. For each page Mi, Let Si be its core surface.
+
+Consider an arbitrary boundary component daM of the book of I-bundles M.
+Cutting M along the gluing annuli decomposes daM into a union of pieces each
+homeomorphic to a page core surface. Call these pieces Sa,k. For each piece,
+apply the lemma above to (Sa,k,P cap Sa,k) to obtain a cover S'a,k. Now let our
+cover tildeSa,k -> S'a,k -> Sa,k be a disjoint union of N copies of S'a,k. Each
+Sa,k is homeomorphic to the core surface Si of its page, so if we can glue
+these pieces, by the covering lemma we will have a closed immersed
+pi1-injective surface in M.
+
+We glue these pieces "along" daM in the following sense. Given any 2 adjacent
+components Sa,k1, Sa,k2 in the decomposition of daM, we know that Sa,k1 and
+Sa,k2 each have boundary components corresponding to the page boundary or
+boundaries separating them. That is, these components form the locus we glue
+Sa,k1 and Sa,k2 together along when we glue the Sa,k to form daM. For each such
+pair, look at the boundary components of tildeSa,k1 and tildeSa,k2. We allow
+ourselves to glue two boundary components only when they live above two
+boundary components in Sa,k1, Sa,k2 which are glued. This condition guarantees
+that our gluing will produce a surface that locally looks like a cover, except
+that it possibly has "leftover" boundary components which weren't glued.
+
+However, we do not want to do this gluing arbitrarily. We want to glue in such
+a way that we preserve the following invariant of our glued surface tildeSa.
+
+(dag) Any component of P cap daM, when cut along pages to induce arcs in the
+Sa,k and lifted to form arcs and curves in tildeSa, forms a union of arcs (not
+closed curves) which each start and end at *different* boundary components of
+tildeSa.
+
+We begin by taking tildeSa = sqcup tildeSa,k to be a disjoint union of these
+covers - that is, we haven't done any gluing yet. By the lemma, tildeSa
+satisfies (dag). We repeatedly make an arbitrary gluing that's along daM in the
+above sense and that preserves (dag).  This process will terminate at some
+point, after there are no more gluings left to make that preserve (dag). We'll
+call this surface tildeSa also, abusing notation. tildeSa is a surface with
+boundary, because there are "leftover" boundary components that we couldn't
+glue without violating (dag).
+
+Lemma.
+
+We claim that tildeSa has a bounded number of boundary components, independent
+of the choice of N.
+
+Proof.
+
+Consider an arbitrary boundary component C of tildeSa.  Suppose that before
+gluing it was a boundary component of tildeSa,k. Let n_akl be the number of
+arcs in P cap Sa,k cin P cap daM which are incident to that lth boundary
+component downstairs. Notice that n_akl depends only on the underlying M,P
+downstairs, and not on our choice of covers. In particular, it doesn't depend
+on our choice of N. We can bound n_akl by the maximal intersection of P with
+a gluing curve of daM. Call this bound n_a.
+
+Now, a simple trick: suppose tildeSa satisfies (dag) before we make a gluing.
+To violate (dag) after gluing, we have to either match up two endpoints of an
+arc to make a closed curve, or make an arc with two endpoints on the same
+boundary component. To do that, we have to match up endpoints of two arcs whose
+other (unglued) endpoints lie on the same boundary component of tildeSa. If we
+imagine a graph where the vertices are boundary components and edges are arc
+connections, this means we're gluing two vertices which are distance <= 2 apart
+in the graph. This graph has at number of incident edges at each vertex bounded
+by n_a. So the number of vertices at distance <= 2 from C is bounded by na
++ na(na - 1) = na^2. This means that if tildeSa contains more than na2 many
+boundary components that match C (in that they'll glue to it along daM), we can
+glue C to one of the remaining ones, and our new glued surface will satisfy
+(dag). This contradicts our assumption that tildeSa didn't admit any more
+gluings.
+
+So tildeSa must contain at most na2 many boundary components that match C. But
+this argument works for any choice of C. Letting ja = sum k # components of
+Sa,k (this is the total number of boundary components downstairs we could
+choose downstairs for this argument), we find a bound
+
+# dtildeSa <= ja na^2
+
+Proof of Theorem contd.
+
+
 
 Theorem.
 
