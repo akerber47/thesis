@@ -1015,13 +1015,59 @@ tildeS' which violate (ddag) must be strictly decreasing - as during our
 cutting, we always choose the new places to cut to lie on different pieces from
 existing boundary components. So repeating this for every extra tildeS boundary
 component we obtain tildeS' satisfying (dag) and (ddag). tildeS' has at most
-i*j*(2i+1) many boundary components.
+i*j*(2i+1) many boundary components. At most i*(2i+1) of them lie above any
+given boundary component downstairs.
 
 %Now that we've made these cutsLook at the set of arcs traveling from C, and
 %all the arcs from components directly adjacent to C in the arc graph (that is,
 %connected to C by an arc).  There are at most na + na(na-1) = na^2 such arcs.
 %If there is a place to glue that doesn't intersect any of the arcs, then we
 %can glue immediately.
+
+Proof of Theorem (conclusion).
+
+Finally, suppose we've done the entire above construction for each boundary
+component of our book of I-bundles M to produce a partially-glued surface with
+some boundary components left over. We want to glue these together, but they
+may have different numbers of boundary components over each page boundary where
+we want to glue them! So we'll need to cut them all up even more.
+
+Claim.
+
+Let i = max a i(M,P,Sa). Let j = max a j(M,P,Sa). Then for n sufficiently
+large, we can further cut tildeS' so that it has exactly i*(2i+1) many boundary
+components above each boundary component downstairs.
+
+Proof.
+
+This is identical to the above argument, except that we don't need to worry
+about the arcs because we aren't gluing. Since i is fixed (it depends only on
+(M,P)), taking n large enough, there must always be many pieces above any gamma
+that have no cuts.  Arbitrarily choose some to cut.
+
+Write tildeSa for the surface we obtain from the above construction for each
+boundary component of M. Note that tildeSa is not quite a cover of the full
+boundary component, because each one has these leftover boundary components
+that we aren't allowed to glue.
+
+Build a single surface tildeS by gluing the tildeSa as follows. For each spine
+Mc of M, look at all the incident pages. Say there are m of them. Each page has
+two sides, so there are 2m many pieces Sa,k downstairs near Mc, each with one
+boundary component glued along the spine Mc. By the facts (0), (1), and (2) we
+ensured above, we know that all these Sa,k are distinct and they are all glued
+along simple parallel closed curves on dMc (do we know they're longitudes?  See
+above).
+
+By the work we did in the last claim, there are exactly i*(2i+1) many tildeSa
+boundary components above each Sa,k boundary component. This means that at our
+spine, all together we have 2m*i*(2i+1) incident leftover boundary components
+of the tildeSa. Note that since we don't know the global behavior of the
+boundary components of M, there may be anywhere from 1 to m boundary components
+present in this local slice of the boundary components above Mc. But that
+doesn't matter to our argument.
+
+We know m>=3 by (0). Basically, we do our gluing by attaching everything
+"anywhere except the way that boundary component goes."
 
 Theorem.
 
