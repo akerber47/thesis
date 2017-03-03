@@ -872,7 +872,40 @@ choose downstairs for this argument), we find a bound
 
 Proof of Theorem contd.
 
+Now that we've constructed tildeSa, we want to modify it so, in addition to
+(dag), it also satisfies
 
+(ddag) Any two boundary components of tildeSa lie on different components from
+before gluing.
+
+Intuitively, this should not be difficult. Before gluing, tildeSa has at least
+jaN many boundary components, and afterwards at most ja na^2. If we choose N to
+be very large, we should be able to modify the gluing so that the leftover
+boundary components are "far apart".
+
+To be precise, suppose tildeSa has some piece (from before gluing) with 2 or
+more boundary components. We need to glue something to these boundary
+components, but by construction tildeSa doesn't admit any more gluings without
+violating (dag). To get past this, we'll need to cut up tildeSa to find new
+places to glue. Now since tildeSa has at most ja na^2 boundary components, it
+has at most half that many pieces with 2 or more boundary components. For each
+piece, choose all but one of the leftover boundary components arbitrarily.
+We're going to fix these boundary components by gluing.
+
+Consider such a boundary component C. We want to cut somewhere that won't
+interfere with any of the arcs with endpoints on C, and glue there. The problem
+is that while it's easy to count the possible places for endpoints of arcs
+starting at C, it's unclear where those arcs might travel through. If we cut in
+the middle of an arc and glue up, we could still produce a closed loop
+accidentally!
+
+To avoid this, we proceed as follows. There are at least N possible places to
+glue C, if we cut. Eliminate the possible places that lie on the same pieces as
+existing boundary components. Look at the set of arcs traveling from C, and all
+the arcs from components directly adjacent to C in the arc graph (that is,
+connected to C by an arc). There are at most na + na(na-1) = na^2 such arcs.
+If there is a place to glue that doesn't intersect any of the arcs, then we can
+glue immediately.
 
 Theorem.
 
