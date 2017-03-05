@@ -750,7 +750,8 @@ characteristic, and every spine has at least 3 gluing annuli.
 
 (1) Each page is glued to a given spine at most once.
 
-(2) Each gluing annulus on a spine is parallel to a simple longitude.
+(2) Each gluing annulus on a spine is parallel to a simple longitude, and each
+page is an oriented surface.
 
 Lemma.
 
@@ -1045,6 +1046,8 @@ about the arcs because we aren't gluing. Since i is fixed (it depends only on
 (M,P)), taking n large enough, there must always be many pieces above any gamma
 that have no cuts.  Arbitrarily choose some to cut.
 
+Finish Proof of Theorem.
+
 Write tildeSa for the surface we obtain from the above construction for each
 boundary component of M. Note that tildeSa is not quite a cover of the full
 boundary component, because each one has these leftover boundary components
@@ -1064,10 +1067,110 @@ spine, all together we have 2m*i*(2i+1) incident leftover boundary components
 of the tildeSa. Note that since we don't know the global behavior of the
 boundary components of M, there may be anywhere from 1 to m boundary components
 present in this local slice of the boundary components above Mc. But that
-doesn't matter to our argument.
+doesn't matter to our argument yet.
 
 We know m>=3 by (0). Basically, we do our gluing by attaching everything
-"anywhere except the way that boundary component goes."
+"anywhere except the way that boundary component goes." To be precise, if we
+intersect a neighborhood of our spine Mc with dM, this intersection has
+m components. Each component consists of a pi1-injective longitudinal annulus
+in the spine's boundary connecting two neighborhoods that extend along
+boundaries of two different pages attached to the spine. See diagram.
+
+Our book of I-bundles is oriented by (2). To simplify the proof, we glue
+following orientations of the tildeS induced by orientation of M. All the
+boundary neighborhood annuli have a consistent orientation as they're parallel
+on the boundary of a solid torus. So of the 2m Sa,k boundary components under
+consideration, we can separate them into the + and - components. There are m of
+each.
+
+Notice that in our spine neighborhood, each page itself has 2 boundary
+components, one of which is + and one is - (as above). Intuitively, each page
+has one annulus "starting at it" and one annulus "ending at it". Furthermore,
+as above each component of dM contains one + and one - component.
+
+There are m + components and m - components. Assign a gluing downstairs by
+attaching each + boundary component of an Sa,k to an arbitrary - component that
+is neither of the 2 associated components in the above paragraph (the "same
+page" component and the "same boundary" component). Since m>=3, we can do this
+assignment consistently for all 2m of the local Sa,k boundary component. (For
+instance, fix a cyclic order of the pages st the boundary components increase
+by 1, and glue increasing by 2 instead).
+
+Of course, this gluing is nonsensical downstairs, because the Sa,k are already
+attached in other ways. However, this new "bent" gluing is the template we
+follow upstairs. For each spine Mc, we have exactly 2m*i*(2i+1) incident
+leftover boundary components of the tildeSa, and each of the 2m boundary
+components described earlier has i*(2i+1) leftover boundary components above
+it. So glue these following the +/- pattern we just chose. This yields
+a surface tildeS.
+
+By construction, tildeS consists of covers of each page of M glued along
+parallel longitudinal annuli at the spines of M. By the covering lemma, it
+induces an immersed pi1-injective surface. It remains to show that tildeS
+cannot contain any lifts of parabolic curves.
+
+Let gamma be a parabolic curve in some boundary component Sa of M. Cut gamma
+into arcs gammai along the page boundaries. By construction of tildeSa, lifting
+the gammai to tildeSa before the final gluing step cannot yield closed curves.
+It only yields a union of arcs, by (dag). Now look at lifts of these arcs of
+gamma to a different partial cover tildeSb, associated to a different boundary
+component Sb of M. Certainly some gammai may lift to pieces of tildeSb,
+anywhere that Sa and Sb traverse opposite sides of a page. Calling the Sb side
+of that page Sb,k, we can see that gammai in barPb,k the "opposite parabolic
+arcs" that we defined earlier. So gammai lifts to S'b,k as a union of arcs,
+each of which connects two different boundary components of S'b,k. So it lifts
+to tildeSb,k as a union of arcs the same way.
+
+Now there is a simple reason that these arcs cannot possibly form closed curves
+in tildeSb: Sa and Sb are not parallel for long enough. Look at such a gammai
+that lifts to a union of arcs in tildeSb,k.  That is, gammai in barPb,k, and Sa
+and Sb traverse opposite sides of this page Mj. Any spine that Mj attaches to
+has at least 3 pages attached. If we look at how the boundary components of
+a book of I-bundles behave near a spine, we that locally the Sa boundary
+component will continue along a page, and the Sb boundary component will
+continue along a different page. The page boundary facing the "continuation" of
+Sb is not locally attached to Sa. (Note that it may very well be part of Sa,
+but that would be due to global considerations of the gluing, farther away). So
+the pieces of tildeSb that attach to the pieces with lifts of gammai can't
+possibly contain lifts of a continuation of gammai, because that continuation
+isn't in the correct "opposite parabolic arc" set. This proves that until our
+last step, pieces of gamma only form arcs in tildeSa and the tildeSb. In fact,
+not only are there no gammai closed curves in tildeSb, but the gammai cannot
+form any arcs in tildeSb that traverse more than a single piece. This will be
+important for the next step.
+
+Finally, we need to look at what happens to these gammai lifts when we do the
+last gluing step. Since the gammai only form arcs in each piece of tildeS, the
+only way to form a closed curve is to join up two or more arcs in tildeSa
+and/or the tildeSb.  But recall that by (ddag), each piece of each tildeSb has
+at most one leftover boundary component. So any proper arc in tildeSb has to
+traverse at least two pieces. This means that the gammai cannot lift and glue
+to a proper arc in tildeSb, because they cannot traverse more than a single
+piece, as shown above.
+
+So any closed curve has to consist only of arcs in tildeSa, joined up when we
+glued tildeSa to itself it the final step. This is possible, because by
+cleverly gluing the same pages to many spines it's not hard to produce a book
+of I-bundles with only one boundary component. But look at what has to happen
+when we glue tildeSa to itself in the final step. In order to attach the gammai
+to form a lift of gamma, looking near the endpoints of an arc in tildeSa, we
+have to glue to a lift of a continuation of gamma downstairs. But by the same
+argument as above (where Sa and Sb are not parallel), Sa cannot remain locally
+parallel to itself "on the other side". Even if the continuation of gamma lifts
+to the other side of our gluing, it would have to lift there because it's part
+of the corresponding barPa,k, not Pa,k (because of how we chose the gluing
+above, it can't be Pa,k because we didn't glue along the local boundary
+component). This is all part of the same tildeSa, but now we're on the "wrong
+part of it" for our parabolic gamma. Then by the same argument as for Sb gamma
+cannot continue past the first piece traversal after a bent gluing. And it has
+to traverse at least two pieces upstairs before bending back because of (ddag),
+and can't return back to the same boundary component by definition of the
+subgroup separability cover. In terms of tildeS, (ddag) tells us that each
+piece has at most one bent gluing.
+
+So we cannot join up the lifts of gammai to form a lift of gamma. This
+completes the proof.
+
 
 Theorem.
 
