@@ -968,32 +968,32 @@ and curves on tildeS(i) induced by gluing the tildePa,k. That is, tildeP(i)
 = f(i) circ ...  circ f(1) (sqcup tildePa,k).
 
 However, we do not want to do this gluing arbitrarily.  In addition to gluing
-along daM, we want to preserve the following invariant.
+along daM, we want to preserve the following two invariants.
 
 (dag) Each tildeP(i) cin tildeS(i) does not contain any closed curves. That is,
 it forms a union of proper arcs.
 
-% XXX XXX XXX fix this as discussed w Ian!!
+% OOPS! I should probably do some renaming...
+(dag') Furthermore, no arc in any tildeP(i) begins and ends at the same
+boundary component of tildeS(i).
 
-% XXX I don't think we need this:  which each start and end at *different*
-% boundary components of tildeSa.
-%
-% The trick is we can fix it with the subgroup separability trick on the OTHER
-% colors (!!)
+We'll call arcs that violate this condition bad arcs.
 
 By the use of the lemma and the assumption of the theorem (no closed curves in
-individual pages), tildeS(0) satisfies (dag).  We repeatedly make an arbitrary
-gluing that's along daM in the above sense and that preserves (dag).  This
-process will terminate at some point, after there are no more gluings left to
-make that preserve (dag). We'll call this surface tildeS, and by abuse of
-terminology, we'll call the images of the S'a,k pieces of tildeS also. tildeS
-is a surface with boundary, because there are "leftover" boundary components
-that we couldn't glue without violating (dag).
+individual pages), tildeS(0) satisfies (dag) and (dag').  We repeatedly make an
+arbitrary gluing that's along daM in the above sense and that preserves (dag)
+and (dag').  This process will terminate at some point, after there are no more
+gluings left to make that preserve (dag) and (dag'). We'll call this surface
+tildeS, and by abuse of terminology, we'll call the images of the S'a,k pieces
+of tildeS also.  tildeS is a surface with boundary, because there are
+"leftover" boundary components that we couldn't glue without violating (dag) or
+(dag').
 
 Claim.
 
-tildeS has a number of boundary components bounded by C(M,P,Sa). In particular,
-this bound is independent of the choice of n.
+After performing the above construction, tildeS has a number of leftover
+boundary components bounded by C(M,P,Sa).  In particular, this bound is
+independent of the choice of n.
 
 Proof of Claim.
 
@@ -1005,45 +1005,55 @@ boundary component gamma of any Sa,k in Sa. Let j(M,P,Sa) be the total number
 of boundary components of the Sa,k.
 
 Let gamma' cin dSa,k' be the boundary component matching gamma. We can glue
-gamma along M to any boundary component of tildeS above gamma'. If tildeS has
-boundary components above gamma', the only reason we'd be unable to glue to
-tildegamma is if there were arcs between tildegamma and all the
-tildegamma'1,...tildegamma'l leftover components of tildeS above gamma'.  This
-is the only way that an additional gluing would violate (dag).
+gamma along M to any boundary component of tildeS above gamma'. Because we
+always glue matching boundary components (and we started with the same number
+of each), tildeS has the same number of leftover boundary components above
+gamma' as it does above gamma. So there must be at least one to glue to. The
+only reason we'd be unable to glue is if gluing to any leftover lift of gamma'
+violates (dag) or (dag').
 
-But since tildeS is locally a cover on each piece, the number of arcs incident
-to gamma is bounded by i(M,P,Sa). Tracing these arcs through tildeS, they can
-hit at most i(M,P,Sa) other boundary components. So tildeS can have at most
-i(M,P,Sa) many boundary components above gamma'. But since tildeS(0) has the
-same number of boundary components above gamma and gamma' (all page covers have
-the same degree), and we're only allowed to glue them to each other, this
-implies that there can be at most i(M,P,Sa) boundary components above gamma as
-well. Since our choice of tildegamma was arbitrary, this implies that there are
-at most C(M,P,Sa) = i(M,P,Sa)*j(M,P,Sa) many leftover boundary components.
+Let tildegamma' be an arbitrary leftover lift of gamma'. Suppose gluing to
+tildegamma' violates (dag). Let alpha be a closed curve produced by the gluing.
+Obviously alpha intersects the tildegamma = tildegamma' gluing circle,
+otherwise tildeS would already violate (dag). Cutting along this circle divides
+alpha into a union of arcs with endpoints on either gamma or gamma'. tildeS
+satisfies (dag'), so no arc can have both endpoints on the same boundary
+component. So there exists an arc connecting gamma to gamma'. This is the only
+way that an additional gluing would violate (dag). But since tildeS is locally
+a cover on each piece, the number of arcs incident to gamma is bounded by
+i(M,P,Sa). Tracing these arcs through tildeS, they can hit at most i(M,P,Sa)
+other boundary components. These are the only boundary components we can glue
+to to violate (dag).
 
-% XXX I think we don't need this closed-arc condition anymore!
+Similarly, suppose gluing to tildegamma' violates (dag'). Let alpha be an arc
+with endpoints on the same boundary component produced by the gluing. Let
+tildedelta be this boundary component. Again, alpha intersects the tildegamma
+= tildegamma' gluing circle, otherwise tildeS would already violate (dag').
+Cutting along this circle divides alpha into a union of arcs. Except for the
+two original endpoints (which now lie on two different subarcs - call these
+subarcs alpha0 and alpha1), all other endpoints of these arcs must either lie
+on gamma or gamma'.  But no arc can have both endpoints on the same boundary
+component, or tildeS would arleady violate (dag'). So any subarcs except alpha0
+and alpha1 must connect gamma to gamma'. By parity we can see that alpha0 and
+alpha1 both have one endpoint on tildedelta, but their other endpoints must be
+different. That is, either alpha0 ends on tildegamma and alpha1 on tildegamma',
+or vice versa.
 
-%Now, a simple trick: suppose tildeSa satisfies (dag) before we make a gluing.
-%To violate (dag) after gluing, we have to either match up two endpoints of an
-%arc to make a closed curve, or make an arc with two endpoints on the same
-%boundary component. To do that, we have to match up endpoints of two arcs
-%whose other (unglued) endpoints lie on the same boundary component of tildeSa.
-%If we imagine a graph where the vertices are boundary components and edges are
-%arc connections, this means we're gluing two vertices which are distance <=
-%2 apart in the graph. This graph has at number of incident edges at each
-%vertex bounded by n_a. So the number of vertices at distance <= 2 from C is
-%bounded by na + na(na - 1) = na^2. This means that if tildeSa contains more
-%than na2 many boundary components that match C (in that they'll glue to it
-%along daM), we can glue C to one of the remaining ones, and our new glued
-%surface will satisfy (dag). This contradicts our assumption that tildeSa
-%didn't admit any more gluings.
+Now the arcs incident to tildegamma hit at most i(M,P,Sa) other boundary
+components. These are our possible tildedelta. Each of these has at most
+i(M,P,Sa) incident arcs itself, one of which returns to tildegamma, leaving i-1
+that we need to care about. We have a total of at most i(M,P,Sa)*(i(M,P,Sa)-1)
+many "distance two" leftover boundary components. These are the only boundary
+components we can glue to to violate (dag').
 
-%So tildeSa must contain at most na2 many boundary components that match C. But
-%this argument works for any choice of C. Letting ja = sum k # components of
-%Sa,k (this is the total number of boundary components downstairs we could
-%choose downstairs for this argument), we find a bound
-%
-%# dtildeSa <= ja na^2
+But by construction of tildeS, there are no more legal gluings. So tildeS can
+have at most i(M,P,Sa)+(i(M,P,Sa)*(i(M,P,Sa)-1)) = i(M,P,Sa)^2 many leftover
+boundary components above gamma'.  But since tildeS(0) has the same number of
+boundary components above gamma and gamma' (all page covers have the same
+degree), and we're only allowed to glue them to each other, this implies that
+there can be at most i(M,P,Sa) boundary components above gamma as well.  Since
+our choice of tildegamma was arbitrary, this implies that there are at most
+C(M,P,Sa) = i(M,P,Sa)^2*j(M,P,Sa) many leftover boundary components.
 
 Proof of Theorem contd.
 
@@ -1056,9 +1066,11 @@ map tildeS(0) -> tildeS.
 
 Intuitively, this should not be difficult. Before gluing, tildeS has at least
 j(M,P,Sa)*n many boundary components, and afterwards at most
-j(M,P,Sa)*i(M,P,Sa). If we choose n to be very large, we should be able to
+j(M,P,Sa)*i(M,P,Sa)^2. If we choose n to be very large, we should be able to
 modify the gluing so that the very few leftover boundary components are "far
-apart" from each other.
+apart" from each other. Note that we no longer guarantee that our surface
+satisfies (dag'), but that will be all right because we still locally satisfy
+(dag') "where it counts".
 
 Claim.
 
@@ -1084,12 +1096,14 @@ middle of an arc and glue up, we could still produce a closed loop
 accidentally!
 
 To avoid this, we proceed as follows. Let gamma' be the matching boundary
-component downstairs, and consider all n*d components of pi-1(gamma'). Most of
-these will be already glued to components of pi-1(gamma), but we still want to
-consider them. Eliminate the components that lie on the same pieces, on either
-side, as existing boundary components of tildeS (in particular, eliminate all
-the components that are boundary components of tildeS).  Let sC be the set of
-remaining components of pi-1(gamma').  Let sA be the set of arcs with endpoints
+component downstairs, and consider all n*d original lifts of gamma' (before we
+did any gluing).  Most of these will be already glued to lifts of gamma, but we
+still want to consider them.  Eliminate the components that lie on the same
+pieces, on either side, as existing boundary components of tildeS (in
+particular, eliminate all the components that are themselves boundary
+components of tildeS). That is, avoid cutting anywhere that is already cut, or
+that would create a new piece with two or more boundary components. Let sC be
+the set of remaining lifts of gamma'.  Let sA be the set of arcs with endpoints
 on tildegamma.
 
 Now, if any member of sC is not crossed by an arc in sA, cut there and glue the
@@ -1110,18 +1124,24 @@ tildeS'.  Note that such a member must always exist if we choose n sufficiently
 large, because we have a fixed bound on the number of arcs in sA, and a bound
 from above on the number of boundary components of tildeS.
 
+% XXX XXX 
+%
+% Figure out that awkward 3rd condition where we need to make sure there aren't
+% any closed arcs created at the "original" leftover bcs from step 1 but we can
+% allow closed arcs at the "new cut" bcs from this step 2.
 We claim that we can cut and glue tildegamma' to tildegamma while maintaining
-(dag).  Suppose not. Then there would have to be a closed loop created, coming
-from some arc alpha at tildegamma. Before the cuts this arc crossed a member of
-sC, so alpha in sA'. But since each arc in sA' was cut as close as possible to
-the origin, there must be some tildegamma'i that intercepts alpha between
-tildegamma and tildegamma'. Since we cut tildegamma'i already, this means that
-tildegamma and tildegamma' cannot be joined by alpha. So (dag) is maintained.
+(dag).  Suppose not. Let alpha be a closed curve obtained from cutting and
+gluing tildegamma' to tildegamma. Cutting apart tildegamma and tildegamma'
+breaks alpha into a union of arcs.  Before the cuts this arc crossed a member
+of sC, so alpha in sA'.  But since each arc in sA' was cut as close as possible
+to the origin, there must be some tildegamma'i that intercepts alpha between
+tildegamma and tildegamma'.  Since we cut tildegamma'i already, this means that
+tildegamma and tildegamma' cannot be joined by alpha.  So (dag) is maintained.
 
 We repeat this process for every tildeS boundary component beyond the first on
 each piece. As shown above, the number of such boundary components is bounded
 by i(M,P,Sa)*j(M,P,Sa). Each time, sA' contains at most i(M,P,Sa) arcs, so we
-always have at most i(M,P,Sa)*j(M,P,Sa)*(2*i(M,P,Sa)+1) many boundary
+always have at most i(M,P,Sa)^2*j(M,P,Sa)*(2*i(M,P,Sa)+1) many boundary
 components.  At any point in the cutting/gluing process, the number of elements
 of pi-1(gamma') that overlap with pieces containing boundary components of
 tildeS' is bounded by twice this number, so if we choose n large enough there
@@ -1134,14 +1154,8 @@ tildeS' which violate (ddag) must be strictly decreasing - as during our
 cutting, we always choose the new places to cut to lie on different pieces from
 existing boundary components. So repeating this for every extra tildeS boundary
 component we obtain tildeS' satisfying (dag) and (ddag). tildeS' has at most
-i*j*(2i+1) many boundary components. At most i*(2i+1) of them lie above any
+i^2*j*(2i+1) many boundary components. At most i^2*(2i+1) of them lie above any
 given boundary component downstairs.
-
-%Now that we've made these cutsLook at the set of arcs traveling from C, and
-%all the arcs from components directly adjacent to C in the arc graph (that is,
-%connected to C by an arc).  There are at most na + na(na-1) = na^2 such arcs.
-%If there is a place to glue that doesn't intersect any of the arcs, then we
-%can glue immediately.
 
 Proof of Theorem (conclusion).
 
