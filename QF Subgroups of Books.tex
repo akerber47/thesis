@@ -1097,83 +1097,92 @@ a time. At any point there will be at least i^2+1 elements of sC remaining
 above gamma', so we'll always be able to choose one that doesn't violate (dag)
 or (dag'). Repeat this process for each gamma to construct tildeS.  Since we
 glued all the leftovers, it immediately follows that dtildeS cin sC, and
-therefore tildeS satisfies (dag''). Now in the worst case, dtildeS = sC. So
-#dtildeS <= m*j(M,P,Sa).
+therefore tildeS satisfies (dag'').
+
+Let's analyze the possibilities for #dtildeS. Above each gamma cin dSa,k, sC
+has m elements. So dtildeS has at most m components above gamma, or m*j many
+boundary components in total. The lower bound is determined by the maximum
+number of leftovers, since the only way we'll remove reserve components from
+dtildeS is by gluing them to leftover components. There are at most i^2
+leftover components above gamma, and similarly above gamma', so there will be
+at least m - i^2 components remaining in dtildeS above gamma. So
+
+m-i(M,P,Sa)^2 <= #(dtildeS above gamma) <= m
+
+and
+
+m-i(M,P,Sa)^2*j(M,P,Sa) <= #dtildeS <= m*j(M,P,Sa).
 
 Finally, suppose we've done the entire above construction for each boundary
 component of our book of I-bundles M to produce a partially-glued surface with
-some boundary components left over. We want to glue these together, but they
-may have different numbers of boundary components over each page boundary where
-we want to glue them! So we'll need to cut them all up even more.
+some boundary components left over. For each boundary component daM, we'll call
+the surface tildeSa. Note that we must be sure to make the same choice of n and
+m for all these surfaces. Now we want to glue these together, but they may have
+very different numbers of boundary components! So we'll need to normalize them
+so they all have the same number of boundary components above each gamma cin
+dSa,k, so we can do a local construction above a neighborhood of each spine in
+M.
 
-Let i = max a i(M,P,Sa). Let j = max a j(M,P,Sa). Then for n sufficiently
-large, we can further cut tildeS' so that it has exactly i*(2i+1) many boundary
-components above each boundary component downstairs.
+Let i_M = max a i(M,P,Sa). By the inequality above, for each gamma cin Sa,k,
+#(dtildeSa above gamma) >= m - i_M^2. We want to make this an equality for each
+tildeSa by performing some more gluings.
 
-Proof.
+Again, we use the size of the reserve to our advantage. Assuming m>=i_M^2
++ i(M,P,Sa)^2 for each tildeSa, by the same argument as above there will always
+be choices remaining from the reserve to make the gluing. Combining these all
+we need is m>= 2i_M^2.
 
-This is identical to the above argument, except that we don't need to worry
-about the arcs because we aren't gluing. Since i is fixed (it depends only on
-(M,P)), taking n large enough, there must always be many pieces above any gamma
-that have no cuts.  Arbitrarily choose some to cut.
+By abuse of notation, we'll call these normalized surfaces tildeSa also (the
+non-normalized ones will not come up again). Each has exactly C = m - i_M^2
+many boundary components above any gamma cin dSa,k.
 
-Finish Proof of Theorem.
+Build a single surface tildeS by gluing the tildeSa as follows. Begin with
+sqcup a tildeSa.
 
-Write tildeSa for the surface we obtain from the above construction for each
-boundary component of M. Note that tildeSa is not quite a cover of the full
-boundary component, because each one has these leftover boundary components
-that we aren't allowed to glue.
+For each spine Mc of M, look at all the incident pages. Say there are q of
+them.  Each page has two sides, so there are 2q many pieces Sa,k downstairs
+near Mc, each with one boundary component glued along the spine Mc.  By the
+facts (0), (1), and (2) we ensured above, we know that all these Sa,k are
+distinct and they are all glued along simple parallel closed curves on dMc (do
+we know they're longitudes?  See above).
 
-Build a single surface tildeS by gluing the tildeSa as follows. For each spine
-Mc of M, look at all the incident pages. Say there are m of them. Each page has
-two sides, so there are 2m many pieces Sa,k downstairs near Mc, each with one
-boundary component glued along the spine Mc. By the facts (0), (1), and (2) we
-ensured above, we know that all these Sa,k are distinct and they are all glued
-along simple parallel closed curves on dMc (do we know they're longitudes?  See
-above).
+Introduce notation as follows. sN(Mc) consists of q neighborhoods inside pages,
+attached to Mc by annuli. The meridian of Mc gives a cyclic order to the
+attached pages.  Fix an orientation for the meridian and an (arbitrary)
+starting point along it, and label the pages 1, dots, q under this ordering.
+The orientation of the meridian also gives an ordering of the boundary
+components of each attaching annulus.  Using this, label the 2q boundary
+components by gamma1-,gamma1+,dots, gammaq-,gammaq+, where gammai- and gammai+
+are the two sides of the attaching annulus for the ith page.
 
-By the work we did in the last claim, there are exactly i*(2i+1) many tildeSa
-boundary components above each Sa,k boundary component. This means that at our
-spine, all together we have 2m*i*(2i+1) incident leftover boundary components
-of the tildeSa. Note that since we don't know the global behavior of the
-boundary components of M, there may be anywhere from 1 to m boundary components
-present in this local slice of the boundary components above Mc. But that
-doesn't matter to our argument yet.
+Now consider dM cap sN(Mc). Notice that the 2q boundary components of these
+attaching annuli that we just labeled are precisely the 2q boundary curves of
+the boundary pieces Sa,k that are near Mc. We don't know how many global
+boundary components a are involved, but locally we do know which pieces are
+attached inside dM cap sN(Mc). dM cap Mc consists of q parallel annuli along
+dMc that connect adjacent pages together. That is, the first annulus has
+boundary gamma1+ cup gamma2-, the second gamma2+ cup gamma3-, and so on. It
+follows that these are the "pairs downstairs" in the above construction of each
+tildeSa. That is, these are the curves we called gamma and gamma' earlier. So
+within sqcup tildeSa, the existing gluings only glue lifts of gamma1+ to lifts
+of gamma2-, lifts of gamma2+ to lifts of gamma3-, etc etc.
 
-We know m>=3 by (0). Basically, we do our gluing by attaching everything
-"anywhere except the way that boundary component goes." To be precise, if we
-intersect a neighborhood of our spine Mc with dM, this intersection has
-m components. Each component consists of a pi1-injective longitudinal annulus
-in the spine's boundary connecting two neighborhoods that extend along
-boundaries of two different pages attached to the spine. See diagram.
+Finally, the gluing. Because we normalized, each sqcup a tildeSa has exactly
+C boundary components above each gammaipm.  Glue these 2qC boundary components
+as follows. Glue lifts of gamma1+ to lifts of gamma3-, lifts of gamma2+ to
+lifts of gamma4-, and so on. In general glue lifts of gammai+ to lifts of
+gamma(i+2)-. Within each subset of lifts, choose the gluing arbitrarily. We
+know the numbers on each side are equal, so they'll match up.
 
-Our book of I-bundles is oriented by (2). To simplify the proof, we glue
-following orientations of the tildeS induced by orientation of M. All the
-boundary neighborhood annuli have a consistent orientation as they're parallel
-on the boundary of a solid torus. So of the 2m Sa,k boundary components under
-consideration, we can separate them into the + and - components. There are m of
-each.
+Every boundary component of sqcup a tildeSa lives above a boundary component of
+some Sa,k which means it is attached to some core Mc. So once we've done the
+above gluing step for all cores, the resulting surface tildeS is closed.
 
-Notice that in our spine neighborhood, each page itself has 2 boundary
-components, one of which is + and one is - (as above). Intuitively, each page
-has one annulus "starting at it" and one annulus "ending at it". Furthermore,
-as above each component of dM contains one + and one - component.
+Claim.
 
-There are m + components and m - components. Assign a gluing downstairs by
-attaching each + boundary component of an Sa,k to an arbitrary - component that
-is neither of the 2 associated components in the above paragraph (the "same
-page" component and the "same boundary" component). Since m>=3, we can do this
-assignment consistently for all 2m of the local Sa,k boundary component. (For
-instance, fix a cyclic order of the pages st the boundary components increase
-by 1, and glue increasing by 2 instead).
+tildeS satisfies (*).
 
-Of course, this gluing is nonsensical downstairs, because the Sa,k are already
-attached in other ways. However, this new "bent" gluing is the template we
-follow upstairs. For each spine Mc, we have exactly 2m*i*(2i+1) incident
-leftover boundary components of the tildeSa, and each of the 2m boundary
-components described earlier has i*(2i+1) leftover boundary components above
-it. So glue these following the +/- pattern we just chose. This yields
-a surface tildeS.
+Proof of Claim.
 
 By construction, tildeS consists of covers of each page of M glued along
 parallel longitudinal annuli at the spines of M. By the covering lemma, it
@@ -1213,7 +1222,7 @@ important for the next step.
 Finally, we need to look at what happens to these gammai lifts when we do the
 last gluing step. Since the gammai only form arcs in each piece of tildeS, the
 only way to form a closed curve is to join up two or more arcs in tildeSa
-and/or the tildeSb.  But recall that by (ddag), each piece of each tildeSb has
+and/or the tildeSb.  But recall that by (dag''), each piece of each tildeSb has
 at most one leftover boundary component. So any proper arc in tildeSb has to
 traverse at least two pieces. This means that the gammai cannot lift and glue
 to a proper arc in tildeSb, because they cannot traverse more than a single
@@ -1234,13 +1243,13 @@ above, it can't be Pa,k because we didn't glue along the local boundary
 component). This is all part of the same tildeSa, but now we're on the "wrong
 part of it" for our parabolic gamma. Then by the same argument as for Sb gamma
 cannot continue past the first piece traversal after a bent gluing. And it has
-to traverse at least two pieces upstairs before bending back because of (ddag),
-and can't return back to the same boundary component by definition of the
-subgroup separability cover. In terms of tildeS, (ddag) tells us that each
+to traverse at least two pieces upstairs before bending back because of
+(dag''), and can't return back to the same boundary component by definition of
+the subgroup separability cover. In terms of tildeS, (dag'') tells us that each
 piece has at most one bent gluing.
 
 So we cannot join up the lifts of gammai to form a lift of gamma. This
-completes the proof.
+completes the proof of the theorem.
 
 
 Theorem.
