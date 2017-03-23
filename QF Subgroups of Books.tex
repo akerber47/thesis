@@ -934,6 +934,20 @@ normalization is to make sure each pia,k is a cover of the same degree, n*d.
 We'll call the disjoint components of this cover "pieces". We can also combine
 these into a single cover pi : sqcup tildeSa,k -> sqcup Sa,k
 
+Fix a large integer m>0. Now, reserve a subset sC of the boundary components of
+sqcup tildeSa,k.  This subset should have the following properties:
+
+(1) Each boundary component of each Sa,k is covered by exactly m elements of
+sC.
+
+(2) Every connected component of sqcup tildeSa,k contains at most one element
+of sC.
+
+This is possible as long as n >= m*b, where b is the maximum number of boundary
+components of any Sa,k. If n>= m*b, we know d/da,k >= 1, so each disjoint union
+tildeSa,k has at least m*b many disjoint copies of each S'a,k. So we have
+enough copies to make our choices above that Sa,k disjoint.
+
 Each Sa,k is homeomorphic to the core surface of its page, so by the covering
 lemma any closed surface formed by gluing the tildeSa,k along appropriate
 boundaries will induce an immersed pi1-injective surface in M. This is our
@@ -961,39 +975,40 @@ gluing, but this would just correspond to a different choice of cover by the
 covering lemma.
 
 We introduce some notation. Bbegin by taking tildeS(0) = sqcup tildeSa,k to be
-a disjoint union of these covers - that is, we haven't done any gluing yet. At
-each step in the gluing, we have a gluing map f(i+1) : tildeS(i) -> tildeS(i+1)
-by attaching two boundary comonents of tildeS(i). Write tildeP(i) for the arcs
-and curves on tildeS(i) induced by gluing the tildePa,k. That is, tildeP(i)
-= f(i) circ ...  circ f(1) (sqcup tildePa,k).
+a disjoint union of these covers - that is, we haven't done any gluing yet.
+Think of these as pieces we'll use to build our cover. At each step in the
+gluing, we have a gluing map f(i+1) : tildeS(i) -> tildeS(i+1) by attaching two
+boundary comonents of tildeS(i). Write tildeP(i) for the arcs and curves on
+tildeS(i) induced by gluing the tildePa,k.  That is, tildeP(i) = f(i) circ ...
+circ f(1) (sqcup tildePa,k).
 
-However, we do not want to do this gluing arbitrarily.  In addition to gluing
-along daM, we want to preserve the following two invariants.
+We'll want to glue boundary components other than sC first - these are the
+"reserve" that we'll only use at the end. This guarantees that our final glued
+surface will have leftover boundary components that are sufficiently far apart.
+By abuse of notation, we'll also use sC to refer to the induced set of boundary
+components in each tildeS(i).
+
+In addition to gluing along daM and avoiding the "reserve" sC, we want to
+preserve the following two invariants.
 
 (dag) Each tildeP(i) cin tildeS(i) does not contain any closed curves. That is,
 it forms a union of proper arcs.
 
-% OOPS! I should probably do some renaming...
 (dag') Furthermore, no arc in any tildeP(i) begins and ends at the same
 boundary component of tildeS(i).
 
-We'll call arcs that violate this condition bad arcs.
-
 By the use of the lemma and the assumption of the theorem (no closed curves in
-individual pages), tildeS(0) satisfies (dag) and (dag').  We repeatedly make an
-arbitrary gluing that's along daM in the above sense and that preserves (dag)
-and (dag').  This process will terminate at some point, after there are no more
-gluings left to make that preserve (dag) and (dag'). We'll call this surface
-tildeS, and by abuse of terminology, we'll call the images of the S'a,k pieces
-of tildeS also.  tildeS is a surface with boundary, because there are
-"leftover" boundary components that we couldn't glue without violating (dag) or
-(dag').
+individual pages), tildeS(0) satisfies (dag) and (dag'). We repeatedly make an
+arbitrary gluing that lies along daM in the above sense, doesn't glue any
+elements of sC, and preserves (dag) and (dag').  This process will terminate at
+some tildeS(N), after there are no more gluings left to make. tildeS(N) is
+a surface with boundary, because there are "leftover" boundary components that
+we couldn't glue without violating one of the above conditions.
 
 Claim.
 
-After performing the above construction, tildeS has a number of leftover
-boundary components bounded by C(M,P,Sa).  In particular, this bound is
-independent of the choice of n.
+#(dtildeS(N) - sC) is bounded by C(M,P,Sa).  In particular, this bound is
+independent of the choice of n and m.
 
 Proof of Claim.
 
