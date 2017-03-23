@@ -1190,29 +1190,37 @@ induces an immersed pi1-injective surface. It remains to show that tildeS
 cannot contain any lifts of parabolic curves.
 
 Let alpha be a parabolic curve in some boundary component Sa of M. Cut alpha
-into arcs alphai along the page boundaries, so each alphai cin Sa,ki. By
-construction of tildeSa, lifting the alphai to tildeSa pieces and gluing cannot
-yield closed curves.  It only yields a union of arcs, by (dag).
+into arcs alphai along the page boundaries, so each alphai cin Sa,ki. We can
+think about this as follows. For each alphai, there are two kinds of lifts to
+tildeS. We can view it as an arc in Pa,ki cin Sa,ki, and lift it to a cover of
+Sa,ki, that is, a component of tildeSa,ki. Since alpha cin Sa, this will
+necessarily be part of tildeSa cin tildeS. Furthermore, by construction of
+tildeSa, lifting the alphai to tildeSa pieces and gluing cannot yield closed
+curves.  It only yields a union of arcs, by (dag).
 
-However, each alphai cin Sa,ki can also lift to a cover of the opposite page
-boundary barSa,ki. Let Sb be the boundary component containing barSa,ki. Note
-that it may be possible to have Sa = Sb. Write Sb,li = barSa,ki, we can see
-that alphai in barPb,li, the set of "opposite parabolic arcs" that we defined
-earlier.  So alphai lifts to S'b,li as a union of arcs, each of which connects
-two different boundary components of S'b,li. This produces a set of arcs in
-tildeSb.
+However, the second way we can lift alphai cin Sa,ki is to a cover of the
+opposite page boundary barSa,ki. Let Sb be the boundary component containing
+barSa,ki, and write Sb,li = barSa,ki, we can see that alphai in barPb,li, the
+set of "opposite parabolic arcs" that we defined earlier.  So alphai lifts to
+S'b,li as a union of arcs, each of which connects two different boundary
+components of S'b,li. This produces a set of arcs in tildeSb. Note that it may
+be possible to have Sa = Sb, depending on how our book of I-bundles is
+constructed.  Regardless, we want to think of these as a different kind of
+lift, because we're using the opposite page side to lift, rather than the side
+the arc "naturally lives on."
 
 We now claim that these arcs cannot be used to form closed curves in tildeSb.
-Intuitively, this is because Sb does not remain parallel to alpha for long
-enough, so we'll soon reach a piece of tildeSb where our lift can't continue.
-To be precise, let tildealphai be a lift of alphai to tildeSb. Suppose alphai
-has an endpoint at a spine Mc. If we look at how the boundary components of
-a book of I-bundles behave near a spine, we that locally the two boundary sides
-of a page are attached to sides of two different pages. In the terminology we
-used earlier for gluing pages at a spine, gammai- and gammai+ are attached to
-the attaching annulus boundary curves of two different pages:  gammai- attaches
-to gamma(i+1)+, but gammai+ attaches to gamma(i-1)-. Since there are at least
-three pages at Mc by (0), the (i-1)st and (i+1)st pages are distinct.
+Intuitively, this is because the opposite side of the boundary does not remain
+parallel to alpha for long enough, so we'll soon reach a piece of tildeSb where
+our lift can't continue.  To be precise, let tildealphai be a lift of alphai to
+tildeSb.  Suppose alphai has an endpoint at a spine Mc. If we look at how the
+boundary components of a book of I-bundles behave near a spine, we that locally
+the two boundary sides of a page are attached to sides of two different pages.
+In the terminology we used earlier for gluing pages at a spine, gammai- and
+gammai+ are attached to the attaching annulus boundary curves of two different
+pages: gammai- attaches to gamma(i+1)+, but gammai+ attaches to gamma(i-1)-.
+Since there are at least three pages at Mc by (0), the (i-1)st and (i+1)st
+pages are distinct.
 
 Suppose that the endpoint of alphai we're considering lies on gammai-. That is,
 gammai- is a boundary component of Sa,ki, in our other notation. And gammai+ is
@@ -1222,41 +1230,53 @@ direction must lift from that (i+1)st page at Mc. But in tildeSb, we attach the
 surface pieces according to the gluings needed for the Sb boundary component.
 Locally, tildealphai cin tildeSb,li, where lifts of gammai+ only attach to
 lifts of gamma(i-1)-. But gamma(i-1)- is a boundary component of a different
-page, so there is no possible way to continue tildealphai. The same argument
-applies at the opposite endpoint of tildealphai, which might lie above the same
-spine Mc or a different one. This argument shows that lifts of arcs alphai cin
-Sa,ki as "opposite parabolic arcs" to Sb have nothing on either side that they
-can glue to in tildeSb. Since obviously it takes at least two attached arcs to
-make a closed curve, there are no lifted closed curves in tildeSb.
+page, so tildealphai connects to a next page with no lift of the next segment
+of alphai. So there is no possible way to continue tildealphai.  The same
+argument applies at the opposite endpoint of tildealphai. This argument shows
+that lifts of arcs alphai as "opposite parabolic arcs" to Sb have no "opposite
+arcs" on either side that they can glue to.
 
-Finally, we need to look at what happens to these alphai lifts when we do the
-last gluing step. Since the alphai only form arcs in each piece of tildeS, the
-only way to form a closed curve is to join up two or more arcs in tildeSa
-and/or the tildeSb.  But recall that by (dag''), each piece of each tildeSb has
-at most one leftover boundary component. So any proper arc in tildeSb has to
-traverse at least two pieces. This means that the alphai cannot lift and glue
-to a proper arc in tildeSb, because they cannot traverse more than a single
-piece, as shown above.
+Finally, suppose our parabolic curve alpha cin Sa, after cutting into alphai,
+lifts to pieces tildealphai which form a closed curve tildealpha cin tildeS.
+Cut tildealpha along only the gluings between different tildeSb done in the
+final gluing step. Each piece tildealphaj now consists of multiple tildealphai,
+which are either all "natural lifts" or all "opposite lifts" (in the above
+sense). This is simply because each tildeSb is, except for its extra boundary
+components, a cover of the corresponding Sb, and there's no way alpha to
+locally jump from being on the opposite side of a page from Sb to suddenly
+being on the same side. However, at the gluings in the final step, we attach
+covers of different boundary components together, so we may have attached
+multiple pieces tildealphaj of the same type, or different types.
 
-So any closed curve has to consist only of arcs in tildeSa, joined up when we
-glued tildeSa to itself it the final step. This is possible, because by
-cleverly gluing the same pages to many spines it's not hard to produce a book
-of I-bundles with only one boundary component. But look at what has to happen
-when we glue tildeSa to itself in the final step. In order to attach the alphai
-to form a lift of alpha, looking near the endpoints of an arc in tildeSa, we
-have to glue to a lift of a continuation of alpha downstairs. But by the same
-argument as above (where Sa and Sb are not parallel), Sa cannot remain locally
-parallel to itself "on the other side". Even if the continuation of alpha lifts
-to the other side of our gluing, it would have to lift there because it's part
-of the corresponding barPa,k, not Pa,k (because of how we chose the gluing
-above, it can't be Pa,k because we didn't glue along the local boundary
-component). This is all part of the same tildeSa, but now we're on the "wrong
-part of it" for our parabolic alpha. Then by the same argument as for Sb alpha
-cannot continue past the first piece traversal after a bent gluing. And it has
-to traverse at least two pieces upstairs before bending back because of
-(dag''), and can't return back to the same boundary component by definition of
-the subgroup separability cover. In terms of tildeS, (dag'') tells us that each
-piece has at most one bent gluing.
+It is impossible to attach two natural segments tildealphaj in the final step.
+Suppose we had such an attachment, and look locally at the spine where they're
+attached. Our attachment must yield a lift of alpha, so we can look at the
+local neighborhood in alpha covered by a neighborhood of our attachment point.
+Near the spine, this neighborhood must live in a single local boundary
+component. But as we discussed in detail above, each local boundary component
+simply consists of small neighborhoods on two page boundaries, joined together
+by an annulus. Locally, a natural segment can only be obtained by lifting to
+a cover of one of these two page boundaries, not any of the other page
+boundaries near this spine. So one side of our attachment must lie on one page
+boundary, and the other side on the other. But by definition of how we do our
+final attaching step, we never attach in such a way that we follow along the
+local boundary components! This is the point of having valence >=3 at each
+spine, and attaching gammai+ to gamma(i+2)-, is to avoid this problem. Since we
+never do attachments of this form, we can't have an attachment with natural
+lifts on both sides.
+
+So each attachment must have an opposite lift on one or both sides. But recall
+that by (dag''), each piece of each tildeSb has at most one free boundary
+component. So all the tildealphaj must traverse at least two pieces, as we
+ensured by construction of the S'a,k that they couldn't begin and end at the
+same boundary component. This is where we finally use all those
+carefully-established earlier criteria.
+
+Because finally, as shown above, opposite lifts of individual alphai cannot
+connect to opposite lifts on either side. So it's impossible to construct
+a tildealphaj made out of opposite lifts, since it has to traverse more than
+one piece.  This contradicts our assumption that the tildealphaj glue to form
+a closed curve.
 
 So we cannot join up the lifts of alphai to form a lift of alpha. This
 completes the proof of the theorem.
