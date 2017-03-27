@@ -938,44 +938,44 @@ connecting two different boundary components of $S'a,k$.
 
 Let $da,k$ be the degree of this cover. Let $d = lcm a,k da,k$.
 
-Fix some large integer $n>0$. Now for each $k$, let $pia,k : tildeSa,k -> S'a,k
+Fix some large integer $n>0$. Now for each $k$, let $pia,k : \widetilde{S_{a,k}} -> S'a,k
 -> Sa,k$ be a disjoint union of $n*d/da,k$ copies of $S'a,k$. The purpose of
 the $d/da,k$ normalization is to make sure each $pia,k$ is a cover of the same
 degree, $n*d$.  We'll call the connected components of this cover "pieces". We
-can also combine these into a single cover $pi : sqcup tildeSa,k -> sqcup Sa,k$
+can also combine these into a single cover $pi : sqcup \widetilde{S_{a,k}} -> sqcup Sa,k$
 
 Fix a large integer $m>0$. Now, reserve a subset $sC$ of the boundary
-components of $sqcup tildeSa,k$.  This subset should have the following
+components of $sqcup \widetilde{S_{a,k}}$.  This subset should have the following
 properties:
 
 (1) Each boundary component of each $Sa,k$ is covered by exactly $m$ elements
 of $sC$.
 
-(2) Every connected component of $sqcup tildeSa,k$ contains at most one element
+(2) Every connected component of $sqcup \widetilde{S_{a,k}}$ contains at most one element
 of $sC$.
 
 This is possible as long as $n >= m*b$, where $b$ is the maximum number of
 boundary components of any $Sa,k$. If $n>= m*b$, we know $d/da,k >= 1$, so each
-disjoint union $tildeSa,k$ has at least $m*b$ many disjoint copies of each
+disjoint union $\widetilde{S_{a,k}}$ has at least $m*b$ many disjoint copies of each
 $S'a,k$.  So we have enough copies to make our choices above that $Sa,k$
 disjoint.
 
 Each $Sa,k$ is homeomorphic to the core surface of its page, so by the covering
-lemma any closed surface formed by gluing the $tildeSa,k$ along appropriate
+lemma any closed surface formed by gluing the $\widetilde{S_{a,k}}$ along appropriate
 boundaries will induce an immersed $\pi_1$-injective surface in $M$. This is
 our strategy.
 
 Write $tildePa,k=pia,k-1(Pa,k)$. As constructed, $Pa,k$ consists of proper arcs
-connecting two different boundary components of $tildeSa,k$.
+connecting two different boundary components of $\widetilde{S_{a,k}}$.
 
 We first glue the pieces "along" $daM$ in the following sense. Given any two
 pieces $Sa,k1$, $Sa,k2$ in the decomposition of $daM$, we know that $Sa,k1$ has
-some boundary components $gamma1,gamma2,dots cin dSa,k1$, and
-$gamma1',gamma2',dots cin dSa,k2$ such that before we cut $daM$ apart, $gamma1$
+some boundary components $gamma1,gamma2,dots \cin dSa,k1$, and
+$gamma1',gamma2',dots \cin dSa,k2$ such that before we cut $daM$ apart, $gamma1$
 was glued to $gamma1'$, $gamma2$ to $gamma2'$, etc.  That is, these components
 form the locus we glue $Sa,k1$ and $Sa,k2$ together along when we glue the
 $Sa,k$ to form $daM$.  For each such pair, look at the boundary components of
-$tildeSa,k1$ and $tildeSa,k2$.  We allow ourselves to glue components of
+$\widetilde{S_{a,k}}1$ and $\widetilde{S_{a,k}}2$.  We allow ourselves to glue components of
 $pi-1(gamma1)$ to components of $pi-1(gamma1')$, components of $pi-1(gamma2)$
 to components of $pi-1(gamma2')$, etc. We forbid ourselves from gluing
 components of $pi-1(gamma1)$ to any other lifted boundary components of $Sa,k2$
@@ -987,82 +987,82 @@ boundary components upstairs in one possible way - we could choose a different
 gluing, but this would just correspond to a different choice of cover by the
 covering lemma.
 
-We introduce some notation. Bbegin by taking $tildeS(0) = sqcup tildeSa,k$ to
+We introduce some notation. Bbegin by taking $\widetilde{S^{(0)}} = sqcup \widetilde{S_{a,k}}$ to
 be a disjoint union of these covers - that is, we haven't done any gluing yet.
 Think of these as pieces we'll use to build our cover. At each step in the
-gluing, we have a gluing map $f(i+1) : tildeS(i) -> tildeS(i+1)$ by attaching
-two boundary comonents of $tildeS(i)$. Write $tildeP(i)$ for the arcs and
-curves on $tildeS(i)$ induced by gluing the $tildePa,k$.  That is, $tildeP(i)
+gluing, we have a gluing map $f(i+1) : \widetilde{S^{(i)}} -> tildeS(i+1)$ by attaching
+two boundary comonents of $\widetilde{S^{(i)}}$. Write $tildeP(i)$ for the arcs and
+curves on $\widetilde{S^{(i)}}$ induced by gluing the $tildePa,k$.  That is, $tildeP(i)
 = f(i) circ ...  circ f(1) (sqcup tildePa,k)$.
 
 We'll want to glue boundary components other than $sC$ first - these are the
 "reserve" that we'll only use at the end. This guarantees that our final glued
 surface will have leftover boundary components that are sufficiently far apart.
 By abuse of notation, we'll also use $sC$ to refer to the induced set of
-boundary components in each $tildeS(i)$.
+boundary components in each $\widetilde{S^{(i)}}$.
 
 In addition to gluing along $daM$ and avoiding gluing members of $sC$, we want
 to preserve the following two invariants.
 
-(dag) Each $tildeP(i) cin tildeS(i)$ does not contain any closed curves. That
+(dag) Each $tildeP(i) \cin \widetilde{S^{(i)}}$ does not contain any closed curves. That
 is, it forms a union of proper arcs.
 
 (dag') Furthermore, no arc in any $tildeP(i)$ begins and ends at the same
-boundary component of $tildeS(i)$.
+boundary component of $\widetilde{S^{(i)}}$.
 
 By the use of the lemma and the assumption of the theorem (no closed curves in
-individual pages), $tildeS(0)$ satisfies (dag) and (dag'). We repeatedly make
+individual pages), $\widetilde{S^{(0)}}$ satisfies (dag) and (dag'). We repeatedly make
 an arbitrary gluing that lies along daM in the above sense, doesn't glue any
 elements of sC, and preserves (dag) and (dag').  This process will terminate at
-some $tildeS(N)$, after there are no more gluings left to make. $tildeS(N)$ is
+some $\widetilde{S^{(N)}}$, after there are no more gluings left to make. $\widetilde{S^{(N)}}$ is
 a surface with boundary, because there are "leftover" boundary components that
 we couldn't glue without violating one of the above conditions.
 
 Claim.
 
-$#(dtildeS(N) - sC)$ is bounded by $C(M,P,Sa)$.  In particular, this bound is
+$\#(d\widetilde{S^{(N)}} - sC)$ is bounded by $C(M,P,Sa)$.  In particular, this bound is
 independent of the choice of $n$ and $m$ made earlier.
 
 Proof of Claim.
 
-Consider an arbitrary boundary component $tildegamma cin dtildeS(N) - sC$.  It
-lives above some boundary component $gamma cin dSa,k$. Look at the number of
+Consider an arbitrary boundary component $tildegamma \cin d\widetilde{S^{(N)}} - sC$.  It
+lives above some boundary component $gamma \cin dSa,k$. Look at the number of
 arcs of $Pa,k$ which are incident to gamma. This number depends only on $M$ and
 $P$ (not on $n$). Let $i_a = i(M,P,S_a)$ be the maximum such number of incident
 arcs of P for any boundary component gamma of any $Sa,k in Sa$. Let $j_a
 = j(M,P,Sa)$ be the total number of boundary components of the $Sa,k$.
 
-Let $gamma' cin dSa,k'$ be the boundary component matching $gamma$. We consider
-gluing gamma along $M$ to any component of $dtildeS(N) - sC$ above gamma'.
+Let $gamma' \cin dSa,k'$ be the boundary component matching $gamma$. We consider
+gluing gamma along $M$ to any component of $d\widetilde{S^{(N)}} - sC$ above gamma'.
 Because we always glue matching boundary components (and we started with the
-same number of each), $dtildeS - sC$ has the same number of leftover boundary
+same number of each), $d\widetilde{S} - sC$ has the same number of leftover boundary
 components above $gamma'$ as it does above $gamma$. So there must be at least
 one to glue to.  The only reason we'd be unable to glue is if gluing to any
 leftover lift of $gamma'$ violates (dag) or (dag').
 
-Let $tildegamma' cin dtildeS(N) - sC$ be an arbitrary leftover lift of
+Let $tildegamma' \cin d\widetilde{S^{(N)}} - sC$ be an arbitrary leftover lift of
 $gamma'$.  Suppose gluing to $tildegamma'$ violates (dag). Let $alpha$ be
 a closed curve produced by the gluing.  Obviously $alpha$ intersects the
-$tildegamma = tildegamma'$ gluing circle, otherwise $tildeS(N)$ would already
+$tildegamma = tildegamma'$ gluing circle, otherwise $\widetilde{S^{(N)}}$ would already
 violate (dag).  Cutting along this circle divides $alpha$ into a union of arcs
-with endpoints on either $gamma$ or $gamma'$.  $tildeS$ satisfies (dag'), so no
+with endpoints on either $gamma$ or $gamma'$.  $\widetilde{S}$ satisfies (dag'), so no
 arc can have both endpoints on the same boundary component. So there exists an
 arc connecting $gamma$ to $gamma'$. This is the only way that an additional
-gluing would violate (dag). But since $tildeS(N)$ is locally a cover on each
-piece, the number of arcs incident to $gamma$ is bounded by $i_a$.
-Tracing these arcs through $tildeS(N)$, they can hit at most $i_a$ other
-boundary components.  These are the only boundary components we can glue to to
-violate (dag).
+gluing would violate (dag). But since $\widetilde{S^{(N)}}$ is locally a cover on each
+piece, the number of arcs incident to $gamma$ is bounded by $i_a$.  Tracing
+these arcs through $\widetilde{S^{(N)}}$, they can hit at most $i_a$ other boundary
+components.  These are the only boundary components we can glue to to violate
+(dag).
 
 Similarly, suppose gluing to $tildegamma'$ violates (dag'). Let $alpha$ be an
 arc with endpoints on the same boundary component produced by the gluing. Let
 $tildedelta$ be this boundary component. Again, $alpha$ intersects the
-$tildegamma = tildegamma'$ gluing circle, otherwise $tildeS(N)$ would already
+$tildegamma = tildegamma'$ gluing circle, otherwise $\widetilde{S^{(N)}}$ would already
 violate (dag').  Cutting along this circle divides $alpha$ into a union of
 arcs.  Except for the two original endpoints (which now lie on two different
 subarcs - call these subarcs $alpha0$ and $alpha1$), all other endpoints of
 these arcs must either lie on $gamma$ or $gamma'$.  But no arc can have both
-endpoints on the same boundary component, or $tildeS(N)$ would arleady violate
+endpoints on the same boundary component, or $\widetilde{S^{(N)}}$ would arleady violate
 (dag'). So any subarcs except $alpha0$ and $alpha1$ must connect $gamma$ to
 $gamma'$.  By parity we can see that $alpha0$ and $alpha1$ both have one
 endpoint on $tildedelta$, but their other endpoints must be different. That is,
@@ -1076,25 +1076,25 @@ that we need to care about. We have a total of at most $i_a*(i_a-1)$ many
 "distance two" leftover boundary components. These are the only boundary
 components we can glue to to violate (dag').
 
-But by construction of $tildeS(N)$, there are no more legal gluings. So
-$tildeS$ can have at most $i_a+(i_a*(i_a-1)) = i_a^2$ many leftover boundary
-components (that is, components of $dtildeS(N)-sC$) above $gamma'$.  But since
-$tildeS(0)$ has the same number of boundary components above $gamma$ and
+But by construction of $\widetilde{S^{(N)}}$, there are no more legal gluings. So
+$\widetilde{S}$ can have at most $i_a+(i_a*(i_a-1)) = i_a^2$ many leftover boundary
+components (that is, components of $d\widetilde{S^{(N)}}-sC$) above $gamma'$.  But since
+$\widetilde{S^{(0)}}$ has the same number of boundary components above $gamma$ and
 $gamma'$, and we're only allowed to glue them to each other, this implies that
 there can be at most $i_a$ boundary components above gamma as well.  Since our
 choice of $tildegamma$ was arbitrary, this implies that there are at most
 $C(M,P,Sa) = i_a^2*j(M,P,Sa)$ many leftover boundary components, that is,
-components of $dtildeS(N)-sC$.
+components of $d\widetilde{S^{(N)}}-sC$.
 
 Proof of Theorem contd.
 
-Now that we've constructed $tildeS(N)$, we want to perform some additional
-gluings to construct $tildeS$. In addition to (dag) and (dag'), $tildeS$ should
+Now that we've constructed $\widetilde{S^{(N)}}$, we want to perform some additional
+gluings to construct $\widetilde{S}$. In addition to (dag) and (dag'), $\widetilde{S}$ should
 satisfy
 
-(dag'') Any two boundary components of $tildeS$ lie on different pieces. That
+(dag'') Any two boundary components of $\widetilde{S}$ lie on different pieces. That
 is, they correspond to boundary components of different connected components of
-$tildeS(0)$ under the gluing map $tildeS(0) -> tildeS$.
+$\widetilde{S^{(0)}}$ under the gluing map $\widetilde{S^{(0)}} -> \widetilde{S}$.
 
 Intuitively, this is easy using the reserve. The reserve on its own satisfies
 (dag''), so we only have to deal with the leftovers discussed above.  The trick
@@ -1103,60 +1103,57 @@ glue the leftovers to the reserve we can take care of all the leftovers without
 violating (dag) or (dag'). Our remaining boundary components will be a subset
 of the reserve.
 
-To be precise, construct tildeS from $tildeS(N)$ as follows. For each boundary
-component $gamma$ downstairs, as discussed above, there are at most $i^2$ many
-elements of $dtildeS(N)-sC$ above it. For each of these, there are at most
-$i^2$ we could glue to above gamma' that violate (dag) or (dag').  Assume that
-$m>=2i^2$.  Then glue each leftover lift of $gamma$ to an element of $sC$ above
-gama', one at a time. At any point there will be at least $i^2+1$ elements of
-$sC$ remaining above $gamma'$, so we'll always be able to choose one that
-doesn't violate (dag) or (dag'). Repeat this process for each $gamma$ to
-construct $tildeS$.  Since we glued all the leftovers, it immediately follows
-that $dtildeS cin sC$, and therefore $tildeS$ satisfies (dag'').
+To be precise, construct $\widetilde{S}$ from $\widetilde{S^{(N)}}$ as follows.
+For each boundary component $gamma$ downstairs, as discussed above, there are
+at most $i^2$ many elements of $d\widetilde{S^{(N)}}-sC$ above it. For each of
+these, there are at most $i^2$ we could glue to above gamma' that violate (dag)
+or (dag').  Assume that $m>=2i^2$.  Then glue each leftover lift of $gamma$ to
+an element of $sC$ above gama', one at a time. At any point there will be at
+least $i^2+1$ elements of $sC$ remaining above $gamma'$, so we'll always be
+able to choose one that doesn't violate (dag) or (dag'). Repeat this process
+for each $gamma$ to construct $\widetilde{S}$.  Since we glued all the leftovers, it
+immediately follows that $d\widetilde{S} \cin sC$, and therefore $\widetilde{S}$
+satisfies (dag'').
 
-Let's analyze the possibilities for $#dtildeS$. Above each $gamma cin dSa,k$,
-$sC$ has $m$ elements. So $dtildeS$ has at most $m$ components above gamma, or
+Let's analyze the possibilities for $\#d\widetilde{S}$. Above each $gamma \cin dSa,k$,
+$sC$ has $m$ elements. So $d\widetilde{S}$ has at most $m$ components above gamma, or
 $m*j$ many boundary components in total. The lower bound is determined by the
 maximum number of leftovers, since the only way we'll remove reserve components
-from $dtildeS$ is by gluing them to leftover components. There are at most
+from $d\widetilde{S}$ is by gluing them to leftover components. There are at most
 $i^2$ leftover components above gamma, and similarly above $gamma'$, so there
-will be at least $m - i^2$ components remaining in $dtildeS$ above $gamma$. So
+will be at least $m - i^2$ components remaining in $d\widetilde{S}$ above $gamma$. So
 
-\[
-m-i_a^2 <= #(dtildeS above gamma) <= m
-\]
+\[ m-i_a^2 <= \#(d\widetilde{S} above gamma) <= m \]
 
 and
 
-\[
-m-i_a^2*j(M,P,Sa) <= #dtildeS <= m*j(M,P,Sa)
-\]
+\[ m-i_a^2*j(M,P,Sa) <= \#d\widetilde{S} <= m*j(M,P,Sa) \]
 
 Finally, suppose we've done the entire above construction for each boundary
 component of our book of $I$-bundles $M$ to produce a partially-glued surface
 with some boundary components left over. For each boundary component $daM$,
-we'll call the surface $tildeSa$. Note that we must be sure to make the same
+we'll call the surface $\widetilde{S_a}$. Note that we must be sure to make the same
 choice of $n$ and $m$ for all these surfaces. Now we want to glue these
 together, but they may have very different numbers of boundary components! So
 we'll need to normalize them so they all have the same number of boundary
-components above each $gamma cin dSa,k$, so we can do a local construction
+components above each $gamma \cin dSa,k$, so we can do a local construction
 above a neighborhood of each spine in $M$.
 
-Let $i_M = max a i_a$. By the inequality above, for each $gamma cin Sa,k$,
-$#(dtildeSa above gamma) >= m - i_M^2$. We want to make this an equality for
-each $tildeSa$ by performing some more gluings.
+Let $i_M = max a i_a$. By the inequality above, for each $gamma \cin Sa,k$,
+$\#(d\widetilde{S_a} above gamma) >= m - i_M^2$. We want to make this an equality for
+each $\widetilde{S_a}$ by performing some more gluings.
 
 Again, we use the size of the reserve to our advantage. Assuming $m>=i_M^2
-+ i_a^2$ for each $tildeSa$, by the same argument as above there will always be
++ i_a^2$ for each $\widetilde{S_a}$, by the same argument as above there will always be
 choices remaining from the reserve to make the gluing. Combining these all we
 need is $m>= 2i_M^2$.
 
-By abuse of notation, we'll call these normalized surfaces $tildeSa$ also (the
+By abuse of notation, we'll call these normalized surfaces $\widetilde{S_a}$ also (the
 non-normalized ones will not come up again). Each has exactly $C = m - i_M^2$
-many boundary components above any $gamma cin dSa,k$.
+many boundary components above any $gamma \cin dSa,k$.
 
-Build a single surface $tildeS$ by gluing the $tildeSa$ as follows. Begin with
-$sqcup a tildeSa$.
+Build a single surface $\widetilde{S}$ by gluing the $\widetilde{S_a}$ as follows. Begin with
+$sqcup a \widetilde{S_a}$.
 
 For each spine $Mc$ of $M$, look at all the incident pages. Say there are $q$
 of them.  Each page has two sides, so there are $2q$ many pieces $Sa,k$
@@ -1182,58 +1179,58 @@ attached inside $dM cap sN(Mc)$. $dM cap Mc$ consists of q parallel annuli
 along $dMc$ that connect adjacent pages together. That is, the first annulus
 has boundary $gamma1+ cup gamma2-$, the second $gamma2+ cup gamma3-$, and so
 on.  It follows that these are the "pairs downstairs" in the above construction
-of each $tildeSa$. That is, these are the curves we called $gamma$ and $gamma'$
-earlier.  So within $sqcup tildeSa$, the existing gluings only glue lifts of
+of each $\widetilde{S_a}$. That is, these are the curves we called $gamma$ and $gamma'$
+earlier.  So within $sqcup \widetilde{S_a}$, the existing gluings only glue lifts of
 $gamma1+$ to lifts of $gamma2-$, lifts of $gamma2+$ to lifts of $gamma3-$, etc
 etc.
 
-Finally, the gluing. Because we normalized, each $sqcup a tildeSa$ has exactly
+Finally, the gluing. Because we normalized, each $sqcup a \widetilde{S_a}$ has exactly
 $C$ boundary components above each $gammaipm$.  Glue these $2qC$ boundary
 components as follows. Glue lifts of $gamma1+$ to lifts of $gamma3-$, lifts of
 $gamma2+$ to lifts of $gamma4-$, and so on. In general glue lifts of $gammai+$
 to lifts of $gamma(i+2)-$. Within each subset of lifts, choose the gluing
 arbitrarily. We know the numbers on each side are equal, so they'll match up.
 
-Every boundary component of $sqcup a tildeSa$ lives above a boundary component
+Every boundary component of $sqcup a \widetilde{S_a}$ lives above a boundary component
 of some $Sa,k$ which means it is attached to some core $Mc$. So once we've done
-the above gluing step for all cores, the resulting surface $tildeS$ is closed.
+the above gluing step for all cores, the resulting surface $\widetilde{S}$ is closed.
 
 Claim.
 
-$tildeS$ satisfies (*).
+$\widetilde{S}$ satisfies (*).
 
 Proof of Claim.
 
-By construction, $tildeS$ consists of covers of each page of $M$ glued along
+By construction, $\widetilde{S}$ consists of covers of each page of $M$ glued along
 parallel longitudinal annuli at the spines of $M$. By the covering lemma, it
-induces an immersed $\pi_1$-injective surface. It remains to show that tildeS
-cannot contain any lifts of parabolic curves.
+induces an immersed $\pi_1$-injective surface. It remains to show that
+$\widetilde{S}$ cannot contain any lifts of parabolic curves.
 
 Let $alpha$ be a parabolic curve in some boundary component $Sa$ of $M$. Cut
-alpha into arcs $alphai$ along the page boundaries, so each $alphai cin Sa,ki$.
+alpha into arcs $alphai$ along the page boundaries, so each $alphai \cin Sa,ki$.
 We can think about this as follows. For each $alphai$, there are two kinds of
-lifts to $tildeS$. We can view it as an arc in $Pa,ki cin Sa,ki$, and lift it
-to a cover of $Sa,ki$, that is, a component of $tildeSa,ki$. Since $alpha cin
-Sa$, this will necessarily be part of $tildeSa cin tildeS$. Furthermore, by
-construction of $tildeSa$, lifting the $alphai$ to $tildeSa$ pieces and gluing
+lifts to $\widetilde{S}$. We can view it as an arc in $Pa,ki \cin Sa,ki$, and lift it
+to a cover of $Sa,ki$, that is, a component of $\widetilde{S_{a,k}}i$. Since $alpha \cin
+Sa$, this will necessarily be part of $\widetilde{S_a} \cin \widetilde{S}$. Furthermore, by
+construction of $\widetilde{S_a}$, lifting the $alphai$ to $\widetilde{S_a}$ pieces and gluing
 cannot yield closed curves.  It only yields a union of arcs, by (dag).
 
-However, the second way we can lift $alphai cin Sa,ki$ is to a cover of the
+However, the second way we can lift $alphai \cin Sa,ki$ is to a cover of the
 opposite page boundary $barSa,ki$. Let $Sb$ be the boundary component
 containing $barSa,ki$, and write $Sb,li = barSa,ki$, we can see that $alphai$
 in $barPb,li$, the set of "opposite parabolic arcs" that we defined earlier.
 So alphai lifts to $S'b,li$ as a union of arcs, each of which connects two
 different boundary components of $S'b,li$. This produces a set of arcs in
-tildeSb. Note that it may be possible to have $Sa = Sb$, depending on how our
+\widetilde{S_b}. Note that it may be possible to have $Sa = Sb$, depending on how our
 book of $I$-bundles is constructed.  Regardless, we want to think of these as
 a different kind of lift, because we're using the opposite page side to lift,
 rather than the side the arc "naturally lives on."
 
-We now claim that these arcs cannot be used to form closed curves in $tildeSb$.
+We now claim that these arcs cannot be used to form closed curves in $\widetilde{S_b}$.
 Intuitively, this is because the opposite side of the boundary does not remain
-parallel to $alpha$ for long enough, so we'll soon reach a piece of $tildeSb$
+parallel to $alpha$ for long enough, so we'll soon reach a piece of $\widetilde{S_b}$
 where our lift can't continue.  To be precise, let $tildealphai$ be a lift of
-$alphai$ to $tildeSb$.  Suppose $alphai$ has an endpoint at a spine $Mc$. If we
+$alphai$ to $\widetilde{S_b}$.  Suppose $alphai$ has an endpoint at a spine $Mc$. If we
 look at how the boundary components of a book of $I$-bundles behave near
 a spine, we that locally the two boundary sides of a page are attached to sides
 of two different pages.  In the terminology we used earlier for gluing pages at
@@ -1247,8 +1244,8 @@ is, $gammai-$ is a boundary component of $Sa,ki$, in our other notation. And
 $gammai+$ is a boundary component of the opposite page $barSa,ki = Sb,li$.
 Since $gammai-$ attaches to $gamma(i+1)+$, any lifted arc we attach
 $tildealphai$ to in that direction must lift from that $(i+1)$st page at $Mc$.
-But in $tildeSb$, we attach the surface pieces according to the gluings needed
-for the $Sb$ boundary component.  Locally, $tildealphai cin tildeSb,li$, where
+But in $\widetilde{S_b}$, we attach the surface pieces according to the gluings needed
+for the $Sb$ boundary component.  Locally, $tildealphai \cin \widetilde{S_b},li$, where
 lifts of $gammai+$ only attach to lifts of $gamma(i-1)-$. But $gamma(i-1)-$ is
 a boundary component of a different page, so $tildealphai$ connects to a next
 page with no lift of the next segment of $alphai$. So there is no possible way
@@ -1257,12 +1254,12 @@ of $tildealphai$. This argument shows that lifts of arcs $alphai$ as "opposite
 parabolic arcs" to $Sb$ have no "opposite arcs" on either side that they can
 glue to.
 
-Finally, suppose our parabolic curve $alpha cin Sa$, after cutting into
+Finally, suppose our parabolic curve $alpha \cin Sa$, after cutting into
 $alphai$, lifts to pieces $tildealphai$ which form a closed curve $tildealpha
-cin tildeS$.  Cut $tildealpha$ along only the gluings between different
-$tildeSb$ done in the final gluing step. Each piece $tildealphaj$ now consists
+\cin \widetilde{S}$.  Cut $tildealpha$ along only the gluings between different
+$\widetilde{S_b}$ done in the final gluing step. Each piece $tildealphaj$ now consists
 of multiple $tildealphai$, which are either all "natural lifts" or all
-"opposite lifts" (in the above sense). This is simply because each $tildeSb$
+"opposite lifts" (in the above sense). This is simply because each $\widetilde{S_b}$
 is, except for its extra boundary components, a cover of the corresponding
 $Sb$, and there's no way $alpha$ to locally jump from being on the opposite
 side of a page from $Sb$ to suddenly being on the same side. However, at the
@@ -1288,7 +1285,7 @@ avoid this problem. Since we never do attachments of this form, we can't have
 an attachment with natural lifts on both sides.
 
 So each attachment must have an opposite lift on one or both sides. But recall
-that by (dag''), each piece of each $tildeSb$ has at most one free boundary
+that by (dag''), each piece of each $\widetilde{S_b}$ has at most one free boundary
 component. So all the $tildealphaj$ must traverse at least two pieces, as we
 ensured by construction of the $S'a,k$ that they couldn't begin and end at the
 same boundary component. This is where we finally use all those
@@ -1321,7 +1318,7 @@ Proof.
 First observe that if $(M,P)$ contains a surface satisfying (*), it cannot
 traverse any of the pages we deleted to obtain $M'$, by the same argument as in
 our first example.  Since our surface exists, $M'$ must be nonempty.
-Furthermore, since $(M',P') cin (M,P)$, it satisfies (*) for $M',P'$ as well.
+Furthermore, since $(M',P') \cin (M,P)$, it satisfies (*) for $M',P'$ as well.
 Conversely, if we have such a surface, we can obviously view it as contained in
 $(M,P)$, where it must satisfy (*) because it doesn't intersect the deleted
 pages at all.
