@@ -291,9 +291,16 @@ geometrically finite is equivalent to the standard one.
 
 % Example. Maybe? XXX TODO
 
+{\bf TODO Include an example.}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Our reduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% XXX TODO
+{\bf TODO This entire section needs a lot of work. Rewrite and expand.}
+
+{\tiny
 
 In our result, we study the problem of finding quasifuchsian surface subgroups
 of finitely generated Kleinian groups from the topological perspective. We
@@ -311,7 +318,7 @@ a virtual surface fiber - that is, it corresponds to a fiber surface in
 a finite-sheeted cover which is fibered over the circle. See (AFW p117) for
 this fact and various spots in the book for arguments.
 
-% No virtual surface fiber subgroup can possibly be quasifuchsian, 
+% No virtual surface fiber subgroup can possibly be quasifuchsian,
 
 Only geometrically finite subgroups can be quasifuchsian. This is basically by
 definition (check this). The problematic case is when it's possible to have
@@ -364,7 +371,7 @@ this. In what follows, just assume our Kleinian group is geometrically finite.
 %
 
 We assume this reduction still works in our cases (which are not finite
-volume). I hope some reference can fix this! TODO
+volume). I hope some reference can fix this!
 
 So in our case, since the parabolic elements precisely correspond to the pared
 structure, our problem becomes a purely topological one: can we find a closed
@@ -376,6 +383,8 @@ pared locus by observing that there are no torus boundary components of M, so
 all the components of the pared locus must be annuli (as they're
 $\pi_1$-injective). For each annulus, since we're only concerned with its
 homotopy class, it suffices to consider the core curve.
+
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Our first example}
@@ -756,14 +765,18 @@ groups of closed surfaces (compact without boundary).
 % TODO move this sentence somewhere. Probably want to clarify what I mean by
 % hyperbolic 3-manifold, etc also...
 
-Theorem (Hall). Free groups are LERF.
+\begin{thm}[Hall] Free groups are LERF. \end{thm}
 
-Theorem (Scott). Surface groups are LERF.
+\begin{thm}[Scott] Surface groups are LERF. \end{thm}
 
-Theorem (Agol, Wise, etc). Let $N$ by a hyperbolic 3-manifold, possibly
-infinite volume. Then $\pi_1N$ is LERF.
+\begin{thm}[Agol--Kahn--Markovic--Wise] Let $N$ by a hyperbolic 3-manifold,
+possibly infinite volume.  Then $\pi_1N$ is LERF. \end{thm}
 
-Proof. See citations in Long-Reid, AFW.
+\begin{proof}
+
+See citations in Long-Reid, AFW.
+
+\end{proof}
 
 Note that the last theorem is actually an extremely deep fact. Wise's proof
 actually shows that hyperbolic 3-manifold with boundary groups satisfy
@@ -793,26 +806,29 @@ properties, by starting with an infinite-sheeted cover and then pushing down.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 We prove a generalization of the above example. Basically, we want to first
-identify the cases that obviously can't have a surface satisfying \eqref{E:qf}. Then
-we'll prove by construction that every other book of $I$-bundles does in fact
-contain such a surface.
+identify the cases that obviously can't have a surface satisfying \eqref{E:qf}.
+Then we'll prove by construction that every other book of $I$-bundles does in
+fact contain such a surface.
 
-We use the following general notation for books of $I$-bundles. Let
-$M_{c1},...,M_{cm}$ be the spines, all solid tori. Let $M_1,...,M_n$ be the
-pages, all thickened surfaces. Each $M_i$ has boundary components
-$A_{i1},...,A_{ik_i}$ all annuli. We glue each annulus by a homeomorphism
-$phiij$ to a boundary annulus $Aij'$ some $dMck$. Note that $Aij'$ might not be
-a simple longitude of, that is, a page can wrap multiple times around a spine.
-For each spine, we require all these $Aij'$ to be disjoint parallel
-incompressible.  If $M$ is a nonelementary Kleinian manifold with
-incompressible boundary, we can assume without loss of generality that all
-pages have negative Euler characteristic, and all spines have at least 3 pages
-glued to them.
+We use the following general description for books of $I$-bundles. Let
+$M_{c1},...,M_{cr}$ be the spines, all solid tori. Let $M_{p1},...,M_{ps}$ be
+the pages, all thickened surfaces. Each page has boundary components $A_{ij}$,
+all annuli. We glue each annulus by a homeomorphism $\phi_{ij}$ to a boundary
+annulus $A_{ij'}\cin \bd M_{ck}$. Note that $Aij'$ might not be a simple
+longitude of, that is, a page can wrap multiple times around a spine.  For each
+spine, we require all these $Aij'$ to be disjoint parallel incompressible.  If
+$M$ is a nonelementary Kleinian manifold with incompressible boundary, we can
+assume without loss of generality that all pages have negative Euler
+characteristic, and all spines have at least 3 pages glued to them.
+
+{\bf TODO This proof needs work.}
+
+{\tiny
 
 To see this, observe that each page which is a copy of $S0,1$ means that that
 page and its attaching spine form a 3-manifold with a finite-sheeted cover by
 a ball (we can arrange things so that in the cover, the $S0,1$ attaching map
-only traverses the longitude once, and we get a thickened disk). This means
+only traverses the longitude once, and we get a thickened disk).  This means
 that we'll have finite order summands in our Kleinian group, which is
 impossible as it's torsion free. Or some argument with JSJ decomposition having
 elliptic piece? Either way, this can't happen with the manifolds we care about.
@@ -823,14 +839,16 @@ occur (?). Begin with a meridian disk of the spine.  This intersects the page's
 attaching curve in a single point, since we passed to an appropriate cover. Now
 ... something. {\bf TODO} % TODO figure this out.
 
+}%tiny
+
 Finally, for any spine with 2 pages attached, we can simplify the book of
 $I$-bundles structure by attaching the 2 pages along their boundary annuli to
 make a single larger page. This is homeomorphic to the original manifold.
-Similarly, for any $S0,2$ page, we can glue the two spine boundaries together
-along that page's gluing curves to make a single spine. The other attached
-pages of each spine will be carried along by the gluing to form a single set of
-attached pages which is the union of the two original sets, minus the $S0,2$
-page.
+Similarly, for any $\Si_{0,2}$ page, we can glue the two spine boundaries
+together along that page's gluing curves to make a single spine. The other
+attached pages of each spine will be carried along by the gluing to form
+a single set of attached pages which is the union of the two original sets,
+minus the $\Si_{0,2}$ page.
 
 We also want to clarify the possible gluing annuli on the spines. Given a solid
 torus boundary curve $(l,m)$ that travels $m$ times around a meridian and $l$
@@ -842,16 +860,21 @@ meridian disk.
 % I believe all other possibilities are ok, as long as we don't violate the
 % one-point intersection constraint Ian mentioned.
 
-Lemma ("One-point intersection lemma").
+\begin{lemma}["One-point intersection lemma"]
 
 Consider a solid torus, or more generally a handlebody, with a collection of
 $I$-bundles glued to it along annuli. The resulting manifold has a boundary
 compression iff there exists a meridian disk that intersects the boundary
 gluing curves exactly once.
 
-Proof.
+\end{lemma}
 
-Not immediately obvious. Use some cut and paste topology? {\bf TODO} % TODO
+\begin{proof}
+
+%Not immediately obvious. Use some cut and paste topology? TODO
+{\bf TODO}.
+
+\end{proof}
 
 Anyway, now we have a general book of $I$-bundles. Observe first that the pared
 locus $P$ must be a union of annuli, just as in the specific example above.  Now
@@ -1354,12 +1377,14 @@ have to do this carefully. Possibly we should do this step BEFORE the other
 simplification, but then we'll have to make sure the parabolics pass through
 that simplification nicely.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Some generalizations - SCRUBBED}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf The following section is obviated by the general case above. I'll keep it
+here just in case we need something from it. }
 
-The following section is obviated by the general case above. I'll keep it here
-just in case we need something from it.
+{\tiny
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Some generalizations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 We use the following general notation for books of $I$-bundles. Let
 $M_{c1},...,M_{cm}$ be the spines, all solid tori. Let $M_1,...,M_n$ be the
@@ -1528,13 +1553,11 @@ We tried to do this proof in the non-tree-shaped case, but it doesn't work!
 There are counterexamples of pared-bipartite covers where the obvious fix
 relies on messy combinatorics inside the boundary component matching.
 
-% TODO I'll need to rewrite next steps after I see how far this gets.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Next steps - SCRUBBED}
+\section{Next steps}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% XXX talk a bit about my ideas for cis/trans and gen bipartition
-It should be possible to prove the case of general tree-shaped books of
 $I$-bundles. In fact, combinatorially, it seems that all books of $I$-bundles
 (satisfying an appropriate condition on components of $P$) should admit these
 surfaces. But we haven't proved anything yet. The general case is much messier
@@ -1551,6 +1574,11 @@ very simple ($I$-bundles).  If we can address the acylindrical and book of
 $I$-bundle cases we ought to be able to put these together to solve the entire
 problem. Ian thinks maybe the acylindrical case can be addressed by a variant
 of the Baker-Cooper argument.
+
+}%tiny
+
+% TODO rewrite
+{\bf TODO Rewrite next steps after seeing how far we get.}
 
 \bibliographystyle{plain}
 \bibliography{refs}
