@@ -964,79 +964,80 @@ lemma any closed surface formed by gluing the $tildeSa,k$ along appropriate
 boundaries will induce an immersed $\pi_1$-injective surface in $M$. This is
 our strategy.
 
-Write tildePa,k=pia,k-1(Pa,k). As constructed, Pa,k consists of proper arcs
-connecting two different boundary components of tildeSa,k.
+Write $tildePa,k=pia,k-1(Pa,k)$. As constructed, $Pa,k$ consists of proper arcs
+connecting two different boundary components of $tildeSa,k$.
 
-We first glue the pieces "along" daM in the following sense. Given any two
-pieces Sa,k1, Sa,k2 in the decomposition of daM, we know that Sa,k1 has some
-boundary components gamma1,gamma2,dots cin dSa,k1, and gamma1',gamma2',dots cin
-dSa,k2 such that before we cut daM apart, gamma1 was glued to gamma1', gamma2
-to gamma2', etc.  That is, these components form the locus we glue Sa,k1 and
-Sa,k2 together along when we glue the Sa,k to form daM.  For each such pair,
-look at the boundary components of tildeSa,k1 and tildeSa,k2.  We allow
-ourselves to glue components of pi-1(gamma1) to components of pi-1(gamma1'),
-components of pi-1(gamma2) to components of pi-1(gamma2'), etc. We forbid
-ourselves from gluing components of pi-1(gamma1) to any other lifted boundary
-components of Sa,k2 or of any other pieces. Only on the very last step of our
-construction will we break this rule.
+We first glue the pieces "along" $daM$ in the following sense. Given any two
+pieces $Sa,k1$, $Sa,k2$ in the decomposition of $daM$, we know that $Sa,k1$ has
+some boundary components $gamma1,gamma2,dots cin dSa,k1$, and
+$gamma1',gamma2',dots cin dSa,k2$ such that before we cut $daM$ apart, $gamma1$
+was glued to $gamma1'$, $gamma2$ to $gamma2'$, etc.  That is, these components
+form the locus we glue $Sa,k1$ and $Sa,k2$ together along when we glue the
+$Sa,k$ to form $daM$.  For each such pair, look at the boundary components of
+$tildeSa,k1$ and $tildeSa,k2$.  We allow ourselves to glue components of
+$pi-1(gamma1)$ to components of $pi-1(gamma1')$, components of $pi-1(gamma2)$
+to components of $pi-1(gamma2')$, etc. We forbid ourselves from gluing
+components of $pi-1(gamma1)$ to any other lifted boundary components of $Sa,k2$
+or of any other pieces. Only on the very last step of our construction will we
+break this rule.
 
 Note that since our gluing is locally a cover we can only glue each pair of
 boundary components upstairs in one possible way - we could choose a different
 gluing, but this would just correspond to a different choice of cover by the
 covering lemma.
 
-We introduce some notation. Bbegin by taking tildeS(0) = sqcup tildeSa,k to be
-a disjoint union of these covers - that is, we haven't done any gluing yet.
+We introduce some notation. Bbegin by taking $tildeS(0) = sqcup tildeSa,k$ to
+be a disjoint union of these covers - that is, we haven't done any gluing yet.
 Think of these as pieces we'll use to build our cover. At each step in the
-gluing, we have a gluing map f(i+1) : tildeS(i) -> tildeS(i+1) by attaching two
-boundary comonents of tildeS(i). Write tildeP(i) for the arcs and curves on
-tildeS(i) induced by gluing the tildePa,k.  That is, tildeP(i) = f(i) circ ...
-circ f(1) (sqcup tildePa,k).
+gluing, we have a gluing map $f(i+1) : tildeS(i) -> tildeS(i+1)$ by attaching
+two boundary comonents of $tildeS(i)$. Write $tildeP(i)$ for the arcs and
+curves on $tildeS(i)$ induced by gluing the $tildePa,k$.  That is, $tildeP(i)
+= f(i) circ ...  circ f(1) (sqcup tildePa,k)$.
 
-We'll want to glue boundary components other than sC first - these are the
+We'll want to glue boundary components other than $sC$ first - these are the
 "reserve" that we'll only use at the end. This guarantees that our final glued
 surface will have leftover boundary components that are sufficiently far apart.
-By abuse of notation, we'll also use sC to refer to the induced set of boundary
-components in each tildeS(i).
+By abuse of notation, we'll also use $sC$ to refer to the induced set of
+boundary components in each $tildeS(i)$.
 
-In addition to gluing along daM and avoiding gluing members of sC, we want to
-preserve the following two invariants.
+In addition to gluing along $daM$ and avoiding gluing members of $sC$, we want
+to preserve the following two invariants.
 
-(dag) Each tildeP(i) cin tildeS(i) does not contain any closed curves. That is,
-it forms a union of proper arcs.
+(dag) Each $tildeP(i) cin tildeS(i)$ does not contain any closed curves. That
+is, it forms a union of proper arcs.
 
-(dag') Furthermore, no arc in any tildeP(i) begins and ends at the same
-boundary component of tildeS(i).
+(dag') Furthermore, no arc in any $tildeP(i)$ begins and ends at the same
+boundary component of $tildeS(i)$.
 
 By the use of the lemma and the assumption of the theorem (no closed curves in
-individual pages), tildeS(0) satisfies (dag) and (dag'). We repeatedly make an
-arbitrary gluing that lies along daM in the above sense, doesn't glue any
+individual pages), $tildeS(0)$ satisfies (dag) and (dag'). We repeatedly make
+an arbitrary gluing that lies along daM in the above sense, doesn't glue any
 elements of sC, and preserves (dag) and (dag').  This process will terminate at
-some tildeS(N), after there are no more gluings left to make. tildeS(N) is
+some $tildeS(N)$, after there are no more gluings left to make. $tildeS(N)$ is
 a surface with boundary, because there are "leftover" boundary components that
 we couldn't glue without violating one of the above conditions.
 
 Claim.
 
-#(dtildeS(N) - sC) is bounded by C(M,P,Sa).  In particular, this bound is
-independent of the choice of n and m.
+$#(dtildeS(N) - sC)$ is bounded by $C(M,P,Sa)$.  In particular, this bound is
+independent of the choice of $n$ and $m$ made earlier.
 
 Proof of Claim.
 
-Consider an arbitrary boundary component tildegamma cin dtildeS(N) - sC.  It
-lives above some boundary component gamma cin dSa,k. Look at the number of arcs
-of Pa,k which are incident to gamma. This number depends only on M and P (not
-on n). Let i(M,P,Sa) be the maximum such number of incident arcs of P for any
-boundary component gamma of any Sa,k in Sa. Let j(M,P,Sa) be the total number
-of boundary components of the Sa,k.
+Consider an arbitrary boundary component $tildegamma cin dtildeS(N) - sC$.  It
+lives above some boundary component $gamma cin dSa,k$. Look at the number of
+arcs of $Pa,k$ which are incident to gamma. This number depends only on $M$ and
+$P$ (not on $n$). Let $i_a = i(M,P,S_a)$ be the maximum such number of incident
+arcs of P for any boundary component gamma of any $Sa,k in Sa$. Let $j_a
+= j(M,P,Sa)$ be the total number of boundary components of the $Sa,k$.
 
-Let gamma' cin dSa,k' be the boundary component matching gamma. We consider
-gluing gamma along M to any component of dtildeS(N) - sC above gamma'.  Because
-we always glue matching boundary components (and we started with the same
-number of each), dtildeS - sC has the same number of leftover boundary
-components above gamma' as it does above gamma. So there must be at least one
-to glue to.  The only reason we'd be unable to glue is if gluing to any
-leftover lift of gamma' violates (dag) or (dag').
+Let $gamma' cin dSa,k'$ be the boundary component matching $gamma$. We consider
+gluing gamma along $M$ to any component of $dtildeS(N) - sC$ above gamma'.
+Because we always glue matching boundary components (and we started with the
+same number of each), $dtildeS - sC$ has the same number of leftover boundary
+components above $gamma'$ as it does above $gamma$. So there must be at least
+one to glue to.  The only reason we'd be unable to glue is if gluing to any
+leftover lift of $gamma'$ violates (dag) or (dag').
 
 Let tildegamma' cin dtildeS(N) - sC be an arbitrary leftover lift of gamma'.
 Suppose gluing to tildegamma' violates (dag). Let alpha be a closed curve
