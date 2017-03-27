@@ -791,7 +791,7 @@ properties, by starting with an infinite-sheeted cover and then pushing down.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 We prove a generalization of the above example. Basically, we want to first
-identify the cases that obviously can't have a surface satisfying (*). Then
+identify the cases that obviously can't have a surface satisfying \eqref{E:qf}. Then
 we'll prove by construction that every other book of $I$-bundles does in fact
 contain such a surface.
 
@@ -855,8 +855,8 @@ Anyway, now we have a general book of $I$-bundles. Observe first that the pared
 locus P must be a union of annuli, just as in the specific example above.  Now
 there are a number of topological simplifications we make, by passing to an
 appropriate finite-sheeted cover of the book of $I$-bundles.  Once we can
-construct a surface satisfying (*) inside this cover, we can push it down and
-perturb slightly to obtain a surface satisfying (*) downstairs (since it
+construct a surface satisfying \eqref{E:qf} inside this cover, we can push it down and
+perturb slightly to obtain a surface satisfying \eqref{E:qf} downstairs (since it
 pi1-injects into a subgroup, it will definitely still be $\pi_1$-injective).
 
 We pass to a book of $I$-bundles satisfying the following conditions:
@@ -890,7 +890,7 @@ Theorem.
 Let $M$ be a book of $I$-bundles Kleinian manifold with incompressible boundary
 satisfying (0), (1) and (2). Suppose further that no components of the
 parabolic locus P are contained in a single page's boundary. Then M contains
-a surface satisfying (*).
+a surface satisfying \eqref{E:qf}.
 
 Proof.
 
@@ -899,7 +899,7 @@ the first example. We take covers over the pages and glue them together
 cleverly to construct our surface. We check that the parabolic locus arcs on
 each page lift to arcs on these covers that do not connect up to form a closed
 curve. As in the first example, this suffices to prove that our surface
-satisfies (*). We first need to take the correct cover over each page.
+satisfies \eqref{E:qf}. We first need to take the correct cover over each page.
 
 Lemma.
 
@@ -931,7 +931,7 @@ loss of generality let it be $Sa,kx0$. We can look at the pattern of arcs $Pa,k
 = P cap (Sa,kx0)$ on that side of the page, which is part of $daM$. We can also
 look at the pattern of arcs on the opposite side of the page $barPa,k = P cap
 (Sa,kx1)$, and temporarily view it as living inside $Sa,k$ (flattening $Sa,kxI
--> Sa,k$).  For each piece, apply the lemma above to ($Sa,k,Pa,k cup barPa,k$)
+-> Sa,k$).  For each piece, apply the lemma above to ($Sa,k,Pa,k \cup barPa,k$)
 to obtain a cover $S'a,k$. If we view this as a cover of $Sa,kx0$ and $Sa,kx1$,
 it has the property that any arc in $Pa,k$ or $barPa,k$ lifts to an arc
 connecting two different boundary components of $S'a,k$.
@@ -942,16 +942,16 @@ Fix some large integer $n>0$. Now for each $k$, let $pia,k : \widetilde{S_{a,k}}
 -> Sa,k$ be a disjoint union of $n*d/da,k$ copies of $S'a,k$. The purpose of
 the $d/da,k$ normalization is to make sure each $pia,k$ is a cover of the same
 degree, $n*d$.  We'll call the connected components of this cover "pieces". We
-can also combine these into a single cover $pi : sqcup \widetilde{S_{a,k}} -> sqcup Sa,k$
+can also combine these into a single cover $pi : \sqcup \widetilde{S_{a,k}} -> \sqcup Sa,k$
 
 Fix a large integer $m>0$. Now, reserve a subset $sC$ of the boundary
-components of $sqcup \widetilde{S_{a,k}}$.  This subset should have the following
+components of $\sqcup \widetilde{S_{a,k}}$.  This subset should have the following
 properties:
 
 (1) Each boundary component of each $Sa,k$ is covered by exactly $m$ elements
 of $sC$.
 
-(2) Every connected component of $sqcup \widetilde{S_{a,k}}$ contains at most one element
+(2) Every connected component of $\sqcup \widetilde{S_{a,k}}$ contains at most one element
 of $sC$.
 
 This is possible as long as $n >= m*b$, where $b$ is the maximum number of
@@ -987,13 +987,13 @@ boundary components upstairs in one possible way - we could choose a different
 gluing, but this would just correspond to a different choice of cover by the
 covering lemma.
 
-We introduce some notation. Bbegin by taking $\widetilde{S^{(0)}} = sqcup \widetilde{S_{a,k}}$ to
+We introduce some notation. Bbegin by taking $\widetilde{S^{(0)}} = \sqcup \widetilde{S_{a,k}}$ to
 be a disjoint union of these covers - that is, we haven't done any gluing yet.
 Think of these as pieces we'll use to build our cover. At each step in the
 gluing, we have a gluing map $f(i+1) : \widetilde{S^{(i)}} -> tildeS(i+1)$ by attaching
 two boundary comonents of $\widetilde{S^{(i)}}$. Write $tildeP(i)$ for the arcs and
 curves on $\widetilde{S^{(i)}}$ induced by gluing the $tildePa,k$.  That is, $tildeP(i)
-= f(i) circ ...  circ f(1) (sqcup tildePa,k)$.
+= f(i) circ ...  circ f(1) (\sqcup tildePa,k)$.
 
 We'll want to glue boundary components other than $sC$ first - these are the
 "reserve" that we'll only use at the end. This guarantees that our final glued
@@ -1004,11 +1004,28 @@ boundary components in each $\widetilde{S^{(i)}}$.
 In addition to gluing along $daM$ and avoiding gluing members of $sC$, we want
 to preserve the following two invariants.
 
-(dag) Each $tildeP(i) \cin \widetilde{S^{(i)}}$ does not contain any closed curves. That
-is, it forms a union of proper arcs.
+%% XXX this tex looks hideous ... need to find a better way to do this. Look
+% in my tex reference book etc etc
 
-(dag') Furthermore, no arc in any $tildeP(i)$ begins and ends at the same
+% Equation (dag)
+\begin{equation}\label{E:dag}
+\text{
+ Each $tildeP(i) \cin
+\widetilde{S^{(i)}}$ does not contain any closed curves. That is, it forms
+a union of proper arcs.
+}
+\tag{\dag}
+\end{equation}
+
+% Equation (dag')
+\begin{equation}\label{E:dag'}
+\text{
+Furthermore, no arc in any $tildeP(i)$ begins and ends at the same
 boundary component of $\widetilde{S^{(i)}}$.
+}
+\tag{\ddag}
+\end{equation}
+
 
 By the use of the lemma and the assumption of the theorem (no closed curves in
 individual pages), $\widetilde{S^{(0)}}$ satisfies (dag) and (dag'). We repeatedly make
@@ -1025,7 +1042,7 @@ independent of the choice of $n$ and $m$ made earlier.
 
 Proof of Claim.
 
-Consider an arbitrary boundary component $tildegamma \cin d\widetilde{S^{(N)}} - sC$.  It
+Consider an arbitrary boundary component $\widetilde{\gamma} \cin d\widetilde{S^{(N)}} - sC$.  It
 lives above some boundary component $gamma \cin dSa,k$. Look at the number of
 arcs of $Pa,k$ which are incident to gamma. This number depends only on $M$ and
 $P$ (not on $n$). Let $i_a = i(M,P,S_a)$ be the maximum such number of incident
@@ -1040,10 +1057,10 @@ components above $gamma'$ as it does above $gamma$. So there must be at least
 one to glue to.  The only reason we'd be unable to glue is if gluing to any
 leftover lift of $gamma'$ violates (dag) or (dag').
 
-Let $tildegamma' \cin d\widetilde{S^{(N)}} - sC$ be an arbitrary leftover lift of
-$gamma'$.  Suppose gluing to $tildegamma'$ violates (dag). Let $alpha$ be
+Let $\widetilde{\gamma}' \cin d\widetilde{S^{(N)}} - sC$ be an arbitrary leftover lift of
+$gamma'$.  Suppose gluing to $\widetilde{\gamma}'$ violates (dag). Let $alpha$ be
 a closed curve produced by the gluing.  Obviously $alpha$ intersects the
-$tildegamma = tildegamma'$ gluing circle, otherwise $\widetilde{S^{(N)}}$ would already
+$\widetilde{\gamma} = \widetilde{\gamma}'$ gluing circle, otherwise $\widetilde{S^{(N)}}$ would already
 violate (dag).  Cutting along this circle divides $alpha$ into a union of arcs
 with endpoints on either $gamma$ or $gamma'$.  $\widetilde{S}$ satisfies (dag'), so no
 arc can have both endpoints on the same boundary component. So there exists an
@@ -1054,10 +1071,10 @@ these arcs through $\widetilde{S^{(N)}}$, they can hit at most $i_a$ other bound
 components.  These are the only boundary components we can glue to to violate
 (dag).
 
-Similarly, suppose gluing to $tildegamma'$ violates (dag'). Let $alpha$ be an
+Similarly, suppose gluing to $\widetilde{\gamma}'$ violates (dag'). Let $alpha$ be an
 arc with endpoints on the same boundary component produced by the gluing. Let
-$tildedelta$ be this boundary component. Again, $alpha$ intersects the
-$tildegamma = tildegamma'$ gluing circle, otherwise $\widetilde{S^{(N)}}$ would already
+$\widetilde{\delta}$ be this boundary component. Again, $alpha$ intersects the
+$\widetilde{\gamma} = \widetilde{\gamma}'$ gluing circle, otherwise $\widetilde{S^{(N)}}$ would already
 violate (dag').  Cutting along this circle divides $alpha$ into a union of
 arcs.  Except for the two original endpoints (which now lie on two different
 subarcs - call these subarcs $alpha0$ and $alpha1$), all other endpoints of
@@ -1065,16 +1082,16 @@ these arcs must either lie on $gamma$ or $gamma'$.  But no arc can have both
 endpoints on the same boundary component, or $\widetilde{S^{(N)}}$ would arleady violate
 (dag'). So any subarcs except $alpha0$ and $alpha1$ must connect $gamma$ to
 $gamma'$.  By parity we can see that $alpha0$ and $alpha1$ both have one
-endpoint on $tildedelta$, but their other endpoints must be different. That is,
-either $alpha0$ ends on $tildegamma$ and $alpha1$ on $tildegamma'$, or vice
+endpoint on $\widetilde{\delta}$, but their other endpoints must be different. That is,
+either $alpha0$ ends on $\widetilde{\gamma}$ and $alpha1$ on $\widetilde{\gamma}'$, or vice
 versa.
 
-Now the arcs incident to $tildegamma$ hit at most $ia$ other boundary
-components. These are our possible $tildedelta$. Each of these has at most
-$i_a$ incident arcs itself, one of which returns to tildegamma, leaving i$_a-1$
-that we need to care about. We have a total of at most $i_a*(i_a-1)$ many
-"distance two" leftover boundary components. These are the only boundary
-components we can glue to to violate (dag').
+Now the arcs incident to $\widetilde{\gamma}$ hit at most $ia$ other boundary
+components. These are our possible $\widetilde{\delta}$. Each of these has at
+most $i_a$ incident arcs itself, one of which returns to $\widetilde{\gamma}$,
+leaving $i_a-1$ that we need to care about. We have a total of at most
+$i_a*(i_a-1)$ many "distance two" leftover boundary components. These are the
+only boundary components we can glue to to violate (dag').
 
 But by construction of $\widetilde{S^{(N)}}$, there are no more legal gluings. So
 $\widetilde{S}$ can have at most $i_a+(i_a*(i_a-1)) = i_a^2$ many leftover boundary
@@ -1082,7 +1099,7 @@ components (that is, components of $d\widetilde{S^{(N)}}-sC$) above $gamma'$.  B
 $\widetilde{S^{(0)}}$ has the same number of boundary components above $gamma$ and
 $gamma'$, and we're only allowed to glue them to each other, this implies that
 there can be at most $i_a$ boundary components above gamma as well.  Since our
-choice of $tildegamma$ was arbitrary, this implies that there are at most
+choice of $\widetilde{\gamma}$ was arbitrary, this implies that there are at most
 $C(M,P,Sa) = i_a^2*j(M,P,Sa)$ many leftover boundary components, that is,
 components of $d\widetilde{S^{(N)}}-sC$.
 
@@ -1153,7 +1170,7 @@ non-normalized ones will not come up again). Each has exactly $C = m - i_M^2$
 many boundary components above any $gamma \cin dSa,k$.
 
 Build a single surface $\widetilde{S}$ by gluing the $\widetilde{S_a}$ as follows. Begin with
-$sqcup a \widetilde{S_a}$.
+$\sqcup a \widetilde{S_a}$.
 
 For each spine $Mc$ of $M$, look at all the incident pages. Say there are $q$
 of them.  Each page has two sides, so there are $2q$ many pieces $Sa,k$
@@ -1177,27 +1194,27 @@ the boundary pieces $Sa,k$ that are near $Mc$. We don't know how many global
 boundary components $a$ are involved, but locally we do know which pieces are
 attached inside $dM cap sN(Mc)$. $dM cap Mc$ consists of q parallel annuli
 along $dMc$ that connect adjacent pages together. That is, the first annulus
-has boundary $gamma1+ cup gamma2-$, the second $gamma2+ cup gamma3-$, and so
+has boundary $gamma1+ \cup gamma2-$, the second $gamma2+ \cup gamma3-$, and so
 on.  It follows that these are the "pairs downstairs" in the above construction
 of each $\widetilde{S_a}$. That is, these are the curves we called $gamma$ and $gamma'$
-earlier.  So within $sqcup \widetilde{S_a}$, the existing gluings only glue lifts of
+earlier.  So within $\sqcup \widetilde{S_a}$, the existing gluings only glue lifts of
 $gamma1+$ to lifts of $gamma2-$, lifts of $gamma2+$ to lifts of $gamma3-$, etc
 etc.
 
-Finally, the gluing. Because we normalized, each $sqcup a \widetilde{S_a}$ has exactly
+Finally, the gluing. Because we normalized, each $\sqcup a \widetilde{S_a}$ has exactly
 $C$ boundary components above each $gammaipm$.  Glue these $2qC$ boundary
 components as follows. Glue lifts of $gamma1+$ to lifts of $gamma3-$, lifts of
 $gamma2+$ to lifts of $gamma4-$, and so on. In general glue lifts of $gammai+$
 to lifts of $gamma(i+2)-$. Within each subset of lifts, choose the gluing
 arbitrarily. We know the numbers on each side are equal, so they'll match up.
 
-Every boundary component of $sqcup a \widetilde{S_a}$ lives above a boundary component
+Every boundary component of $\sqcup a \widetilde{S_a}$ lives above a boundary component
 of some $Sa,k$ which means it is attached to some core $Mc$. So once we've done
 the above gluing step for all cores, the resulting surface $\widetilde{S}$ is closed.
 
 Claim.
 
-$\widetilde{S}$ satisfies (*).
+$\widetilde{S}$ satisfies \eqref{E:qf}.
 
 Proof of Claim.
 
@@ -1221,15 +1238,15 @@ containing $barSa,ki$, and write $Sb,li = barSa,ki$, we can see that $alphai$
 in $barPb,li$, the set of "opposite parabolic arcs" that we defined earlier.
 So alphai lifts to $S'b,li$ as a union of arcs, each of which connects two
 different boundary components of $S'b,li$. This produces a set of arcs in
-\widetilde{S_b}. Note that it may be possible to have $Sa = Sb$, depending on how our
-book of $I$-bundles is constructed.  Regardless, we want to think of these as
-a different kind of lift, because we're using the opposite page side to lift,
-rather than the side the arc "naturally lives on."
+$\widetilde{S_b}$. Note that it may be possible to have $Sa = Sb$, depending on
+how our book of $I$-bundles is constructed.  Regardless, we want to think of
+these as a different kind of lift, because we're using the opposite page side
+to lift, rather than the side the arc "naturally lives on."
 
 We now claim that these arcs cannot be used to form closed curves in $\widetilde{S_b}$.
 Intuitively, this is because the opposite side of the boundary does not remain
 parallel to $alpha$ for long enough, so we'll soon reach a piece of $\widetilde{S_b}$
-where our lift can't continue.  To be precise, let $tildealphai$ be a lift of
+where our lift can't continue.  To be precise, let $\widetilde{\alpha_i}$ be a lift of
 $alphai$ to $\widetilde{S_b}$.  Suppose $alphai$ has an endpoint at a spine $Mc$. If we
 look at how the boundary components of a book of $I$-bundles behave near
 a spine, we that locally the two boundary sides of a page are attached to sides
@@ -1243,31 +1260,31 @@ Suppose that the endpoint of $alphai$ we're considering lies on $gammai-$. That
 is, $gammai-$ is a boundary component of $Sa,ki$, in our other notation. And
 $gammai+$ is a boundary component of the opposite page $barSa,ki = Sb,li$.
 Since $gammai-$ attaches to $gamma(i+1)+$, any lifted arc we attach
-$tildealphai$ to in that direction must lift from that $(i+1)$st page at $Mc$.
+$\widetilde{\alpha_i}$ to in that direction must lift from that $(i+1)$st page at $Mc$.
 But in $\widetilde{S_b}$, we attach the surface pieces according to the gluings needed
-for the $Sb$ boundary component.  Locally, $tildealphai \cin \widetilde{S_b},li$, where
+for the $Sb$ boundary component.  Locally, $\widetilde{\alpha_i} \cin \widetilde{S_b},li$, where
 lifts of $gammai+$ only attach to lifts of $gamma(i-1)-$. But $gamma(i-1)-$ is
-a boundary component of a different page, so $tildealphai$ connects to a next
+a boundary component of a different page, so $\widetilde{\alpha_i}$ connects to a next
 page with no lift of the next segment of $alphai$. So there is no possible way
-to continue $tildealphai$.  The same argument applies at the opposite endpoint
-of $tildealphai$. This argument shows that lifts of arcs $alphai$ as "opposite
+to continue $\widetilde{\alpha_i}$.  The same argument applies at the opposite endpoint
+of $\widetilde{\alpha_i}$. This argument shows that lifts of arcs $alphai$ as "opposite
 parabolic arcs" to $Sb$ have no "opposite arcs" on either side that they can
 glue to.
 
 Finally, suppose our parabolic curve $alpha \cin Sa$, after cutting into
-$alphai$, lifts to pieces $tildealphai$ which form a closed curve $tildealpha
-\cin \widetilde{S}$.  Cut $tildealpha$ along only the gluings between different
-$\widetilde{S_b}$ done in the final gluing step. Each piece $tildealphaj$ now consists
-of multiple $tildealphai$, which are either all "natural lifts" or all
+$alphai$, lifts to pieces $\widetilde{\alpha_i}$ which form a closed curve $\widetilde{\alpha}
+\cin \widetilde{S}$.  Cut $\widetilde{\alpha}$ along only the gluings between different
+$\widetilde{S_b}$ done in the final gluing step. Each piece $\widetilde{\alpha_j}$ now consists
+of multiple $\widetilde{\alpha_i}$, which are either all "natural lifts" or all
 "opposite lifts" (in the above sense). This is simply because each $\widetilde{S_b}$
 is, except for its extra boundary components, a cover of the corresponding
 $Sb$, and there's no way $alpha$ to locally jump from being on the opposite
 side of a page from $Sb$ to suddenly being on the same side. However, at the
 gluings in the final step, we attach covers of different boundary components
-together, so we may have attached multiple pieces $tildealphaj$ of the same
+together, so we may have attached multiple pieces $\widetilde{\alpha_j}$ of the same
 type, or different types.
 
-It is impossible to attach two natural segments $tildealphaj$ in the final
+It is impossible to attach two natural segments $\widetilde{\alpha_j}$ in the final
 step.  Suppose we had such an attachment, and look locally at the spine where
 they're attached. Our attachment must yield a lift of $alpha$, so we can look
 at the local neighborhood in $alpha$ covered by a neighborhood of our
@@ -1286,15 +1303,15 @@ an attachment with natural lifts on both sides.
 
 So each attachment must have an opposite lift on one or both sides. But recall
 that by (dag''), each piece of each $\widetilde{S_b}$ has at most one free boundary
-component. So all the $tildealphaj$ must traverse at least two pieces, as we
+component. So all the $\widetilde{\alpha_j}$ must traverse at least two pieces, as we
 ensured by construction of the $S'a,k$ that they couldn't begin and end at the
 same boundary component. This is where we finally use all those
 carefully-established earlier criteria.
 
 Because finally, as shown above, opposite lifts of individual $alphai$ cannot
 connect to opposite lifts on either side. So it's impossible to construct
-a $tildealphaj$ made out of opposite lifts, since it has to traverse more than
-one piece.  This contradicts our assumption that the $tildealphaj$ glue to form
+a $\widetilde{\alpha_j}$ made out of opposite lifts, since it has to traverse more than
+one piece.  This contradicts our assumption that the $\widetilde{\alpha_j}$ glue to form
 a closed curve.
 
 So we cannot join up the lifts of $alphai$ to form a lift of $alpha$. This
@@ -1310,17 +1327,17 @@ Let $M$ be a book of $I$-bundles Kleinian manifold with incompressible boundary
 satisfying (0), (1) and (2). Suppose $M$ does contain a component of the
 parabolic locus $P$ inside a single page's boundary. Construct $M'$ by deleting
 all such pages from $M$, and $P'$ by removing all components of the pared locus
-that intersect those pages. Then $(M,P)$ contains a surface satisfying (*) if
-and only if $(M',P')$ is nonempty and contains a surface satisfying (*).
+that intersect those pages. Then $(M,P)$ contains a surface satisfying \eqref{E:qf} if
+and only if $(M',P')$ is nonempty and contains a surface satisfying \eqref{E:qf}.
 
 Proof.
 
-First observe that if $(M,P)$ contains a surface satisfying (*), it cannot
+First observe that if $(M,P)$ contains a surface satisfying \eqref{E:qf}, it cannot
 traverse any of the pages we deleted to obtain $M'$, by the same argument as in
 our first example.  Since our surface exists, $M'$ must be nonempty.
-Furthermore, since $(M',P') \cin (M,P)$, it satisfies (*) for $M',P'$ as well.
+Furthermore, since $(M',P') \cin (M,P)$, it satisfies \eqref{E:qf} for $M',P'$ as well.
 Conversely, if we have such a surface, we can obviously view it as contained in
-$(M,P)$, where it must satisfy (*) because it doesn't intersect the deleted
+$(M,P)$, where it must satisfy \eqref{E:qf} because it doesn't intersect the deleted
 pages at all.
 
 Note that $(M',P')$ may be nonelementary, or it still may not satisfy (0), (1),
