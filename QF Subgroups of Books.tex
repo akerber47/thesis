@@ -721,14 +721,61 @@ that a virtual compact special group is virtually a quasiconvex subgroup of
 a right-angled Artin group, and geometrically finite subgroups are separable.
 It follows by the tameness theorem that hyperbolic 3-manifold groups are LERF.
 
-This is relevant to us for the following reason. This discussion is from
-Long-Reid. Subgroup separability is equivalent to the condition that compact
-subests embedded in infinite sheeted covers of the Kleinian manifold
-(corresponding to finitely generated subgroups of the fundamental group) must
-embed down in a finitely sheeted intermediate cover - corresponding to choosing
-a finite index intermediate subgroup of the first subgroup.
+This is relevant to us because manifolds with LERF fundamental groups have nice
+topological properties. In particular, we have the following fact.
 
-% TODO I could go through the proof of this (maybe?)
+beginthm
+
+Let M be a compact n-manifold such that pi1M is LERF. Let M' to M be
+a (possibly infinite-sheeted) cover such that pi1M' is finitely generated.
+Suppose C cin M' is a compact subset which avoids the boundary of M. Then there
+exists a intermediate cover M' to M'' to M, which is finite-sheeted over M,
+such that the covering map M' to M'' is an embedding on C.
+
+endthm
+
+beginproof
+
+See Long-Reid. Note that their proof is only stated for closed manifolds M, but
+it carries over to all compact manifolds also if we restrict C to avoid the
+boundary of M.
+
+% I think? Might want to check w Ian.
+
+endproof
+
+This leads us to the following well-known fact. I haven't found a written proof
+in the literature, so I've provided one. Thanks to Ian Agol for pointing this
+out.
+
+beginthm
+
+Let M be a compact 3-manifold such that pi1M is LERF. Let C be a compact
+connected manifold or complex, and phi colon C immerse M a pi1-injective
+immersion. Then there exists a finite sheeted cover M' to M such that phi lifts
+to a map phi' colon C into M' which is homotopic to an embedding.
+
+endthm
+
+beginproof
+
+Since C is a compact manifold or complex, pi1C is finitely generated. Let
+H=phi*(pi1C), and let pH colon MH to M be the corresponding cover of M. By our
+choice of H, phi lifts to a map phiH colon C to MH. We claim that phiH is
+homotopic to an embedding. Since C is compact and phi is an immersion, it
+suffices to show we can nicely homotope phiH to be injective.
+
+Since pH*(pi1MH) = H = phi*(pi1C), phiH must induce an isomorphism on pi1 in
+order to have pH circ phiH = phi. Let x1,x2 in C such that
+phiH(x1)=phiH(x2)=y.  Let alpha cin C be a path from x1 to x2. Since phiH is
+a pi1-isomorphism, phiH(alpha) must be nullhomotopic, 
+
+Note that when we use this, both C and M will be aspherical, so an alternative
+proof for that case is to invoke Whitehead's theorem to show phiH is a homotopy
+equivalence, followed by some obstruction theory facts (?? - similar to the
+ones invoked in Long-Reid) to show it can be homotoped to an embedding.
+
+endproof
 
 We use the above condition repeatedly to show that we can construct
 a finite-sheeted cover of our book of $I$-bundles that satisfies certain nice
