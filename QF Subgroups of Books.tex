@@ -220,14 +220,14 @@ geometrically finite is equivalent to the standard one.
 
 % Example. Maybe? TODO
 
-{\bf TODO Include an example.}
+\textbf{ TODO Include an example.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Our reduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % TODO
-{\bf TODO This entire section needs a lot of work. Rewrite and expand.}
+\textbf{ TODO This entire section needs a lot of work. Rewrite and expand.}
 
 {\tiny
 
@@ -319,7 +319,7 @@ homotopy class, it suffices to consider the core curve.
 \section{Our first example}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-{\bf TODO shorten this section. Line it up with general result.}
+\textbf{ TODO shorten this section. Line it up with general result.}
 
 We construct a book of $I$-bundles $M$ as follows. In the following we take
 $\Si_{1,1}$ to be the compact surface of genus 1 with a single boundary
@@ -724,7 +724,7 @@ It follows by the tameness theorem that hyperbolic 3-manifold groups are LERF.
 This is relevant to us because manifolds with LERF fundamental groups have nice
 topological properties. In particular, we have the following fact.
 
-beginthm
+\begin{thm}
 
 Let M be a compact n-manifold such that pi1M is LERF. Let M' to M be
 a (possibly infinite-sheeted) cover such that pi1M' is finitely generated.
@@ -732,9 +732,9 @@ Suppose C cin M' is a compact subset which avoids the boundary of M. Then there
 exists a intermediate cover M' to M'' to M, which is finite-sheeted over M,
 such that the covering map M' to M'' is an embedding on C.
 
-endthm
+\end{thm}
 
-beginproof
+\begin{proof}
 
 See Long-Reid. Note that their proof is only stated for closed manifolds M, but
 it carries over to all compact manifolds also if we restrict C to avoid the
@@ -742,40 +742,65 @@ boundary of M.
 
 % I think? Might want to check w Ian.
 
-endproof
+\end{proof}
 
 This leads us to the following well-known fact. I haven't found a written proof
 in the literature, so I've provided one. Thanks to Ian Agol for pointing this
 out.
 
-beginthm
+\begin{thm}
 
-Let M be a compact 3-manifold such that pi1M is LERF. Let C be a compact
-connected manifold or complex, and phi colon C immerse M a pi1-injective
-immersion. Then there exists a finite sheeted cover M' to M such that phi lifts
-to a map phi' colon C into M' which is homotopic to an embedding.
+Let M be a compact n-manifold such that pi1M is LERF. Let C be a compact
+(n-1)-complex, and phi colon C immerse M a pi1-injective immersion.  Then there
+exists a finite sheeted cover M' to M such that phi lifts to a map phi' colon
+C into M' which is homotopic to an embedding.
 
-endthm
+\end{thm}
 
-beginproof
+Note that we can't guarantee that phi' is itself an embedding, because for
+instance it's easy to map a small straight segment of C so that its image
+contains a small homotopicall trivial loop. This loop will be present in every
+lift of C to a cover of M.
 
-Since C is a compact manifold or complex, pi1C is finitely generated. Let
-H=phi*(pi1C), and let pH colon MH to M be the corresponding cover of M. By our
-choice of H, phi lifts to a map phiH colon C to MH. We claim that phiH is
-homotopic to an embedding. Since C is compact and phi is an immersion, it
-suffices to show we can nicely homotope phiH to be injective.
+\begin{proof}
 
-Since pH*(pi1MH) = H = phi*(pi1C), phiH must induce an isomorphism on pi1 in
-order to have pH circ phiH = phi. Let x1,x2 in C such that
-phiH(x1)=phiH(x2)=y.  Let alpha cin C be a path from x1 to x2. Since phiH is
-a pi1-isomorphism, phiH(alpha) must be nullhomotopic, 
+%Since C is a compact complex, pi1C is finitely generated. Let H=phi*(pi1C), and
+%let pH colon MH to M be the corresponding cover of M. By our choice of H, phi
+%lifts to a map phiH colon C to MH. We claim that phiH is homotopic to an
+%embedding. Since C is compact and phi is an immersion, it suffices to show we
+%can nicely homotope phiH to be injective.
+%
+%Since pH*(pi1MH) = H = phi*(pi1C), phiH must induce an isomorphism on pi1 in
+%order to have pH circ phiH = phi. Since C is an immersed 1-complex, without
+%loss of generality the only failures to be embedded we need to consider are
+%double points.  Let x1,x2 in C such that phiH(x1)=phiH(x2)=y.  Let alpha cin
+%C be a path from x1 to x2.  phiH(alpha) is a closed curve in MH.  If
+%phiH(alpha) is homotopically trivial, we'll apply the loop theorem and homotope
+%locally to remove the intersection at y.
+%
+%To be precise, we have two cases to consider. First, if phiH(alpha) is a simple
+%closed curve, that is except for its two endpoints alpha embeds in MH. Then we
+%can apply the loop theorem directly to obtain a disc D cin MH with boundary
+%phiH(alpha). By homotoping across D we can ensure that phiH(C) cap int(D)
+%= empyset.
+
+% FIXME Ok HOLD ON this isn't right. Dimensions don't add up. If dim C = 1 and
+% dim M = 3 it's trivial! Because just homotope into the extra dimension
+% (general position) to fix -> in fact, I think this can be done generically.
+%
+% So really what I'm concerned with is (1) dim C = 1, dim M = 2. And also (2)
+% dim C = 2, dim M = 3.
+%
+% I hope I don't have to consider these two cases separately...
 
 Note that when we use this, both C and M will be aspherical, so an alternative
 proof for that case is to invoke Whitehead's theorem to show phiH is a homotopy
 equivalence, followed by some obstruction theory facts (?? - similar to the
 ones invoked in Long-Reid) to show it can be homotoped to an embedding.
 
-endproof
+\textbf{ TODO is this a real proof? not sure...}
+
+\end{proof}
 
 We use the above condition repeatedly to show that we can construct
 a finite-sheeted cover of our book of $I$-bundles that satisfies certain nice
@@ -801,7 +826,7 @@ $M$ is a nonelementary Kleinian manifold with incompressible boundary, we can
 assume without loss of generality that all pages have negative Euler
 characteristic, and all spines have at least 3 pages glued to them.
 
-{\bf TODO This proof needs work.}
+\textbf{ TODO This proof needs work.}
 
 {\tiny
 
@@ -817,7 +842,7 @@ If we have a spine with only a single page attached, we can pass to
 a finite-sheeted cover and obtain a boundary compression, so this case can't
 occur (?). Begin with a meridian disk of the spine.  This intersects the page's
 attaching curve in a single point, since we passed to an appropriate cover. Now
-... something. {\bf TODO} % TODO figure this out.
+... something. \textbf{ TODO} % TODO figure this out.
 
 }%tiny
 
@@ -852,7 +877,7 @@ gluing curves exactly once.
 \begin{proof}
 
 %Not immediately obvious. Use some cut and paste topology? TODO
-{\bf TODO}.
+\textbf{ TODO}.
 
 \end{proof}
 
@@ -874,7 +899,7 @@ conditions.
 
 % TODO
 
-{\bf TODO now that I look at this thing, it's kind of a mess... should probably
+\textbf{ TODO now that I look at this thing, it's kind of a mess... should probably
 group out / separate the topological vs proof convenient properties. }
 %
 % Talk to Ian about incompressible boundary.
@@ -905,7 +930,7 @@ homeomorphic to a good book of $I$-bundles.
 
 \begin{proof}
 
-{\bf TODO We use subgroup separability. Look at Long-Reid, fill in details
+\textbf{ TODO We use subgroup separability. Look at Long-Reid, fill in details
 here.}
 
 \end{proof}
@@ -916,9 +941,9 @@ here.}
 
 \begin{thm}[Main Theorem]
 
-Let $M$ be a book of $I$-bundles Kleinian manifold satisfying (0), (1) and (2).
-Suppose further that no components of the parabolic locus $P$ are contained in
-a single page's boundary. Then M contains a surface satisfying \eqref{E:qf}.
+Let $M$ be a good book of $I$-bundles.  Suppose further that no components of
+the parabolic locus $P$ are contained in a single page's boundary. Then
+M contains a surface satisfying \eqref{E:qf}.
 
 \end{thm}
 
@@ -941,7 +966,7 @@ connects 2 different boundary components of $S'$.
 \begin{proof}
 % TODO
 
-{\bf TODO Subgroup separability again. Do one at a time, with the eyeglasses
+\textbf{ TODO Subgroup separability again. Do one at a time, with the eyeglasses
 trick.  Look up and fill in.}
 
 \end{proof}
@@ -957,7 +982,7 @@ trick.  Look up and fill in.}
 % j(M,P,S_a) = total # bcs on page boundaries making up S_a ("junctions")
 
 % TODO
-{\bf TODO This notation is completely different from my other notation! Be
+\textbf{ TODO This notation is completely different from my other notation! Be
 clear and consistent.}
 
 Consider an arbitrary boundary component $S_a$ of the book of $I$-bundles $M$.
@@ -1221,9 +1246,9 @@ $\bigsqcup_a \widetilde{S_a}$.
 For each spine $M_c$ of $M$, look at all the incident pages. Say there are $q$
 of them.  Each page has two sides, so there are $2q$ many pieces $S_{a,k}$
 downstairs near $M_c$, each with one boundary component glued along the spine
-$M_c$.  By the facts (0), (1), and (2) we ensured above, we know that all these
-$S_{a,k}$ are distinct and they are all glued along simple parallel closed curves
-on $\bd M_c$ (do we know they're longitudes?  See above {\bf TODO}).
+$M_c$.  Because $M$ is good, we know that all these $S_{a,k}$ are distinct and
+they are all glued along simple parallel closed curves on $\bd M_c$ (do we know
+they're longitudes?  See above \textbf{ TODO}).
 
 Introduce notation as follows. $\cN(M_c)$ consists of $q$ neighborhoods inside
 pages, attached to $M_c$ by annuli. The meridian of $M_c$ gives a cyclic order to
@@ -1303,7 +1328,7 @@ of two different pages.  In the terminology we used earlier for gluing pages at
 a spine, $\gamma_i^-$ and $\gamma_i^+$ are attached to the attaching annulus boundary
 curves of two different pages: $\gamma_i^-$ attaches to $\gamma_{i+1}^+$, but
 $\gamma_i^+$ attaches to $\gamma_{i-1}^-$.  Since there are at least three pages at
-$M_c$ by (0), the $(i-1)$st and $(i+1)$st pages are distinct.
+$M_c$ by (3), the $(i-1)$st and $(i+1)$st pages are distinct.
 
 Suppose that the endpoint of $\alpha_i$ we're considering lies on $\gamma_i^-$. That
 is, $\gamma_i^-$ is a boundary component of $S_{a,k_i}$, in our other notation. And
@@ -1369,18 +1394,17 @@ completes the proof of the theorem.
 \end{proof}
 
 % TODO
-{\bf TODO fix this theorem / proof - wording is really vague, and I feel like
+\textbf{ TODO fix this theorem / proof - wording is really vague, and I feel like
 there's a more useful way to organize this...}
 
 \begin{thm}
 
-Let $M$ be a book of $I$-bundles Kleinian manifold with incompressible boundary
-satisfying (0), (1) and (2). Suppose $M$ does contain a component of the
-parabolic locus $P$ inside a single page's boundary. Construct $M'$ by deleting
-all such pages from $M$, and $P'$ by removing all components of the pared locus
-that intersect those pages. Then $(M,P)$ contains a surface satisfying
-\eqref{E:qf} if and only if $(M',P')$ is nonempty and contains a surface
-satisfying \eqref{E:qf}.
+Let $M$ be a good book of $I$-bundles.  Suppose $M$ does contain a component of
+the parabolic locus $P$ inside a single page's boundary.  Construct $M'$ by
+deleting all such pages from $M$, and $P'$ by removing all components of the
+pared locus that intersect those pages. Then $(M,P)$ contains a surface
+satisfying \eqref{E:qf} if and only if $(M',P')$ is nonempty and contains
+a surface satisfying \eqref{E:qf}.
 
 \end{thm}
 
@@ -1394,19 +1418,19 @@ Conversely, if we have such a surface, we can obviously view it as contained in
 $(M,P)$, where it must satisfy \eqref{E:qf} because it doesn't intersect the deleted
 pages at all.
 
-Note that $(M',P')$ may be nonelementary, or it still may not satisfy (0), (1),
-and (2).  However, we can repeat the steps needed to guarantee (0), (1), and
-(2), and obtain a manifold where we can either apply this theorem again, or use
-the first theorem. It is not immediately clear that this process terminates,
-because taking the finite-sheeted cover we use for (1) and (2) makes the
-manifold more complicated, possibly increasing the number of parabolics. We'll
-have to do this carefully. Possibly we should do this step BEFORE the other
+Note that $(M',P')$ may be nonelementary, or it still may not be good.
+However, we can repeat the steps needed to guarantee that it's good, and obtain
+a manifold where we can either apply this theorem again, or use the first
+theorem. It is not immediately clear that this process terminates, because
+taking the finite-sheeted cover we use for (2) and (3) makes the manifold more
+complicated, possibly increasing the number of parabolics. We'll have to do
+this carefully. Possibly we should do this step BEFORE the other
 simplification, but then we'll have to make sure the parabolics pass through
 that simplification nicely.
 
 \end{proof}
 
-{\bf The following sections ended up being unnecessary. I'll keep it here just
+\textbf{ The following sections ended up being unnecessary. I'll keep it here just
 in case we need something. }
 
 {\tiny
@@ -1707,7 +1731,7 @@ of the Baker-Cooper argument.
 }%tiny
 
 % TODO rewrite
-{\bf TODO Rewrite next steps after seeing how far we get.}
+\textbf{ TODO Rewrite next steps after seeing how far we get.}
 
 \bibliographystyle{plain}
 \bibliography{refs}
