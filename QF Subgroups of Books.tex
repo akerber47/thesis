@@ -104,83 +104,6 @@ conjecture that all books of $I$-bundles admit quasifuchsian surface subgroups,
 except for a few obvious negative cases where the pared locus is too large. We
 prove this in a few special cases, so far.
 
-% I'll figure out if I need the Fathi-Laudenbach-Poenaru stuff or not. Right now
-% it looks like I don't, at least for the cases I've done so far. But it might
-% come in handy later for more complicated pages? Not sure.
-
-%\section{Surface background details}
-%
-%These are some background facts that we'll need to go through the examples in
-%detail.
-%
-%Arcs in surfaces with boundary - from Fathi-Laudenback-Poenaru, Exposes 2 and
-%4 (see p. 21-24, 43-52).
-%This is an exposition of coordinates for classes of arcs in a surface
-%with boundary, aka Dehn-Thurston coordinates.
-%
-%Let A(N) be the set of isotopy classe sof simple closed proper arcs I\in N such
-%that they represent nontrivial elements of pi1 rel boundary. We isotope them
-%with the ends of the arcs free to move within the boundary components they are
-%contained in. Similarly A'(N) with simple closed multi-arcs, up to isotopy.
-%
-%Theorem (FLP 2.11). Let P2 be the standard pair of pants. A(P2) consists of
-%exactly six elements, classified by the boundary components of their endpoints.
-%
-%Theorem (FLP 2.12). A'(P2) is isomorphic to
-%A'={(a1,a2,a3) in Z | sum ai is even }
-%via the map
-%i:A'(P2)->A'
-%i(tau) = (i(tau, d1),i(tau,d2),i(tau,d3)) where d1,d2,d3 are the boundary
-%components of P2, and i(,) is geometric intersection number.
-%
-%That is, simple closed multicurves exist and are uniquely determined, for each
-%choice of boundary intersection numbers of the correct parity.
-%
-%Finally, given a closed surface, let N, let S(N) be the set of isotopy classes
-%of simple closed curves on N, and S'(N) simple closed multicurves.
-%
-%Theorem (FLP 4.8). Let N be a closed surface of negative Euler characteristic.
-%Fix a pants decomposition of N into 2g-2 pairs of pants along 3g-3 disjoint
-%simple closed curves K1,...,K3g-3. Then
-%
-%S'(N) is isomorphic to B0 = {(mi,si,ti) in Z, i = 1,...,3g-3 | all coords >= 0,
-%and for each pair of pants the corresponding mi sum is even}
-%where the mi measure intersection numbers with the curves K1,...,K3g-3, and the
-%si,ti measure twisting around at each intersection curve as a rational number.
-%See FLP for details of the calculation of the twisting coordinates - we won't
-%be needing it here (at least, not yet!).
-%
-%We actually require a slight generalization of this result, but the proof is
-%identical.
-%
-%Theorem. Let SA'(N) be the set of disjoint multi-curves or arcs on N, a surface
-%possibly with boundary. That is, each element of SA'(N) corresponds to a union
-%of simple closed curves and simple arcs on N, all disjoint, such that the arcs
-%are properly embedded, up to isotopy where the arcs are permitted to slide on
-%each boundary component. Then SA'(N) is isomorphic to the obvious choice, where
-%we again decompose into pairs of pants, have mi for each boundary curve or
-%decomposition curve, but si,ti only for each decomposition curve.
-%
-%Finally, let A''(N) (or maybe some better notation, etc) be the set of simple
-%proper multi-arcs satisfying the condition that no two components of the
-%multi-arc are parallel, ie, isotopic. Alternatively we can think of A''(N) as
-%consisting of simplices in the arc complex of N, or as a quotient of A'(N)
-%where we identify multicurves along splitting / joining of parallel arcs. In
-%general, A''(N) is more difficult to parametrize, as purely from the
-%coordinates it is difficult to determine which multicurves or multiarcs will
-%contain parallel components.
-%
-%We define S''(N), SA''(N) similarly.
-%
-%Example. Consider the pair of pants P2. We know A(P2) has 6 elements, so
-%A''(P2) has at most 2**6 elements, corresponding to which arcs are present in
-%our multi-arc. It suffices to check that all 6 arcs can be
-%embedded in P2 without intersecting.
-%
-%Example. Consider the punctured torus \Si_{1,}. We first compute SA'(\Si_{1,1}). By the
-%generalized Dehn-Thurston coordinates theorem above, (work this out on paper
-%first)
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Background}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1436,10 +1359,110 @@ that simplification nicely.
 
 \end{proof}
 
-{\bf The following section is obviated by the general case above. I'll keep it
-here just in case we need something from it. }
+{\bf The following sections ended up being unnecessary. I'll keep it here just
+in case we need something. }
 
 {\tiny
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Surface background details}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+These are some background facts that we'll need to go through the examples in
+detail.
+
+Arcs in surfaces with boundary - from Fathi-Laudenback-Poenaru, Exposes 2 and
+4 (see p. 21-24, 43-52).
+This is an exposition of coordinates for classes of arcs in a surface
+with boundary, aka Dehn-Thurston coordinates.
+
+Let $A(N)$ be the set of isotopy classe sof simple closed proper arcs $I\in N$
+such that they represent nontrivial elements of pi1 rel boundary. We isotope
+them with the ends of the arcs free to move within the boundary components they
+are contained in. Similarly $A'(N)$ with simple closed multi-arcs, up to
+isotopy.
+
+\begin{thm}[FLP 2.11]
+
+Let $P^2$ be the standard pair of pants. $A(P^2)$ consists of exactly six
+elements, classified by the boundary components of their endpoints.
+
+\end{thm}
+
+\begin{thm}[FLP 2.12]
+
+$A'(P^2)$ is isomorphic to $A'={(a1,a2,a3) in Z | sum ai is even }$ via the map
+$i:A'(P^2)->A', i(\tau) = (i(\tau, d_1),i(\tau,d_2),i(\tau,d_3))$ where
+$d_1,d_2,d_3$ are the boundary components of $P^2$, and $i(\cdot,\cdot)$ is
+geometric intersection number.
+
+\end{thm}
+
+That is, simple closed multicurves exist and are uniquely determined, for each
+choice of boundary intersection numbers of the correct parity.
+
+Finally, given a closed surface, let $N$, let $S(N)$ be the set of isotopy
+classes of simple closed curves on $N$, and $S'(N)$ simple closed multicurves.
+
+\begin{thm}[FLP 4.8]
+
+Let $N$ be a closed surface of negative Euler characteristic.  Fix a pants
+decomposition of $N$ into $2g-2$ pairs of pants along $3g-3$ disjoint simple
+closed curves $K_1,...,K_{3g-3}$. Then
+
+$S'(N)$ is isomorphic to $B_0 = {(m_i,s_i,t_i) \in \mathbb{Z}, i = 1,...,3g-3
+\mid \text{ all coords }\geq 0, \text{ and for each pair of pants the
+corresponding }m_i \text{ sum is even}}$ where the $m_i$ measure intersection
+numbers with the curves $K1,...,K3g-3$, and the $s_i,t_i$ measure twisting
+around at each intersection curve as a rational number.  See FLP for details of
+the calculation of the twisting coordinates - we won't be needing it here (at
+least, not yet!).
+
+\end{thm}
+
+We actually require a slight generalization of this result, but the proof is
+identical.
+
+\begin{thm}
+
+Let $SA'(N)$ be the set of disjoint multi-curves or arcs on $N$, a surface
+possibly with boundary. That is, each element of $SA'(N)$ corresponds to
+a union of simple closed curves and simple arcs on $N$, all disjoint, such that
+the arcs are properly embedded, up to isotopy where the arcs are permitted to
+slide on each boundary component. Then $SA'(N)$ is isomorphic to the obvious
+choice, where we again decompose into pairs of pants, have $mi$ for each
+boundary curve or decomposition curve, but $s_i,t_i$ only for each
+decomposition curve.
+
+\end{thm}
+
+Finally, let $A''(N)$ (or maybe some better notation, etc) be the set of simple
+proper multi-arcs satisfying the condition that no two components of the
+multi-arc are parallel, ie, isotopic. Alternatively we can think of $A''(N)$ as
+consisting of simplices in the arc complex of $N$, or as a quotient of $A'(N)$
+where we identify multicurves along splitting / joining of parallel arcs. In
+general, $A''(N)$ is more difficult to parametrize, as purely from the
+coordinates it is difficult to determine which multicurves or multiarcs will
+contain parallel components.
+
+We define $S''(N)$, $SA''(N)$ similarly.
+
+\begin{example}
+
+Consider the pair of pants $P^2$. We know $A(P^2)$ has 6 elements, so
+$A''(P^2)$ has at most $2^6$ elements, corresponding to which arcs are present
+in our multi-arc. It suffices to check that all 6 arcs can be embedded in $P^2$
+without intersecting.
+
+\end{example}
+
+\begin{example}
+
+Consider the punctured torus $\Si_{1,1}$. We first compute $SA'(\Si_{1,1})$.
+By the generalized Dehn-Thurston coordinates theorem above, (work this out on
+paper first).
+
+\end{example}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Some generalizations}
