@@ -8,7 +8,7 @@
 \textwidth = 16.2cm
 
 % For proof reading
-%\renewcommand{\baselinestretch}{2.5}
+\renewcommand{\baselinestretch}{2.5}
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{thm}[theorem]{Theorem}
@@ -726,19 +726,20 @@ topological properties. In particular, we have the following fact.
 
 \begin{thm}
 
-Let M be a compact n-manifold such that pi1M is LERF. Let M' to M be
-a (possibly infinite-sheeted) cover such that pi1M' is finitely generated.
-Suppose C cin M' is a compact subset which avoids the boundary of M. Then there
-exists a intermediate cover M' to M'' to M, which is finite-sheeted over M,
-such that the covering map M' to M'' is an embedding on C.
+Let $M$ be a compact $n$-manifold such that $\pi_1M$ is LERF. Let $M'$ to $M$
+be a (possibly infinite-sheeted) cover such that $\pi_1M'$ is finitely
+generated.  Suppose $C \cin M'$ is a compact subset which avoids the boundary
+of $M$. Then there exists a intermediate cover $M' \to M'' \to M$, which is
+finite-sheeted over $M$, such that the covering map $M' \to M''$ is an
+embedding on $C$.
 
 \end{thm}
 
 \begin{proof}
 
-See Long-Reid. Note that their proof is only stated for closed manifolds M, but
-it carries over to all compact manifolds also if we restrict C to avoid the
-boundary of M.
+See Long-Reid. Note that their proof is only stated for closed manifolds $M$,
+but it carries over to all compact manifolds also if we restrict $C$ to avoid
+the boundary of $M$.
 
 % I think? Might want to check w Ian.
 
@@ -750,19 +751,28 @@ out.
 
 \begin{thm}
 
-Let M be a compact n-manifold such that pi1M is LERF. Let C be a compact
-(n-1)-complex, and phi colon C immerse M a pi1-injective immersion.  Then there
-exists a finite sheeted cover M' to M such that phi lifts to a map phi' colon
-C into M' which is homotopic to an embedding.
+Let $M$ be a compact n-manifold such that $\pi_1M$ is LERF. Let $C$ be
+a compact (n-1)-complex, and $\phi \colon C \looparrowright M$
+a $\pi_1$-injective immersion.  Then there exists a finite sheeted cover $M'
+\to M$ such that $\phi$ lifts to a map $\phi' \colon C \hookrightarrow M'$
+which is homotopic to an embedding.
 
 \end{thm}
 
-Note that we can't guarantee that phi' is itself an embedding, because for
-instance it's easy to map a small straight segment of C so that its image
+Note that we can't guarantee that $\phi'$ is itself an embedding, because for
+instance it's easy to map a small straight segment of $C$ so that its image
 contains a small homotopicall trivial loop. This loop will be present in every
-lift of C to a cover of M.
+lift of $C$ to a cover of $M$.
 
 \begin{proof}
+
+Note that when we use this, both $C$ and $M$ will be aspherical, so an
+alternative proof for that case is to invoke Whitehead's theorem to show
+$\phi_H$ is a homotopy equivalence, followed by some obstruction theory facts
+(??  - similar to the ones invoked in Long-Reid) to show it can be homotoped to
+an embedding.
+
+\textbf{ TODO is this a real proof? not sure...}
 
 %Since C is a compact complex, pi1C is finitely generated. Let H=phi*(pi1C), and
 %let pH colon MH to M be the corresponding cover of M. By our choice of H, phi
@@ -792,13 +802,6 @@ lift of C to a cover of M.
 % dim C = 2, dim M = 3.
 %
 % I hope I don't have to consider these two cases separately...
-
-Note that when we use this, both C and M will be aspherical, so an alternative
-proof for that case is to invoke Whitehead's theorem to show phiH is a homotopy
-equivalence, followed by some obstruction theory facts (?? - similar to the
-ones invoked in Long-Reid) to show it can be homotoped to an embedding.
-
-\textbf{ TODO is this a real proof? not sure...}
 
 \end{proof}
 
