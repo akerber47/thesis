@@ -759,11 +759,14 @@ conditions.
 
 \begin{enumerate}
 
-\item $M$ is a compact connected orientable hyperbolic 3-manifold with
-incompressible boundary.
+\item The underlying topological manifold is a compact connected orientable
+hyperbolic 3-manifold with incompressible boundary.
 
-\item Each page is a trivial $I$-bundle over an orientable surface with
-boundary of nonpositive Euler characteristic.
+\item Each page is an I-bundle over a surface of nonpositive Euler
+characteristic. That is, no page has base surface a disk or Mobius strip, (or
+Klein bottle?).
+
+% FIXME figure out what Ian said  about Klein bottles
 
 \end{enumerate}
 
@@ -779,15 +782,6 @@ a hyperbolic book of I-bundles, it must have incompressible boundary.
 
 % TODO
 \textbf{TODO figure out/throw in Ian's explanation of incompressible boundary.}
-
-%% THIS GOES LATER! With LERF reductions / etc
-
-If any pages are twisted I-bundles or I-bundles over nonorientable surfaces,
-using LERF we can construct a finite cover of M where all pages are covered by
-trivial I-bundles over orientable surfaces.
-
-% TODO
-\textbf{TODO elaborate/prove this.}
 
 So all the pages are trivial I-bundles over orientable surfaces. Each page's
 base surface must have at least one boundary component for M to be connected.
@@ -814,8 +808,8 @@ Let (M,P) be a pared admissible book of I-bundles. We say (M,P) is
 
 \begin{enumerate}
 
-\item Each page is a trivial I-bundle over an orientable surface of
-\emph{negative} Euler characteristic.
+\item Each page is an I-bundle over a surface of \emph{negative} Euler
+characteristic. That is, no page has base surface an annulus or Klein bottle.
 
 \item Each spine contains at least $3$ gluing annuli.
 
@@ -833,7 +827,7 @@ component of P is contained in a single page.
 
 This definition is motivated by the following fact.
 
-\begin{prop}
+\begin{thm}
 
 Let (M,P) be a pared admissible book of I-bundles. Then exactly one of the
 following holds:
@@ -850,7 +844,7 @@ in (M',P').
 
 \end{enumerate}
 
-\end{prop}
+\end{thm}
 
 proof.
 
@@ -870,39 +864,6 @@ Cross off pages with closed parabolics on them. Keep reducing, might break into
 multiple pieces. There's a (QF) surface if and only if our reduction terminates
 in a nonempty surface.
 
-{\tiny
-
-% TODO
-\textbf{TODO figure out what to do with this mini section here. Does any of it
-work? Is it necessary.}
-
-We also want to clarify the possible gluing annuli on the spines. Given a solid
-torus boundary curve $(l,m)$ that travels $m$ times around a meridian and $l$
-times around a longitude, we can ask whether it is permissible to glue a page
-along an annulus parallel to this curve. Obviously if we glue our pages along
-meridian curves $(0,1)$, we'll have a boundary compression along a parallel
-meridian disk.
-
-% I believe all other possibilities are ok, as long as we don't violate the
-% one-point intersection constraint Ian mentioned.
-
-\begin{lemma}["One-point intersection lemma"]
-
-Consider a solid torus, or more generally a handlebody, with a collection of
-$I$-bundles glued to it along annuli. The resulting manifold has a boundary
-compression iff there exists a meridian disk that intersects the boundary
-gluing curves exactly once.
-
-\end{lemma}
-
-\begin{proof}
-
-%Not immediately obvious. Use some cut and paste topology? TODO
-\textbf{TODO}.
-
-\end{proof}
-
-}
 
 As motivation, also observe that our specific example in the earlier section is
 the simplest possible topological structure for a reduced book of I-bundles.
@@ -962,8 +923,49 @@ homeomorphic to a good book of $I$-bundles.
 \textbf{ TODO We use subgroup separability. Look at Long-Reid, fill in details
 here.}
 
+\textbf{Was earlier}: If any pages are twisted I-bundles or I-bundles over
+nonorientable surfaces, using LERF we can construct a finite cover of M where
+all pages are covered by trivial I-bundles over orientable surfaces.
+
+% TODO
+\textbf{TODO elaborate/prove this.}
+
+
 \end{proof}
 
+{\tiny
+
+% TODO
+\textbf{TODO figure out what to do with this mini section here. Does any of it
+work? Is it necessary.}
+
+We also want to clarify the possible gluing annuli on the spines. Given a solid
+torus boundary curve $(l,m)$ that travels $m$ times around a meridian and $l$
+times around a longitude, we can ask whether it is permissible to glue a page
+along an annulus parallel to this curve. Obviously if we glue our pages along
+meridian curves $(0,1)$, we'll have a boundary compression along a parallel
+meridian disk.
+
+% I believe all other possibilities are ok, as long as we don't violate the
+% one-point intersection constraint Ian mentioned.
+
+\begin{lemma}["One-point intersection lemma"]
+
+Consider a solid torus, or more generally a handlebody, with a collection of
+$I$-bundles glued to it along annuli. The resulting manifold has a boundary
+compression iff there exists a meridian disk that intersects the boundary
+gluing curves exactly once.
+
+\end{lemma}
+
+\begin{proof}
+
+%Not immediately obvious. Use some cut and paste topology? TODO
+\textbf{TODO}.
+
+\end{proof}
+
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Proof of main theorem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
