@@ -780,6 +780,8 @@ a hyperbolic book of I-bundles, it must have incompressible boundary.
 % TODO
 \textbf{TODO figure out/throw in Ian's explanation of incompressible boundary.}
 
+%% THIS GOES LATER! With LERF reductions / etc
+
 If any pages are twisted I-bundles or I-bundles over nonorientable surfaces,
 using LERF we can construct a finite cover of M where all pages are covered by
 trivial I-bundles over orientable surfaces.
@@ -820,10 +822,10 @@ Let (M,P) be a pared admissible book of I-bundles. We say (M,P) is
 \item All page boundary components are glued (there are no "free boundary
 components").
 
-\item P is a union of annuli.
-
 \item Each page intersects P in a disjoint union of rectangles. That is, no
 component of P is contained in a single page.
+
+\item P is a union of annuli.
 
 \end{enumerate}
 
@@ -838,6 +840,8 @@ following holds:
 
 \begin{enumerate}
 
+%FIXME set of books of I-bundles? bc might break into multiple pieces ... ugh
+%what a mess...
 \item There exists a reduced pared book of I-bundles (M',P') and an embedding
 (M',P') hookrightarrow (M,P) such that any (QF) surface in (M,P) is contained
 in (M',P').
@@ -848,18 +852,29 @@ in (M',P').
 
 \end{prop}
 
+proof.
+
 For any page with base surface an annulus, we can glue the two spine boundaries
 together along that page's gluing curves to make a single spine. The other
 attached pages of each spine will be carried along by the gluing to form
 a single set of attached pages which is the union of the two original sets
 (without the page we just eliminated).
 
-Spines which have exactly one page attached
+For any spine with exactly two pages attached, we can simplify the book of
+$I$-bundles structure by attaching the two pages along their boundary annuli to
+make a single larger page. This is homeomorphic to the original manifold.
 
-Finally, for any spine with exactly two pages attached, we can simplify the
-book of $I$-bundles structure by attaching the two pages along their boundary
-annuli to make a single larger page. This is homeomorphic to the original
-manifold.
+Spines which have exactly one page attached. Cross them off.
+
+Cross off pages with closed parabolics on them. Keep reducing, might break into
+multiple pieces. There's a (QF) surface if and only if our reduction terminates
+in a nonempty surface.
+
+{\tiny
+
+% TODO
+\textbf{TODO figure out what to do with this mini section here. Does any of it
+work? Is it necessary.}
 
 We also want to clarify the possible gluing annuli on the spines. Given a solid
 torus boundary curve $(l,m)$ that travels $m$ times around a meridian and $l$
@@ -883,19 +898,40 @@ gluing curves exactly once.
 \begin{proof}
 
 %Not immediately obvious. Use some cut and paste topology? TODO
-\textbf{ TODO}.
+\textbf{TODO}.
 
 \end{proof}
 
-This is what we want to think of as a "sufficiently general" book of
-$I$-bundles.  Observe first that the pared locus $P$ must be a union of annuli,
-just as in the specific example above.  Now there are a number of topological
-simplifications we make, by passing to an appropriate finite-sheeted cover of
-the book of $I$-bundles.  Once we can construct a surface satisfying
-\eqref{E:qf} inside this cover, we can push it down and perturb slightly to
-obtain a surface satisfying \eqref{E:qf} downstairs (since it $\pi_1$-injects
-into a subgroup, it will definitely still be $\pi_1$-injective).
+}
 
+As motivation, also observe that our specific example in the earlier section is
+the simplest possible topological structure for a reduced book of I-bundles.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Statement of main theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We are now ready to state the precise theorem.
+
+thm
+
+Every reduced book of I-bundles contains a (QF) surface.
+
+Note that the non-reduced case is covered by the earlier proposition. If the
+reduction process outlined there produces one or more reduced books of
+I-bundles, we can study those. If not, and it terminates in an empty set, then
+there cannot be a QF surface.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Proof of main theorem - preliminaries}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Now there are a number of topological simplifications we make, by passing to an
+appropriate finite-sheeted cover of the book of $I$-bundles.  Once we can
+construct a surface satisfying \eqref{E:qf} inside this cover, we can push it
+down and perturb slightly to obtain a surface satisfying \eqref{E:qf}
+downstairs (since it $\pi_1$-injects into a subgroup, it will definitely still
+be $\pi_1$-injective).
 
 \begin{defn}
 
@@ -906,8 +942,8 @@ satisfies the following additional conditions.
 
 \item Each page is glued to a given spine at most once.
 
-\item Each gluing annulus on a spine is parallel to a simple longitude, and
-each page is an oriented surface.
+\item Each gluing annulus on a spine is a simple longitude, and each page is an
+oriented surface.
 
 \end{enumerate}
 
@@ -929,7 +965,7 @@ here.}
 \end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Main theorem}
+\section{Proof of main theorem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{thm}[Main Theorem]
@@ -1385,10 +1421,6 @@ So we cannot join up the lifts of $\alpha_i$ to form a lift of $\alpha$. This
 completes the proof of the theorem.
 
 \end{proof}
-
-% TODO
-\textbf{ TODO fix this theorem / proof - wording is really vague, and I feel like
-there's a more useful way to organize this...}
 
 \begin{thm}
 
