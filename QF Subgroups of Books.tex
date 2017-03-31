@@ -719,93 +719,6 @@ that a virtual compact special group is virtually a quasiconvex subgroup of
 a right-angled Artin group, and geometrically finite subgroups are separable.
 It follows by the tameness theorem that hyperbolic 3-manifold groups are LERF.
 
-This is relevant to us because manifolds with LERF fundamental groups have nice
-topological properties. In particular, we have the following fact.
-
-\begin{thm}
-
-Let $M$ be a compact $n$-manifold such that $\pi_1M$ is LERF. Let $M'$ to $M$
-be a (possibly infinite-sheeted) cover such that $\pi_1M'$ is finitely
-generated.  Suppose $C \cin M'$ is a compact subset which avoids the boundary
-of $M$. Then there exists a intermediate cover $M' \to M'' \to M$, which is
-finite-sheeted over $M$, such that the covering map $M' \to M''$ is an
-embedding on $C$.
-
-\end{thm}
-
-\begin{proof}
-
-See Long-Reid. Note that their proof is only stated for closed manifolds $M$,
-but it carries over to all compact manifolds also if we restrict $C$ to avoid
-the boundary of $M$.
-
-% I think? Might want to check w Ian.
-
-\end{proof}
-
-This leads us to the following well-known fact. I haven't found a written proof
-in the literature, so I've provided one. Thanks to Ian Agol for pointing this
-out.
-
-\begin{thm}
-
-Let $M$ be a compact n-manifold such that $\pi_1M$ is LERF. Let $C$ be
-a compact (n-1)-complex, and $\phi \colon C \looparrowright M$
-a $\pi_1$-injective immersion.  Then there exists a finite sheeted cover $M'
-\to M$ such that $\phi$ lifts to a map $\phi' \colon C \hookrightarrow M'$
-which is homotopic to an embedding.
-
-\end{thm}
-
-Note that we can't guarantee that $\phi'$ is itself an embedding, because for
-instance it's easy to map a small straight segment of $C$ so that its image
-contains a small homotopicall trivial loop. This loop will be present in every
-lift of $C$ to a cover of $M$.
-
-\begin{proof}
-
-Note that when we use this, both $C$ and $M$ will be aspherical, so an
-alternative proof for that case is to invoke Whitehead's theorem to show
-$\phi_H$ is a homotopy equivalence, followed by some obstruction theory facts
-(??  - similar to the ones invoked in Long-Reid) to show it can be homotoped to
-an embedding.
-
-\textbf{ TODO is this a real proof? not sure...}
-
-%Since C is a compact complex, pi1C is finitely generated. Let H=phi*(pi1C), and
-%let pH colon MH to M be the corresponding cover of M. By our choice of H, phi
-%lifts to a map phiH colon C to MH. We claim that phiH is homotopic to an
-%embedding. Since C is compact and phi is an immersion, it suffices to show we
-%can nicely homotope phiH to be injective.
-%
-%Since pH*(pi1MH) = H = phi*(pi1C), phiH must induce an isomorphism on pi1 in
-%order to have pH circ phiH = phi. Since C is an immersed 1-complex, without
-%loss of generality the only failures to be embedded we need to consider are
-%double points.  Let x1,x2 in C such that phiH(x1)=phiH(x2)=y.  Let alpha cin
-%C be a path from x1 to x2.  phiH(alpha) is a closed curve in MH.  If
-%phiH(alpha) is homotopically trivial, we'll apply the loop theorem and homotope
-%locally to remove the intersection at y.
-%
-%To be precise, we have two cases to consider. First, if phiH(alpha) is a simple
-%closed curve, that is except for its two endpoints alpha embeds in MH. Then we
-%can apply the loop theorem directly to obtain a disc D cin MH with boundary
-%phiH(alpha). By homotoping across D we can ensure that phiH(C) cap int(D)
-%= empyset.
-
-% FIXME Ok HOLD ON this isn't right. Dimensions don't add up. If dim C = 1 and
-% dim M = 3 it's trivial! Because just homotope into the extra dimension
-% (general position) to fix -> in fact, I think this can be done generically.
-%
-% So really what I'm concerned with is (1) dim C = 1, dim M = 2. And also (2)
-% dim C = 2, dim M = 3.
-%
-% I hope I don't have to consider these two cases separately...
-
-\end{proof}
-
-We use the above condition repeatedly to show that we can construct
-a finite-sheeted cover of our book of $I$-bundles that satisfies certain nice
-properties, by starting with an infinite-sheeted cover and then pushing down.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{General case - preliminaries}
@@ -893,29 +806,32 @@ be $\pi_1$-injective).
 
 We want to consider books of $I$-bundles with some nice topological properties.
 
+defn
+
+A book of I-bundles M is reduced if it satisfies the following conditions.
+
+- M has incompressible boundary.
+
+- Each page is a trivial I-bundle over an orientable surface of negative Euler
+characteristic.
+
+- Each spine contains at least 3 gluing annuli.
+
+enddefn
+
+
+
 \begin{defn}
 
-A \emph{good} book of $I$-bundles $M$ is one which satisfies the following
-conditions.
-
-% TODO
-
-\textbf{ TODO now that I look at this thing, it's kind of a mess... should probably
-group out / separate the topological vs proof convenient properties. }
-%
-% Talk to Ian about incompressible boundary.
+A \emph{good} book of $I$-bundles $M$ is a reduced book of I-bundles which
+satisfies the following additional conditions.
 
 \begin{enumerate}
 
-\item M has incompressible boundary, every page core surface has negative Euler
-characteristic, and every spine has at least 3 gluing annuli. \label{I:boib-0}
-
-% ^ maybe call this "topologically reduced" and move its definition earlier?
-
-\item Each page is glued to a given spine at most once. \label{I:boib-1}
+\item Each page is glued to a given spine at most once.
 
 \item Each gluing annulus on a spine is parallel to a simple longitude, and
-each page is an oriented surface. \label{I:boib-2}
+each page is an oriented surface.
 
 \end{enumerate}
 
@@ -1535,6 +1451,100 @@ By the generalized Dehn-Thurston coordinates theorem above, (work this out on
 paper first).
 
 \end{example}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{LERF and lifting properties}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{We had trouble with some technical details here, but we ended up not
+needing these facts anyways.}
+
+This is relevant to us because manifolds with LERF fundamental groups have nice
+topological properties. In particular, we have the following fact.
+
+\begin{thm}
+
+Let $M$ be a compact $n$-manifold such that $\pi_1M$ is LERF. Let $M'$ to $M$
+be a (possibly infinite-sheeted) cover such that $\pi_1M'$ is finitely
+generated.  Suppose $C \cin M'$ is a compact subset which avoids the boundary
+of $M$. Then there exists a intermediate cover $M' \to M'' \to M$, which is
+finite-sheeted over $M$, such that the covering map $M' \to M''$ is an
+embedding on $C$.
+
+\end{thm}
+
+\begin{proof}
+
+See Long-Reid. Note that their proof is only stated for closed manifolds $M$,
+but it carries over to all compact manifolds also if we restrict $C$ to avoid
+the boundary of $M$.
+
+% I think? Might want to check w Ian.
+
+\end{proof}
+
+This leads us to the following well-known fact. I haven't found a written proof
+in the literature, so I've provided one. Thanks to Ian Agol for pointing this
+out.
+
+\begin{thm}
+
+Let $M$ be a compact n-manifold such that $\pi_1M$ is LERF. Let $C$ be
+a compact (n-1)-complex, and $\phi \colon C \looparrowright M$
+a $\pi_1$-injective immersion.  Then there exists a finite sheeted cover $M'
+\to M$ such that $\phi$ lifts to a map $\phi' \colon C \hookrightarrow M'$
+which is homotopic to an embedding.
+
+\end{thm}
+
+Note that we can't guarantee that $\phi'$ is itself an embedding, because for
+instance it's easy to map a small straight segment of $C$ so that its image
+contains a small homotopicall trivial loop. This loop will be present in every
+lift of $C$ to a cover of $M$.
+
+\begin{proof}
+
+Note that when we use this, both $C$ and $M$ will be aspherical, so an
+alternative proof for that case is to invoke Whitehead's theorem to show
+$\phi_H$ is a homotopy equivalence, followed by some obstruction theory facts
+(??  - similar to the ones invoked in Long-Reid) to show it can be homotoped to
+an embedding.
+
+\textbf{ TODO is this a real proof? not sure...}
+
+%Since C is a compact complex, pi1C is finitely generated. Let H=phi*(pi1C), and
+%let pH colon MH to M be the corresponding cover of M. By our choice of H, phi
+%lifts to a map phiH colon C to MH. We claim that phiH is homotopic to an
+%embedding. Since C is compact and phi is an immersion, it suffices to show we
+%can nicely homotope phiH to be injective.
+%
+%Since pH*(pi1MH) = H = phi*(pi1C), phiH must induce an isomorphism on pi1 in
+%order to have pH circ phiH = phi. Since C is an immersed 1-complex, without
+%loss of generality the only failures to be embedded we need to consider are
+%double points.  Let x1,x2 in C such that phiH(x1)=phiH(x2)=y.  Let alpha cin
+%C be a path from x1 to x2.  phiH(alpha) is a closed curve in MH.  If
+%phiH(alpha) is homotopically trivial, we'll apply the loop theorem and homotope
+%locally to remove the intersection at y.
+%
+%To be precise, we have two cases to consider. First, if phiH(alpha) is a simple
+%closed curve, that is except for its two endpoints alpha embeds in MH. Then we
+%can apply the loop theorem directly to obtain a disc D cin MH with boundary
+%phiH(alpha). By homotoping across D we can ensure that phiH(C) cap int(D)
+%= empyset.
+
+% FIXME Ok HOLD ON this isn't right. Dimensions don't add up. If dim C = 1 and
+% dim M = 3 it's trivial! Because just homotope into the extra dimension
+% (general position) to fix -> in fact, I think this can be done generically.
+%
+% So really what I'm concerned with is (1) dim C = 1, dim M = 2. And also (2)
+% dim C = 2, dim M = 3.
+%
+% I hope I don't have to consider these two cases separately...
+
+\end{proof}
+
+We use the above condition repeatedly to show that we can construct
+a finite-sheeted cover of our book of $I$-bundles that satisfies certain nice
+properties, by starting with an infinite-sheeted cover and then pushing down.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Some generalizations}
