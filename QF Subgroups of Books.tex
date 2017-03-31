@@ -731,29 +731,135 @@ fact contain such a surface.
 
 We use the following general description for books of $I$-bundles. Let
 $M_{c1},...,M_{cr}$ be the spines, all solid tori. Let $M_{p1},...,M_{ps}$ be
-the pages, all thickened surfaces. Each page has boundary components $A_{ij}$,
-all annuli. We glue each annulus by a homeomorphism $\phi_{ij}$ to a boundary
-annulus $A_{ij'}\cin \bd M_{ck}$. Note that $Aij'$ might not be a simple
-longitude of, that is, a page can wrap multiple times around a spine. However,
-all the Aij' must be disjoint and parallel, or the result of gluing will not be
-a manifold.
+the pages, all thickened surfaces with boundary. Each page has boundary
+components $A_{ij}$, all annuli. We glue each annulus by a homeomorphism
+$\phi_{ij}$ to a boundary annulus $A_{ij'}\cin \bd M_{ck}$. Note that $Aij'$
+might not be a simple longitude of, that is, a page can wrap multiple times
+around a spine.  However, for each spine, all the $A_{ij'}$ must be disjoint
+and parallel, or the result of gluing will not be a manifold.
 
-To see this, observe that each page which is a copy of $S0,1$ means that that
-page and its attaching spine form a 3-manifold with a finite-sheeted cover by
-a ball (we can arrange things so that in the cover, the $S0,1$ attaching map
-only traverses the longitude once, and we get a thickened disk).  This means
-that we'll have finite order summands in our Kleinian group, which is
-impossible as it's torsion free. Or some argument with JSJ decomposition having
-elliptic piece? Either way, this can't happen with the manifolds we care about.
+We first make the following simple observation.
 
-Finally, for any spine with 2 pages attached, we can simplify the book of
-$I$-bundles structure by attaching the 2 pages along their boundary annuli to
-make a single larger page. This is homeomorphic to the original manifold.
-Similarly, for any $\Si_{0,2}$ page, we can glue the two spine boundaries
+prop
+
+Let M be a book of I-bundles, and M' to M be a finite-sheeted covering space.
+Then M' is also a book of I-bundles.
+
+proof
+
+This is straightforward. Lift the spines and pages of M to obtain spines and
+pages of M'. Lift the gluing annuli of M to gluing annuli of M'.
+
+We want to consider books of $I$-bundles with some nice topological properties.
+
+\begin{defn}
+
+A book of $I$-bundles $M$ is \emph{admissible} if it satisfies the following
+conditions.
+
+\begin{enumerate}
+
+\item $M$ is a compact connected orientable hyperbolic 3-manifold with
+incompressible boundary.
+
+\item Each page is a trivial $I$-bundle over an orientable surface with
+boundary of nonpositive Euler characteristic.
+
+\end{enumerate}
+
+\end{defn}
+
+Henceforth we will only consider admissible books of $I$-bundles. Let's briefly
+explain why.
+
+Obviously we want M to be compact connected orientable hyperbolic, as this is
+the general case we're studying (Kleinian manifolds). If M were nonorientable
+we could reduce to the orientable double cover.  Furthermore, because it's
+a hyperbolic book of I-bundles, it must have incompressible boundary.
+
+% TODO
+\textbf{TODO figure out/throw in Ian's explanation of incompressible boundary.}
+
+If any pages are twisted I-bundles or I-bundles over nonorientable surfaces,
+using LERF we can construct a finite cover of M where all pages are covered by
+trivial I-bundles over orientable surfaces.
+
+% TODO
+\textbf{TODO elaborate/prove this.}
+
+So all the pages are trivial I-bundles over orientable surfaces. Each page's
+base surface must have at least one boundary component for M to be connected.
+Similarly Each spine must contain at least one gluing annulus. We eliminate the
+non-reduced cases as follows.
+
+We don't want to consider base surfaces which are disks. Observe that each page
+which is a copy of $S0,1$ means that that page and its attached spine form
+a 3-manifold with a finite-sheeted cover by a ball (we can arrange things so
+that in the cover, the $S0,1$ attaching map only traverses the longitude once,
+and we get a thickened disk).  This means that we'll have finite order summands
+in our group, which correspond to elliptic pieces, for instance lens spaces, in
+the JSJ decomposition. These cases are not hyperbolic.
+
+Now consider a pared structure P on a book of I-bundles. We'll say (M,P) is
+admissible if the book of I-bundles M is admissible. It follows immediately
+from general pared structure theorems that only torus boundary components of
+M can support tori in P. We introduce an additional definition.
+
+\begin{defn}
+
+Let (M,P) be a pared admissible book of I-bundles. We say (M,P) is
+\emph{reduced} if it satisfies the following.
+
+\begin{enumerate}
+
+\item Each page is a trivial I-bundle over an orientable surface of
+\emph{negative} Euler characteristic.
+
+\item Each spine contains at least $3$ gluing annuli.
+
+\item All page boundary components are glued (there are no "free boundary
+components").
+
+\item P is a union of annuli.
+
+\item Each page intersects P in a disjoint union of rectangles. That is, no
+component of P is contained in a single page.
+
+\end{enumerate}
+
+\end{defn}
+
+This definition is motivated by the following fact.
+
+\begin{prop}
+
+Let (M,P) be a pared admissible book of I-bundles. Then exactly one of the
+following holds:
+
+\begin{enumerate}
+
+\item There exists a reduced pared book of I-bundles (M',P') and an embedding
+(M',P') hookrightarrow (M,P) such that any (QF) surface in (M,P) is contained
+in (M',P').
+
+\item (M,P) does not contain a (QF) surface.
+
+\end{enumerate}
+
+\end{prop}
+
+For any page with base surface an annulus, we can glue the two spine boundaries
 together along that page's gluing curves to make a single spine. The other
 attached pages of each spine will be carried along by the gluing to form
-a single set of attached pages which is the union of the two original sets,
-minus the $\Si_{0,2}$ page.
+a single set of attached pages which is the union of the two original sets
+(without the page we just eliminated).
+
+Spines which have exactly one page attached
+
+Finally, for any spine with exactly two pages attached, we can simplify the
+book of $I$-bundles structure by attaching the two pages along their boundary
+annuli to make a single larger page. This is homeomorphic to the original
+manifold.
 
 We also want to clarify the possible gluing annuli on the spines. Given a solid
 torus boundary curve $(l,m)$ that travels $m$ times around a meridian and $l$
@@ -781,30 +887,14 @@ gluing curves exactly once.
 
 \end{proof}
 
-Now we have a general book of $I$-bundles. Observe first that the pared locus
-$P$ must be a union of annuli, just as in the specific example above.  Now
-there are a number of topological simplifications we make, by passing to an
-appropriate finite-sheeted cover of the book of $I$-bundles.  Once we can
-construct a surface satisfying \eqref{E:qf} inside this cover, we can push it
-down and perturb slightly to obtain a surface satisfying \eqref{E:qf}
-downstairs (since it $\pi_1$-injects into a subgroup, it will definitely still
-be $\pi_1$-injective).
-
-We want to consider books of $I$-bundles with some nice topological properties.
-
-defn
-
-A book of I-bundles M is reduced if it satisfies the following conditions.
-
-- M has incompressible boundary.
-
-- Each page is a trivial I-bundle over an orientable surface of negative Euler
-characteristic.
-
-- Each spine contains at least 3 gluing annuli.
-
-enddefn
-
+This is what we want to think of as a "sufficiently general" book of
+$I$-bundles.  Observe first that the pared locus $P$ must be a union of annuli,
+just as in the specific example above.  Now there are a number of topological
+simplifications we make, by passing to an appropriate finite-sheeted cover of
+the book of $I$-bundles.  Once we can construct a surface satisfying
+\eqref{E:qf} inside this cover, we can push it down and perturb slightly to
+obtain a surface satisfying \eqref{E:qf} downstairs (since it $\pi_1$-injects
+into a subgroup, it will definitely still be $\pi_1$-injective).
 
 
 \begin{defn}
