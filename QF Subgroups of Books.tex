@@ -919,10 +919,11 @@ satisfies the following additional conditions.
 
 \begin{enumerate}
 
+\item Each gluing annulus on a spine is parallel to a simple longitude.
+
 \item Each page is glued to a given spine at most once.
 
-\item Each gluing annulus on a spine is a simple longitude, and each page is an
-oriented surface.
+\item Each page is a trivial I-bundle over an oriented surface.
 
 \end{enumerate}
 
@@ -930,19 +931,32 @@ oriented surface.
 
 \begin{lemma}
 
-Let M be a reduced book of I-bundles. Then M has a finite-sheeted cover which
-is good.
+Let M be a reduced book of I-bundles. Then M has a finite-sheeted regular cover
+which is good.
 
 \end{lemma}
 
 \begin{proof}
 
-\textbf{ TODO We use subgroup separability. Look at Long-Reid, fill in details
-here.}
+To prove this, we'll repeatedly use the fact that pi1M is LERF to construct
+finite sheeted covers with nice properties.
 
-\textbf{Was earlier}: If any pages are twisted I-bundles or I-bundles over
-nonorientable surfaces, using LERF we can construct a finite cover of M where
-all pages are covered by trivial I-bundles over orientable surfaces.
+We first take care of condition (1). Let C be a spine, and let A1,dots,An be
+the gluing annuli on C. These annuli must be parallel. Let [alpha] be
+a generator for pi1C (a solid torus). Choose k such that alpha^k is homotopic
+in C to each Ai.
+
+Since M is admissible, C cin M is pi1-injective (alpha^k, ie a page gluing
+annulus, can't be homotopically trivial in an attached page). So alpha
+generates a cyclic subgroup of pi1M.
+
+pi1M is LERF. Let phiC colon pi1M to GC be a map to a finite group such that
+phiC(alpha),phiC(alpha^2),dots,phiC(alpha^{k-1}) notin phiC(<alpha^k>). Let phi
+colon pi1M to G = prod GC be the product of all these maps of the appropriate
+orders for each C. Again, we elide changes of basepoint. Let M' be the
+associated regular cover of M.
+
+We claim that M' satisfies (1).
 
 % TODO
 \textbf{TODO elaborate/prove this.}
@@ -1028,6 +1042,14 @@ construction for each alpha cin P. Let G = prod alpha Galpha, and phi : pi1S to
 G the product map. Since G is finite, phi induces a finite-sheeted regular
 cover pi : S' to S. We claim that pi-1(P) consists of arcs connecting two
 different boundary components of S'.
+
+Note that we're eliding the fact that these maps phialpha are defined on pi1S
+with different basepoints. However, if we choose an arbitrary path connecting
+each additional basepoint to a fixed basepoint we choose, the induced
+isomorphisms on pi1S carry over the nice cover lifting properties between
+different basepoints. Our curves beta and gamma still correspond to elements of
+pi1 which lift in the appropriate way, once we do a reverse change of basepoint
+upstairs. So this is not a problem.
 
 Obviously if alpha cin S is an arc which already connects two distinct boundary
 components downstairs, the arc covering it must also connect two boundary
