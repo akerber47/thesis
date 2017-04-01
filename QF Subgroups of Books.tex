@@ -682,6 +682,9 @@ original.
 
 \begin{defn}
 
+Let G be a group. G is residually finite, or RF, if for any g in G, there
+exists a finite index subgroup H<G such that g notin H.
+
 Let $G$ be a group, and $H$ a subgroup of $G$. $H$ is \emph{separable} in $G$
 if for any $g \in G$, $g \notin H$, there exists a finite index subgroup $H'<G$
 such that $H'>H$, and $g \notin H'$.
@@ -690,6 +693,15 @@ $G$ is \emph{subgroup separable}, or \emph{LERF}, if all its finitely generated
 subgroups are separable.
 
 \end{defn}
+
+It is well-known that these are equivalent to the following facts: (see
+\cite{LR}). We'll use these facts later in our proof.
+
+- G is RF if and only if for any g in G there exists a map phi colon G to F,
+where F is a finite group, such that phi(g) neq id.
+
+- G is LERF if and only if for any g in G, H < G, g notin H, there exists a map
+phi colon G to F such that phi(g) notin phi(H).
 
 Note that in this entire paper, \emph{surface groups} will refer to fundamental
 groups of closed surfaces (compact without boundary).
@@ -750,7 +762,8 @@ proof
 This is straightforward. Lift the spines and pages of M to obtain spines and
 pages of M'. Lift the gluing annuli of M to gluing annuli of M'.
 
-We want to consider books of $I$-bundles with some nice topological properties.
+We want to consider books of $I$-bundles with some basic topological
+properties, to make sure they are Kleinian manifolds.
 
 \begin{defn}
 
@@ -759,8 +772,8 @@ conditions.
 
 \begin{enumerate}
 
-\item The underlying topological manifold is a compact connected orientable
-hyperbolic 3-manifold with incompressible boundary.
+\item The underlying manifold is a compact connected orientable hyperbolic
+3-manifold.
 
 \item Each page is an I-bundle over a surface of nonpositive Euler
 characteristic. That is, no page has base surface a disk or Mobius strip, (or
@@ -777,29 +790,29 @@ explain why.
 
 Obviously we want M to be compact connected orientable hyperbolic, as this is
 the general case we're studying (Kleinian manifolds). If M were nonorientable
-we could reduce to the orientable double cover.  Furthermore, because it's
-a hyperbolic book of I-bundles, it must have incompressible boundary.
+we could reduce to the orientable double cover.
+
+Each page's base surface must have at least one boundary component to glue to
+in order for M to be connected. We don't want to consider base surfaces which
+are disks.  Observe that each page which is a copy of $S0,1$ means that that
+page and its attached spine form a 3-manifold with a finite-sheeted cover by
+a ball (we can arrange things so that in the cover, the $S0,1$ attaching map
+only traverses the longitude once, and we get a thickened disk).  This means
+that we'll have finite order summands in our group, which correspond to
+elliptic pieces, for instance lens spaces, in the JSJ decomposition. These
+cases are not hyperbolic.
+
+prop
+
+Let M be an admissible book of I-bundles. Then M must have incompressible
+boundary.
 
 % TODO
 \textbf{TODO figure out/throw in Ian's explanation of incompressible boundary.}
 
-So all the pages are trivial I-bundles over orientable surfaces. Each page's
-base surface must have at least one boundary component for M to be connected.
-Similarly Each spine must contain at least one gluing annulus. We eliminate the
-non-reduced cases as follows.
-
-We don't want to consider base surfaces which are disks. Observe that each page
-which is a copy of $S0,1$ means that that page and its attached spine form
-a 3-manifold with a finite-sheeted cover by a ball (we can arrange things so
-that in the cover, the $S0,1$ attaching map only traverses the longitude once,
-and we get a thickened disk).  This means that we'll have finite order summands
-in our group, which correspond to elliptic pieces, for instance lens spaces, in
-the JSJ decomposition. These cases are not hyperbolic.
-
 Now consider a pared structure P on a book of I-bundles. We'll say (M,P) is
-admissible if the book of I-bundles M is admissible. It follows immediately
-from general pared structure theorems that only torus boundary components of
-M can support tori in P. We introduce an additional definition.
+admissible if the book of I-bundles M is admissible. We introduce an additional
+definition.
 
 \begin{defn}
 
@@ -811,7 +824,7 @@ Let (M,P) be a pared admissible book of I-bundles. We say (M,P) is
 \item Each page is an I-bundle over a surface of \emph{negative} Euler
 characteristic. That is, no page has base surface an annulus or Klein bottle.
 
-\item Each spine contains at least $3$ gluing annuli.
+\item Each spine contains at least three gluing annuli.
 
 \item All page boundary components are glued (there are no "free boundary
 components").
@@ -819,11 +832,13 @@ components").
 \item Each page intersects P in a disjoint union of rectangles. That is, no
 component of P is contained in a single page.
 
-\item P is a union of annuli.
-
 \end{enumerate}
 
 \end{defn}
+
+Note that the first requirement forces all boundary components of M to have
+negative Euler characteristic. Because components of P are pi1-injective,
+P therefore must be a union of annuli in any reduced book of I-bundles.
 
 This definition is motivated by the following fact.
 
@@ -834,11 +849,9 @@ following holds:
 
 \begin{enumerate}
 
-%FIXME set of books of I-bundles? bc might break into multiple pieces ... ugh
-%what a mess...
-\item There exists a reduced pared book of I-bundles (M',P') and an embedding
-(M',P') hookrightarrow (M,P) such that any (QF) surface in (M,P) is contained
-in (M',P').
+\item There exists a set of reduced pared books of I-bundles (M',P') and
+disjoint embeddings (M',P') hookrightarrow (M,P) such that any (QF) surface in
+(M,P) is contained in one of the (M',P').
 
 \item (M,P) does not contain a (QF) surface.
 
@@ -864,7 +877,6 @@ Cross off pages with closed parabolics on them. Keep reducing, might break into
 multiple pieces. There's a (QF) surface if and only if our reduction terminates
 in a nonempty surface.
 
-
 As motivation, also observe that our specific example in the earlier section is
 the simplest possible topological structure for a reduced book of I-bundles.
 
@@ -878,10 +890,16 @@ thm
 
 Every reduced book of I-bundles contains a (QF) surface.
 
-Note that the non-reduced case is covered by the earlier proposition. If the
-reduction process outlined there produces one or more reduced books of
-I-bundles, we can study those. If not, and it terminates in an empty set, then
-there cannot be a QF surface.
+Note that together with the earlier theorem, we've fully covered the
+non-reduced case also.
+
+thm
+
+Let M be non-reduced book of I-bundles. If the reduction of the earlier theorem
+yields at least one reduced book of I-bundles, then M contains a QF surface.
+Otherwise, if the reduction terminates in an empty set, it does not.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Proof of main theorem - preliminaries}
@@ -912,9 +930,8 @@ oriented surface.
 
 \begin{lemma}
 
-Let $M$ be a nonelementary Kleinian manifold which is a book of $I$-bundles
-with incompressible boundary. Then M has a finite-sheeted cover which is
-homeomorphic to a good book of $I$-bundles.
+Let M be a reduced book of I-bundles. Then M has a finite-sheeted cover which
+is good.
 
 \end{lemma}
 
@@ -970,13 +987,8 @@ gluing curves exactly once.
 \section{Proof of main theorem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{thm}[Main Theorem]
-
-Let $M$ be a good book of $I$-bundles.  Suppose further that no components of
-the parabolic locus $P$ are contained in a single page's boundary. Then
-M contains a surface satisfying \eqref{E:qf}.
-
-\end{thm}
+We've now reduced to the case of a good book of I-bundles. However, the
+remaining work is still quite involved.
 
 This is the main proof, and is quite involved. We proceed somewhat similarly to
 the first example. We take covers over the pages and glue them together
@@ -985,20 +997,60 @@ each page lift to arcs on these covers that do not connect up to form a closed
 curve. As in the first example, this suffices to prove that our surface
 satisfies \eqref{E:qf}. We first need to take the correct cover over each page.
 
+This is a somewhat elaborate construction. First, we need as our building
+blocks covers where it is not so easy to join up the parabolic arcs to make
+closed curves. In particular, we use the following lemma.
+
 \begin{lemma}
 
-Let $S$ be a compact surface with boundary, and $P$ a finite set of proper arcs
-on $S$ (not necessarily disjoint).  Then there exists a finite-sheeted cover
-$S'$ of $S$ such that the preimage $\pi^{-1}(P)$ consists of arcs each of which
-connects 2 different boundary components of $S'$.
+Let $S$ be a compact surface with boundary, and $P$ a finite set of simple
+proper essential arcs on $S$ (not necessarily disjoint).  Then there exists
+a finite-sheeted cover $S'$ of $S$ such that the preimage $\pi^{-1}(P)$
+consists of arcs each of which connects 2 different boundary components of
+$S'$.
 
 \end{lemma}
 
 \begin{proof}
-% TODO
 
-\textbf{ TODO Subgroup separability again. Do one at a time, with the eyeglasses
-trick.  Look up and fill in.}
+Let alpha cin P be an arc, and suppose that both endpoints of alpha lie on the
+same boundary component gamma cin bd S. Fix a basepoint x0 in gamma.  Homotope
+alpha by moving both endpoints to x0 along gamma. (The choice of homotopy is
+arbitrary). This gives a closed curve beta through x0. Since alpha is simple
+and essential, [beta] notin <[gamma]> cin pi1S. If beta were a multiple of
+gamma, we could isotope it to a neighborhood of gamma, and then undoing the
+earlier homotopy alpha would have to be non-essential (isotoping the endpoints
+around to "unwind the spiral".
+
+pi1S is free, so it's LERF. So there exists a map phialpha to a finite group
+Galpha, such that phialpha([beta]) notin phialpha(<[gamma]>). Repeat this
+construction for each alpha cin P. Let G = prod alpha Galpha, and phi : pi1S to
+G the product map. Since G is finite, phi induces a finite-sheeted regular
+cover pi : S' to S. We claim that pi-1(P) consists of arcs connecting two
+different boundary components of S'.
+
+Obviously if alpha cin S is an arc which already connects two distinct boundary
+components downstairs, the arc covering it must also connect two boundary
+components (the possible boundary component preimages are disjoint). So we need
+only consider alpha with both endpoints on the same boundary component gamma.
+Fix x0 as above, and let tildex0 be an arbitrary lifted basepoint in S'.  Look
+at a lift of beta to a path tildebeta starting at tildex0. tildebeta must end
+at some lift of x0.
+
+Since S' is a regular cover, the covering transformation group Gamma is
+precisely image(phi). Since phi([beta]) is nontrivial, it corresponds to
+a covering transformation. This transformation must map tildex0 to the other
+endpoint of tildebeta, by basic covering space theory. But the boundary
+component of S' containing tildex0 is a finite-sheeted cover of gamma, and all
+the lifts of tildex0 contained in this boundary component are connected to
+tildex0 by a lift of a finite power of gamma. That is, tildex0 is mapped to
+these other points by transformations corresponding to powers of phi([gamma]).
+But since phi([beta]) notin phi([gamma]), the phi([beta]) transformation can't
+be any of these. So it must send tildex0 to a point in a different boundary
+component. tildebeta obviously connects the same boundary components as a lift
+of alpha to tildex0, because we just homotope along the boundaries. So the lift
+of alpha to tildex0 connects two different boundaries. S' is a regular cover,
+so this applies to any lift. This completes the proof.
 
 \end{proof}
 
