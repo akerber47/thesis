@@ -951,15 +951,36 @@ annulus, can't be homotopically trivial in an attached page). So alpha
 generates a cyclic subgroup of pi1M.
 
 pi1M is LERF. Let phiC colon pi1M to GC be a map to a finite group such that
-phiC(alpha),phiC(alpha^2),dots,phiC(alpha^{k-1}) notin phiC(<alpha^k>). Let phi
-colon pi1M to G = prod GC be the product of all these maps of the appropriate
-orders for each C. Again, we elide changes of basepoint. Let M' be the
-associated regular cover of M.
+phiC(alpha),phiC(alpha^2),dots,phiC(alpha^{k-1}) notin phiC(<alpha^k>). We can
+do this by repeatedly applying LERF to get a map for phiC(alpha), a map for
+phiC(alpha^2), etc, and taking the product of all these maps. Let phi colon
+pi1M to G = prod GC be the product of all these maps of the appropriate orders
+for each C.  Again, we elide changes of basepoint.  Let M' be the associated
+regular cover of M.
 
-We claim that M' satisfies (1).
+We claim that M' satisfies (1). The spines of M' are precisely connected
+components of preimages of spines of M. Let C' be such a spine upstairs, and
+C=pi(C') the associated spine downstairs. Let alpha be a generator for pi1C.
+Recallthat in our construction above, we chose a value k associated to each
+alpha. Let d be the degree of the restricted cover C' to C. Note that d may not
+be the degree of the cover M' to M, as pi-1(C) may not be connected. We claim
+that k|d.
 
-% TODO
-\textbf{TODO elaborate/prove this.}
+Suppose not. Then d = m1k - m2, for some m1,m2 in Z, 0 < m2 < k.  Rearranging,
+m2 = m1k - d. Choose x0 in alpha, and let x0' be a lift of x0 inside C'. Since
+C' to C is a d-fold cover of a solid torus (with cyclic pi1), alpha^d lifts to
+C' as a closed curve. That is, phi(alpha^d) is trivial. But this implies
+phi(alpha^m2) = phi(alpha^m1k)phi(alpha^-d) = phi(alpha^m1k), contradicting our
+LERF assumption that phiC(alpha^m2) notin phiC(<alpha^k>).
+
+So k|d. Write d = m1k. Then each gluing annulus will, when raised to the m1th
+power, lift to an annulus which traverses C' exactly once. By regularity of the
+cover this implies that the union of all lifts of these annuli is a union of
+annuli traversing C' exactly once. Since this argument holds for any C'
+upstairs and C downstairs, M' satisfies (1). Note that any further
+finite-sheeted cover of M' will also satisfy (1), by looking locally at the
+lifting of gluing annuli above each spine.
+
 
 
 \end{proof}
