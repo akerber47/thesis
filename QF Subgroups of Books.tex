@@ -919,7 +919,8 @@ satisfies the following additional conditions.
 
 \begin{enumerate}
 
-\item Each gluing annulus on a spine is parallel to a simple longitude.
+\item Each gluing annulus on a spine traverses longitudinally exactly once. (It
+may traverse one or more meridians, but this irrelevant for our proof)
 
 \item Each page is glued to a given spine at most once.
 
@@ -974,14 +975,30 @@ phi(alpha^m2) = phi(alpha^m1k)phi(alpha^-d) = phi(alpha^m1k), contradicting our
 LERF assumption that phiC(alpha^m2) notin phiC(<alpha^k>).
 
 So k|d. Write d = m1k. Then each gluing annulus will, when raised to the m1th
-power, lift to an annulus which traverses C' exactly once. By regularity of the
-cover this implies that the union of all lifts of these annuli is a union of
-annuli traversing C' exactly once. Since this argument holds for any C'
-upstairs and C downstairs, M' satisfies (1). Note that any further
-finite-sheeted cover of M' will also satisfy (1), by looking locally at the
-lifting of gluing annuli above each spine.
+power, lift to an embedded annulus which traverses the longitude C' exactly
+once.  By regularity of the cover this implies that the union of all lifts of
+these annuli is a union of embedded annuli traversing the longitude of C'
+exactly once. Since this argument holds for any C' upstairs and C downstairs,
+M' satisfies (1).
 
+Note that any further finite-sheeted cover of M' will also satisfy (1), by
+looking locally at the lifting of gluing annuli above each spine.
 
+So now assume M is reduced and satisfies (1). We claim M has a finite-sheeted
+cover which satisfies (2).
+
+Let B be a page intersecting a spine C more than once. For each pair of gluing
+annuli A1,A2 which attach B to C, we'll draw a closed curve as follows. Fix
+a meridian disk D of C. Choose an arbitrary point x1 in A1 cap D, x2 in A2 cap
+D. Choose an arbitrary arc beta cin B connecting x1 and x2. Let gamma be the
+closed curve obtained by closing up beta with an arc along the interior of D.
+Fix x1 to be our basepoint, and let alpha be a longitude of C through x1. Using
+LERF, choose a map phi_C,B,A1,A2 such that phi_C,B,A1,A2(gamma) notin
+phi_C,B,A1,A2(<alpha>). Repeat this construction for each A1,A2 and each B,C
+with multiple gluings. Let phi be the product of all these, and M' the
+associated regular cover, just like above.
+
+We claim that M' satisfies (2).
 
 \end{proof}
 
