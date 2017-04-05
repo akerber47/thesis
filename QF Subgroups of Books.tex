@@ -843,95 +843,100 @@ component of P is contained in a single page.
 
 \end{defn}
 
-This definition is motivated by the following important fact.
+This definition is motivated by the following important idea. If (M,P) is not
+reduced, we can attempt to reduce it inductively. At each step, we remove pages
+or spines from our pared books of I-bundles to produce new pared books of
+I-bundles.  Because we're deleting pieces, we may end up with multiple
+connected components. Each component is either a pared book of I-bundles or an
+isolated page with no remaining boundary components - that is, a thickened
+closed surface.
+
+\begin{defn}
+
+We \emph{reduce} a book of I-bundles as follows. We can repeat this inductively
+on connected components of the result of a reduction.
+
+% FIXME change enumeration to letters so can refer below
+\begin{itemize}
+
+\item If (M,P) has a spine C which violates (1):
+
+\begin{itemize}
+
+\item If C has 0 gluing annuli, delete C.
+
+\item If C has 1 gluing annulus, delete C and the attached page.
+
+\item If C has 2 gluing annuli, delete C and glue the two pages along the
+annuli (or glue two annuli already on the same page) to produce a single page.
+
+\end{itemize}
+
+\item If (M,P) has a page B which violates (2), delete B.
+
+\item If (M,P) has a page B which violates (3), delete B.
+
+\item In all cases, modify P by removing all components which have nonempty
+intersection with the deleted pages or spines.
+
+\end{itemize}
+
+\end{defn}
+
+Notice that in all cases we have a pared embedding of our new manifold into the
+original.
 
 \begin{thm}(Reduction Theorem)
 
-Let (M,P) be a pared admissible book of I-bundles. Then exactly one of the
-following holds:
+Let (M,P) be a pared admissible book of I-bundles. Repeatedly reducing
+terminates after finitely many reductions in some (Mr,Pr), with an associated
+pared embedding iota colon (Mr,Pr) to (M,P). Each resulting connected component
+is either a reduced book of I-bundles or a thickened closed surface with empty
+pared locus.
 
-\begin{enumerate}
-
-\item[(A)] There exists a disjoint union of reduced pared books of I-bundles
-(M',P') and an embedding (M',P') hookrightarrow (M,P) such that any (QF)
-surface in (M,P) is contained in the image of this embedding.
-
-\item[(B)] (M,P) does not contain a (QF) surface.
-
-%TODO
-\textbf{TODO there are other base cases of the reduction too - what if we get
-a spine w no pages, or a closed surface page without spines. NOT ALL closed
-surface page without spine cases are in (B)! Need to clarify.}
-
-\end{enumerate}
+Furthermore, any (QF) surface in (M,P) is contained in iota(Mr,Pr). In
+particular, if (Mr,Pr)=emptyset, (M,P) does not contain a (QF) surface.
 
 \end{thm}
 
 \begin{proof}
 
-We reduce (M,P) inductively. At each step, we reduce a disjoint union of pared
-books of I-bundles sMi to produce a new disjoint union of pared books of
-I-bundles sMi+1 together with an embedding iotai+1 colon sMi+1 to sMi. We
-require that every (QF) surface in a component of sMi is contained in
-a component of image(iotai+1), and, furthermore, that it induces a (QF) surface
-in sMi. Begin with sM0 = (M,P), just a single component.
+Write sM0 = (M,P) and sMi for the (possibly disconnected) manifold we obtain
+after reducing i times.
 
 Let size(sMi) = Sigma{(Mij,Pij) component of sMi} (num{pages of Mij})
-+ (num{spines of Mij}). Our inductive steps are as follows.  For each, we claim
-that the size decreases. Since a (nonempty) book of I-bundles must have size at
-least one, this process must either terminate at a nonempty book of I-bundles
-or reduce to the empty set.
++ (num{spines of Mij}). We claim that any reduction must decrease the size. If
+we consider a thickened closed surface to be made out of one page and no
+spines, it's immediately clear that size(sMi)>0 if sMi neq emptyset. So this
+will imply that reducing repeatedly must terminate after finitely many
+reductions. Furthermore, to show that (QF) surfaces are included, we must show
+that any reduction deletes a set disjoint from all (QF) surfaces.
 
-Suppose some component (M,P) of sMi violates (1). Let B be a page of M with
-base surface an annulus. Since M is orientable, B must be a trivial I-bundle,
-that is, A2 times I. Glue the two spine boundaries together along that page's
-gluing curves to make a single spine. The other attached pages of each spine
-will be carried along by the gluing to form a single set of attached pages
-which is the union of the two original sets (without the page we just
-eliminated). Pull the pared structure along, as any essential arcs of the pared
-structure which traverse the page we retracted must retract as well for our
-gluing.  This results in a single book of I-bundles (M',P') which is
-homeomorphic as a pared manifold to (M,P)
-
-% TODO
-\textbf{TODO what if the two ends of the annulus are the same spine? This can
-happen eventually if we crossed off enough pages and spines to "make a loop".
-What do we do in this case? It's not so obvious because our original book of
-I-bundles might have been hyperbolic but we crossed off so much that now it
-isn't...}
-
-Suppose some component (M,P) of sMi violates (2). For any spine with exactly
-two pages attached, we can simplify the book of $I$-bundles structure by
-attaching the two pages along their boundary annuli to make a single larger
-page. This is homeomorphic to the original manifold.
+We consider each possible reduction.
 
 %TODO
-\textbf{TODO same issue - what if the two attached pages are the same page?}
-
-Spines which have exactly one page attached. Cross them off.
-
-Suppose some component (M,P) of sMi violates (3).
-
-Cross off pages with floating boundary components.
-
-Suppose some component (M,P) of sMi violates (4).
-
-Cross off pages with closed parabolics on them. Keep reducing, might break into
-multiple pieces. There's a (QF) surface if and only if our reduction terminates
-in a nonempty surface.
-
-If at any step of the reduction, all these books of I-bundles are empty, then
-(B) holds.  Otherwise, we'll show that guaranteed to reach a reduced pared book
-of I-bundles in finitely many steps, so (A) will hold.
-
-%TODO
-\textbf{TODO be careful - there are more base cases to this induction too. eg
-surface x I, etc.}
+\textbf{TODO finish this}
 
 \end{proof}
 
 As motivation, also observe that our specific example in the earlier section is
-the simplest possible topological structure for a reduced book of I-bundles.
+one of the simplest possible topological structures for a reduced book of
+I-bundles.
+
+Note that the surface case is very easy.
+
+\begin{prop}
+
+Let (M,P) = (Sigma times I, emptyset) be a thickened closed surface with empty
+pared locus. Then every cover of Sigma induces a (QF) surface in.(M,P).
+
+\end{prop}
+
+\begin{proof}
+
+P = emptyset, so this follows directly from the covering lemma.
+
+\end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Statement of main theorem}
