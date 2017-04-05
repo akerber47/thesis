@@ -1039,7 +1039,19 @@ component of M (since they're in the same boundary component even if we just
 look at that page). This explains why ensuring distinct boundary components for
 each fiber guarantees trivial I-bundles.
 
-Now we proceed by a similar argument as above.
+Now we proceed by a similar argument as above. Let B be a page such that fibers
+have both endpoints on the same boundary component bd_a M cin bd M. Choose an
+arbitrary fiber [0,1] isom I cin B. Let beta cin bd_a M be an arc in the
+boundary connecting the endpoints of I. This forms a curve gamma. Fix one
+endpoint of I to be our basepoint. Using LERF, choose a map phi_{bd_aM,B} colon
+pi1M to G, where G is a finite group, such that phi_{bd_aM,B}(gamma) notin
+phi_{bd_aM,B}(pi1bd_aM). Note that M has incompressible boundary, so pi1bd_aM
+embeds as a subgroup of pi1M. Also note that pi1bd_aM is finitely generated, as
+it's a compact surface. As above, repeat this construction for each page where
+fibers have both endpoints on the same boundary component. Take the product phi
+colon pi1M to G, and let M' be the associated regular cover.
+
+We claim that M' satisfies (3).
 
 \end{proof}
 
