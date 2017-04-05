@@ -920,11 +920,15 @@ satisfies the following additional conditions.
 \begin{enumerate}
 
 \item Each gluing annulus on a spine traverses longitudinally exactly once. (It
-may traverse one or more meridians, but this irrelevant for our proof)
+may traverse one or more meridians, but this irrelevant for our proof. Note
+that this corresponds to a different, but topologically arbitrary (upto
+diffeomorphism) choice of longitude for our spine.)
 
 \item Each page is glued to a given spine at most once.
 
-\item Each page is a trivial I-bundle over an oriented surface.
+\item The two endpoints of each fiber in each page are in different boundary
+components of M.  In particular, each page is a trivial I-bundle over an
+oriented surface.
 
 \end{enumerate}
 
@@ -992,13 +996,50 @@ annuli A1,A2 which attach B to C, we'll draw a closed curve as follows. Fix
 a meridian disk D of C. Choose an arbitrary point x1 in A1 cap D, x2 in A2 cap
 D. Choose an arbitrary arc beta cin B connecting x1 and x2. Let gamma be the
 closed curve obtained by closing up beta with an arc along the interior of D.
-Fix x1 to be our basepoint, and let alpha be a longitude of C through x1. Using
-LERF, choose a map phi_C,B,A1,A2 such that phi_C,B,A1,A2(gamma) notin
-phi_C,B,A1,A2(<alpha>). Repeat this construction for each A1,A2 and each B,C
-with multiple gluings. Let phi be the product of all these, and M' the
-associated regular cover, just like above.
+Orient gamma so that it first traverses this arc through the interior of D, and
+then traverses beta.  Fix x1 to be our basepoint. Using LERF, choose a map
+phi_C,B,A1,A2 such that phi_C,B,A1,A2(gamma) notin phi_C,B,A1,A2(pi1B). Repeat
+this construction for each A1,A2 and each B,C with multiple gluings. Let phi be
+the product of all these, and M' the associated regular cover, just like above.
+Same basepoint trickery as earlier.
 
-We claim that M' satisfies (2).
+We claim that M' satisfies (2). Suppose not. Let B' be a page upstairs glued to
+a spine C' more than once. Then B=pi(B') is also a page, C=pi(C') is a spine.
+Since pi is a cover. either the multiple gluings of B' to C' project down to
+the same gluing of B to C, or there are multiple gluings of B to C. The first
+case is impossible, as all the gluings to a spine in a book of I-bundles must
+be parallel, but pi|C' colon C' to C is a covering map of solid tori and
+downstairs each gluing only wraps once around the longitude by (1). So there
+must be multiple gluings of B to C. Let A1, A2 be annuli, and A1',A2' the
+corresponding gluing annuli upstairs. Fixing our basepoint x1 in A1 as above,
+x1 has a lift x1' in A1'. Lift gamma to an arc gamma' cin A1' starting at x1'.
+Now gamma' first traverses a lifted meridian disk across the spine, meaning it
+crosses over to A2'. The remainder of gamma' is a lift of beta beginning at
+a point in A2', but beta is contained in the page B, so gamma' must remain
+inside the page B' upstairs. So gamma' is an arc with both endpoints in B'.
+
+But B' is a path connected component of pi-1(B). So covering translations of M'
+over M which take x1' to other lifts of x1 in B' are precisely the group
+elements phi(pi1B), that is, lifts of loops inside B. But gamma lifts to an arc
+with both endpoints in B', so phi(gamma) is also such a covering translation.
+Hence phi(gamma) in phi(pi1B), a contradiction.
+
+So we have a cover which satisfies (1) and (2). Since property (2) is also
+preserved under taking finite-sheeted covers, as discussed above with A1',A2'
+lying above A1,A2, it now suffices to show M satisfying (1) and (2) has
+a finite-sheeted cover satisfying (3).
+
+M is orientable by definition, so each page must be orientable as well. So the
+pages which are not trivial I-bundles over oriented pages must be twisted
+I-bundles over nonoriented pages (in order for the resulting page to be
+orientable). In particular, the endpoints of the I fibers of a twisted I-bundle
+will connect globally to form a single side of the page. So if we look locally
+at an I fiber, the two endpoints are guaranteed to be in the same boundary
+component of M (since they're in the same boundary component even if we just
+look at that page). This explains why ensuring distinct boundary components for
+each fiber guarantees trivial I-bundles.
+
+Now we proceed by a similar argument as above.
 
 \end{proof}
 
