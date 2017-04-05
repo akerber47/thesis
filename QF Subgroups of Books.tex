@@ -779,8 +779,8 @@ See definitions in Morgan or Thurston or Culler-Shalen and fix accordingly.}
 \item The underlying manifold is a compact connected orientable hyperbolic
 3-manifold.
 
-\item Each page is an I-bundle over a surface that is not a disk, or Mobius
-strip, or Klein bottle.
+\item Each page is an I-bundle over a surface with boundary of negative Euler
+characteristic.  That is, no base surface is a disk, Mobius strip, or annulus.
 
 \end{enumerate}
 
@@ -803,16 +803,25 @@ that we'll have finite order summands in our group, which correspond to
 elliptic pieces, for instance lens spaces, in the JSJ decomposition. These
 cases are not hyperbolic.
 
-prop
+%TODO
+\textbf{TODO explain Mobius strips / annuli with "big bad loops" idea which
+breaks our book of I-bundles reduction theorem.}
+
+\begin{prop}
 
 Let M be an admissible book of I-bundles. Then M must have incompressible
 boundary.
+
+\end{prop}
 
 % TODO
 \textbf{TODO figure out/throw in Ian's explanation of incompressible boundary.}
 
 Now consider a pared structure P on a book of I-bundles. We'll say (M,P) is
-admissible if the book of I-bundles M is admissible. We introduce an additional
+admissible if the book of I-bundles M is admissible. Note that the first
+requirement forces all boundary components of M to have negative Euler
+characteristic. Because components of P are pi1-injective, P therefore must be
+a union of annuli in any reduced book of I-bundles. We introduce an additional
 definition.
 
 \begin{defn}
@@ -821,12 +830,6 @@ Let (M,P) be a pared admissible book of I-bundles. We say (M,P) is
 \emph{reduced} if it satisfies the following.
 
 \begin{enumerate}
-
-\item Each page is an I-bundle over a surface of \emph{negative} Euler
-characteristic. That is, no page has base surface an annulus.
-
-% FIXME we can't include Klein bottles here bc we'd have to take covers to get
-% rid of them ... how annoying ...
 
 \item Each spine contains at least three gluing annuli.
 
@@ -839,10 +842,6 @@ component of P is contained in a single page.
 \end{enumerate}
 
 \end{defn}
-
-Note that the first requirement forces all boundary components of M to have
-negative Euler characteristic. Because components of P are pi1-injective,
-P therefore must be a union of annuli in any reduced book of I-bundles.
 
 This definition is motivated by the following important fact.
 
@@ -858,6 +857,11 @@ following holds:
 surface in (M,P) is contained in the image of this embedding.
 
 \item[(B)] (M,P) does not contain a (QF) surface.
+
+%TODO
+\textbf{TODO there are other base cases of the reduction too - what if we get
+a spine w no pages, or a closed surface page without spines. NOT ALL closed
+surface page without spine cases are in (B)! Need to clarify.}
 
 \end{enumerate}
 
