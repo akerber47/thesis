@@ -350,7 +350,7 @@ a surface $S \cin M$ such that
 \begin{equation}\label{E:qf}
 S \text{ is closed immersed $\pi_1$-injective, and  $\pi_1P_k \cap \pi_1S
 = 1$
-for each component $P_k$ of $P$} \tag{\textasteriskcentered}
+for each component $P_k$ of $P$} \tag{QF}
 \end{equation}
 %%% Equation (*) (star)
 
@@ -779,8 +779,8 @@ See definitions in Morgan or Thurston or Culler-Shalen and fix accordingly.}
 \item The underlying manifold is a compact connected orientable hyperbolic
 3-manifold.
 
-\item Each page is an I-bundle over a surface of nonpositive Euler
-characteristic. That is, no page has base surface a disk or Mobius strip.
+\item Each page is an I-bundle over a surface that is not a disk, or Mobius
+strip, or Klein bottle.
 
 \end{enumerate}
 
@@ -823,7 +823,10 @@ Let (M,P) be a pared admissible book of I-bundles. We say (M,P) is
 \begin{enumerate}
 
 \item Each page is an I-bundle over a surface of \emph{negative} Euler
-characteristic. That is, no page has base surface an annulus or Klein bottle.
+characteristic. That is, no page has base surface an annulus.
+
+% FIXME we can't include Klein bottles here bc we'd have to take covers to get
+% rid of them ... how annoying ...
 
 \item Each spine contains at least three gluing annuli.
 
@@ -841,20 +844,20 @@ Note that the first requirement forces all boundary components of M to have
 negative Euler characteristic. Because components of P are pi1-injective,
 P therefore must be a union of annuli in any reduced book of I-bundles.
 
-This definition is motivated by the following fact.
+This definition is motivated by the following important fact.
 
-\begin{thm}
+\begin{thm}(Reduction Theorem)
 
 Let (M,P) be a pared admissible book of I-bundles. Then exactly one of the
 following holds:
 
 \begin{enumerate}
 
-\item There exists a set of reduced pared books of I-bundles (M',P') and
-disjoint embeddings (M',P') hookrightarrow (M,P) such that any (QF) surface in
-(M,P) is contained in one of the (M',P').
+\item[(A)] There exists a disjoint union of reduced pared books of I-bundles
+(M',P') and an embedding (M',P') hookrightarrow (M,P) such that any (QF)
+surface in (M,P) is contained in the image of this embedding.
 
-\item (M,P) does not contain a (QF) surface.
+\item[(B)] (M,P) does not contain a (QF) surface.
 
 \end{enumerate}
 
@@ -862,24 +865,64 @@ disjoint embeddings (M',P') hookrightarrow (M,P) such that any (QF) surface in
 
 \begin{proof}
 
-For any page with base surface an annulus, we can glue the two spine boundaries
-together along that page's gluing curves to make a single spine. The other
-attached pages of each spine will be carried along by the gluing to form
-a single set of attached pages which is the union of the two original sets
-(without the page we just eliminated).
+We reduce (M,P) inductively. At each step, we reduce a disjoint union of pared
+books of I-bundles sMi to produce a new disjoint union of pared books of
+I-bundles sMi+1 together with an embedding iotai+1 colon sMi+1 to sMi. We
+require that every (QF) surface in a component of sMi is contained in
+a component of image(iotai+1), and, furthermore, that it induces a (QF) surface
+in sMi. Begin with sM0 = (M,P), just a single component.
 
-For any spine with exactly two pages attached, we can simplify the book of
-$I$-bundles structure by attaching the two pages along their boundary annuli to
-make a single larger page. This is homeomorphic to the original manifold.
+Let size(sMi) = Sigma{(Mij,Pij) component of sMi} (num{pages of Mij})
++ (num{spines of Mij}). Our inductive steps are as follows.  For each, we claim
+that the size decreases. Since a (nonempty) book of I-bundles must have size at
+least one, this process must either terminate at a nonempty book of I-bundles
+or reduce to the empty set.
+
+Suppose some component (M,P) of sMi violates (1). Let B be a page of M with
+base surface an annulus. Since M is orientable, B must be a trivial I-bundle,
+that is, A2 times I. Glue the two spine boundaries together along that page's
+gluing curves to make a single spine. The other attached pages of each spine
+will be carried along by the gluing to form a single set of attached pages
+which is the union of the two original sets (without the page we just
+eliminated). Pull the pared structure along, as any essential arcs of the pared
+structure which traverse the page we retracted must retract as well for our
+gluing.  This results in a single book of I-bundles (M',P') which is
+homeomorphic as a pared manifold to (M,P)
+
+% TODO
+\textbf{TODO what if the two ends of the annulus are the same spine? This can
+happen eventually if we crossed off enough pages and spines to "make a loop".
+What do we do in this case? It's not so obvious because our original book of
+I-bundles might have been hyperbolic but we crossed off so much that now it
+isn't...}
+
+Suppose some component (M,P) of sMi violates (2). For any spine with exactly
+two pages attached, we can simplify the book of $I$-bundles structure by
+attaching the two pages along their boundary annuli to make a single larger
+page. This is homeomorphic to the original manifold.
+
+%TODO
+\textbf{TODO same issue - what if the two attached pages are the same page?}
 
 Spines which have exactly one page attached. Cross them off.
+
+Suppose some component (M,P) of sMi violates (3).
+
+Cross off pages with floating boundary components.
+
+Suppose some component (M,P) of sMi violates (4).
 
 Cross off pages with closed parabolics on them. Keep reducing, might break into
 multiple pieces. There's a (QF) surface if and only if our reduction terminates
 in a nonempty surface.
 
+If at any step of the reduction, all these books of I-bundles are empty, then
+(B) holds.  Otherwise, we'll show that guaranteed to reach a reduced pared book
+of I-bundles in finitely many steps, so (A) will hold.
+
 %TODO
-\textbf{TODO finish this proof!!}
+\textbf{TODO be careful - there are more base cases to this induction too. eg
+surface x I, etc.}
 
 \end{proof}
 
