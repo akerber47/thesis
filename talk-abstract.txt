@@ -1,0 +1,8 @@
+Quasi-Fuchsian Surface Subgroups
+
+Given a geometrically finite Kleinian group, we can ask whether it contains any
+quasi-Fuchsian surface subgroups. The answer is yes for closed hyperbolic
+3-manifolds (Kahn-Markovic) and more generally for finite volume hyperbolic
+3-manifolds (Masters-Zhang, Baker-Cooper). We'll discuss some background on
+this problem and outline a strategy for the case of infinite volume. We'll then
+present new results for an infinite-volume special case, books of I-bundles.
