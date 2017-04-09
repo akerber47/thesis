@@ -105,7 +105,7 @@ except for a few obvious negative cases where the pared locus is too large. We
 prove this in a few special cases, so far.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Background}
+\section{Background on pared 3-manifolds and uniformization}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Material in this section is from \cite{Mo} and \cite{CMc}. Look there for
@@ -223,20 +223,135 @@ geometrically finite is equivalent to the standard one.
 \textbf{ TODO Include an example.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Our reduction}
+\section{Background on quasifuchsian groups}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % TODO
 \textbf{ TODO This entire section needs a lot of work. Rewrite and expand.}
 
-{\tiny
+We study the problem of finding quasifuchsian surface subgroups of finitely
+generated Kleinian groups from the topological perspective. We convert our
+given Kleinian group to a pared 3-manifold, and look for surface subgroups of
+this Kleinian group that avoid the peripheral pared structure. We can reduce
+the problem of finding a quasifuchsian surface subgroup of a Kleinian group as
+follows.
 
-In our result, we study the problem of finding quasifuchsian surface subgroups
-of finitely generated Kleinian groups from the topological perspective. We
-convert our given Kleinian group to a pared 3-manifold, and look for surface
-subgroups of this Kleinian group that avoid the peripheral pared structure. We
-can reduce the problem of finding a quasifuchsian surface subgroup of
-a Kleinian group as follows.
+We first recall the following basic definitions.
+
+defn
+
+A \emph{surface group} is a group isomorphic to the fundamental group of
+a closed surface of negative Euler characteristic.
+
+enddefn
+
+defn
+
+A {quasifuchsian group} is a Kleinian group Gamma < PSL2C for which there
+exists a quasiconformal homeomorphism f colon S2infty to S2infty which
+conjugates Gamma to a Fuchsian group, that is, a subgroup of PSL2R.
+
+enddefn
+
+% TODO
+\textbf{TODO perhaps I should elaborate on quasiconformal background a little.}
+
+First, suppose we have a geometrically finite Kleinian group. We use the
+following theorem of Thurston.
+
+thm
+
+Let N be a geometrically finite hyperbolic manifold with convex core C(N).
+Suppose that bd C(N) is nonempty. Then every covering space N' of N with
+finitely generated nonelementary fundamental group is also geometrically
+finite.
+
+endthm
+
+proof
+
+See \cite{Mo}, Proposition 7.1.
+
+endproof
+
+In our case, we have a geometrically finite hyperbolic manifold of infinite
+volume, so letting E be an (infinite volume) relative end, C(N) cap E must
+yield a nonempty piece of bd C(N). This suffices to use the theorem.
+
+% TODO
+\textbf{TODO this explanation is a bit vague. Might want to say more details
+about convex core etc.}
+
+We now apply the following result in \cite{Mo}, Corollary 9.2.
+
+thm
+
+Let S be a complete hyperbolic surface of finite area, and rho colon pi1S to
+PSL2C a discrete faithful representation. Then rho(pi1S) is quasifuchsian if
+and only if rho(pi1S) is geometrically finite, and the conjugacy classes in
+pi1S represented by cusps in S are exactly the conjugacy classes that are
+parabolic under rho.
+
+endthm
+% also look at (Ohshika Lemma 4.66 - cited in AFW p.81).  FIXME look up exact
+% statement in Ohshika. I have a feeling AFW are introducing some bs here...
+
+proof
+
+See \cite{Mo}.
+
+% WHY is this true? See Morgan Proposition 7.2, Corollary 7.3, and Proposition
+% 9.1 for some detailed arguments.
+
+endproof
+
+Now we argue as in \cite{Mo}, Corollary 7.3. Let (M,P) be a pared 3-manifold
+structure associated to the hyperbolic 3-manifold N. The only elements of pi1M
+which are parabolic are the conjugates of elements in pi1P.
+
+Let Gamma' < pi1N be a surface subgroup which is quasifuchsian. Let N' be the
+cover of N associated to Gamma'. N' and hence its convex core C(N') have the
+fundamental group of a closed surface. In fact, because Gamma' is
+quasifuchsian, we know that the convex core C(N') is homeomorphic to S times I,
+where S is a closed surface such that pi1S = Gamma'.\cite{Mo}, same Corollary.
+Map S to S times 1/2 cin times I. This map is an isomorphism on pi1. Composing
+this with the covering map N' to N, we obtain a pi1-injective map phi colon
+S to N.  This corresponds to a pi1-injective map to (M,P) by retracting.
+Applying the theorem above, no element of Gamma'=phi(pi1S) is parabolic.
+Because (M,P) is a pared structure for N, this implies that no loop in S is
+freely homotopic to a loop in P.
+
+Conversely, suppose we are given a closed pi1-injective surface
+S looprightarrow M.  Suppose further that no loop in S is freely homotopic to
+a loop in P. This implies that the induced subgroup pi1S < pi1M is disjoint
+from all conjugates of pi1P. Because (M,P) is a pared structure for the
+hyperbolic 3-manifold N, this implies that no elements of pi1S are parabolic
+under the representation rho colon pi1S to PSL2C induced by pi1S < pi1M=pi1N.
+Furthermore rho(pi1S) is geometrically finite (by the first theorem), and S is
+a surface without cusps.  Applying the theorem, pi1S induces a quasifuchsian
+surface subgroup of pi1N.
+
+We summarize our discussion as follows.
+
+prop
+
+Let N be a geometrically finite hyperbolic 3-manifold of infinite volume, and
+(M,P) a pared 3-manifold structure for N. Then quasifuchsian surface subgroups
+of N precisely correspond to pi1-injective maps of a closed surface S to M such
+that no loops in P are freely homotopic into the image of S.
+
+endprop
+
+We will refer to surfaces in (M,P) which satisfy the proposition as
+\emph{quasifuchsian surfaces} or \emph{(QF) surfaces}.
+
+We now briefly discuss the geometrically infinite case. Because the arguments
+that follow in later sections are purely topological arguments applied to the
+pared structure, we can always use Thurston's uniformization theorem to produce
+a geometrically finite Kleinian group to which our arguments apply. However, we
+would like to be able to address the geometrically infinite case also.
+
+{\tiny
 
 We first restrict ourselves to considering only Kleinian groups which are
 geometrically finite. In the geometrically infinite case, look at the simply
@@ -314,6 +429,11 @@ $\pi_1$-injective). For each annulus, since we're only concerned with its
 homotopy class, it suffices to consider the core curve.
 
 }
+
+\textbf{ TODO put some explanatory examples in here too! The Menasco-Reid
+article in Topology '90 should have some examples of surface groups that are
+not QF. Is it possible to do an example of uniformization? Maybe follow along
+Morgan's stuff? That sounds very long. }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Our first example}
