@@ -223,11 +223,8 @@ geometrically finite is equivalent to the standard one.
 \textbf{ TODO Include an example.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Background on quasifuchsian groups}
+\section{Background on quasifuchsian surface groups}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% TODO
-\textbf{ TODO This entire section needs a lot of work. Rewrite and expand.}
 
 We study the problem of finding quasifuchsian surface subgroups of finitely
 generated Kleinian groups from the topological perspective. We convert our
@@ -331,7 +328,7 @@ Furthermore rho(pi1S) is geometrically finite (by the first theorem), and S is
 a surface without cusps.  Applying the theorem, pi1S induces a quasifuchsian
 surface subgroup of pi1N.
 
-We summarize our discussion as follows.
+We summarize our discussion of the geometrically finite case as follows.
 
 prop
 
@@ -339,6 +336,9 @@ Let N be a geometrically finite hyperbolic 3-manifold of infinite volume, and
 (M,P) a pared 3-manifold structure for N. Then quasifuchsian surface subgroups
 of N precisely correspond to pi1-injective maps of a closed surface S to M such
 that no loops in P are freely homotopic into the image of S.
+
+% FIXME need to mumble something about "up to homotopy" to make this a real
+% correspondence...
 
 endprop
 
@@ -351,84 +351,57 @@ pared structure, we can always use Thurston's uniformization theorem to produce
 a geometrically finite Kleinian group to which our arguments apply. However, we
 would like to be able to address the geometrically infinite case also.
 
-{\tiny
+First note that any finitely generated Kleinian group, whether geometrically
+finite or geometrically infinite, is \emph{tame}, that is, homeomorphic to the
+interior of a compact 3-manifold. This is a deep result due to Agol and
+Calegari-Gabai.
 
-We first restrict ourselves to considering only Kleinian groups which are
-geometrically finite. In the geometrically infinite case, look at the simply
-degenerate (geometrically infinite) ends of the group. By the Canary covering
-theorem, tameness, and some other results, it's known that any finitely
-generated subgroup of a Kleinian group must be either geometrically finite or
-a virtual surface fiber - that is, it corresponds to a fiber surface in
-a finite-sheeted cover which is fibered over the circle. See (AFW p117) for
-this fact and various spots in the book for arguments.
+We begin with the following theorem of Canary.
 
-% No virtual surface fiber subgroup can possibly be quasifuchsian,
+thm
 
-Only geometrically finite subgroups can be quasifuchsian. This is basically by
-definition (check this). The problematic case is when it's possible to have
-a geometrically finite quasifuchsian surface subgroup of a geometrically
-infinite Kleinian group. Looking at the simply degenerate ends, and comparing
-to the ends of the quasifuchsian surface subgroup itself (viewed as a Kleinian
-group), the relative ends must finite-to-one cover relative ends of the
-original Kleinian group, by the Canary covering theorem. But now there's some
-problem with different types of (relative) ends covering different types of
-ends. I still don't understand this.
+Let N = H3/Gamma be an infinite volume tame hyperbolic 3-manifold, and let
+Gamma' < Gamma be a finitely generated subgroup. Then either
 
-Also, note that quasifuchsian here is intended in the sense of Kahn-Markovic as
-discussed in AFW p81. As discussed there (will get references), quasifuchsian
-surface subgroups must be geometrically finite - which rules out the virtual
-fiber case by the above dichotomy - and directly correspond to geometrically
-finite subgroups that avoid the cusps.
+(a) N' = H3 / Gamma' is geometrically finite, or
 
-One final consideration is to ensure that geometrically finite surface
-subgroups cannot exhibit certain pathological behavior inside geometrically
-infinite Kleinian groups. In the geometrically finite case this is easy,
-because it'll necessarily also be geometrically finite, but in the
-geometrically infinite case we need to either guarantee that the surface we
-find by the below, purely topological construction is geometrically finite, or
-show that actually no such surface exists and our construction is irrelevant.
-Check with Ian (and references) about which of these we're actually doing!
+(b) Gamma' contains a (conjugate of a) finite index subgroup of a geometrically
+infinite peripheral subgroup of Gamma
 
-Of course, so long as we are only studying books of $I$-bundles topologically,
-this is irrelevant, as we can restrict ourselves to considering the
-geometrically finite realizations of these hyperbolic 3-manifolds. However, it
-is nice to be able to state the result more generally. Also if we want to
-generalize to a more complete consideration of (finitely generated) Kleinian
-groups at some point, not just books of $I$-bundles, it will be nice to say that
-our work applies to more than just geometrically finite cases.
+where a \emph{geometrically infinite peripheral subgroup} is a subgroup
+corresponding to the subsurface of a relative compact core boundary which cuts
+off a geometrically infinite relative end of N. Equivalently, since all
+geometrically infinite ends of tame manifolds are simply degenerate,
+a geometrically infinite peripheral subgroup is the subgroup associated to the
+boundary in the interior of N of a geometrically infinite end.
 
-Anyway, I believe the geometrically infinite case is much simpler once
-I understand what existing work it's based on. I'll need to talk to Ian about
-this. In what follows, just assume our Kleinian group is geometrically finite.
+endthm
 
-% OLD REFERENCE - DOESN'T WORK BY ITSELF!
-%%(Baker-Cooper Theorem 1.7 - "work of Bonahon and Thurston").
-%\begin{thm}
-%
-%Let $M$ be a complete hyperbolic 3-manifold with finite volume, and $S$
-%a closed oriented $\pi_1$-injective immersed surface of negative Euler
-%characteristic. Then either $S$ is a virtual fiber, or $S$ is geometrically
-%finite. In the second case, it's either quasifuchsian or some element of
-%$\pi_1S$ is parabolic.
-%
-%\end{thm}
-%
+The above proposition in the geometrically finite case still works in the
+forward direction. The reverse direction will carry through if we can show that
+N' (ie Gamma') is geometrically finite. That is, we want to avoid condition (b)
+in Canary's theorem above. This requires an additional condition, which we
+incorporate in the following proposition. (b) holds precisely when our surface
+is freely homotopic to a finite-sheeted cover of the corresponding
+geometrically infinite end boundary surface. Since such an end is simply
+degenerate, that is, homeomorphic to a thickened surface, we can also apply the
+covering lemma (from a FUTURE SECTION WOOO) to obtain the following
+proposition.
 
-We assume this reduction still works in our cases (which are not finite
-volume). I hope some reference can fix this!
+prop
 
-So in our case, since the parabolic elements precisely correspond to the pared
-structure, our problem becomes a purely topological one: can we find a closed
-immersed $\pi_1$-injective surface of negative Euler characteristic, that
-doesn't contain any of the pared locus, up to homotopy?
+Let N be a hyperbolic 3-manifold of infinite volume, possibly geometrically
+infinite, and (M,P) a pared 3-manifold structure for N. Then quasifuchsian
+surface subgroups of N precisely correspond to pi1-injective maps of a closed
+surface S to M such that
 
-Since we're working in the case of books of $I$-bundles, we can reduce the
-pared locus by observing that there are no torus boundary components of M, so
-all the components of the pared locus must be annuli (as they're
-$\pi_1$-injective). For each annulus, since we're only concerned with its
-homotopy class, it suffices to consider the core curve.
+(1) no loops in P are freely homotopic into the image of S, and
 
-}
+(2) S is not freely homotopic into a geometrically infinite end of M, or,
+equivalently, not freely homotopic to a finite-sheeted cover of a geometrically
+infinite end boundary surface.
+
+endprop
 
 \textbf{ TODO put some explanatory examples in here too! The Menasco-Reid
 article in Topology '90 should have some examples of surface groups that are
@@ -1939,6 +1912,85 @@ By the generalized Dehn-Thurston coordinates theorem above, (work this out on
 paper first).
 
 \end{example}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Old reduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We first restrict ourselves to considering only Kleinian groups which are
+geometrically finite. In the geometrically infinite case, look at the simply
+degenerate (geometrically infinite) ends of the group. By the Canary covering
+theorem, tameness, and some other results, it's known that any finitely
+generated subgroup of a Kleinian group must be either geometrically finite or
+a virtual surface fiber - that is, it corresponds to a fiber surface in
+a finite-sheeted cover which is fibered over the circle. See (AFW p117) for
+this fact and various spots in the book for arguments.
+
+% No virtual surface fiber subgroup can possibly be quasifuchsian,
+
+Only geometrically finite subgroups can be quasifuchsian. This is basically by
+definition (check this). The problematic case is when it's possible to have
+a geometrically finite quasifuchsian surface subgroup of a geometrically
+infinite Kleinian group. Looking at the simply degenerate ends, and comparing
+to the ends of the quasifuchsian surface subgroup itself (viewed as a Kleinian
+group), the relative ends must finite-to-one cover relative ends of the
+original Kleinian group, by the Canary covering theorem. But now there's some
+problem with different types of (relative) ends covering different types of
+ends. I still don't understand this.
+
+Also, note that quasifuchsian here is intended in the sense of Kahn-Markovic as
+discussed in AFW p81. As discussed there (will get references), quasifuchsian
+surface subgroups must be geometrically finite - which rules out the virtual
+fiber case by the above dichotomy - and directly correspond to geometrically
+finite subgroups that avoid the cusps.
+
+One final consideration is to ensure that geometrically finite surface
+subgroups cannot exhibit certain pathological behavior inside geometrically
+infinite Kleinian groups. In the geometrically finite case this is easy,
+because it'll necessarily also be geometrically finite, but in the
+geometrically infinite case we need to either guarantee that the surface we
+find by the below, purely topological construction is geometrically finite, or
+show that actually no such surface exists and our construction is irrelevant.
+Check with Ian (and references) about which of these we're actually doing!
+
+Of course, so long as we are only studying books of $I$-bundles topologically,
+this is irrelevant, as we can restrict ourselves to considering the
+geometrically finite realizations of these hyperbolic 3-manifolds. However, it
+is nice to be able to state the result more generally. Also if we want to
+generalize to a more complete consideration of (finitely generated) Kleinian
+groups at some point, not just books of $I$-bundles, it will be nice to say that
+our work applies to more than just geometrically finite cases.
+
+Anyway, I believe the geometrically infinite case is much simpler once
+I understand what existing work it's based on. I'll need to talk to Ian about
+this. In what follows, just assume our Kleinian group is geometrically finite.
+
+% OLD REFERENCE - DOESN'T WORK BY ITSELF!
+%%(Baker-Cooper Theorem 1.7 - "work of Bonahon and Thurston").
+%\begin{thm}
+%
+%Let $M$ be a complete hyperbolic 3-manifold with finite volume, and $S$
+%a closed oriented $\pi_1$-injective immersed surface of negative Euler
+%characteristic. Then either $S$ is a virtual fiber, or $S$ is geometrically
+%finite. In the second case, it's either quasifuchsian or some element of
+%$\pi_1S$ is parabolic.
+%
+%\end{thm}
+%
+
+We assume this reduction still works in our cases (which are not finite
+volume). I hope some reference can fix this!
+
+So in our case, since the parabolic elements precisely correspond to the pared
+structure, our problem becomes a purely topological one: can we find a closed
+immersed $\pi_1$-injective surface of negative Euler characteristic, that
+doesn't contain any of the pared locus, up to homotopy?
+
+Since we're working in the case of books of $I$-bundles, we can reduce the
+pared locus by observing that there are no torus boundary components of M, so
+all the components of the pared locus must be annuli (as they're
+$\pi_1$-injective). For each annulus, since we're only concerned with its
+homotopy class, it suffices to consider the core curve.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{LERF and lifting properties}
