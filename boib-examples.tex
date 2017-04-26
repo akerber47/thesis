@@ -1,0 +1,358 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Our first example}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{ TODO shorten this section. Line it up with general result.}
+
+We construct a book of $I$-bundles $M$ as follows. In the following we take
+$\Si_{1,1}$ to be the compact surface of genus 1 with a single boundary
+component, a circle. Let $M_1$,$M_2$,$M_3$ be 3 punctured torus $I$-bundles,
+$M_1=M_2=M_3=\Si_{1,1}\x I$. For each $M_i$, write \[ \bd M_i = \bd \Si_{1,1}\x
+I \cup \Si_{1,1}\x0 \cup \Si_{1,1} \x 1 \] and label these boundary pieces as
+\[ \bd M_i = A_i \cup \bd_- M_i \cup \bd_+M_i \].
+
+Let $M_c = S^1xD^2$ be a solid torus. Attach the $M_i$ to $M_c$ by gluing the
+$A_i$ to parallel annuli in $\bd M_c$, each with longitudinal core curve. The
+result is a compact 3-manifold with boundary. This is our $M$. We choose
+orientations and a cyclic order for the gluing such that the 3 boundary
+components of M are precisely
+\[
+\bd M = (\bd_+M_1 \cup_{S^1} \bd_-M_2) \sqcup (\bd_+M_2 \cup_{S^1} \bd_-M_3)
+\sqcup (\bd_+M_3 \cup_{S^1} \bd_-M_1)
+\]
+and label these
+\[
+\bd M=\bd_{12}M \sqcup \bd_{23}M \sqcup \bd_{31}M
+\].
+Each boundary
+component of $M$ consists of two punctured tori glued along their boundary
+circles, topologically a genus two surface.
+
+We consider possible pared structures $P$ on $M$. Our goal is to find
+a surface $S \cin M$ such that
+\begin{equation}\label{E:qf}
+S \text{ is closed immersed $\pi_1$-injective, and  $\pi_1P_k \cap \pi_1S
+= 1$
+for each component $P_k$ of $P$} \tag{QF}
+\end{equation}
+%%% Equation (*) (star)
+
+% FIXME straighten this out
+%Note that since we
+%haven't fixed a basepoint, these subgroups are really only defined up to
+%conjugacy - what we're saying is they fail to intersect for an arbitrary choice
+%of conjugacy class for each subgroup. (ask Ian about this? seems fuzzy)
+%
+% FIXME FIXME fix perturb nonsense by reference to obstruction theory (as
+%discussed in Long-Reid, p11
+
+\begin{lemma}\label{L:sc}
+
+Let $S$ be a surface satisfying \eqref{E:qf}. Homotope $S$ to have minimal
+intersection with each $A_i$, that is, so there are no ``bumps''.  Then for
+each $M_i$, each component of $S \cap M_i$ is a finite-sheeted covering of the
+core surface.  That is, given such a component $S' \cin M_i$, the map $S' \to
+M_i = \Si_{1,1}\x I \to \Si_{1,1}\x{1/2}$ is homotopic to a finite-sheeted
+covering map. Conversely, given any finite-sheeted covering $\widetilde{S} \to
+\Si_{1,1}$, there exists a corresponding proper immersed $\pi_1$-injective
+surface $S \cin \Si_{1,1}\x I$.
+
+\end{lemma}
+\begin{proof}
+
+$S$ is compact, so every such component $S'$ is a compact surface with
+boundary, properly immersed in $M_i$. Since $S$ is $\pi_1$-injective in $M$,
+$S'$ must be $\pi_1$-injective in $M_i$. Otherwise, we'd have a nontrivial
+element of $\pi_1S'$ which is trivial in $\pi_1M_i$, hence in $\pi_1M$, hence
+in $\pi_1S$, contradicting the minimal position homotopy above. So the map
+$\phi : S'\to\Si_{1,1}\x{1,2}$ is also $\pi_1$-injective, since $M_i$
+deformation retracts to its core. Let $H = \phi_*(\pi_1S')$, and let
+$\Si_{1,1}^H$ be the cover of $\Si_{1,1}$ associated to $H<\pi_1\Si_{1,1}$.
+$\phi$ lifts to $\widetilde{\phi}\colon S'\to \Si_{1,1}^H$. This is a proper
+map of compact surfaces which is an isomorphism on $\pi_1$.  By the
+classification of surfaces, it must be homotopic (as a proper map) to
+a homeomorphism. So $\phi$ is homotopic to a covering map. It must be
+finite-sheeted as $S'$ is compact (by classification of surfaces again).
+
+Conversely, given a finite-sheeted cover $\widetilde{S}\to \Si_{1,1}$, compose
+with the embedding $\Si_{1,1} = \Si_{1,1}\x{1/2} \cin \Si_{1,1}\x I$. This is
+proper and $\pi_1$-injective.  Perturb locally to obtain an immersion.
+
+\end{proof}
+
+\begin{lemma}
+
+Let $P$ be a pared structure on $M$. $P$ cannot contain any tori. That is,
+$P$ consists entirely of annuli.
+
+\end{lemma}
+\begin{proof}
+
+We can compute $\pi_1M$ directly from the van Kampen theorem. Let $a_i,b_i$ be
+the generators of $\pi_1(M_i)$, and $c$ be the generator of $\pi_1(M_c)$. Our
+gluing yields
+\[
+\pi_1(M) = \langle a_1,b_1,a_2,b_2,a_3,b_3,c \mid
+[a_1,b_1]=[a_2,b_2]=[a_3,b_3]=c \rangle
+\]
+It immediately follows that $\pi_1M$ contains no rank 2 abelian subgroups, as
+no two elements commute. Since every component of $P$ is $\pi_1$-injective,
+they must all be annuli.
+
+Alternatively, simply observe that all the boundary components of $M$ have
+negative Euler characteristic, so they don't admit $\pi_1$-injective maps from
+a torus.
+
+\end{proof}
+
+\begin{prop}
+
+Suppose $P$ contains a component $P_0$ that, up to homotopy, is contained
+entirely within one ``$I$-bundle half'' of a boundary component. That is, $P_0
+\cin \bd M_i$, for some i. Without loss of generality we can let $P_0 \cin \bd
+M_1$.  Then there exists a surface satisfying \eqref{E:qf} if and only if $P$
+contains no components that are (up to homotopy) contained in $\bd M_2 \cup \bd
+M_3 = \bd_-M_2 \sqcup \bd_{23}M \sqcup \bd_+M_3$.
+
+\end{prop}
+\begin{proof}
+
+($\Longleftarrow$) Take $S=\bd_{23}M$. Intuitively, it's easy to see that the
+conditions on $P$ force all its components to lie on surfaces where they can't
+be homotoped into $S$.
+
+Algebraically, $\pi_1S$ is the subgroup generated by $a_2,b_2,a_3,b_3 \in
+\pi_1M$. We know that
+\[
+\pi_1S = \langle a_2,b_2,a_3,b_3 \mid [a_2,b_2]=[a_3,b_3]\rangle.
+\]
+$P$ contains no components in $\bd_{23}M$, so an arbitrary component $P_k$ of
+$P$ must be contained in $\bd_{12}M$ or $\bd_{31}M$, which have fundamental
+groups generated by $a_1,b_1,a_2,b_2$ and $a_3,b_3,a_1,b_1$ respectively.
+$\pi_1P_k$ is cyclic, so let $g$ be its generator. No matter if it's contained
+in $\bd_{12}M$ or $\bd_{31}M$, we can see that in order for $\pi_1P_k$ to
+overlap with $\pi_1S$, it must have generator some word in $a_2,b_2$ (if $P_k
+in \bd_{12}M$), or some word in $a_3,b_3$ (if $P_k in \bd_{31}M$). In either
+case, this is precisely the condition for such a word to correspond to a curve
+contained in $\bd M_2$ or $\bd M_3$, respectively, contradicting our assumption
+on $P$.
+
+($\Longrightarrow$) Let $S$ be a surface satisfying \eqref{E:qf}. Cut $S$ into
+components in $M_1,M_2,M_3$ (after homotoping to minimal intersections with the
+annuli).  Applying Lemma~\ref{L:sc}, we can see that $S \cap M_1 = \emptyset$,
+as otherwise since it's a finite-sheeted cover it would have to contain
+a multiple of $P_0$.  So $S \cin M_2 \cup M_3 \cup M_c$, which is homeomorphic
+to $S_2 \x I$.  Deformation retracting this to a surface $S_2$ and applying
+a covering argument like in Lemma~\ref{L:sc}, we can see that $S$ is a cover of
+$S_2$.  Since it's a finite-sheeted cover, it will have to have $\pi_1$
+intersecting any component $P_k$ that violates the conditions stated above.
+This completes the proof.
+
+\end{proof}
+
+The proof above obviously generalizes to more complex books of $I$-bundles.
+Later we'll use it to simplify any pared structures containing annuli that fit
+in a single $I$-bundle.
+
+\begin{thm}\label{T:ex1}
+
+Let $P$ be a pared structure containing no components $P_0$ as in the above
+proposition. Then there exists a surface satisfying \eqref{E:qf}.
+
+\end{thm}
+
+This is the main theorem we prove for this example. A few preliminary facts are
+required. Note that we can first isotope P such that it's in minimal position
+on each boundary component with respect to the gluing circle.
+
+\begin{lemma}
+
+Under the hypotheses of the theorem, each ``$I$-bundle piece'' boundary
+component $S=\bd_\pm M_i$ intersects $P$ in a thickened set of disjoint
+essential arcs, each arc connecting $\bd S$ to itself. The arcs form at most
+3 ``bands'', where all the arcs in each band are parallel.  Furthermore, if we
+choose a representative arc from each band (yielding a set of at most
+3 disjoint non-parallel arcs in $\Si_{1,1}$), there exists an automorphism of
+$\Si_{1,1}$ taking these arcs to a standard set of 3 disjoint non-parallel
+arcs.  See diagram for an illustration of the standard set.
+
+\end{lemma}
+\begin{proof}
+
+We first need a preliminary definition. After cutting a surface with boundary
+along arcs, we'll obtain one or more connected surfaces, each with one or more
+boundary components. Each boundary component after cutting will have pieces
+from the original boundary as well as pieces from the arcs that we cut along.
+Given labels $\gamma_1,...,\gamma_k$ for the boundary components and
+$\alpha_1,...,\alpha_l$ for the arcs (on the original surface with boundary),
+we can describe each boundary component of the cut surfaces as a union of arcs,
+each labeled with $\gamma_1,...,\gamma_k,\alpha_1,...,\alpha_l$. We call this
+an \emph{arc pattern} for that boundary component of the new surface.
+
+We first show that $\Si_{1,1}$ admitts at most 3 disjoint essential
+non-parallel arcs, and the possible surfaces and arc patterns obtained by
+cutting along these arcs are very restricted.
+
+Label the boundary component of $\Si_{1,1}$ by $\gamma$. Consider a proper
+essential arc $\alpha_1 \cin \Si_{1,1}$. Fix an orientation for $\alpha_1$.
+Since $\Si_{1,1}$ is orientable, we can look at local neighborhoods of
+$\alpha_1$ and see that $\alpha_1$ has a well-defined ``left side'' and ``right
+side'' as we travel along it. Looking at the endpoints of $\alpha_1$ along
+$\gamma$, we are forced to connect certain endpoints in the cut-up $\gamma$
+with $\alpha_1$, in order to preserve the parity. This tells us the (possibly
+disconnected) cut surface $S_1$ will have two boundary components. Each will
+have an arc pattern consisting of two arcs, one labeled $\gamma$ and one
+labeled $\alpha_1$.
+
+Since we cut along a properly embedded arc, the Euler characteristic increases
+by one. $\chi(S_1)=0$ and $S_1$ has two boundary components. By classification
+of surfaces, $S_1 = \Si_{0,2}$ or $\Si_{0,1} \sqcup \Si_{1,1}$. But if $S_1$
+contained a disk with the arc pattern described above, embedding that disk back
+in $\Si_{1,1}$ would describe a homotopy of $\alpha_1$ into the boundary. So
+$S_1 = \Si_{0,2}$.
+
+Now suppose we had a second proper essential arc $\alpha_2 \cin \Si_{1,1}$,
+disjoint from and non-parallel to $\alpha_1$. Since it's disjoint from
+$\alpha_1$, $\alpha_2$ induces a proper arc in $S_1$ which connects two regions
+in the arc pattern labeled $\gamma$.  $\alpha_2$ must have one endpoint on each
+boundary component of $S_1$. If both are on the same side, it's either
+homotopic to the boundary of $\Si_{1,1}$ or parallel to $\alpha_1$. Cutting
+along $\alpha_2$ yields a new surface $S_2$. Topologically $S_2=D^2$, with arc
+pattern consisting of 8 components in the cyclic order
+$(\gamma,\alpha_1,\gamma,\alpha_2,\gamma,\alpha_1,\gamma,\alpha_2)$.
+
+Finally, adding our 3rd proper essential arc $\alpha_3$, disjoint and
+non-parallel to the first two arcs, a similar argument shows that $\alpha_3$
+must connect opposite $\gamma$ pieces in the arc pattern. Cutting along
+$\alpha_3$ yields two disks with the same arc pattern. Depending on the choice
+of $\alpha_3$, the arc pattern on these disks is either
+$(\gamma,\alpha_1,\gamma,\alpha_2,\gamma,\alpha_3)$ or
+$(\gamma,\alpha_1,\gamma,\alpha_3,\gamma,\alpha_2)$. So up to relabeling
+$\alpha_1,\alpha_2,\alpha_3$, cutting along 3 proper essential disjoint
+non-parallel arcs has only one possible choice of cut surfaces and arc
+patterns.
+
+Observe that it is not possible to add any more disjoint non-parallel arcs. In
+particular, any arc we draw between $\gamma$ components of the arc pattern on
+either disk is homotopic to the boundary or parallel to an existing arc.
+Furthermore, if we add new disjoint arcs and allow them to be parallel, we can
+see that they must form ``bands'' around the existing 3 arcs in order to remain
+disjoint. That is, we can homotope all the arcs parallel to a given arc into
+a small neighborhood of that arc in the disk, without intersecting any of the
+non-parallel arcs.
+
+We claim there exists an automorphism of $\Si_{1,1}$ taking any set of 3 such
+arcs to any other set (in particular, to the standard set, as illustrated).
+Since there is only one topological result of cutting along the arcs, choose
+a homeomorphism of the cut surfaces. Up to relabeling the arcs, we can choose
+a homeomorphism that identifies matching arcs in the arc patterns (as shown
+above, there is only one possible arc pattern up to relabeling). Glue both
+sides along the arcs to obtain the desired automorphism of $\Si_{1,1}$.
+
+We now consider $P \cap \bd_S \cin S \cong \Si_{1,1}$. As shown, $P$ is a union
+of annuli. By the assumptions of the theorem, no annulus of $P$ is contained in
+$S$, so each annulus intersects $S$ in a union of rectangles, where two sides
+of the rectangle are embedded in the boundary $\bd S$.  Since we homotoped $P$
+to have minimal intersections, all the core arcs of the rectangles (pieces of
+the core curve of the annulus) must be essential. They are disjoint by
+definition of $P$. The statement of the lemma follows from applying the above
+argument to these core arcs.
+
+\end{proof}
+
+We consider connected double covers $\widetilde{S} \to S \cong \Si_{1,1}$.
+These covers have 2 boundary components. Every core arc of $P \cap S$ lifts to
+2 arcs in $\widetilde{S}$.  We say an arc in $S$ is \emph{cis} for a given
+$\widetilde{S}$ if any (ie all) lifts of that arc have both endpoints in the
+same boundary component of $\widetilde{S}$.  Otherwise, we say it's
+\emph{trans} for that cover.
+
+\begin{lemma}
+
+Given any 3 disjoint non-parallel proper arcs in $\Si_{1,1}$, and any double
+cover of $\Si_{1,1}$, 2 of the 3 arcs are trans, and the 3rd is cis.
+Furthermore, we can choose any two of the three we wish to be trans with an
+appropriate cover.
+
+\end{lemma}
+\begin{proof}
+
+As in earlier lemma, there exists an automorphism of $\Si_{1,1}$ taking these
+arcs to the standard set of 3 disjoint non-parallel proper arcs.  Now it
+suffices to observe, by looking at relative first homology or just by
+construction, that each of the three standard connected double covers
+(corresponding to nontrivial maps $\mathbb{Z}^2 \to \mathbb{Z}/2$) makes two of
+the three arcs trans and the third cis.
+
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{T:ex1}]
+
+Since $P$ has no components $P_0$, every $P \cap \bd_+M_i$ is a union of
+thickened arcs (that is, there are no full annulus components in any $\bd_+M_i$
+or $\bd_-M_i$). Apply the first lemma to break these into bands. The problem is
+most constrained when there are 3 bands, so we'll consider that case (if there
+are fewer than 3, just draw some more arcs on that component arbitrarily, and
+the proof still works).
+
+We will build our surface $S$ by taking a double cover of the core $\Si_{1,1}$
+surface for each $I$-bundle page $M_1,M_2,M_3$. Call these covers
+$S_1,S_2,S_3$.  Each of these has two boundary components. We'll then attach
+the boundary components such that each of $S_1,S_2,S_3$ has exactly one
+boundary component connected to each of the others. See diagram.
+
+Choose an arbitrary connected double cover for $S_1$. We can view this as
+a cover of $\bd_+M_1$ or $\bd_-M_1$, deformation retracting either way. By the
+lemma, two of the
+3 bands on $\bd_+M_1$ are trans, and the other is cis. The same holds for
+  $\bd_-M_1$.
+
+We cannot choose $S_2$ arbitrarily, as a cis arc for $S_1$ in $\bd_+M_1$ may
+connect (in $S$) to a cis arc for $S_2$ in $\bd_-M_2$. These together would
+form a closed curve that lifts to $S$, which once $S$ is immersed in $M$ will
+yield a violation of condition \eqref{E:qf}. Instead, observe that there is at
+most one band of the three in $\bd_-M_2$ containing arcs that, when glued
+across the core circle, match up to arcs in the cis band of $\bd_+M_1$ to form
+closed curves containing only arcs in those two bands. This is because once one
+band has that behavior, by endpoint parity the vertices can't also match up for
+a different band, if the arcs they have to match with on the other side are
+parallel. Looking at the boundary circle, non-parallel arcs have endpoints in
+cyclic order, but parallel arcs don't. See diagram. It suffices to check this
+for our standard set of non-parallel arcs, by the same automorphism argument.
+
+Since there is only one such band on $\bd_-M_2$, choose $S_2$ such that this
+band is not cis.  Finally, for $S_3$ we have two connecting constraints. We
+have a cis band on $\bd_-M_1$ from our choice of $S_1$, and a cis band on
+$\bd_+M_2$ from our choice of $S_2$.  Applying the same argument, there is at
+most one band on $\bd_-M_3$ and one band on $\bd_+M_3$ that will connect to
+form closed curves. But we can choose $S_3$ such that both of these bands are
+trans. (This requires a slight modification to the lemma - since these bands
+are on different boundary surfaces, they may not be disjoint non-parallel. If
+they aren't disjoint, we can tweak them by local modifications so they are, and
+then ``untweak'' them in the cover. If they are parallel, just ignore one set
+of bands)
+
+Glue $S_1,S_2,S_3$ as described to obtain $S$. We claim that $S$ satisfies
+condition \eqref{E:qf}. $S$ is closed and immersed by construction (as in
+Lemma~\ref{L:sc}). It is $\pi_1$-injective inside each $I$-bundle by
+Lemma~\ref{L:sc}, and inside the core $M_c$ because it's just a union of
+incompressible gluing annuli there. It suffices to show that $\pi_1S \cap
+\pi_1P_k = 1$ for each component $P_k$ of the pared locus. Looking at the core
+curve of the annulus $P_k$, this implies that some multiple of that core curve
+is homotopic into $S$.
+
+But this is impossibly by the above construction. Every such curve contains at
+least two bands, on two different components $\bd_\pm M_i$. By the construction
+of $S$, of any two bands which connect up when the boundary components are
+glued across circles, at least one must be trans. This means that when we try
+to homotope the core curve multiple into $S$, in order to follow along $S$
+locally (in each page, where $S$ is locally a cover of the core surface, it
+must be a lift from that core surface) it would have to traverse between all
+three pieces of the cover, as that's how we connected up the $Si$. Every trans
+arc lifts to an arc that connects two different boundary components of an $Si$,
+which are ``pointed in different directions.'' But this is obviously
+impossible, as our $P_k$ is restricted to be in a single boundary component, so
+up to homotopy it must be generated by those two $I$-bundle pages only.
+
+\end{proof}
+

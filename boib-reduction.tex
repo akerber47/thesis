@@ -1,0 +1,206 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{General case - preliminaries}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We prove a generalization of the above example. Basically, we want to first
+identify the cases that obviously can't have a surface satisfying \eqref{E:qf}.
+Then we'll prove by construction that every other book of $I$-bundles does in
+fact contain such a surface.
+
+We use the following general description for books of $I$-bundles. Let
+$M_{c1},...,M_{cr}$ be the spines, all solid tori. Let $M_{p1},...,M_{ps}$ be
+the pages, all thickened surfaces with boundary. Each page has boundary
+components $A_{ij}$, all annuli. We glue each annulus by a homeomorphism
+$\phi_{ij}$ to a boundary annulus $A_{ij'}\cin \bd M_{ck}$. Note that $Aij'$
+might not be a simple longitude of, that is, a page can wrap multiple times
+around a spine.  However, for each spine, all the $A_{ij'}$ must be disjoint
+and parallel, or the result of gluing will not be a manifold.
+
+We first make the following simple observation.
+
+prop
+
+Let $M$ be a book of $I$-bundles, and $M'$ to $M$ be a finite-sheeted covering
+space.  Then $M'$ is also a book of $I$-bundles.
+
+proof
+
+This is straightforward. Lift the spines and pages of $M$ to obtain spines and
+pages of $M'$. Lift the gluing annuli of $M$ to gluing annuli of $M'$.
+
+We want to consider books of $I$-bundles with some basic topological
+properties, to make sure they are Kleinian manifolds.
+
+\begin{defn}
+
+A book of $I$-bundles $M$ is \emph{admissible} if it satisfies the following
+conditions.
+
+% TODO
+\textbf{TODO as discussed with Ian, this should just be "a book of I-bundles."
+See definitions in Morgan or Thurston or Culler-Shalen and fix accordingly.}
+
+\begin{enumerate}
+
+\item The underlying manifold is a compact connected orientable hyperbolic
+3-manifold.
+
+\item Each page is an I-bundle over a surface with boundary of negative Euler
+characteristic.  That is, no base surface is a disk, Mobius strip, or annulus.
+
+\end{enumerate}
+
+\end{defn}
+
+Henceforth we will only consider admissible books of $I$-bundles. Let's briefly
+explain why.
+
+Obviously we want M to be compact connected orientable hyperbolic, as this is
+the general case we're studying (Kleinian manifolds). If M were nonorientable
+we could reduce to the orientable double cover.
+
+Each page's base surface must have at least one boundary component to glue to
+in order for M to be connected. We don't want to consider base surfaces which
+are disks.  Observe that each page which is a copy of $S0,1$ means that that
+page and its attached spine form a 3-manifold with a finite-sheeted cover by
+a ball (we can arrange things so that in the cover, the $S0,1$ attaching map
+only traverses the longitude once, and we get a thickened disk).  This means
+that we'll have finite order summands in our group, which correspond to
+elliptic pieces, for instance lens spaces, in the JSJ decomposition. These
+cases are not hyperbolic.
+
+%TODO
+\textbf{TODO explain Mobius strips / annuli with "big bad loops" idea which
+breaks our book of I-bundles reduction theorem.}
+
+\begin{prop}
+
+Let M be an admissible book of I-bundles. Then M must have incompressible
+boundary.
+
+\end{prop}
+
+% TODO
+\textbf{TODO figure out/throw in Ian's explanation of incompressible boundary.}
+
+Now consider a pared structure P on a book of I-bundles. We'll say (M,P) is
+admissible if the book of I-bundles M is admissible. Note that the first
+requirement forces all boundary components of M to have negative Euler
+characteristic. Because components of P are pi1-injective, P therefore must be
+a union of annuli in any reduced book of I-bundles. We introduce an additional
+definition.
+
+\begin{defn}
+
+Let (M,P) be a pared admissible book of I-bundles. We say (M,P) is
+\emph{reduced} if it satisfies the following.
+
+\begin{enumerate}
+
+\item Each spine contains at least three gluing annuli.
+
+\item All page boundary components are glued (there are no "free boundary
+components").
+
+\item Each page intersects P in a disjoint union of rectangles. That is, no
+component of P is contained in a single page.
+
+\end{enumerate}
+
+\end{defn}
+
+This definition is motivated by the following important idea. If (M,P) is not
+reduced, we can attempt to reduce it inductively. At each step, we remove pages
+or spines from our pared books of I-bundles to produce new pared books of
+I-bundles.  Because we're deleting pieces, we may end up with multiple
+connected components. Each component is either a pared book of I-bundles or an
+isolated page with no remaining boundary components - that is, a thickened
+closed surface.
+
+\begin{defn}
+
+We \emph{reduce} a book of I-bundles as follows. We can repeat this inductively
+on connected components of the result of a reduction.
+
+% FIXME change enumeration to letters so can refer below
+\begin{itemize}
+
+\item If (M,P) has a spine C which violates (1):
+
+\begin{itemize}
+
+\item If C has 0 gluing annuli, delete C.
+
+\item If C has 1 gluing annulus, delete C and the attached page.
+
+\item If C has 2 gluing annuli, delete C and glue the two pages along the
+annuli (or glue two annuli already on the same page) to produce a single page.
+
+\end{itemize}
+
+\item If (M,P) has a page B which violates (2), delete B.
+
+\item If (M,P) has a page B which violates (3), delete B.
+
+\item In all cases, modify P by removing all components which have nonempty
+intersection with the deleted pages or spines.
+
+\end{itemize}
+
+\end{defn}
+
+Notice that in all cases we have a pared embedding of our new manifold into the
+original.
+
+\begin{thm}(Reduction Theorem)
+
+Let (M,P) be a pared admissible book of I-bundles. Repeatedly reducing
+terminates after finitely many reductions in some (Mr,Pr), with an associated
+pared embedding iota colon (Mr,Pr) to (M,P). Each resulting connected component
+is either a reduced book of I-bundles or a thickened closed surface with empty
+pared locus.
+
+Furthermore, any (QF) surface in (M,P) is contained in iota(Mr,Pr). In
+particular, if (Mr,Pr)=emptyset, (M,P) does not contain a (QF) surface.
+
+\end{thm}
+
+\begin{proof}
+
+Write sM0 = (M,P) and sMi for the (possibly disconnected) manifold we obtain
+after reducing i times.
+
+Let size(sMi) = Sigma{(Mij,Pij) component of sMi} (num{pages of Mij})
++ (num{spines of Mij}). We claim that any reduction must decrease the size. If
+we consider a thickened closed surface to be made out of one page and no
+spines, it's immediately clear that size(sMi)>0 if sMi neq emptyset. So this
+will imply that reducing repeatedly must terminate after finitely many
+reductions. Furthermore, to show that (QF) surfaces are included, we must show
+that any reduction deletes a set disjoint from all (QF) surfaces.
+
+We consider each possible reduction.
+
+%TODO
+\textbf{TODO finish this}
+
+\end{proof}
+
+As motivation, also observe that our specific example in the earlier section is
+one of the simplest possible topological structures for a reduced book of
+I-bundles.
+
+Note that the surface case is very easy.
+
+\begin{prop}
+
+Let (M,P) = (Sigma times I, emptyset) be a thickened closed surface with empty
+pared locus. Then every cover of Sigma induces a (QF) surface in.(M,P).
+
+\end{prop}
+
+\begin{proof}
+
+P = emptyset, so this follows directly from the covering lemma.
+
+\end{proof}
+

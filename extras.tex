@@ -1,0 +1,475 @@
+\textbf{ The following sections ended up being unnecessary. I'll keep it here just
+in case we need something. }
+
+{\tiny
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Surface background details}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+These are some background facts that we'll need to go through the examples in
+detail.
+
+Arcs in surfaces with boundary - from Fathi-Laudenback-Poenaru, Exposes 2 and
+4 (see p. 21-24, 43-52).
+This is an exposition of coordinates for classes of arcs in a surface
+with boundary, aka Dehn-Thurston coordinates.
+
+Let $A(N)$ be the set of isotopy classe sof simple closed proper arcs $I\in N$
+such that they represent nontrivial elements of pi1 rel boundary. We isotope
+them with the ends of the arcs free to move within the boundary components they
+are contained in. Similarly $A'(N)$ with simple closed multi-arcs, up to
+isotopy.
+
+\begin{thm}[FLP 2.11]
+
+Let $P^2$ be the standard pair of pants. $A(P^2)$ consists of exactly six
+elements, classified by the boundary components of their endpoints.
+
+\end{thm}
+
+\begin{thm}[FLP 2.12]
+
+$A'(P^2)$ is isomorphic to $A'={(a1,a2,a3) in Z | sum ai is even }$ via the map
+$i:A'(P^2)->A', i(\tau) = (i(\tau, d_1),i(\tau,d_2),i(\tau,d_3))$ where
+$d_1,d_2,d_3$ are the boundary components of $P^2$, and $i(\cdot,\cdot)$ is
+geometric intersection number.
+
+\end{thm}
+
+That is, simple closed multicurves exist and are uniquely determined, for each
+choice of boundary intersection numbers of the correct parity.
+
+Finally, given a closed surface, let $N$, let $S(N)$ be the set of isotopy
+classes of simple closed curves on $N$, and $S'(N)$ simple closed multicurves.
+
+\begin{thm}[FLP 4.8]
+
+Let $N$ be a closed surface of negative Euler characteristic.  Fix a pants
+decomposition of $N$ into $2g-2$ pairs of pants along $3g-3$ disjoint simple
+closed curves $K_1,...,K_{3g-3}$. Then
+
+$S'(N)$ is isomorphic to $B_0 = {(m_i,s_i,t_i) \in \mathbb{Z}, i = 1,...,3g-3
+\mid \text{ all coords }\geq 0, \text{ and for each pair of pants the
+corresponding }m_i \text{ sum is even}}$ where the $m_i$ measure intersection
+numbers with the curves $K1,...,K3g-3$, and the $s_i,t_i$ measure twisting
+around at each intersection curve as a rational number.  See FLP for details of
+the calculation of the twisting coordinates - we won't be needing it here (at
+least, not yet!).
+
+\end{thm}
+
+We actually require a slight generalization of this result, but the proof is
+identical.
+
+\begin{thm}
+
+Let $SA'(N)$ be the set of disjoint multi-curves or arcs on $N$, a surface
+possibly with boundary. That is, each element of $SA'(N)$ corresponds to
+a union of simple closed curves and simple arcs on $N$, all disjoint, such that
+the arcs are properly embedded, up to isotopy where the arcs are permitted to
+slide on each boundary component. Then $SA'(N)$ is isomorphic to the obvious
+choice, where we again decompose into pairs of pants, have $mi$ for each
+boundary curve or decomposition curve, but $s_i,t_i$ only for each
+decomposition curve.
+
+\end{thm}
+
+Finally, let $A''(N)$ (or maybe some better notation, etc) be the set of simple
+proper multi-arcs satisfying the condition that no two components of the
+multi-arc are parallel, ie, isotopic. Alternatively we can think of $A''(N)$ as
+consisting of simplices in the arc complex of $N$, or as a quotient of $A'(N)$
+where we identify multicurves along splitting / joining of parallel arcs. In
+general, $A''(N)$ is more difficult to parametrize, as purely from the
+coordinates it is difficult to determine which multicurves or multiarcs will
+contain parallel components.
+
+We define $S''(N)$, $SA''(N)$ similarly.
+
+\begin{example}
+
+Consider the pair of pants $P^2$. We know $A(P^2)$ has 6 elements, so
+$A''(P^2)$ has at most $2^6$ elements, corresponding to which arcs are present
+in our multi-arc. It suffices to check that all 6 arcs can be embedded in $P^2$
+without intersecting.
+
+\end{example}
+
+\begin{example}
+
+Consider the punctured torus $\Si_{1,1}$. We first compute $SA'(\Si_{1,1})$.
+By the generalized Dehn-Thurston coordinates theorem above, (work this out on
+paper first).
+
+\end{example}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Old reduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We first restrict ourselves to considering only Kleinian groups which are
+geometrically finite. In the geometrically infinite case, look at the simply
+degenerate (geometrically infinite) ends of the group. By the Canary covering
+theorem, tameness, and some other results, it's known that any finitely
+generated subgroup of a Kleinian group must be either geometrically finite or
+a virtual surface fiber - that is, it corresponds to a fiber surface in
+a finite-sheeted cover which is fibered over the circle. See (AFW p117) for
+this fact and various spots in the book for arguments.
+
+% No virtual surface fiber subgroup can possibly be quasifuchsian,
+
+Only geometrically finite subgroups can be quasifuchsian. This is basically by
+definition (check this). The problematic case is when it's possible to have
+a geometrically finite quasifuchsian surface subgroup of a geometrically
+infinite Kleinian group. Looking at the simply degenerate ends, and comparing
+to the ends of the quasifuchsian surface subgroup itself (viewed as a Kleinian
+group), the relative ends must finite-to-one cover relative ends of the
+original Kleinian group, by the Canary covering theorem. But now there's some
+problem with different types of (relative) ends covering different types of
+ends. I still don't understand this.
+
+Also, note that quasifuchsian here is intended in the sense of Kahn-Markovic as
+discussed in AFW p81. As discussed there (will get references), quasifuchsian
+surface subgroups must be geometrically finite - which rules out the virtual
+fiber case by the above dichotomy - and directly correspond to geometrically
+finite subgroups that avoid the cusps.
+
+One final consideration is to ensure that geometrically finite surface
+subgroups cannot exhibit certain pathological behavior inside geometrically
+infinite Kleinian groups. In the geometrically finite case this is easy,
+because it'll necessarily also be geometrically finite, but in the
+geometrically infinite case we need to either guarantee that the surface we
+find by the below, purely topological construction is geometrically finite, or
+show that actually no such surface exists and our construction is irrelevant.
+Check with Ian (and references) about which of these we're actually doing!
+
+Of course, so long as we are only studying books of $I$-bundles topologically,
+this is irrelevant, as we can restrict ourselves to considering the
+geometrically finite realizations of these hyperbolic 3-manifolds. However, it
+is nice to be able to state the result more generally. Also if we want to
+generalize to a more complete consideration of (finitely generated) Kleinian
+groups at some point, not just books of $I$-bundles, it will be nice to say that
+our work applies to more than just geometrically finite cases.
+
+Anyway, I believe the geometrically infinite case is much simpler once
+I understand what existing work it's based on. I'll need to talk to Ian about
+this. In what follows, just assume our Kleinian group is geometrically finite.
+
+% OLD REFERENCE - DOESN'T WORK BY ITSELF!
+%%(Baker-Cooper Theorem 1.7 - "work of Bonahon and Thurston").
+%\begin{thm}
+%
+%Let $M$ be a complete hyperbolic 3-manifold with finite volume, and $S$
+%a closed oriented $\pi_1$-injective immersed surface of negative Euler
+%characteristic. Then either $S$ is a virtual fiber, or $S$ is geometrically
+%finite. In the second case, it's either quasifuchsian or some element of
+%$\pi_1S$ is parabolic.
+%
+%\end{thm}
+%
+
+We assume this reduction still works in our cases (which are not finite
+volume). I hope some reference can fix this!
+
+So in our case, since the parabolic elements precisely correspond to the pared
+structure, our problem becomes a purely topological one: can we find a closed
+immersed $\pi_1$-injective surface of negative Euler characteristic, that
+doesn't contain any of the pared locus, up to homotopy?
+
+Since we're working in the case of books of $I$-bundles, we can reduce the
+pared locus by observing that there are no torus boundary components of M, so
+all the components of the pared locus must be annuli (as they're
+$\pi_1$-injective). For each annulus, since we're only concerned with its
+homotopy class, it suffices to consider the core curve.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{LERF and lifting properties}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{We had trouble with some technical details here, but we ended up not
+needing these facts anyways.}
+
+This is relevant to us because manifolds with LERF fundamental groups have nice
+topological properties. In particular, we have the following fact.
+
+\begin{thm}
+
+Let $M$ be a compact $n$-manifold such that $\pi_1M$ is LERF. Let $M'$ to $M$
+be a (possibly infinite-sheeted) cover such that $\pi_1M'$ is finitely
+generated.  Suppose $C \cin M'$ is a compact subset which avoids the boundary
+of $M$. Then there exists a intermediate cover $M' \to M'' \to M$, which is
+finite-sheeted over $M$, such that the covering map $M' \to M''$ is an
+embedding on $C$.
+
+\end{thm}
+
+\begin{proof}
+
+See Long-Reid. Note that their proof is only stated for closed manifolds $M$,
+but it carries over to all compact manifolds also if we restrict $C$ to avoid
+the boundary of $M$.
+
+% I think? Might want to check w Ian.
+
+\end{proof}
+
+This leads us to the following well-known fact. I haven't found a written proof
+in the literature, so I've provided one. Thanks to Ian Agol for pointing this
+out.
+
+\begin{thm}
+
+Let $M$ be a compact n-manifold such that $\pi_1M$ is LERF. Let $C$ be
+a compact (n-1)-complex, and $\phi \colon C \looparrowright M$
+a $\pi_1$-injective immersion.  Then there exists a finite sheeted cover $M'
+\to M$ such that $\phi$ lifts to a map $\phi' \colon C \hookrightarrow M'$
+which is homotopic to an embedding.
+
+\end{thm}
+
+Note that we can't guarantee that $\phi'$ is itself an embedding, because for
+instance it's easy to map a small straight segment of $C$ so that its image
+contains a small homotopicall trivial loop. This loop will be present in every
+lift of $C$ to a cover of $M$.
+
+\begin{proof}
+
+Note that when we use this, both $C$ and $M$ will be aspherical, so an
+alternative proof for that case is to invoke Whitehead's theorem to show
+$\phi_H$ is a homotopy equivalence, followed by some obstruction theory facts
+(??  - similar to the ones invoked in Long-Reid) to show it can be homotoped to
+an embedding.
+
+\textbf{ TODO is this a real proof? not sure...}
+
+%Since C is a compact complex, pi1C is finitely generated. Let H=phi*(pi1C), and
+%let pH colon MH to M be the corresponding cover of M. By our choice of H, phi
+%lifts to a map phiH colon C to MH. We claim that phiH is homotopic to an
+%embedding. Since C is compact and phi is an immersion, it suffices to show we
+%can nicely homotope phiH to be injective.
+%
+%Since pH*(pi1MH) = H = phi*(pi1C), phiH must induce an isomorphism on pi1 in
+%order to have pH circ phiH = phi. Since C is an immersed 1-complex, without
+%loss of generality the only failures to be embedded we need to consider are
+%double points.  Let x1,x2 in C such that phiH(x1)=phiH(x2)=y.  Let alpha cin
+%C be a path from x1 to x2.  phiH(alpha) is a closed curve in MH.  If
+%phiH(alpha) is homotopically trivial, we'll apply the loop theorem and homotope
+%locally to remove the intersection at y.
+%
+%To be precise, we have two cases to consider. First, if phiH(alpha) is a simple
+%closed curve, that is except for its two endpoints alpha embeds in MH. Then we
+%can apply the loop theorem directly to obtain a disc D cin MH with boundary
+%phiH(alpha). By homotoping across D we can ensure that phiH(C) cap int(D)
+%= empyset.
+
+% FIXME Ok HOLD ON this isn't right. Dimensions don't add up. If dim C = 1 and
+% dim M = 3 it's trivial! Because just homotope into the extra dimension
+% (general position) to fix -> in fact, I think this can be done generically.
+%
+% So really what I'm concerned with is (1) dim C = 1, dim M = 2. And also (2)
+% dim C = 2, dim M = 3.
+%
+% I hope I don't have to consider these two cases separately...
+
+\end{proof}
+
+We use the above condition repeatedly to show that we can construct
+a finite-sheeted cover of our book of $I$-bundles that satisfies certain nice
+properties, by starting with an infinite-sheeted cover and then pushing down.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Some generalizations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We use the following general notation for books of $I$-bundles. Let
+$M_{c1},...,M_{cm}$ be the spines, all solid tori. Let $M_1,...,M_n$ be the
+pages, all thickened surfaces. Each $M_i$ has boundary components
+$A_{i1},...,A_{ik_i}$ all annuli. We glue each annulus to a boundary annulus on
+some spine. For each spine, all these gluing annuli must be disjoint parallel
+incompressible. If $M$ is nonelementary, We can assume without loss of
+generality that all pages have negative Euler characteristic, and all spines
+have at least 3 pages glued to them (otherwise, just consolidate into fewer
+pages / spines).
+
+Given such a book of $I$-bundles $M$, let $G=(V,E)$ be the graph associated to
+the embedded surface $A = \bigcup_{i,j} A_{ij} \cin M$ which is the union of
+all the page gluing annuli. Combinatorially, $G$ has a vertex for each spine or
+page, and an edge for each gluing of a page to a spine along an annulus. We
+call $G$ the gluing graph of the book of $I$-bundles.
+
+We say a book of $I$-bundles is \emph{tree-shaped} if its gluing graph is
+a tree.
+
+As above, if the pared locus $P$ contains any components that fit inside
+a single $I$-bundle, then we can ``cross off that page.'' Just like in our
+earlier lemma, any $\pi_1$-injective surface that passed through that page
+would have would have to contain the component of the pared locus. By
+repeatedly crossing off pages and consolidating into fewer pages / spines, we
+can reduce any pared book of $I$-bundles to one with no such components.
+
+\begin{conj}
+
+Let $M$ be a tree-shaped book of $I$-bundles. Suppose $P$ has no components
+$P_0\cin \bd_\pm M_i$ for any $i$. Then there exists a surface satisfying
+\eqref{E:qf}.
+
+\end{conj}
+
+We're quite certain that this is true. It should just be a hairy inductive
+adaptation of the above argument. In particular, it is totally unclear how one
+might construct a counterexample. However, we haven't completed a full proof
+yet.
+
+\begin{thm}
+
+Let $M$ be a tree-shaped book of $I$-bundles. Suppose $P$ has no components
+$P_0 \cin \bd_\pm M_i$ for any $i$. Suppose further that every
+component of $P$ crosses at least one gluing circle at a spine where at least
+4 pages are attached. Then there exists a surface satisfying \eqref{E:qf}.
+
+In particular, note that if all spines are at least valence 4, the technical
+crossing condition must be satisfied.
+
+\end{thm}
+\begin{proof}
+
+Our construction of $S$ is very simple. In fact, in this case, $S$ embeds in
+our book of $I$-bundles. Construct $S$ by starting with a single page's core
+surface, and traversing the tree-shaped gluing as follows. For each boundary
+component of $S$, look at the valence of the associated spine. If it's valence
+3, choose an arbitrary one of the other two pages. If it's valence at least 4,
+choose a page that's non-boundary-adjacent to $S$, in that neither boundary
+component of the incoming page attaches to a boundary component of the newly
+chosen page when we glue the book of $I$-bundles. This is always possible for
+valence at least 4, because at a spine, each incoming boundary component
+connects to a single outgoing boundary component, and there are only 2 incoming
+boundary components but at least 3 new pages to choose from. Attach the core
+surface of the chosen page to $S$ with an annulus across the core. Since $M$ is
+tree-shaped, we can build $S$ inductively without it running into itself.
+
+We claim $S$ satisfies \eqref{E:qf}. $S$ is immediately properly immersed (in
+fact, embedded) and $\pi_1$-injective, as it's a union of page cores and spine
+annuli. It suffices to check the pared locus. Suppose some $P_k$ had $\pi_1S
+\cap \pi_1P_k neq 1$, ie some multiple of its core curve was homotopic into
+$S$. By the crossing condition, $P_k$ must traverse a gluing circle on a spine
+of valence at least 4.  But at such a spine, $P_k$, which is contained in
+a boundary component of $M$, must connect two boundary-adjacent pages. But we
+chose $S$ so it would connect at such a spine to a non-boundary-adjacent page.
+Since $M$ is tree-shaped, applying van Kampen shows that these pages correspond
+to different pieces of the amalgamated free product for $\pi_1M$, so it's
+impossble for this curve to be in $\pi_1S$. This completes the proof.
+
+\end{proof}
+
+Finally, we have one more technical intermediate result. We hoped this would
+extend to more cases, but we haven't been able to do anything with it yet.
+
+Let $M$ be a book of $I$-bundles. Associated to every surface we construct in
+an analogous way to what we've been doing (taking covers of the page core
+surfaces and gluing them together), there's a set of fairly complicated graphs
+we can construct as follows. For each $(M_i,A_{ij},\widetilde{S_i})$, where
+$M_i$ is a page, $A_{ij}$ gluing annulus of that page, and $\widetilde{S_i}$
+finite-sheeted cover of the page core surface, we can draw a \emph{local
+pared-arc graph} $G=G(M_i,A_{ij},\widetilde{S_i})$.
+
+The vertices are boundary components of $\widetilde{S_i}$ which sit above
+$A_{ij}$. Two vertices are connected by an edge if there is an arc in the pared
+locus which lifts to connect those two boundary components. For instance,
+a double cover of the punctured torus page, with 3 disjoint non-parallel arcs
+on each boundary, has a graph, over the single boundary annulus downstairs,
+with 2 vertices and 3 edges (one between the two vertices, and one loop at each
+vertex). This graph is a generalization of the cis-trans terminology we used in
+that example.
+
+We say a cover $\widetilde{S_i}$ is \emph{pared-bipartite} if each of its local
+pared-arc graphs is bipartite. Note that none of the covers we constructed in
+our first example are pared-bipartite. This is a very specialized condition.
+Note also that if the pared locus does not intersect a page, all covers of that
+page are pared-bipartite.
+
+\begin{thm}
+
+Let $M$ be a tree-shaped book of $I$-bundles. Suppose that $P$ has no
+components in $\bd_\pm M_i$ for any $i$. Suppose that every page of $M$
+has a pared-bipartite cover of its core surface. Then $M$ contains a surface
+satisfying \eqref{E:qf}.
+
+\end{thm}
+\begin{proof}
+
+First observe that every cover of a pared-bipartite cover is itself
+pared-bipartite. Simply lift the partition of the vertices to obtain a new
+partition of each local pared-arc graph. The arcs cannot break this
+partition because otherwise they wouldn't cover arcs in the downstairs cover.
+
+Choose a sufficiently large cover of a pared-bipartite cover of each page such
+that at each spine, the number of incoming cover boundary components above each
+incident page equal for that spine. We can do this taking a ``least common
+multiple cover,'' unless pages are glued to the same spine multiple times. In
+that case, choose a finite-sheeted cover of the book of $I$-bundles itself that
+doesn't have this issue, lift the pared locus, and construct a surface there.
+Afterwards, we can push it down and it will still satisfy \eqref{E:qf}.
+
+% careful! finite subgp separability covers of tree-shaped things aren't
+% necessarily tree-shaped! might need another condition / argument here.
+
+Now, we construct $S$ by gluing these large covers. For each $\widetilde{S_i}$
+and downstairs gluing annulus $A_{ij}$ there will be two adjacent annuli in the
+associated spine. For each $\widetilde{S_i}$, attach half the boundary
+components above $A_{ij}$ to the boundary components coming from each of the
+``neighboring'' $\widetilde{S_i}$, via annuli. Use the pared-bipartite
+structure to split the set of boundary components above $A_{ij}$ in half. Since
+the number of incoming boundary components match at each spine, as constructed
+above, the boundary components will match up. We have a ``cover boundary
+component bipartition'' above each $A_{ij}$. Note that once we have the
+bipartition, the details of how we glue the pieces inside the bipartition are
+irrelevant.
+
+We claim the resulting $S$ satisfies \eqref{E:qf}. We already know it's proper
+immersed $\pi_1$-injective by the same arguments. To show it doesn't overlap
+with the pared locus, observe that by the definition of local pared-arc graphs,
+every core curve in the pared structure must correspond to a sequence of arcs
+in covers, where each arc either connects boundary components above different
+annuli $A_{ij}$, $A_{ij'}$, or it connects 2 boundary components above the same
+annulus $A_{ij}$. But it cannot connect two boundary components above the same
+annulus, as we glued those according to the pared bipartition in such a way
+that the pared arc component, which is locally restricted to a single boundary
+component of the $I$-bundles, can't follow. This is a generalization of the
+first argument in our simplest case.
+
+Note that if the arc connects boundary components above different annuli, these
+annuli must attach to different spines (by our earlier simplifying assumption).
+But now because $M$ is tree-shaped, no arc that's been redirected toward
+different spines can possibly form a closed loop. This completes the proof.
+
+\end{proof}
+
+We tried to do this proof in the non-tree-shaped case, but it doesn't work!
+There are counterexamples of pared-bipartite covers where the obvious fix
+relies on messy combinatorics inside the boundary component matching.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Next steps}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+$I$-bundles. In fact, combinatorially, it seems that all books of $I$-bundles
+(satisfying an appropriate condition on components of $P$) should admit these
+surfaces. But we haven't proved anything yet. The general case is much messier
+(combinatorially) than the tree-shaped case, because in addition to cis arcs
+we'll also need to consider trans arcs that ``wrap around'' a loop in the
+gluing graph. So even ensuring that every closed curve in the pared structure
+is broken into arcs, at least one of which is trans, is insufficient.
+
+We chose to study books of $I$-bundles first. Ian thinks the other infinite
+volume cases ought to be easier. What about acylindrical manifolds?  Books of
+$I$-bundles are somehow the opposite end of the spectrum of acylindrical
+- they're glued together along a bunch of cylinders, and the pieces are all
+very simple ($I$-bundles).  If we can address the acylindrical and book of
+$I$-bundle cases we ought to be able to put these together to solve the entire
+problem. Ian thinks maybe the acylindrical case can be addressed by a variant
+of the Baker-Cooper argument.
+
+}%tiny
+
+% TODO rewrite
+\textbf{ TODO Rewrite next steps after seeing how far we get.}

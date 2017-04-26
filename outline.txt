@@ -1,0 +1,14 @@
+Just some rough thoughts on overall sections. This is based on how I ended up
+organizing my talks.
+
+(First talk)
+- Intro to problem, history etc
+- Background
+- Reduction of the general case
+
+(Second talk - books of I-bundles)
+- First Examples
+- Reduction Proof
+- Main Proof
+
+- Extra material that I didn't delete yet

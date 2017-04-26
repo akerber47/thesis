@@ -1,0 +1,776 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Statement of main theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We are now ready to state the precise theorem.
+
+\begin{thm}[Main Theorem]
+
+Every reduced book of $I$-bundles contains a (QF) surface.
+
+\end{thm}
+
+Note that together with the earlier theorem, we've fully covered the
+non-reduced case also.
+
+\begin{thm}[Main Theorem, non-reduced case]
+
+Let M be non-reduced book of I-bundles. If the reduction of the earlier theorem
+yields at least one reduced book of I-bundles, then M contains a QF surface.
+Otherwise, if the reduction terminates in an empty set, it does not.
+
+\end{thm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Proof of main theorem - preliminaries}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Now there are a number of topological simplifications we make, by passing to an
+appropriate finite-sheeted cover of the book of $I$-bundles.  Once we can
+construct a surface satisfying \eqref{E:qf} inside this cover, we can push it
+down and perturb slightly to obtain a surface satisfying \eqref{E:qf}
+downstairs (since it $\pi_1$-injects into a subgroup, it will definitely still
+be $\pi_1$-injective).
+
+\begin{defn}
+
+A \emph{good} book of $I$-bundles $M$ is a reduced book of I-bundles which
+satisfies the following additional conditions.
+
+\begin{enumerate}
+
+\item Each gluing annulus on a spine traverses longitudinally exactly once. (It
+may traverse one or more meridians, but this irrelevant for our proof. Note
+that this corresponds to a different, but topologically arbitrary (upto
+diffeomorphism) choice of longitude for our spine.)
+
+\item Each page is glued to a given spine at most once.
+
+\item The two endpoints of each fiber in each page are in different boundary
+components of $M$.  In particular, each page is a trivial $I$-bundle over an
+oriented surface.
+
+\end{enumerate}
+
+\end{defn}
+
+\begin{lemma}
+
+Let $M$ be a reduced book of $I$-bundles. Then $M$ has a finite-sheeted regular
+cover which is good.
+
+\end{lemma}
+
+\begin{proof}
+
+To prove this, we'll repeatedly use the fact that $\pi_1M$ is LERF to construct
+finite sheeted covers with nice properties.
+
+We first take care of condition (1). Let $C$ be a spine, and let
+$A_1,\dots,A_n$ be the gluing annuli on $C$. These annuli must be parallel. Let
+$\alpha$ be a generator for $\pi_1C$ (a solid torus). Choose $k$ such that
+$\alpha^k$ is homotopic in $C$ to each $A_i$.
+
+Since $M$ is admissible, $C \cin M$ is $\pi_1$-injective ($\alpha^k$, ie a page
+gluing annulus, can't be homotopically trivial in an attached page). So $\alpha$
+generates a cyclic subgroup of $\pi_1M$.
+
+$\pi_1M$ is LERF. Let $\phi_C \colon \pi_1M \to G_C$ be a map to a finite group
+such that $\phi_C(\alpha),\phi_C(\alpha^2),\dots,\phi_C(\alpha^{k-1}) \notin
+\phi_C(\langle\alpha^k\rangle)$.  We can do this by repeatedly applying LERF to
+get a map for $\phi_C(\alpha)$, a map for $\phi_C(\alpha^2)$, etc, and taking
+the product of all these maps. Let $\phi \colon \pi_1M \to G = \prod_C G_C$  be
+the product of all these maps.  Again, we elide changes of basepoint.  Let $\pi
+\colon M' \to M$ be the associated regular cover of $M$.
+
+We claim that $M'$ satisfies (1). The spines of $M'$ are precisely connected
+components of preimages of spines of $M$. Let $C'$ be such a spine upstairs,
+and $C=\pi(C')$ the associated spine downstairs. Let $\alpha$ be a generator
+for $\pi_1C$.  Recallthat in our construction above, we chose a value $k$
+associated to each $\alpha$. Let $d$ be the degree of the restricted cover $C'$
+to $C$. Note that $d$ may not be the degree of the cover $M' to M$, as
+$\pi^{-1}(C)$ may not be connected.  We claim that $k|d$.
+
+Suppose not. Then $d = m1k - m2$, for some $m1,m2 \in Z$, $0 < m2 < k$.
+Rearranging, $m2 = m1k - d$. Choose $x_0 \in \alpha$, and let $x_0'$ be a lift of
+$x_0$ inside $C'$. Since $C'$ to $C$ is a $d$-fold cover of a solid torus (with
+cyclic $\pi_1$), $\alpha^d$ lifts to $C'$ as a closed curve. That is,
+$\phi(\alpha^d)$ is trivial.  But this implies $\phi(\alpha^m2)
+= \phi(\alpha^m1k)\phi(\alpha^-d) = \phi(\alpha^m1k)$, contradicting our LERF
+assumption that $\phi_C(\alpha^m2) \notin \phi_C(\langle\alpha^k\rangle)$.
+
+So $k|d$. Write $d = m1k$. Then each gluing annulus will, when raised to the
+$m1$th power, lift to an embedded annulus which traverses the longitude $C'$
+exactly once.  By regularity of the cover this implies that the union of all
+lifts of these annuli is a union of embedded annuli traversing the longitude of
+$C'$ exactly once. Since this argument holds for any $C'$ upstairs and $C$
+downstairs, $M'$ satisfies (1).
+
+Note that any further finite-sheeted cover of $M'$ will also satisfy (1), by
+looking locally at the lifting of gluing annuli above each spine.
+
+So now assume $M$ is reduced and satisfies (1). We claim $M$ has
+a finite-sheeted cover which satisfies (2).
+
+Let $B$ be a page intersecting a spine $C$ more than once. For each pair of
+gluing annuli $A_1$,$A_2$ which attach $B$ to $C$, we'll draw a closed curve as
+follows.  Fix a meridian disk $D$ of $C$. Choose an arbitrary point $x_1 \in
+A_1 \cap D$, $x_2 \in A_2 \cap D$. Choose an arbitrary arc $\beta \cin B$
+connecting $x_1$ and $x_2$.  Let $\gamma$ be the closed curve obtained by
+closing up $\beta$ with an arc along the interior of $D$.  Orient $\gamma$ so
+that it first traverses this arc through the interior of $D$, and then
+traverses $\beta$.  Fix $x_1$ to be our basepoint. Using LERF, choose a map
+$\phi_C,B,A_1,A_2$ such that $\phi_C,B,A_1,A_2(\gamma) \notin
+\phi_C,B,A_1,A_2(\pi_1B)$. Repeat this construction for each $A_1$,$A_2$ and
+each $B$,$C$ with multiple gluings. Let $\phi$ be the product of all these, and
+$M'$ the associated regular cover, just like above.  Same basepoint trickery as
+earlier.
+
+We claim that $M'$ satisfies (2). Suppose not. Let $B'$ be a page upstairs
+glued to a spine $C'$ more than once. Then $B=\pi(B')$ is also a page,
+$C=\pi(C')$ is a spine.  Since $\pi$ is a cover. either the multiple gluings of
+$B'$ to $C'$ project down to the same gluing of $B$ to $C$, or there are
+multiple gluings of $B$ to $C$. The first case is impossible, as all the
+gluings to a spine in a book of $I$-bundles must be parallel, but $\pi|C'
+\colon C' to C$ is a covering map of solid tori and downstairs each gluing only
+wraps once around the longitude by (1). So there must be multiple gluings of
+$B$ to $C$.  Let $A_1$, $A_2$ be annuli, and $A_1'$,$A_2'$ the corresponding
+gluing annuli upstairs.  Fixing our basepoint $x_1 \in A_1$ as above, $x_1$ has
+a lift $x_1'$ in $A_1'$.  Lift $\gamma$ to an arc $\gamma' \cin A_1'$ starting
+at $x_1'$.  Now $\gamma'$ first traverses a lifted meridian disk across the
+spine, meaning it crosses over to $A_2'$. The remainder of $\gamma'$ is a lift
+of $\beta$ beginning at a point in $A_2'$, but $\beta$ is contained in the page
+$B$, so $\gamma'$ must remain inside the page $B'$ upstairs. So $\gamma'$ is an
+arc with both endpoints in $B'$.
+
+But $B'$ is a path connected component of $\pi^{-1}(B)$. So covering
+translations of $M'$ over $M$ which take $x_1'$ to other lifts of $x_1 \in B'$
+are precisely the group elements $\phi(\pi_1B)$, that is, lifts of loops inside
+$B$. But $\gamma$ lifts to an arc with both endpoints in $B'$, so
+$\phi(\gamma)$ is also such a covering translation.  Hence $\phi(\gamma) \in
+\phi(\pi_1B)$, a contradiction.
+
+So we have a cover which satisfies (1) and (2). Since property (2) is also
+preserved under taking finite-sheeted covers, as discussed above with
+$A_1'$,$A_2'$ lying above $A_1$,$A_2$, it now suffices to show $M$ satisfying (1)
+and (2) has a finite-sheeted cover satisfying (3).
+
+$M$ is orientable by definition, so each page must be orientable as well. So
+the pages which are not trivial $I$-bundles over oriented pages must be twisted
+$I$-bundles over nonoriented pages (in order for the resulting page to be
+orientable). In particular, the endpoints of the $I$ fibers of a twisted
+$I$-bundle will connect globally to form a single side of the page. So if we
+look locally at an $I$ fiber, the two endpoints are guaranteed to be in the
+same boundary component of $M$ (since they're in the same boundary component
+even if we just look at that page). This explains why ensuring distinct
+boundary components for each fiber guarantees trivial $I$-bundles.
+
+Now we proceed by a similar argument as above. Let $B$ be a page such that
+fibers have both endpoints on the same boundary component $\bd_a M \cin \bd M$.
+Choose an arbitrary fiber $[0,1] isom I \cin B$. Let $\beta \cin \bd_a M$ be an arc
+in the boundary connecting the endpoints of $I$. This forms a curve $\gamma$.
+Fix one endpoint of $I$ to be our basepoint. Orient $\gamma$ so that from that
+basepoint, it first traverses $I$ and then $\beta$. Using LERF, choose a map
+$\phi_{\bd_aM,B} \colon \pi_1M to G$, where $G$ is a finite group, such that
+$\phi_{\bd_aM,B}(\gamma) \notin \phi_{\bd_aM,B}(\pi_1\bd_aM)$.  Note that $M$ has
+incompressible boundary, so $\pi_1\bd_aM$ embeds as a subgroup of $\pi_1M$. Also
+note that $\pi_1\bd_aM$ is finitely generated, as it's a compact surface.  As
+above, repeat this construction for each page where fibers have both endpoints
+on the same boundary component. Take the product $\phi \colon \pi_1M to G$
+(modifying by changes of basepoint as appropriate), and let $M'$ be the
+associated regular cover.
+
+We claim that $M'$ satisfies (3). Suppose not. Let $B'$ be a page with a fiber
+violating (3). Notice that all other fibers of $B'$ must also violate (3), as
+we can extend the boundary components locally between fibers.  Since boundary
+components of $M'$ cover boundary components of $M$, these fibers descend to
+fibers violating (3) in $B=\pi(B')$. So without loss of generality we can let
+$I' \cin B'$, a violating fiber, satisfy that $\pi(I')=I \cin B$ is one of the
+fibers we chose earlier in our construction.
+
+But now just like in our proof of (2), lift the corresponding basepoint $x_0$ to
+an endpoint of $I'$, call it $x_0'$, and lift $\gamma$ to $x_0'$. The resulting
+arc $\gamma'$ crosses $I'$ and then remains on the same boundary component of
+$M'$.  But this implies that the two endpoints of $\gamma'$ lie on the same
+boundary component of $M'$. Exactly like our argument in (2), this shows
+$\phi(\gamma) \in \phi(\pi_1\bd_aM)$, a contradiction. This completes the proof.
+
+\end{proof}
+
+{\tiny
+
+% TODO
+\textbf{TODO figure out what to do with this mini section here. Does any of it
+work? Is it necessary.}
+
+We also want to clarify the possible gluing annuli on the spines. Given a solid
+torus boundary curve $(l,m)$ that travels $m$ times around a meridian and $l$
+times around a longitude, we can ask whether it is permissible to glue a page
+along an annulus parallel to this curve. Obviously if we glue our pages along
+meridian curves $(0,1)$, we'll have a boundary compression along a parallel
+meridian disk.
+
+% I believe all other possibilities are ok, as long as we don't violate the
+% one-point intersection constraint Ian mentioned.
+
+\begin{lemma}["One-point intersection lemma"]
+
+Consider a solid torus, or more generally a handlebody, with a collection of
+$I$-bundles glued to it along annuli. The resulting manifold has a boundary
+compression iff there exists a meridian disk that intersects the boundary
+gluing curves exactly once.
+
+\end{lemma}
+
+\begin{proof}
+
+%Not immediately obvious. Use some cut and paste topology? TODO
+\textbf{TODO}.
+
+\end{proof}
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Proof of main theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We've now reduced to the case of a good book of I-bundles. However, the
+remaining work is still quite involved.
+
+This is the main proof, and is quite involved. We proceed somewhat similarly to
+the first example. We take covers over the pages and glue them together
+cleverly to construct our surface. We check that the parabolic locus arcs on
+each page lift to arcs on these covers that do not connect up to form a closed
+curve. As in the first example, this suffices to prove that our surface
+satisfies \eqref{E:qf}. We first need to take the correct cover over each page.
+
+This is a somewhat elaborate construction. First, we need as our building
+blocks covers where it is not so easy to join up the parabolic arcs to make
+closed curves. In particular, we use the following lemma.
+
+\begin{lemma}
+
+Let $S$ be a compact surface with boundary, and $P$ a finite set of simple
+proper essential arcs on $S$ (not necessarily disjoint).  Then there exists
+a finite-sheeted cover $S'$ of $S$ such that the preimage $\pi^{-1}(P)$
+consists of arcs each of which connects 2 different boundary components of
+$S'$.
+
+\end{lemma}
+
+\begin{proof}
+
+Let $\alpha \cin P$ be an arc, and suppose that both endpoints of $\alpha$ lie
+on the same boundary component $\gamma \cin bd S$. Fix a basepoint $x_0$ in
+$\gamma$.  Homotope $\alpha$ by moving both endpoints to $x_0$ along $\gamma$.
+(The choice of homotopy is arbitrary). This gives a closed curve $\beta$
+through $x_0$. Since $\alpha$ is simple and essential, $[\beta] \notin
+<[\gamma]> \cin \pi_1S$. If $\beta$ were a multiple of $\gamma$, we could
+isotope it to a neighborhood of $\gamma$, and then undoing the earlier homotopy
+$\alpha$ would have to be non-essential (isotoping the endpoints around to
+"unwind the spiral".
+
+$\pi_1S$ is free, so it's LERF. So there exists a map $\phi\alpha$ to a finite
+group $G\alpha$, such that $\phi\alpha([\beta]) \notin \phi\alpha(<[\gamma]>)$.
+Repeat this construction for each $\alpha \cin P$. Let $G = \prod \alpha
+G\alpha$, and $\phi \colon\pi_1S \to G$ the product map. Since $G$ is finite,
+$\phi$ induces a finite-sheeted regular cover $\pi \colon S' \to S$. We claim
+that $\pi^{-1}(P)$ consists of arcs connecting two different boundary
+components of $S'$.
+
+Note that we're eliding the fact that these maps $\phi\alpha$ are defined on
+$\pi_1S$ with different basepoints. However, if we choose an arbitrary path
+connecting each additional basepoint to a fixed basepoint we choose, the
+induced isomorphisms on $\pi_1S$ carry over the nice cover lifting properties
+between different basepoints. Our curves $\beta$ and $\gamma$ still correspond
+to elements of $\pi_1$ which lift in the appropriate way, once we do a reverse
+change of basepoint upstairs. So this is not a problem.
+
+Obviously if $\alpha \cin S$ is an arc which already connects two distinct
+boundary components downstairs, the arc covering it must also connect two
+boundary components (the possible boundary component preimages are disjoint).
+So we need only consider $\alpha$ with both endpoints on the same boundary
+component $\gamma$.  Fix $x_0$ as above, and let $\widetilde{x_0}$ be an
+arbitrary lifted basepoint in $S'$.  Look at a lift of $\beta$ to a path
+$\widetilde{\beta}$ starting at $\widetilde{x_0}$. $\widetilde{\beta}$ must end at some lift
+of $x_0$.
+
+Since $S'$ is a regular cover, the covering transformation group $\gamma$ is
+precisely $image(\phi)$. Since $\phi([\beta])$ is nontrivial, it corresponds to
+a covering transformation. This transformation must map $\widetilde{x_0}$ to
+the other endpoint of $\widetilde{\beta}$, by basic covering space theory. But the
+boundary component of $S'$ containing $\widetilde{x_0}$ is a finite-sheeted
+cover of $\gamma$, and all the lifts of $\widetilde{x_0}$ contained in this
+boundary component are connected to $\widetilde{x_0}$ by a lift of a finite
+power of $\gamma$. That is, $\widetilde{x_0}$ is mapped to these other points
+by transformations corresponding to powers of $\phi([\gamma])$.  But since
+$\phi([\beta]) notin \phi([\gamma])$, the $\phi([\beta])$ transformation can't
+be any of these. So it must send $\widetilde{x_0}$ to a point in a different
+boundary component. $\widetilde{\beta}$ obviously connects the same boundary
+components as a lift of $\alpha$ to $\widetilde{x_0}$, because we just homotope
+along the boundaries. So the lift of $\alpha$ to $\widetilde{x_0}$ connects two
+different boundaries.  $S'$ is a regular cover, so this applies to any lift.
+This completes the proof.
+
+\end{proof}
+
+\begin{proof}[Proof of Main Theorem]
+
+% d = lcm degree of subgp sep cover (lcm of degree on each page)
+% After taking copies of each subgp sep cover to ensure all are same degree:
+% n = (large) # of copies of each cover above
+% m = # of copies of each bc to reserve
+% i(M,P,S_a) = max # incident arcs at a bc on S_a boundary component
+% TODO call this ia
+% j(M,P,S_a) = total # bcs on page boundaries making up S_a ("junctions")
+
+% TODO
+\textbf{ TODO This notation is completely different from my other notation! Be
+clear and consistent.}
+
+Consider an arbitrary boundary component $S_a$ of the book of $I$-bundles $M$.
+Cutting $M$ along the gluing annuli decomposes $\bd_aM$ into a union of pieces
+each of which is one side of an $I$-bundle page. Call these pieces $S_{a,k}$.
+Then the page is $S_{a,k}\times I$, with the piece embedded as $S_{a,k}\times
+0$ or $S_{a,k}\times 1$. Without loss of generality let it be $S_{a,k}\times
+0$. We can look at the pattern of arcs $P_{a,k} = P \cap (S_{a,k}\times 0)$ on
+that side of the page, which is part of $\bd_aM$. We can also look at the pattern
+of arcs on the opposite side of the page $\overline{P_{a,k}} = P \cap
+(S_{a,k}\times 1)$, and temporarily view it as living inside $S_{a,k}$
+(flattening $S_{a,k}\times I \to S_{a,k}$).  For each piece, apply the lemma
+above to ($S_{a,k},P_{a,k} \cup barP_{a,k}$) to obtain a cover $S'_{a,k}$. If we
+view this as a cover of $S_{a,k}x0$ and $S_{a,k}x1$, it has the property that
+any arc in $P_{a,k}$ or $barP_{a,k}$ lifts to an arc connecting two different
+boundary components of $S'_{a,k}$.
+
+Let $d_{a,k}$ be the degree of this cover. Let $d = lcm a,k d_{a,k}$.
+
+Fix some large integer $n>0$. Now for each $k$, let $\pi_{a,k}
+\colon \widetilde{S_{a,k}} \to S'_{a,k} \to S_{a,k}$ be a disjoint union of $nd/d_{a,k}$
+copies of $S'_{a,k}$. The purpose of the $d/d_{a,k}$ normalization is to make sure
+each $\pi_{a,k}$ is a cover of the same degree, $n*d$.  We'll call the connected
+components of this cover "pieces". We can also combine these into a single
+cover $\pi \colon \bigsqcup \widetilde{S_{a,k}} \to \bigsqcup S_{a,k}$
+
+Fix a large integer $m>0$. Now, reserve a subset $\cC$ of the boundary
+components of $\bigsqcup \widetilde{S_{a,k}}$.  This subset should have the following
+properties:
+
+(1) Each boundary component of each $S_{a,k}$ is covered by exactly $m$ elements
+of $\cC$.
+
+(2) Every connected component of $\bigsqcup \widetilde{S_{a,k}}$ contains at most one element
+of $\cC$.
+
+This is possible as long as $n \geq mb$, where $b$ is the maximum number of
+boundary components of any $S_{a,k}$. If $n\geq mb$, we know $d/d_{a,k} \geq
+1$, so each disjoint union $\widetilde{S_{a,k}}$ has at least $mb$ many
+disjoint copies of each $S'_{a,k}$.  So we have enough copies to make our choices
+above that $S_{a,k}$ disjoint.
+
+Each $S_{a,k}$ is homeomorphic to the core surface of its page, so by the covering
+lemma any closed surface formed by gluing the $\widetilde{S_{a,k}}$ along appropriate
+boundaries will induce an immersed $\pi_1$-injective surface in $M$. This is
+our strategy.
+
+Write $\widetilde{P_{a,k}}=\pi_{a,k}^{-1}(P_{a,k})$. As constructed, $P_{a,k}$ consists of proper arcs
+connecting two different boundary components of $\widetilde{S_{a,k}}$.
+
+We first glue the pieces "along" $\bd_aM$ in the following sense. Given any two
+pieces $S_{a,k_1}$, $S_{a,k_2}$ in the decomposition of $\bd_aM$, we know that
+$S_{a,k_1}$ has some boundary components $\gamma_1,\gamma_2,\dots \cin
+dS_{a,k_1}$, and $\gamma_1',\gamma_2',\dots \cin dS_{a,k_2}$ such that before we
+cut $\bd_aM$ apart, $\gamma_1$ was glued to $\gamma_1'$, $\gamma_2$ to
+$\gamma_2'$, etc.  That is, these components form the locus we glue $S_{a,k_1}$
+and $S_{a,k_2}$ together along when we glue the $S_{a,k}$ to form $\bd_aM$.  For
+each such pair, look at the boundary components of $\widetilde{S_{a,k}}1$ and
+$\widetilde{S_{a,k}}2$.  We allow ourselves to glue components of
+$\pi^{-1}(\gamma_1)$ to components of $\pi^{-1}(\gamma_1')$, components of
+$\pi^{-1}(\gamma_2)$ to components of $\pi^{-1}(\gamma_2')$, etc. We forbid
+ourselves from gluing components of $\pi^{-1}(\gamma_1)$ to any other lifted
+boundary components of $S_{a,k_2}$ or of any other pieces. Only on the very last
+step of our construction will we break this rule.
+
+Note that since our gluing is locally a cover we can only glue each pair of
+boundary components upstairs in one possible way - we could choose a different
+gluing, but this would just correspond to a different choice of cover by the
+covering lemma.
+
+We introduce some notation. Bbegin by taking $\widetilde{S}^{(0)} = \bigsqcup \widetilde{S_{a,k}}$ to
+be a disjoint union of these covers - that is, we haven't done any gluing yet.
+Think of these as pieces we'll use to build our cover. At each step in the
+gluing, we have a gluing map $f(i+1) \colon \widetilde{S}^{(i)} \to
+\widetilde{S}^{(i+1)}$ by attaching two boundary comonents of
+$\widetilde{S}^{(i)}$. Write $\widetilde{P}^{(i)}$ for the arcs and curves on
+$\widetilde{S}^{(i)}$ induced by gluing the $\widetilde{P_{a,k}}$.  That is,
+$\widetilde{P}^{(i)} = f(i) \circ ...  \circ f(1) (\bigsqcup
+\widetilde{P_{a,k}})$.
+
+We'll want to glue boundary components other than $\cC$ first - these are the
+"reserve" that we'll only use at the end. This guarantees that our final glued
+surface will have leftover boundary components that are sufficiently far apart.
+By abuse of notation, we'll also use $\cC$ to refer to the induced set of
+boundary components in each $\widetilde{S}^{(i)}$.
+
+In addition to gluing along $\bd_aM$ and avoiding gluing members of $\cC$, we want
+to preserve the following two invariants.
+
+% FIXME decide what to call it in the paper...  still need to figure out how
+% I'm going to do the references too
+
+\begin{enumerate}
+
+\item[(\dag)] $\widetilde{P}^{(i)} \cin \widetilde{S}^{(i)}$ contain no closed
+curves.  That is, it is a union of proper arcs. \label{I:dag}
+
+\item[(\dag')] No arc of $\widetilde{P}^{(i)}$ begins and ends at the same
+boundary component of $\widetilde{S}^{(i)}$. \label{I:dag'}
+
+\end{enumerate}
+
+By the use of the lemma and the assumption of the theorem (no closed curves in
+individual pages), $\widetilde{S}^{(0)}$ satisfies (\dag) and (\dag') We
+repeatedly make an arbitrary gluing that lies along $\bd_aM$ in the above
+sense, doesn't glue any elements of $\cC$, and preserves (\dag) and (\dag').  This
+process will terminate at some $\widetilde{S}^{(N)}$, after there are no more
+gluings left to make. $\widetilde{S}^{(N)}$ is a surface with boundary, because
+there are "leftover" boundary components that we couldn't glue without
+violating one of the above conditions.
+
+% FIXME restructure into lemmas?
+%Claim.
+
+We claim that $\#(d\widetilde{S}^{(N)} - \cC)$ is bounded by $C(M,P,S_a)$.  In
+particular, this bound is independent of the choice of $n$ and $m$ made
+earlier.
+
+%Proof of Claim.
+
+Consider an arbitrary boundary component $\widetilde{\gamma} \cin
+d\widetilde{S}^{(N)} - \cC$.  It lives above some boundary component $\gamma
+\cin dS_{a,k}$. Look at the number of arcs of $P_{a,k}$ which are incident to
+$\gamma$. This number depends only on $M$ and $P$ (not on $n$). Let $i_a
+= i(M,P,S_a)$ be the maximum such number of incident arcs of $P$ for any
+boundary component $\gamma$ of any $S_{a,k} in S_a$. Let $j_a = j(M,P,S_a)$ be
+the total number of boundary components of the $S_{a,k}$.
+
+Let $\gamma' \cin dS_{a,k}'$ be the boundary component matching $\gamma$. We
+consider gluing $\gamma$ along $M$ to any component of $\bd\widetilde{S}^{(N)}
+- \cC$ above $\gamma'$.  Because we always glue matching boundary components
+(and we started with the same number of each), $\bd\widetilde{S} - \cC$ has the
+same number of leftover boundary components above $\gamma'$ as it does above
+$\gamma$. So there must be at least one to glue to.  The only reason we'd be
+unable to glue is if gluing to any leftover lift of $\gamma'$ violates (\dag) or
+(\dag').
+
+Let $\widetilde{\gamma}' \cin \bd\widetilde{S}^{(N)} - \cC$ be an arbitrary
+leftover lift of $\gamma'$.  Suppose gluing to $\widetilde{\gamma}'$ violates
+(\dag). Let $\alpha$ be a closed curve produced by the gluing.  Obviously
+$\alpha$ intersects the $\widetilde{\gamma} = \widetilde{\gamma}'$ gluing
+circle, otherwise $\widetilde{S}^{(N)}$ would already violate (\dag).  Cutting
+along this circle divides $\alpha$ into a union of arcs with endpoints on
+either $\gamma$ or $\gamma'$.  $\widetilde{S}$ satisfies (\dag'), so no arc can
+have both endpoints on the same boundary component. So there exists an arc
+connecting $\gamma$ to $\gamma'$. This is the only way that an additional
+gluing would violate (\dag). But since $\widetilde{S}^{(N)}$ is locally a cover
+on each piece, the number of arcs incident to $\gamma$ is bounded by $i_a$.
+Tracing these arcs through $\widetilde{S}^{(N)}$, they can hit at most $i_a$
+other boundary components.  These are the only boundary components we can glue
+to to violate (\dag).
+
+Similarly, suppose gluing to $\widetilde{\gamma}'$ violates (\dag'). Let $\alpha$ be an
+arc with endpoints on the same boundary component produced by the gluing. Let
+$\widetilde{\delta}$ be this boundary component. Again, $\alpha$ intersects the
+$\widetilde{\gamma} = \widetilde{\gamma}'$ gluing circle, otherwise $\widetilde{S}^{(N)}$ would already
+violate (\dag').  Cutting along this circle divides $\alpha$ into a union of
+arcs.  Except for the two original endpoints (which now lie on two different
+subarcs - call these subarcs $\alpha_0$ and $\alpha_1$), all other endpoints of
+these arcs must either lie on $\gamma$ or $\gamma'$.  But no arc can have both
+endpoints on the same boundary component, or $\widetilde{S}^{(N)}$ would arleady violate
+(\dag'). So any subarcs except $\alpha_0$ and $\alpha_1$ must connect $\gamma$ to
+$\gamma'$.  By parity we can see that $\alpha_0$ and $\alpha_1$ both have one
+endpoint on $\widetilde{\delta}$, but their other endpoints must be different. That is,
+either $\alpha_0$ ends on $\widetilde{\gamma}$ and $\alpha_1$ on $\widetilde{\gamma}'$, or vice
+versa.
+
+Now the arcs incident to $\widetilde{\gamma}$ hit at most $ia$ other boundary
+components. These are our possible $\widetilde{\delta}$. Each of these has at
+most $i_a$ incident arcs itself, one of which returns to $\widetilde{\gamma}$,
+leaving $i_a-1$ that we need to care about. We have a total of at most
+$i_a*(i_a-1)$ many "distance two" leftover boundary components. These are the
+only boundary components we can glue to to violate (\dag').
+
+But by construction of $\widetilde{S}^{(N)}$, there are no more legal gluings. So
+$\widetilde{S}$ can have at most $i_a+(i_a*(i_a-1)) = i_a^2$ many leftover boundary
+components (that is, components of $\bd\widetilde{S}^{(N)}-\cC$) above $\gamma'$.  But since
+$\widetilde{S}^{(0)}$ has the same number of boundary components above $\gamma$ and
+$\gamma'$, and we're only allowed to glue them to each other, this implies that
+there can be at most $i_a$ boundary components above $\gamma$ as well.  Since
+our choice of $\widetilde{\gamma}$ was arbitrary, this implies that there are
+at most $C(M,P,S_a) = i_a^2*j(M,P,S_a)$ many leftover boundary components, that
+is, components of $\bd\widetilde{S}^{(N)}-\cC$.
+
+%Proof of Theorem contd.
+
+Now that we've constructed $\widetilde{S}^{(N)}$, we want to perform some additional
+gluings to construct $\widetilde{S}$. In addition to (\dag) and (\dag'), $\widetilde{S}$ should
+satisfy
+
+\begin{enumerate}
+
+\item[(\dag'')] Any two boundary components of $\widetilde{S}$ lie on different
+pieces. That is, they correspond to boundary components of different connected
+components of $\widetilde{S}^{(0)}$ under the gluing map $\widetilde{S}^{(0)}
+\to \widetilde{S}$.
+
+\end{enumerate}
+
+Intuitively, this is easy using the reserve. The reserve on its own satisfies
+(\dag''), so we only have to deal with the leftovers discussed above.  The trick
+is the reserve is much larger than the leftovers, so if we allow ourselves to
+glue the leftovers to the reserve we can take care of all the leftovers without
+violating (\dag) or (\dag'). Our remaining boundary components will be a subset
+of the reserve.
+
+To be precise, construct $\widetilde{S}$ from $\widetilde{S}^{(N)}$ as follows.
+For each boundary component $\gamma$ downstairs, as discussed above, there are
+at most $i^2$ many elements of $\bd\widetilde{S}^{(N)}-\cC$ above it. For each of
+these, there are at most $i^2$ we could glue to above $\gamma'$ that violate
+(\dag) or (\dag').  Assume that $m\geq 2i^2$.  Then glue each leftover lift of
+$\gamma$ to an element of $\cC$ above gama', one at a time. At any point there
+will be at least $i^2+1$ elements of $\cC$ remaining above $\gamma'$, so we'll
+always be able to choose one that doesn't violate (\dag) or (\dag'). Repeat
+this process for each $\gamma$ to construct $\widetilde{S}$.  Since we glued
+all the leftovers, it immediately follows that $\bd\widetilde{S} \cin \cC$, and
+therefore $\widetilde{S}$ satisfies (\dag'').
+
+Let's analyze the possibilities for $\#\bd\widetilde{S}$, the number of
+boundary components. Above each $\gamma \cin dS_{a,k}$,
+$\cC$ has $m$ elements. So $\bd\widetilde{S}$ has at most $m$ components above
+$\gamma$, or $m*j$ many boundary components in total. The lower bound is
+determined by the maximum number of leftovers, since the only way we'll remove
+reserve components from $\bd\widetilde{S}$ is by gluing them to leftover
+components. There are at most $i^2$ leftover components above $\gamma$, and
+similarly above $\gamma'$, so there will be at least $m - i^2$ components
+remaining in $\bd\widetilde{S}$ above $\gamma$. So
+
+\[ m-i_a^2 \leq \#(\bd\widetilde{S} \text{ above }\gamma) \leq m \]
+
+and
+
+\[ (m-i_a^2)j_a \leq \#\bd\widetilde{S} \leq mj_a \]
+
+Finally, suppose we've done the entire above construction for each boundary
+component of our book of $I$-bundles $M$ to produce a partially-glued surface
+with some boundary components left over. For each boundary component $\bd_aM$,
+we'll call the surface $\widetilde{S_a}$. Note that we must be sure to make the same
+choice of $n$ and $m$ for all these surfaces. Now we want to glue these
+together, but they may have very different numbers of boundary components! So
+we'll need to normalize them so they all have the same number of boundary
+components above each $\gamma \cin dS_{a,k}$, so we can do a local construction
+above a neighborhood of each spine in $M$.
+
+Let $i_M = max a i_a$. By the inequality above, for each $\gamma \cin S_{a,k}$,
+$\#(d\widetilde{S_a} \text{ above } \gamma) \geq m - i_M^2$. We want to make
+this an equality for each $\widetilde{S_a}$ by performing some more gluings.
+
+Again, we use the size of the reserve to our advantage. Assuming $m\geq i_M^2
++ i_a^2$ for each $\widetilde{S_a}$, by the same argument as above there will
+always be choices remaining from the reserve to make the gluing. Combining
+these all we need is $m\geq 2i_M^2$.
+
+By abuse of notation, we'll call these normalized surfaces $\widetilde{S_a}$ also (the
+non-normalized ones will not come up again). Each has exactly $C = m - i_M^2$
+many boundary components above any $\gamma \cin dS_{a,k}$.
+
+Build a single surface $\widetilde{S}$ by gluing the $\widetilde{S_a}$ as follows. Begin with
+$\bigsqcup_a \widetilde{S_a}$.
+
+For each spine $M_c$ of $M$, look at all the incident pages. Say there are $q$
+of them.  Each page has two sides, so there are $2q$ many pieces $S_{a,k}$
+downstairs near $M_c$, each with one boundary component glued along the spine
+$M_c$.  Because $M$ is good, we know that all these $S_{a,k}$ are distinct and
+they are all glued along simple parallel closed curves on $\bd M_c$ (do we know
+they're longitudes?  See above \textbf{ TODO}).
+
+Introduce notation as follows. $\cN(M_c)$ consists of $q$ neighborhoods inside
+pages, attached to $M_c$ by annuli. The meridian of $M_c$ gives a cyclic order to
+the attached pages.  Fix an orientation for the meridian and an (arbitrary)
+starting point along it, and label the pages $1, \dots, q$ under this ordering.
+The orientation of the meridian also gives an ordering of the boundary
+components of each attaching annulus.  Using this, label the $2q$ boundary
+components by $\gamma_1^-,\gamma_1^+,\dots, \gamma_q^-,\gamma_q^+$, where
+$\gamma_i^-$ and $\gamma_i^+$ are the two sides of the attaching annulus for
+the ith page.
+
+Now consider $\bd M \cap \cN(M_c)$. Notice that the $2q$ boundary components of these
+attaching annuli that we just labeled are precisely the $2q$ boundary curves of
+the boundary pieces $S_{a,k}$ that are near $M_c$. We don't know how many global
+boundary components $a$ are involved, but locally we do know which pieces are
+attached inside $\bd M \cap \cN(M_c)$. $\bd M \cap M_c$ consists of q parallel annuli
+along $\bd M_c$ that connect adjacent pages together. That is, the first annulus
+has boundary $\gamma_1^+ \cup \gamma_2^-$, the second $\gamma_2^+ \cup
+\gamma^3_-$, and so on.  It follows that these are the "pairs downstairs" in
+the above construction of each $\widetilde{S_a}$. That is, these are the curves
+we called $\gamma$ and $\gamma'$ earlier.  So within $\bigsqcup \widetilde{S_a}$,
+the existing gluings only glue lifts of $\gamma_1^+$ to lifts of $\gamma_2^-$,
+lifts of $\gamma_2^+$ to lifts of $\gamma_3^-$, etc etc.
+
+Finally, the gluing. Because we normalized, each $\bigsqcup_a \widetilde{S_a}$ has
+exactly $C$ boundary components above each $\gamma_i^\pm$.  Glue these $2qC$
+boundary components as follows. Glue lifts of $\gamma_1^+$ to lifts of
+$\gamma_3^-$, lifts of $\gamma_2^+$ to lifts of $\gamma_4^-$, and so on. In
+general glue lifts of $\gamma_i^+$ to lifts of $\gamma_{i+2}^-$. Within each
+subset of lifts, choose the gluing arbitrarily. We know the numbers on each
+side are equal, so they'll match up.
+
+Every boundary component of $\bigsqcup_a \widetilde{S_a}$ lives above a boundary component
+of some $S_{a,k}$ which means it is attached to some core $M_c$. So once we've done
+the above gluing step for all cores, the resulting surface $\widetilde{S}$ is closed.
+
+%Claim.
+
+Finally, we claim $\widetilde{S}$ satisfies \eqref{E:qf}.
+
+%Proof of Claim.
+
+% TODO
+\textbf{TODO simplify this argument using good property (3) as written up
+earlier and discussed with Ian!!}
+
+By construction, $\widetilde{S}$ consists of covers of each page of $M$ glued along
+parallel longitudinal annuli at the spines of $M$. By the covering lemma, it
+induces an immersed $\pi_1$-injective surface. It remains to show that
+$\widetilde{S}$ cannot contain any lifts of parabolic curves.
+
+Let $\alpha$ be a parabolic curve in some boundary component $S_a$ of $M$. Cut
+$\alpha$ into arcs $\alpha_i$ along the page boundaries, so each $\alpha_i \cin
+S_{a,k_i}$.  We can think about this as follows. For each $\alpha_i$, there are two
+kinds of lifts to $\widetilde{S}$. We can view it as an arc in $P_{a,k_i} \cin
+S_{a,k_i}$, and lift it to a cover of $S_{a,k_i}$, that is, a component of
+$\widetilde{S_{a,k_i}}$. Since $\alpha \cin S_a$, this will necessarily be part
+of $\widetilde{S_a} \cin \widetilde{S}$. Furthermore, by construction of
+$\widetilde{S_a}$, lifting the $\alpha_i$ to $\widetilde{S_a}$ pieces and
+gluing cannot yield closed curves.  It only yields a union of arcs, by (\dag).
+
+However, the second way we can lift $\alpha_i \cin S_{a,k_i}$ is to a cover of the
+opposite page boundary $\overline{S_{a,k_i}}$. Let $S_b$ be the boundary component
+containing $\overline{S_{a,k_i}}$, and write $S_{b,l_i} = \overline{S_{a,k_i}}$, we can see that $\alpha_i$
+in $\overline{P_{b,l_i}}$, the set of "opposite parabolic arcs" that we defined earlier.
+So $\alpha_i$ lifts to $S'b,li$ as a union of arcs, each of which connects two
+different boundary components of $S'b,li$. This produces a set of arcs in
+$\widetilde{S_b}$. Note that it may be possible to have $S_a = S_b$, depending on
+how our book of $I$-bundles is constructed.  Regardless, we want to think of
+these as a different kind of lift, because we're using the opposite page side
+to lift, rather than the side the arc "naturally lives on."
+
+We now claim that these arcs cannot be used to form closed curves in
+$\widetilde{S_b}$.  Intuitively, this is because the opposite side of the
+boundary does not remain parallel to $\alpha$ for long enough, so we'll soon
+reach a piece of $\widetilde{S_b}$ where our lift can't continue.  To be
+precise, let $\widetilde{\alpha_i}$ be a lift of $\alpha_i$ to
+$\widetilde{S_b}$.  Suppose $\alpha_i$ has an endpoint at a spine $M_c$. If we
+look at how the boundary components of a book of $I$-bundles behave near
+a spine, we that locally the two boundary sides of a page are attached to sides
+of two different pages.  In the terminology we used earlier for gluing pages at
+a spine, $\gamma_i^-$ and $\gamma_i^+$ are attached to the attaching annulus
+boundary curves of two different pages: $\gamma_i^-$ attaches to
+$\gamma_{i+1}^+$, but $\gamma_i^+$ attaches to $\gamma_{i-1}^-$.  Since there
+are at least three pages at $M_c$ by (3), the $(i-1)$st and $(i+1)$st pages are
+distinct.
+
+Suppose that the endpoint of $\alpha_i$ we're considering lies on $\gamma_i^-$. That
+is, $\gamma_i^-$ is a boundary component of $S_{a,k_i}$, in our other notation. And
+$\gamma_i^+$ is a boundary component of the opposite page $\overline{S_{a,k_i}} = S_{b,l_i}$.
+Since $\gamma_i^-$ attaches to $\gamma_{i+1}^+$, any lifted arc we attach
+$\widetilde{\alpha_i}$ to in that direction must lift from that $(i+1)$st page at $M_c$.
+But in $\widetilde{S_b}$, we attach the surface pieces according to the gluings needed
+for the $S_b$ boundary component.  Locally, $\widetilde{\alpha_i} \cin \widetilde{S_b},li$, where
+lifts of $\gamma_i^+$ only attach to lifts of $\gamma_{i-1}^-$. But $\gamma_{i-1}^-$ is
+a boundary component of a different page, so $\widetilde{\alpha_i}$ connects to a next
+page with no lift of the next segment of $\alpha_i$. So there is no possible way
+to continue $\widetilde{\alpha_i}$.  The same argument applies at the opposite endpoint
+of $\widetilde{\alpha_i}$. This argument shows that lifts of arcs $\alpha_i$ as "opposite
+parabolic arcs" to $S_b$ have no "opposite arcs" on either side that they can
+glue to.
+
+Finally, suppose our parabolic curve $\alpha \cin S_a$, after cutting into
+$\alpha_i$, lifts to pieces $\widetilde{\alpha_i}$ which form a closed curve $\widetilde{\alpha}
+\cin \widetilde{S}$.  Cut $\widetilde{\alpha}$ along only the gluings between different
+$\widetilde{S_b}$ done in the final gluing step. Each piece $\widetilde{\alpha_j}$ now consists
+of multiple $\widetilde{\alpha_i}$, which are either all "natural lifts" or all
+"opposite lifts" (in the above sense). This is simply because each $\widetilde{S_b}$
+is, except for its extra boundary components, a cover of the corresponding
+$S_b$, and there's no way $\alpha$ to locally jump from being on the opposite
+side of a page from $S_b$ to suddenly being on the same side. However, at the
+gluings in the final step, we attach covers of different boundary components
+together, so we may have attached multiple pieces $\widetilde{\alpha_j}$ of the same
+type, or different types.
+
+It is impossible to attach two natural segments $\widetilde{\alpha_j}$ in the final
+step.  Suppose we had such an attachment, and look locally at the spine where
+they're attached. Our attachment must yield a lift of $\alpha$, so we can look
+at the local neighborhood in $\alpha$ covered by a neighborhood of our
+attachment point.  Near the spine, this neighborhood must live in a single
+local boundary component. But as we discussed in detail above, each local
+boundary component simply consists of small neighborhoods on two page
+boundaries, joined together by an annulus. Locally, a natural segment can only
+be obtained by lifting to a cover of one of these two page boundaries, not any
+of the other page boundaries near this spine. So one side of our attachment
+must lie on one page boundary, and the other side on the other. But by
+definition of how we do our final attaching step, we never attach in such a way
+that we follow along the local boundary components! This is the point of having
+valence at least 3 at each spine, and attaching $\gamma_i^+$ to
+$\gamma_{i+2}^-$, is to avoid this problem. Since we never do attachments of
+this form, we can't have an attachment with natural lifts on both sides.
+
+So each attachment must have an opposite lift on one or both sides. But recall
+that by (\dag''), each piece of each $\widetilde{S_b}$ has at most one free boundary
+component. So all the $\widetilde{\alpha_j}$ must traverse at least two pieces, as we
+ensured by construction of the $S'_{a,k}$ that they couldn't begin and end at the
+same boundary component. This is where we finally use all those
+carefully-established earlier criteria.
+
+Because finally, as shown above, opposite lifts of individual $\alpha_i$ cannot
+connect to opposite lifts on either side. So it's impossible to construct
+a $\widetilde{\alpha_j}$ made out of opposite lifts, since it has to traverse
+more than one piece.  This contradicts our assumption that the
+$\widetilde{\alpha_j}$ glue to form a closed curve.
+
+So we cannot join up the lifts of $\alpha_i$ to form a lift of $\alpha$. This
+completes the proof of the theorem.
+
+\end{proof}
+
+\begin{thm}
+
+Let $M$ be a good book of $I$-bundles.  Suppose $M$ does contain a component of
+the parabolic locus $P$ inside a single page's boundary.  Construct $M'$ by
+deleting all such pages from $M$, and $P'$ by removing all components of the
+pared locus that intersect those pages. Then $(M,P)$ contains a surface
+satisfying \eqref{E:qf} if and only if $(M',P')$ is nonempty and contains
+a surface satisfying \eqref{E:qf}.
+
+\end{thm}
+
+\begin{proof}
+
+First observe that if $(M,P)$ contains a surface satisfying \eqref{E:qf}, it cannot
+traverse any of the pages we deleted to obtain $M'$, by the same argument as in
+our first example.  Since our surface exists, $M'$ must be nonempty.
+Furthermore, since $(M',P') \cin (M,P)$, it satisfies \eqref{E:qf} for $M',P'$ as well.
+Conversely, if we have such a surface, we can obviously view it as contained in
+$(M,P)$, where it must satisfy \eqref{E:qf} because it doesn't intersect the deleted
+pages at all.
+
+Note that $(M',P')$ may be nonelementary, or it still may not be good.
+However, we can repeat the steps needed to guarantee that it's good, and obtain
+a manifold where we can either apply this theorem again, or use the first
+theorem. It is not immediately clear that this process terminates, because
+taking the finite-sheeted cover we use for (2) and (3) makes the manifold more
+complicated, possibly increasing the number of parabolics. We'll have to do
+this carefully. Possibly we should do this step BEFORE the other
+simplification, but then we'll have to make sure the parabolics pass through
+that simplification nicely.
+
+\end{proof}

@@ -1,0 +1,386 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Background on pared 3-manifolds and uniformization}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Material in this section is from \cite{Mo} and \cite{CMc}. Look there for
+further details.
+
+%Definition and important facts about pared manifolds. After Morgan, The Smith
+%Conjecture, V ("Uniformization Theorem for Three-Dimensional Manifolds"),
+%p 58-60. Or Canary-McCullough, Homotopy Equivalences of 3-Manifolds and
+%Deformation Theory of Kleinian Groups, Ch 5 p. 87-92. Also Ch 7 p.105-107.
+%Note that Canary-McCullough is much more recent.
+%
+%(Morgan p58) (Canary-McCullough p87)
+\begin{defn}
+
+A \emph{pared manifold} $(M,P)$ is a compact orientable irreducible 3-manifold
+$M$, together with $P\cin\bd M$, such that the following conditions hold:
+
+\begin{enumerate}
+\item Every component of $P$ is a torus or annulus, incompressible in $M$.
+
+\item Every noncyclic abelian subgroup of $\pi_1M$ is peripheral with respect
+to $P$ -- ie, conjugate to the fundamental group of a component of $P$.
+
+\item $(M,P)$ is ``annulus-incompressible'': every $\pi_1$-injective map $(A^2,
+\bd A^2) \to (M,P)$ is homotopic (as a map of pairs) to a map into $P$.
+
+\end{enumerate}
+
+We call $P$ the \emph{pared locus} or \emph{parabolic locus} of the pared
+manifold $(M,P)$.
+
+\end{defn}
+
+Note that there are a few pared manifolds that are special cases, like with
+elementary Kleinian groups. In fact, these are precisely the pared manifolds
+that correspond to elementary Kleinian groups when we construct pared
+3-manifolds from Kleinian groups below.
+
+%(Canary-McCullough p88)
+\begin{defn}
+
+A pared manifold $(M,P)$ is \emph{elementary} if it is homeomorphic (as a pair)
+to one of the following: $(T^2\x I,T^2\x 0)$, $(A^2\x I,A^2\x 0)$, or $(A^2\x
+I,\emptyset)$.
+%(or (Morgan only) (S3,empty)).
+
+\end{defn}
+
+%(Morgan p59, Canary-McCullough p88)
+\begin{prop}
+
+Let $(M,P)$ nonelementary. The following facts hold:
+
+%In fact, Canary-McCullough makes these 3 statements. Morgan only has the 4th.
+\begin{enumerate}
+\item M is not a $T^2\x I$, $K^2$ $I$-bundle, or $A^2\x I$ (solid torus).
+\item M does not contain an embedded $K^2$
+\item For every component $Q$ of $P$, $\pi_1Q$ is a maximal abelian subgroup of
+$\pi_1M$.
+\item Every component of $\bd M-P$ has negative Euler characteristic.
+% Yes this is correct. But the only extra info we get is that there's no
+% parallel annuli. Canary-McCullough includes the statement:
+% "Every toroidal component of dM is contained in P"
+% but this is redundant with item 4 above (from Morgan)
+\end{enumerate}
+
+\end{prop}
+\begin{proof}
+See \cite{CMc} or \cite{Mo}.
+\end{proof}
+
+Pared manifolds arise naturally in the study of Kleinian groups. Given
+a geometrically finite torsion-free Kleinian group $G$, we construct $(M,P)$ by
+truncating small neighborhoods of the cusps of the quotient manifold $M(G)
+= \left(\mathbb{H}^3\cup \Om(G)\right)/G$.  Then we let $M$ be the resulting
+compact manifold with boundary, and $P$ the boundary locus along which we
+truncated.  That is, we can rebuild the quotient manifold from $(M,P)$ by
+gluing cusp neighborhoods onto each component of $P$. It follows from basic
+Kleinian group theory that the resulting $(M,P)$ will satisfy conditions 1-3
+above, making it a pared manifold.  The parabolic elements of $G$ precisely
+correspond to (conjugacy classes of) the peripheral subgroups $\pi_1P$ in
+$\pi_1M$.
+
+Conversely, Thurston's famous uniformization theorem states that for every
+pared manifold $(M,P)$ with $M$ Haken, there exists a finite volume (in
+particular, geometrically finite) hyperbolic 3-manifold structure on the
+interior satisfying the appropriate conditions for a pared 3-manifold! To be
+precise:
+
+%(see Morgan for details of this construction)
+
+%(Morgan p60, but his statement is confusing / less modern definitions. He does
+%state the more general theorem for Haken pared manifolds though.)
+%(Canary-McCullough p105-106)
+
+\begin{thm}
+
+If $(M,P)$ is an oriented pared 3-manifold with nonempty boundary, then
+there exists a geometrically finite uniformization of $(M,P)$, that is, a map
+$\rho: \pi_1M \to \mbox{\rm{PSL}}_2\mathbb{C}$ such that $\rho(g)$ is parabolic
+if $g \in \pi_1(P)$, and an orientation-preserving homeomorphism $M-P \to
+\left(\mathbb{H}^3 \cup \Om(\rho(\pi_1M))\right)/\rho(\pi_1M)$.
+
+\end{thm}
+\begin{proof}
+
+See \cite{CMc}.
+Also see discussion on (CMc p106, bottom of page) for why this definition of
+geometrically finite is equivalent to the standard one.
+
+\end{proof}
+
+% Example. Maybe? TODO
+
+\textbf{ TODO Include an example.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Background on quasifuchsian surface groups}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We study the problem of finding quasifuchsian surface subgroups of finitely
+generated Kleinian groups from the topological perspective. We convert our
+given Kleinian group to a pared 3-manifold, and look for surface subgroups of
+this Kleinian group that avoid the peripheral pared structure. We can reduce
+the problem of finding a quasifuchsian surface subgroup of a Kleinian group as
+follows.
+
+We first recall the following basic definitions.
+
+defn
+
+A \emph{surface group} is (a group isomorphic to) the fundamental group of
+a closed surface of negative Euler characteristic.
+
+enddefn
+
+defn
+
+A {quasifuchsian group} is a Kleinian group Gamma < PSL2C for which there
+exists a quasiconformal homeomorphism f colon S2infty to S2infty which
+conjugates Gamma to a Fuchsian group, that is, a subgroup of PSL2R.
+
+enddefn
+
+% TODO
+\textbf{TODO perhaps I should elaborate on quasiconformal background a little.}
+
+First, suppose we have a geometrically finite Kleinian group. We use the
+following theorem of Thurston.
+
+thm
+
+Let N be a geometrically finite hyperbolic manifold with convex core C(N).
+Suppose that bd C(N) is nonempty. Then every covering space N' of N with
+finitely generated nonelementary fundamental group is also geometrically
+finite.
+
+endthm
+
+proof
+
+See \cite{Mo}, Proposition 7.1.
+
+endproof
+
+In our case, we have a geometrically finite hyperbolic manifold of infinite
+volume, so letting E be an (infinite volume) relative end, C(N) cap E must
+yield a nonempty piece of bd C(N). This suffices to use the theorem.
+
+% TODO
+\textbf{TODO this explanation is a bit vague. Might want to say more details
+about convex core etc.}
+
+We now apply the following result in \cite{Mo}, Corollary 9.2.
+
+thm
+
+Let S be a complete hyperbolic surface of finite area, and rho colon pi1S to
+PSL2C a discrete faithful representation. Then rho(pi1S) is quasifuchsian if
+and only if rho(pi1S) is geometrically finite, and the conjugacy classes in
+pi1S represented by cusps in S are exactly the conjugacy classes that are
+parabolic under rho.
+
+endthm
+% also look at (Ohshika Lemma 4.66 - cited in AFW p.81).  FIXME look up exact
+% statement in Ohshika. I have a feeling AFW are introducing some bs here...
+
+proof
+
+See \cite{Mo}.
+
+% WHY is this true? See Morgan Proposition 7.2, Corollary 7.3, and Proposition
+% 9.1 for some detailed arguments.
+
+endproof
+
+%TODO
+
+\textbf{TODO The following paragraph's "associated to" requires proof! Convex
+core cutting argument. See Morgan Corollary 6.10.}
+
+Now we argue as in \cite{Mo}, Corollary 7.3. Let (M,P) be a pared 3-manifold
+structure associated to the hyperbolic 3-manifold N. The only elements of pi1M
+which are parabolic are the conjugates of elements in pi1P.
+
+Let Gamma' < pi1N be a surface subgroup which is quasifuchsian. Let N' be the
+cover of N associated to Gamma'. N' and hence its convex core C(N') have the
+fundamental group of a closed surface. In fact, because Gamma' is
+quasifuchsian, we know that the convex core C(N') is homeomorphic to S times I,
+where S is a closed surface such that pi1S = Gamma'.\cite{Mo}, same Corollary.
+Map S to S times 1/2 cin times I. This map is an isomorphism on pi1. Composing
+this with the covering map N' to N, we obtain a pi1-injective map phi colon
+S to N.  This corresponds to a pi1-injective map to (M,P) by retracting.
+Applying the theorem above, no element of Gamma'=phi(pi1S) is parabolic.
+Because (M,P) is a pared structure for N, this implies that no loop in S is
+freely homotopic to a loop in P.
+
+Conversely, suppose we are given a closed pi1-injective surface
+S looprightarrow M.  Suppose further that no loop in S is freely homotopic to
+a loop in P. This implies that the induced subgroup pi1S < pi1M is disjoint
+from all conjugates of pi1P. Because (M,P) is a pared structure for the
+hyperbolic 3-manifold N, this implies that no elements of pi1S are parabolic
+under the representation rho colon pi1S to PSL2C induced by pi1S < pi1M=pi1N.
+Furthermore rho(pi1S) is geometrically finite (by the first theorem), and S is
+a surface without cusps.  Applying the theorem, pi1S induces a quasifuchsian
+surface subgroup of pi1N.
+
+We summarize our discussion of the geometrically finite case as follows.
+
+prop
+
+Let N be a geometrically finite hyperbolic 3-manifold of infinite volume, and
+(M,P) a pared 3-manifold structure for N. Then quasifuchsian surface subgroups
+of N precisely correspond to pi1-injective maps of a closed surface S to M such
+that no loops in P are freely homotopic into the image of S.
+
+% FIXME need to mumble something about "up to homotopy" to make this a real
+% correspondence...
+
+endprop
+
+We will refer to surfaces in (M,P) which satisfy the proposition as
+\emph{quasifuchsian surfaces} or \emph{(QF) surfaces}.
+
+We now briefly discuss the geometrically infinite case. Because the arguments
+that follow in later sections are purely topological arguments applied to the
+pared structure, we can always use Thurston's uniformization theorem to produce
+a geometrically finite Kleinian group to which our arguments apply. However, we
+would like to be able to address the geometrically infinite case also.
+
+First note that any finitely generated Kleinian group, whether geometrically
+finite or geometrically infinite, is \emph{tame}, that is, homeomorphic to the
+interior of a compact 3-manifold. This is a deep result due to Agol and
+Calegari-Gabai.
+
+We begin with the following theorem of Canary.
+
+thm
+
+Let N = H3/Gamma be an infinite volume tame hyperbolic 3-manifold, and let
+Gamma' < Gamma be a finitely generated subgroup. Then either
+
+(a) N' = H3 / Gamma' is geometrically finite, or
+
+(b) Gamma' contains a (conjugate of a) finite index subgroup of a geometrically
+infinite peripheral subgroup of Gamma
+
+where a \emph{geometrically infinite peripheral subgroup} is a subgroup
+corresponding to the subsurface of a relative compact core boundary which cuts
+off a geometrically infinite relative end of N. Equivalently, since all
+geometrically infinite ends of tame manifolds are simply degenerate,
+a geometrically infinite peripheral subgroup is the subgroup associated to the
+boundary in the interior of N of a geometrically infinite end.
+
+endthm
+
+The above proposition in the geometrically finite case still works in the
+forward direction. The reverse direction will carry through if we can show that
+N' (ie Gamma') is geometrically finite. That is, we want to avoid condition (b)
+in Canary's theorem above. This requires an additional condition, which we
+incorporate in the following proposition. (b) holds precisely when our surface
+is freely homotopic to a finite-sheeted cover of the corresponding
+geometrically infinite end boundary surface. Since such an end is simply
+degenerate, that is, homeomorphic to a thickened surface, we can also apply the
+covering lemma (from a FUTURE SECTION WOOO) to obtain the following
+proposition.
+
+prop
+
+Let N be a hyperbolic 3-manifold of infinite volume, possibly geometrically
+infinite, and (M,P) a pared 3-manifold structure for N. Then quasifuchsian
+surface subgroups of N precisely correspond to pi1-injective maps of a closed
+surface S to M such that
+
+(1) no loops in P are freely homotopic into the image of S, and
+
+(2) S is not freely homotopic into a geometrically infinite end of M, or,
+equivalently, not freely homotopic to a finite-sheeted cover of a geometrically
+infinite end boundary surface.
+
+endprop
+
+\textbf{ TODO put some explanatory examples in here too! The Menasco-Reid
+article in Topology '90 should have some examples of surface groups that are
+not QF. Is it possible to do an example of uniformization? Maybe follow along
+Morgan's stuff? That sounds very long. }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Background on decomposing things topologically}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Using the above propositions, we've reduced our question to a purely
+topological one. However, the topology of infinite volume hyperbolic
+3-manifolds may be quite complex. It is not clear how to find (QF) surfaces
+directly.
+
+% TODO
+\textbf{ TODO maybe here I can discuss how Baker-Cooper or Masters-Zhang did it
+topologically for finite volume? Or even on how Cooper-Long-Reid solved the
+topological problem without parabolics. Seems like as good a place as any...}
+
+% TODO
+
+\textbf{TODO finish this - Thurston decomp, acylindrical etc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Some additional topological background}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The following is based on \cite{AFW} and \cite{LR}. It is definitely not
+original.
+
+\begin{defn}
+
+Let G be a group. G is residually finite, or RF, if for any g in G, there
+exists a finite index subgroup H<G such that g notin H.
+
+Let $G$ be a group, and $H$ a subgroup of $G$. $H$ is \emph{separable} in $G$
+if for any $g \in G$, $g \notin H$, there exists a finite index subgroup $H'<G$
+such that $H'>H$, and $g \notin H'$.
+
+$G$ is \emph{subgroup separable}, or \emph{LERF}, if all its finitely generated
+subgroups are separable.
+
+\end{defn}
+
+It is well-known that these are equivalent to the following facts: (see
+\cite{LR}). We'll use these facts later in our proof.
+
+$G$ is RF if and only if for any $g \in G$ there exists a map $\phi \colon
+G \to F$, where $F$ is a finite group, such that $\phi(g) \neq id$.
+
+- $G$ is LERF if and only if for any $g \in G$, $H < G$, $g \notin H$, there
+exists a map $\phi \colon G \to F$ such that $\phi(g) \notin \phi(H)$.
+
+Note that in this entire paper, \emph{surface groups} will refer to fundamental
+groups of closed surfaces (compact without boundary).
+% TODO move this sentence somewhere. Probably want to clarify what I mean by
+% hyperbolic 3-manifold, etc also...
+
+\begin{thm}[Hall] Free groups are LERF. \end{thm}
+
+\begin{thm}[Scott] Surface groups are LERF. \end{thm}
+
+\begin{thm}[Agol--Kahn--Markovic--Wise] Let $N$ by a hyperbolic 3-manifold,
+possibly infinite volume.  Then $\pi_1N$ is LERF. \end{thm}
+
+\begin{proof}
+
+See citations in \cite{LR}, \cite{AFW}.
+
+\end{proof}
+
+Note that the last theorem is actually an extremely deep fact. Wise's proof
+actually shows that hyperbolic 3-manifold with boundary groups satisfy
+a technical condition, namely that they are virtually compact special. (Other
+cases of hyperbolic 3-manifolds, including the particularly difficult closed
+case, were addressed by the overlapping work of Agol, Kahn-Markovic, Sageev,
+and Bergeron-Wise).  Additional work by Haglund and Haglund-Wise demonstrates
+that a virtual compact special group is virtually a quasiconvex subgroup of
+a right-angled Artin group, and geometrically finite subgroups are separable.
+It follows by the tameness theorem that hyperbolic 3-manifold groups are LERF.
+
+
