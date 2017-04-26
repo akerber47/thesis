@@ -6,3 +6,14 @@ quasi-Fuchsian surface subgroups. The answer is yes for closed hyperbolic
 3-manifolds (Masters-Zhang, Baker-Cooper). We'll discuss some background on
 this problem and outline a strategy for the case of infinite volume. We'll then
 present new results for an infinite-volume special case, books of I-bundles.
+
+Title: Quasi-Fuchsian Surface Subgroups II
+
+Abstract:
+
+Last week we reduced the problem of finding quasi-Fuchsian surface
+subgroups to a purely topological question about surfaces in pared
+3-manifolds. After restating this topological question, we will
+present the proof in a special case, books of I-bundles. This material
+is independent of the previous talk.
+
