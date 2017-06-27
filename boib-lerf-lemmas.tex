@@ -1,0 +1,59 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{LERF and topological consequences}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The following is based on \cite{AFW} and \cite{LR}. It is definitely not
+original.
+
+\begin{defn}
+
+Let G be a group. G is residually finite, or RF, if for any g in G, there
+exists a finite index subgroup H<G such that g notin H.
+
+Let $G$ be a group, and $H$ a subgroup of $G$. $H$ is \emph{separable} in $G$
+if for any $g \in G$, $g \notin H$, there exists a finite index subgroup $H'<G$
+such that $H'>H$, and $g \notin H'$.
+
+$G$ is \emph{subgroup separable}, or \emph{LERF}, if all its finitely generated
+subgroups are separable.
+
+\end{defn}
+
+It is well-known that these are equivalent to the following facts: (see
+\cite{LR}). We'll use these facts later in our proof.
+
+$G$ is RF if and only if for any $g \in G$ there exists a map $\phi \colon
+G \to F$, where $F$ is a finite group, such that $\phi(g) \neq id$.
+
+- $G$ is LERF if and only if for any $g \in G$, $H < G$, $g \notin H$, there
+exists a map $\phi \colon G \to F$ such that $\phi(g) \notin \phi(H)$.
+
+Note that in this entire paper, \emph{surface groups} will refer to fundamental
+groups of closed surfaces (compact without boundary).
+% TODO move this sentence somewhere. Probably want to clarify what I mean by
+% hyperbolic 3-manifold, etc also...
+
+\begin{thm}[Hall] Free groups are LERF. \end{thm}
+
+\begin{thm}[Scott] Surface groups are LERF. \end{thm}
+
+\begin{thm}[Agol--Kahn--Markovic--Wise] Let $N$ by a hyperbolic 3-manifold,
+possibly infinite volume.  Then $\pi_1N$ is LERF. \end{thm}
+
+\begin{proof}
+
+See citations in \cite{LR}, \cite{AFW}.
+
+\end{proof}
+
+Note that the last theorem is actually an extremely deep fact. Wise's proof
+actually shows that hyperbolic 3-manifold with boundary groups satisfy
+a technical condition, namely that they are virtually compact special. (Other
+cases of hyperbolic 3-manifolds, including the particularly difficult closed
+case, were addressed by the overlapping work of Agol, Kahn-Markovic, Sageev,
+and Bergeron-Wise).  Additional work by Haglund and Haglund-Wise demonstrates
+that a virtual compact special group is virtually a quasiconvex subgroup of
+a right-angled Artin group, and geometrically finite subgroups are separable.
+It follows by the tameness theorem that hyperbolic 3-manifold groups are LERF.
+
+
