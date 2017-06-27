@@ -98,7 +98,7 @@ Let (M,P) be a pared admissible book of I-bundles. We say (M,P) is
 \begin{enumerate}
 
 \item A meridian disk of each spine intersects the union of all gluing annuli
-at least 2 times. Furthermore, if it intersects exactly two times, that spine
+at least two times. Furthermore, if it intersects exactly two times, that spine
 has exactly one page attached (via a map which "wraps around twice").
 
 \item All page boundary components are glued (there are no "free boundary
@@ -125,29 +125,42 @@ We \emph{reduce} a book of I-bundles as follows. We can repeat this inductively
 on connected components of the result of a reduction.
 
 % FIXME change enumeration to letters so can refer below
-\begin{itemize}
+\begin{enumerate}
 
 \item If (M,P) has a spine C which violates (1):
 
-\begin{itemize}
+\begin{enumerate}
 
 \item If C has 0 gluing annuli, delete C.
 
-\item If C has 1 gluing annulus, delete C and the attached page.
+\item If C has 1 gluing annulus, note that it must intersect a meridian disk
+only once. Delete C and the attached page.
 
-\item If C has 2 gluing annuli, delete C and glue the two pages along the
-annuli (or glue two annuli already on the same page) to produce a single page.
+\item If C has 2 gluing annuli, note that they must be parallel and each
+intersect a meridian disk only once. The book of I-bundles is homeomorphic to
+one obtained from the following. Delete C and glue two pages (which are
+possibly two gluing loci of the same page) along the now-free gluing annuli.
 
-\end{itemize}
+\end{enumerate}
 
 \item If (M,P) has a page B which violates (2), delete B.
 
-\item If (M,P) has a page B which violates (3), delete B.
+\item If (M,P) has a component P0 of P which violates (3), P0 intersects at
+most one page:
+
+\begin{enumerate}
+
+\item If P intersects a single page B, delete B.
+
+\item If P intersects no pages, it lies entirely inside a spine C. Delete C and
+all attached pages.
+
+\end{enumerate}
 
 \item In all cases, modify P by removing all components which have nonempty
 intersection with the deleted pages or spines.
 
-\end{itemize}
+\end{enumerate}
 
 \end{defn}
 
