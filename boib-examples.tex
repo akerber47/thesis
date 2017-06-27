@@ -65,39 +65,42 @@ map such that H=phi*pi1S is quasiFuchsian. Then phi is homotopic to a map which
 lifts to an embedding in a cover of M. Furthermore, we can choose such a cover
 to be finite-sheeted.
 
-proof
-
-
+% TODO
+%This belongs in background somewhere. Reduction to finite-sheeted cover means
+%this is an application of separability, so maybe put with topological facts
+%there?
 
 lemma (The Covering Lemma, as I actually use it)
 
 Let phi: S to S' be a proper pi1-injective map of compact connected oriented
-surfaces with boundary, and suppose that S has non-positive Euler
-characteristic. Then phi is homotopic to a finite-sheeted covering map.  Note
-that the converse holds more generally - that is, any finite-sheeted covering
-is a proper pi1-injective map.
+surfaces with boundary, and suppose that S is not a 2-sphere.  Then phi is
+homotopic to a finite-sheeted covering map.  Note that the converse holds more
+generally - that is, any finite-sheeted covering is a proper pi1-injective map.
 
 proof
 
-We use the above lemma. Since phi is pi1-injective, S' must also have
-non-positive Euler characteristic. Therefore int(S') can be realized as
-a complete hyperbolic surface. Choosing its hyperbolic geometric structure
-arbitrarily, we obtain a Fuchsian group isomorphic to pi1S'. Let M be the
-complete hyperbolic 3-manifold H3/pi1S' corresponding to this Fuchsian group.
-Topologically, M = int(S'xI) is a thickened surface.
+For the forward direction, we can apply minimal surface theory to perturb phi
+via homotopy rel boundary to an immersion. It's straightforward to ensure that
+phi is a local homeomorphism on boundary curves. Now think of int(S') as being
+embedded as a totally geodesic core subsurface of a Fuchsian group quotient of
+hyperbolic 3-space.  Then as we pull phi(int(S)) cin int(S')  to minimality its
+image will necessarily remain in int(S'), as it's totally geodesic.  Since it
+is connected and not a sphere, it can't shrink down to nothing. Since it's
+properly embedded, the boundary components of S correspond to local maps of
+cusps into cusp tubes of the thickened int(S') and must remain fixed on the
+same cusp as we pull phi(int(S)) to a minimal surface. Hence the boundary
+components of S do not move under this homotopy. The result is an immersion
+produced via a homotopy rel boundary.
 
-Now phi*pi1S cin pi1S' is quasiFuchsian. (Since it is proper as a map of
-topological surfaces, restricting to the interior must send parabolic elements
-to parabolic elements). Applying the above lemma, we find that phi is homotopic
-to a map which lifts to an embedding of int(S) into a finite-sheeted cover of
-M. Furthermore, the homotopic lifted embedding is precisely the quotient of
-a topological core surface in the pi1 cover. Since it then embeds in
-a finite-sheeted cover, we can see that it must itself be a finite sheeted
-cover of the core surface of M. This completes the proof of the forward
-direction.
+Then since phi is a proper immersion between manifolds of the same dimension,
+it's a local homeomorphism on boundary and interior neighborhoods, and
+therefore a covering map. It must be finite-sheeted because preimages of points
+are discrete sets because it's a covering, and S is compact, so it follows that
+point fibers are finite sets.
 
-The converse is elementary. As in the above note, we can use minimal surface
-theory to make that proper pi1-injective map into an immersion.
+The converse follows from elementary covering space theory. As in the above
+note, we can use minimal surface theory to make that proper pi1-injective map
+into an immersion.
 
 \begin{lemma}\label{L:sc}
 
