@@ -66,8 +66,8 @@ $I$-bundles, to avoid elementary or degenerate cases.
 
 \begin{enumerate}
 
-\item The underlying manifold is a compact connected orientable hyperbolic
-3-manifold.
+\item The underlying manifold is a compact connected orientable irreducible
+hyperbolic 3-manifold with incompressible boundary.
 
 \item Each page is an I-bundle over a surface with boundary of negative Euler
 characteristic.  That is, no base surface is a sphere, projective plane, disk,
@@ -78,7 +78,22 @@ Mobius strip, or annulus.
 Let's briefly explain why. Obviously we want M to be compact connected
 orientable hyperbolic, as this is the general case we're studying (Kleinian
 manifolds). If M were nonorientable we could reduce to the orientable double
-cover.
+cover. Hyperbolic 3-manifolds must be irreducible.
+
+If M had compressible boundary, let D be a compressing disk for the boundary.
+Any closed pi1-injective surface S cin M that intersects D must do so in
+a union of closed curves, since S is properly embedded. Every such closed curve
+$\alpha$ is homotopically trivial in M, because it's a closed curve in the disk
+D.  But S is pi1-injective, so $\alpha$ must be homotopically trivial in S as
+well. Since S is a surface, contracting the loop $\alpha$ yields a disk $D'\cin
+S$. Note that D' may be immersed, but we can use it to produce a smaller disk
+D'' which is embedded and still bounded by $\alpha$. Combining D and D' yields
+a sphere S2 cin M. By irreducibility of M, this bounds a ball. Using a standard
+innermost disk argument, we can homotope S across these balls (starting from
+the innermost and working our way out) until S and D are disjoint.  This proves
+that any quasi-Fuchsian surfaces are essentially disjoint from compression
+disks. Therefore, since we're interested in quasi-Fuchsian surfaces, we might
+as well compress as much as possible before looking for surfaces.
 
 Each page's base surface must have at least one boundary component to glue to
 in order for M to be connected. We don't want to consider base surfaces which
@@ -123,8 +138,14 @@ i(A,D), where D is a meridian disk of $C_A$. That is, it's the minimal number
 of components of A cap D as we properly isotope $D cin C_A$ and $A cin bd C_A$.
 
 In fact, note that all binding annuli in a given spine C must have the same
+degree. This is because their core curves are curves on a torus, and any curves
+with different slopes must intersect. Since they have the same slope, they
+intersect a meridian curve (slope $\infty$) the same number of times.
+Therefore, we refer to this as the \emph{degree} d(C) of the spine C.
 
 enddefn
+
+
 
 We make a few observations.
 
