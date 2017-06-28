@@ -7,93 +7,12 @@ identify the cases that obviously can't have a surface satisfying \eqref{E:qf}.
 Then we'll prove by construction that every other book of $I$-bundles does in
 fact contain such a surface.
 
-We use the following general description for books of $I$-bundles. Let
-$M_{c1},...,M_{cr}$ be the spines, all solid tori. Let $M_{p1},...,M_{ps}$ be
-the pages, all thickened surfaces with boundary. Each page has boundary
-components $A_{ij}$, all annuli. We glue each annulus by a homeomorphism
-$\phi_{ij}$ to a boundary annulus $A_{ij'}\cin \bd M_{ck}$. Note that $Aij'$
-might not be a simple longitude of, that is, a page can wrap multiple times
-around a spine.  However, for each spine, all the $A_{ij'}$ must be disjoint
-and parallel, or the result of gluing will not be a manifold.
-
-We first make the following simple observation.
-
-prop
-
-Let $M$ be a book of $I$-bundles, and $M'$ to $M$ be a finite-sheeted covering
-space.  Then $M'$ is also a book of $I$-bundles.
-
-proof
-
-This is straightforward. Lift the spines and pages of $M$ to obtain spines and
-pages of $M'$. Lift the gluing annuli of $M$ to gluing annuli of $M'$.
-
-We want to consider books of $I$-bundles with some basic topological
-properties, to make sure they are Kleinian manifolds.
+We introduce an additional definition.
 
 \begin{defn}
 
-A book of $I$-bundles $M$ is \emph{admissible} if it satisfies the following
-conditions.
-
-% TODO
-\textbf{TODO as discussed with Ian, this should just be "a book of I-bundles."
-See definitions in Morgan or Thurston or Culler-Shalen and fix accordingly.}
-
-\begin{enumerate}
-
-\item The underlying manifold is a compact connected orientable hyperbolic
-3-manifold.
-
-\item Each page is an I-bundle over a surface with boundary of negative Euler
-characteristic.  That is, no base surface is a disk, Mobius strip, or annulus.
-
-\end{enumerate}
-
-\end{defn}
-
-Henceforth we will only consider admissible books of $I$-bundles. Let's briefly
-explain why.
-
-Obviously we want M to be compact connected orientable hyperbolic, as this is
-the general case we're studying (Kleinian manifolds). If M were nonorientable
-we could reduce to the orientable double cover.
-
-Each page's base surface must have at least one boundary component to glue to
-in order for M to be connected. We don't want to consider base surfaces which
-are disks.  Observe that each page which is a copy of $S0,1$ means that that
-page and its attached spine form a 3-manifold with a finite-sheeted cover by
-a ball (we can arrange things so that in the cover, the $S0,1$ attaching map
-only traverses the longitude once, and we get a thickened disk).  This means
-that we'll have finite order summands in our group, which correspond to
-elliptic pieces, for instance lens spaces, in the JSJ decomposition. These
-cases are not hyperbolic.
-
-%TODO
-\textbf{TODO explain Mobius strips / annuli with "big bad loops" idea which
-breaks our book of I-bundles reduction theorem.}
-
-\begin{prop}
-
-Let M be an admissible book of I-bundles. Then M must have incompressible
-boundary.
-
-\end{prop}
-
-% TODO
-\textbf{TODO figure out/throw in Ian's explanation of incompressible boundary.}
-
-Now consider a pared structure P on a book of I-bundles. We'll say (M,P) is
-admissible if the book of I-bundles M is admissible. Note that the first
-requirement forces all boundary components of M to have negative Euler
-characteristic. Because components of P are pi1-injective, P therefore must be
-a union of annuli in any reduced book of I-bundles. We introduce an additional
-definition.
-
-\begin{defn}
-
-Let (M,P) be a pared admissible book of I-bundles. We say (M,P) is
-\emph{reduced} if it satisfies the following.
+Let (M,P) be a pared book of I-bundles. We say (M,P) is \emph{reduced} if it
+satisfies the following.
 
 \begin{enumerate}
 
@@ -299,4 +218,17 @@ pared locus. Then every cover of Sigma induces a (QF) surface in.(M,P).
 P = emptyset, so this follows directly from the covering lemma.
 
 \end{proof}
+
+\begin{prop}
+
+Let M be a reduced book of I-bundles. Then M must have incompressible boundary.
+
+% CAREFUL! not sure this is true. Need to finesse w one point intersection
+% lemma. I am pretty sure this is true IF I impose reduced condition. But I'm
+% not sure where to put this proposition.
+
+\end{prop}
+
+% TODO
+\textbf{TODO figure out/throw in Ian's explanation of incompressible boundary.}
 

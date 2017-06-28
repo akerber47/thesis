@@ -2,11 +2,11 @@
 \section{Topology of books of I-bundles}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this section we establish basic facts about books of I-bundles and (QF)
-surfaces contained inside them.
+In this section we establish basic definitions and facts about books of
+I-bundles and quasi-Fuchsian surfaces contained inside them.
 
-Recall that we are considering possible pared structures $P$ on $M$. Our goal
-is to find a surface $S \cin M$ such that
+Recall that we are considering possible pared structures $P$ on $M$ a convex
+hyperbolic 3-manifold. Our goal is to find a surface $S \cin M$ such that
 
 \begin{equation}\label{E:qf}
 S \text{ is closed immersed $\pi_1$-injective, and $\pi_1P_k \cap \pi_1S = 1$
@@ -16,8 +16,89 @@ for each component $P_k$ of $P$} \tag{QF}
 Note that since we haven't fixed a basepoint, these subgroups are really only
 defined up to conjugacy (that is, they're sets of free homotopy classes) - what
 we're saying is they fail to intersect for an arbitrary choice of conjugacy
-class for each subgroup.
+class for each subgroup. This corresponds to multiples of the parabolic curves
+being freely homotopic into the immersed image of the given surface
 
+\begin{defn}
+
+An \emph{$I$-bundle} is a fiber bundle with fiber $I=[0,1]$, and base space
+a compact surface with boundary. In this paper we adopt the convention that all
+$I$-bundles are oriented. The boundary of an $I$-bundle $I to B to Si$
+decomposes into the \emph{page boundary} $\pi^{-1}(\bd Si)$ and the
+\emph{gluing annuli} $cup \bd \pi^{-1}(x)$. Note that the gluing annuli is in
+fact a union of annuli. The reason for these terms is the following definition.
+
+A \emph{book of $I$-bundles} is a 3-manifold obtained from the following
+construction. Let sB be a collection of I-bundles, and sC a collection of solid
+tori. Attach the I-bundles to the solid tori by attaching some (or all) of the
+gluing annuli to disjoint embedded annuli in the boundaries of the solid tori.
+If we let sA be the annuli we glue along, our resulting manifold can be written
+as $sB cup_sA sC$.
+
+\end{defn}
+
+% cite/ref Morgan or Thurston or Culler-Shalen (or Ian's work?) for this def
+
+Intuitively, if we take a physical book with thick pages and imagine bending it
+in a circle so its top and bottom are identified, the spine becomes a solid
+torus.  If we also attach each page along its top and bottom, the pages become
+thickened annuli, attached to the spine at one end. This manifold can be built
+from the above construction. Take $sC$ to be a single solid torus, and $sB$ to
+be a union of thickened annuli, one for each page of the book. Glue one gluing
+annulus of each component of $sB$, and glue them all to parallel longitudinal
+annuli in $\bd sC$.
+
+Therefore, in keeping with the "book" terminology, we will generally refer to
+the components of sB as \emph{pages}, the components of sC as \emph{spines},
+and the components of sA as \emph{bindings}.
+
+Algebraically, a book of I-bundles corresponds to a particularly simple graph
+of groups. Half of the groups (the spines) are just copies of $Z$.
+
+In this paper we impose the following standard conditions on a book of
+$I$-bundles, to avoid elementary or degenerate cases. 
+
+\begin{enumerate}
+
+\item The underlying manifold is a compact connected orientable hyperbolic
+3-manifold.
+
+\item Each page is an I-bundle over a surface with boundary of negative Euler
+characteristic.  That is, no base surface is a sphere, projective plane, disk,
+Mobius strip, or annulus.
+
+\end{enumerate}
+
+Let's briefly explain why. Obviously we want M to be compact connected
+orientable hyperbolic, as this is the general case we're studying (Kleinian
+manifolds). If M were nonorientable we could reduce to the orientable double
+cover.
+
+Each page's base surface must have at least one boundary component to glue to
+in order for M to be connected. We don't want to consider base surfaces which
+are disks.  Observe that each page which is a copy of $S0,1$ means that that
+page and its attached spine form a 3-manifold with a finite-sheeted cover by
+a ball (we can arrange things so that in the cover, the $S0,1$ attaching map
+only traverses the longitude once, and we get a thickened disk).  This means
+that we'll have finite order summands in our group, which correspond to
+elliptic pieces, for instance lens spaces, in the JSJ decomposition. These
+cases are not hyperbolic.
+
+%TODO
+\textbf{TODO explain Mobius strips / annuli with "big bad loops" idea which
+breaks our book of I-bundles reduction theorem.}
+
+We first make the following simple observation.
+
+prop
+
+Let $M$ be a book of $I$-bundles, and $M'$ to $M$ be a finite-sheeted covering
+space.  Then $M'$ is also a book of $I$-bundles.
+
+proof
+
+This is straightforward. Lift the spines and pages of $M$ to obtain spines and
+pages of $M'$. Lift the gluing annuli of $M$ to gluing annuli of $M'$.
 We first make a few observations.
 
 Note that since every hyperbolic 3-manifold is aspherical, by elementary
