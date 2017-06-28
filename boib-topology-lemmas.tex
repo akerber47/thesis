@@ -24,16 +24,18 @@ being freely homotopic into the immersed image of the given surface
 An \emph{$I$-bundle} is a fiber bundle with fiber $I=[0,1]$, and base space
 a compact surface with boundary. In this paper we adopt the convention that all
 $I$-bundles are oriented. The boundary of an $I$-bundle $I to B to Si$
-decomposes into the \emph{page boundary} $\pi^{-1}(\bd Si)$ and the
-\emph{gluing annuli} $cup \bd \pi^{-1}(x)$. Note that the gluing annuli is in
-fact a union of annuli. The reason for these terms is the following definition.
+decomposes into the \emph{side boundary} $\pi^{-1}(\bd Si)$ and the
+\emph{binding boundary} $cup \bd \pi^{-1}(x)$. Note that the binding boundary
+is a collection of disjoint annuli. The reason for these terms is the following
+definition.
 
 A \emph{book of $I$-bundles} is a 3-manifold obtained from the following
 construction. Let sB be a collection of I-bundles, and sC a collection of solid
 tori. Attach the I-bundles to the solid tori by attaching some (or all) of the
-gluing annuli to disjoint embedded annuli in the boundaries of the solid tori.
-If we let sA be the annuli we glue along, our resulting manifold can be written
-as $sB cup_sA sC$.
+binding boundary components to disjoint annuli in the boundaries of the solid
+tori.  If we let sA be the union of glued annuli in the resulting manifold, our
+manifold can be written as $M=sB cup_sA sC$. Note that by construction each
+component of sA is properly embedded, 2-sided, and incompressible in M.
 
 \end{defn}
 
@@ -50,10 +52,14 @@ annuli in $\bd sC$.
 
 Therefore, in keeping with the "book" terminology, we will generally refer to
 the components of sB as \emph{pages}, the components of sC as \emph{spines},
-and the components of sA as \emph{bindings}.
+and the components of sA as \emph{bindings} or \emph{binding annuli}.
+Furthermore, we'll say that M is \emph{fully bound} if \emph{all} the binding
+boundary components are glued. For reasons we'll see later, the books of
+I-bundles that we want to consider will satisfy this criterion.
 
 Algebraically, a book of I-bundles corresponds to a particularly simple graph
-of groups. Half of the groups (the spines) are just copies of $Z$.
+of groups. The graph is bipartitie, and one side of the partition (the spines)
+are just copies of $Z$.
 
 In this paper we impose the following standard conditions on a book of
 $I$-bundles, to avoid elementary or degenerate cases.
@@ -102,20 +108,35 @@ pages of $M'$. Lift the gluing annuli of $M$ to gluing annuli of $M'$.
 
 end proof
 
-Let's look at the boundary components of a book of $I$-bundles.
-% TODO explain "wrapping around" etc
+Let's look at the boundary components of a book of $I$-bundles. First, we'll
+need a couple more simple definitions.
+
+defn
+
+Let M be a book of I-bundles, and C a spine in M.  The \emph{valence} v(C) is
+the number of binding annuli that intersect C or, equivalently, that are
+contained in $\bd C$.
+
+Let A be a binding annulus in M. Note that A lies in the boundary of exactly
+one spine $C_A$. The \emph{degree} of A is the geometric intersection number
+i(A,D), where D is a meridian disk of $C_A$. That is, it's the minimal number
+of components of A cap D as we properly isotope $D cin C_A$ and $A cin bd C_A$.
+
+In fact, note that all binding annuli in a given spine C must have the same
+
+enddefn
 
 We make a few observations.
 
 Note that since every hyperbolic 3-manifold is aspherical, by elementary
 obstruction theory any injective map pi1S to pi1M is induced by a pi1-injective
 map S to M.
-% cite Long-Reid, p11
+% TODO cite Long-Reid, p11
 
 Furthermore, by minimal surface theory, we can guarantee that any pi1-injective
 surface in a hyperbolic 3-manifold is homotopic to an immersed surface.
 A surface which is not immersed will contradict minimality.
-% cite Neumann p1
+% TODO cite Neumann p1
 
 In what follows we'll speak only of pi1-injective surfaces, or possibly surface
 subgroups. But it is important to note that in this situation those are the
