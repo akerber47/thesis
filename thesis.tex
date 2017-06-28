@@ -5,40 +5,60 @@
 % The Current Maintainer of this work is Paul Vojta.
 
 \documentclass{ucbthesis}
-\usepackage{biblatex}
+%\usepackage{biblatex}
+\usepackage{amsmath,amscd,amssymb,amsthm,amsfonts}
 
 % To compile this file, run "latex thesis", then "biber thesis"
 % (or "bibtex thesis", if the output from latex asks for that instead),
 % and then "latex thesis" (without the quotes in each case).
 
 % Double spacing, if you want it.  Do not use for the final copy.
-% \def\dsp{\def\baselinestretch{2.0}\large\normalsize}
+% \def\dsp%{\def\baselinestretch{2.0}\large\normalsize}
 % \dsp
 
 % If the Grad. Division insists that the first paragraph of a section
 % be indented (like the others), then include this line:
 % \usepackage{indentfirst}
 
-\newtheorem{theorem}{Jibberish}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{thm}[theorem]{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{cor}[theorem]{Corollary}
 
-\bibliography{references}
+\theoremstyle{definition}
+\newtheorem{defn}[theorem]{Definition}
+\newtheorem{conj}[theorem]{Conjecture}
 
-\hyphenation{mar-gin-al-ia}
-\hyphenation{bra-va-do}
+\theoremstyle{remark}
+\newtheorem{example}[theorem]{Example}
+\newtheorem*{rmk}{Remark}
+\newtheorem*{claim}{Claim}
+\newtheorem*{ntn}{Notation}
+
+\newcommand{\x}{\times}
+\newcommand{\bd}{\partial}
+\newcommand{\Om}{\Omega}
+\newcommand{\Si}{\Sigma}
+\newcommand{\cin}{\subseteq}
+
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cN}{\mathcal{N}}
 
 \begin{document}
 
 % Declarations for Front Matter
 
-\title{Eulerian Knowledge Prexy and Lyman Zig on Wiggly}
-\author{Tom Lifesaver}
-\degreesemester{Spring}
-\degreeyear{1995}
+\title{Quasi-Fuchsian surface subgroups of books of I-bundles}
+\author{Alvin Kerber}
+\degreesemester{Summer}
+\degreeyear{2017}
 \degree{Doctor of Philosophy}
-\chair{Professor Richard Francis Sony}
-\othermembers{Professor Roger Spam \\
-  Associate Professor Michael Chex}
-\numberofmembers{3}
+\chair{Professor Ian Agol}
+\othermembers{Professor Denis Auroux \\
+  Professor Martin Olsson \\
+  Professor Martin White}
+\numberofmembers{4}
 % Previous degrees are no longer to be listed on the title page.
 % \prevdegrees{B.A. (University of Northern South Dakota at Hoople) 1978 \\
 %   M.S. (Ed's School of Quantum Mechanics and Muffler Repair) 1989}
@@ -103,14 +123,24 @@ And exposition? Of go. No upstairs do fingering.
 
 \pagestyle{headings}
 
-% (Optional) \part{First Part}
+\chapter{Introduction and Background}
 
-\include{chap1}
-\include{chap2}
+\input{intro}
+\input{background}
 
-% \appendix
-% \chapter{More Monticello Candidates}
+\chapter{Main Theorem and Proof}
 
-\printbibliography
+\input{boib-topology-lemmas}
+\input{boib-lerf-lemmas}
+\input{boib-examples}
+\input{boib-reduction}
+\input{boib-main-proof}
+
+\chapter{Extras}
+
+\input{extras}
+
+\bibliographystyle{plain}
+\bibliography{refs}
 
 \end{document}

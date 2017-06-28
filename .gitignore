@@ -9,3 +9,8 @@ Agol*
 *.gz
 *.bbl
 *.blg
+*.bcf
+*.lof
+*.lot
+*.toc
+*.synctex.gz*
