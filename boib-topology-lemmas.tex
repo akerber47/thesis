@@ -308,9 +308,10 @@ surface (that is, if B to Si, S is a finite-sheeted cover of Si).
 (2) for each spine C, S cap C is a union of essential annuli.
 
 (3) the page covers and spine annuli are attached along curves parallel to the
-multiples of the bnding annuli at each spine. All boundary components of the
-page and spine intersections are attached in this way to yield a closed
-surface.
+multiples of the bnding annuli at each spine. That is, for each binding annulus
+A, S cap A is a union of multiples of the core curve of A. All boundary
+components of the page and spine intersections are attached in this way to
+yield a closed surface.
 
 proof
 
@@ -389,6 +390,57 @@ a pi1-injective torus, and all pared locus components must be annuli.
 
 \end{proof}
 
+lemma (minimal position for pared structures / pared decomposition lemma)
+
+Let (M,P) be a pared 3-manifold, where M is a book of I-bundles. Then we can
+isotope P within bd M such that:
+
+(1) For each page B, P cap B is a union of disjoint rectangles and annuli, each
+of which projects to a thickened arc or curve in the base surface Si of B. Any
+such arc is essential in Si. Any such curve is either essential or parallel to
+a boundary component of Si which does not lift to a binding annulus (that is,
+parallel to a "free binding boundary" of B).
+
+(2) For each spine C, P cap C is a union of disjoint rectangles and annuli.
+Each rectangle connects two adjacent binding annuli in bd C along a thickened
+arc that is essential in that component of bd M cap C (the "intermediate
+annulus" between these two binding annuli). Each annulus is parallel to the
+binding annuli in bd C.
+
+(3) For each binding annulus A, P cap A is a union of disjoint arcs in bd A.
+
+proof
+
+We can isotope P locally, keeping all its components disjoint and embedded in
+bd M, so that it's transverse to sA. This immediately guarantees (3).
+
+Let X be a page or spine in M. P cap X is a union of disjoint rectangles and
+annuli, which are thickenings of arcs and curves in bd M cap X. Suppose one of
+these is an arc alpha which is not essential in bd M cap X. Then alpha cobounds
+a disk with an arc in bd (bd M cap X). There may be other arcs in the interior
+of this disk, but with an innermost disk argument we can inductively push all
+such arcs out of bd M cap X while keeping them disjoint. Note that the interior
+of this disk cannot contain any closed curves coming from P because they would
+not be pi1-injective. This is an isotopy of P inside bd M.  Repeat this
+inductively for all pages and spines until no such arcs remain at all.  Since
+at each step we're decreasing the number of intersections of P with sA, this
+process is guaranteed to terminate.
+
+Let B be a page. Let alpha be a closed curve in bd M cap B which thickens to an
+annulus in P cap B. alpha cannot bound a disk in bd M cap B, or that component
+of P would fail to be pi1-injective in bd M cap B, hence in M. So either alpha
+is essential in bd M cap B, or alpha is parallel to a component of bd(bd M cap
+B). In the latter case, if this component corresponds to a binding annulus A,
+push the thickened alpha annulus across A into the attached spine. There cannot
+be any annuli or rectangles in between, because components of P can't be
+parallel and we already eliminated all the non-essential rectangles.
+
+Suppose we've performed the above isotopy on P. Since we can preserve
+transversality, (3) still holds. We claim the result satisfies (1) and (2).
+
+To prove (1), 
+
+end proof
 
 lemma (parabolic lifting criterion)
 
