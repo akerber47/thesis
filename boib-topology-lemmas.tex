@@ -438,19 +438,32 @@ parallel and we already eliminated all the non-essential rectangles.
 Suppose we've performed the above isotopy on P. Since we can preserve
 transversality, (3) still holds. We claim the result satisfies (1) and (2).
 
-To prove (1), 
+To prove (1), let B be a page. Observe that the rectangles and annuli in P cap
+B are thickenings of arcs and curves which are essential (or
+free-binding-boundary parallel in a special case) in bd M cap B. Let Si be the
+base surface of B. As discussed above, bd M cap B is either two copies of Si
+(if B is a trivial I-bundle) or an orientable double cover of Si (if B is
+a twisted I-bundle). In either case the projection of each arc and curve must
+be essential in Si, as otherwise we could lift a contracting or
+boundary-exiting isotopy to bd M cap B. This proves (1).
+
+To prove (2), let C be a spine. Observe that bd M cap C is a union of parallel
+annuli, each of which is parallel to the binding annuli in bd C. Rectangles in
+C are essential, as guaranteed earlier. Up to isotopy, the only embedded closed
+curve in an annulus is the core curve. So the only annuli in P cap C are
+parallel to the binding annuli. This completes the proof.
 
 end proof
 
 lemma (parabolic lifting criterion)
 
 Let M be a book of I-bundles, and S immerse M be a pi1-injective map, where
-S is a connected closed surface.  After placing S in minimal position as above,
-S is a (QF) surface if and only if the following criterion holds. Let B be
-a page in M, and C a spine in M. P cap B is a union of disjoint arcs and curves
-in B. We have canonical covering maps S cap B to Si and S cap C to A2 by the
-surface decomposition lemma. Let tildePS be the union of the preimages of P cap
-B. % TODO finish statement here
+S is a connected closed surface.  After placing S and P in minimal position as
+above, S is a (QF) surface if and only if the following criterion holds. Let
+B be a page in M, and C a spine in M. P cap B is a union of disjoint arcs and
+curves in B. We have canonical covering maps S cap B to Si and S cap C to A2 by
+the surface decomposition lemma. Let tildePS be the union of the preimages of
+P cap B. % TODO finish statement here
 
 proof
 
