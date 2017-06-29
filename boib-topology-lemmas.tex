@@ -123,8 +123,8 @@ pages of $M'$. Lift the gluing annuli of $M$ to gluing annuli of $M'$.
 
 end proof
 
-The following result follows immediately from the classification of I-bundles
-over surfaces.
+These facts are well-known basic results in 3-manifold topology.  The following
+result follows immediately from the classification of I-bundles over surfaces.
 
 prop
 
@@ -144,11 +144,24 @@ See Hempel I-bundle facts. {\bf TODO}
 
 prop
 
-Let B be an I-bundle. B is irreducible and has incompressible boundary.
+Let X be a page or spine in a book of I-bundles M. Then X is irreducible, and
+each binding annulus in bd X (ie component of sA cap X) is incompressible in X.
 
 proof
 
-{\bf TODO}
+We first claim pi2X = 0. A trivial I-bundle is a thickened surface of negative
+Euler characteristic, hence is aspherical. A twisted I-bundle has a double
+cover which is a trivial I-bundle over the oriented double cover of the base
+surface. Solid tori are aspherical as well. It follows from the sphere theorem
+that X is irreducible.
+
+Let A cin bd X be a binding annulus. To prove A is incompressible in X, we'll
+show that it is pi1-injective. Let X be a solid torus. Then since A intersects
+a meridian disk at least once (as shown above), it must contain a multiple of
+a generator of pi1X. So A is pi1-injective. Let X be an I-bundle. Again, we can
+pass to a double cover which is a trivial I-bundle. Now A cin X is
+pi1-injective because it's a thickening of a boundary component of a compact
+surface. This completes the proof.
 
 end proof
 
@@ -230,6 +243,8 @@ components of M, each spine annulus connects two side boundaries of "adjacently
 glued" pages. This intuitive picture will be very important later as we
 construct quasi-Fuchsian surfaces.
 
+% TODO proof that boundary is incompressible goes here!
+
 We now discuss the possible closed pi1-injective surfaces inside a book of
 I-bundles. These are the surfaces we'll need to consider in order to find
 a closed quasi-Fuchsian surface - that is, a quasi-Fuchsian surface subgroup.
@@ -300,9 +315,38 @@ proof
 
 Homotope S to be transverse to sA, the union of all binding annuli. Cutting
 S along sA decomposes it into a union of properly immersed surfaces in each
-page or spine of M. For each page or spine X cin M, we claim that S cap X is
-a union of pieces which are either pi1-injective or homotopic into bd X.
-Consider an arbitrary combonent of S cap X which is not 
+page or spine of M. We first move S into minimal position with respect to sA.
+For each page or spine X cin M, S cap X is a union of properly immersed
+surfaces. Consider an arbitrary component S' of S cap X.
+
+If pi1(S')=1, then S' must be a disk as S is a connected surface and is not
+a sphere. First observe that bd S' is contained in one of the binding annuli
+A cin bd X. Since A is incompressible, bd S' bounds a disk in A, that is, S'
+cobounds a sphere. Since X is irreducible, this sphere bounds a ball, giving
+a homotopy of S' into A. To keep S transverse to sA, we will actually homotope
+it slightly past A into whatever page or spine is glued to the other side of A.
+
+Suppose we have eliminated every piece of S with trivial pi1 in this way, by
+homotoping it across the binding annuli. We may need to repeat inductively, but
+at every stage we're reducing the number of intersections with sA so this is
+guaranteed to terminate. We now claim that after no more such moves can be
+made, every piece of S is pi1-injective.
+
+Again consider an arbitrary page or spine X, and an arbitrary component S' of
+S cap X.  We know pi1(S')neq1 by the above argument. We claim it is
+pi1-injective as a map S' to X (abusing notation slightly - really this is
+asking about the preimage of S' on the left-hand abstract surface S). Suppose
+not. Then we have a nontrivial loop alpha in S', which is homotopically trivial
+in X.  Therefore alpha is homotopically trivial in M, using that same homotopy.
+Since S to X is pi1-injective, alpha must be homotopically trivial in S. Since
+S is an oriented surface, the only way alpha can be homotopically trivial in
+S but not S' is if one of the boundary components of S' cuts off a disk D cin
+S. If it cuts off a surface of any higher genus, we do not obtain any relations
+among elements of pi1(S'). But if we cut D along sA, we can see that at least
+one innermost piece of D must be a disk, contradicting our minimality
+assumption. Hence each piece S' is pi1-injective in X.
+
+
 
 end proof
 
