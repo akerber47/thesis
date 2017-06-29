@@ -305,7 +305,9 @@ position with respect to M such that:
 (1) for each page B, S cap B is a finite-sheeted cover of the page's base
 surface (that is, if B to Si, S is a finite-sheeted cover of Si).
 
-(2) for each spine C, S cap C is a union of essential annuli.
+(2) for each spine C, S cap C is a union of annuli parallel to multiples of the
+binding annuli in bd C. The two boundary curves of each annulus lie in
+different binding annuli.
 
 (3) the page covers and spine annuli are attached along curves parallel to the
 multiples of the bnding annuli at each spine. That is, for each binding annulus
@@ -332,7 +334,7 @@ Suppose we have eliminated every piece of S with trivial pi1 in this way, by
 homotoping it across the binding annuli. We may need to repeat inductively, but
 at every stage we're reducing the number of intersections with sA so this is
 guaranteed to terminate. We now claim that after no more such moves can be
-made, every piece of S is pi1-injective.
+made, every piece of S is pi1-injective. % TODO those stupid annuli!
 
 Again consider an arbitrary page or spine X, and an arbitrary component S' of
 S cap X.  We know pi1(S')neq1 by the above argument. We claim it is
@@ -356,8 +358,8 @@ rel boundary to a finite-sheeted covering of Si. This proves (1).
 
 Let C be a spine. Again we know that each piece S' of S cap C is pi1-injective
 and proper. Since C has cyclic fundamental group, and no piece S' is a disk,
-every piece S' must be an annulus. These annuli are pi1-injective, hence
-essential. This proves (2).
+every piece S' must be an annulus. These annuli are pi1-injective. This proves
+(2). % TODO fix rest of 2 for change
 
 To prove (3), look at the boundary curves of these annuli in the spines. Each
 boundary curve must be contained in a binding annulus A cin bd C. Therefore it
@@ -457,13 +459,14 @@ end proof
 
 lemma (parabolic lifting criterion)
 
-Let M be a book of I-bundles, and S immerse M be a pi1-injective map, where
-S is a connected closed surface.  After placing S and P in minimal position as
-above, S is a (QF) surface if and only if the following criterion holds. Let
-B be a page in M, and C a spine in M. P cap B is a union of disjoint arcs and
-curves in B. We have canonical covering maps S cap B to Si and S cap C to A2 by
-the surface decomposition lemma. Let tildePS be the union of the preimages of
-P cap B. % TODO finish statement here
+Let M be a book of I-bundles, and S to M be a pi1-injective map, where S is
+a connected closed surface.  Place S and P in minimal position as above. Then
+S is a (QF) surface if and only if the following criterion holds:
+
+Construct a lifted pared pattern as follows. For each spine C, each component
+S' of S cap C is an immersed annulus parallel to a multiple of the binding
+annuli.  The two components of 
+% TODO finish statement here
 
 proof
 
