@@ -267,8 +267,9 @@ lemma (The Covering Lemma, as I actually use it)
 
 Let phi: S to S' be a proper pi1-injective map of compact connected oriented
 surfaces with boundary, and suppose that S is not a 2-sphere.  Then phi is
-homotopic to a finite-sheeted covering map.  Note that the converse holds more
-generally - that is, any finite-sheeted covering is a proper pi1-injective map.
+homotopic rel boundary to a finite-sheeted covering map.  Note that the
+converse holds more generally - that is, any finite-sheeted covering is
+a proper pi1-injective map.
 
 proof
 
@@ -346,7 +347,22 @@ among elements of pi1(S'). But if we cut D along sA, we can see that at least
 one innermost piece of D must be a disk, contradicting our minimality
 assumption. Hence each piece S' is pi1-injective in X.
 
+Let B be a page. We know that each piece S' of S cap B is pi1-injective and
+proper. Projecting B to its base surface Si, we know this is a deformation
+retract (B is an I-bundle) so the composition S' to Si is also pi1-injective
+and proper. Applying the covering lemma, we see that each piece S' is homotopic
+rel boundary to a finite-sheeted covering of Si. This proves (1).
 
+Let C be a spine. Again we know that each piece S' of S cap C is pi1-injective
+and proper. Since C has cyclic fundamental group, and no piece S' is a disk,
+every piece S' must be an annulus. These annuli are pi1-injective, hence
+essential. This proves (2).
+
+To prove (3), look at the boundary curves of these annuli in the spines. Each
+boundary curve must be contained in a binding annulus A cin bd C. Therefore it
+must be a multiple of the cure curve of A. This proves the first statement in
+(3). The remainder of (3) follows directly from the fact that S is a closed
+surface and that M is a union of pages and spines along binding annuli.
 
 end proof
 
