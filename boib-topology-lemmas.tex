@@ -142,6 +142,16 @@ proof
 
 See Hempel I-bundle facts. {\bf TODO}
 
+prop
+
+Let B be an I-bundle. B is irreducible and has incompressible boundary.
+
+proof
+
+{\bf TODO}
+
+end proof
+
 To analyze the boundary components of a book of $I$-bundles, we'll need
 a couple more simple definitions.
 
@@ -273,22 +283,28 @@ into an immersion.
 lemma (surface decomposition lemma)
 
 Let M be a book of I-bundles, and S immerse M be a pi1-injective map, where
-S is a (connected) closed surface.  Then, we can place S in minimal position
-with respect to M such that:
+S is a (connected) closed orientable surface.  Then, we can place S in minimal
+position with respect to M such that:
 
-(1) for each page B, S cap B is a finite-sheeted cover of the page core surface
-(that is, if B = Si x I, S is a finite-sheeted cover of Si.
+(1) for each page B, S cap B is a finite-sheeted cover of the page's base
+surface (that is, if B to Si, S is a finite-sheeted cover of Si).
 
 (2) for each spine C, S cap C is a union of essential annuli.
 
 (3) the page covers and spine annuli are attached along curves parallel to the
-gluing annulus core curves of M. All boundary components of the page covers and
-spine annuli are necessarily attached in this way - there are no free boundary
-components.
+multiples of the bnding annuli at each spine. All boundary components of the
+page and spine intersections are attached in this way to yield a closed
+surface.
 
 proof
 
-% TODO
+Homotope S to be transverse to sA, the union of all binding annuli. Cutting
+S along sA decomposes it into a union of properly immersed surfaces in each
+page or spine of M. For each page or spine X cin M, we claim that S cap X is
+a union of pieces which are either pi1-injective or homotopic into bd X.
+Consider an arbitrary combonent of S cap X which is not 
+
+end proof
 
 We now consider the possible pared structures (M,P), where M is a book of
 I-bundles. We have a straightforward fact.
@@ -302,7 +318,14 @@ contain any tori.  That is, $P$ consists entirely of annuli.
 
 \begin{proof}
 
-Since each page of $M$ has negative Euler characteristic, 
+Each page of $M$ has a base surface of negative Euler characteristic, so each
+component of a page boundary must also have negative Euler characteristic (it's
+either a copy or an orientable double cover of the base surface, as discussed
+earlier). Since each boundary component of M consists of page boundaries glued
+together along annuli in spines, which contribute nothing to Euler
+characteristic, it immediately follows that each boundary component of M has
+negative Euler characteristic itself. So no boundary component admits
+a pi1-injective torus, and all pared locus components must be annuli.
 
 \end{proof}
 
