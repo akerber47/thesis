@@ -22,12 +22,12 @@ being freely homotopic into the immersed image of the given surface
 \begin{defn}
 
 An \emph{$I$-bundle} is a fiber bundle with fiber $I=[0,1]$, and base space
-a compact surface with boundary. In this paper we adopt the convention that all
-$I$-bundles are oriented. The boundary of an $I$-bundle $I to B to Si$
-decomposes into the \emph{side boundary} $\pi^{-1}(\bd Si)$ and the
-\emph{binding boundary} $cup \bd \pi^{-1}(x)$. Note that the binding boundary
-is a collection of disjoint annuli. The reason for these terms is the following
-definition.
+a compact surface with boundary. We'll refer to this as its \emph{base
+surface}.  In this paper we adopt the convention that all $I$-bundles are
+oriented.  The boundary of an $I$-bundle $I to B to Si$ decomposes into the
+\emph{side boundary} $\pi^{-1}(\bd Si)$ and the \emph{binding boundary} $cup
+\bd \pi^{-1}(x)$. Note that the binding boundary is a collection of disjoint
+annuli. The reason for these terms is the following definition.
 
 A \emph{book of $I$-bundles} is a 3-manifold obtained from the following
 construction. Let sB be a collection of I-bundles, and sC a collection of solid
@@ -123,8 +123,27 @@ pages of $M'$. Lift the gluing annuli of $M$ to gluing annuli of $M'$.
 
 end proof
 
-Let's look at the boundary components of a book of $I$-bundles. First, we'll
-need a couple more simple definitions.
+The following result follows immediately from the classification of I-bundles
+over surfaces.
+
+prop
+
+Let M be a book of I-bundles. Recall we require that M is oriented. To be
+orientable, every I-bundle in M is either a trivial bundle over an oriented
+surface, or a Z/2-twisted bundle over a nonorientable surface. In the latter
+case, the homotopy classes with nontrivial bundle twisting are precisely those
+with orientation-reversing monodromy (word choice?).
+
+Furthermore, every twisted I-bundle has a double cover which is a trivial
+I-bundle over a base surface which is an oriented double cover of the original
+nonorientable base surface.
+
+proof
+
+See Hempel I-bundle facts. {\bf TODO}
+
+To analyze the boundary components of a book of $I$-bundles, we'll need
+a couple more simple definitions.
 
 defn
 
@@ -145,9 +164,65 @@ Therefore, we refer to this as the \emph{degree} d(C) of the spine C.
 
 enddefn
 
+prop
 
+Let M be a book of I-bundles. Recall that we require that M has incompressible
+boundary. Then M cannot have any spines C such that $v(C)=0$, $d(C)=0$, or
+$v(C)=d(C)=1$.
 
-We make a few observations.
+proof
+
+Any spine C with $v(C)=0$ forces C to be a solid torus component. This does not
+have incompressible boundary (it's also not hyperbolic).
+
+Any spine C with $d(C)=0$ has a meridian disk that properly embeds in the
+resulting book of I-bundles, since it's disjoint from all the binding annuli.
+This is a boundary compressing disk.
+
+% The following case is my old nemesis, the "one-point intersection lemma"
+
+Let C be a spine with $v(C)=d(C)=1$. Let A be the sole binding annulus, B the
+attached page, and Si its base surface. Let beta be the projection of A down to
+Si. beta is a boundary component of Si. Let alpha be an essential arc in Si
+with both (distinct) endpoints in beta. Note that such an alpha must exist as
+Si has negative Euler characteristic. The preimage of alpha under the
+projection is a rectangle R cin B with two edges gamma1,gamma2 in the the side
+boundary of B, and two edges delta1,delta2 that are parallel proper essential
+arcs in A.  Since A intersects each meridian disk of C exactly once, and does
+so in a single essential arc, we can construct two meridian disks D1, D2 such
+that D1 cap R = delta1, and D2 cap R = delta2. Let D = D1 cup delta1 R cup
+delta2 D2.
+
+We claim that D is a compression disk for bd M. It is properly embedded: D1 and
+D2 are properly embedded in C, R is properly embedded in B, and the union lines
+up the boundary components along A. It suffices to show that bd D does not
+bound a disk in bd M. The options for such a disk D' are very limited. C cap bd
+M is an annulus, and bd D divides it into 2 disk regions. D' cap C must be one
+of these two regions, which implies it intersects A in two parallel boundary
+arcs, each with one endpoint in delta1 and one in delta2. Call these arcs
+epsilon1 and epsilon2. But now we can see that the only way to bound a disk in
+bd M is if gamma1 cup epsilon1 or gamma2 cup epsilon2 bounded a disk. But if
+this disk were inside B, either of these would project down to Si to contradict
+the assumption that alpha was essential. Note that the disk cannot intersect
+any spines or pages outside of B and C, as its boundary is entirely contained
+within B cup C so we can use standard innermost disk/irreducibility arguments
+to push it out of anywhere else. This proves that D is a compression disk.
+
+endproof
+
+We make a few observations about the boundary of M. Each page contributes two
+(if it's a trivial bundle) or one (if it's a twisted bundle) side boundary to
+the boundary of M. It also contributes any leftover binding annuli that are not
+glued. Each spine contributes a number of disjoint annuli equal to its valence,
+that is, the number of attached pages. These are the annuli in its boundary
+which lie in between the binding annuli. As these glue up to form the boundary
+components of M, each spine annulus connects two side boundaries of "adjacently
+glued" pages. This intuitive picture will be very important later as we
+construct quasi-Fuchsian surfaces.
+
+We now discuss the possible closed pi1-injective surfaces inside a book of
+I-bundles. These are the surfaces we'll need to consider in order to find
+a closed quasi-Fuchsian surface - that is, a quasi-Fuchsian surface subgroup.
 
 Note that since every hyperbolic 3-manifold is aspherical, by elementary
 obstruction theory any injective map pi1S to pi1M is induced by a pi1-injective
@@ -198,8 +273,8 @@ into an immersion.
 lemma (surface decomposition lemma)
 
 Let M be a book of I-bundles, and S immerse M be a pi1-injective map, where
-S is a connected closed surface.  Then, we can place S in minimal position with
-respect to M such that:
+S is a (connected) closed surface.  Then, we can place S in minimal position
+with respect to M such that:
 
 (1) for each page B, S cap B is a finite-sheeted cover of the page core surface
 (that is, if B = Si x I, S is a finite-sheeted cover of Si.
