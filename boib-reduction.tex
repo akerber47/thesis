@@ -11,8 +11,8 @@ We introduce an additional definition.
 
 \begin{defn}
 
-Let (M,P) be a pared book of I-bundles. We say (M,P) is \emph{reduced} if it
-satisfies the following.
+Let $(M,P)$ be a pared book of $I$-bundles. We say $(M,P)$ is \emph{reduced} if
+it satisfies the following.
 
 \begin{enumerate}
 
@@ -23,19 +23,20 @@ has exactly one page attached (via a map which "wraps around twice").
 \item All page boundary components are glued (there are no "free boundary
 components").
 
-\item Each component of P (once placed in minimal position with respect to the
-gluing annuli) intersects at least one page B. Furthermore, if it intersects
-exactly one page, it traverses at least one spine C attached to that page. In
-this case, either C is of valence one, or it's of valence >1 and B is attached
-to C along more than one boundary component. If valence one, we require that
-B is attached to C along a gluing of degree at least 3.
+\item Each component of $P$ (once placed in minimal position with respect to
+the gluing annuli) intersects at least one page $B$. Furthermore, if it
+intersects exactly one page, it traverses at least one spine $C$ attached to
+that page. In this case, either $C$ is of valence one, or it's of valence
+greater than one and $B$ is attached to $C$ along more than one boundary
+component.  If valence one, we require that $B$ is attached to $C$ along
+a gluing of degree at least 3.
 
 Note that any spines of valence one and degree one were eliminated by reduction
 (A2).
 
-Note that since it lies on a single boundary component of M, a parabolic cannot
-enter and exit the same page gluing annulus at a spine unless that spine has
-valence one. Therefore, we can divide the cases with a parabolic that
+Note that since it lies on a single boundary component of $M$, a parabolic
+cannot enter and exit the same page gluing annulus at a spine unless that spine
+has valence one. Therefore, we can divide the cases with a parabolic that
 intersects a spine but only hits a single page into valence one spines, and
 multiple attached gluing annuli from same page. The above criterion restricts
 the possible valence one spine cases to those which have degree at least 3.
@@ -44,57 +45,58 @@ the possible valence one spine cases to those which have degree at least 3.
 
 \end{defn}
 
-This definition is motivated by the following important idea. If (M,P) is not
+This definition is motivated by the following important idea. If $(M,P)$ is not
 reduced, we can attempt to reduce it inductively. At each step, we remove pages
-or spines from our pared books of I-bundles to produce new pared books of
-I-bundles.  Because we're deleting pieces, we may end up with multiple
-connected components. Each component is either a pared book of I-bundles or an
+or spines from our pared books of $I$-bundles to produce new pared books of
+$I$-bundles.  Because we're deleting pieces, we may end up with multiple
+connected components. Each component is either a pared book of $I$-bundles or an
 isolated page with no remaining boundary components - that is, a thickened
 closed surface.
 
 \begin{defn}
 
-We \emph{reduce} a book of I-bundles as follows. We can repeat this inductively
+We \emph{reduce} a book of $I$-bundles as follows. We can repeat this inductively
 on connected components of the result of a reduction.
 
 % FIXME change enumeration to letters so can refer below
 \begin{enumerate}
 
-\item If (M,P) has a spine C which violates (1):
+\item If $(M,P)$ has a spine $C$ which violates (1):
 
 \begin{enumerate}
 
-\item If C has 0 gluing annuli, delete C.
+\item If $C$ has 0 gluing annuli, delete $C$.
 
-\item If C has 1 gluing annulus, note that that annulus must intersect
-a meridian disk only once. Delete C.
+\item If $C$ has 1 gluing annulus, note that that annulus must intersect
+a meridian disk only once. Delete $C$.
 
-\item If C has 2 gluing annuli, note that they must be parallel and each
-intersect a meridian disk only once. The book of I-bundles is homeomorphic to
-one obtained from the following. Delete C and glue two pages (which are
+\item If $C$ has 2 gluing annuli, note that they must be parallel and each
+intersect a meridian disk only once. The book of $I$-bundles is homeomorphic to
+one obtained from the following. Delete $C$ and glue two pages (which are
 possibly two gluing loci of the same page) along the now-free gluing annuli.
 Notice that this also matches up parabolics.
 
 Note: this is the only step that can produce a thickened closed surface
-(instead of a "proper" book of I-bundles).
+(instead of a "proper" book of $I$-bundles).
 
 \end{enumerate}
 
-\item If (M,P) has a page B which violates (2), delete B.
+\item If $(M,P)$ has a page $B$ which violates (2), delete $B$.
 
-\item If (M,P) has a component P0 of P which violates (3), P0 intersects at
-most one page:
+\item If $(M,P)$ has a component $P_0$ of $P$ which violates (3), $P_0$
+intersects at most one page:
 
 \begin{enumerate}
 
-\item If P0 intersects a single page B (violating the degree 3 condition),
-delete B.
+\item If $P_0$ intersects a single page $B$ (violating the degree 3 condition),
+delete $B$.
 
-\item If P0 intersects no pages, it lies entirely inside a spine C. Delete C.
+\item If $P_0$ intersects no pages, it lies entirely inside a spine $C$. Delete
+$C$.
 
 \end{enumerate}
 
-\item In all cases, modify P by removing all components which have nonempty
+\item In all cases, modify $P$ by removing all components which have nonempty
 intersection with the deleted pages or spines.
 
 \end{enumerate}
@@ -106,128 +108,117 @@ original.
 
 \begin{thm}(Reduction Theorem)
 
-Let (M,P) be a pared admissible book of I-bundles. Repeatedly reducing
-terminates after finitely many reductions in some (Mr,Pr), with an associated
-pared embedding iota colon (Mr,Pr) to (M,P). Each resulting connected component
-is either a reduced book of I-bundles or a thickened closed surface with empty
-pared locus.
+Let $(M,P)$ be a pared admissible book of $I$-bundles. Repeatedly reducing
+terminates after finitely many reductions in some $(M_r,P_r)$, with an associated
+pared embedding $\iota\colon (M_r,P_r) \to (M,P)$. Each resulting connected
+component is either a reduced book of $I$-bundles or a thickened closed surface
+with empty pared locus.
 
-Furthermore, any (QF) surface in (M,P) is contained in iota(Mr,Pr). In
-particular, if (Mr,Pr)=emptyset, (M,P) does not contain a (QF) surface.
+Furthermore, any (QF) surface in $(M,P)$ is contained in $iota(M_r,P_r)$. In
+particular, if $(M_r,P_r)=\emptyset$, $(M,P)$ does not contain a (QF) surface.
 
 \end{thm}
 
 \begin{proof}
 
-Write sM0 = (M,P) and sMi for the (possibly disconnected) manifold we obtain
-after reducing i times.
+Write $\cM_0 = (M,P)$ and $\cM_i$ for the (possibly disconnected) manifold we
+obtain after reducing i times.
 
-Let size(sMi) = Sigma{(Mij,Pij) component of sMi} (num{pages of Mij})
-+ (num{spines of Mij}). We claim that any reduction must decrease the size. If
-we consider a thickened closed surface to be made out of one page and no
-spines, it's immediately clear that size(sMi)>0 if sMi neq emptyset. So this
-will imply that reducing repeatedly must terminate after finitely many
-reductions. Furthermore, to show that (QF) surfaces are included, we must show
-that any reduction deletes a set disjoint from all (QF) surfaces.
+Let $size(\cM_i) = \Sigma_{(M_{ij},P_{ij}) component of \cM_i} (\#\{pages of
+M_{ij}\}) + (\#\{spines of M_{ij}\})$. We claim that any reduction must
+decrease the size. If we consider a thickened closed surface to be made out of
+one page and no spines, it's immediately clear that $size(\cM_i)>0$ if $\cM_i
+\neq \emptyset$.  So this will imply that reducing repeatedly must terminate
+after finitely many reductions. Furthermore, to show that (QF) surfaces are
+included, we must show that any reduction deletes a set disjoint from all (QF)
+surfaces.
 
 We consider each possible reduction.
 
 Reduction (A1) removes spines without attached pages. No such spine can contain
-a pi1-injective closed surface, so it's clearly disjoint from (QF) surfaces.
+a $\pi_1$-injective closed surface, so it's clearly disjoint from (QF) surfaces.
 
 Reduction (A2) removes spines attached to a single page along a gluing
-intersecting a meridian disk only once. Again, no pi1-injective closed surface
+intersecting a meridian disk only once. Again, no $\pi_1$-injective closed surface
 can cross this spine (if it enters from that page, it must leave again along
-that same page, violating pi1-injectivity).
+that same page, violating $\pi_1$-injectivity).
 
 % XXX ^ above is slightly questionable. Why doesn't this argument work for
 % higher degree pages glued to single spine as well? I know it doesn't, but
 % argument above is sketch about it...
 
 Reduction (A3) does not actually delete anything. It produces a homeomorphic
-book of I-bundles (or possibly a thickened closed surface) (M,P) with
+book of $I$-bundles (or possibly a thickened closed surface) with
 a homeomorphically corresponding pared structure. Therefore there's nothing to
 prove in this case.
 
 Reduction (B) removes a page with a boundary component that's not glued to
-a spine. By the surface decomposition lemma, any pi1-injective surface that
+a spine. By the surface decomposition lemma, any $\pi_1$-injective surface that
 intersects the page at all must be a cover of the that page cores surface.
 Therefore it must have boundary components covering all boundary components of
 the page under consideration. This includes the free boundary component, but
 then by the surface decomposition lemma again, these have nothing they can glue
-to. So it is impossible to produce a closed pi1-injective surface (without
+to. So it is impossible to produce a closed $\pi_1$-injective surface (without
 boundary) that intersects this page.
 
-Reduction (C1) removes a page B which intersects a parabolic P0. There are two
-cases to consider here.
+Reduction (C1) removes a page $B$ which intersects a parabolic $P_0$. There are
+two cases to consider here.
 
-(1) If P0 is contained entirely inside B, that is, it doesn't intersect any
-spines at all, it's easy to see why no (QF) surface can intersect B. By the
-surface decomposition lemma, any surface intersecting B would have to be
-a cover of B. But then P0 will lift to any such cover, violating the parabolic
-lifting criterion for (QF).
+(1) If $P_0$ is contained entirely inside $B$, that is, it doesn't intersect
+any spines at all, it's easy to see why no (QF) surface can intersect $B$. By
+the surface decomposition lemma, any surface intersecting $B$ would have to be
+a cover of $B$. But then $P_0$ will lift to any such cover, violating the
+parabolic lifting criterion for (QF).
 
-(2) If P0 intersects a spine, in order to satisfy the (C1) reduction criterion,
-it must be a valence one spine C with B attached by degree 2. C cannot be
-valence 1 degree 1 because otherwise we'd violate (A2). Now it suffices to
-consider a surface that intersects the page B. Such a surface must be a cover
-of B. By the surface decomposition lemma, it must be glued to itself by annuli
-along the spine C. But since the gluing of B to C is degree 2, there can only
-be one topological choice of gluing through C, and this is the same choice that
-the parabolic P0 makes. This is easy to see if we look at a double cover near
-where B is glued to C. Since our parabolic only traverses spines of this form,
-our surface will necessarily remain parallel to the parabolic through each
-spine, and the resulting surface will violate the parabolic lifting criterion
-for the parabolic P0. So no (QF) surface can intersect a page which satisfies
-the (C1) reduction criterion.
+(2) If $P_0$ intersects a spine, in order to satisfy the (C1) reduction
+criterion, it must be a valence one spine $C$ with $B$ attached by degree 2.
+$C$ cannot be valence 1 degree 1 because otherwise we'd violate (A2). Now it
+suffices to consider a surface that intersects the page $B$. Such a surface
+must be a cover of $B$. By the surface decomposition lemma, it must be glued to
+itself by annuli along the spine $C$. But since the gluing of $B$ to $C$ is
+degree 2, there can only be one topological choice of gluing through $C$, and
+this is the same choice that the parabolic $P_0$ makes. This is easy to see if
+we look at a double cover near where $B$ is glued to $C$. Since our parabolic
+only traverses spines of this form, our surface will necessarily remain
+parallel to the parabolic through each spine, and the resulting surface will
+violate the parabolic lifting criterion for the parabolic $P_0$. So no (QF)
+surface can intersect a page which satisfies the (C1) reduction criterion.
 
-Reduction (C2) removes a spine C which intersects a parabolic P0. Again, by the
-surface decomposition lemma, any surface which traverses that spine will have
-to contain an annulus connecting two page gluings - that is, contain a multiple
-of that parabolic. This violates the lifting criterion for (QF).
+Reduction (C2) removes a spine $C$ which intersects a parabolic $P_0$. Again,
+by the surface decomposition lemma, any surface which traverses that spine will
+have to contain an annulus connecting two page gluings - that is, contain
+a multiple of that parabolic. This violates the lifting criterion for (QF).
 
 Finally, observe that in all cases, the parabolic components we remove from
-(M,P) as we decompose - ie those that intersect the deleted pieces - cannot
+$(M,P)$ as we decompose - ie those that intersect the deleted pieces - cannot
 possibly affect whether a surface outside the deleted pieces is (QF), as any
 surface that was otherwise (QF) but contained a multiple of any deleted
 parabolic would have to intersect a deleted piece. So as we inductively delete
-pieces of our book of I-bundles, we preserve the property that all (QF)
+pieces of our book of $I$-bundles, we preserve the property that all (QF)
 surfaces and parabolics we need to determine which surfaces are (QF) remain
-outside the deleted parts of the book of I-bundles. Since our induction is
+outside the deleted parts of the book of $I$-bundles. Since our induction is
 guaranteed to terminate by the size measure above, and we know that every
-termination is a reduced book of I-bundles, a thickened closed surface with no
-parabolics, or empty, this completes the proof.
+termination is a reduced book of $I$-bundles, a thickened closed surface with
+no parabolics, or empty, this completes the proof.
 
 \end{proof}
 
 As motivation, also observe that our specific example in the earlier section is
 one of the simplest possible topological structures for a reduced book of
-I-bundles.
+$I$-bundles.
 
 Note that the surface case is very easy.
 
 \begin{prop}
 
-Let (M,P) = (Sigma times I, emptyset) be a thickened closed surface with empty
-pared locus. Then every cover of Sigma induces a (QF) surface in.(M,P).
+Let $(M,P) = (\Si \times I, \emptyset)$ be a thickened closed surface with
+empty pared locus. Then every cover of Sigma induces a (QF) surface in.$(M,P)$.
 
 \end{prop}
 
 \begin{proof}
 
-P = emptyset, so this follows directly from the covering lemma.
+$P = \emptyset$, so this follows directly from the covering lemma. Every closed
+$\pi_1$-injective surface is (QF).
 
 \end{proof}
-
-\begin{prop}
-
-Let M be a reduced book of I-bundles. Then M must have incompressible boundary.
-
-% CAREFUL! not sure this is true. Need to finesse w one point intersection
-% lemma. I am pretty sure this is true IF I impose reduced condition. But I'm
-% not sure where to put this proposition.
-
-\end{prop}
-
-% TODO
-\textbf{TODO figure out/throw in Ian's explanation of incompressible boundary.}
