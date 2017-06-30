@@ -335,25 +335,43 @@ cobounds a sphere. Since X is irreducible, this sphere bounds a ball, giving
 a homotopy of S' into A. To keep S transverse to sA, we will actually homotope
 it slightly past A into whatever page or spine is glued to the other side of A.
 
-Suppose we have eliminated every piece of S with trivial pi1 in this way, by
-homotoping it across the binding annuli. We may need to repeat inductively, but
-at every stage we're reducing the number of intersections with sA so this is
-guaranteed to terminate. We now claim that after no more such moves can be
-made, every piece of S is pi1-injective. % TODO those stupid annuli!
+Now suppose that S' is an annulus, and that both boundary curves of S' lie in
+the same binding annulus A. We claim that S' is homotopic rel boundary to an
+annulus in A. We know the two boundary components are conjugate in pi1 (they're
+freely homotopic, following S'). Since they both lie in A, they must be
+parallel, as different multiples of the generator of pi1(A) cannot possibly be
+conjugate in pi1X (which is cyclic or free). It follows that they bound an
+annulus S'' in A.  To prove S' and S'' are homotopic, observe that together
+they describe a map T2 to X. But pi1X does not contain an abelian group of rank
+> 1, so T2 to X cannot be pi1-injective. Choose a primitive beta for the kernel
+of this map.  beta bounds an immersed disk D. Cutting S cup S'' along beta and
+attaching 2 parallel copies of D yields a map S2 to X. But X is aspherical, so
+this map is homotpic to a point. Following along this homotopy (and reversing
+part of it) yields a homotopy between S' and S''.
+
+Suppose we have eliminated every piece of S which is a disk or disallowed
+annulus in this way, by homotoping it across the binding annuli. We may need to
+repeat inductively, but at every stage we're reducing the number of
+intersections with sA so this is guaranteed to terminate. We now claim that
+after no more such moves can be made, the result satisfies (1) and (2).
 
 Again consider an arbitrary page or spine X, and an arbitrary component S' of
-S cap X.  We know pi1(S')neq1 by the above argument. We claim it is
-pi1-injective as a map S' to X (abusing notation slightly - really this is
-asking about the preimage of S' on the left-hand abstract surface S). Suppose
-not. Then we have a nontrivial loop alpha in S', which is homotopically trivial
-in X.  Therefore alpha is homotopically trivial in M, using that same homotopy.
-Since S to X is pi1-injective, alpha must be homotopically trivial in S. Since
-S is an oriented surface, the only way alpha can be homotopically trivial in
-S but not S' is if one of the boundary components of S' cuts off a disk D cin
-S. If it cuts off a surface of any higher genus, we do not obtain any relations
-among elements of pi1(S'). But if we cut D along sA, we can see that at least
-one innermost piece of D must be a disk, contradicting our minimality
-assumption. Hence each piece S' is pi1-injective in X.
+S cap X.  We know pi1(S')neq1 by the above argument. We also know it cannot be
+an annulus. Annuli with both boundary components on the same binding annulus
+were removed above, and no other annuli can exist because they'd project down
+to give a pi1 conjugacy between two boundary classes in a surface with
+boundary, which is impossible as pi1X is free. We claim it is pi1-injective as
+a map S' to X (abusing notation slightly - really this is asking about the
+preimage of S' on the left-hand abstract surface S).  Suppose not. Then we have
+a nontrivial loop alpha in S', which is homotopically trivial in X.  Therefore
+alpha is homotopically trivial in M, using that same homotopy.  Since S to X is
+pi1-injective, alpha must be homotopically trivial in S. Since S is an oriented
+surface, the only way alpha can be homotopically trivial in S but not S' is if
+one of the boundary components of S' cuts off a disk D cin S. If it cuts off
+a surface of any higher genus, we do not obtain any relations among elements of
+pi1(S'). But if we cut D along sA, we can see that at least one innermost piece
+of D must be a disk, contradicting our minimality assumption. Hence each piece
+S' is pi1-injective in X.
 
 Let B be a page. We know that each piece S' of S cap B is pi1-injective and
 proper. Projecting B to its base surface Si, we know this is a deformation
@@ -363,8 +381,9 @@ rel boundary to a finite-sheeted covering of Si. This proves (1).
 
 Let C be a spine. Again we know that each piece S' of S cap C is pi1-injective
 and proper. Since C has cyclic fundamental group, and no piece S' is a disk,
-every piece S' must be an annulus. These annuli are pi1-injective. This proves
-(2). % TODO fix rest of 2 for change
+every piece S' must be an annulus. These annuli are pi1-injective, and by
+construction must have boundary curves on different binding annuli.  This
+proves (2).
 
 To prove (3), look at the boundary curves of these annuli in the spines. Each
 boundary curve must be contained in a binding annulus A cin bd C. Therefore it
