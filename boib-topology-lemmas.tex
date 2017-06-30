@@ -266,9 +266,9 @@ same thing, and can be chosen to be immersed as well.
 lemma (The Covering Lemma, as I actually use it)
 
 Let phi: S to S' be a proper pi1-injective map of compact connected oriented
-surfaces with boundary, and suppose that S is not a 2-sphere.  Then phi is
-homotopic rel boundary to a finite-sheeted covering map.  Note that the
-converse holds more generally - that is, any finite-sheeted covering is
+surfaces with boundary, and suppose that S is not a 2-sphere or an annulus.
+Then phi is homotopic rel boundary to a finite-sheeted covering map.  Note that
+the converse holds more generally - that is, any finite-sheeted covering is
 a proper pi1-injective map.
 
 proof
@@ -277,14 +277,19 @@ For the forward direction, we can apply minimal surface theory to perturb phi
 via homotopy rel boundary to an immersion. It's straightforward to ensure that
 phi is a local homeomorphism on boundary curves. Now think of int(S') as being
 embedded as a totally geodesic core subsurface of a Fuchsian group quotient of
-hyperbolic 3-space.  Then as we pull phi(int(S)) cin int(S')  to minimality its
-image will necessarily remain in int(S'), as it's totally geodesic.  Since it
-is connected and not a sphere, it can't shrink down to nothing. Since it's
-properly embedded, the boundary components of S correspond to local maps of
-cusps into cusp tubes of the thickened int(S') and must remain fixed on the
-same cusp as we pull phi(int(S)) to a minimal surface. Hence the boundary
-components of S do not move under this homotopy. The result is an immersion
-produced via a homotopy rel boundary.
+hyperbolic 3-space. Note that since phi is pi1-injective and S has negative
+Euler characteristic, S' must have negative Euler characteristic as well. Then
+as we pull phi(int(S)) cin int(S') to minimality its image will necessarily
+remain in int(S'), as it's totally geodesic.  Since it is connected and not
+a sphere, it can't shrink down to nothing. Since it's mapped in properly, the
+boundary components of S correspond to local maps of cusps into cusp tubes of
+the thickened int(S') and each must remain fixed on the same cusp as we pull
+phi(int(S)) to a minimal surface.  Hence the boundary components of S do not
+move under this homotopy.  Finally, since S is not an annulus, the resulting
+homotopy cannot pull phi(int(S)) out to infinity in a single cusp, as its pi1
+contains at least one element that is not represented by a cusp neighborhood.
+So the result is an immersed minimal surface inside int(S'). Adding back the
+boundary curves of S', we obtain a homotopy rel boundary to an immersion.
 
 Then since phi is a proper immersion between manifolds of the same dimension,
 it's a local homeomorphism on boundary and interior neighborhoods, and
