@@ -516,13 +516,16 @@ description of the lifted pared pattern near each gluing annulus - we want to
 ensure that the two sides match to give this description when we glue. This is
 easy to guarantee locally as the covering degree is the same on both sides of
 each gluing, so we just need to perturb topologically so the endpoints line up.
+Another way of saying this is at each gluing, we make sure to attach lifts of
+pieces of the same component of P, and not to attach lifts of pieces of
+different components of P.
 
 defn
 
 We say that S satisfies the \emph{pared lifting criterion} or \emph{parabolic
 lifting criterion} if the lifted pared pattern on S contains no closed curves.
 
-lemma
+lemma (pared/parabolic lifting criterion)
 
 Let Let M be a book of I-bundles, and S to M be a pi1-injective map, where S is
 a connected closed surface.  Place S and P in minimal position as above. S is
@@ -530,40 +533,8 @@ a (QF) surface if and only if it satisfies the pared lifting criterion.
 
 proof
 
-
-
-% TODO delete the following lemma and its proof
-\begin{lemma}\label{L:sc}
-
-Let $S$ be a surface satisfying \eqref{E:qf}. Homotope $S$ to have minimal
-intersection with each $A_i$, that is, so there are no ``bumps''.  Then for
-each $M_i$, each component of $S \cap M_i$ is a finite-sheeted covering of the
-core surface.  That is, given such a component $S' \cin M_i$, the map $S' \to
-M_i = \Si_{1,1}\x I \to \Si_{1,1}\x{1/2}$ is homotopic to a finite-sheeted
-covering map. Conversely, given any finite-sheeted covering $\widetilde{S} \to
-\Si_{1,1}$, there exists a corresponding proper immersed $\pi_1$-injective
-surface $S \cin \Si_{1,1}\x I$.
-
-\end{lemma}
-\begin{proof}
-
-$S$ is compact, so every such component $S'$ is a compact surface with
-boundary, properly immersed in $M_i$. Since $S$ is $\pi_1$-injective in $M$,
-$S'$ must be $\pi_1$-injective in $M_i$. Otherwise, we'd have a nontrivial
-element of $\pi_1S'$ which is trivial in $\pi_1M_i$, hence in $\pi_1M$, hence
-in $\pi_1S$, contradicting the minimal position homotopy above. So the map
-$\phi : S'\to\Si_{1,1}\x{1,2}$ is also $\pi_1$-injective, since $M_i$
-deformation retracts to its core. Let $H = \phi_*(\pi_1S')$, and let
-$\Si_{1,1}^H$ be the cover of $\Si_{1,1}$ associated to $H<\pi_1\Si_{1,1}$.
-$\phi$ lifts to $\widetilde{\phi}\colon S'\to \Si_{1,1}^H$. This is a proper
-map of compact surfaces which is an isomorphism on $\pi_1$.  By the
-classification of surfaces, it must be homotopic (as a proper map) to
-a homeomorphism. So $\phi$ is homotopic to a covering map. It must be
-finite-sheeted as $S'$ is compact (by classification of surfaces again).
-
-Conversely, given a finite-sheeted cover $\widetilde{S}\to \Si_{1,1}$, compose
-with the embedding $\Si_{1,1} = \Si_{1,1}\x{1/2} \cin \Si_{1,1}\x I$. This is
-proper and $\pi_1$-injective.  Perturb locally to obtain an immersion.
-
-\end{proof}
+One direction is straightforward. If the lifted pared pattern contains a closed
+curve, every arc making up that curve must be a lifted copy of an arc in
+a single component of P, because we only attached copies that came from the
+same component downstairs. % TODO finish
 
