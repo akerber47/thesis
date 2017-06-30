@@ -481,20 +481,56 @@ parallel to the binding annuli. This completes the proof.
 
 end proof
 
-lemma (parabolic lifting criterion)
-
 Let M be a book of I-bundles, and S to M be a pi1-injective map, where S is
-a connected closed surface.  Place S and P in minimal position as above. Then
-S is a (QF) surface if and only if the following criterion holds:
+a connected closed surface.  Place S and P in minimal position as above. We
+have a constructive topological criterion for when S is a (QF) surface.
 
-Construct a lifted pared pattern as follows. For each spine C, each component
-S' of S cap C is an immersed annulus parallel to a multiple of the binding
-annuli.  The two components of 
-% TODO finish statement here
+Construct a "lifted pared pattern" on S as follows. We build a pattern of arcs
+and curves on each component of S cap X, where X is a spine or page. For each
+page B, a component S' of S cap B is a finite-sheeted cover of the base surface
+Si of B. The side boundary bd M cap B is either two copies of Si or an oriented
+double cover. In either case, we have a canonical covering map from S' to each
+component of bd M cap B. We define the lifted pared pattern on S' to be the
+preimages of P cap B under these covering maps. Note that if B is a trivial
+I-bundle, these images may intersect (because they're coming from two different
+surfaces in bd M cap B).
+
+For each spine C, a component S' of S cap C is an immersed annulus parallel to
+a multiple of the binding annuli.  The two components of bd S' lie on two
+distinct binding annuli. Now there may or may not be a component A' of bd M cap
+C with boundary components in these same two binding annuli. (This is true when
+the two binding annuli are "adjacent" in C). If there is, we can homotope the
+boundary components of S' to be multiples of the boundary components of A',
+since they lie in the same boundary components. This gives us a canonical
+covering map from S' to A'. Define the lifted pared pattern on S' to be the
+preimage of P cap A' under this map. If there is no such component A', define
+the lifted pared pattern to be empty.
+
+We now construct the lifted pared pattern on S by gluing these components of
+S cap X back together to form S. Whenever we glue, we guarantee that for any
+given component of P which is represented in the lifted pared patterns on both
+sides, the lifted components will connect up across the gluing.  Equivalently,
+if we look at a tubular neighborhood N of a gluing annulus A, S cap N is
+a union of covers of the components of N cap bd M. This gives a local
+description of the lifted pared pattern near each gluing annulus - we want to
+ensure that the two sides match to give this description when we glue. This is
+easy to guarantee locally as the covering degree is the same on both sides of
+each gluing, so we just need to perturb topologically so the endpoints line up.
+
+defn
+
+We say that S satisfies the \emph{pared lifting criterion} or \emph{parabolic
+lifting criterion} if the lifted pared pattern on S contains no closed curves.
+
+lemma
+
+Let Let M be a book of I-bundles, and S to M be a pi1-injective map, where S is
+a connected closed surface.  Place S and P in minimal position as above. S is
+a (QF) surface if and only if it satisfies the pared lifting criterion.
 
 proof
 
-% TODO
+
 
 % TODO delete the following lemma and its proof
 \begin{lemma}\label{L:sc}
