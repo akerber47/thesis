@@ -1,41 +1,40 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Topology of books of I-bundles}
+\section{Topology of books of $I$-bundles}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this section we establish basic definitions and facts about books of
-I-bundles and quasi-Fuchsian surfaces contained inside them.
+$I$-bundles and quasi-Fuchsian surfaces contained inside them.
 
 Recall that we are considering possible pared structures $P$ on $M$ a convex
-hyperbolic 3-manifold. Our goal is to find a surface $S \cin M$ such that
-
-\begin{equation}\label{E:qf}
-S \text{ is closed immersed $\pi_1$-injective, and $\pi_1P_k \cap \pi_1S = 1$
-for each component $P_k$ of $P$} \tag{QF}
-\end{equation}
+hyperbolic 3-manifold. Our goal is to find a surface map $\phi \colon S \to M$
+that is quasi-Fuchsian, ie, such that $S$ is a closed surface, $\phi$ is
+$\pi_1$-injective, and $\pi_1P_k \cap \phi_*(\pi_1S) = 1$ for each component
+$P_k$ of $P$.
 
 Note that since we haven't fixed a basepoint, these subgroups are really only
 defined up to conjugacy (that is, they're sets of free homotopy classes) - what
 we're saying is they fail to intersect for an arbitrary choice of conjugacy
 class for each subgroup. This corresponds to multiples of the parabolic curves
-being freely homotopic into the immersed image of the given surface
+being freely homotopic into the immersed image of the given surface.
 
 \begin{defn}
 
 An \emph{$I$-bundle} is a fiber bundle with fiber $I=[0,1]$, and base space
 a compact surface with boundary. We'll refer to this as its \emph{base
 surface}.  In this paper we adopt the convention that all $I$-bundles are
-oriented.  The boundary of an $I$-bundle $I to B to Si$ decomposes into the
-\emph{side boundary} $\pi^{-1}(\bd Si)$ and the \emph{binding boundary} $cup
-\bd \pi^{-1}(x)$. Note that the binding boundary is a collection of disjoint
-annuli. The reason for these terms is the following definition.
+oriented.  The boundary of an $I$-bundle $I \to B \to \Si$ decomposes into the
+\emph{side boundary} $\pi^{-1}(\bd \Si)$ and the \emph{binding boundary}
+$\bigcup \bd \pi^{-1}(x)$. Note that the binding boundary is a collection of
+disjoint annuli. The reason for these terms is the following definition.
 
 A \emph{book of $I$-bundles} is a 3-manifold obtained from the following
-construction. Let sB be a collection of I-bundles, and sC a collection of solid
-tori. Attach the I-bundles to the solid tori by attaching some (or all) of the
-binding boundary components to disjoint annuli in the boundaries of the solid
-tori.  If we let sA be the union of glued annuli in the resulting manifold, our
-manifold can be written as $M=sB cup_sA sC$. Note that by construction each
-component of sA is properly embedded, 2-sided, and incompressible in M.
+construction. Let $\cB$ be a collection of $I$-bundles, and $\cC$ a collection
+of solid tori. Attach the $I$-bundles to the solid tori by attaching some (or
+all) of the binding boundary components to disjoint annuli in the boundaries of
+the solid tori.  If we let $\cA$ be the union of glued annuli in the resulting
+manifold, our manifold can be written as $M=\cB \cup_\cA \cC$. Note that by
+construction each component of $\cA$ is properly embedded, 2-sided, and
+incompressible in $M$.
 
 \end{defn}
 
@@ -45,19 +44,25 @@ Intuitively, if we take a physical book with thick pages and imagine bending it
 in a circle so its top and bottom are identified, the spine becomes a solid
 torus.  If we also attach each page along its top and bottom, the pages become
 thickened annuli, attached to the spine at one end. This manifold can be built
-from the above construction. Take $sC$ to be a single solid torus, and $sB$ to
-be a union of thickened annuli, one for each page of the book. Glue one gluing
-annulus of each component of $sB$, and glue them all to parallel longitudinal
-annuli in $\bd sC$.
+from the above construction. Take $\cC$ to be a single solid torus, and $\cB$
+to be a union of thickened annuli, one for each page of the book. Glue one
+gluing annulus of each component of $\cB$, and glue them all to parallel
+longitudinal annuli in $\bd \cC$.
 
-Therefore, in keeping with the "book" terminology, we will generally refer to
-the components of sB as \emph{pages}, the components of sC as \emph{spines},
-and the components of sA as \emph{bindings} or \emph{binding annuli}.
-Furthermore, we'll say that M is \emph{fully bound} if \emph{all} the binding
-boundary components are glued. For reasons we'll see later, the books of
-I-bundles that we want to consider will satisfy this criterion.
+\begin{defn}
 
-Algebraically, a book of I-bundles corresponds to a particularly simple graph
+In keeping with the "book" terminology, we will generally refer to the
+components of $\cB$ as \emph{pages}, the components of $\cC$ as \emph{spines},
+and the components of $\cA$ as \emph{bindings} or \emph{binding annuli}.
+Furthermore, we'll say that $M$ is \emph{fully bound} if \emph{all} the binding
+boundary components are glued.
+
+\end{defn}
+
+For reasons we'll see later, the books of $I$-bundles that we want to consider
+will satisfy this criterion.
+
+Algebraically, a book of $I$-bundles corresponds to a particularly simple graph
 of groups. The graph is bipartitie, and one side of the partition (the spines)
 are just copies of $Z$.
 
@@ -69,45 +74,45 @@ $I$-bundles, to avoid elementary or degenerate cases.
 \item The underlying manifold is a compact connected orientable irreducible
 hyperbolic 3-manifold with incompressible boundary.
 
-\item Each page is an I-bundle over a surface with boundary of negative Euler
+\item Each page is an $I$-bundle over a surface with boundary of negative Euler
 characteristic.  That is, no base surface is a sphere, projective plane, disk,
 Mobius strip, or annulus.
 
 \end{enumerate}
 
-Let's briefly explain why. Obviously we want M to be compact connected
+Let's briefly explain why. Obviously we want $M$ to be compact connected
 orientable hyperbolic, as this is the general case we're studying (Kleinian
-manifolds). If M were nonorientable we could reduce to the orientable double
+manifolds). If $M$ were nonorientable we could reduce to the orientable double
 cover. Hyperbolic 3-manifolds must be irreducible.
 
-If M had compressible boundary, let D be a compressing disk for the boundary.
-Any closed pi1-injective surface S cin M that intersects D must do so in
-a union of closed curves, since S is properly embedded. Every such closed curve
-$\alpha$ is homotopically trivial in M, because it's a closed curve in the disk
-D.  But S is pi1-injective, so $\alpha$ must be homotopically trivial in S as
-well. Since S is a surface, contracting the loop $\alpha$ yields a disk $D'\cin
-S$. Note that D' may be immersed, but we can use it to produce a smaller disk
-D'' which is embedded and still bounded by $\alpha$. Combining D and D' yields
-a sphere S2 cin M. By irreducibility of M, this bounds a ball. Using a standard
-innermost disk argument, we can homotope S across these balls (starting from
-the innermost and working our way out) until S and D are disjoint.  This proves
-that any quasi-Fuchsian surfaces are essentially disjoint from compression
-disks. Therefore, since we're interested in quasi-Fuchsian surfaces, we might
-as well compress as much as possible before looking for surfaces.
+If $M$ had compressible boundary, let $D$ be a compressing disk for the
+boundary.  Any closed $\pi_1$-injective surface $S \cin M$ that intersects $D$
+must do so in a union of closed curves, since $S$ is properly embedded. Every
+such closed curve $\alpha$ is homotopically trivial in $M$, because it's
+a closed curve in the disk $D$.  But $S$ is $\pi_1$-injective, so $\alpha$ must
+be homotopically trivial in S as well. Since S is a surface, contracting the
+loop $\alpha$ yields a disk $D'\cin S$. Note that $D'$ may be immersed, but we
+can use it to produce a smaller disk $D''$ which is embedded and still bounded
+by $\alpha$.  Combining $D$ and $D'$ yields a sphere $S^2 \cin M$. By
+irreducibility of $M$, this bounds a ball.  Using a standard innermost disk
+argument, we can homotope $S$ across these balls (starting from the innermost
+and working our way out) until $S$ and $D$ are disjoint.  This proves that any
+quasi-Fuchsian surfaces are essentially disjoint from compression disks.
+Therefore, since we're interested in quasi-Fuchsian surfaces, we might as well
+compress as much as possible before looking for surfaces.
 
 Each page's base surface must have at least one boundary component to glue to
-in order for M to be connected. We don't want to consider base surfaces which
-are disks.  Observe that each page which is a copy of $S0,1$ means that that
-page and its attached spine form a 3-manifold with a finite-sheeted cover by
-a ball (we can arrange things so that in the cover, the $S0,1$ attaching map
-only traverses the longitude once, and we get a thickened disk).  This means
-that we'll have finite order summands in our group, which correspond to
-elliptic pieces, for instance lens spaces, in the JSJ decomposition. These
-cases are not hyperbolic.
+in order for $M$ to be connected. We don't want to consider base surfaces which
+are disks.  Observe that each page which is a disk means that that page and its
+attached spine form a 3-manifold with a finite-sheeted cover by a ball (we can
+arrange things so that in the cover, the disk attaching map only traverses the
+longitude once, and we get a thickened disk).  This means that we'll have
+finite order summands in our group, which correspond to elliptic pieces, for
+instance lens spaces, in the JSJ decomposition. These cases are not hyperbolic.
 
 %TODO
 \textbf{TODO explain Mobius strips / annuli with "big bad loops" idea which
-breaks our book of I-bundles reduction theorem.}
+breaks our book of $I$-bundles reduction theorem.}
 
 We first make the following simple observation.
 
@@ -124,43 +129,43 @@ pages of $M'$. Lift the gluing annuli of $M$ to gluing annuli of $M'$.
 end proof
 
 These facts are well-known basic results in 3-manifold topology.  The following
-result follows immediately from the classification of I-bundles over surfaces.
+result follows immediately from the classification of $I$-bundles over surfaces.
 
 prop
 
-Let M be a book of I-bundles. Recall we require that M is oriented. To be
-orientable, every I-bundle in M is either a trivial bundle over an oriented
+Let M be a book of $I$-bundles. Recall we require that M is oriented. To be
+orientable, every $I$-bundle in M is either a trivial bundle over an oriented
 surface, or a Z/2-twisted bundle over a nonorientable surface. In the latter
 case, the homotopy classes with nontrivial bundle twisting are precisely those
 with orientation-reversing monodromy (word choice?).
 
-Furthermore, every twisted I-bundle has a double cover which is a trivial
-I-bundle over a base surface which is an oriented double cover of the original
+Furthermore, every twisted $I$-bundle has a double cover which is a trivial
+$I$-bundle over a base surface which is an oriented double cover of the original
 nonorientable base surface.
 
 proof
 
-See Hempel I-bundle facts. {\bf TODO}
+See Hempel $I$-bundle facts. {\bf TODO}
 
 prop
 
-Let X be a page or spine in a book of I-bundles M. Then X is irreducible, and
-each binding annulus in bd X (ie component of sA cap X) is incompressible in X.
+Let X be a page or spine in a book of $I$-bundles M. Then X is irreducible, and
+each binding annulus in bd X (ie component of \cA cap X) is incompressible in X.
 
 proof
 
-We first claim pi2X = 0. A trivial I-bundle is a thickened surface of negative
-Euler characteristic, hence is aspherical. A twisted I-bundle has a double
-cover which is a trivial I-bundle over the oriented double cover of the base
+We first claim pi2X = 0. A trivial $I$-bundle is a thickened surface of negative
+Euler characteristic, hence is aspherical. A twisted $I$-bundle has a double
+cover which is a trivial $I$-bundle over the oriented double cover of the base
 surface. Solid tori are aspherical as well. It follows from the sphere theorem
 that X is irreducible.
 
 Let A cin bd X be a binding annulus. To prove A is incompressible in X, we'll
-show that it is pi1-injective. Let X be a solid torus. Then since A intersects
+show that it is $\pi_1$-injective. Let X be a solid torus. Then since A intersects
 a meridian disk at least once (as shown above), it must contain a multiple of
-a generator of pi1X. So A is pi1-injective. Let X be an I-bundle. Again, we can
-pass to a double cover which is a trivial I-bundle. Now A cin X is
-pi1-injective because it's a thickening of a boundary component of a compact
+a generator of pi1X. So A is $\pi_1$-injective. Let X be an $I$-bundle. Again, we can
+pass to a double cover which is a trivial $I$-bundle. Now A cin X is
+$\pi_1$-injective because it's a thickening of a boundary component of a compact
 surface. This completes the proof.
 
 end proof
@@ -170,7 +175,7 @@ a couple more simple definitions.
 
 defn
 
-Let M be a book of I-bundles, and C a spine in M.  The \emph{valence} v(C) is
+Let M be a book of $I$-bundles, and C a spine in M.  The \emph{valence} v(C) is
 the number of binding annuli that intersect C or, equivalently, that are
 contained in $\bd C$.
 
@@ -189,7 +194,7 @@ enddefn
 
 prop
 
-Let M be a book of I-bundles. Recall that we require that M has incompressible
+Let M be a book of $I$-bundles. Recall that we require that M has incompressible
 boundary. Then M cannot have any spines C such that $v(C)=0$, $d(C)=0$, or
 $v(C)=d(C)=1$.
 
@@ -199,7 +204,7 @@ Any spine C with $v(C)=0$ forces C to be a solid torus component. This does not
 have incompressible boundary (it's also not hyperbolic).
 
 Any spine C with $d(C)=0$ has a meridian disk that properly embeds in the
-resulting book of I-bundles, since it's disjoint from all the binding annuli.
+resulting book of $I$-bundles, since it's disjoint from all the binding annuli.
 This is a boundary compressing disk.
 
 % The following case is my old nemesis, the "one-point intersection lemma"
@@ -259,31 +264,31 @@ fact have incompressible boundary. (That is, our definitions are consistent).
 % TODO
 \textbf{TODO figure out/throw in Ian's explanation of incompressible boundary.}
 
-We now discuss the possible closed pi1-injective surfaces inside a book of
-I-bundles. These are the surfaces we'll need to consider in order to find
+We now discuss the possible closed $\pi_1$-injective surfaces inside a book of
+$I$-bundles. These are the surfaces we'll need to consider in order to find
 a closed quasi-Fuchsian surface - that is, a quasi-Fuchsian surface subgroup.
 
 Note that since every hyperbolic 3-manifold is aspherical, by elementary
-obstruction theory any injective map pi1S to pi1M is induced by a pi1-injective
+obstruction theory any injective map pi1S to pi1M is induced by a $\pi_1$-injective
 map S to M.
 % TODO cite Long-Reid, p11
 
-Furthermore, by minimal surface theory, we can guarantee that any pi1-injective
+Furthermore, by minimal surface theory, we can guarantee that any $\pi_1$-injective
 surface in a hyperbolic 3-manifold is homotopic to an immersed surface.
 A surface which is not immersed will contradict minimality.
 % TODO cite Neumann p1
 
-In what follows we'll speak only of pi1-injective surfaces, or possibly surface
+In what follows we'll speak only of $\pi_1$-injective surfaces, or possibly surface
 subgroups. But it is important to note that in this situation those are the
 same thing, and can be chosen to be immersed as well.
 
 lemma (The Covering Lemma, as I actually use it)
 
-Let phi: S to S' be a proper pi1-injective map of compact connected oriented
+Let phi: S to S' be a proper $\pi_1$-injective map of compact connected oriented
 surfaces with boundary, and suppose that S is not a 2-sphere or an annulus.
 Then phi is homotopic rel boundary to a finite-sheeted covering map.  Note that
 the converse holds more generally - that is, any finite-sheeted covering is
-a proper pi1-injective map.
+a proper $\pi_1$-injective map.
 
 proof
 
@@ -291,7 +296,7 @@ For the forward direction, we can apply minimal surface theory to perturb phi
 via homotopy rel boundary to an immersion. It's straightforward to ensure that
 phi is a local homeomorphism on boundary curves. Now think of int(S') as being
 embedded as a totally geodesic core subsurface of a Fuchsian group quotient of
-hyperbolic 3-space. Note that since phi is pi1-injective and S has negative
+hyperbolic 3-space. Note that since phi is $\pi_1$-injective and S has negative
 Euler characteristic, S' must have negative Euler characteristic as well. Then
 as we pull phi(int(S)) cin int(S') to minimality its image will necessarily
 remain in int(S'), as it's totally geodesic.  Since it is connected and not
@@ -312,12 +317,12 @@ are discrete sets because it's a covering, and S is compact, so it follows that
 point fibers are finite sets.
 
 The converse follows from elementary covering space theory. As in the above
-note, we can use minimal surface theory to make that proper pi1-injective map
+note, we can use minimal surface theory to make that proper $\pi_1$-injective map
 into an immersion.
 
 lemma (surface decomposition lemma)
 
-Let M be a book of I-bundles, and S immerse M be a pi1-injective map, where
+Let M be a book of $I$-bundles, and S immerse M be a $\pi_1$-injective map, where
 S is a (connected) closed orientable surface.  Then, we can place S in minimal
 position with respect to M such that:
 
@@ -336,9 +341,9 @@ yield a closed surface.
 
 proof
 
-Homotope S to be transverse to sA, the union of all binding annuli. Cutting
-S along sA decomposes it into a union of properly immersed surfaces in each
-page or spine of M. We first move S into minimal position with respect to sA.
+Homotope S to be transverse to \cA, the union of all binding annuli. Cutting
+S along \cA decomposes it into a union of properly immersed surfaces in each
+page or spine of M. We first move S into minimal position with respect to \cA.
 For each page or spine X cin M, S cap X is a union of properly immersed
 surfaces. Consider an arbitrary component S' of S cap X.
 
@@ -346,7 +351,7 @@ If pi1(S')=1, then S' must be a disk as S is a connected surface and is not
 a sphere. First observe that bd S' is contained in one of the binding annuli
 A cin bd X. Since A is incompressible, bd S' bounds a disk in A, that is, S'
 cobounds a sphere. Since X is irreducible, this sphere bounds a ball, giving
-a homotopy of S' into A. To keep S transverse to sA, we will actually homotope
+a homotopy of S' into A. To keep S transverse to \cA, we will actually homotope
 it slightly past A into whatever page or spine is glued to the other side of A.
 
 Now suppose that S' is an annulus, and that both boundary curves of S' lie in
@@ -357,7 +362,7 @@ parallel, as different multiples of the generator of pi1(A) cannot possibly be
 conjugate in pi1X (which is cyclic or free). It follows that they bound an
 annulus S'' in A.  To prove S' and S'' are homotopic, observe that together
 they describe a map T2 to X. But pi1X does not contain an abelian group of rank
-> 1, so T2 to X cannot be pi1-injective. Choose a primitive beta for the kernel
+> 1, so T2 to X cannot be $\pi_1$-injective. Choose a primitive beta for the kernel
 of this map.  beta bounds an immersed disk D. Cutting S cup S'' along beta and
 attaching 2 parallel copies of D yields a map S2 to X. But X is aspherical, so
 this map is homotpic to a point. Following along this homotopy (and reversing
@@ -366,7 +371,7 @@ part of it) yields a homotopy between S' and S''.
 Suppose we have eliminated every piece of S which is a disk or disallowed
 annulus in this way, by homotoping it across the binding annuli. We may need to
 repeat inductively, but at every stage we're reducing the number of
-intersections with sA so this is guaranteed to terminate. We now claim that
+intersections with \cA so this is guaranteed to terminate. We now claim that
 after no more such moves can be made, the result satisfies (1) and (2).
 
 Again consider an arbitrary page or spine X, and an arbitrary component S' of
@@ -374,28 +379,28 @@ S cap X.  We know pi1(S')neq1 by the above argument. We also know it cannot be
 an annulus. Annuli with both boundary components on the same binding annulus
 were removed above, and no other annuli can exist because they'd project down
 to give a pi1 conjugacy between two boundary classes in a surface with
-boundary, which is impossible as pi1X is free. We claim it is pi1-injective as
+boundary, which is impossible as pi1X is free. We claim it is $\pi_1$-injective as
 a map S' to X (abusing notation slightly - really this is asking about the
 preimage of S' on the left-hand abstract surface S).  Suppose not. Then we have
 a nontrivial loop alpha in S', which is homotopically trivial in X.  Therefore
 alpha is homotopically trivial in M, using that same homotopy.  Since S to X is
-pi1-injective, alpha must be homotopically trivial in S. Since S is an oriented
+$\pi_1$-injective, alpha must be homotopically trivial in S. Since S is an oriented
 surface, the only way alpha can be homotopically trivial in S but not S' is if
 one of the boundary components of S' cuts off a disk D cin S. If it cuts off
 a surface of any higher genus, we do not obtain any relations among elements of
-pi1(S'). But if we cut D along sA, we can see that at least one innermost piece
+pi1(S'). But if we cut D along \cA, we can see that at least one innermost piece
 of D must be a disk, contradicting our minimality assumption. Hence each piece
-S' is pi1-injective in X.
+S' is $\pi_1$-injective in X.
 
-Let B be a page. We know that each piece S' of S cap B is pi1-injective and
+Let B be a page. We know that each piece S' of S cap B is $\pi_1$-injective and
 proper. Projecting B to its base surface Si, we know this is a deformation
-retract (B is an I-bundle) so the composition S' to Si is also pi1-injective
+retract (B is an $I$-bundle) so the composition S' to Si is also $\pi_1$-injective
 and proper. Applying the covering lemma, we see that each piece S' is homotopic
 rel boundary to a finite-sheeted covering of Si. This proves (1).
 
-Let C be a spine. Again we know that each piece S' of S cap C is pi1-injective
+Let C be a spine. Again we know that each piece S' of S cap C is $\pi_1$-injective
 and proper. Since C has cyclic fundamental group, and no piece S' is a disk,
-every piece S' must be an annulus. These annuli are pi1-injective, and by
+every piece S' must be an annulus. These annuli are $\pi_1$-injective, and by
 construction must have boundary curves on different binding annuli.  This
 proves (2).
 
@@ -408,7 +413,7 @@ surface and that M is a union of pages and spines along binding annuli.
 end proof
 
 We now consider the possible pared structures (M,P), where M is a book of
-I-bundles. We have a straightforward fact.
+$I$-bundles. We have a straightforward fact.
 
 \begin{prop}
 
@@ -426,13 +431,13 @@ earlier). Since each boundary component of M consists of page boundaries glued
 together along annuli in spines, which contribute nothing to Euler
 characteristic, it immediately follows that each boundary component of M has
 negative Euler characteristic itself. So no boundary component admits
-a pi1-injective torus, and all pared locus components must be annuli.
+a $\pi_1$-injective torus, and all pared locus components must be annuli.
 
 \end{proof}
 
 lemma (minimal position for pared structures / pared decomposition lemma)
 
-Let (M,P) be a pared 3-manifold, where M is a book of I-bundles. Then we can
+Let (M,P) be a pared 3-manifold, where M is a book of $I$-bundles. Then we can
 isotope P within bd M such that:
 
 (1) For each page B, P cap B is a union of disjoint rectangles and annuli, each
@@ -452,7 +457,7 @@ binding annuli in bd C.
 proof
 
 We can isotope P locally, keeping all its components disjoint and embedded in
-bd M, so that it's transverse to sA. This immediately guarantees (3).
+bd M, so that it's transverse to \cA. This immediately guarantees (3).
 
 Let X be a page or spine in M. P cap X is a union of disjoint rectangles and
 annuli, which are thickenings of arcs and curves in bd M cap X. Suppose one of
@@ -461,14 +466,14 @@ a disk with an arc in bd (bd M cap X). There may be other arcs in the interior
 of this disk, but with an innermost disk argument we can inductively push all
 such arcs out of bd M cap X while keeping them disjoint. Note that the interior
 of this disk cannot contain any closed curves coming from P because they would
-not be pi1-injective. This is an isotopy of P inside bd M.  Repeat this
+not be $\pi_1$-injective. This is an isotopy of P inside bd M.  Repeat this
 inductively for all pages and spines until no such arcs remain at all.  Since
-at each step we're decreasing the number of intersections of P with sA, this
+at each step we're decreasing the number of intersections of P with \cA, this
 process is guaranteed to terminate.
 
 Let B be a page. Let alpha be a closed curve in bd M cap B which thickens to an
 annulus in P cap B. alpha cannot bound a disk in bd M cap B, or that component
-of P would fail to be pi1-injective in bd M cap B, hence in M. So either alpha
+of P would fail to be $\pi_1$-injective in bd M cap B, hence in M. So either alpha
 is essential in bd M cap B, or alpha is parallel to a component of bd(bd M cap
 B). In the latter case, if this component corresponds to a binding annulus A,
 push the thickened alpha annulus across A into the attached spine. There cannot
@@ -482,8 +487,8 @@ To prove (1), let B be a page. Observe that the rectangles and annuli in P cap
 B are thickenings of arcs and curves which are essential (or
 free-binding-boundary parallel in a special case) in bd M cap B. Let Si be the
 base surface of B. As discussed above, bd M cap B is either two copies of Si
-(if B is a trivial I-bundle) or an orientable double cover of Si (if B is
-a twisted I-bundle). In either case the projection of each arc and curve must
+(if B is a trivial $I$-bundle) or an orientable double cover of Si (if B is
+a twisted $I$-bundle). In either case the projection of each arc and curve must
 be essential in Si, as otherwise we could lift a contracting or
 boundary-exiting isotopy to bd M cap B. This proves (1).
 
@@ -495,7 +500,7 @@ parallel to the binding annuli. This completes the proof.
 
 end proof
 
-Let M be a book of I-bundles, and S to M be a pi1-injective map, where S is
+Let M be a book of $I$-bundles, and S to M be a $\pi_1$-injective map, where S is
 a connected closed surface.  Place S and P in minimal position as above. We
 have a constructive topological criterion for when S is a (QF) surface.
 
@@ -506,7 +511,7 @@ Si of B. The side boundary bd M cap B is either two copies of Si or an oriented
 double cover. In either case, we have a canonical covering map from S' to each
 component of bd M cap B. We define the pared lifting pattern on S' to be the
 preimages of P cap B under these covering maps. Note that if B is a trivial
-I-bundle, these images may intersect (because they're coming from two different
+$I$-bundle, these images may intersect (because they're coming from two different
 surfaces in bd M cap B).
 
 For each spine C, a component S' of S cap C is an immersed annulus parallel to
@@ -555,7 +560,7 @@ overlapping pieces of S.
 
 lemma (pared/parabolic lifting criterion)
 
-Let Let M be a book of I-bundles, and S to M be a pi1-injective map, where S is
+Let Let M be a book of $I$-bundles, and S to M be a $\pi_1$-injective map, where S is
 a connected closed surface.  Place S and P in minimal position as above. S is
 a (QF) surface if and only if it satisfies the pared lifting criterion.
 
@@ -577,7 +582,7 @@ respect to the binding annuli. As we did with P, we can put now alpha into
 minimal position with respect to the binding annuli.  We claim that it's
 possible to homotope alpha to minimal position while keeping it within S.  To
 prove this, follow the procedure above to homotope alpha to minimal position.
-alpha begins in S.  Since S is transverse to sA, we can obviously homotope
+alpha begins in S.  Since S is transverse to \cA, we can obviously homotope
 alpha within S to be transverse.  Observe that every homotopy of a part of
 alpha across a disk or annulus (as in the earlier proof of homotopy to minimal
 position), that same disk or annulus must be part of the local component of
@@ -592,7 +597,7 @@ choose this minimal position curve in S to be (up to homotopy within individual
 pages and spines) a multiple of the original minimal position of P0 within
 (M,P). We know that P0 began in minimal position, so any multiple is also in
 minimal position. Now reverse the moves we made to homotope alpha into
-S originally. Because we're dividing M along a union of pi1-injective disjoint
+S originally. Because we're dividing M along a union of $\pi_1$-injective disjoint
 annuli, he only possible moves alpha can make between different pages and
 spines are the disk and annulus moves described above. So the reverse of our
 homotopy into S is a homotopy toward minimal position of the form that we
