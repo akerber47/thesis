@@ -2,72 +2,72 @@
 \section{Our first example}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\textbf{ TODO shorten this section. Line it up with general result.}
-
 We construct a book of $I$-bundles $M$ as follows. In the following we take
 $\Si_{1,1}$ to be the compact surface of genus 1 with a single boundary
-component, a circle. Let $M_1$,$M_2$,$M_3$ be 3 punctured torus $I$-bundles,
-$M_1=M_2=M_3=\Si_{1,1}\x I$. For each $M_i$, write \[ \bd M_i = \bd \Si_{1,1}\x
-I \cup \Si_{1,1}\x0 \cup \Si_{1,1} \x 1 \] and label these boundary pieces as
-\[ \bd M_i = A_i \cup \bd_- M_i \cup \bd_+M_i \].
+component. Let $B_1$,$B_2$,$B_3$ be 3 trivial $I$-bundles over $\Si_{1,1}$.
+$B_1=B_2=B_3=\Si_{1,1}\x I$. Each $B_i$ has a single binding boundary and two
+side boundaries. Denote the side boundaries by $\bd_+B_i$ and $\bd_-B_i$. Each
+side boundary component of a trivial $I$-bundle is a homeomorphic copy of the
+base surface $\Si_{1,1}$.
 
-Let $M_c = S^1xD^2$ be a solid torus. Attach the $M_i$ to $M_c$ by gluing the
-$A_i$ to parallel annuli in $\bd M_c$, each with longitudinal core curve. The
-result is a compact 3-manifold with boundary. This is our $M$. We choose
-orientations and a cyclic order for the gluing such that the 3 boundary
-components of M are precisely
-\[
-\bd M = (\bd_+M_1 \cup_{S^1} \bd_-M_2) \sqcup (\bd_+M_2 \cup_{S^1} \bd_-M_3)
-\sqcup (\bd_+M_3 \cup_{S^1} \bd_-M_1)
-\]
-and label these
-\[
-\bd M=\bd_{12}M \sqcup \bd_{23}M \sqcup \bd_{31}M
-\].
-Each boundary
-component of $M$ consists of two punctured tori glued along their boundary
-circles, topologically a genus two surface.
+Let $C = S^1\times D^2$ be a solid torus. Attach the $B_i$ to $C$ by gluing the
+binding boundaries to parallel annuli in $\bd C$, each of which intersects
+a meridian disk exactly once. The result is a book of $I$-bundles $M$. Let
+$A_1$, $A_2$, and $A_3$ be the respective gluing annuli. Then $M=\cB\cup_\cA
+\cC$ where $\cB=B_1 \cup B_2 \cup B_3$, $\cC=C$, and $\cA = A_1 \cup A_2 \cup
+A_3$.
 
-\begin{lemma}
+Now $\bd M \cap C$ is a union of 3 annuli. Let these annuli be $A_{12}'$,
+$A_{23}'$, and $A_{31}'$, where each boundary annulus is labeled based on its
+adjacent gluing annuli. We choose orientations and a cyclic order for the
+gluing such that the 3 boundary components of M are precisely $bd_+B_1 \cup
+A_{12}' \cup \bd_-B_2)$, $\bd_+B_2 \cup A_{23}' \cup \bd_-B_3$, and $\bd_+B_3
+\cup A_{31}' \cup \bd_-B_1$. We'll refer to these as $\bd_{12}M$, $\bd_{23}M$,
+and $\bd_{31}M$, respectively.  Each boundary component of $M$ consists of two
+copies of $\Si_{1,1}$ glued along an annulus. Topologically, this forms a genus
+two surface.
 
-Let $P$ be a pared structure on $M$. $P$ cannot contain any tori. That is,
-$P$ consists entirely of annuli.
+We know from Proposition~\ref{P:annuli} that any pared structure $P$ on $M$
+consists entirely of annuli. Furthermore, we can apply the Pared Decomposition
+Lemma to homotope $P$ to minimal position with respect to $\cA$. We then have
+the following consequences of the pared lifting criterion. (For all of the
+following, we assume $P$ is in minimal position).
 
-\end{lemma}
+\begin{prop}
+
+Suppose $P$ has a component $P_0$ such that $P_0 \cin C$. Then $(M,P)$ does not
+contain a (QF) surface.
+
+\end{prop}
+
 \begin{proof}
 
-We can compute $\pi_1M$ directly from the van Kampen theorem. Let $a_i,b_i$ be
-the generators of $\pi_1(M_i)$, and $c$ be the generator of $\pi_1(M_c)$. Our
-gluing yields
-\[
-\pi_1(M) = \langle a_1,b_1,a_2,b_2,a_3,b_3,c \mid
-[a_1,b_1]=[a_2,b_2]=[a_3,b_3]=c \rangle
-\]
-It immediately follows that $\pi_1M$ contains no rank 2 abelian subgroups, as
-no two elements commute. Since every component of $P$ is $\pi_1$-injective,
-they must all be annuli.
-
-Alternatively, simply observe that all the boundary components of $M$ have
-negative Euler characteristic, so they don't admit $\pi_1$-injective maps from
-a torus.
+Suppose it does. Let $S$ be a (QF) surface, and homotope $S$ to minimal
+position with the surface decomposition lemma. Applying the pared lifting
+criterion, any annulus component $S \cap C$ will cover the binding annuli at
+$C$ and allow $P_0$ to lift to a closed curve in the pared lifting pattern.
+This would show $S$ is not (QF), by the pared lifting criterion. So $S$ must be
+disjoint from $C$.  The pages $B_i$ have free fundamental group, so none of
+them admits a $\pi_1$-injective map from a closed surface.  Therefore such an
+$S$ cannot exist.
 
 \end{proof}
 
 \begin{prop}
 
-Suppose $P$ contains a component $P_0$ that, up to homotopy, is contained
-entirely within one ``$I$-bundle half'' of a boundary component. That is, $P_0
-\cin \bd M_i$, for some i. Without loss of generality we can let $P_0 \cin \bd
-M_1$.  Then there exists a surface satisfying \eqref{E:qf} if and only if $P$
-contains no components that are (up to homotopy) contained in $\bd M_2 \cup \bd
-M_3 = \bd_-M_2 \sqcup \bd_{23}M \sqcup \bd_+M_3$.
+Suppose $P$ has no components contained in $C$, but does have a component $P_0$
+such that $P_0 \cin B_i$, for some $i$.  Without loss of generality we can let
+$P_0 \cin \bd B_1$.  Then there exists a (QF) surface if and only if $P$
+contains no components that are contained in $\bd_-B_2 \sqcup \bd_{23}M \sqcup
+\bd_+B_3$.
 
 \end{prop}
+
 \begin{proof}
 
-($\Longleftarrow$) Take $S=\bd_{23}M$. Intuitively, it's easy to see that the
-conditions on $P$ force all its components to lie on surfaces where they can't
-be homotoped into $S$.
+For the forward direction, take $S=\bd_{23}M$. Intuitively, it's easy to see
+that the conditions on $P$ force all its components to lie on surfaces where
+they can't be homotoped into $S$.
 
 Algebraically, $\pi_1S$ is the subgroup generated by $a_2,b_2,a_3,b_3 \in
 \pi_1M$. We know that
@@ -82,14 +82,14 @@ in $\bd_{12}M$ or $\bd_{31}M$, we can see that in order for $\pi_1P_k$ to
 overlap with $\pi_1S$, it must have generator some word in $a_2,b_2$ (if $P_k
 in \bd_{12}M$), or some word in $a_3,b_3$ (if $P_k in \bd_{31}M$). In either
 case, this is precisely the condition for such a word to correspond to a curve
-contained in $\bd M_2$ or $\bd M_3$, respectively, contradicting our assumption
+contained in $\bd B_2$ or $\bd B_3$, respectively, contradicting our assumption
 on $P$.
 
 ($\Longrightarrow$) Let $S$ be a surface satisfying \eqref{E:qf}. Cut $S$ into
-components in $M_1,M_2,M_3$ (after homotoping to minimal intersections with the
-annuli).  Applying Lemma~\ref{L:sc}, we can see that $S \cap M_1 = \emptyset$,
+components in $B_1,B_2,B_3$ (after homotoping to minimal intersections with the
+annuli).  Applying Lemma~\ref{L:sc}, we can see that $S \cap B_1 = \emptyset$,
 as otherwise since it's a finite-sheeted cover it would have to contain
-a multiple of $P_0$.  So $S \cin M_2 \cup M_3 \cup M_c$, which is homeomorphic
+a multiple of $P_0$.  So $S \cin B_2 \cup B_3 \cup C$, which is homeomorphic
 to $S_2 \x I$.  Deformation retracting this to a surface $S_2$ and applying
 a covering argument like in Lemma~\ref{L:sc}, we can see that $S$ is a cover of
 $S_2$.  Since it's a finite-sheeted cover, it will have to have $\pi_1$
@@ -116,7 +116,7 @@ on each boundary component with respect to the gluing circle.
 \begin{lemma}
 
 Under the hypotheses of the theorem, each ``$I$-bundle piece'' boundary
-component $S=\bd_\pm M_i$ intersects $P$ in a thickened set of disjoint
+component $S=\bd_\pm B_i$ intersects $P$ in a thickened set of disjoint
 essential arcs, each arc connecting $\bd S$ to itself. The arcs form at most
 3 ``bands'', where all the arcs in each band are parallel.  Furthermore, if we
 choose a representative arc from each band (yielding a set of at most
@@ -236,31 +236,31 @@ the three arcs trans and the third cis.
 
 \begin{proof}[Proof of Theorem~\ref{T:ex1}]
 
-Since $P$ has no components $P_0$, every $P \cap \bd_+M_i$ is a union of
-thickened arcs (that is, there are no full annulus components in any $\bd_+M_i$
-or $\bd_-M_i$). Apply the first lemma to break these into bands. The problem is
+Since $P$ has no components $P_0$, every $P \cap \bd_+B_i$ is a union of
+thickened arcs (that is, there are no full annulus components in any $\bd_+B_i$
+or $\bd_-B_i$). Apply the first lemma to break these into bands. The problem is
 most constrained when there are 3 bands, so we'll consider that case (if there
 are fewer than 3, just draw some more arcs on that component arbitrarily, and
 the proof still works).
 
 We will build our surface $S$ by taking a double cover of the core $\Si_{1,1}$
-surface for each $I$-bundle page $M_1,M_2,M_3$. Call these covers
+surface for each $I$-bundle page $B_1,B_2,B_3$. Call these covers
 $S_1,S_2,S_3$.  Each of these has two boundary components. We'll then attach
 the boundary components such that each of $S_1,S_2,S_3$ has exactly one
 boundary component connected to each of the others. See diagram.
 
 Choose an arbitrary connected double cover for $S_1$. We can view this as
-a cover of $\bd_+M_1$ or $\bd_-M_1$, deformation retracting either way. By the
+a cover of $\bd_+B_1$ or $\bd_-B_1$, deformation retracting either way. By the
 lemma, two of the
-3 bands on $\bd_+M_1$ are trans, and the other is cis. The same holds for
-  $\bd_-M_1$.
+3 bands on $\bd_+B_1$ are trans, and the other is cis. The same holds for
+  $\bd_-B_1$.
 
-We cannot choose $S_2$ arbitrarily, as a cis arc for $S_1$ in $\bd_+M_1$ may
-connect (in $S$) to a cis arc for $S_2$ in $\bd_-M_2$. These together would
+We cannot choose $S_2$ arbitrarily, as a cis arc for $S_1$ in $\bd_+B_1$ may
+connect (in $S$) to a cis arc for $S_2$ in $\bd_-B_2$. These together would
 form a closed curve that lifts to $S$, which once $S$ is immersed in $M$ will
 yield a violation of condition \eqref{E:qf}. Instead, observe that there is at
-most one band of the three in $\bd_-M_2$ containing arcs that, when glued
-across the core circle, match up to arcs in the cis band of $\bd_+M_1$ to form
+most one band of the three in $\bd_-B_2$ containing arcs that, when glued
+across the core circle, match up to arcs in the cis band of $\bd_+B_1$ to form
 closed curves containing only arcs in those two bands. This is because once one
 band has that behavior, by endpoint parity the vertices can't also match up for
 a different band, if the arcs they have to match with on the other side are
@@ -268,11 +268,11 @@ parallel. Looking at the boundary circle, non-parallel arcs have endpoints in
 cyclic order, but parallel arcs don't. See diagram. It suffices to check this
 for our standard set of non-parallel arcs, by the same automorphism argument.
 
-Since there is only one such band on $\bd_-M_2$, choose $S_2$ such that this
+Since there is only one such band on $\bd_-B_2$, choose $S_2$ such that this
 band is not cis.  Finally, for $S_3$ we have two connecting constraints. We
-have a cis band on $\bd_-M_1$ from our choice of $S_1$, and a cis band on
-$\bd_+M_2$ from our choice of $S_2$.  Applying the same argument, there is at
-most one band on $\bd_-M_3$ and one band on $\bd_+M_3$ that will connect to
+have a cis band on $\bd_-B_1$ from our choice of $S_1$, and a cis band on
+$\bd_+B_2$ from our choice of $S_2$.  Applying the same argument, there is at
+most one band on $\bd_-B_3$ and one band on $\bd_+B_3$ that will connect to
 form closed curves. But we can choose $S_3$ such that both of these bands are
 trans. (This requires a slight modification to the lemma - since these bands
 are on different boundary surfaces, they may not be disjoint non-parallel. If
@@ -283,14 +283,14 @@ of bands)
 Glue $S_1,S_2,S_3$ as described to obtain $S$. We claim that $S$ satisfies
 condition \eqref{E:qf}. $S$ is closed and immersed by construction (as in
 Lemma~\ref{L:sc}). It is $\pi_1$-injective inside each $I$-bundle by
-Lemma~\ref{L:sc}, and inside the core $M_c$ because it's just a union of
+Lemma~\ref{L:sc}, and inside the core $C$ because it's just a union of
 incompressible gluing annuli there. It suffices to show that $\pi_1S \cap
 \pi_1P_k = 1$ for each component $P_k$ of the pared locus. Looking at the core
 curve of the annulus $P_k$, this implies that some multiple of that core curve
 is homotopic into $S$.
 
 But this is impossibly by the above construction. Every such curve contains at
-least two bands, on two different components $\bd_\pm M_i$. By the construction
+least two bands, on two different components $\bd_\pm B_i$. By the construction
 of $S$, of any two bands which connect up when the boundary components are
 glued across circles, at least one must be trans. This means that when we try
 to homotope the core curve multiple into $S$, in order to follow along $S$
