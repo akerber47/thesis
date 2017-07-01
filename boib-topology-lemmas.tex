@@ -74,9 +74,8 @@ $I$-bundles, to avoid elementary or degenerate cases.
 \item The underlying manifold is a compact connected orientable irreducible
 hyperbolic 3-manifold with incompressible boundary.
 
-\item Each page is an $I$-bundle over a surface with boundary of negative Euler
-characteristic.  That is, no base surface is a sphere, projective plane, disk,
-Mobius strip, or annulus.
+\item Each page is an $I$-bundle over a surface of negative Euler
+characteristic.
 
 \end{enumerate}
 
@@ -101,8 +100,9 @@ quasi-Fuchsian surfaces are essentially disjoint from compression disks.
 Therefore, since we're interested in quasi-Fuchsian surfaces, we might as well
 compress as much as possible before looking for surfaces.
 
-Each page's base surface must have at least one boundary component to glue to
-in order for $M$ to be connected. We don't want to consider base surfaces which
+Ignoring for the moment the degenerate case of a single page and no spine, each
+page's base surface must have at least one boundary component to glue to in
+order for $M$ to be connected. We don't want to consider base surfaces which
 are disks.  Observe that each page which is a disk means that that page and its
 attached spine form a 3-manifold with a finite-sheeted cover by a ball (we can
 arrange things so that in the cover, the disk attaching map only traverses the
@@ -110,11 +110,23 @@ longitude once, and we get a thickened disk).  This means that we'll have
 finite order summands in our group, which correspond to elliptic pieces, for
 instance lens spaces, in the JSJ decomposition. These cases are not hyperbolic.
 
-%TODO
-\textbf{TODO explain Mobius strips / annuli with "big bad loops" idea which
-breaks our book of $I$-bundles reduction theorem.}
+Similarly, allowing annulus or Moebius strip base surfaces means that many
+books of $I$-bundles we build will not be hyperbolic. For instance, by chaining
+annulus pages together in a loop, we can construct a book of $I$-bundles
+containing a closed non-peripheral torus. In fact, in any case where there are
+no such loops, we can homotope away all the annulus pages (attaching the
+associated spines together, and possibly passing to a finite sheeted cover).
+The case of Moebius strips is identical once we pass to a double cover on each
+Moebius strip page. Therefore we will not consider these in the sequel.
 
-We first make the following simple observation.
+Finally, our definition does technically allow for $M$ to consist of a single
+page and no spines. Since $M$ is connected, this is the only case where $M$ can
+contain a page with closed base surface. In this case, the page's base surface
+obviously must have negative Euler characteristic in order for $M$ to be
+hyperbolic.  Combining all these cases, we only want to consider base surfaces
+with negative Euler characteristic.
+
+We make the following simple observation.
 
 prop
 
