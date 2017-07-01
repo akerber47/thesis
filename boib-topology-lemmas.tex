@@ -405,67 +405,72 @@ annuli $A \cin \bd X$. Since $A$ is incompressible, $\bd S'$ bounds a disk in
 $A$, that is, $S'$ cobounds a sphere. Since $X$ is irreducible, this sphere
 bounds a ball, giving a homotopy of $S'$ into $A$. To keep $S$ transverse to
 $\cA$, we will actually homotope it slightly past $A$ into whatever page or
-spine is glued to the other side of A.
+spine is glued to the other side of $A$.
 
-Now suppose that S' is an annulus, and that both boundary curves of S' lie in
-the same binding annulus A. We claim that S' is homotopic rel boundary to an
-annulus in A. We know the two boundary components are conjugate in pi1 (they're
-freely homotopic, following S'). Since they both lie in A, they must be
-parallel, as different multiples of the generator of pi1(A) cannot possibly be
-conjugate in pi1X (which is cyclic or free). It follows that they bound an
-annulus S'' in A.  To prove S' and S'' are homotopic, observe that together
-they describe a map T2 to X. But pi1X does not contain an abelian group of rank
-> 1, so T2 to X cannot be $\pi_1$-injective. Choose a primitive beta for the kernel
-of this map.  beta bounds an immersed disk D. Cutting S cup S'' along beta and
-attaching 2 parallel copies of D yields a map S2 to X. But X is aspherical, so
-this map is homotpic to a point. Following along this homotopy (and reversing
-part of it) yields a homotopy between S' and S''.
+Now suppose that $S'$ is an annulus, and that both boundary curves of $S'$ lie
+in the same binding annulus $A$. We claim that $S'$ is homotopic rel boundary
+to an annulus in $A$. We know the two boundary components are conjugate in
+$\pi_1$ (they're freely homotopic, following $S'$). Since they both lie in $A$,
+they must be parallel, as different multiples of the generator of $\pi_1A$
+cannot possibly be conjugate in $\pi_1X$ (which is cyclic or free). It follows
+that they bound an annulus $S''$ in $A$.  To prove $S'$ and $S''$ are
+homotopic, observe that together they describe a map $\psi\colon T^2 \to X$.
+But $\pi_1X$ does not contain an abelian group of rank greater than 1, so
+$\psi$ cannot be $\pi_1$-injective.  Choose a primitive $\beta$ for the kernel
+of this map. $\beta$ bounds an immersed disk $D$.  Cutting $S \cup S''$ along
+$\beta$ and attaching 2 parallel copies of $D$ yields a map $\psi'\colon S^2
+\to X$.  But $X$ is aspherical, so this map is homotpic to a point. Following
+along this homotopy (and reversing part of it) yields a homotopy between $S'$
+and $S''$.
 
-Suppose we have eliminated every piece of S which is a disk or disallowed
+Suppose we have eliminated every piece of $S$ which is a disk or disallowed
 annulus in this way, by homotoping it across the binding annuli. We may need to
 repeat inductively, but at every stage we're reducing the number of
 intersections with $\cA$ so this is guaranteed to terminate. We now claim that
 after no more such moves can be made, the result satisfies (1) and (2).
 
-Again consider an arbitrary page or spine X, and an arbitrary component S' of
-S cap X.  We know pi1(S')neq1 by the above argument. We also know it cannot be
-an annulus. Annuli with both boundary components on the same binding annulus
-were removed above, and no other annuli can exist because they'd project down
-to give a pi1 conjugacy between two boundary classes in a surface with
-boundary, which is impossible as pi1X is free. We claim it is $\pi_1$-injective as
-a map S' to X (abusing notation slightly - really this is asking about the
-preimage of S' on the left-hand abstract surface S).  Suppose not. Then we have
-a nontrivial loop alpha in S', which is homotopically trivial in X.  Therefore
-alpha is homotopically trivial in M, using that same homotopy.  Since S to X is
-$\pi_1$-injective, alpha must be homotopically trivial in S. Since S is an oriented
-surface, the only way alpha can be homotopically trivial in S but not S' is if
-one of the boundary components of S' cuts off a disk D cin S. If it cuts off
+Again consider an arbitrary page or spine $X$, and an arbitrary component $S'$
+of $S \cap X$.  We know $\pi_1S' \neq 1$ by the above argument. We also know it
+cannot be an annulus. Annuli with both boundary components on the same binding
+annulus were removed above, and no other annuli can exist because they'd
+project down to give a $\pi_1$ conjugacy between two boundary classes in
+a surface with boundary, which is impossible as $\pi_1X$ is free. We claim it
+is $\pi_1$-injective as a map $S' \to X$ (abusing notation slightly - really
+this is asking about the preimage of $S'$ on the left-hand abstract surface
+$S$).  Suppose not. Then we have a nontrivial loop $\alpha \cin S'$, which is
+homotopically trivial in $X$.  Therefore $\alpha$ is homotopically trivial in
+$M$, using that same homotopy.  Since $S \to X$ is $\pi_1$-injective, $\alpha$
+must be homotopically trivial in $S$.  Since $S$ is an oriented surface, the
+only way $\alpha$ can be homotopically trivial in $S$ but not $S'$ is if one of
+the boundary components of $S'$ cuts off a disk $D \cin S$. If it cuts off
 a surface of any higher genus, we do not obtain any relations among elements of
-pi1(S'). But if we cut D along $\cA$, we can see that at least one innermost
-piece of D must be a disk, contradicting our minimality assumption. Hence each
-piece S' is $\pi_1$-injective in X.
+$\pi_1S'$.  But if we cut $D$ along $\cA$, we can see that at least one
+innermost piece of $D$ must be a disk, contradicting our minimality assumption.
+Hence each piece $S'$ is $\pi_1$-injective in $X$.
 
-Let B be a page. We know that each piece S' of S cap B is $\pi_1$-injective and
-proper. Projecting B to its base surface Si, we know this is a deformation
-retract (B is an $I$-bundle) so the composition S' to Si is also $\pi_1$-injective
-and proper. Applying the covering lemma, we see that each piece S' is homotopic
-rel boundary to a finite-sheeted covering of Si. This proves (1).
+Let $B$ be a page. We know that each piece $S'$ of $S \cap B$ is
+$\pi_1$-injective and proper. Projecting $B$ to its base surface $\Si$, we know
+this is a deformation retract ($B$ is an $I$-bundle) so the composition $S'$ to
+$\Si$ is also $\pi_1$-injective and proper. Applying the covering lemma, we see
+that each piece $S'$ is homotopic rel boundary to a finite-sheeted covering of
+$\Si$.  This proves (1).
 
-Let C be a spine. Again we know that each piece S' of S cap C is $\pi_1$-injective
-and proper. Since C has cyclic fundamental group, and no piece S' is a disk,
-every piece S' must be an annulus. These annuli are $\pi_1$-injective, and by
-construction must have boundary curves on different binding annuli.  This
-proves (2).
+Let $C$ be a spine. Again we know that each piece $S'$ of $S \cap C$ is
+$\pi_1$-injective and proper. Since $C$ has cyclic fundamental group, and no
+piece $S'$ is a disk, every piece $S'$ must be an annulus. These annuli are
+$\pi_1$-injective, and by construction must have boundary curves on different
+binding annuli.  This proves (2).
 
 To prove (3), look at the boundary curves of these annuli in the spines. Each
-boundary curve must be contained in a binding annulus A cin bd C. Therefore it
-must be a multiple of the cure curve of A. This proves the first statement in
-(3). The remainder of (3) follows directly from the fact that S is a closed
-surface and that M is a union of pages and spines along binding annuli.
+boundary curve must be contained in a binding annulus $A \cin \bd C$. Therefore
+it must be a multiple of the cure curve of $A$. This proves the first statement
+in (3). The remainder of (3) follows directly from the fact that $S$ is
+a closed surface and that $M$ is a union of pages and spines along binding
+annuli.
 
 \end{proof}
 
-We now consider the possible pared structures (M,P), where M is a book of
+We now consider the possible pared structures $(M,P)$, where $M$ is a book of
 $I$-bundles. We have a straightforward fact.
 
 \begin{prop}
@@ -480,189 +485,204 @@ contain any tori.  That is, $P$ consists entirely of annuli.
 Each page of $M$ has a base surface of negative Euler characteristic, so each
 component of a page boundary must also have negative Euler characteristic (it's
 either a copy or an orientable double cover of the base surface, as discussed
-earlier). Since each boundary component of M consists of page boundaries glued
-together along annuli in spines, which contribute nothing to Euler
+earlier). Since each boundary component of $M$ consists of page boundaries
+glued together along annuli in spines, which contribute nothing to Euler
 characteristic, it immediately follows that each boundary component of M has
 negative Euler characteristic itself. So no boundary component admits
 a $\pi_1$-injective torus, and all pared locus components must be annuli.
 
 \end{proof}
 
-lemma (minimal position for pared structures / pared decomposition lemma)
+\begin{lemma}[pared decomposition lemma]
 
-Let (M,P) be a pared 3-manifold, where M is a book of $I$-bundles. Then we can
-isotope P within bd M such that:
+Let $(M,P)$ be a pared 3-manifold, where $M$ is a book of $I$-bundles. Then we
+can isotope $P$ within $\bd M$ such that:
 
-(1) For each page B, P cap B is a union of disjoint rectangles and annuli, each
-of which projects to a thickened arc or curve in the base surface Si of B. Any
-such arc is essential in Si. Any such curve is either essential or parallel to
-a boundary component of Si which does not lift to a binding annulus (that is,
-parallel to a "free binding boundary" of B).
+(1) For each page $B$, $P \cap B$ is a union of disjoint rectangles and annuli,
+each of which projects to a thickened arc or curve in the base surface $\Si$ of
+$B$.  Any such arc is essential in $\Si$. Any such curve is either essential or
+parallel to a boundary component of $\Si$ which does not lift to a binding
+annulus (that is, parallel to a "free binding boundary" of $B$).
 
-(2) For each spine C, P cap C is a union of disjoint rectangles and annuli.
-Each rectangle connects two adjacent binding annuli in bd C along a thickened
-arc that is essential in that component of bd M cap C (the "intermediate
-annulus" between these two binding annuli). Each annulus is parallel to the
-binding annuli in bd C.
+(2) For each spine $C$, $P \cap C$ is a union of disjoint rectangles and
+annuli.  Each rectangle connects two adjacent binding annuli in $\bd C$ along
+a thickened arc that is essential in that component of $\bd M \cap C$ (the
+"intermediate annulus" between these two binding annuli). Each annulus is
+parallel to the binding annuli in $\bd C$.
 
-(3) For each binding annulus A, P cap A is a union of disjoint arcs in bd A.
+(3) For each binding annulus $A$, $P \cap A$ is a union of disjoint arcs in
+$\bd A$.
 
-proof
+\end{lemma}
 
-We can isotope P locally, keeping all its components disjoint and embedded in
-bd M, so that it's transverse to $\cA$. This immediately guarantees (3).
+\begin{proof}
 
-Let X be a page or spine in M. P cap X is a union of disjoint rectangles and
-annuli, which are thickenings of arcs and curves in bd M cap X. Suppose one of
-these is an arc alpha which is not essential in bd M cap X. Then alpha cobounds
-a disk with an arc in bd (bd M cap X). There may be other arcs in the interior
-of this disk, but with an innermost disk argument we can inductively push all
-such arcs out of bd M cap X while keeping them disjoint. Note that the interior
-of this disk cannot contain any closed curves coming from P because they would
-not be $\pi_1$-injective. This is an isotopy of P inside bd M.  Repeat this
-inductively for all pages and spines until no such arcs remain at all.  Since
-at each step we're decreasing the number of intersections of P with $\cA$, this
-process is guaranteed to terminate.
+We can isotope $P$ locally, keeping all its components disjoint and embedded in
+$\bd M$, so that it's transverse to $\cA$. This immediately guarantees (3).
 
-Let B be a page. Let alpha be a closed curve in bd M cap B which thickens to an
-annulus in P cap B. alpha cannot bound a disk in bd M cap B, or that component
-of P would fail to be $\pi_1$-injective in bd M cap B, hence in M. So either alpha
-is essential in bd M cap B, or alpha is parallel to a component of bd(bd M cap
-B). In the latter case, if this component corresponds to a binding annulus A,
-push the thickened alpha annulus across A into the attached spine. There cannot
-be any annuli or rectangles in between, because components of P can't be
-parallel and we already eliminated all the non-essential rectangles.
+Let $X$ be a page or spine in $M$. $P \cap X$ is a union of disjoint rectangles
+and annuli, which are thickenings of arcs and curves in $\bd M \cap X$. Suppose
+one of these is an arc $\alpha$ which is not essential in $\bd M \cap X$. Then
+$\alpha$ cobounds a disk with an arc in $\bd (\bd M \cap X)$. There may be
+other arcs in the interior of this disk, but with an innermost disk argument we
+can inductively push all such arcs out of $\bd M \cap X$ while keeping them
+disjoint.  Note that the interior of this disk cannot contain any closed curves
+coming from $P$ because they would not be $\pi_1$-injective. This is an isotopy
+of $P$ inside $\bd M$.  Repeat this inductively for all pages and spines until
+no such arcs remain at all.  Since at each step we're decreasing the number of
+intersections of $P$ with $\cA$, this process is guaranteed to terminate.
 
-Suppose we've performed the above isotopy on P. Since we can preserve
+Let $B$ be a page. Let $\alpha$ be a closed curve in $\bd M \cap B$ which
+thickens to an annulus in $P \cap B$. $\alpha$ cannot bound a disk in $\bd
+M \cap B$, or that component of $P$ would fail to be $\pi_1$-injective in $\bd
+M \cap B$, hence in $M$. So either $\alpha$ is essential in $\bd M \cap B$, or
+$\alpha$ is parallel to a component of $\bd(\bd M \cap B)$. In the latter case,
+if this component corresponds to a binding annulus $A$, push the thickened
+$\alpha$ annulus across $A$ into the attached spine.  There cannot be any
+annuli or rectangles in between, because components of $P$ can't be parallel
+and we already eliminated all the non-essential rectangles.
+
+Suppose we've performed the above isotopy on $P$. Since we can preserve
 transversality, (3) still holds. We claim the result satisfies (1) and (2).
 
-To prove (1), let B be a page. Observe that the rectangles and annuli in P cap
-B are thickenings of arcs and curves which are essential (or
-free-binding-boundary parallel in a special case) in bd M cap B. Let Si be the
-base surface of B. As discussed above, bd M cap B is either two copies of Si
-(if B is a trivial $I$-bundle) or an orientable double cover of Si (if B is
-a twisted $I$-bundle). In either case the projection of each arc and curve must
-be essential in Si, as otherwise we could lift a contracting or
-boundary-exiting isotopy to bd M cap B. This proves (1).
+To prove (1), let $B$ be a page. Observe that the rectangles and annuli in $P
+\cap B$ are thickenings of arcs and curves which are essential (or
+free-binding-boundary parallel in a special case) in $\bd M \cap B$. Let $\Si$
+be the base surface of $B$. As discussed above, $\bd M \cap B$ is either two
+copies of $\Si$ (if $B$ is a trivial $I$-bundle) or an orientable double cover
+of $\Si$ (if B is a twisted $I$-bundle). In either case the projection of each
+arc and curve must be essential in $\Si$, as otherwise we could lift
+a contracting or boundary-exiting isotopy to $\bd M \cap B$. This proves (1).
 
-To prove (2), let C be a spine. Observe that bd M cap C is a union of parallel
-annuli, each of which is parallel to the binding annuli in bd C. Rectangles in
-C are essential, as guaranteed earlier. Up to isotopy, the only embedded closed
-curve in an annulus is the core curve. So the only annuli in P cap C are
-parallel to the binding annuli. This completes the proof.
+To prove (2), let $C$ be a spine. Observe that $\bd M \cap C$ is a union of
+parallel annuli, each of which is parallel to the binding annuli in $\bd C$.
+Rectangles in $C$ are essential, as guaranteed earlier. Up to isotopy, the only
+embedded closed curve in an annulus is the core curve. So the only annuli in $P
+\cap C$ are parallel to the binding annuli. This completes the proof.
 
-end proof
+\end{proof}
 
-Let M be a book of $I$-bundles, and S to M be a $\pi_1$-injective map, where S is
-a connected closed surface.  Place S and P in minimal position as above. We
-have a constructive topological criterion for when S is a (QF) surface.
+Let $M$ be a book of $I$-bundles, and $S \to M$ be a $\pi_1$-injective map,
+where $S$ is a connected closed surface.  Place $S$ and $P$ in minimal position
+as above.  We have a constructive topological criterion for when $S$ is a (QF)
+surface.
 
-Construct a "pared lifting pattern" on S as follows. We build a pattern of arcs
-and curves on each component of S cap X, where X is a spine or page. For each
-page B, a component S' of S cap B is a finite-sheeted cover of the base surface
-Si of B. The side boundary bd M cap B is either two copies of Si or an oriented
-double cover. In either case, we have a canonical covering map from S' to each
-component of bd M cap B. We define the pared lifting pattern on S' to be the
-preimages of P cap B under these covering maps. Note that if B is a trivial
-$I$-bundle, these images may intersect (because they're coming from two different
-surfaces in bd M cap B).
+Construct a "pared lifting pattern" on $S$ as follows. We build a pattern of
+arcs and curves on each component of $S \cap X$, where $X$ is a spine or page.
+For each page $B$, a component $S'$ of $S \cap B$ is a finite-sheeted cover of
+the base surface $\Si$ of $B$. The side boundary $\bd M \cap B$ is either two
+copies of $\Si$ or an oriented double cover. In either case, we have
+a canonical covering map from $S'$ to each component of $\bd M \cap B$. We
+define the pared lifting pattern on $S'$ to be the preimages of $P \cap B$
+under these covering maps.  Note that if $B$ is a trivial $I$-bundle, these
+images may intersect (because they're coming from two different surfaces in
+$\bd M \cap B$).
 
-For each spine C, a component S' of S cap C is an immersed annulus parallel to
-a multiple of the binding annuli.  The two components of bd S' lie on two
-distinct binding annuli. Now there may or may not be a component A' of bd M cap
-C with boundary components in these same two binding annuli. (This is true when
-the two binding annuli are "adjacent" in C). If there is, we can homotope the
-boundary components of S' to be multiples of the boundary components of A',
-since they lie in the same boundary components. This gives us a canonical
-covering map from S' to A'. Begin by defining the pared lifting pattern on S' to
-be the preimage of P cap A' under this map. If there is no such component A',
-define the pared lifting pattern to be empty. Now, if there are any annulus
-components of P cap C, these must be parallel to the binding annuli and
-contained in a component of bd M cap C.  Again, they have canonical preimages
-under the covering map from S' to that component of bd M cap C. Add these to
-the pared lifting pattern for S'.
+For each spine $C$, a component $S'$ of $S \cap C$ is an immersed annulus
+parallel to a multiple of the binding annuli.  The two components of $\bd S'$
+lie on two distinct binding annuli. Now there may or may not be a component
+$A'$ of $\bd M \cap C$ with boundary components in these same two binding
+annuli.  (This is true when the two binding annuli are "adjacent" in $C$). If
+there is, we can homotope the boundary components of $S'$ to be multiples of
+the boundary components of $A'$, since they lie in the same boundary
+components.  This gives us a canonical covering map from $S'$ to $A'$. Begin by
+defining the pared lifting pattern on $S'$ to be the preimage of $P \cap A'$
+under this map. If there is no such component $A'$, define the pared lifting
+pattern to be empty.  Now, if there are any annulus components of $P \cap C$,
+these must be parallel to the binding annuli and contained in a component of
+$\bd M \cap C$.  Again, they have canonical preimages under the covering map
+from $S'$ to that component of $\bd M \cap C$. Add these to the pared lifting
+pattern for $S'$.
 
-We now construct the pared lifting pattern on S by gluing these components of
-S cap X back together to form S. Whenever we glue, we guarantee that for any
-given component of P which is represented in the pared lifting patterns on both
-sides, the lifted components will connect up across the gluing.  Equivalently,
-if we look at a tubular neighborhood N of a gluing annulus A, S cap N is
-a union of covers of the components of N cap bd M. This gives a local
-description of the pared lifting pattern near each gluing annulus - we want to
-ensure that the two sides match to give this description when we glue. This is
-easy to guarantee locally as the covering degree is the same on both sides of
-each gluing, so we just need to perturb topologically so the endpoints line up.
-Another way of saying this is at each gluing, we make sure to attach lifts of
-pieces of the same component of P, and not to attach lifts of pieces of
-different components of P.
+We now construct the pared lifting pattern on $S$ by gluing these components of
+$S \cap X$ back together to form $S$. Whenever we glue, we guarantee that for
+any given component of $P$ which is represented in the pared lifting patterns
+on both sides, the lifted components will connect up across the gluing.
+Equivalently, if we look at a tubular neighborhood $N$ of a gluing annulus $A$,
+$S \cap N$ is a union of covers of the components of $N \cap \bd M$. This gives
+a local description of the pared lifting pattern near each gluing annulus - we
+want to ensure that the two sides match to give this description when we glue.
+This is easy to guarantee locally as the covering degree is the same on both
+sides of each gluing, so we just need to perturb topologically so the endpoints
+line up.  Another way of saying this is at each gluing, we make sure to attach
+lifts of pieces of the same component of $P$, and not to attach lifts of pieces
+of different components of $P$.
 
 We generally describe the pared lifting pattern using curves and arcs, not
-annuli and rectangles. The topology is identical - we can thicken within S to
+annuli and rectangles. The topology is identical - we can thicken within $S$ to
 obtain the original pared lifting pattern.
 
-defn
+\begin{defn}
 
-We say that S satisfies the \emph{pared lifting criterion} or \emph{parabolic
-lifting criterion} if the pared lifting pattern on S contains no closed curves
-(equivalently, closed annuli if we view them as thickened).
+We say that $S$ satisfies the \emph{pared lifting criterion} or \emph{parabolic
+lifting criterion} if the pared lifting pattern on $S$ contains no closed
+curves (equivalently, closed annuli if we view them as thickened).
 
-Note that in particular, if any page or spine of M contains an annulus in P,
-any S that essentially intersects this page or spine will automatically fail
-the pared lifting criterion, because that will yield a closed curve in any
-overlapping pieces of S.
+\end{defn}
 
-lemma (pared/parabolic lifting criterion)
+Note that in particular, if any page or spine of $M$ contains an annulus in
+$P$, any $S$ that essentially intersects this page or spine will automatically
+fail the pared lifting criterion, because that will yield a closed curve in any
+overlapping pieces of $S$.
 
-Let Let M be a book of $I$-bundles, and S to M be a $\pi_1$-injective map, where S is
-a connected closed surface.  Place S and P in minimal position as above. S is
-a (QF) surface if and only if it satisfies the pared lifting criterion.
+\begin{theorem}[pared/parabolic lifting criterion]\label{T:lift}
 
-proof
+Let $M$ be a book of $I$-bundles, and $S \to M$ be a $\pi_1$-injective map,
+where $S$ is a connected closed surface.  Place $S$ and $P$ in minimal position
+as above.  $S$ is a (QF) surface if and only if it satisfies the pared lifting
+criterion.
+
+\end{theorem}
+
+\begin{proof}
 
 One direction is straightforward. If the pared lifting pattern contains
-a closed curve alpha, every arc making up alpha in a page or spine must be
-a lifted copy of an arc in a single component P0 of P, because we only attached
-copies that came from the same component downstairs. Therefore the curve alpha
-is locally a cover a P0, hence a cover of P0. This demonstrates that S contains
-a multiple of P0 up to homotopy. So pi1S fails to avoid all conjugates of
-pi1P0, and S is not a (QF) surface.
+a closed curve $\alpha$, every arc making up $\alpha$ in a page or spine must
+be a lifted copy of an arc in a single component $P_0 \cin P$, because we only
+attached copies that came from the same component downstairs. Therefore the
+curve $\alpha$ is locally a cover a $P_0$, hence a cover of $P_0$. This
+demonstrates that $S$ contains a multiple of $P_0$ up to homotopy. So $\pi_1S$
+fails to avoid all conjugates of $\pi_1P_0$, and $S$ is not a (QF) surface.
 
 Now suppose that the pared lifting pattern contains no closed curves. We claim
-that S is a (QF) surface. Suppose not. Let alpha be a multiple of the core
-curve of a component P0 of P such that alpha is freely homotopic into S.
-Homotope alpha into S. A priori alpha is no longer in minimal position with
-respect to the binding annuli. As we did with P, we can put now alpha into
-minimal position with respect to the binding annuli.  We claim that it's
-possible to homotope alpha to minimal position while keeping it within S.  To
-prove this, follow the procedure above to homotope alpha to minimal position.
-alpha begins in S.  Since S is transverse to $\cA$, we can obviously homotope
-alpha within S to be transverse.  Observe that every homotopy of a part of
-alpha across a disk or annulus (as in the earlier proof of homotopy to minimal
-position), that same disk or annulus must be part of the local component of
-S that this part of alpha is contained in. We know this because we fully
-described the behavior of S once we placed it in minimal position, in the
-surface decomposition lemma.  S will locally cover any of the disks or annuli
-that we can homotope across, so the respective parts of alpha will have
-available parts of S to homotope within.
+that $S$ is a (QF) surface. Suppose not. Let $\alpha$ be a multiple of the core
+curve of a component $P_0 \cin  P$ such that $\alpha$ is freely homotopic into
+$S$.  Homotope $\alpha$ into $S$. A priori $\alpha$ is no longer in minimal
+position with respect to the binding annuli. As we did with $P$, we can put now
+$\alpha$ into minimal position with respect to the binding annuli.  We claim
+that it's possible to homotope $\alpha$ to minimal position while keeping it
+within $S$.  To prove this, follow the procedure above to homotope $\alpha$ to
+minimal position.  $\alpha$ begins in $S$.  Since $S$ is transverse to $\cA$,
+we can obviously homotope $\alpha$ within $S$ to be transverse.  Observe that
+every homotopy of a part of $\alpha$ across a disk or annulus (as in the
+earlier proof of homotopy to minimal position), that same disk or annulus must
+be part of the local component of $S$ that this part of $\alpha$ is contained
+in.  We know this because we fully described the behavior of $S$ once we placed
+it in minimal position, in the surface decomposition lemma.  $S$ will locally
+cover any of the disks or annuli that we can homotope across, so the respective
+parts of $\alpha$ will have available parts of $S$ to homotope within.
 
-So we can homotope alpha to minimal position within S. We now claim that we can
-choose this minimal position curve in S to be (up to homotopy within individual
-pages and spines) a multiple of the original minimal position of P0 within
-(M,P). We know that P0 began in minimal position, so any multiple is also in
-minimal position. Now reverse the moves we made to homotope alpha into
-S originally. Because we're dividing M along a union of $\pi_1$-injective disjoint
-annuli, he only possible moves alpha can make between different pages and
-spines are the disk and annulus moves described above. So the reverse of our
-homotopy into S is a homotopy toward minimal position of the form that we
-described in the previous paragraph. Hence we can perform it while keeping
-alpha within S.
+So we can homotope $\alpha$ to minimal position within $S$. We now claim that
+we can choose this minimal position curve in $S$ to be (up to homotopy within
+individual pages and spines) a multiple of the original minimal position of
+$P_0$ within $(M,P)$. We know that $P_0$ began in minimal position, so any
+multiple is also in minimal position. Now reverse the moves we made to homotope
+$\alpha$ into $S$ originally. Because we're dividing $M$ along a union of
+$\pi_1$-injective disjoint annuli, he only possible moves $\alpha$ can make
+between different pages and spines are the disk and annulus moves described
+above. So the reverse of our homotopy into $S$ is a homotopy toward minimal
+position of the form that we described in the previous paragraph. Hence we can
+perform it while keeping $\alpha$ within $S$.
 
-This proves that alpha, the multiple of P0, can be homotoped to lie in S, while
-remaining in its original minimal position with respect to the binding annuli.
-This implies that locally on each page and spine, alpha is (up to homotopy rel
-boundary) some collection of multiples of the pared lifting pattern components
-corresponding to P0. Since any multiples connect up between pages and spines in
-the same way as the original pared lifting pattern, we find that alpha locally
-covers components of the pared lifting pattern. Hence alpha covers a component
-of the pared lifting pattern globally. alpha is a closed curve, so the pared
-lifting pattern contains a closed curve. This completes the proof.
+This proves that $\alpha$, the multiple of $P_0$, can be homotoped to lie in
+$S$, while remaining in its original minimal position with respect to the
+binding annuli.  This implies that locally on each page and spine, $\alpha$ is
+(up to homotopy rel boundary) some collection of multiples of the pared lifting
+pattern components corresponding to $P_0$. Since any multiples connect up
+between pages and spines in the same way as the original pared lifting pattern,
+we find that $\alpha$ locally covers components of the pared lifting pattern.
+Hence $\alpha$ covers a component of the pared lifting pattern globally.
+$\alpha$ is a closed curve, so the pared lifting pattern contains a closed
+curve. This completes the proof.
+
+\end{proof}
