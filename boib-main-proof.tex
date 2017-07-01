@@ -27,8 +27,8 @@ Otherwise, if the reduction terminates in an empty set, it does not.
 
 Now there are a number of topological simplifications we make, by passing to an
 appropriate finite-sheeted cover of the book of $I$-bundles.  Once we can
-construct a surface satisfying \eqref{E:qf} inside this cover, we can push it
-down and perturb slightly to obtain a surface satisfying \eqref{E:qf}
+construct a surface satisfying (QF) inside this cover, we can push it
+down and perturb slightly to obtain a surface satisfying (QF)
 downstairs (since it $\pi_1$-injects into a subgroup, it will definitely still
 be $\pi_1$-injective).
 
@@ -209,7 +209,7 @@ the first example. We take covers over the pages and glue them together
 cleverly to construct our surface. We check that the parabolic locus arcs on
 each page lift to arcs on these covers that do not connect up to form a closed
 curve. As in the first example, this suffices to prove that our surface
-satisfies \eqref{E:qf}. We first need to take the correct cover over each page.
+satisfies (QF). We first need to take the correct cover over each page.
 
 This is a somewhat elaborate construction. First, we need as our building
 blocks covers where it is not so easy to join up the parabolic arcs to make
@@ -597,7 +597,7 @@ the above gluing step for all cores, the resulting surface $\widetilde{S}$ is cl
 
 %Claim.
 
-Finally, we claim $\widetilde{S}$ satisfies \eqref{E:qf}.
+Finally, we claim $\widetilde{S}$ satisfies (QF).
 
 %Proof of Claim.
 
@@ -704,8 +704,9 @@ a $\widetilde{\alpha_j}$ made out of opposite lifts, since it has to traverse
 more than one piece.  This contradicts our assumption that the
 $\widetilde{\alpha_j}$ glue to form a closed curve.
 
-So we cannot join up the lifts of $\alpha_i$ to form a lift of $\alpha$. This
-completes the proof of the theorem.
+So we cannot join up the lifts of $\alpha_i$ to form a lift of $\alpha$.
+Applying the parabolic lifting criterion shows that $\widetilde{S}$ is (QF).
+This completes the proof of the theorem.
 
 \end{proof}
 
@@ -715,19 +716,19 @@ Let $M$ be a good book of $I$-bundles.  Suppose $M$ does contain a component of
 the parabolic locus $P$ inside a single page's boundary.  Construct $M'$ by
 deleting all such pages from $M$, and $P'$ by removing all components of the
 pared locus that intersect those pages. Then $(M,P)$ contains a surface
-satisfying \eqref{E:qf} if and only if $(M',P')$ is nonempty and contains
-a surface satisfying \eqref{E:qf}.
+satisfying (QF) if and only if $(M',P')$ is nonempty and contains
+a surface satisfying (QF).
 
 \end{thm}
 
 \begin{proof}
 
-First observe that if $(M,P)$ contains a surface satisfying \eqref{E:qf}, it cannot
+First observe that if $(M,P)$ contains a surface satisfying (QF), it cannot
 traverse any of the pages we deleted to obtain $M'$, by the same argument as in
 our first example.  Since our surface exists, $M'$ must be nonempty.
-Furthermore, since $(M',P') \cin (M,P)$, it satisfies \eqref{E:qf} for $M',P'$ as well.
+Furthermore, since $(M',P') \cin (M,P)$, it satisfies (QF) for $M',P'$ as well.
 Conversely, if we have such a surface, we can obviously view it as contained in
-$(M,P)$, where it must satisfy \eqref{E:qf} because it doesn't intersect the deleted
+$(M,P)$, where it must satisfy (QF) because it doesn't intersect the deleted
 pages at all.
 
 Note that $(M',P')$ may be nonelementary, or it still may not be good.
