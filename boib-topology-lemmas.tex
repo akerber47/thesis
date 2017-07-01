@@ -128,87 +128,101 @@ with negative Euler characteristic.
 
 We make the following simple observation.
 
-prop
+\begin{prop}
 
 Let $M$ be a book of $I$-bundles, and $M'$ to $M$ be a finite-sheeted covering
 space.  Then $M'$ is also a book of $I$-bundles.
 
-proof
+\end{prop}
+
+\begin{proof}
 
 This is straightforward. Lift the spines and pages of $M$ to obtain spines and
 pages of $M'$. Lift the gluing annuli of $M$ to gluing annuli of $M'$.
 
-end proof
+\end{proof}
 
 These facts are well-known basic results in 3-manifold topology.  The following
-result follows immediately from the classification of $I$-bundles over surfaces.
+result follows immediately from the classification of $I$-bundles over
+surfaces.
 
-prop
+\begin{prop}
 
-Let M be a book of $I$-bundles. Recall we require that M is oriented. To be
-orientable, every $I$-bundle in M is either a trivial bundle over an oriented
-surface, or a Z/2-twisted bundle over a nonorientable surface. In the latter
-case, the homotopy classes with nontrivial bundle twisting are precisely those
-with orientation-reversing monodromy (word choice?).
+Let M be a book of $I$-bundles. Recall we require that $M$ is oriented. To be
+orientable, every $I$-bundle in $M$ is either a trivial bundle over an oriented
+surface, or a $\bZ/2$-twisted bundle over a nonorientable surface. In the
+latter case, the homotopy classes in the base with nontrivial bundle twisting
+are precisely those without a consistent tubular neighborhood orientation.
 
 Furthermore, every twisted $I$-bundle has a double cover which is a trivial
-$I$-bundle over a base surface which is an oriented double cover of the original
-nonorientable base surface.
+$I$-bundle over a base surface which is an oriented double cover of the
+original nonorientable base surface.
 
-proof
+\end{prop}
+
+\begin{proof}
 
 See Hempel $I$-bundle facts. {\bf TODO}
 
-prop
+\end{proof}
 
-Let X be a page or spine in a book of $I$-bundles M. Then X is irreducible, and
-each binding annulus in bd X (ie component of \cA cap X) is incompressible in X.
+\begin{prop}\label{P:pagespineII}
 
-proof
+Let $X$ be a page or spine in a book of $I$-bundles $M$. Then $X$ is
+irreducible, and each binding annulus in $\bd X$ (ie component of $\cA \cap X$)
+is incompressible in $X$.
 
-We first claim pi2X = 0. A trivial $I$-bundle is a thickened surface of negative
-Euler characteristic, hence is aspherical. A twisted $I$-bundle has a double
-cover which is a trivial $I$-bundle over the oriented double cover of the base
-surface. Solid tori are aspherical as well. It follows from the sphere theorem
-that X is irreducible.
+\end{prop}
 
-Let A cin bd X be a binding annulus. To prove A is incompressible in X, we'll
-show that it is $\pi_1$-injective. Let X be a solid torus. Then since A intersects
-a meridian disk at least once (as shown above), it must contain a multiple of
-a generator of pi1X. So A is $\pi_1$-injective. Let X be an $I$-bundle. Again, we can
-pass to a double cover which is a trivial $I$-bundle. Now A cin X is
-$\pi_1$-injective because it's a thickening of a boundary component of a compact
-surface. This completes the proof.
+\begin{proof}
 
-end proof
+We first claim $\pi_2X = 0$. A trivial $I$-bundle is a thickened surface of
+negative Euler characteristic, hence is aspherical. A twisted $I$-bundle has
+a double cover which is a trivial $I$-bundle over the oriented double cover of
+the base surface. Solid tori are aspherical as well. It follows from the sphere
+theorem that $X$ is irreducible.
+
+Let $A \cin \bd X$ be a binding annulus. To prove $A$ is incompressible in $X$,
+we'll show that it is $\pi_1$-injective. Let $X$ be a solid torus. Then since
+$A$ intersects a meridian disk at least once (as shown above), it must contain
+a multiple of a generator of $\pi_1X$. So $A$ is $\pi_1$-injective. Let $X$ be
+an $I$-bundle. Again, we can pass to a double cover which is a trivial
+$I$-bundle.  Now $A \cin X$ is $\pi_1$-injective because it's a thickening of
+a boundary component of a compact surface. This completes the proof.
+
+\end{proof}
 
 To analyze the boundary components of a book of $I$-bundles, we'll need
 a couple more simple definitions.
 
-defn
+\begin{defn}
 
-Let M be a book of $I$-bundles, and C a spine in M.  The \emph{valence} v(C) is
-the number of binding annuli that intersect C or, equivalently, that are
-contained in $\bd C$.
+Let $M$ be a book of $I$-bundles, and $C$ a spine in $M$.  The \emph{valence}
+$v(C)$ is the number of binding annuli that intersect $C$ or, equivalently,
+that are contained in $\bd C$.
 
-Let A be a binding annulus in M. Note that A lies in the boundary of exactly
-one spine $C_A$. The \emph{degree} of A is the geometric intersection number
-i(A,D), where D is a meridian disk of $C_A$. That is, it's the minimal number
-of components of A cap D as we properly isotope $D cin C_A$ and $A cin bd C_A$.
+Let $A$ be a binding annulus in $M$. Note that $A$ lies in the boundary of
+exactly one spine $C_A$. The \emph{degree} of $A$ is the geometric intersection
+number $i(A,D)$, where $D$ is a meridian disk of $C_A$. That is, it's the
+minimal number of components of $A \cap D$ as we properly isotope $D \cin C_A$
+and $A \cin bd C_A$.
 
-In fact, note that all binding annuli in a given spine C must have the same
+In fact, note that all binding annuli in a given spine $C$ must have the same
 degree. This is because their core curves are curves on a torus, and any curves
-with different slopes must intersect. Since they have the same slope, they
-intersect a meridian curve (slope $\infty$) the same number of times.
-Therefore, we refer to this as the \emph{degree} d(C) of the spine C.
+with different slopes must intersect. However, by definition binding annuli are
+disjoint. Since they have the same slope, they intersect a meridian curve
+(slope $\infty$) the same number of times.  Therefore, we refer to this as the
+\emph{degree} $d(C)$ of the spine $C$.
 
-enddefn
+\end{defn}
 
-prop
+\begin{prop}
 
-Let M be a book of $I$-bundles. Recall that we require that M has incompressible
-boundary. Then M cannot have any spines C such that $v(C)=0$, $d(C)=0$, or
-$v(C)=d(C)=1$.
+Let M be a book of $I$-bundles. Recall that we require that M has
+incompressible boundary. Then M cannot have any spines C such that $v(C)=0$,
+$d(C)=0$, or $v(C)=d(C)=1$.
+
+\end{prop}
 
 proof
 
