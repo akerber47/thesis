@@ -1,9 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{LERF and topological consequences}
+\section{Separability properties of groups and spaces}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The following is based on \cite{AFW} and \cite{LR}. It is definitely not
-original.
+We discuss some algebraic properties that will allow us to perform nice
+topological constructions. These are standard definitions. See \cite{LR} or
+\cite{AFW} for an overview and survey of recent work.
 
 \begin{defn}
 
@@ -20,9 +21,9 @@ subgroups are separable.
 \end{defn}
 
 The following equivalences are well-known.  We'll use these facts later in our
-proof.
+proofs of topological properties.
 
-\begin{prop}
+\begin{prop}\label{P:lerfmap}
 
 $G$ is RF if and only if for any $g \in G$ there exists a map $\phi \colon
 G \to F$, where $F$ is a finite group, such that $\phi(g) \neq id$.
@@ -37,6 +38,25 @@ exists a map $\phi \colon G \to F$ such that $\phi(g) \notin \phi(H)$.
 See \cite{LR}.
 
 \end{proof}
+
+\begin{cor}\label{C:lerfmap'}
+
+G is LERF if and only if for any g1,dots,gn in G, H<G, g1,dots,gn notin H there
+exists a map phi colon G to F to a finite group such that phi(gi) notin phi(H).
+
+\end{cor}
+
+\begin{proof}
+
+Let G be LERF. For each gi, gi notin H, so there exists a map phii colon G to
+Fi finite group, such that phii(gi) notin phii(H). Now let F = F1 times dots
+times Fn, and phi = phi1 times dots times phin. For each i, phi(gi)i notin
+phi(H)i, so phi(gi) notin phi(H). This proves the forward direction.  The
+converse is trivial.
+
+\end{proof}
+
+
 %Note that in this entire paper, \emph{surface groups} will refer to
 %fundamental groups of closed surfaces (compact without boundary).  TODO move
 %this sentence somewhere. Probably want to clarify what I mean by hyperbolic
@@ -53,17 +73,13 @@ the closed case has also been settled by Agol \cite{Agol}, incorporating work
 of Bergeron-Wise \cite{BergeronWise} and Kahn-Markovic \cite{KM}. Since we're
 studying books of $I$-bundles, we will use the former result in this paper.
 
-See \cite{LR} and \cite{AFW} for a further survey of work on this subject.
-
-Note that the last theorem is actually an extremely deep fact. Wise's proof
+Note that Wise's theorem is actually an extremely deep fact. Wise's proof
 actually shows that hyperbolic 3-manifold with boundary groups satisfy
-a technical condition, namely that they are virtually compact special. (Other
-cases of hyperbolic 3-manifolds, including the particularly difficult closed
-case, were addressed by the overlapping work of Agol, Kahn-Markovic, Sageev,
-and Bergeron-Wise).  Additional work by Haglund and Haglund-Wise demonstrates
-that a virtual compact special group is virtually a quasiconvex subgroup of
-a right-angled Artin group, and geometrically finite subgroups are separable.
-It follows by the tameness theorem that hyperbolic 3-manifold groups are LERF.
+a technical condition, namely that they are virtually compact special.
+dditional work by Haglund and Haglund-Wise demonstrates that a virtual compact
+special group is virtually a quasiconvex subgroup of a right-angled Artin
+group, and geometrically finite subgroups are separable.  It follows by the
+tameness theorem that hyperbolic 3-manifold groups are LERF.
 
 %lemma (lifting to embeddings)
 %
@@ -83,18 +99,37 @@ It follows by the tameness theorem that hyperbolic 3-manifold groups are LERF.
 We now describe some elementary topological consequences of LERF. These exact
 statements are new, but most of the following propositions are simple
 translations of the conclusions of LERF into topological statements about loops
-and covers.
+and covers. In all of the following we assume X is connected and locally
+non-pathological (that is, we make the assumptions needed to apply elementary
+covering space theory).
 
 prop
 
 Let X be a space such that pi1X is LERF. Fix a basepoint x0 in X. Suppose that
-Y cin X is a homotopically nontrivial connected subspace containing x0, and
-alpha is a loop at x0 which is not homotopic into Y. Then there is
-a finite-sheeted regular cover p colon (X',x0') to (X,x0) with the property
-that the lift alpha' of alpha to x0 connects two different connected components
-of p-1(Y).
+Y cin X is a homotopically nontrivial connected subspace containing x0, pi1Y is
+finitely generated, and alpha is a loop at x0 which is not homotopic into Y.
+Then there is a finite-sheeted regular cover p colon (X',x0') to (X,x0) with
+the property that the lift alpha' of alpha to x0' connects two different
+connected components of p-1(Y).
 
 end prop
+
+proof
+
+We apply Propositing lerfmap. Let g = alpha and H = pi1Y. By assumption, H is
+finitely generated and g notin H. Therefore there exists a map phi colon G to
+F such that phi(g) notin phi(H), where F is a finite group. Without loss of
+generality we can assume this map is surjective (take its image). Let H' = ker
+phi. Now H' is a finite index normal subgroup, so it induces a finite sheeted
+regular cover p colon X' to X. Let x0' be an arbitrary lift of x0 to X'. We
+claim that (X',x0') has the desired property. X' is a regular cover, so it has
+covering transformation group F. F acts on the fiber p-1(x0). We know that any
+loop gamma in X based at x0 lifts to a loop gamma' which starts at x0' and ends
+at phi(gamma') cdot x0'. Since phi(alpha) not in phi(pi1Y), alpha cannot end at
+any point that is connected to x0' by a lift of a loop in pi1Y. Therefore its
+right endpoint must lie in a different connected component of p-1(Y).
+
+end proof
 
 prop
 
@@ -107,16 +142,48 @@ lifting multiples of beta to x0'.
 
 end prop
 
+proof
+
+Let g = alpha and H = <beta>. Since alpha is not homotopic to a multiple of
+beta, alpha notin H. Apply Proposition lerfmap to find a map phi colon G to
+F such that phi(g) notin phi(H), where F is a finite group. Let H' = ker phi,
+and X' be the corresponding finite-sheeted regular cover of X. By the same
+argument as above, a lift alpha' of alpha to a lifted basepoint x0' cannot end
+at any point that is connected to x0' by a lift of a multiple of beta. This
+completes the proof.
+
+end proof
+
 prop
 
 Let X be a space such that pi1X is LERF. Fix a basepoint x0 in X. Suppose that
 we have a homotopically nontrivial loop alpha at x0 of infinite order in pi1X.
 Then given an integer k>0, there is a finite-sheeted regular cover p colon
 (X',x0') to (X,x0) with the following property. Consider the component C of
-p-1(alpha) that contains x0'. Let d be the degree of the restricted covering
-map p|C ccoln C to alpha. Then k divides d.
+p-1(alpha) obtained by lifting multiples of alpha to x0'. Let d be the degree
+of the restricted covering map p|C colon C to alpha. Then k divides d.
 
 end prop
+
+proof
+
+Let H = <alpha^k>. Since alpha has infinite order,
+alpha,alpha2,dots,alpha^(k-1) notin H. Apply Corollary lerfmap' to find a map
+phi colon G to F such that phi(alpha),dots,phi(alpha^k-1) notin phi(H). Let H'
+= ker phi, and p colon X' to X be the associated finite-sheeted regular cover.
+We claim that X' has the desired property. To see this, observe that d is the
+smallest integer such that alpha^d lifts to a closed curve in X'. C is
+a finite-sheeted cover of the loop alpha, so it must be cyclic. Because X' is
+regular, this means d is the smallest integer such that phi(alpha)^d is
+trivial, that is, the deck transformation induced by alpha has order d.
+
+We cannot have d<k, as phi(alpha^d)=phi(alpha)^d=1 in phi(H) contradicts the
+LERF assumption on phi. Write d = m1k + m2, for some m1,m2 in Z, 0 leq m2 < k.
+phi(alpha^d)=1=phi(alpha^m1k)phi(alpha^m2). That is,
+phi(alpha^m2)=phi(alpha^k)^-m1. The right-hand side is in H. By the LERF
+assumption on phi, this forces m2=0. So d divides k.
+
+end proof
 
 prop
 
@@ -148,4 +215,15 @@ of lifted basepoints is arbitrary).
 
 end prop
 
+proof
 
+All these lemmas are proved the same way. Fix a basepoint x0 once and for all.
+Since X is connected, choose a path from x0 to xi for each xi, and use this to
+fix an isomorphism sigmai colon pi1(X,x0) cong pi1(X,xi). For each xi, we apply
+the appropriate proposition above (lerf1, lerf2, or lerf3) to construct a map
+phii colon i1(X,xi) to Fi with the appropriate property. Now let F = F1 times
+dots times Fn and phi = (phi1 circ sigma1) times dots times (phin circ sigman).
+By the same argument as Corollary lerfmap', this cover will have the
+appropriate property for all n conditions.
+
+end proof
