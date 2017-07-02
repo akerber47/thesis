@@ -56,16 +56,87 @@ that a virtual compact special group is virtually a quasiconvex subgroup of
 a right-angled Artin group, and geometrically finite subgroups are separable.
 It follows by the tameness theorem that hyperbolic 3-manifold groups are LERF.
 
-lemma (lifting to embeddings)
-
-Let M be a complete hyperbolic 3-manifold, and phi: S to M be a pi1-injective
-map such that H=phi*pi1S is quasiFuchsian. Then phi is homotopic to a map which
-lifts to an embedding in a cover of M. Furthermore, we can choose such a cover
-to be finite-sheeted.
-
+%lemma (lifting to embeddings)
+%
+%Let M be a complete hyperbolic 3-manifold, and phi: S to M be a pi1-injective
+%map such that H=phi*pi1S is quasiFuchsian. Then phi is homotopic to a map
+%%which
+%lifts to an embedding in a cover of M. Furthermore, we can choose such a cover
+%to be finite-sheeted.
+%
 % TODO
 %This belongs in background somewhere. Reduction to finite-sheeted cover means
 %this is an application of separability, so maybe put with topological facts
 %there?
 
 % Update: This location still doesn't quite make sense. Keep at it..
+
+We now describe some elementary topological consequences of LERF. These exact
+statements are new, but most of the following propositions are simple
+translations of the conclusions of LERF into topological statements about loops
+and covers.
+
+prop
+
+Let X be a space such that pi1X is LERF. Fix a basepoint x0 in X. Suppose that
+Y cin X is a homotopically nontrivial connected subspace containing x0, and
+alpha is a loop at x0 which is not homotopic into Y. Then there is
+a finite-sheeted regular cover p colon (X',x0') to (X,x0) with the property
+that the lift alpha' of alpha to x0 connects two different connected components
+of p-1(Y).
+
+end prop
+
+prop
+
+Let X be a space such that pi1X is LERF. Fix a basepoint x0 in X. Suppose that
+alpha and beta are homotopically nontrivial loops at x0 such that alpha is not
+homotopic to a multiple of beta. Then there is a finite-sheeted regular cover
+p colon (X',x0') to (X,x0) with the property that, when we consider the lift
+alpha' of alpha to x0' has its right endpoint at a point not reachable by
+lifting multiples of beta to x0'.
+
+end prop
+
+prop
+
+Let X be a space such that pi1X is LERF. Fix a basepoint x0 in X. Suppose that
+we have a homotopically nontrivial loop alpha at x0 of infinite order in pi1X.
+Then given an integer k>0, there is a finite-sheeted regular cover p colon
+(X',x0') to (X,x0) with the following property. Consider the component C of
+p-1(alpha) that contains x0'. Let d be the degree of the restricted covering
+map p|C ccoln C to alpha. Then k divides d.
+
+end prop
+
+prop
+
+Consider a finite collection of basepoints x1,dots,xn with corresponding loops
+alphai and subspaces Yi at each basepoint xi. Then there is a finite-sheeted
+regular cover X' to X such that each pair alphai,Yi satisfies the conclusion of
+\ref{L:lerf1} (where X' is regular, so the choice of lifted basepoints is
+arbitrary).
+
+end prop
+
+prop
+
+Consider a finite collection of basepoints x1,dots,xn with corresponding loops
+alphai,betai at each basepoint xi. Then there is a finite-sheeted regular cover
+X' to X such that each pair alphai,betai satisfies the conclusion of
+\ref{L:lerf2} (where X' is regular, so the choice of lifted basepoints is
+arbitrary).
+
+end prop
+
+prop
+
+Consider a finite collection of basepoints x1,dots,xn with corresponding loops
+alphai at each basepoint xi. Then given integers k1,dots,kn>0, there is
+a finite-sheeted regular cover p colon X' to X such that each pair alphai,ki
+satisfies the conclusion of \ref{L:lerf3} (again, X' is regular, so the choice
+of lifted basepoints is arbitrary).
+
+end prop
+
+
