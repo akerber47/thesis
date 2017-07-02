@@ -19,32 +19,41 @@ subgroups are separable.
 
 \end{defn}
 
-It is well-known that these are equivalent to the following facts: (see
-\cite{LR}). We'll use these facts later in our proof.
+The following equivalences are well-known.  We'll use these facts later in our
+proof.
+
+\begin{prop}
 
 $G$ is RF if and only if for any $g \in G$ there exists a map $\phi \colon
 G \to F$, where $F$ is a finite group, such that $\phi(g) \neq id$.
 
-- $G$ is LERF if and only if for any $g \in G$, $H < G$, $g \notin H$, there
+$G$ is LERF if and only if for any $g \in G$, $H < G$, $g \notin H$, there
 exists a map $\phi \colon G \to F$ such that $\phi(g) \notin \phi(H)$.
 
-Note that in this entire paper, \emph{surface groups} will refer to fundamental
-groups of closed surfaces (compact without boundary).
-% TODO move this sentence somewhere. Probably want to clarify what I mean by
-% hyperbolic 3-manifold, etc also...
-
-\begin{thm}[Hall] Free groups are LERF. \end{thm}
-
-\begin{thm}[Scott] Surface groups are LERF. \end{thm}
-
-\begin{thm}[Agol--Kahn--Markovic--Wise] Let $N$ by a hyperbolic 3-manifold,
-possibly infinite volume.  Then $\pi_1N$ is LERF. \end{thm}
+\end{prop}
 
 \begin{proof}
 
-See citations in \cite{LR}, \cite{AFW}.
+See \cite{LR}.
 
 \end{proof}
+%Note that in this entire paper, \emph{surface groups} will refer to
+%fundamental groups of closed surfaces (compact without boundary).  TODO move
+%this sentence somewhere. Probably want to clarify what I mean by hyperbolic
+%3-manifold, etc also... This goes EARLY in background section (BEFORE I even
+%start talking about books of I-bundles!!
+
+A priori it is not obvious that any well-known groups are LERF. It is
+a classical theorem of Hall \cite{Hall} that free groups are LERF. Peter Scott
+\cite{Scott} showed that surface groups are LERF as well. However, we will need
+stronger results in this paper. Deep work of Wise \cite{Wise}, building on work
+of Hanglund-Wise \cite{HaglundWise} and Hsu-Wise \cite{HsuWise} shows that
+every non-closed hyperbolic 3-manifold has LERF fundamental group. We note that
+the closed case has also been settled by Agol \cite{Agol}, incorporating work
+of Bergeron-Wise \cite{BergeronWise} and Kahn-Markovic \cite{KM}. Since we're
+studying books of $I$-bundles, we will use the former result in this paper.
+
+See \cite{LR} and \cite{AFW} for a further survey of work on this subject.
 
 Note that the last theorem is actually an extremely deep fact. Wise's proof
 actually shows that hyperbolic 3-manifold with boundary groups satisfy
