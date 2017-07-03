@@ -187,7 +187,7 @@ argument used in (2) and (3).  This proves that $M$ has a cover satisfying
 \section{Proof of main theorem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We've now reduced to the case of a good book of I-bundles. However, the
+We've now reduced to the case of a good book of $I$-bundles. However, the
 remaining work is still quite involved.
 
 This is the main proof, and is quite involved. We proceed somewhat similarly to
@@ -198,19 +198,19 @@ to prove that our surface satisfies (QF).  We first need to take the correct
 cover over each page. However, the details are more complex. We first will need
 the following important notion.
 
-defn
+\begin{defn}
 
-Let M be a book of I-bundles. A \emph{partially decomposed surface} Q cin M is
-obtained from a closed pi1-injective surface S in minimal position (following
-the surface decomposition lemma) by deleting any number of components of Q cap
-C, for each spine C of M. The result is a possibly disconnected surface with
-boundary, where each component is pi1-injective and in minimal position. If
-(M,P) is a pared book of I-bundles, the \emph{pared lifting pattern} on Q is
-defined componentwise in the surface decomposition, just like for closed
-surfaces. We say that Q satisfies the \emph{pared lifting criterion} if its
-pared lifting pattern contains no closed curves.
+Let $M$ be a book of $I$-bundles. A \emph{partially decomposed surface} $Q \cin
+M$ is obtained from a closed pi1-injective surface S in minimal position
+(following the surface decomposition lemma) by deleting any number of
+components of Q cap C, for each spine C of M. The result is a possibly
+disconnected surface with boundary, where each component is pi1-injective and
+in minimal position. If (M,P) is a pared book of I-bundles, the \emph{pared
+lifting pattern} on Q is defined componentwise in the surface decomposition,
+just like for closed surfaces. We say that Q satisfies the \emph{pared lifting
+criterion} if its pared lifting pattern contains no closed curves.
 
-end defn
+\end{defn}
 
 Note that at each spine C of M, there must be an even number of boundary
 components of Q which lie in C, by parity considerations with the deleted
@@ -221,7 +221,7 @@ intersections with spines.  No individual page contains a pared closed curve,
 so this trivial partially decomposed surface (which is just a disjoint union of
 page covers) cannot either.
 
-defn
+\begin{defn}
 
 Let Q be a partially decomposed surface in a book of I-bundles M. The
 \emph{defect} of Q is the total number of boundary components, summing over all
@@ -230,7 +230,7 @@ of boundary components which intersect C. The \emph{degree} of Q is the
 covering degree on each page. (Note that since some spine components were
 deleted, the covering degree on a spine may be smaller.)
 
-end defn
+\end{defn}
 
 Our strategy is as follows. For each boundary component of M, we will build
 a partially decomposed surface. This surface will be obtained by removing spine
@@ -243,7 +243,7 @@ our partially decomposed surface to have as small a defect as possible.
 We will also need our partially decomposed surface to satisfy the following
 technical conditions:
 
-defn
+\begin{defn}
 
 Let Q be a partially decomposed surface in a book of I-bundles M. We say that
 Q is \emph{usable} if it satisfies the following:
@@ -255,18 +255,18 @@ item[dag] The pared lifting pattern on Q contains no closed curves.
 item[ddag] Every arc in the pared lifting pattern on Q begins and ends at two
 different boundary components of Q
 
-end defn
+\end{defn}
 
-defn
+\begin{defn}
 
 We say that Q \emph{has sparse defect} if, in the surface decomposition of Q,
 each component of Q cap B contains at most one component of bd Q. That is, the
 ``defective'' (non-glued) boundary components are ``spread out'' among the
 components of Q in each page.
 
-end defn
+\end{defn}
 
-lemma
+\begin{lemma}\label{L:jigsaw}
 
 Let M be a good book of I-bundles. Fix a boundary component F of M. Then, for
 any sufficiently large d, there exists a partially decomposed surface Q in
@@ -286,9 +286,9 @@ not depending on d)
 
 end enumerate
 
-end lemma
+\end{lemma}
 
-begin proof
+\begin{proof}
 
 Suppose that F intersects the spines C1,dots,Cr and pages B1,dots,Bs of M.
 Since M is good, F intersects each of these in a single component. Denote the
@@ -339,9 +339,15 @@ these requirements and the condition above (that our gluing extends to a cover
 of F), we repeatedly choose an arbitrary annulus. This process will terminate
 at some some surface Q1, after there are no more possible gluings to make.
 
+\begin{claim}
+
 We claim that $\#(\bd Q_1 \setminus \cR)$ is bounded by $C$, a constant
 depending only on $(M,P)$. In particular, $C$ is independent of the choice of
 $d$ and $m$ made earlier.
+
+\end{claim}
+
+\begin{proof}[Proof of Claim]
 
 Consider an arbitrary boundary component $\widetilde{\gamma} \cin \bd Q_1
 - \cR$.  It covers some boundary component $\gamma \cin F_i$. Look at the
@@ -367,58 +373,162 @@ Let $\widetilde{\gamma}' \cin \bd(Q_1 \cap F_{i'}) - \cR$ be an arbitrary
 available lift of $\gamma'$.  Suppose gluing to $\widetilde{\gamma}'$ produces
 a closed curve $\alpha$ in the pared lifting pattern. Obviously $\alpha$
 intersects the newly added annulus $A$, otherwise $Q_1$ would already contain
-a closed curve.  Cutting along this circle divides $\alpha$ into a union of
-arcs with endpoints on either $\gamma$ or $\gamma'$.  $\widetilde{S}$ satisfies
-(\dag'), so no arc can have both endpoints on the same boundary component. So
-there exists an arc connecting $\gamma$ to $\gamma'$. This is the only way that
-an additional gluing would violate (\dag).  But since $\widetilde{S}^{(N)}$ is
-locally a cover on each piece, the number of arcs incident to $\gamma$ is
-bounded by $i_a$.  Tracing these arcs through $\widetilde{S}^{(N)}$, they can
-hit at most $i_a$ other boundary components.  These are the only boundary
-components we can glue to to violate (\dag).
+a closed curve. $P$ is in minimal position and $M$ is reduced, so within $A$
+the pared lifting pattern is just a union of transverse arcs. Removing $A$
+therefore divides $\alpha$ into a union of arcs with endpoints on either
+$\gamma$ or $\gamma'$.  $Q_1$ is useful, so none of these arcs can have both
+endpoints on the same boundary component. So there exists an arc in $Q_1$
+connecting $\gamma$ to $\gamma'$.  (This is the reason for the second condition
+in our definition of a useful surface).  The pared lifting pattern in $Q_1$
+near $\gamma$ is a homeomorphic copy of (the core of) $P \cap F_i$, so the
+number of arcs incident to $\gamma$ is bounded by $C_1$.  Tracing these arcs
+through $Q_1$, they can hit at most $C_1$ other boundary components.  These are
+the only boundary components we can attach our annulus to to produce a closed
+curve.
 
-Similarly, suppose gluing to $\widetilde{\gamma}'$ violates (\dag'). Let $\alpha$ be an
-arc with endpoints on the same boundary component produced by the gluing. Let
-$\widetilde{\delta}$ be this boundary component. Again, $\alpha$ intersects the
-$\widetilde{\gamma} = \widetilde{\gamma}'$ gluing circle, otherwise $\widetilde{S}^{(N)}$ would already
-violate (\dag').  Cutting along this circle divides $\alpha$ into a union of
-arcs.  Except for the two original endpoints (which now lie on two different
-subarcs - call these subarcs $\alpha_0$ and $\alpha_1$), all other endpoints of
-these arcs must either lie on $\gamma$ or $\gamma'$.  But no arc can have both
-endpoints on the same boundary component, or $\widetilde{S}^{(N)}$ would arleady violate
-(\dag'). So any subarcs except $\alpha_0$ and $\alpha_1$ must connect $\gamma$ to
-$\gamma'$.  By parity we can see that $\alpha_0$ and $\alpha_1$ both have one
-endpoint on $\widetilde{\delta}$, but their other endpoints must be different. That is,
-either $\alpha_0$ ends on $\widetilde{\gamma}$ and $\alpha_1$ on $\widetilde{\gamma}'$, or vice
-versa.
+Similarly, suppose gluing to $\widetilde{\gamma}'$ produces an arc $\alpha$
+with endpoints on the same boundary component. Let $\widetilde{\delta}$ be this
+boundary component. Again, $\alpha$ intersects the added annulus $A$, otherwise
+$Q_1$ would already not be useful. Removing $A$ divides $\alpha$ into a union
+of arcs. Except for the two endpoints of $\alpha$ (which now lie on two
+different subarcs - call these subarcs $\alpha_0$ and $\alpha_1$), all other
+endpoints of these arcs must either lie on $\gamma$ or $\gamma'$.  But no arc
+can have both endpoints on the same boundary component, or $Q_1$ would already
+fail to be useful.  So any subarcs except $\alpha_0$ and $\alpha_1$ must
+connect $\gamma$ to $\gamma'$.  By parity we can see that $\alpha_0$ and
+$\alpha_1$ both have one endpoint on $\widetilde{\delta}$, but their other
+endpoints must be different.  That is, either $\alpha_0$ ends on
+$\widetilde{\gamma}$ and $\alpha_1$ on $\widetilde{\gamma}'$, or vice versa.
+This is the set of circumstances that leads to a returing arc.
 
-Now the arcs incident to $\widetilde{\gamma}$ hit at most $ia$ other boundary
-components. These are our possible $\widetilde{\delta}$. Each of these has at
-most $i_a$ incident arcs itself, one of which returns to $\widetilde{\gamma}$,
-leaving $i_a-1$ that we need to care about. We have a total of at most
-$i_a*(i_a-1)$ many "distance two" leftover boundary components. These are the
-only boundary components we can glue to to violate (\dag').
+Now, as above, the arcs incident to $\widetilde{\gamma}$ hit at most $C_1$
+other boundary components. These are our possible $\widetilde{\delta}$. Each of
+these has at most $C_1$ incident arcs itself, one of which returns to
+$\widetilde{\gamma}$, leaving $C_1-1$ that we need to care about. We have
+a total of at most $i_a*(C_1-1)$ many "distance two" available boundary
+components. If we attach our annulus to one of these boundary components, we
+will produce a non-useful surface.
 
-But by construction of $\widetilde{S}^{(N)}$, there are no more legal gluings. So
-$\widetilde{S}$ can have at most $i_a+(i_a*(i_a-1)) = i_a^2$ many leftover boundary
-components (that is, components of $\bd\widetilde{S}^{(N)}-\cR$) above $\gamma'$.  But since
-$\widetilde{S}^{(0)}$ has the same number of boundary components above $\gamma$ and
-$\gamma'$, and we're only allowed to glue them to each other, this implies that
-there can be at most $i_a$ boundary components above $\gamma$ as well.  Since
-our choice of $\widetilde{\gamma}$ was arbitrary, this implies that there are
-at most $C(M,P,S_a) = i_a^2*j(M,P,S_a)$ many leftover boundary components, that
-is, components of $\bd\widetilde{S}^{(N)}-\cR$.
+By construction of $Q_1$, there are no more legal gluings. So every remaining
+boundary component must be disallowed for one of the above reasons. So $Q_1$
+can have at most $C_1+(C_1*(C_1-1)) = C_1^2$ many leftover boundary components
+(that is, components of $\bd Q_1 - \cR$) above $\gamma'$.  Since our choice of
+$\widetilde{\gamma}$ was arbitrary, this implies that there are at most $C
+= C_1^2*C_2$ many leftover boundary components, that is, components of $\bd
+Q_1-\cR$. This proves the claim.
 
+\end{proof}
+
+\noindent \emph{Proof of Lemma~\ref{L:jigsaw} continued.} We now attach more
+annuli to build a surface $Q$ which satisfies (3) and (4). Intuitively, the
+boundary components that make up the reserve are sparse. As long as our reserve
+is sufficiently large we can make use of it to attach enough annuli that only
+reserve boundary components remain. All the remaining non-reserve boundary
+components will be attached to reserve boundary components by annuli.
+
+Construct $Q$ from $Q_1$ as follows.  For each boundary component $\gamma$
+downstairs, as discussed above, there are at most $C_1^2$ many elements of $\bd
+Q_1 - \cR$ above it.  For each of these, there are at most $C_1^2$ we could
+glue to above $\gamma'$ that produce a non-useful surface. We now allow
+ourselves to glue to the reserve boundary components. Assume that $m\geq
+2C_1^2$.  Then attach each leftover (non-reserve) lift of $\gamma$ to an
+element of $\cR$ above $\gamma'$ with a copy of the annulus $F_j'$, one at
+a time.  At any point there will be at least $i^2+1$ elements of $\cR$
+remaining above $\gamma'$, so we'll always be able to choose one such that our
+surface is still useful.  Repeat this process for each $\gamma$ to construct
+$Q$.  Since we glued all the leftovers, it immediately follows that $\bd Q \cin
+\cR$, and therefore $Q$ satisfies (3).
+
+Let's analyze the possibilities for the defect of $Q$, that is, the number of
+boundary components.  Above each $\gamma \cin \bd F_i$, $\cR$ has $m$ elements.
+So $\bd Q$ has at most $m$ components above $\gamma$, or $C_2m$ many boundary
+components in total. The lower bound is determined by the maximum number of
+leftovers, since the only way we'll remove reserve components from $\bd Q$ is
+by gluing them to non-reserve leftover components. There are at most $C_1^2$
+leftover components above $\gamma$, and similarly above $\gamma'$, so there
+will be at least $m - C_1^2$ components remaining in $\bd Q$ above $\gamma$.
+We find that
+
+\[ C_2(m-C_1^2) \leq defect(Q) \leq C_2m \]
+
+Any choice of $m\geq 2C_1^2$ works, as long as $d$ is sufficiently large
+relative to $m$.  This proves (4).
+
+\end{proof}
 
 \begin{proof}[Proof of Main Theorem]
 
-% d = lcm degree of subgp sep cover (lcm of degree on each page)
-% After taking copies of each subgp sep cover to ensure all are same degree:
-% n = (large) # of copies of each cover above
-% m = # of copies of each bc to reserve
-% i(M,P,S_a) = max # incident arcs at a bc on S_a boundary component
-% TODO call this ia
-% j(M,P,S_a) = total # bcs on page boundaries making up S_a ("junctions")
+We want to use Lemma~\ref{L:jigsaw} to construct a partially decomposed surface
+$Q_a$ for each boundary component $F_a$ of $M$. Now we want to glue these
+together, but they may have very different numbers of boundary components! So
+we'll need to normalize them so they all have the same number of boundary
+components near each spine, so we can do a local construction with annuli in
+each spine.
+
+Let $M_1 = max a C_1(a)$, that is, the maximum number of components of $P \cap
+\cap B_i$ incident to a single boundary component of $\bd M \cap B_i$ for any
+spine $B_i$. By the inequality in Lemma~\ref{L:jigsaw}, for each $\gamma \cin
+\bd F_i$, $\#\{\bd F_i \text{ above } \gamma\} \geq m - M_1^2$. We want to make
+this an equality for each $Q_a$ by adding some more annuli to $Q_a$ in the same
+way that we added annuli in Lemma~\ref{L:jigsaw}.
+
+Again, we use the size of the reserve to our advantage. Assuming $m\geq M_1^2
++ C_1(a)^2$ for each $F_a$, by the same argument as the lemma, there will
+always be choices remaining from the reserve to make the gluing. Combining
+these all we need is $m\geq 2M_1^2$.
+
+By abuse of notation, we'll call these normalized surfaces $Q_a$ also (the
+non-normalized ones will not come up again). Each has exactly $M = m - M_1^2$
+many boundary components above any $\gamma \cin \bd F_i$.
+
+Build a single closed surface $S$ by attaching annuli to the $Q_a$ as follows.
+
+Let $C$ be an arbitrary spine of $M$. There are exactly $d(C)$ many binding
+annuli in $\bd C$, and $C$ is attached to $d(C)$ distinct pages, since $M$ is
+good. Each page has two sides, so there are $2d(C)$ many ``incident neighbor
+types'' in the $Q_a$, corresponding to the $2d(C)$ boundary components of
+binding annuli in $\bd C$. These are attached to the $2d(C)$ side boundary
+components of pages adjacent to $C$.  Because $M$ is good, we know that all
+these pages are distinct and all the corresponding binding annuli have degree
+1.
+
+Introduce notation as follows. A neighborhood $\cN(C)$ consists of $d(C)$
+neighborhoods inside pages, attached to $C$ by annuli. The meridian of $C$
+gives a cyclic order to the attached pages.  Fix an orientation for the
+meridian and an (arbitrary) starting point along it, and label the pages $1,
+\dots, d(C)$ under this ordering.  The orientation of the meridian also gives
+an ordering of the boundary components of each binding  annulus.  Using this,
+label the $d(C)$ gluing annuli by $A_1,\dots,A_{d(C)}$. Also label the $2q$
+binding annulus boundary components by $\gamma_1^-,\gamma_1^+,\dots,
+\gamma_q^-,\gamma_q^+$, where $\gamma_i^-$ and $\gamma_i^+$ are the two sides
+of the binding annulus for the $i$th page.  Extend these labels to the
+corresponding boundary components of the page boundaries attached to the
+binding annuli.  Remember that all these labels are downstairs - that is,
+they're labels of pieces of $\bd M$.
+
+By construction of the $Q_a$, there are $2d(C)M$ many components of
+$\bd(\bigsqcup_a Q_a) \cap C$. Attach them as follows. Let $A_{1,3}$ be an
+embedded valence 1 annulus in $C$ with one boundary component in $A_1$ and one
+in $A_3$. Define $A_{2,4},A_{3,5},\dots,A_{(d(C)-1),1},A_{d(C),2}$ similarly.
+Now construct the partially decomposed surface $S$ by $M$ many copies of each
+$A_{i,i+2}$, and attaching their boundary components to lifts of $\gamma_i^-$
+and $\gamma_{i+2}^+$. By construction of the $Q_a$ there will be exactly $M$
+many available lifts of each to attach to. Therefore, when we repeat this for
+each spine $C$, the result is a closed surface $S$. Note that since $M$ is
+reduced, we know that each spine has at least 3 annuli. This means we'll never
+attempt to attach an annulus with both boundary components in the same binding
+annulus.
+
+We claim that $S$ satisfies the pared lifting criterion.
+
+
+
+% d = lcm degree of subgp sep cover (lcm of degree on each page) After taking
+% copies of each subgp sep cover to ensure all are same degree: n = (large)
+% # of copies of each cover above m = # of copies of each bc to reserve
+% i(M,P,S_a) = max # incident arcs at a bc on S_a boundary component TODO call
+% this ia j(M,P,S_a) = total # bcs on page boundaries making up S_a
+% ("junctions")
 
 Consider an arbitrary boundary component $F_a$ of the book of $I$-bundles $M$.
 Cutting $M$ along the gluing annuli decomposes $\bd_aM$ into a union of pieces
