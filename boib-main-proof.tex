@@ -15,9 +15,9 @@ non-reduced case also.
 
 \begin{thm}[Main Theorem, non-reduced case]
 
-Let M be non-reduced book of I-bundles. If the reduction of the earlier theorem
-yields at least one reduced book of I-bundles, then M contains a QF surface.
-Otherwise, if the reduction terminates in an empty set, it does not.
+Let $M$ be a book of $I$-bundles. If the reduction theorem yields a nonempty
+set of reduced book of $I$-bundles in $M$, then $M$ contains a (QF) surface.
+Otherwise, it does not.
 
 \end{thm}
 
@@ -27,10 +27,12 @@ Otherwise, if the reduction terminates in an empty set, it does not.
 
 Now there are a number of topological simplifications we make, by passing to an
 appropriate finite-sheeted cover of the book of $I$-bundles.  Once we can
-construct a surface satisfying (QF) inside this cover, we can push it
-down and perturb slightly to obtain a surface satisfying (QF)
-downstairs (since it $\pi_1$-injects into a subgroup, it will definitely still
-be $\pi_1$-injective).
+construct a surface satisfying (QF) inside this cover, we will push it down and
+perturb to obtain a surface satisfying (QF) downstairs (since it
+$\pi_1$-injects into a subgroup, it will definitely still be
+$\pi_1$-injective).
+
+% TODO expand the above into an actual (short) proof
 
 \begin{defn}
 
@@ -43,119 +45,89 @@ satisfies the following additional conditions.
 exactly once. That is, every spine has degree one.
 
 \item Each page is glued to a given spine at most once. That is, for any page
-B and spine C, B cap C is at most a single component of cA.
+$B$ and spine $C$, $B \cap C$ is at most a single component of $\cA$.
 
 \item The two endpoints of a fiber in each page are in different boundary
 components of $M$. In particular, each page is a trivial $I$-bundle over an
 oriented surface.
 
-\item Every arc of P on a page connects two different binding annuli. That is,
-there are no essential arcs that begin and end at the same binding annulus.
+\item Every arc of $P$ on a page connects two different binding annuli. That
+is, there are no essential arcs that begin and end at the same binding annulus.
 
 \end{enumerate}
 
 \end{defn}
 
-\begin{lemma}
+\begin{thm}
 
 Let $M$ be a reduced book of $I$-bundles. Then $M$ has a finite-sheeted regular
 cover which is good.
 
-\end{lemma}
+\end{thm}
 
 \begin{proof}
 
-To prove this, we'll repeatedly use the fact that $\pi_1M$ is LERF to construct
-finite sheeted covers with nice properties.
+To prove this, we'll use the fact that $\pi_1M$ is LERF to construct finite
+sheeted covers with nice properties. Note that (1), (2), (3), and (4) are all
+properties that once true, remain true when we lift to finite-sheeted covers.
+So it suffices to guarantee each property one at a time by lifting to
+finite-sheeted covers, because we can lift repeatedly and the old properties
+will still hold.
 
-We first take care of condition (1). Let $C$ be a spine, and let
-$A_1,\dots,A_n$ be the gluing annuli on $C$. These annuli must be parallel. Let
-$\alpha$ be a generator for $\pi_1C$ (a solid torus). Choose $k$ such that
-$\alpha^k$ is homotopic in $C$ to each $A_i$.
+We first take care of condition (1). For each spine $C$, let $k=d(C)$.  Let
+$A_1,\dots,A_n$ be the binding annuli on $C$. These annuli must be parallel.
+Notice that $\pi_1C$ is infinite cyclic, as its only torsion could come from
+the identification with the binding annuli, but we've assumed that these are
+$\pi_1$-injective. Now if $\alpha$ is a generator for the infinite cyclic group
+$\pi_1C$, $\alpha^k$ is generates each $\pi_1A_i \cin \pi_1C$. Fix a point $x_0
+\in C$, and apply Proposition~\ref{P:lerf3} to $\alpha$ and $k$ to obtain
+a finite-sheeted regular cover $M' \to M$..  For any spine $C'$ covering $C$,
+we claim that $C'$ has degree 1. Observe that $C'\to C$ has degree $d$ by
+construction, with $k \mid d$. Therefore $\alpha^d$, which lifts to traverse
+$C'$ exactly once, is a power of $\alpha^k$, the generator of each binding
+annulus. Hence each binding annulus has preimage a union of components, each of
+which traverses $C'$ exactly once. Hence $C'$ has degree 1.
 
-Since $M$ is admissible, $C \cin M$ is $\pi_1$-injective ($\alpha^k$, ie a page
-gluing annulus, can't be homotopically trivial in an attached page). So $\alpha$
-generates a cyclic subgroup of $\pi_1M$.
-
-$\pi_1M$ is LERF. Let $\phi_C \colon \pi_1M \to G_C$ be a map to a finite group
-such that $\phi_C(\alpha),\phi_C(\alpha^2),\dots,\phi_C(\alpha^{k-1}) \notin
-\phi_C(\langle\alpha^k\rangle)$.  We can do this by repeatedly applying LERF to
-get a map for $\phi_C(\alpha)$, a map for $\phi_C(\alpha^2)$, etc, and taking
-the product of all these maps. Let $\phi \colon \pi_1M \to G = \prod_C G_C$  be
-the product of all these maps.  Again, we elide changes of basepoint.  Let $\pi
-\colon M' \to M$ be the associated regular cover of $M$.
-
-We claim that $M'$ satisfies (1). The spines of $M'$ are precisely connected
-components of preimages of spines of $M$. Let $C'$ be such a spine upstairs,
-and $C=\pi(C')$ the associated spine downstairs. Let $\alpha$ be a generator
-for $\pi_1C$.  Recallthat in our construction above, we chose a value $k$
-associated to each $\alpha$. Let $d$ be the degree of the restricted cover $C'$
-to $C$. Note that $d$ may not be the degree of the cover $M' to M$, as
-$\pi^{-1}(C)$ may not be connected.  We claim that $k|d$.
-
-Suppose not. Then $d = m1k - m2$, for some $m1,m2 \in Z$, $0 < m2 < k$.
-Rearranging, $m2 = m1k - d$. Choose $x_0 \in \alpha$, and let $x_0'$ be a lift of
-$x_0$ inside $C'$. Since $C'$ to $C$ is a $d$-fold cover of a solid torus (with
-cyclic $\pi_1$), $\alpha^d$ lifts to $C'$ as a closed curve. That is,
-$\phi(\alpha^d)$ is trivial.  But this implies $\phi(\alpha^m2)
-= \phi(\alpha^m1k)\phi(\alpha^-d) = \phi(\alpha^m1k)$, contradicting our LERF
-assumption that $\phi_C(\alpha^m2) \notin \phi_C(\langle\alpha^k\rangle)$.
-
-So $k|d$. Write $d = m1k$. Then each gluing annulus will, when raised to the
-$m1$th power, lift to an embedded annulus which traverses the longitude $C'$
-exactly once.  By regularity of the cover this implies that the union of all
-lifts of these annuli is a union of embedded annuli traversing the longitude of
-$C'$ exactly once. Since this argument holds for any $C'$ upstairs and $C$
-downstairs, $M'$ satisfies (1).
-
-Note that any further finite-sheeted cover of $M'$ will also satisfy (1), by
-looking locally at the lifting of gluing annuli above each spine.
+We now produce a cover $M'$ that satisfies (1). Perform the above construction
+for each spine to produce generators $\alpha_1,\dots,\alpha_n$ and degrees
+$k_1,\dots,k_n$. Applying Proposition~\ref{P:lerf3'}, we can follow the above
+argument locally on each spine in $M'$ to show that it has degree 1.
 
 So now assume $M$ is reduced and satisfies (1). We claim $M$ has
 a finite-sheeted cover which satisfies (2).
 
 Let $B$ be a page intersecting a spine $C$ more than once. For each pair of
-gluing annuli $A_1$,$A_2$ which attach $B$ to $C$, we'll draw a closed curve as
-follows.  Fix a meridian disk $D$ of $C$. Choose an arbitrary point $x_1 \in
-A_1 \cap D$, $x_2 \in A_2 \cap D$. Choose an arbitrary arc $\beta \cin B$
-connecting $x_1$ and $x_2$.  Let $\gamma$ be the closed curve obtained by
-closing up $\beta$ with an arc along the interior of $D$.  Orient $\gamma$ so
-that it first traverses this arc through the interior of $D$, and then
-traverses $\beta$.  Fix $x_1$ to be our basepoint. Using LERF, choose a map
-$\phi_C,B,A_1,A_2$ such that $\phi_C,B,A_1,A_2(\gamma) \notin
-\phi_C,B,A_1,A_2(\pi_1B)$. Repeat this construction for each $A_1$,$A_2$ and
-each $B$,$C$ with multiple gluings. Let $\phi$ be the product of all these, and
-$M'$ the associated regular cover, just like above.  Same basepoint trickery as
-earlier.
+binding annuli $A_1$,$A_2$ which attach $B$ to $C$, we'll draw a closed curve
+as follows.  Fix a meridian disk $D$ of $C$. Choose an arbitrary point $x_1 \in
+A_1 \cap D$, $x_2 \in A_2 \cap D$. Choose an arbitrary arc $\alpha' \cin B$
+connecting $x_1$ and $x_2$.  Let $\alpha$ be the closed curve obtained by
+closing up $\alpha'$ with an arc along the interior of $D$. Denote this arc by
+$\alpha''$.
 
-We claim that $M'$ satisfies (2). Suppose not. Let $B'$ be a page upstairs
-glued to a spine $C'$ more than once. Then $B=\pi(B')$ is also a page,
-$C=\pi(C')$ is a spine.  Since $\pi$ is a cover. either the multiple gluings of
-$B'$ to $C'$ project down to the same gluing of $B$ to $C$, or there are
-multiple gluings of $B$ to $C$. The first case is impossible, as all the
-gluings to a spine in a book of $I$-bundles must be parallel, but $\pi|C'
-\colon C' to C$ is a covering map of solid tori and downstairs each gluing only
-wraps once around the longitude by (1). So there must be multiple gluings of
-$B$ to $C$.  Let $A_1$, $A_2$ be annuli, and $A_1'$,$A_2'$ the corresponding
-gluing annuli upstairs.  Fixing our basepoint $x_1 \in A_1$ as above, $x_1$ has
-a lift $x_1'$ in $A_1'$.  Lift $\gamma$ to an arc $\gamma' \cin A_1'$ starting
-at $x_1'$.  Now $\gamma'$ first traverses a lifted meridian disk across the
-spine, meaning it crosses over to $A_2'$. The remainder of $\gamma'$ is a lift
-of $\beta$ beginning at a point in $A_2'$, but $\beta$ is contained in the page
-$B$, so $\gamma'$ must remain inside the page $B'$ upstairs. So $\gamma'$ is an
-arc with both endpoints in $B'$.
+Fix $x_1$ to be our basepoint. We claim that alpha notin pi1B. alpha intersects
+each of the binding annuli A1 and A2 in a single point. Any homotopy of alpha
+to a curve in pi1B would have to homotope alpha'' rel boundary into B, but this
+is clearly impossible. So alpha notin pi1B. pi1B is finitely generated. Apply
+Proposition~\ref{P:lerf1} to alpha and B, obtaining a finite-sheeted cover.
 
-But $B'$ is a path connected component of $\pi^{-1}(B)$. So covering
-translations of $M'$ over $M$ which take $x_1'$ to other lifts of $x_1 \in B'$
-are precisely the group elements $\phi(\pi_1B)$, that is, lifts of loops inside
-$B$. But $\gamma$ lifts to an arc with both endpoints in $B'$, so
-$\phi(\gamma)$ is also such a covering translation.  Hence $\phi(\gamma) \in
-\phi(\pi_1B)$, a contradiction.
+Any lift of alpha to alpha' in this cover must connect two different components
+of p-1(B).  Any lift of alpha'' still lies on a meridian disk of a spine
+covering C, and connects binding annuli covering A1 and A2. But alpha' lifts to
+arcs inside p-1(B). So in order for a lift of alpha to connect two different
+components of pi-1(B), the lifts of alpha'' must have endpoints in different
+components of p-1(B).
 
-So we have a cover which satisfies (1) and (2). Since property (2) is also
-preserved under taking finite-sheeted covers, as discussed above with
-$A_1'$,$A_2'$ lying above $A_1$,$A_2$, it now suffices to show $M$ satisfying (1)
-and (2) has a finite-sheeted cover satisfying (3).
+We now construct a cover M' that satisfies (2). Repeat the above construction
+for each pair of binding annuli for each page with multiple attachments to
+a spine. This yields closed cuvres alpha1,dots,alphan and corresponding pages
+B1,dots,Bn. Note that there may be duplicates in this list of pages, but the
+argument remains the same. Apply Proposition~\ref{P:lerf1'}. By following the
+above argument locally, we see that any page upstairs with multiple gluings to
+the same spine would correspond to a lift of some alphai'' with endpoints in
+the same component of p-1(Bi), a contradiction.
+
+So we have a cover which satisfies (1) and (2). We now show that M satisfying
+(1) and (2) has a finite-sheeted cover satisfying (3).
 
 $M$ is orientable by definition, so each page must be orientable as well. So
 the pages which are not trivial $I$-bundles over oriented pages must be twisted
@@ -167,35 +139,35 @@ same boundary component of $M$ (since they're in the same boundary component
 even if we just look at that page). This explains why ensuring distinct
 boundary components for each fiber guarantees trivial $I$-bundles.
 
-Now we proceed by a similar argument as above. Let $B$ be a page such that
-fibers have both endpoints on the same boundary component $\bd_a M \cin \bd M$.
-Choose an arbitrary fiber $[0,1] isom I \cin B$. Let $\beta \cin \bd_a M$ be an arc
-in the boundary connecting the endpoints of $I$. This forms a curve $\gamma$.
-Fix one endpoint of $I$ to be our basepoint. Orient $\gamma$ so that from that
-basepoint, it first traverses $I$ and then $\beta$. Using LERF, choose a map
-$\phi_{\bd_aM,B} \colon \pi_1M to G$, where $G$ is a finite group, such that
-$\phi_{\bd_aM,B}(\gamma) \notin \phi_{\bd_aM,B}(\pi_1\bd_aM)$.  Note that $M$ has
-incompressible boundary, so $\pi_1\bd_aM$ embeds as a subgroup of $\pi_1M$. Also
-note that $\pi_1\bd_aM$ is finitely generated, as it's a compact surface.  As
-above, repeat this construction for each page where fibers have both endpoints
-on the same boundary component. Take the product $\phi \colon \pi_1M to G$
-(modifying by changes of basepoint as appropriate), and let $M'$ be the
-associated regular cover.
+This argument is very similar to (2). Let $B$ be a page such that fibers have
+both endpoints on the same boundary component $\bd_i M \cin \bd M$.  Choose
+a binding annulus $A$ in $\bd B$, and an arbitrary transversal $\alpha'' \cin
+A$.  Let $\alpha' \cin \bd_a M$ be an arc in the boundary connecting the
+endpoints of $\alpha''$. Such an $\alpha'$ must exist as the two endpoints are
+part of the same boundary component. $\alpha'$ and $\alpha''$ combine to form
+a closed curve $\alpha$.  Fix one endpoint of $\alpha'$ to be our basepoint.
+$\bd M$ is a compact surface, so $\pi_1 \bd_i M$ is finitely generated.
 
-We claim that $M'$ satisfies (3). Suppose not. Let $B'$ be a page with a fiber
-violating (3). Notice that all other fibers of $B'$ must also violate (3), as
-we can extend the boundary components locally between fibers.  Since boundary
-components of $M'$ cover boundary components of $M$, these fibers descend to
-fibers violating (3) in $B=\pi(B')$. So without loss of generality we can let
-$I' \cin B'$, a violating fiber, satisfy that $\pi(I')=I \cin B$ is one of the
-fibers we chose earlier in our construction.
+We claim that alpha notin pi1 bdiM. As above, any such homotopy would
+correspond to a homotopy rel boundary of alpha'' into bdiM. Since alpha'' is
+a transversal of the binding annulus A, such a homotopy would correspond to
+a boundary compression of A, which is impossible as A is boundary
+incompressible. Apply Proposition~\ref{P:lerf1} to alpha and bdiM, obtaining
+a finite-sheeted cover. By the same argument as in (2), alpha'' must lift to
+connect two different components of p-1(bdiM). Since bd M' = p-1(bd M), this
+shows that the pages covering B have fibers that connect two different boundary
+components. We can therefore construct $M'$ satisfying (3), by taking all such
+pages with both sides on the same boundary component and applying
+Proposition~\ref{P:lerf1'}.
 
-But now just like in our proof of (2), lift the corresponding basepoint $x_0$ to
-an endpoint of $I'$, call it $x_0'$, and lift $\gamma$ to $x_0'$. The resulting
-arc $\gamma'$ crosses $I'$ and then remains on the same boundary component of
-$M'$.  But this implies that the two endpoints of $\gamma'$ lie on the same
-boundary component of $M'$. Exactly like our argument in (2), this shows
-$\phi(\gamma) \in \phi(\pi_1\bd_aM)$, a contradiction. This completes the proof.
+So we have a cover which satisfies (1), (2), and (3). To satisfy (4), let
+alpha' be the core of a component of P cap B which has both endpoints in the
+same binding annulus A. Let alpha'' be a segment in bd A which connects the two
+endpoints of alpha'. Let alpha = alpha' cup alpha'' be the resulting closed
+curve. Since alpha' is essential, alpha notin pi1A. Apply
+Proposition~\ref{P:lerf1} to alpha and A, and follow the argument used in (2)
+and (3).  This proves that M has a cover satisfying (1)-(4), completing the
+proof.
 
 \end{proof}
 
