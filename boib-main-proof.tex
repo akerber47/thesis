@@ -524,17 +524,43 @@ We claim that $S$ satisfies the pared lifting criterion.
 Consider an arbitrary parabolic core curve alpha cin Fa cin bd M. We know by
 construction of Qa that the pared lifting pattern components of alpha in Qa
 form a union of arcs.  We claim that the pared lifting pattern components of
-alpha in Qb (b neq a) also form a union of arcs. In fact, we claim that these
-arcs can at most traverse a single page copy in the decomposition of Qb before
-they stop.
+alpha in Qb (b neq a) also form a union of arcs.
 
 Intuitively, this is because the only way to get a pattern component of alpha
-in a page in Qb is to have a page B such that B cap Fa and B cap Fb are both
-nonempty. That is, Fa and Fb contain the two sides of B. But then, at every
-spine adjacent to B, Fa and Fb will diverge, so the alpha pattern cannot
-continue in Qb (since it must extend to a cover of Fb).
+in a page in Qb is to have a page B such that Fa and Fb contain the two sides
+of B.  But then, at every spine adjacent to B, Fa and Fb will diverge, so the
+alpha pattern cannot continue in Qb (since it must extend to a cover of Fb).
 
-More precisely, 
+More precisely, suppose alpha' is a pattern component of alpha in a page
+component of the surface decomposition of Qb. Let B the corresponding page in
+M, and C a spine adjacent to B. Since alpha' cin Fa neq Fb, the only way to
+have alpha' components in a page component of Qb is to have Fa cap B and Fb cap
+B both be nonempty. That is, Fa contains one side of B, and Fb contains the
+other. Let A be the binding annulus between B and C.  Since C has valence at
+least 3, bd M cap C has at least 3 components, and more importantly, no two of
+the components have both boundaries on the same two binding annuli. This means
+that Fa cap C and Fb cap C may have one binding annulus A in common, but they
+cannot possibly have another in common. Since alpha cin Fa, it induces pattern
+components in Fa cap C, and any surface parallel to those. However, it cannot
+induce pattern components in a surface parallel to Fb cap C. Hence alpha'
+cannot connect to a pattern arc in any spine adjacent to B. This proves the
+claim.
+
+However, we also know that Qb has sparse defect. This means that if alpha' is
+contained in a component of B cap Qb, at least one endpoint of alpha' must be
+attached to a component of C cap Qb, where C is a spine adjacent to B. That is,
+the endpoints of alpha' cannot both be free to attach to the annuli we added in
+the finalstep. But alpha has no pattern components in C cap Qb, so this alpha'
+cannot possibly be part of a closed curve in the pared lifting pattern of S.
+
+This argument applies to any segment of the pared lifting pattern in any page
+component of the Qb. Hence any closed curve will have to intersect only Qa and
+the annuli added in the final step. But this is impossible, as the pared
+lifting pattern on annuli consists only of transverse arcs (as M is reduced),
+and by construction the pared lifting pattern on Qa consists only of arcs
+connecting different boundary components. Therefore S satisfies the pared
+lifting criterion, and S is (QF). This completes the proof.
+
 
 % d = lcm degree of subgp sep cover (lcm of degree on each page) After taking
 % copies of each subgp sep cover to ensure all are same degree: n = (large)
