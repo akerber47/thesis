@@ -15,9 +15,12 @@ new, these are known facts and standard arguments.
 
 % Also see Canary-McCullough for JSJ for pared 3-manifolds!!
 
-% NOTE NOTE these are the same arguments as I'm currently using in section
-% 6 for specific book of I-bundles topology facts!! Need to straighten that
-% out, avoid duplication, etc. Cite backwards to this section where needed.
+% NOTE NOTE these are the same arguments (or at least very very similar ones)
+% as I'm currently using in section 6 for specific book of I-bundles topology
+% facts!!  Need to straighten that out, avoid duplication, etc. Cite backwards
+% to this section where needed.
+%
+% Keep writing this, then fix section 6 to cite it...
 
 First, a simple proposition.
 
@@ -39,7 +42,30 @@ Intuitively, f is pi1-injective, so any loop where S crosses D is contractible
 in D, hence contractible in S. Then use irreducibility and an innermost disk
 argument.
 
+More precisely, we proceed as follows. First suppose f is not necessarily an
+embedding. Homotope f locally so it's transverse to D. D is compact and
+properly embedded, and S is compact, so f-1(D) is a properly embedded compact
+submanifold of S. That is, it's a union of finitely many disjoint simple closed
+curves alpha1,dots,alphak. For each alphai, f(alphai) cin D, so f(alphai) is
+homotopically trivial in M.  Since f is pi1-injective, each alphai must be
+homotopically trivial in S. Since S is a closed surface, this means each alphai
+bounds a disk in S. Choose an innermost such disk D' cin S, that is, D' is
+bounded by some alphai and doesn't contain any other alphaj in its interior.
 
+Now construct a map phi colon S2 to M as follows. The closed upper hemisphere
+is homeomorphic to D' cin S. Map it in along D'. Then the equator maps in along
+f(alpha), which is contractible, as it's in D. Choose the lower hemisphere of
+phi to correspond to such a contraction of f(alpha) within D. M is irreducible,
+hence aspherical, so phi must be homotopically trivial. Homotoping phi to
+a point and re-expanding, we can see that f|D' is homotopic to a map into D (ie
+corresponding to a contracting homotopy of alpha). Pushing f slightly away from
+D using a tubular neighborhood of D in M, we can eliminate the intersection
+curve f(alpha) between f(S) and D. Since this homotopy only affects
+a neighborhood of D' cin S, it cannot add any additional intersections or
+affect any of the other intersection curves. Repeating this process, we can
+eliminate all intersection curves by homotopy.
+
+In the embedded case, we use irreducibility to find embedded balls for isotopy. 
 
 end proof
 
