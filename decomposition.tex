@@ -1,18 +1,60 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Topological decomposition of pared 3-manifolds}
+\section{Decomposition of pared 3-manifolds}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Using the above propositions, we've reduced our question to a purely
-topological one. However, the topology of infinite volume hyperbolic
-3-manifolds may be quite complex. It is not clear how to find (QF) surfaces
-directly.
+In the geometrically finite case, we've reduced the quasi-Fuchsian surface
+subgroup question to a topological problem about pi1-injective maps of
+a surface into a pared 3-manifold. However, infinite volume hyperbolic
+3-manifolds may have quite complex topology, so it is not immediately clear how
+to find such surfaces in the resulting pared 3-manifolds. It is not clear how
+to find (QF) surfaces directly. Instead, we decompose the pared 3-manifold
+along disks and annuli. While the precise statements and proofs that follow are
+new, these are known facts and standard arguments.
 
-% TODO
-\textbf{ TODO maybe here I can discuss how Baker-Cooper or Masters-Zhang did it
-topologically for finite volume? Or even on how Cooper-Long-Reid solved the
-topological problem without parabolics. Seems like as good a place as any...}
+% See Jaco, Jaco-Shalen, Johannson, Canary-McCullough
 
-% TODO
+% Also see Canary-McCullough for JSJ for pared 3-manifolds!!
 
-\textbf{TODO finish this - Thurston decomp, acylindrical etc}
+% NOTE NOTE these are the same arguments as I'm currently using in section
+% 6 for specific book of I-bundles topology facts!! Need to straighten that
+% out, avoid duplication, etc. Cite backwards to this section where needed.
+
+First, a simple proposition.
+
+prop
+
+Let M be a compact orientable irreducible 3-manifold. Let f colon S to M be
+a pi1-injective map, where S is a closed surface.  Let D cin M be a compression
+disk for bd M.  That is, D is properly embedded, and bd D does not bound a disk
+in bd M.  Then f is homotopic to a map such that f(S) cap D = emptyset.  In
+fact, if f is an embedding, we can isotope f(S) away from D.  Given any finite
+collection of disjoint compression disks we can homotope (isotope) f away from
+all of them.
+
+end prop
+
+proof
+
+Intuitively, f is pi1-injective, so any loop where S crosses D is contractible
+in D, hence contractible in S. Then use irreducibility and an innermost disk
+argument.
+
+
+
+end proof
+
+We have a similar fact for the pared locus of a pared 3-manifold.
+
+prop
+
+Let (M,P) be a pared 3-manifold where M is compact orientable irreducible, and
+D cin M a compression disk for bd M. Then we can isotope P within bd M such
+that P cap bd D = emptyset. Given any finite collection of disjoint compression
+disks we can isotope P away from all of them.
+
+end prop
+
+proof
+
+
 
