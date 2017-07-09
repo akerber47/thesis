@@ -1,7 +1,92 @@
-{\tiny
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Statement of the general problem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We assume familiarity with standard terminology and results of 3-manifold
+topology and Kleinian groups.  For 3-manifold topology, see Hempel, Jaco,
+Schultens, Thurston, Thurston, Lackenby notes. For general hyperbolic geometry,
+see Ratcliffe, Benedetti-Petronio. And for Kleinian groups, see Maskit, Marden,
+Matsuzaki-Taniguchi, Thurston, Calegari notes, Kapovich.
+
+We first recall the following basic definitions.
+
+defn
+
+A \emph{surface group} is a group isomorphic to the fundamental group of
+a closed surface of negative Euler characteristic. Such a group can be written
+with the finite presentation
+
+pi1 Si g = <a1,b1,dots,ag,bg | a1b1a1-1b1-1 dots agbgag-1bg-1 = 1>
+
+where g >= 2.
+
+enddefn
+
+Note that surface groups are not free. The fundamental group of a compact
+surface with boundary of negative Euler characteristic is Si g,b is the free
+group on 2g + b - 1 generators. We wish to consider surface subgroups of
+Kleinian groups which are quasi-Fuchsian.
+
+defn
+
+A {quasi-Fuchsian group} is a Kleinian group Gamma < PSL2C for which there
+exists a quasi-conformal homeomorphism f colon S2infty to S2infty which
+conjugates Gamma to a Fuchsian group, that is, a discrete subgroup of PSL2R.
+
+enddefn
+
+As discussed in the introduction, our general problem statement is quite
+simple.
+
+begin prob
+
+Let Gamma be a Kleinian group of infinite covolume. Does Gamma contain
+a surface subgroup which is quasi-Fuchsian?
+
+end prob
+
+
+prop
+
+Let S be a compact surface (possibly with boundary), and phi colon pi1S to
+PSL2C be a discrete faithful representation. The following are equivalent.
+
+phi(pi1S) is quasi-Fuchsian.
+
+phi(pi1S) is geometrically finite, and the conjugates of peripheral subgroups
+of pi1S are precisely those elements of pi1S which are parabolic after applying
+phi.
+
+H3/phi(pi1S) has convex core homeomorphic to S times I.
+
+phi(pi1S) has limit set a Jordan curve, and no element of phi(pi1S)
+interchanges the complementary components.
+
+end prop
+
+proof
+
+See Morgan.% Proposition 9.2
+
+end proof
+
+As discussed in the introduction, we wish to identify quasi-Fuchsian surface
+groups --- that is, quasi-Fuchsian groups as above where S is a closed surface.
+Condition (2) above tells us that such a subgroup must be geometrically finite.
+Furthermore, it must not contain any parabolic elements at all. We can
+therefore state the general problem as follows.
+
+prob
+
+Let Gamma be a Kleinian group of infinite volume. Does Gamma contain a surface
+subgroup which is geometrically finite, and contains no parabolic elements?
+
+end prob
+
+We now discuss how to reduce this to a topological question.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Background on pared 3-manifolds and uniformization}
+\section{Uniformization and pared 3-manifolds}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Material in this section is from \cite{Mo} and \cite{CMc}. Look there for
@@ -16,8 +101,9 @@ further details.
 %(Morgan p58) (Canary-McCullough p87)
 \begin{defn}
 
-A \emph{pared manifold} $(M,P)$ is a compact orientable irreducible 3-manifold
-$M$, together with $P\cin\bd M$, such that the following conditions hold:
+A \emph{pared 3-manifold} $(M,P)$ is a compact orientable irreducible
+3-manifold $M$, together with a submanifold $P\cin\bd M$, such that the
+following conditions hold:
 
 \begin{enumerate}
 \item Every component of $P$ is a torus or annulus, incompressible in $M$.
@@ -25,13 +111,13 @@ $M$, together with $P\cin\bd M$, such that the following conditions hold:
 \item Every noncyclic abelian subgroup of $\pi_1M$ is peripheral with respect
 to $P$ -- ie, conjugate to the fundamental group of a component of $P$.
 
-\item $(M,P)$ is ``annulus-incompressible'': every $\pi_1$-injective map $(A^2,
+\item $(M,P)$ is ``$A^2$-incompressible'': every $\pi_1$-injective map $(A^2,
 \bd A^2) \to (M,P)$ is homotopic (as a map of pairs) to a map into $P$.
 
 \end{enumerate}
 
 We call $P$ the \emph{pared locus} or \emph{parabolic locus} of the pared
-manifold $(M,P)$.
+3-manifold $(M,P)$.
 
 \end{defn}
 
@@ -114,40 +200,14 @@ geometrically finite is equivalent to the standard one.
 
 \end{proof}
 
-% Example. Maybe? TODO
+See Canary-McCullough, Morgan, or Thurston for details and examples.
 
-\textbf{ TODO Include an example.}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Background on quasifuchsian surface groups}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-We study the problem of finding quasifuchsian surface subgroups of finitely
-generated Kleinian groups from the topological perspective. We convert our
-given Kleinian group to a pared 3-manifold, and look for surface subgroups of
-this Kleinian group that avoid the peripheral pared structure. We can reduce
-the problem of finding a quasifuchsian surface subgroup of a Kleinian group as
+We study the problem of reducing quasi-Fuchsian surface subgroups from the
+topological perspective.  We convert our given Kleinian group to a pared
+3-manifold, and look for surface subgroups of this fundamental group that avoid
+the peripheral subgroups associated to the pared structure. We can reduce the
+problem of finding a quasifuchsian surface subgroup of a Kleinian group as
 follows.
-
-We first recall the following basic definitions.
-
-defn
-
-A \emph{surface group} is (a group isomorphic to) the fundamental group of
-a closed surface of negative Euler characteristic.
-
-enddefn
-
-defn
-
-A {quasifuchsian group} is a Kleinian group Gamma < PSL2C for which there
-exists a quasiconformal homeomorphism f colon S2infty to S2infty which
-conjugates Gamma to a Fuchsian group, that is, a subgroup of PSL2R.
-
-enddefn
-
-% TODO
-\textbf{TODO perhaps I should elaborate on quasiconformal background a little.}
 
 First, suppose we have a geometrically finite Kleinian group. We use the
 following theorem of Thurston.
@@ -327,4 +387,3 @@ topological problem without parabolics. Seems like as good a place as any...}
 
 \textbf{TODO finish this - Thurston decomp, acylindrical etc}
 
-}
