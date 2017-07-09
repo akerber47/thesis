@@ -9,7 +9,7 @@ see Ratcliffe, Benedetti-Petronio. And for Kleinian groups, see Maskit, Marden,
 Matsuzaki-Taniguchi, Thurston, Calegari notes, Kapovich.
 
 All Kleinian groups in this paper are assumed to be finitely generated and
-torsion-free.
+torsion-free. Unless stated otherwise, all hyperbolic manifolds are complete.
 
 We first recall the following basic definitions.
 
@@ -110,7 +110,7 @@ subgroup is geometrically finite. We now discuss how to reduce these conditions
 to a purely topological conditions on S and f.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Pared 3-manifolds and Hyperbolization}
+\section{Pared 3-manifolds and hyperbolization}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Material in this section is from \cite{Mo} and \cite{CMc}. Look there for
@@ -159,122 +159,99 @@ I,\emptyset)$, or $(S3,\emptyset)$.
 
 \end{defn}
 
-Pared manifolds arise naturally in the study of Kleinian groups.  Intuitively,
-given a Kleinian group Gamma, the pared 3-manifold is a compact core, that is
-a compact submanifold M cin H3/Gamma with pi1M = Gamma. The pared locus P is
-the union of boundary components corresponding to cusps of H3/Gamma, that is,
-parabolic subgroups of Gamma (up to conjugacy). Reversing this correspondence
-uniformizes a pared 3-manifold, giving it a geometric structure where the
-desired boundary regions become cusps.
+Pared manifolds arise naturally in the study of Kleinian groups. Intuitively,
+given a geometrically finite Kleinian group Gamma, the pared 3-manifold is
+a compact core, that is a compact submanifold M cin H3/Gamma with pi1M = Gamma.
+The pared locus P is the union of boundary components corresponding to cusps of
+H3/Gamma, that is, parabolic subgroups of Gamma (up to conjugacy). Reversing
+this correspondence hyperbolizes a pared 3-manifold, giving it a geometrically
+finite geometric structure where the desired boundary regions become cusps.
 
-To be precise, given a Kleinian group $\Ga$, we construct a pared 3-manifold
-$(M,P)=(\cM(\Ga),\cP(\Ga))$ as follows.
+To be precise, given a geometrically finite Kleinian group $\Ga$, we construct
+a pared 3-manifold $(M,P)=(\cM(\Ga),\cP(\Ga))$ as follows.
 
-by truncating small neighborhoods of the cusps of the quotient manifold $M(G)
-= \left(\mathbb{H}^3\cup \Om(G)\right)/G$.  Then we let $M$ be the resulting
-compact manifold with boundary, and $P$ the boundary locus along which we
-truncated.  That is, we can rebuild the quotient manifold from $(M,P)$ by
-gluing cusp neighborhoods onto each component of $P$.  It follows from basic
-Kleinian group theory that the resulting $(M,P)$ will satisfy conditions 1-3
-above, making it a pared manifold.  The parabolic elements of $G$ precisely
-correspond to (conjugacy classes of) the peripheral subgroups $\pi_1P$ in
-$\pi_1M$.
+We know that the convex core C(Ga) cin H3/Ga has finite volume. For epsilon
+sufficiently small, The thick part C(Ga)[epsilon,infty) is compact, and the
+thin part C(Ga)(0,epsilon] is a union of small neighborhoods of the cusps.  As
+long as epsilon is sufficiently small, the exact choice of epsilon is
+arbitrary, as the resulting thick and thin parts are homeomorphic. Now let
+cM(Ga) = C(Ga)[epsilon,infty), and cP(Ga) = C(Ga)[epsilon] = bd
+C(Ga)[epsilon,infty) cap bd C(Ga)(0,epsilon]. That is, cP(Ga) is the boundary
+locus along which we truncated to remove the thin part. We can rebuild the
+convex core from cM(Ga),cP(Ga) by gluing cusp neighborhoods onto each component
+of cP(Ga).
 
-Conversely, Thurston's famous uniformization theorem states that for every
-pared manifold $(M,P)$ with $M$ Haken, there exists a finite volume (in
-particular, geometrically finite) hyperbolic 3-manifold structure on the
-interior satisfying the appropriate conditions for a pared 3-manifold! To be
-precise:
+prop
 
-%(see Morgan for details of this construction)
+(cM(Ga),cP(Ga)) is a pared 3-manifold. cM(Ga)- cP(Ga) is homeomorphic to the
+convex core of Ga, C(Ga). The parabolic elements of Ga precisely correspond to
+conjugates of the peripheral subgroups pi1cP(Ga) cin pi1cM(Ga).
 
-%(Morgan p60, but his statement is confusing / less modern definitions. He does
-%state the more general theorem for Haken pared manifolds though.)
-%(Canary-McCullough p105-106)
+end prop
 
-\begin{thm}
+proof
 
-If $(M,P)$ is an oriented pared 3-manifold with nonempty boundary, then
-there exists a geometrically finite uniformization of $(M,P)$, that is, a map
-$\rho: \pi_1M \to \mbox{\textrm{PSL}}_2\mathbb{C}$ such that $\rho(g)$ is
-parabolic if $g \in \pi_1(P)$, and an orientation-preserving homeomorphism $M-P
-\to \left(\mathbb{H}^3 \cup \Om(\rho(\pi_1M))\right)/\rho(\pi_1M)$.
+See Morgan % Corollary 6.10
 
-\end{thm}
-\begin{proof}
+end proof
 
-See \cite{CMc}.
-Also see discussion on (CMc p106, bottom of page) for why this definition of
-geometrically finite is equivalent to the standard one.
+We refer to (cM(Ga),cP(Ga)) as the \emph{pared 3-manifold associated to} Ga.
+Similarly, if N is a geometrically finite hyperbolic 3-manifold, we refer to
+(cM(pi1N),cP(pi1N)) as the \emph{pared 3-manifold associated to} N.
 
-\end{proof}
+Conversely, there is Thurston's famous hyperbolization theorem:
 
-See Canary-McCullough, Morgan, or Thurston for details and examples.
+thm
 
-We study the problem of reducing quasi-Fuchsian surface subgroups from the
-topological perspective.  We convert our given Kleinian group to a pared
-3-manifold, and look for surface subgroups of this fundamental group that avoid
-the peripheral subgroups associated to the pared structure. We can reduce the
-problem of finding a quasifuchsian surface subgroup of a Kleinian group as
-follows.
+Let $(M,P)$ be a pared 3-manifold with $M$ Haken. Then there exists
+a geometrically finite hyperbolic 3-manifold N such that cM(N),cP(N) is
+homeomorphic to M,P.
 
-First, suppose we have a geometrically finite Kleinian group. We use the
+end thm
+
+proof
+
+See Morgan or Thurston I-III.
+
+end proof
+
+For details and examples of pared 3-manifolds, see Canary-McCullough, Morgan,
+or Thurston (I and III? Maybe just I) for details and examples.
+
+We now return to our original problem. We can convert a given geometrically
+finite Kleinian group Ga to a pared 3-manifold M,P. Intuitively, since
+P corresponds to cusps, ie, parabolics, a surface subgroup of Ga avoids
+parabolic elements if and only if it avoids the peripheral subgroups associated
+to components of P.
+
+First, suppose we have a geometrically finite Kleinian group.  We use the
 following theorem of Thurston.
 
 thm
 
 Let N be a geometrically finite hyperbolic manifold with convex core C(N).
-Suppose that bd C(N) is nonempty. Then every covering space N' of N with
+Suppose that N has infinite volume. Then every covering space N' of N with
 finitely generated nonelementary fundamental group is also geometrically
-finite.
+finite. In fact, it suffices to assume N is geometrically finite and bd C(N) is
+nonempty.
+
+%In our case, we have a geometrically finite hyperbolic manifold of infinite
+%volume, so letting E be an (infinite volume) relative end, C(N) cap E must
+%yield a nonempty piece of bd C(N). This suffices to use the theorem.
 
 endthm
 
 proof
 
-See \cite{Mo}, Proposition 7.1.
+See \cite{Mo}. % Proposition 7.1.
 
 endproof
 
-In our case, we have a geometrically finite hyperbolic manifold of infinite
-volume, so letting E be an (infinite volume) relative end, C(N) cap E must
-yield a nonempty piece of bd C(N). This suffices to use the theorem.
+% This argument follows Morgan. Proposition 7.3
 
-% TODO
-\textbf{TODO this explanation is a bit vague. Might want to say more details
-about convex core etc.}
-
-We now apply the following result in \cite{Mo}, Corollary 9.2.
-
-thm
-
-Let S be a complete hyperbolic surface of finite area, and rho colon pi1S to
-PSL2C a discrete faithful representation. Then rho(pi1S) is quasifuchsian if
-and only if rho(pi1S) is geometrically finite, and the conjugacy classes in
-pi1S represented by cusps in S are exactly the conjugacy classes that are
-parabolic under rho.
-
-endthm
-% also look at (Ohshika Lemma 4.66 - cited in AFW p.81).  FIXME look up exact
-% statement in Ohshika. I have a feeling AFW are introducing some bs here...
-
-proof
-
-See \cite{Mo}.
-
-% WHY is this true? See Morgan Proposition 7.2, Corollary 7.3, and Proposition
-% 9.1 for some detailed arguments.
-
-endproof
-
-%TODO
-
-\textbf{TODO The following paragraph's "associated to" requires proof! Convex
-core cutting argument. See Morgan Corollary 6.10.}
-
-Now we argue as in \cite{Mo}, Corollary 7.3. Let (M,P) be a pared 3-manifold
-structure associated to the hyperbolic 3-manifold N. The only elements of pi1M
-which are parabolic are the conjugates of elements in pi1P.
+Let (M,P) be the pared 3-manifold structure associated to the hyperbolic
+3-manifold N. The only elements of pi1M which are parabolic are the conjugates
+of elements in pi1P0, where P0 is a component of P.
 
 Let Gamma' < pi1N be a surface subgroup which is quasifuchsian. Let N' be the
 cover of N associated to Gamma'. N' and hence its convex core C(N') have the
@@ -298,22 +275,32 @@ Furthermore rho(pi1S) is geometrically finite (by the first theorem), and S is
 a surface without cusps.  Applying the theorem, pi1S induces a quasifuchsian
 surface subgroup of pi1N.
 
-We summarize our discussion of the geometrically finite case as follows.
+We summarize our discussion of the geometrically finite (infinite volume) case
+as follows.
 
 prop
 
 Let N be a geometrically finite hyperbolic 3-manifold of infinite volume, and
-(M,P) a pared 3-manifold structure for N. Then quasifuchsian surface subgroups
-of N precisely correspond to pi1-injective maps of a closed surface S to M such
-that no loops in P are freely homotopic into the image of S.
-
-% FIXME need to mumble something about "up to homotopy" to make this a real
-% correspondence...
+(M,P) a pared 3-manifold structure for N. Then quasi-Fuchsian surface subgroups
+of pi1N precisely correspond to pi1-injective maps of a closed surface S to
+M such that no loops in P are freely homotopic to images of loops in S.
 
 endprop
 
-We will refer to surfaces in (M,P) which satisfy the proposition as
-\emph{quasifuchsian surfaces} or \emph{(QF) surfaces}.
+This allows us to reduce the main problem to the following:
+
+prob
+
+Let (M,P) be a pared 3-manifold (which has an infinite volume hyperbolization).
+Does there exist a closed surface S and a pi1-injective map f colon S to M such
+that no loops in P are freely homotopic to images of loops in S?
+
+end prob
+
+Similarly, we will refer to surfaces (S,f) which satisfy this condition for
+a pared 3-manifold (M,P) as \emph{quasi-Fuchsian surfaces} or \emph{(QF)
+surfaces}.  Again, by abuse of notation. We will simply refer to f(S) as (QF)
+if f and S are clear from context.
 
 We now briefly discuss the geometrically infinite case. Because the arguments
 that follow in later sections are purely topological arguments applied to the
@@ -355,8 +342,7 @@ incorporate in the following proposition. (b) holds precisely when our surface
 is freely homotopic to a finite-sheeted cover of the corresponding
 geometrically infinite end boundary surface. Since such an end is simply
 degenerate, that is, homeomorphic to a thickened surface, we can also apply the
-covering lemma (from a FUTURE SECTION WOOO) to obtain the following
-proposition.
+covering lemma (see \ref{L:covering}) to obtain the following proposition..
 
 prop
 
@@ -373,26 +359,6 @@ infinite end boundary surface.
 
 endprop
 
-\textbf{ TODO put some explanatory examples in here too! The Menasco-Reid
-article in Topology '90 should have some examples of surface groups that are
-not QF. Is it possible to do an example of uniformization? Maybe follow along
-Morgan's stuff? That sounds very long. }
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Topological decomposition of pared 3-manifolds}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Using the above propositions, we've reduced our question to a purely
-topological one. However, the topology of infinite volume hyperbolic
-3-manifolds may be quite complex. It is not clear how to find (QF) surfaces
-directly.
-
-% TODO
-\textbf{ TODO maybe here I can discuss how Baker-Cooper or Masters-Zhang did it
-topologically for finite volume? Or even on how Cooper-Long-Reid solved the
-topological problem without parabolics. Seems like as good a place as any...}
-
-% TODO
-
-\textbf{TODO finish this - Thurston decomp, acylindrical etc}
+We will not elaborate on the geometrically infinite ends case in this paper.
+However, analogous constructions should provide an effective proof.
 
