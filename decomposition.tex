@@ -72,11 +72,47 @@ prop
 
 Let (M,P) be a pared 3-manifold where M is compact orientable irreducible, and
 D cin M a compression disk for bd M. Then we can isotope P within bd M such
-that P cap bd D = emptyset. Given any finite collection of disjoint compression
-disks we can isotope P away from all of them.
+that P has minimal intersection with bd D. In this minimal intersection, torus
+components of P do not intersect D, and if we cut M along D, all the resulting
+rectangles obtained by cutting annulus components of P are essential. We can
+perform a similar operation for any finite collection of disjoint compression
+disks.
 
 end prop
 
 proof
 
+This is straightforward. Torus components of P cannot intersect bd D, as each
+torus component of P is precisely a torus component of bd M. This is because
+a torus cannot map pi1-injectively to any other genus surface, as it'd
+correspond to a rank 2 abelian subgroup. So if bd D intersects a torus
+component of P, it'd have to lie entirely inside it. Then D would be
+a compression disk for this torus component, violating pi1-injectivity.
 
+Now consider annulus components of P that lie on the boundary component F of
+M that contains bd D. It is sufficient to consider the core curves of these
+annuli, which are a disjoint set of simple closed curves in F. Our statement
+now follows from the elementary fact (about curves on surfaces) that we can put
+these in minimal position with respect to another simple closed curve, bd D,
+such that the intersection contains only essential arcs. Briefly, if there are
+inessential arcs, they cobound disks, so begin with the innermost disks and
+isotope to remove any inessential arcs. Again, we can repeat this process for
+any disjoint collection of compression disks. This completes the proof.
+
+end proof
+
+cor
+
+Let (M,P) be a pared 3-manifold, and f colon S to M a pi1-injective map of
+a closed surface. Suppose P0 is a component of P which has an essential
+intersection with a compression disk D. Then fstar(pi1S) does not intersect any
+conjugates of pi1P0, that is, P0 is not freely homotopic in M into any image of
+a loop in S.
+
+end cor
+
+proof
+
+Suppose not. 
+
+% Is this even true? uh oh
