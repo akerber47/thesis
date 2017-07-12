@@ -115,8 +115,8 @@ M".
 
 or
 
-(2) fstar(pi1S) does not intersect any conjugates of pi1P0, that is, P0 is not
-freely homotopic in M into any image of a loop in S.
+(2) fstar(pi1S) does not intersect any conjugates of pi1P0, that is, a multiple
+of P0 is not freely homotopic in M into any image of a loop in S.
 
 end cor
 
@@ -144,13 +144,34 @@ as the number of times t-1 appears.
 But in the HNN case, t does not appear in fstar(pi1S).  Similarly, in the free
 product case, words from only one of pi1M1 or pi1M2 appear in fstar(pi1S).
 Without loss of generality say it's pi1M1. That is, in order for (2) to be
-false, that is, for P0 to appear in fstar(pi1S), we must have sufficient
-cancellation in the element P0 to remove all powers of t, or all letters from
-pi1M2. We claim that (1) holds in this case.
+false, that is, for a multiple of P0 to appear in fstar(pi1S), we must have
+sufficient cancellation in the element P0 to remove all powers of t, or all
+letters from pi1M2. We claim that (1) holds in this case.
 
-
+To see this, observe that pi1M is a \emph{trivial} free product or HNN, so
+there are no added relations. The only way to produce an element in a subgroup
+is if all the in-between letters are in fact trivial. For each letter in the
+word that is trivial in its subgroup (pi1M1, pi1M2, or pi1M0), we have
+a basepointed closed curve in M, which corresponds to a contractible boundary
+arc in the original M (before deformation retract) with both endpoints on D.
+Connect the endpoints of this arc with a segment along bd D to produce a closed
+curve in bd M. This is homotopically trivial, by the above word argument.
+Therefore, by Dehn's lemma, it bounds a disk in M. Pushing P0 along this disk
+and slightly outside it moves it to a new position in bd M with fewer
+intersections with bd D. Using an innermost disk argument, we can do this
+isotopically to obtain (1).
 
 end proof
+
+Together these demonstrate that we can reduce our main problem when M admits
+boundary compressions. All closed pi1-injective surfaces can be made to avoid
+the compression disks, and all components of the pared structure can either be
+made to avoid the compression disks (case (1)) or are irrelevant because they
+cannot be homotoped into any closed pi1-injective surface (case (2)). We push
+the case (1) pared structure components away from the compression disks and
+discard the case (2) components. The resulting (possibly disconnected)
+incompressible pared manifold contains a (QF) surface if and only if the
+original does.
 
 Therefore we can reduce to the case where M is a pared 3-manifold (compact
 orientable irreducible) with incompressible boundary. However, in order to
