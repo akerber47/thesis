@@ -204,7 +204,7 @@ subgroups associated to each component of $\cP(\Ga)$).
 
 \begin{proof}
 
-See Morgan % Corollary 6.10
+See Morgan. % Corollary 6.10
 
 \end{proof}
 
@@ -234,88 +234,90 @@ For details and examples of pared 3-manifolds, see Canary-McCullough, Morgan,
 or Thurston (I and III? Maybe just I) for details and examples.
 
 We now return to our original problem. We can convert a given geometrically
-finite Kleinian group Ga to a pared 3-manifold M,P. Intuitively, since
-P corresponds to cusps, ie, parabolics, a surface subgroup of Ga avoids
+finite Kleinian group $\Ga$ to a pared 3-manifold $(M,P)$. Intuitively, since
+$P$ corresponds to cusps, ie, parabolics, a surface subgroup of $\Ga$ avoids
 parabolic elements if and only if it avoids the peripheral subgroups associated
-to components of P.
+to components of $P$.
 
 First, suppose we have a geometrically finite Kleinian group.  We use the
 following theorem of Thurston.
 
-thm
+\begin{thm}
 
-Let N be a geometrically finite hyperbolic manifold with convex core C(N).
-Suppose that N has infinite volume. Then every covering space N' of N with
-finitely generated nonelementary fundamental group is also geometrically
-finite. In fact, it suffices to assume N is geometrically finite and bd C(N) is
-nonempty.
+Let $N$ be a geometrically finite hyperbolic manifold with convex core $C(N)$.
+Suppose that $N$ has infinite volume. Then every covering space $N'$ of $N$
+with finitely generated nonelementary fundamental group is also geometrically
+finite. In fact, it suffices to assume $N$ is geometrically finite and $\bd
+C(N)$ is nonempty.
 
 %In our case, we have a geometrically finite hyperbolic manifold of infinite
 %volume, so letting E be an (infinite volume) relative end, C(N) cap E must
 %yield a nonempty piece of bd C(N). This suffices to use the theorem.
 
-endthm
+\end{thm}
 
-proof
+\begin{proof}
 
 See \cite{Mo}. % Proposition 7.1.
 
-endproof
+\end{proof}
 
-% This argument follows Morgan. Proposition 7.3
+% This argument (the next few paragraphs) follows Morgan. Proposition 7.3
 
-Let (M,P) be the pared 3-manifold structure associated to the hyperbolic
-3-manifold N. The only elements of \pi_1M which are parabolic are the conjugates
-of elements in \pi_1P0, where P0 is a component of P.
+Let $(M,P)$ be the pared 3-manifold structure associated to the hyperbolic
+3-manifold $N$. The only elements of $\pi_1M$ which are parabolic are the
+conjugates of elements in $\pi_1P_0$, where $P_0$ is a component of $P$.
 
-Let \Ga' < \pi_1N be a surface subgroup which is quasifuchsian. Let N' be the
-cover of N associated to \Ga'. N' and hence its convex core C(N') have the
-fundamental group of a closed surface. In fact, because \Ga' is
-quasifuchsian, we know that the convex core C(N') is homeomorphic to S times I,
-where S is a closed surface such that \pi_1S = \Ga'.\cite{Mo}, same Corollary.
-Map S to S times 1/2 cin times I. This map is an isomorphism on \pi_1. Composing
-this with the covering map N' to N, we obtain a $\pi_1$-injective map phi \colon
-S to N.  This corresponds to a $\pi_1$-injective map to (M,P) by retracting.
-Applying the theorem above, no element of \Ga'=phi(\pi_1S) is parabolic.
-Because (M,P) is a pared structure for N, this implies that no loop in S is
-freely homotopic to a loop in P.
+Let $\Ga' < \pi_1N$ be a surface subgroup which is quasi-Fuchsian. Let $N'$ be
+the cover of $N$ associated to $\Ga'$. $N'$ and hence its convex core $C(N')$
+have the fundamental group of a closed surface. In fact, because $\Ga'$ is
+quasi-Fuchsian, we know that the convex core $C(N')$ is homeomorphic to $S
+\times I$, where $S$ is a closed surface such that $\pi_1S = \Ga'$.  Map $S \to
+S \times \{1/2\} \cin S \times I$. This map is an isomorphism on $\pi_1$.
+Composing this with the covering map $N' \to N$, we obtain a $\pi_1$-injective
+map $\phi \colon S \to N$.  This corresponds to a $\pi_1$-injective map to
+$(M,P)$ by retracting.  Applying the theorem above, no element of
+$\Ga'=\phi(\pi_1S)$ is parabolic.  Because $(M,P)$ is a pared structure for
+$N$, this implies that no loop in $S$ is freely homotopic to a loop in $P$.
 
-Conversely, suppose we are given a closed $\pi_1$-injective surface
-S looprightarrow M.  Suppose further that no loop in S is freely homotopic to
-a loop in P. This implies that the induced subgroup \pi_1S < \pi_1M is disjoint
-from all conjugates of \pi_1P. Because (M,P) is a pared structure for the
-hyperbolic 3-manifold N, this implies that no elements of \pi_1S are parabolic
-under the representation rho \colon \pi_1S to PSL2C induced by \pi_1S < \pi_1M=\pi_1N.
-Furthermore rho(\pi_1S) is geometrically finite (by the first theorem), and S is
-a surface without cusps.  Applying the theorem, \pi_1S induces a quasifuchsian
-surface subgroup of \pi_1N.
+Conversely, suppose we are given a $\pi_1$-injective map $S \to M$ where $S$ is
+a closed surface.  Suppose further that no loop in $S$ is freely homotopic to
+a loop in $P$.  This implies that the induced subgroup $\pi_1S < \pi_1M$ is
+disjoint from all conjugates of $\pi_1P$.  Because $(M,P)$ is a pared structure
+for the hyperbolic 3-manifold $N$, this implies that no elements of $\pi_1S$
+are parabolic under the representation $\rho \colon \pi_1S \to PSL2C$ induced
+by $\pi_1S < \pi_1M=\pi_1N$.  Furthermore $\rho(\pi_1S)$ is geometrically
+finite (by the first theorem), and $S$ is a surface without cusps.  Applying
+the theorem, $\pi_1S$ induces a quasi-Fuchsian surface subgroup of $\pi_1N$.
 
 We summarize our discussion of the geometrically finite (infinite volume) case
 as follows.
 
-prop
+\begin{prop}
 
-Let N be a geometrically finite hyperbolic 3-manifold of infinite volume, and
-(M,P) a pared 3-manifold structure for N. Then quasi-Fuchsian surface subgroups
-of \pi_1N precisely correspond to $\pi_1$-injective maps of a closed surface S to
-M such that no loops in P are freely homotopic to images of loops in S.
+Let $N$ be a geometrically finite hyperbolic 3-manifold of infinite volume, and
+$(M,P)$ a pared 3-manifold structure for $N$. Then quasi-Fuchsian surface
+subgroups of $\pi_1N$ precisely correspond to $\pi_1$-injective maps of
+a closed surface $S \to M$ such that no loops in $P$ are freely homotopic to
+images of loops in $S$.
 
-endprop
+\end{prop}
 
 This allows us to reduce the main problem to the following:
 
-prob
+\begin{prob}
 
-Let (M,P) be a pared 3-manifold (which has an infinite volume hyperbolization).
-Does there exist a closed surface S and a $\pi_1$-injective map f \colon S to M such
-that no loops in P are freely homotopic to images of loops in S?
+Let $(M,P)$ be a pared 3-manifold (which has an infinite volume
+hyperbolization).  Does there exist a closed surface $S$ and
+a $\pi_1$-injective map $f \colon S \to M$ such that no loops in $P$ are freely
+homotopic to images of loops in $S$?
 
-end prob
+\end{prob}
 
-Similarly, we will refer to surfaces (S,f) which satisfy this condition for
-a pared 3-manifold (M,P) as \emph{quasi-Fuchsian surfaces} or \emph{(QF)
-surfaces}.  Again, by abuse of notation. We will simply refer to f(S) as (QF)
-if f and S are clear from context.
+Similarly, we will refer to surfaces $(S,f)$ which satisfy this condition for
+a pared 3-manifold $(M,P)$ as \emph{quasi-Fuchsian surfaces} or \emph{(QF)
+surfaces}.  Again, by abuse of notation. We will simply refer to $f(S)$ as (QF)
+if $f$ and $S$ are clear from context.
 
 We now briefly discuss the geometrically infinite case. Because the arguments
 that follow in later sections are purely topological arguments applied to the
@@ -326,54 +328,69 @@ would like to be able to address the geometrically infinite case also.
 First note that any finitely generated Kleinian group, whether geometrically
 finite or geometrically infinite, is \emph{tame}, that is, homeomorphic to the
 interior of a compact 3-manifold. This is a deep result due to Agol and
-Calegari-Gabai.
+Calegari-Gabai. % TODO cite
 
 We begin with the following theorem of Canary.
 
-thm
+\begin{thm}
 
-Let N = H3/\Ga be an infinite volume tame hyperbolic 3-manifold, and let
-\Ga' < \Ga be a finitely generated subgroup. Then either
+Let $N = \bH^3/\Ga$ be an infinite volume tame hyperbolic 3-manifold, and let
+$\Ga' < \Ga$ be a finitely generated subgroup. Then either
 
-(a) N' = H3 / \Ga' is geometrically finite, or
+\begin{enumerate}
 
-(b) \Ga' contains a (conjugate of a) finite index subgroup of a geometrically
-infinite peripheral subgroup of \Ga
+\item $N' = \bH^3 / \Ga'$ is geometrically finite, or
 
-where a \emph{geometrically infinite peripheral subgroup} is a subgroup
+\item $\Ga'$ contains a (conjugate of a) finite index subgroup of
+a geometrically infinite peripheral subgroup of $\Ga$.
+
+\end{enumerate}
+
+Above, a \emph{geometrically infinite peripheral subgroup} is a subgroup
 corresponding to the subsurface of a relative compact core boundary which cuts
 off a geometrically infinite relative end of N. Equivalently, since all
 geometrically infinite ends of tame manifolds are simply degenerate,
 a geometrically infinite peripheral subgroup is the subgroup associated to the
-boundary in the interior of N of a geometrically infinite end.
+boundary in the interior of $N$ of a geometrically infinite end.
 
-endthm
+\end{thm}
+
+\begin{proof}
+
+Canary? Or some summary thereof... %cite
+
+\end{proof}
 
 The above proposition in the geometrically finite case still works in the
 forward direction. The reverse direction will carry through if we can show that
-N' (ie \Ga') is geometrically finite. That is, we want to avoid condition (b)
-in Canary's theorem above. This requires an additional condition, which we
-incorporate in the following proposition. (b) holds precisely when our surface
+$N'$ (ie $\Ga'$) is geometrically finite. That is, we want to avoid condition
+(2) in Canary's theorem above. This requires an additional condition, which we
+incorporate in the following proposition. (2) holds precisely when our surface
 is freely homotopic to a finite-sheeted cover of the corresponding
 geometrically infinite end boundary surface. Since such an end is simply
 degenerate, that is, homeomorphic to a thickened surface, we can also apply the
-covering lemma (see \ref{L:covering}) to obtain the following proposition..
+covering lemma (see \ref{L:covering}) to obtain the following proposition.
 
-prop
+\begin{prop}
 
-Let N be a hyperbolic 3-manifold of infinite volume, possibly geometrically
-infinite, and (M,P) a pared 3-manifold structure for N. Then quasifuchsian
-surface subgroups of N precisely correspond to $\pi_1$-injective maps of a closed
-surface S to M such that
+Let $N$ be a hyperbolic 3-manifold of infinite volume, possibly geometrically
+infinite, and $(M,P)$ a pared 3-manifold structure for $N$. Then quasifuchsian
+surface subgroups of $N$ precisely correspond to $\pi_1$-injective maps of
+a closed surface $S \to M$ such that the following conditions hold.
 
-(1) no loops in P are freely homotopic into the image of S, and
+\begin{enumerate}
 
-(2) S is not freely homotopic into a geometrically infinite end of M, or,
+\item No loops in $P$ are freely homotopic to images of loops in $S$.
+
+\item $S$ is not freely homotopic into a geometrically infinite end of $M$, or,
 equivalently, not freely homotopic to a finite-sheeted cover of a geometrically
 infinite end boundary surface.
 
-endprop
+\end{enumerate}
+
+\end{prop}
 
 We will not elaborate on the geometrically infinite ends case in this paper.
-However, analogous constructions should provide an effective proof.
+However, analogous constructions should provide a proof of results similar to
+our main result.
 
