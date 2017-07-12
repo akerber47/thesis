@@ -101,23 +101,23 @@ We can therefore re-state our general problem as follows.
 
 \begin{prob}
 
-Let N be an infinite volume hyperbolic 3-manifold. That is, \pi_1N is a Kleinian
-group of infinite covolume. Does there exist a $\pi_1$-injective map f \colon S to
-N, where S is a closed surface, such that fstar(\pi_1S) is geometrically finite
-and contains no parabolic elements?
+Let $N$ be an infinite volume hyperbolic 3-manifold. That is, $\pi_1N$ is
+a Kleinian group of infinite covolume. Does there exist a $\pi_1$-injective map
+$f \colon S \to N$, where $S$ is a closed surface, such that $f_\star(\pi_1S)$
+is geometrically finite and contains no parabolic elements?
 
-end prob
+\end{prob}
 
-In the remainder of this paper, we'll refer to surface maps (S,f) which satisfy
-the problem condition as \emph{quasi-Fuchsian surfaces} or \emph{(QF)
-surfaces}. By abuse of notation, we'll often simply refer to the image f(S) as
-a (QF) surface if the choice of S and f is clear.
+In the remainder of this paper, we'll refer to surface maps $(S,f)$ which
+satisfy the problem condition as \emph{quasi-Fuchsian surfaces} or \emph{(QF)
+surfaces}. By abuse of notation, we'll often simply refer to the image $f(S)$
+as a (QF) surface if the choice of $S$ and $f$ is clear.
 
 However, even though we are now looking for a topological surface map, solving
-this question as written still requires knowledge of the geometry of N. We need
-to know which elements of \pi_1N are parabolic, and whether or not a given
-subgroup is geometrically finite. We now discuss how to reduce these conditions
-to a purely topological conditions on S and f.
+this question as written still requires knowledge of the geometry of $N$. We
+need to know which elements of $\pi_1N$ are parabolic, and whether or not
+a given subgroup is geometrically finite. We now discuss how to reduce these
+conditions to a purely topological conditions on $S$ and $f$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Pared 3-manifolds and hyperbolization}
@@ -170,60 +170,65 @@ I,\emptyset)$, or $(S3,\emptyset)$.
 \end{defn}
 
 Pared manifolds arise naturally in the study of Kleinian groups. Intuitively,
-given a geometrically finite Kleinian group \Ga, the pared 3-manifold is
-a compact core, that is a compact submanifold M cin H3/\Ga with \pi_1M = \Ga.
-The pared locus P is the union of boundary components corresponding to cusps of
-H3/\Ga, that is, parabolic subgroups of \Ga (up to conjugacy). Reversing
-this correspondence hyperbolizes a pared 3-manifold, giving it a geometrically
-finite geometric structure where the desired boundary regions become cusps.
+given a geometrically finite Kleinian group $\Ga$, the pared 3-manifold is
+a compact core, that is a compact submanifold $M \cin \bH^3/\Ga$ with $\pi_1M
+= \Ga$.  The pared locus $P$ is the union of boundary components corresponding
+to cusps of $\bH^3/\Ga$, that is, parabolic subgroups of $\Ga$ (up to
+conjugacy).  Reversing this correspondence hyperbolizes a pared 3-manifold,
+giving it a geometrically finite geometric structure where the desired boundary
+regions become cusps.
 
 To be precise, given a geometrically finite Kleinian group $\Ga$, we construct
 a pared 3-manifold $(M,P)=(\cM(\Ga),\cP(\Ga))$ as follows.
 
-We know that the convex core C(Ga) cin H3/Ga has finite volume. For epsilon
-sufficiently small, The thick part C(Ga)[epsilon,infty) is compact, and the
-thin part C(Ga)(0,epsilon] is a union of small neighborhoods of the cusps.  As
-long as epsilon is sufficiently small, the exact choice of epsilon is
-arbitrary, as the resulting thick and thin parts are homeomorphic. Now let
-cM(Ga) = C(Ga)[epsilon,infty), and cP(Ga) = C(Ga)[epsilon] = bd
-C(Ga)[epsilon,infty) cap bd C(Ga)(0,epsilon]. That is, cP(Ga) is the boundary
-locus along which we truncated to remove the thin part. We can rebuild the
-convex core from cM(Ga),cP(Ga) by gluing cusp neighborhoods onto each component
-of cP(Ga).
+We know that the convex core $C(\Ga) \cin \bH^3/\Ga$ has finite volume. For
+epsilon sufficiently small, The thick part $C(\Ga)[\epsilon,\infty)$ is
+compact, and the thin part $C(\Ga)(0,\epsilon]$ is a union of small
+neighborhoods of the cusps.  As long as epsilon is sufficiently small, the
+exact choice of $\epsilon$ is arbitrary, as the resulting thick and thin parts
+are homeomorphic.  Now let $\cM(\Ga) = C(\Ga)[\epsilon,\infty)$, and $\cP(\Ga)
+= C(\Ga)[\epsilon] = \bd C(\Ga)[\epsilon,\infty) \cap \bd C(\Ga)(0,\epsilon]$.
+That is, $\cP(\Ga)$ is the boundary locus along which we truncated to remove
+the thin part. We can rebuild the convex core from $(\cM(\Ga),\cP(\Ga))$ by
+gluing cusp neighborhoods onto each component of $\cP(\Ga)$.
 
-prop
+\begin{prop}
 
-(cM(Ga),cP(Ga)) is a pared 3-manifold. cM(Ga)- cP(Ga) is homeomorphic to the
-convex core of Ga, C(Ga). The parabolic elements of Ga precisely correspond to
-conjugates of the peripheral subgroups \pi_1cP(Ga) cin \pi_1cM(Ga).
+$(\cM(\Ga),\cP(\Ga))$ is a pared 3-manifold. $\cM(\Ga)- \cP(\Ga)$ is
+homeomorphic to the convex core of $\Ga$, $C(\Ga)$. The parabolic elements of
+$\Ga$ precisely correspond to conjugates of the peripheral subgroups
+$\pi_1\cP(\Ga) \cin \pi_1\cM(\Ga)$ (really, the conjugates of the peripheral
+subgroups associated to each component of $\cP(\Ga)$).
 
-end prop
+\end{prop}
 
-proof
+\begin{proof}
 
 See Morgan % Corollary 6.10
 
-end proof
+\end{proof}
 
-We refer to (cM(Ga),cP(Ga)) as the \emph{pared 3-manifold associated to} Ga.
-Similarly, if N is a geometrically finite hyperbolic 3-manifold, we refer to
-(cM(\pi_1N),cP(\pi_1N)) as the \emph{pared 3-manifold associated to} N.
+We refer to $(\cM(\Ga),\cP(\Ga))$ as the \emph{pared 3-manifold associated to}
+$\Ga$.  Similarly, if $N$ is a geometrically finite hyperbolic 3-manifold, we
+refer to $(\cM(\pi_1N),\cP(\pi_1N))$ as the \emph{pared 3-manifold associated
+to} $N$.
 
 Conversely, there is Thurston's famous hyperbolization theorem:
 
-thm
+\begin{thm}
 
 Let $(M,P)$ be a pared 3-manifold with $M$ Haken. Then there exists
-a geometrically finite hyperbolic 3-manifold N such that cM(N),cP(N) is
-homeomorphic to M,P.
+a geometrically finite hyperbolic 3-manifold $N$ such that
+$\cM(\pi_1N),\cP(\pi_1N)$ is homeomorphic to $(M,P)$.
 
-end thm
+\end{thm}
 
-proof
+\begin{proof}
 
-See Morgan or Thurston I-III.
+See Morgan or Kapovich for a broad overview. Thurston I-III contains key
+details of the argument.
 
-end proof
+\end{proof}
 
 For details and examples of pared 3-manifolds, see Canary-McCullough, Morgan,
 or Thurston (I and III? Maybe just I) for details and examples.
