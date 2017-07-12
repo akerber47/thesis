@@ -13,87 +13,97 @@ torsion-free. Unless stated otherwise, all hyperbolic manifolds are complete.
 
 We first recall the following basic definitions.
 
-defn
+\begin{defn}
 
 A \emph{surface group} is a group isomorphic to the fundamental group of
 a closed surface of negative Euler characteristic. Such a group can be written
 with the finite presentation
 
-pi1 Si g = <a1,b1,dots,ag,bg | a1b1a1-1b1-1 dots agbgag-1bg-1 = 1>
+$\pi_1 \Si_g = \langle a_1,b_1,\dots,a_g,b_g | a_1b_1a_1^{-1}b_1^{-1} \dots
+a_gb_ga_g^{-1}b_g^{-1} = 1\rangle$
 
-where g >= 2.
+where $g >= 2$.
 
-enddefn
+\end{defn}
 
 Note that surface groups are not free. The fundamental group of a compact
-surface with boundary of negative Euler characteristic is Si g,b is the free
-group on 2g + b - 1 generators. We wish to consider surface subgroups of
+surface with boundary of negative Euler characteristic is $\Si_{g,b}$ is the
+free group on $2g + b - 1$ generators. We wish to consider surface subgroups of
 Kleinian groups which are quasi-Fuchsian.
 
-defn
+\begin{defn}
 
-A {quasi-Fuchsian group} is a Kleinian group Gamma < PSL2C for which there
-exists a quasi-conformal homeomorphism f colon S2infty to S2infty which
-conjugates Gamma to a Fuchsian group, that is, a discrete subgroup of PSL2R.
+A {quasi-Fuchsian group} is a Kleinian group $\Ga < PSL2C$ for which there
+exists a quasi-conformal homeomorphism $f \colon S^2_\infty \to S^2_\infty$
+which conjugates $\Ga$ to a Fuchsian group, that is, a discrete subgroup of
+$PSL2R$.
 
-enddefn
+\end{defn}
 
 As discussed in the introduction, our general problem statement is quite
 simple.
 
-begin prob
+\begin{prob}
 
-Let Gamma be a Kleinian group of infinite covolume. Does Gamma contain
+Let $\Ga$ be a Kleinian group of infinite covolume. Does $\Ga$ contain
 a surface subgroup which is quasi-Fuchsian?
 
-end prob
+\end{prob}
 
+We know that being quasi-Fuchsian is equivalent to a few other conditions.
+These will be the conditions we actually use in this paper.
 
-prop
+\begin{prop}
 
-Let S be a compact surface (possibly with boundary), and phi colon pi1S to
-PSL2C be a discrete faithful representation. The following are equivalent.
+Let $S$ be a compact surface (possibly with boundary), and $\phi \colon \pi_1S
+\to PSL2C$ be a discrete faithful representation. The following are equivalent.
 
-phi(pi1S) is quasi-Fuchsian.
+\begin{enumerate}
 
-phi(pi1S) is geometrically finite, and the conjugates of peripheral subgroups
-of pi1S are precisely those elements of pi1S which are parabolic after applying
-phi.
+\item $\phi(\pi_1S)$ is quasi-Fuchsian.
 
-H3/phi(pi1S) has convex core homeomorphic to S times I.
+\item $\phi(\pi_1S)$ is geometrically finite, and the conjugates of peripheral
+subgroups of $\pi_1S$ are precisely those elements of $\pi_1S$ which are
+parabolic after applying $\phi$.
 
-phi(pi1S) has limit set a Jordan curve, and no element of phi(pi1S)
+\item $\bH^3/\phi(\pi_1S)$ has convex core homeomorphic to $S \times I$.
+
+$\phi(\pi_1S)$ has limit set a Jordan curve, and no element of $\phi(\pi_1S)$
 interchanges the complementary components.
 
-end prop
+\end{enumerate}
 
-proof
+\end{prop}
+
+\begin{proof}
 
 See Morgan.% Proposition 9.2
 
-end proof
+\end{proof}
 
 As discussed in the introduction, we wish to identify quasi-Fuchsian surface
-groups --- that is, quasi-Fuchsian groups as above where S is a closed surface.
-Condition (2) above tells us that such a subgroup must be geometrically finite.
-Furthermore, it must not contain any parabolic elements at all.
+groups --- that is, quasi-Fuchsian groups as above where $S$ is a closed
+surface.  Condition (2) above tells us that such a subgroup must be
+geometrically finite.  Furthermore, it must not contain any parabolic elements
+at all.
 
 We now make another observation. By condition (3), any quasi-Fuchsian surface
-group phi(pi1S) will contain an embedded copy of the surface S inside its
-convex core.  This embedding i colon S hookto H3/phi(pi1S) is an isomorphism on
-pi1.  Given a Kleinian group Ga, a quasi-Fuchsian surface subgroup phi(pi1S)
-< Ga corresponds to a covering map p colon H3/phi(pi1S) to H3/Ga. This map is
-pi1-injective.  Projecting i(S) downward into H3/Ga, we obtain a closed surface
-p(i(S)). p circ i colon S to H3/Ga is pi1-injective. In fact, (p circ
-i)star(pi1S))) = phi(pi1S).
+group $\phi(\pi_1S)$ will contain an embedded copy of the surface $S$ inside
+its convex core.  This embedding $i \colon S \to \bH^3/\phi(\pi_1S)$ is an
+isomorphism on $\pi_1$.  Given a Kleinian group $\Ga$, a quasi-Fuchsian surface
+subgroup $\phi(\pi_1S) < \Ga$ corresponds to a covering map $p \colon
+\bH^3/\phi(\pi_1S) \to \bH^3/\Ga$. This map is $\pi_1$-injective.  Projecting
+$i(S)$ downward into $\bH^3/\Ga$, we obtain a closed surface $p(i(S))$. $p
+\circ i \colon S to \bH^3/\Ga$ is $\pi_1$-injective. In fact, $(p \circ
+i)_\star(\pi_1S))) = \phi(\pi_1S)$.
 
 We can therefore re-state our general problem as follows.
 
-prob
+\begin{prob}
 
-Let N be an infinite volume hyperbolic 3-manifold. That is, pi1N is a Kleinian
-group of infinite covolume. Does there exist a pi1-injective map f colon S to
-N, where S is a closed surface, such that fstar(pi1S) is geometrically finite
+Let N be an infinite volume hyperbolic 3-manifold. That is, \pi_1N is a Kleinian
+group of infinite covolume. Does there exist a $\pi_1$-injective map f \colon S to
+N, where S is a closed surface, such that fstar(\pi_1S) is geometrically finite
 and contains no parabolic elements?
 
 end prob
@@ -105,7 +115,7 @@ a (QF) surface if the choice of S and f is clear.
 
 However, even though we are now looking for a topological surface map, solving
 this question as written still requires knowledge of the geometry of N. We need
-to know which elements of pi1N are parabolic, and whether or not a given
+to know which elements of \pi_1N are parabolic, and whether or not a given
 subgroup is geometrically finite. We now discuss how to reduce these conditions
 to a purely topological conditions on S and f.
 
@@ -160,10 +170,10 @@ I,\emptyset)$, or $(S3,\emptyset)$.
 \end{defn}
 
 Pared manifolds arise naturally in the study of Kleinian groups. Intuitively,
-given a geometrically finite Kleinian group Gamma, the pared 3-manifold is
-a compact core, that is a compact submanifold M cin H3/Gamma with pi1M = Gamma.
+given a geometrically finite Kleinian group \Ga, the pared 3-manifold is
+a compact core, that is a compact submanifold M cin H3/\Ga with \pi_1M = \Ga.
 The pared locus P is the union of boundary components corresponding to cusps of
-H3/Gamma, that is, parabolic subgroups of Gamma (up to conjugacy). Reversing
+H3/\Ga, that is, parabolic subgroups of \Ga (up to conjugacy). Reversing
 this correspondence hyperbolizes a pared 3-manifold, giving it a geometrically
 finite geometric structure where the desired boundary regions become cusps.
 
@@ -185,7 +195,7 @@ prop
 
 (cM(Ga),cP(Ga)) is a pared 3-manifold. cM(Ga)- cP(Ga) is homeomorphic to the
 convex core of Ga, C(Ga). The parabolic elements of Ga precisely correspond to
-conjugates of the peripheral subgroups pi1cP(Ga) cin pi1cM(Ga).
+conjugates of the peripheral subgroups \pi_1cP(Ga) cin \pi_1cM(Ga).
 
 end prop
 
@@ -197,7 +207,7 @@ end proof
 
 We refer to (cM(Ga),cP(Ga)) as the \emph{pared 3-manifold associated to} Ga.
 Similarly, if N is a geometrically finite hyperbolic 3-manifold, we refer to
-(cM(pi1N),cP(pi1N)) as the \emph{pared 3-manifold associated to} N.
+(cM(\pi_1N),cP(\pi_1N)) as the \emph{pared 3-manifold associated to} N.
 
 Conversely, there is Thurston's famous hyperbolization theorem:
 
@@ -250,30 +260,30 @@ endproof
 % This argument follows Morgan. Proposition 7.3
 
 Let (M,P) be the pared 3-manifold structure associated to the hyperbolic
-3-manifold N. The only elements of pi1M which are parabolic are the conjugates
-of elements in pi1P0, where P0 is a component of P.
+3-manifold N. The only elements of \pi_1M which are parabolic are the conjugates
+of elements in \pi_1P0, where P0 is a component of P.
 
-Let Gamma' < pi1N be a surface subgroup which is quasifuchsian. Let N' be the
-cover of N associated to Gamma'. N' and hence its convex core C(N') have the
-fundamental group of a closed surface. In fact, because Gamma' is
+Let \Ga' < \pi_1N be a surface subgroup which is quasifuchsian. Let N' be the
+cover of N associated to \Ga'. N' and hence its convex core C(N') have the
+fundamental group of a closed surface. In fact, because \Ga' is
 quasifuchsian, we know that the convex core C(N') is homeomorphic to S times I,
-where S is a closed surface such that pi1S = Gamma'.\cite{Mo}, same Corollary.
-Map S to S times 1/2 cin times I. This map is an isomorphism on pi1. Composing
-this with the covering map N' to N, we obtain a pi1-injective map phi colon
-S to N.  This corresponds to a pi1-injective map to (M,P) by retracting.
-Applying the theorem above, no element of Gamma'=phi(pi1S) is parabolic.
+where S is a closed surface such that \pi_1S = \Ga'.\cite{Mo}, same Corollary.
+Map S to S times 1/2 cin times I. This map is an isomorphism on \pi_1. Composing
+this with the covering map N' to N, we obtain a $\pi_1$-injective map phi \colon
+S to N.  This corresponds to a $\pi_1$-injective map to (M,P) by retracting.
+Applying the theorem above, no element of \Ga'=phi(\pi_1S) is parabolic.
 Because (M,P) is a pared structure for N, this implies that no loop in S is
 freely homotopic to a loop in P.
 
-Conversely, suppose we are given a closed pi1-injective surface
+Conversely, suppose we are given a closed $\pi_1$-injective surface
 S looprightarrow M.  Suppose further that no loop in S is freely homotopic to
-a loop in P. This implies that the induced subgroup pi1S < pi1M is disjoint
-from all conjugates of pi1P. Because (M,P) is a pared structure for the
-hyperbolic 3-manifold N, this implies that no elements of pi1S are parabolic
-under the representation rho colon pi1S to PSL2C induced by pi1S < pi1M=pi1N.
-Furthermore rho(pi1S) is geometrically finite (by the first theorem), and S is
-a surface without cusps.  Applying the theorem, pi1S induces a quasifuchsian
-surface subgroup of pi1N.
+a loop in P. This implies that the induced subgroup \pi_1S < \pi_1M is disjoint
+from all conjugates of \pi_1P. Because (M,P) is a pared structure for the
+hyperbolic 3-manifold N, this implies that no elements of \pi_1S are parabolic
+under the representation rho \colon \pi_1S to PSL2C induced by \pi_1S < \pi_1M=\pi_1N.
+Furthermore rho(\pi_1S) is geometrically finite (by the first theorem), and S is
+a surface without cusps.  Applying the theorem, \pi_1S induces a quasifuchsian
+surface subgroup of \pi_1N.
 
 We summarize our discussion of the geometrically finite (infinite volume) case
 as follows.
@@ -282,7 +292,7 @@ prop
 
 Let N be a geometrically finite hyperbolic 3-manifold of infinite volume, and
 (M,P) a pared 3-manifold structure for N. Then quasi-Fuchsian surface subgroups
-of pi1N precisely correspond to pi1-injective maps of a closed surface S to
+of \pi_1N precisely correspond to $\pi_1$-injective maps of a closed surface S to
 M such that no loops in P are freely homotopic to images of loops in S.
 
 endprop
@@ -292,7 +302,7 @@ This allows us to reduce the main problem to the following:
 prob
 
 Let (M,P) be a pared 3-manifold (which has an infinite volume hyperbolization).
-Does there exist a closed surface S and a pi1-injective map f colon S to M such
+Does there exist a closed surface S and a $\pi_1$-injective map f \colon S to M such
 that no loops in P are freely homotopic to images of loops in S?
 
 end prob
@@ -317,13 +327,13 @@ We begin with the following theorem of Canary.
 
 thm
 
-Let N = H3/Gamma be an infinite volume tame hyperbolic 3-manifold, and let
-Gamma' < Gamma be a finitely generated subgroup. Then either
+Let N = H3/\Ga be an infinite volume tame hyperbolic 3-manifold, and let
+\Ga' < \Ga be a finitely generated subgroup. Then either
 
-(a) N' = H3 / Gamma' is geometrically finite, or
+(a) N' = H3 / \Ga' is geometrically finite, or
 
-(b) Gamma' contains a (conjugate of a) finite index subgroup of a geometrically
-infinite peripheral subgroup of Gamma
+(b) \Ga' contains a (conjugate of a) finite index subgroup of a geometrically
+infinite peripheral subgroup of \Ga
 
 where a \emph{geometrically infinite peripheral subgroup} is a subgroup
 corresponding to the subsurface of a relative compact core boundary which cuts
@@ -336,7 +346,7 @@ endthm
 
 The above proposition in the geometrically finite case still works in the
 forward direction. The reverse direction will carry through if we can show that
-N' (ie Gamma') is geometrically finite. That is, we want to avoid condition (b)
+N' (ie \Ga') is geometrically finite. That is, we want to avoid condition (b)
 in Canary's theorem above. This requires an additional condition, which we
 incorporate in the following proposition. (b) holds precisely when our surface
 is freely homotopic to a finite-sheeted cover of the corresponding
@@ -348,7 +358,7 @@ prop
 
 Let N be a hyperbolic 3-manifold of infinite volume, possibly geometrically
 infinite, and (M,P) a pared 3-manifold structure for N. Then quasifuchsian
-surface subgroups of N precisely correspond to pi1-injective maps of a closed
+surface subgroups of N precisely correspond to $\pi_1$-injective maps of a closed
 surface S to M such that
 
 (1) no loops in P are freely homotopic into the image of S, and
