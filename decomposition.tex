@@ -3,7 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In the geometrically finite case, we've reduced the quasi-Fuchsian surface
-subgroup question to a topological problem about pi1-injective maps of
+subgroup question to a topological problem about $\pi_1$-injective maps of
 a surface into a pared 3-manifold. However, infinite volume hyperbolic
 3-manifolds may have quite complex topology, so it is not immediately clear how
 to find such surfaces in the resulting pared 3-manifolds. It is not clear how
@@ -24,70 +24,72 @@ new, these are standard techniques.
 
 First, a simple proposition.
 
-prop
+\begin{prop}
 
-Let M be a compact orientable irreducible 3-manifold. Let f colon S to M be
-a pi1-injective map, where S is a closed surface.  Let D cin M be a compression
-disk for bd M.  That is, D is properly embedded, and bd D does not bound a disk
-in bd M.  Then f is homotopic to a map such that f(S) cap D = emptyset. Given
-any finite collection of disjoint compression disks we can homotope f away from
-all of them.
+Let $M$ be a compact orientable irreducible 3-manifold. Let $f \colon S \to M$
+be a $\pi_1$-injective map, where $S$ is a closed surface.  Let $D \cin M$ be
+a compression disk for $\bd M$. That is, $D$ is properly embedded, and $\bd D$
+does not bound a disk in $\bd M$. Then $f$ is homotopic to a map such that
+$f(S) \cap D = \emptyset$. Given any finite collection of disjoint compression
+disks we can homotope f away from all of them.
 
-end prop
+\end{prop}
 
-proof
+\begin{proof}
 
-Intuitively, f is pi1-injective, so any loop where S crosses D is contractible
-in D, hence contractible in S. Then use irreducibility and an innermost disk
-argument.
+Intuitively, $f$ is $\pi_1$-injective, so any loop where $S$ intersects $D$ is
+contractible in $D$, hence contractible in $S$. Then use irreducibility and an
+innermost disk argument.
 
-More precisely, we proceed as follows. Homotope f locally so it's transverse to
-D. D is compact and properly embedded, and S is compact, so f-1(D) is
-a properly embedded compact submanifold of S. That is, it's a union of finitely
-many disjoint simple closed curves alpha1,dots,alphak. For each alphai,
-f(alphai) cin D, so f(alphai) is homotopically trivial in M.  Since f is
-pi1-injective, each alphai must be homotopically trivial in S. Since S is
-a closed surface, this means each alphai bounds a disk in S. Choose an
-innermost such disk D' cin S, that is, D' is bounded by some alphai and doesn't
-contain any other alphaj in its interior.
+More precisely, we proceed as follows. Homotope $f$ locally so it's transverse
+to $D$. $D$ is compact and properly embedded, and $S$ is compact, so
+$f^{-1}(D)$ is a properly embedded compact submanifold of $S$. That is, it's
+a union of finitely many disjoint simple closed curves
+$\alpha_1,\dots,\alpha_k$.  For each $\alpha_i$, $f(\alpha_i) \cin D$, so
+$f(\alpha_i)$ is homotopically trivial in $M$.  Since $f$ is $\pi_1$-injective,
+each $\alpha_i$ must be homotopically trivial in $S$.  Since $S$ is a closed
+surface, this means each $\alpha_i$ bounds a disk in $S$.  Choose an innermost
+such disk $D' \cin S$, that is, $D'$ is bounded by some $\alpha_i$ and doesn't
+contain any other $\alpha_j$ in its interior.
 
-Now construct a map phi colon S2 to M as follows. The closed upper hemisphere
-is homeomorphic to D' cin S. Map it in along D'. Then the equator maps in along
-f(alpha), which is contractible, as it's in D. Choose the lower hemisphere of
-phi to correspond to such a contraction of f(alpha) within D. M is irreducible,
-hence aspherical, so phi must be homotopically trivial. Homotoping phi to
-a point and re-expanding, we can see that f|D' is homotopic to a map into D (ie
-corresponding to a contracting homotopy of alpha). Pushing f slightly away from
-D using a tubular neighborhood of D in M, we can eliminate the intersection
-curve f(alpha) between f(S) and D. Since this homotopy only affects
-a neighborhood of D' cin S, it cannot add any additional intersections or
-affect any of the other intersection curves. Repeating this process, we can
+Now construct a map $\phi \colon S^2 \to M$ as follows. The closed upper
+hemisphere is homeomorphic to $D' \cin S$. Map it in along $D'$. Then the
+equator maps in along $f(\alpha)$, which is contractible, as it's in $D$.
+Choose the lower hemisphere of $\phi$ to correspond to such a contraction of
+$f(\alpha)$ within $D$.  $M$ is irreducible, hence aspherical, so $\phi$ must
+be homotopically trivial.  Homotoping $\phi$ to a point and re-expanding, we
+can see that $f|_{D'}$ is homotopic to a map into $D$ (ie corresponding to
+a contracting homotopy of $\alpha$). Pushing $f$ slightly away from $D$ using
+a tubular neighborhood of $D$ in $M$, we can eliminate the intersection curve
+$f(\alpha)$ between $f(S)$ and $D$.  Since this homotopy only affects
+a neighborhood of $D' \cin S$, it cannot add any additional intersections or
+affect any of the other intersection curves.  Repeating this process, we can
 eliminate all intersection curves by homotopy.
 
-end proof
+\end{proof}
 
 We have a similar fact for the pared locus of a pared 3-manifold.
 
-prop
+\begin{prop}
 
-Let (M,P) be a pared 3-manifold where M is compact orientable irreducible, and
-D cin M a compression disk for bd M. Then we can isotope P within bd M such
-that P has minimal intersection with bd D. In this minimal intersection, torus
-components of P do not intersect D, and if we cut M along D, all the resulting
-rectangles obtained by cutting annulus components of P are essential. We can
-perform a similar operation for any finite collection of disjoint compression
-disks.
+Let $(M,P)$ be a pared 3-manifold where $M$ is compact orientable irreducible,
+and $D \cin M$ a compression disk for $\bd M$. Then we can isotope $P$ within
+$\bd M$ such that $P$ has minimal intersection with $\bd D$. In this minimal
+intersection, torus components of $P$ do not intersect $D$, and if we cut $M$
+along $D$, all the resulting rectangles obtained by cutting annulus components
+of $P$ are essential.  We can perform a similar operation for any finite
+collection of disjoint compression disks.
 
-end prop
+\end{prop}
 
 proof
 
 This is straightforward. Torus components of P cannot intersect bd D, as each
 torus component of P is precisely a torus component of bd M. This is because
-a torus cannot map pi1-injectively to any other genus surface, as it'd
+a torus cannot map $\pi_1$-injectively to any other genus surface, as it'd
 correspond to a rank 2 abelian subgroup. So if bd D intersects a torus
 component of P, it'd have to lie entirely inside it. Then D would be
-a compression disk for this torus component, violating pi1-injectivity.
+a compression disk for this torus component, violating $\pi_1$-injectivity.
 
 Now consider annulus components of P that lie on the boundary component F of
 M that contains bd D. It is sufficient to consider the core curves of these
@@ -103,7 +105,7 @@ end proof
 
 cor
 
-Let (M,P) be a pared 3-manifold, and f colon S to M a pi1-injective map of
+Let (M,P) be a pared 3-manifold, and f \colon S to M a $\pi_1$-injective map of
 a closed surface. Suppose P0 is a component of P which has an essential
 intersection with a compression disk D. By abuse of notation, we'll refer to
 its core curve as P0 as well. Then either:
@@ -164,13 +166,13 @@ isotopically to obtain (1).
 end proof
 
 Together these demonstrate that we can reduce our main problem when M admits
-boundary compressions. All closed pi1-injective surfaces can be made to avoid
+boundary compressions. All closed $\pi_1$-injective surfaces can be made to avoid
 the compression disks, and all components of the pared structure can either be
 made to avoid the compression disks (case (1)) or are irrelevant because they
-cannot be homotoped into any closed pi1-injective surface (case (2)). We push
+cannot be homotoped into any closed $\pi_1$-injective surface (case (2)). We push
 the case (1) pared structure components away from the compression disks and
 discard the case (2) components. Note of course that no case (1) component can
-fail to be pi1-injective, as it'd already fail to be pi1-injective before the
+fail to be $\pi_1$-injective, as it'd already fail to be $\pi_1$-injective before the
 compression (by homotoping across the compression disk). In fact the result is
 a new (possibly disconnected) pared 3-manifold. The resulting (possibly
 disconnected) incompressible pared manifold contains a (QF) surface if and only
@@ -185,7 +187,7 @@ results for a decomposition along annuli.
 prop
 
 Let M is compact orientable irreducible with incompressible boundary, and
-f colon S to M be a pi1-injective map of a closed surface. Let A cin M be
+f \colon S to M be a $\pi_1$-injective map of a closed surface. Let A cin M be
 a properly embedded annulus which is essential - that is, incompressible,
 boundary incompressible, and not parallel to an annulus in bd M. Then f is
 homotopic to a map such that f(S) cap A is a union of multiples of the core
