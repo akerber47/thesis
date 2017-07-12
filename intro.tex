@@ -15,10 +15,10 @@ Does $\pi_1N$ contains any quasi-Fuchsian surface subgroups?
 In this paper, we answer this question in the special case where $N$ is a book
 of $I$-bundles. We tackle this problem topologically, representing $N$ with
 a pared 3-manifold $(M,P)$.  The pared structure $P\cin\bd M$ specifies the
-boundary locus corresponding to cusps of $N$. Finding a quasi-Fuchsian surface
-subgroup of $\pi_1N$ boils down to asking whether we can find a closed immersed
+locus corresponding to cusps of $N$. Finding a quasi-Fuchsian surface subgroup
+of $\pi_1N$ amounts to asking whether we can find a closed immersed
 $\pi_1$-injective surface in $M$ which avoids $P$ up to homotopy.  That is,
-we're trying to choose a surface subgroup of $\pi_1M$ which does not contain
+we're trying to choose a surface subgroup of $\pi_1M$ which trivially intersect
 any of the peripherial subgroups associated to components of $P$. We prove full
 results on which $(M,P)$ admit a surface subgroup in the book of $I$-bundles
 case.
@@ -35,16 +35,32 @@ Which 3-manifold groups contain surface subgroups? Equivalently, which
 \end{prob}
 
 This problem arises quite directly when considering 3-manifold groups. The
-first explicit answer was proposed by %TODO
+first explicit answer was proposed by Waldhausen (cite: Kirby problem list) in
+the Surface Subgroup Conjecture: every closed irreducible 3-manifold with
+infinite $\pi_1$ contains a surface subgroup. As originally stated, the
+Conjecture only applies to closed 3-manifolds. It was mostly solved by
+geometrization, as the question is straightforward for Seifert fibered spaces.
+After some preliminary efforts in the hyperbolic case by Cooper-Long
+\cite{CooperLong} and Li \cite{Li}, it was finally
+resolved in general by Kahn and Markovic in 2012 \cite{KM}.  In fact, the
+surface subgroups they find are quasi-Fuchsian, and they also obtained
+a density result stating that there are many such surfaces \cite{KM2}.
 
-in the Surface Subgroup Conjecture
+We can naturally ask this question for manifolds with boundary as well.
+Cooper, Long, and Reid showed that a compact connected irreducible 3-manifold
+with non-empty incompressible boundary  must contain an essential closed
+surface, unless it's covered by a product $F\times I$ \cite{CLR}. In
+particular, this shows that every non-closed hyperbolic 3-manifold group
+contains a surface subgroup.
 
-There is some existing work on this problem. Cooper-Long-Reid \cite{CLR}
-addressed the underlying topological problem, showing that a compact connected
-irreducible 3-manifold with non-empty incompressible boundary  must contain an
-essential closed surface, unless it's covered by a product $F\times I$.
-However, this surface may contain accidental parabolics, that is, overlap with
-the pared locus $P$. If this occurs it will not be quasifuchsian.
+However, since the result of Kahn and Markovic provided us with surface
+subgroups which are quasi-Fuchsian, we might ask whether we can do this in the
+non-closed case as well. Note that the Cooper-Long-Reid result is insufficient,
+as the surfaces obtained may contain accidental parabolics, that is, overlap in
+$\pi_1$ with the pared locus $P$. If this occurs they will not be
+quasi-Fuchsian. This does commonly occur in practice --- see \cite{CLRbundles}
+and \cite{MenascoReid} for examples. Of course, in the closed case there cannot
+be any parabolics to worry about.
 
 % FIXME something is wrong with Masters-Zhang citation / bib entry - I can only
 % find their older paper (hyp knot complements) on mathscinet, not the full new
