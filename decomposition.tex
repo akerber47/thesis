@@ -9,7 +9,7 @@ a surface into a pared 3-manifold. However, infinite volume hyperbolic
 to find such surfaces in the resulting pared 3-manifolds. It is not clear how
 to find (QF) surfaces directly. Instead, we decompose the pared 3-manifold
 along disks and annuli. While the precise statements and proofs that follow are
-new, these are known facts and standard arguments.
+new, these are standard techniques.
 
 % See Jaco, Jaco-Shalen, Johannson, Canary-McCullough
 
@@ -41,15 +41,15 @@ Intuitively, f is pi1-injective, so any loop where S crosses D is contractible
 in D, hence contractible in S. Then use irreducibility and an innermost disk
 argument.
 
-More precisely, we proceed as follows. First suppose f is not necessarily an
-embedding. Homotope f locally so it's transverse to D. D is compact and
-properly embedded, and S is compact, so f-1(D) is a properly embedded compact
-submanifold of S. That is, it's a union of finitely many disjoint simple closed
-curves alpha1,dots,alphak. For each alphai, f(alphai) cin D, so f(alphai) is
-homotopically trivial in M.  Since f is pi1-injective, each alphai must be
-homotopically trivial in S. Since S is a closed surface, this means each alphai
-bounds a disk in S. Choose an innermost such disk D' cin S, that is, D' is
-bounded by some alphai and doesn't contain any other alphaj in its interior.
+More precisely, we proceed as follows. Homotope f locally so it's transverse to
+D. D is compact and properly embedded, and S is compact, so f-1(D) is
+a properly embedded compact submanifold of S. That is, it's a union of finitely
+many disjoint simple closed curves alpha1,dots,alphak. For each alphai,
+f(alphai) cin D, so f(alphai) is homotopically trivial in M.  Since f is
+pi1-injective, each alphai must be homotopically trivial in S. Since S is
+a closed surface, this means each alphai bounds a disk in S. Choose an
+innermost such disk D' cin S, that is, D' is bounded by some alphai and doesn't
+contain any other alphaj in its interior.
 
 Now construct a map phi colon S2 to M as follows. The closed upper hemisphere
 is homeomorphic to D' cin S. Map it in along D'. Then the equator maps in along
@@ -169,13 +169,31 @@ the compression disks, and all components of the pared structure can either be
 made to avoid the compression disks (case (1)) or are irrelevant because they
 cannot be homotoped into any closed pi1-injective surface (case (2)). We push
 the case (1) pared structure components away from the compression disks and
-discard the case (2) components. The resulting (possibly disconnected)
-incompressible pared manifold contains a (QF) surface if and only if the
-original does.
+discard the case (2) components. Note of course that no case (1) component can
+fail to be pi1-injective, as it'd already fail to be pi1-injective before the
+compression (by homotoping across the compression disk). In fact the result is
+a new (possibly disconnected) pared 3-manifold. The resulting (possibly
+disconnected) incompressible pared manifold contains a (QF) surface if and only
+if the original does.
 
 Therefore we can reduce to the case where M is a pared 3-manifold (compact
 orientable irreducible) with incompressible boundary. However, in order to
 understand the problem better, we want another type of decomposition, along
-disjoint properly embedded essential annuli.
+disjoint properly embedded essential annuli. We obtain the following similar
+results for a decomposition along annuli.
 
+prop
 
+Let M is compact orientable irreducible with incompressible boundary, and
+f colon S to M be a pi1-injective map of a closed surface. Let A cin M be
+a properly embedded annulus which is essential - that is, incompressible,
+boundary incompressible, and not parallel to an annulus in bd M. Then f is
+homotopic to a map such that f(S) cap A is a union of multiples of the core
+curve of A. For a disjoint union of annuli, we have the same result.
+
+end prop
+
+proof
+
+Homotope f to be transverse to A. As earlier, f-1(A) is a union of simple
+closed curves in S.
