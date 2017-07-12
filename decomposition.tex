@@ -105,14 +105,56 @@ cor
 
 Let (M,P) be a pared 3-manifold, and f colon S to M a pi1-injective map of
 a closed surface. Suppose P0 is a component of P which has an essential
-intersection with a compression disk D. Then fstar(pi1S) does not intersect any
-conjugates of pi1P0, that is, P0 is not freely homotopic in M into any image of
-a loop in S.
+intersection with a compression disk D. By abuse of notation, we'll refer to
+its core curve as P0 as well. Then either:
+
+(1) P0 is homotopic in M to a different curve in bd M that does not intersect
+D. That is, there are sufficiently many compression disks cobounded by arcs in
+P0 with endpoints on bd D that "transfer P0 across D to a different part of bd
+M".
+
+or
+
+(2) fstar(pi1S) does not intersect any conjugates of pi1P0, that is, P0 is not
+freely homotopic in M into any image of a loop in S.
 
 end cor
 
 proof
 
-Suppose not. 
+Note that if the algebraic intersection number between P0 and D is nonzero, it
+immediately follows that P0 cannot be homotoped in M into the image of a loop
+in S (which would have to be disjoint from D). The algebraic intersection
+number is a homotopy, indeed a homology invariant in M. So we need only
+consider the case of zero algebraic intersection.
 
-% Is this even true? uh oh
+Deformation retract D to a point, and choose this as our basepoint for pi1M.
+This yields an expression for pi1M as either a free product pi1M1 star pi1M2
+(if M setminus D is disconnected) or trivial HNN extension pi1M0 star
+= <pi1M0,t> (if M setminus D is connected). Since S can be homotped to be
+disjoint from D, f star (pi1S) is contained in one of these subgroups
+pi1M1,pi1M2,pi1M0.  Cutting P0 along D breaks it into a union of arcs, and
+after the deformation retract this corresponds to a word in the free product
+/ HNN with each arc inducing a single subgroup letter in the word (or pair of
+letter, in the HNN case when the arc connects between the two copies of D in
+M0).  In the HNN case, note that the zero algebraic intersection implies that
+the number of times the stable generator t appears in such a word is the same
+as the number of times t-1 appears.
+
+But in the HNN case, t does not appear in fstar(pi1S).  Similarly, in the free
+product case, words from only one of pi1M1 or pi1M2 appear in fstar(pi1S).
+Without loss of generality say it's pi1M1. That is, in order for (2) to be
+false, that is, for P0 to appear in fstar(pi1S), we must have sufficient
+cancellation in the element P0 to remove all powers of t, or all letters from
+pi1M2. We claim that (1) holds in this case.
+
+
+
+end proof
+
+Therefore we can reduce to the case where M is a pared 3-manifold (compact
+orientable irreducible) with incompressible boundary. However, in order to
+understand the problem better, we want another type of decomposition, along
+disjoint properly embedded essential annuli.
+
+
