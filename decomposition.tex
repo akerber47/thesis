@@ -11,18 +11,14 @@ to find (QF) surfaces directly. Instead, we decompose the pared 3-manifold
 along disks and annuli. While the precise statements and proofs that follow are
 new, these are standard techniques.
 
-% See Jaco, Jaco-Shalen, Johannson, Canary-McCullough
+See \cite{Ja}, \cite{JacoShalen}, and \cite{Johannson} for an overview of the
+JSJ theory we will use.  See \cite{CMc} for some discussion of JSJ theory for
+pared 3-manifolds.  Note also that our choice of decomposition was inspired by
+the decomposition used by Thurston to prove geometrization of Haken manifolds.
+This is a decomposition into acylindrical pieces, $I$-bundles, and solid tori.
+See \cite{Mo} or \cite{ThurstonIII} for details.
 
-% Also see Canary-McCullough for JSJ for pared 3-manifolds!!
-
-% NOTE NOTE these are the same arguments (or at least very very similar ones)
-% as I'm currently using in section 6 for specific book of I-bundles topology
-% facts!!  Need to straighten that out, avoid duplication, etc. Cite backwards
-% to this section where needed.
-%
-% Keep writing this, then fix section 6 to cite it...
-
-First, a simple proposition.
+First, a few simple propositions.
 
 \begin{prop}
 
@@ -166,17 +162,17 @@ isotopically to obtain (1).
 end proof
 
 Together these demonstrate that we can reduce our main problem when M admits
-boundary compressions. All closed $\pi_1$-injective surfaces can be made to avoid
-the compression disks, and all components of the pared structure can either be
-made to avoid the compression disks (case (1)) or are irrelevant because they
-cannot be homotoped into any closed $\pi_1$-injective surface (case (2)). We push
-the case (1) pared structure components away from the compression disks and
-discard the case (2) components. Note of course that no case (1) component can
-fail to be $\pi_1$-injective, as it'd already fail to be $\pi_1$-injective before the
-compression (by homotoping across the compression disk). In fact the result is
-a new (possibly disconnected) pared 3-manifold. The resulting (possibly
-disconnected) incompressible pared manifold contains a (QF) surface if and only
-if the original does.
+boundary compressions. All closed $\pi_1$-injective surfaces can be made to
+avoid the compression disks, and all components of the pared structure can
+either be made to avoid the compression disks (case (1)) or are irrelevant
+because they cannot be homotoped into any closed $\pi_1$-injective surface
+(case (2)). We push the case (1) pared structure components away from the
+compression disks and discard the case (2) components. Note of course that no
+case (1) component can fail to be $\pi_1$-injective, as it'd already fail to be
+$\pi_1$-injective before the compression (by homotoping across the compression
+disk). In fact the result is a new (possibly disconnected) pared 3-manifold.
+The resulting (possibly disconnected) incompressible pared manifold contains
+a (QF) surface if and only if the original does.
 
 Therefore we can reduce to the case where M is a pared 3-manifold (compact
 orientable irreducible) with incompressible boundary. However, in order to
@@ -199,3 +195,75 @@ proof
 
 Homotope f to be transverse to A. As earlier, f-1(A) is a union of simple
 closed curves in S.
+%TODO
+
+end proof
+
+%TODO similar fact for pared structure + annuli
+
+We will need the following definition.
+
+defn
+
+Let M be a compact 3-manifold with boundary which is not a 3-ball. M is
+\emph{acylindrical} if every proper pi1-injective map A2 to M is homotopic into
+bd M.
+
+end defn
+
+Note that strictly speaking, balls have incompressible boundary and satisfy the
+acylindrical condition, but we will want to consider them as a separate case
+later in this chapter. We have the following key fact from the theory of JSJ
+decompositions.  Analogously to the Loop and Sphere Theorems, it allows us to
+go from singular surfaces to embedded surfaces.
+
+thm (The Annulus Theorem)
+
+Let M be a compact orientable irreducible 3-manifold with incompressible
+boundary. If M is not acylindrical, then M admits a properly embedded essential
+annulus.
+
+end thm
+
+proof
+
+See \cite{JacoShalen} or \cite{Johannson}. See \cite{Scottannulus} for an
+algebraic proof.
+
+end proof
+
+Construct a hierarchy for a compact orientable irreducible 3-manifold M with
+nonempty boundary as follows.  Let M0 = M.  Construct Mi+1 from Mi:
+
+If i is even, choose a maximal set of disjoint non-parallel compression disks
+Dik for the boundary of Mi. Cut Mi along these disks to obtain Mi+1.
+
+If i is odd, choose a maximal set of disjoint non-parallel properly embedded
+essential annuli Aik. Cut Mi along these annuli to obtain Mi+1.
+
+In both cases, if Mi is not connected, we make these choices in all components.
+
+defn
+
+We refer to this as an \emph{alternating hierarchy} for M.
+
+end defn
+
+lemma ("alternating hierarchy lemma")
+
+Let M be a compact orientable irreducible 3-manifold with nonempty boundary.
+Then the alternating hierarchy for M has finite length n. Each component of Mn
+is either a ball or an acylindrical 3-manifold with incompressible boundary.
+
+end lemma
+
+proof
+
+It is immediately clear that the hierarchy terminates in a union of balls and
+acylindrical 3-manifolds with incompressible boundary. If any component did not
+have incompressible boundary, we could cut along a compression disk.
+Similarly, if any component was not acylindrical, we could apply the annulus
+theorem to find an annulus to cut along. It remains to show that the hierarchy
+is finite length.
+
+
