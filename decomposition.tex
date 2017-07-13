@@ -199,7 +199,7 @@ closed curves in S.
 
 end proof
 
-%TODO similar fact for pared structure + annuli
+%TODO similar fact for pared structure + annuli -> must cross transversely
 
 We will need the following definition.
 
@@ -266,4 +266,39 @@ Similarly, if any component was not acylindrical, we could apply the annulus
 theorem to find an annulus to cut along. It remains to show that the hierarchy
 is finite length.
 
+By cutting out tubular neighborhoods of the disks and annuli we're removing, we
+can embed each level of the hierarchy: Mn hookrightarrow Mn-1 hookrightarrow
+dots hookrightarrow M0. Furthermore, by isotoping along a small tubular
+neighborhood of the boundary, we can in fact embed each Mi into the interior of
+Mi-1. The hierarchy induces a hierarchy of nested disjoint embedded surfaces bd
+Mn, bd Mn-1, dots, bd M0. For odd i, each bd Mi is incompressible in Mi-1,
+since we constructed Mi from a maximal set of compression disks for bd Mi-1.
+We claim that each odd bd Mi is in fact incompressible in Mi-2.  Suppose not,
+and let D cin Mi-2 be a compression disk for bd Mi. Let A cin Mi-2 be one of
+the essential annuli that we cut along to obtain Mi-1. Both A and D are
+properly embedded in Mi-2, so A cap D is a union of disjoint properly embedded
+arcs and curves in D.
 
+First, suppose the intersection contains at least one closed curve. Take an
+innermost such curve alpha cin A cap D --- that is, one such that its interior
+disk D' does not intersect any other curves in A cap D.  alpha cannot be
+essential in A, as otherwise D' would induce a compression of A, contradicting
+the assumption that A was essential in Mi-2.  But A is an annulus, so this
+implies alpha bounds a disk D'' in A. Since M is irreducible, the Mi are
+irreducible as well.  So D' cup D'' bounds a ball in Mi-2, and we can isotope
+D across this ball to remove the intersection.  Repeating this process, we can
+remove all closed curve intersections.
+
+We now claim that A and D cannot intersect in any arcs. If they do, choose an
+outermost such arc --- that is an arc alpha cin A cap D such that, for some
+beta cin bd D connecting the endpoints of alpha, alpha cup beta bounds a disk
+D' that does not intersect any other arcs in A cap D. But bd D cin bd Mi-2, so
+this D' is a boundary compression disk for A, contradicting the assumption that
+A was essential. Therefore after this isotopy we can guarantee that D is
+disjoint from A.
+
+Repeating this for all such cutting annuli A, D passes to a properly embedded
+disk in Mi-1. But bd Mi is incompressible in Mi-1, so bd D must bound a disk in
+bd Mi-1.
+
+Furthermore, we claim that for odd i, Mi is not boundary parallel in Mi-2.
