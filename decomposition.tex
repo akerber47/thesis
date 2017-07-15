@@ -276,8 +276,8 @@ since we constructed Mi from a maximal set of compression disks for bd Mi-1.
 We claim that each odd bd Mi is in fact incompressible in Mi-2.  Suppose not,
 and let D cin Mi-2 be a compression disk for bd Mi. Let A cin Mi-2 be one of
 the essential annuli that we cut along to obtain Mi-1. Both A and D are
-properly embedded in Mi-2, so A cap D is a union of disjoint properly embedded
-arcs and curves in D.
+properly embedded in Mi-2, so after making them transverse, A cap D is a union
+of disjoint properly embedded arcs and curves in D.
 
 First, suppose the intersection contains at least one closed curve. Take an
 innermost such curve alpha cin A cap D --- that is, one such that its interior
@@ -298,7 +298,21 @@ A was essential. Therefore after this isotopy we can guarantee that D is
 disjoint from A.
 
 Repeating this for all such cutting annuli A, D passes to a properly embedded
-disk in Mi-1. But bd Mi is incompressible in Mi-1, so bd D must bound a disk in
-bd Mi-1.
+disk in Mi-1. But bd Mi is incompressible in Mi-1, so bd D must bound a disk
+D'' in bd Mi-1. The cutting annuli in Mi-2 induce boundary annuli in Mi-1. As
+proven above, none of these annuli intersect D. No annuli can be contained in
+D'' as they wouldn't be essential (as D'' is a boundary disk). So no annuli can
+intersect D''. Therefore the disk D'' induces a boundary disk in Mi-2. This
+proves that bd Mi is incompressible in Mi-2.
 
-Furthermore, we claim that for odd i, Mi is not boundary parallel in Mi-2.
+Furthermore, we claim that for odd i, unless the sequence has terminated (that
+is, Mi=Mi-1=Mi-2), bd Mi is not boundary parallel in Mi-2. That is, bd Mi and
+bd Mi-2 are not parallel in Mi-2. Suppose that they are. Observe that there
+must be at least one properly embedded essential annulus A cin Mi-2 that we cut
+along. Isotope Aa %TODO
+
+This means that considering only the odd terms in this alternating
+decomposition, we have a Haken hierarchy. Finite depth immediately follows from
+Haken finiteness. This completes the proof.
+
+end proof
