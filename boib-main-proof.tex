@@ -316,14 +316,20 @@ different boundary curves of its component. Hence $Q_0$ has no protoloops.
 However, $Q_0$ obviously fails conditions (3) and (4) of the lemma. We need to
 add some annuli to ensure these conditions hold.
 
-Fix a large integer $m>0$. Now, reserve a subset $\cR$ of the set of boundary
-components of $Q_0$.  This subset should have the following properties:
+Fix a large integer $m>0$. Now, reserve a subset $\cR \cin \bd Q_0$.  This
+subset should have the following properties:
 
-(i) Each boundary component of each $F_i$ is covered by exactly $m$ elements of
-$\cR$.
+\begin{enumerate}
 
-(ii) Every connected component of $F_i$, that is, lifted copy of each page,
-contains at most one element of $\cR$.
+\item $\cR$ is a union of connected components of $\bd Q_0$.
+
+\item Each boundary component of each $F_i$ is covered by exactly $m$ elements
+of $\cR$.
+
+\item Every connected component of $F_i$, that is, lifted copy of each page,
+contains at most one component of $\cR$.
+
+\end{enumerate}
 
 This is possible as long as $d \geq C_0m$, where $C_0$ is the maximum number of
 boundary components of any $F_i$. $C_0$ is fixed and depends only on $(M,P)$.
@@ -361,8 +367,8 @@ $d$ and $m$ made earlier.
 \begin{proof}[Proof of Claim]
 
 Consider an arbitrary boundary component $\widetilde{\gamma} \cin \bd Q_1
-- \cR$.  It covers some boundary component $\gamma \cin F_i$. Look at the
-number of arcs of $P \cap F_i$ which are incident to $\gamma$. This number
+\setminus \cR$.  It covers some boundary component $\gamma \cin F_i$. Look at
+the number of arcs of $P \cap F_i$ which are incident to $\gamma$. This number
 depends only on $(M,P)$. Let $C_1$ be the maximum such number of incident arcs
 of $P$ for any boundary component $\gamma$ of any $F_i \cin F$. Let $C_2$ be
 the total number of boundary components of the $F_i$. Let $\gamma' \cin F_{i'}$
@@ -373,29 +379,29 @@ annulus to $Q_1$ that covers $F_j'$, with one of its boundary components
 attached to $\gamma$.
 
 The cover extension condition allows us to attach the other boundary component
-to any component of $\bd(Q_1 \cap F_{i'}) - \cR$ above $\gamma'$.  Because we
-always glue matching boundary components (and we started with the same number
-of each), $\bd Q_1 - \cR$ has the same number of remaining boundary components
-above $\gamma'$ as it does above $\gamma$. So there must be at least one to
-glue to.  Since we stopped gluing at $Q_1$, this implies that any gluing we
-could make would force the resulting surface to have protoloops.
+to any component of $\bd(Q_1 \cap F_{i'}) \setminus \cR$ above $\gamma'$.
+Because we always glue matching boundary components (and we started with the
+same number of each), $\bd Q_1 \setminus \cR$ has the same number of remaining
+boundary components above $\gamma'$ as it does above $\gamma$. So there must be
+at least one to glue to.  Since we stopped gluing at $Q_1$, this implies that
+any gluing we could make would force the resulting surface to have protoloops.
 
-Let $\widetilde{\gamma}' \cin \bd(Q_1 \cap F_{i'}) - \cR$ be an arbitrary
-available lift of $\gamma'$.  Suppose gluing to $\widetilde{\gamma}'$ produces
-a closed curve $\alpha$ in the pared lifting pattern. Obviously $\alpha$
-intersects the newly added annulus $A$, otherwise $Q_1$ would already contain
-a closed curve. $P$ is in minimal position and $M$ is reduced, so within $A$
-the pared lifting pattern is just a union of transverse arcs. Removing $A$
-therefore divides $\alpha$ into a union of arcs with endpoints on either
-$\gamma$ or $\gamma'$.  $Q_1$ has no protoloops, so none of these arcs can have
-both endpoints on the same boundary component. So there exists an arc in $Q_1$
-connecting $\gamma$ to $\gamma'$.  (This is the reason for the second condition
-in our definition of a ``protoloop'').  The pared lifting pattern in $Q_1$ near
-$\gamma$ is a homeomorphic copy of (the core of) $P \cap F_i$, so the number of
-arcs incident to $\gamma$ is bounded by $C_1$.  Tracing these arcs through
-$Q_1$, they can hit at most $C_1$ other boundary components.  These are the
-only boundary components we can attach our annulus to to produce a closed
-curve.
+Let $\widetilde{\gamma}' \cin \bd(Q_1 \cap F_{i'}) \setminus \cR$ be an
+arbitrary available lift of $\gamma'$.  Suppose gluing to $\widetilde{\gamma}'$
+produces a closed curve $\alpha$ in the pared lifting pattern. Obviously
+$\alpha$ intersects the newly added annulus $A$, otherwise $Q_1$ would already
+contain a closed curve. $P$ is in minimal position and $M$ is reduced, so
+within $A$ the pared lifting pattern is just a union of transverse arcs.
+Removing $A$ therefore divides $\alpha$ into a union of arcs with endpoints on
+either $\gamma$ or $\gamma'$.  $Q_1$ has no protoloops, so none of these arcs
+can have both endpoints on the same boundary component. So there exists an arc
+in $Q_1$ connecting $\gamma$ to $\gamma'$.  (This is the reason for the second
+condition in our definition of a ``protoloop'').  The pared lifting pattern in
+$Q_1$ near $\gamma$ is a homeomorphic copy of (the core of) $P \cap F_i$, so
+the number of arcs incident to $\gamma$ is bounded by $C_1$.  Tracing these
+arcs through $Q_1$, they can hit at most $C_1$ other boundary components.
+These are the only boundary components we can attach our annulus to to produce
+a closed curve.
 
 Similarly, suppose gluing to $\widetilde{\gamma}'$ produces an arc $\alpha$
 with endpoints on the same boundary component. Let $\widetilde{\delta}$ be this
@@ -423,10 +429,10 @@ will produce a surface with protoloops.
 By construction of $Q_1$, there are no more legal gluings. So every remaining
 boundary component must be disallowed for one of the above reasons. So $Q_1$
 can have at most $C_1+(C_1*(C_1-1)) = C_1^2$ many leftover boundary components
-(that is, components of $\bd Q_1 - \cR$) above $\gamma'$.  Since our choice of
-$\widetilde{\gamma}$ was arbitrary, this implies that there are at most $C
-= C_1^2*C_2$ many leftover boundary components, that is, components of $\bd
-Q_1-\cR$. This proves the claim.
+(that is, components of $\bd Q_1 \setminus \cR$) above $\gamma'$.  Since our
+choice of $\widetilde{\gamma}$ was arbitrary, this implies that there are at
+most $C = C_1^2*C_2$ many leftover boundary components, that is, components of
+$\bd Q_1\setminus\cR$. This proves the claim.
 
 \end{proof}
 
@@ -438,18 +444,18 @@ reserve boundary components remain. All the remaining non-reserve boundary
 components will be attached to reserve boundary components by annuli.
 
 Construct $Q$ from $Q_1$ as follows.  For each boundary component $\gamma$
-downstairs, as discussed above, there are at most $C_1^2$ many elements of $\bd
-Q_1 - \cR$ above it.  For each of these, there are at most $C_1^2$ we could
-glue to above $\gamma'$ that produce a surface with protoloops. We now allow
-ourselves to glue to the reserve boundary components. Assume that $m\geq
+downstairs, as discussed above, there are at most $C_1^2$ many components of
+$\bd Q_1 \setminus \cR$ above it.  For each of these, there are at most $C_1^2$
+we could glue to above $\gamma'$ that produce a surface with protoloops. We now
+allow ourselves to glue to the reserve boundary components. Assume that $m\geq
 2C_1^2$.  Then attach each leftover (non-reserve) lift $\widetilde{\gamma}$ of
-$\gamma$ to an element of $\cR$ above $\gamma'$ with a copy of the annulus
-$F_j'$, one at a time.  At any point there will be at least $C_1^2+1$ elements
-of $\cR$ remaining above $\gamma'$. As in the proof of the claim, at most
-$C_1^2$ of these elements have arc connections with $\widetilde{\gamma}$ that
-will cause that gluing to yield protoloops. So we'll always be able to choose
-one such that our surface still has no protoloops.  Repeat this process for
-each $\gamma$ to construct $Q$.  Since we glued all the leftovers, it
+$\gamma$ to a component of $\cR$ above $\gamma'$ with a copy of the annulus
+$F_j'$, one at a time.  At any point there will be at least $C_1^2+1$
+components of $\cR$ remaining above $\gamma'$. As in the proof of the claim, at
+most $C_1^2$ of these elements have arc connections with $\widetilde{\gamma}$
+that will cause that gluing to yield protoloops. So we'll always be able to
+choose one such that our surface still has no protoloops.  Repeat this process
+for each $\gamma$ to construct $Q$.  Since we glued all the leftovers, it
 immediately follows that $\bd Q \cin \cR$, and therefore $Q$ satisfies (3).
 
 Let's analyze the possibilities for the defect of $Q$, that is, the number of
@@ -462,7 +468,7 @@ leftover components above $\gamma$, and similarly above $\gamma'$, so there
 will be at least $m - C_1^2$ components remaining in $\bd Q$ above $\gamma$.
 We find that
 
-\[ C_2(m-C_1^2) \leq defect(Q) \leq C_2m \]
+\[ C_2(m-C_1^2) \leq \operatorname{defect}(Q) \leq C_2m \]
 
 Any choice of $m\geq 2C_1^2$ works, as long as $d$ is sufficiently large
 relative to $m$.  This proves (4).
