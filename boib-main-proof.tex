@@ -249,8 +249,8 @@ technical conditions:
 
 \begin{defn}
 
-Let $Q$ be a jigsaw surface in a book of $I$-bundles $M$. We say
-that $Q$ is \emph{usable} if it satisfies the following:
+Let $Q$ be a jigsaw surface in a book of $I$-bundles $M$. We say that $Q$
+\emph{has no protoloops} if it satisfies the following two conditions:
 
 \begin{enumerate}
 
@@ -260,6 +260,8 @@ that $Q$ is \emph{usable} if it satisfies the following:
 different boundary components of $Q$.
 
 \end{enumerate}
+
+Otherwise, we say that $Q$ \emph{has protoloops}.
 
 \end{defn}
 
@@ -284,7 +286,7 @@ surface $Q$ in $M$ with the following properties:
 \item $Q$ is obtained by removing spine components from a finite-sheeted cover
 of $F$ of degree $d$.
 
-\item $Q$ is usable.
+\item $Q$ has no protoloops.
 
 \item $Q$ has sparse defect.
 
@@ -309,7 +311,7 @@ $d$ many disjoint copies of $F$), which is a closed $\pi_1$-injective surface
 in $M$.  The pared lifting pattern on each component of $Q_0$ is a homeomorphic
 copy of (the core of) $P \cap F_i$. Since $F$ is reduced, this pattern has no
 closed curves.  Since $F$ is good, every arc in the pattern connects two
-different boundary curves of its component. Hence $Q_0$ is useful.
+different boundary curves of its component. Hence $Q_0$ has no protoloops.
 
 However, $Q_0$ obviously fails conditions (3) and (4) of the lemma. We need to
 add some annuli to ensure these conditions hold.
@@ -342,12 +344,12 @@ $Q_0$ remains a jigsaw surface that can be extended to a cover of
 $F$.
 
 We add annuli one at a time. Each time we add an annulus, we make sure to add
-in such a way that the resulting surface is still usable. We also require that
-we do \emph{not} attach any annuli to the boundary components in $\cR$. Aside
-from these requirements and the condition above (that our gluing extends to
-a cover of $F$), we repeatedly choose an arbitrary annulus. This process will
-terminate at some some surface $Q_1$, after there are no more possible gluings
-to make.
+in such a way that the resulting surface still has no protoloops. We also
+require that we do \emph{not} attach any annuli to the boundary components in
+$\cR$.  Aside from these requirements and the condition above (that our gluing
+extends to a cover of $F$), we repeatedly choose an arbitrary annulus. This
+process will terminate at some some surface $Q_1$, after there are no more
+possible gluings to make.
 
 \begin{claim}
 
@@ -377,7 +379,7 @@ always glue matching boundary components (and we started with the same number
 of each), $\bd Q_1 - \cR$ has the same number of remaining boundary components
 above $\gamma'$ as it does above $\gamma$. So there must be at least one to
 glue to.  Since we stopped gluing at $Q_1$, this implies that any gluing we
-could make would force the resulting surface to not be useful.
+could make would force the resulting surface to have protoloops.
 
 Let $\widetilde{\gamma}' \cin \bd(Q_1 \cap F_{i'}) - \cR$ be an arbitrary
 available lift of $\gamma'$.  Suppose gluing to $\widetilde{\gamma}'$ produces
@@ -386,30 +388,30 @@ intersects the newly added annulus $A$, otherwise $Q_1$ would already contain
 a closed curve. $P$ is in minimal position and $M$ is reduced, so within $A$
 the pared lifting pattern is just a union of transverse arcs. Removing $A$
 therefore divides $\alpha$ into a union of arcs with endpoints on either
-$\gamma$ or $\gamma'$.  $Q_1$ is useful, so none of these arcs can have both
-endpoints on the same boundary component. So there exists an arc in $Q_1$
+$\gamma$ or $\gamma'$.  $Q_1$ has no protoloops, so none of these arcs can have
+both endpoints on the same boundary component. So there exists an arc in $Q_1$
 connecting $\gamma$ to $\gamma'$.  (This is the reason for the second condition
-in our definition of a useful surface).  The pared lifting pattern in $Q_1$
-near $\gamma$ is a homeomorphic copy of (the core of) $P \cap F_i$, so the
-number of arcs incident to $\gamma$ is bounded by $C_1$.  Tracing these arcs
-through $Q_1$, they can hit at most $C_1$ other boundary components.  These are
-the only boundary components we can attach our annulus to to produce a closed
+in our definition of a ``protoloop'').  The pared lifting pattern in $Q_1$ near
+$\gamma$ is a homeomorphic copy of (the core of) $P \cap F_i$, so the number of
+arcs incident to $\gamma$ is bounded by $C_1$.  Tracing these arcs through
+$Q_1$, they can hit at most $C_1$ other boundary components.  These are the
+only boundary components we can attach our annulus to to produce a closed
 curve.
 
 Similarly, suppose gluing to $\widetilde{\gamma}'$ produces an arc $\alpha$
 with endpoints on the same boundary component. Let $\widetilde{\delta}$ be this
 boundary component. Again, $\alpha$ intersects the added annulus $A$, otherwise
-$Q_1$ would already not be useful. Removing $A$ divides $\alpha$ into a union
-of arcs. Except for the two endpoints of $\alpha$ (which now lie on two
+$Q_1$ would already have protoloops. Removing $A$ divides $\alpha$ into a union
+of arcs.  Except for the two endpoints of $\alpha$ (which now lie on two
 different subarcs - call these subarcs $\alpha_0$ and $\alpha_1$), all other
 endpoints of these arcs must either lie on $\gamma$ or $\gamma'$.  But no arc
 can have both endpoints on the same boundary component, or $Q_1$ would already
-fail to be useful.  So any subarcs except $\alpha_0$ and $\alpha_1$ must
-connect $\gamma$ to $\gamma'$.  By parity we can see that $\alpha_0$ and
-$\alpha_1$ both have one endpoint on $\widetilde{\delta}$, but their other
-endpoints must be different.  That is, either $\alpha_0$ ends on
-$\widetilde{\gamma}$ and $\alpha_1$ on $\widetilde{\gamma}'$, or vice versa.
-This is the set of circumstances that leads to a returing arc.
+have protoloops.  So any subarcs except $\alpha_0$ and $\alpha_1$ must connect
+$\gamma$ to $\gamma'$.  By parity we can see that $\alpha_0$ and $\alpha_1$
+both have one endpoint on $\widetilde{\delta}$, but their other endpoints must
+be different.  That is, either $\alpha_0$ ends on $\widetilde{\gamma}$ and
+$\alpha_1$ on $\widetilde{\gamma}'$, or vice versa.  This is the set of
+circumstances that leads to a returing arc.
 
 Now, as above, the arcs incident to $\widetilde{\gamma}$ hit at most $C_1$
 other boundary components. These are our possible $\widetilde{\delta}$. Each of
@@ -417,7 +419,7 @@ these has at most $C_1$ incident arcs itself, one of which returns to
 $\widetilde{\gamma}$, leaving $C_1-1$ that we need to care about. We have
 a total of at most $i_a*(C_1-1)$ many "distance two" available boundary
 components. If we attach our annulus to one of these boundary components, we
-will produce a non-useful surface.
+will produce a surface with protoloops.
 
 By construction of $Q_1$, there are no more legal gluings. So every remaining
 boundary component must be disallowed for one of the above reasons. So $Q_1$
@@ -439,15 +441,15 @@ components will be attached to reserve boundary components by annuli.
 Construct $Q$ from $Q_1$ as follows.  For each boundary component $\gamma$
 downstairs, as discussed above, there are at most $C_1^2$ many elements of $\bd
 Q_1 - \cR$ above it.  For each of these, there are at most $C_1^2$ we could
-glue to above $\gamma'$ that produce a non-useful surface. We now allow
+glue to above $\gamma'$ that produce a surface with protoloops. We now allow
 ourselves to glue to the reserve boundary components. Assume that $m\geq
 2C_1^2$.  Then attach each leftover (non-reserve) lift of $\gamma$ to an
 element of $\cR$ above $\gamma'$ with a copy of the annulus $F_j'$, one at
 a time.  At any point there will be at least $i^2+1$ elements of $\cR$
 remaining above $\gamma'$, so we'll always be able to choose one such that our
-surface is still useful.  Repeat this process for each $\gamma$ to construct
-$Q$.  Since we glued all the leftovers, it immediately follows that $\bd Q \cin
-\cR$, and therefore $Q$ satisfies (3).
+surface still has no protoloops.  Repeat this process for each $\gamma$ to
+construct $Q$.  Since we glued all the leftovers, it immediately follows that
+$\bd Q \cin \cR$, and therefore $Q$ satisfies (3).
 
 Let's analyze the possibilities for the defect of $Q$, that is, the number of
 boundary components.  Above each $\gamma \cin \bd F_i$, $\cR$ has $m$ elements.
