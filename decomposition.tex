@@ -309,7 +309,20 @@ Furthermore, we claim that for odd i, unless the sequence has terminated (that
 is, Mi=Mi-1=Mi-2), bd Mi is not boundary parallel in Mi-2. That is, bd Mi and
 bd Mi-2 are not parallel in Mi-2. Suppose that they are. Observe that there
 must be at least one properly embedded essential annulus A cin Mi-2 that we cut
-along. Isotope Aa %TODO
+along. A corresponds to two embedded annuli A0, A1 cin bd Mi-1 after cutting.
+Note that the core curves of both A0 and A1 are essential in bd Mi-1, as
+otherwise A would not be essential in Mi-2. Look at the compression disks we
+cut along to reduce Mi-1 to Mi. Suppose that none of these disks essentially
+intersect A0 (that is, we can isotope them so they don't intersect A0). Now
+simply observe that A0 is itself boundary parallel in Mi-1 (it's part of the
+boundary), and therefore boundary parallel in Mi as well. But bd Mi is parallel
+to bd Mi-2 by assumption, so A0 is boundary parallel in Mi-2, contradicting the
+assumption that A was essential in Mi-2.
+
+Now suppose there are cutting disks that intersect A0.
+
+Using the parallelism between bd Mi and bd Mi-2, we can isotope A to
+a essential annulus with both boundary curves in bd Mi.
 
 This means that considering only the odd terms in this alternating
 decomposition, we have a Haken hierarchy. Finite depth immediately follows from
