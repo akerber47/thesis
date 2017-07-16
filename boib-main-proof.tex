@@ -537,10 +537,34 @@ annulus.
 
 We claim that $S$ satisfies the pared lifting criterion.
 
-Consider an arbitrary parabolic core curve $\alpha \cin F_a \cin \bd M$. We
-know by construction of $Q_a$ that the pared lifting pattern components of
-$\alpha$ in $Q_a$ form a union of arcs.  We claim that the pared lifting
-pattern components of $\alpha$ in $Q_b$ ($b \neq a$) also form a union of arcs.
+Fix a boundary component $F_a \cin \bd M$. Consider an arbitrary parabolic core
+curve $\alpha \cin F_a$. We claim that the pared lifting pattern components of
+$\alpha$ in $S$ do not connect to form a closed curve $\widetilde{\alpha}$.  If
+we can prove this for every boundary component $F_a$ and parabolic curve
+$\alpha$, $S$ will satisfy the pared lifting criterion.  We break down the
+possibilities for $\widetilde{\alpha}$ as follows.
+
+\begin{enumerate}
+
+\item $\widetilde{\alpha} \cin Q_a$.
+
+\item $\widetilde{\alpha} \cin Q_b$, for some $b \neq a$.
+
+\item $\widetilde{\alpha}$ intersects some $Q_b$, for $b \neq a$, in at least
+one arc (that is properly embedded in $Q_b$).
+
+\end{enumerate}
+
+It is clear that these are all the possibilities, as if $\widetilde{\alpha}$ is
+not contained in a single jigsaw surface of $S$, it must intersect at least two
+of them. Therefore at least one of the surfaces it intersects is not $Q_a$. We
+now claim that all of these are in fact impossible.
+
+By construction of $Q_a$, the pared lifting pattern components of $\alpha$ in
+$Q_a$ form a union of arcs. Hence (1) is impossible.
+
+We now claim that (2) is impossible as well. That is, the pared lifting pattern
+components of $\alpha$ in $Q_b$ ($b \neq a$) also form a union of arcs.
 
 Intuitively, this is because the only way to get a pattern component of
 $\alpha$ in a page in $Q_b$ is to have a page $B$ such that $F_a$ and $F_b$
@@ -561,23 +585,20 @@ $F_b \cap C$ may have one binding annulus $A$ in common, but they cannot
 possibly have another in common.  Since $\alpha \cin F_a$, it induces pattern
 components in $F_a \cap C$, and any surface parallel to those. However, it
 cannot induce pattern components in a surface parallel to $F_b \cap C$. Hence
-$\alpha'$ cannot connect to a pattern arc in any spine adjacent to $B$. This
-proves the claim.
+$\alpha'$ cannot connect to a pattern arc in any spine adjacent to $B$. So (2)
+is impossible.
 
-However, we also know that $Q_b$ has sparse defect. This means that if
-$\alpha'$ is contained in a component of $B \cap Q_b$, at least one endpoint of
-$\alpha'$ must be attached to a component of $C \cap Q_b$, where $C$ is a spine
-adjacent to $B$. That is, the endpoints of $\alpha'$ cannot both be free to
-attach to the annuli we added in the final step. But $\alpha$ has no pattern
-components in $C \cap Q_b$, so this $\alpha'$ cannot possibly be part of
-a closed curve in the pared lifting pattern of $S$.
+Finally, we claim that (3) is impossible. We know that $Q_b$ has sparse defect.
+This means that if $\alpha'$ is contained in a component of $B \cap Q_b$, at
+least one endpoint of $\alpha'$ must be attached to a component of $C \cap
+Q_b$, where $C$ is a spine adjacent to $B$.  That is, the endpoints of
+$\alpha'$ cannot both be free to attach to the annuli we added in the final
+step. But as shown above, $\alpha$ has no pattern components in $C \cap Q_b$,
+so this $\alpha'$ cannot possibly extend far enough to have both endpoints in
+$\bd Q_b$  Hence $\alpha'$ cannot be properly embedded, so cannot be part of
+a closed curve in $S$. So (3) also cannot occur.
 
-This argument applies to any segment of the pared lifting pattern in any page
-component of the $Q_b$. Hence any closed curve will have to intersect only
-$Q_a$ and the annuli added in the final step. But this is impossible, as the
-pared lifting pattern on annuli consists only of transverse arcs (as $M$ is
-reduced), and by construction the pared lifting pattern on $Q_a$ consists only
-of arcs connecting different boundary components. Therefore $S$ satisfies the
-pared lifting criterion, and hence $S$ is (QF). This completes the proof.
+Therefore $S$ satisfies the pared lifting criterion, and hence $S$ is (QF).
+This completes the proof.
 
 \end{proof}
