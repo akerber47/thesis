@@ -3,8 +3,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 We discuss some algebraic properties that will allow us to perform nice
-topological constructions. These are standard definitions. See \cite{LR} or
-\cite{AFW} for an overview and survey of recent work.
+topological constructions. These are standard definitions. See
+\cite{Agolsurvey}, \cite{LR}, or \cite{AFW} for an overview and survey of
+recent work.
 
 \begin{defn}
 
@@ -13,10 +14,10 @@ $g \in G$, there exists a finite index subgroup $H<G$ such that $g \notin H$.
 
 Let $G$ be a group, and $H$ a subgroup of $G$. $H$ is \emph{separable} in $G$
 if for any $g \in G$, $g \notin H$, there exists a finite index subgroup $H'<G$
-such that $H'>H$, and $g \notin H'$.
+such that $H' \geq H$, and $g \notin H'$.
 
-$G$ is \emph{subgroup separable}, or \emph{LERF}, if all its finitely generated
-subgroups are separable.
+$G$ is \emph{subgroup separable}, or \emph{LERF}, if all of its finitely
+generated subgroups are separable.
 
 \end{defn}
 
@@ -43,7 +44,7 @@ See \cite{LR}.
 
 $G$ is LERF if and only if for any $g_1,\dots,g_n \in G$, $H<G$, $g_1,\dots,g_n
 \notin H$ there exists a map $\phi \colon G \to F$ to a finite group such that
-$\phi(g_i) \notin \phi(H)$.
+$\phi(g_i) \notin \phi(H)$ for all $i$.
 
 \end{cor}
 
@@ -58,73 +59,53 @@ is trivial.
 
 \end{proof}
 
-
-%Note that in this entire paper, \emph{surface groups} will refer to
-%fundamental groups of closed surfaces (compact without boundary).  TODO move
-%this sentence somewhere. Probably want to clarify what I mean by hyperbolic
-%3-manifold, etc also... This goes EARLY in background section (BEFORE I even
-%start talking about books of I-bundles!!
-
 A priori it is not obvious that any well-known groups are LERF. It is
 a classical theorem of Hall \cite{Hall} that free groups are LERF. Peter Scott
 \cite{Scott} showed that surface groups are LERF as well. However, we will need
 stronger results in this paper. Deep work of Wise \cite{Wise}, building on work
-of Hanglund-Wise \cite{HaglundWise} and Hsu-Wise \cite{HsuWise} shows that
-every non-closed hyperbolic 3-manifold has LERF fundamental group. We note that
-the closed case has also been settled by Agol \cite{Agol}, incorporating work
-of Bergeron-Wise \cite{BergeronWise} and Kahn-Markovic \cite{KM}. Since we're
+of Haglund-Wise \cite{HaglundWise} and Hsu-Wise \cite{HsuWise} shows that every
+non-closed hyperbolic 3-manifold has LERF fundamental group.  We note that the
+closed case has also been settled by Agol \cite{Agol}, incorporating work of
+Bergeron-Wise \cite{BergeronWise} and Kahn-Markovic \cite{KM}. Since we're
 studying books of $I$-bundles, we will use the former result in this paper.
 
 Note that Wise's theorem is actually an extremely deep fact. Wise's proof
 actually shows that hyperbolic 3-manifold with boundary groups satisfy
 a technical condition, namely that they are virtually compact special.
-dditional work by Haglund and Haglund-Wise demonstrates that a virtual compact
-special group is virtually a quasiconvex subgroup of a right-angled Artin
-group, and geometrically finite subgroups are separable.  It follows by the
-tameness theorem that hyperbolic 3-manifold groups are LERF.
-
-%lemma (lifting to embeddings)
-%
-%Let M be a complete hyperbolic 3-manifold, and \phi: S to M be
-%a \pi_1-injective map such that H=\phi*\pi_1S is quasiFuchsian. Then \phi is
-%homotopic to a map
-%%which
-%lifts to an embedding in a cover of M. Furthermore, we can choose such a cover
-%to be finite-sheeted.
-%
-% TODO
-%This belongs in background somewhere. Reduction to finite-sheeted cover means
-%this is an application of separability, so maybe put with topological facts
-%there?
-
-% Update: This location still doesn't quite make sense. Keep at it..
+Additional work by Haglund-Wise \cite{HaglundWise1}
+demonstrates that a virtual compact special group is virtually a quasi-convex
+subgroup of a right-angled Artin group. Therefore later work by Haglund
+\cite{Haglund} applies in this case, showing that these groups are in fact
+LERF. See Agol's survey \cite{Agolsurvey} for a more detailed overview.
 
 We now describe some elementary topological consequences of LERF. These exact
 statements are new, but most of the following propositions are simple
 translations of the conclusions of LERF into topological statements about loops
-and covers. In all of the following we assume $X$ is connected and locally
-non-pathological (that is, we make the assumptions needed to apply elementary
-covering space theory).
+and covers. In all of the following we assume $X$ is connected, path connected,
+and semi-locally simply connected. That is, we make the assumptions needed to
+apply elementary covering space theory. \emph{We also assume that $\pi_1X$ is
+LERF.}
+
 
 \begin{prop}\label{P:lerf1}
 
-Let $X$ be a space such that $\pi_1X$ is LERF. Fix a basepoint $x_0 \in X$.
-Suppose that $Y \cin X$ is a homotopically nontrivial connected subspace
+Fix a basepoint $x_0 \in X$.  Suppose that $Y \cin X$ is a homotopically
+nontrivial connected path-connected semi-locally simply connected subspace
 containing $x_0$, $\pi_1Y$ is finitely generated, and $\alpha$ is a loop at
-$x_0$ which is not homotopic into $Y$.  Then there is a finite-sheeted regular
-cover $p \colon (X',x_0') \to (X,x_0)$ with the property that the lift
-$\alpha'$ of $\alpha$ to $x_0'$ connects two different connected components of
-$p^{-1}(Y)$.
+$x_0$ which is not homotopic into $Y$ (relative to the basepoint $x_0$). Then
+there is a finite-sheeted regular cover $p \colon (X',x_0') \to (X,x_0)$ with
+the property that the lift $\alpha'$ of $\alpha$ to $x_0'$ connects two
+different connected components of $p^{-1}(Y)$.
 
 \end{prop}
 
 \begin{proof}
 
-We apply Proposition~\ref{P:lerfmap}. Let $g = \alpha$ and $H = \pi_1Y$. By
-assumption, $H$ is finitely generated and $g \notin H$. Therefore there exists
-a map $\phi \colon G \to F$ such that $\phi(g) \notin \phi(H)$, where $F$ is
-a finite group.  Without loss of generality we can assume this map is
-surjective (take its image). Let $H' = ker \phi$. Now $H'$ is a finite index
+We apply Proposition~\ref{P:lerfmap}. Let $g = \alpha$ and $H = \pi_1Y \leq
+\pi_1X$.  By assumption, $H$ is finitely generated and $g \notin H$. Therefore
+there exists a map $\phi \colon G \to F$ such that $\phi(g) \notin \phi(H)$,
+where $F$ is a finite group.  Without loss of generality we can assume this map
+is surjective (take its image). Let $H' = ker \phi$. Now $H'$ is a finite index
 normal subgroup, so it induces a finite sheeted regular cover $p \colon X' \to
 X$.  Let $x_0'$ be an arbitrary lift of $x_0$ to $X'$. We claim that
 $(X',x_0')$ has the desired property.  $X'$ is a regular cover, so it has
@@ -139,9 +120,9 @@ endpoint must lie in a different connected component of $p^{-1}(Y)$.
 
 \begin{prop}\label{P:lerf2}
 
-Let $X$ be a space such that $\pi_1X$ is LERF. Fix a basepoint $x_0 \in X$.
-Suppose that $\alpha$ and $\beta$ are homotopically nontrivial loops at $x_0$
-such that $\alpha$ is not homotopic to a multiple of $\beta$. Then there is
+Fix a basepoint $x_0 \in X$.  Suppose that $\alpha$ and $\beta$ are
+homotopically nontrivial loops at $x_0$ such that $\alpha$ is not homotopic
+(relative to the basepoint $x_0$) to a multiple of $\beta$.  Then there is
 a finite-sheeted regular cover $p \colon (X',x_0') \to (X,x_0)$ with the
 property that, when we consider the lift $\alpha'$ of $\alpha$ to $x_0'$ has
 its right endpoint at a point not reachable by lifting multiples of $\beta$ to
@@ -164,20 +145,19 @@ proof.
 
 \begin{prop}\label{P:lerf3}
 
-Let $X$ be a space such that $\pi_1X$ is LERF. Fix a basepoint $x_0 \in X$.
-Suppose that we have a homotopically nontrivial loop $\alpha$ at $x_0$ of
-infinite order in $\pi_1X$.  Then given an integer $k>0$, there is
-a finite-sheeted regular cover $p \colon (X',x_0') \to (X,x_0)$ with the
-following property.  Consider the component $C$ of $p^{-1}(\alpha)$ obtained by
-lifting multiples of $\alpha$ to $x_0'$. Let $d$ be the degree of the
-restricted covering map $p|C \colon C \to \alpha$. Then $k \mid d$.
+Fix a basepoint $x_0 \in X$.  Suppose that we have a homotopically nontrivial
+loop $\alpha$ at $x_0$ of infinite order in $\pi_1X$.  Then given an integer
+$k>0$, there is a finite-sheeted regular cover $p \colon (X',x_0') \to (X,x_0)$
+with the following property.  Consider the subset $C$ of $p^{-1}(\alpha)$
+obtained by lifting multiples of $\alpha$ to $x_0'$. Let $d$ be the degree of
+the restricted covering map $p|C \colon C \to \alpha$. Then $k \mid d$.
 
 \end{prop}
 
 \begin{proof}
 
 Let $H = \langle\alpha^k\rangle$. Since $\alpha$ has infinite order,
-$\alpha,\alpha2,dots,\alpha^{k-1} \notin H$. Apply Corollary~\ref{C:lerfmap'}
+$\alpha,\alpha^2,\dots,\alpha^{k-1} \notin H$. Apply Corollary~\ref{C:lerfmap'}
 to find a map $\phi \colon G \to F$ such that
 $\phi(\alpha),\dots,\phi(\alpha^{k-1}) \notin \phi(H)$. Let $H' = ker \phi$,
 and $p \colon X' \to X$ be the associated finite-sheeted regular cover.  We
@@ -190,18 +170,26 @@ is trivial, that is, the deck transformation induced by $\alpha$ has order $d$.
 We cannot have $d<k$, as $\phi(\alpha^d)=\phi(\alpha)^d=1 \in \phi(H)$
 contradicts the LERF assumption on $\phi$. Write $d = m_1k + m_2$, for some
 $m_1,m_2 \in Z, 0 \leq m_2 < k$.
-$\phi(\alpha^d)=1=\phi(\alpha^m_1k)\phi(\alpha^m_2)$.  That is,
-$\phi(\alpha^m_2)=\phi(\alpha^k)^-m_1$. The right-hand side is in $H$. By the
-LERF assumption on $\phi$, this forces $m_2=0$. So $d \mid k$.
+$\phi(\alpha^d)=1=\phi(\alpha^{m_1k})\phi(\alpha^{m_2})$.  That is,
+$\phi(\alpha^{m_2})=\phi(\alpha^k)^{-m_1}$. The right-hand side is in
+$\phi(H)$.  By the LERF assumption on $\phi$, this forces $m_2=0$. So $d \mid
+k$.
 
 \end{proof}
+
+We also have the following propositions, which generalize the above
+propositions to multiple simultaneous basepoints and loops/subspaces at those
+basepoints. Note that the following three propositions are equivalent to saying
+that the three properties above are preserved under taking covers.
 
 \begin{prop}\label{P:lerf1'}
 
 Consider a finite collection of basepoints $x_1,\dots,x_n$ with corresponding
-loops $\alpha_i$ and subspaces $Y_i$ at each basepoint $x_i$. Then there is
+loops $\alpha_i$ and subspaces $Y_i$ at each basepoint $x_i$. Assume all the
+$Y_i$ are homotopically nontrivial connected path-connected semi-locally simply
+connected subspaces with finitely generated fundamental group. Then there is
 a finite-sheeted regular cover $X' \to X$ such that each pair $\alpha_i$,$Y_i$
-satisfies the conclusion of Proposition~\ref{P:lerf1}. Note that $X'$ is
+satisfies the conclusion of Proposition~\ref{P:lerf1}.  Note that $X'$ is
 regular, so the choice of lifted basepoints is arbitrary.
 
 \end{prop}
