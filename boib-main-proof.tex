@@ -332,16 +332,15 @@ disjoint copies above its respective boundary piece $F_i$.  So we have enough
 copies to make our choices above.
 
 We begin adding annuli that are copies of the annuli $F \cap C_j = F_j'$. Given
-any such annulus $F_j'$, we know there are exactly two pages $B_{i1}$ and
-$B_{i2}$ such that the two boundary components of $F_j'$ are attached to
-$F_{i1}$ and $F_{i2}$ in $F$.  There are in fact two specific boundary
-components $\gamma_1$ of $F_{i1}$ and $\gamma_2$ of $F_{i2}$ that are attached
-in this way.  Each time we add an annulus copy of $F_j'$ to $Q_0$, we must
-attach it to two curves $\widetilde{gamma_1}$ and $\widetilde{\gamma_2}$ which
-are lifted copies of $\gamma_1$ and $\gamma_2$ in components of $Q_0 \cap
-B_{i1}$ and $Q_0 \cap B_{i2}$, respectively.  This is necessary to ensure that
-$Q_0$ remains a jigsaw surface that can be extended to a cover of
-$F$.
+any such annulus $F_j'$, we know there are exactly two pages $B_{i_1}$ and
+$B_{i_2}$ such that the two boundary components of $F_j'$ are attached to
+$F_{i_1}$ and $F_{i_2}$ in $F$.  There are in fact two specific boundary
+components $\gamma_1$ of $F_{i_1}$ and $\gamma_2$ of $F_{i_2}$ that are
+attached in this way.  Each time we add an annulus copy of $F_j'$ to $Q_0$, we
+must attach it to two curves $\widetilde{\gamma_1}$ and $\widetilde{\gamma_2}$
+which are lifted copies of $\gamma_1$ and $\gamma_2$ in components of $Q_0 \cap
+B_{i_1}$ and $Q_0 \cap B_{i_2}$, respectively.  This is necessary to ensure
+that $Q_0$ remains a jigsaw surface that can be extended to a cover of $F$.
 
 We add annuli one at a time. Each time we add an annulus, we make sure to add
 in such a way that the resulting surface still has no protoloops. We also
@@ -417,8 +416,8 @@ Now, as above, the arcs incident to $\widetilde{\gamma}$ hit at most $C_1$
 other boundary components. These are our possible $\widetilde{\delta}$. Each of
 these has at most $C_1$ incident arcs itself, one of which returns to
 $\widetilde{\gamma}$, leaving $C_1-1$ that we need to care about. We have
-a total of at most $i_a*(C_1-1)$ many "distance two" available boundary
-components. If we attach our annulus to one of these boundary components, we
+a total of at most $C_1(C_1-1)$ many "distance two" available boundary
+components.  If we attach our annulus to one of these boundary components, we
 will produce a surface with protoloops.
 
 By construction of $Q_1$, there are no more legal gluings. So every remaining
@@ -443,13 +442,15 @@ downstairs, as discussed above, there are at most $C_1^2$ many elements of $\bd
 Q_1 - \cR$ above it.  For each of these, there are at most $C_1^2$ we could
 glue to above $\gamma'$ that produce a surface with protoloops. We now allow
 ourselves to glue to the reserve boundary components. Assume that $m\geq
-2C_1^2$.  Then attach each leftover (non-reserve) lift of $\gamma$ to an
-element of $\cR$ above $\gamma'$ with a copy of the annulus $F_j'$, one at
-a time.  At any point there will be at least $i^2+1$ elements of $\cR$
-remaining above $\gamma'$, so we'll always be able to choose one such that our
-surface still has no protoloops.  Repeat this process for each $\gamma$ to
-construct $Q$.  Since we glued all the leftovers, it immediately follows that
-$\bd Q \cin \cR$, and therefore $Q$ satisfies (3).
+2C_1^2$.  Then attach each leftover (non-reserve) lift $\widetilde{\gamma}$ of
+$\gamma$ to an element of $\cR$ above $\gamma'$ with a copy of the annulus
+$F_j'$, one at a time.  At any point there will be at least $C_1^2+1$ elements
+of $\cR$ remaining above $\gamma'$. As in the proof of the claim, at most
+$C_1^2$ of these elements have arc connections with $\widetilde{\gamma}$ that
+will cause that gluing to yield protoloops. So we'll always be able to choose
+one such that our surface still has no protoloops.  Repeat this process for
+each $\gamma$ to construct $Q$.  Since we glued all the leftovers, it
+immediately follows that $\bd Q \cin \cR$, and therefore $Q$ satisfies (3).
 
 Let's analyze the possibilities for the defect of $Q$, that is, the number of
 boundary components.  Above each $\gamma \cin \bd F_i$, $\cR$ has $m$ elements.
@@ -477,21 +478,24 @@ we'll need to normalize them so they all have the same number of boundary
 components near each spine, so we can do a local construction with annuli in
 each spine.
 
-Let $M_1 = max a C_1(a)$, that is, the maximum number of components of $P \cap
-\cap B_i$ incident to a single boundary component of $\bd M \cap B_i$ for any
-spine $B_i$. By the inequality in Lemma~\ref{L:jigsaw}, for each $\gamma \cin
-\bd F_i$, $\#\{\bd F_i \text{ above } \gamma\} \geq m - M_1^2$. We want to make
-this an equality for each $Q_a$ by adding some more annuli to $Q_a$ in the same
-way that we added annuli in Lemma~\ref{L:jigsaw}.
+Let $C_a$ be the constant $C_1$ we computed above for each jigsaw surface
+$Q_a$.  Let $C_{\mathrm{max}} = \operatorname{max}_a C_a$, that is, the maximum
+number of components of $P \cap B_i$ incident to a single boundary component of
+$\bd M \cap B_i$ for any spine $B_i$. By the inequality in
+Lemma~\ref{L:jigsaw}, for each $\gamma \cin \bd F_i$, $\#\{\bd F_i \text{ above
+} \gamma\} \geq m - C_{\mathrm{max}}^2$. We want to make this an equality for
+each $Q_a$ by adding some more annuli to $Q_a$ in the same way that we added
+annuli in Lemma~\ref{L:jigsaw}.
 
-Again, we use the size of the reserve to our advantage. Assuming $m\geq M_1^2
-+ C_1(a)^2$ for each $F_a$, by the same argument as the lemma, there will
-always be choices remaining from the reserve to make the gluing. Combining
-these all we need is $m\geq 2M_1^2$.
+Again, we use the size of the reserve to our advantage. Assuming $m\geq
+C_{\mathrm{max}}^2 + C_a^2$ for each $F_a$, by the same argument as the lemma,
+there will always be choices remaining from the reserve to make the gluing.
+Combining these all we need is $m\geq 2C_{\mathrm{max}}^2$.
 
 By abuse of notation, we'll call these normalized surfaces $Q_a$ also (the
-non-normalized ones will not come up again). Each has exactly $M = m - M_1^2$
-many boundary components above any $\gamma \cin \bd F_i$.
+non-normalized ones will not come up again). Each has exactly $M
+= m - C_{\mathrm{max}}^2$ many boundary components above any $\gamma \cin \bd
+F_i$.
 
 Build a single closed surface $S$ by attaching annuli to the $Q_a$ as follows.
 
@@ -512,9 +516,9 @@ meridian and an (arbitrary) starting point along it, and label the pages $1,
 an ordering of the boundary components of each binding  annulus.  Using this,
 label the $d(C)$ gluing annuli by $A_1,\dots,A_{d(C)}$. Also label the $2d(C)$
 binding annulus boundary components by $\gamma_1^-,\gamma_1^+,\dots,
-\gamma_q^-,\gamma_q^+$, where $\gamma_i^-$ and $\gamma_i^+$ are the two sides
-of the binding annulus for the $i$th page.  Extend these labels to the
-corresponding boundary components of the page boundaries attached to the
+\gamma_{d(C)}^-,\gamma_{d(C)}^+$, where $\gamma_i^-$ and $\gamma_i^+$ are the
+two sides of the binding annulus for the $i$th page.  Extend these labels to
+the corresponding boundary components of the page boundaries attached to the
 binding annuli.  Remember that all these labels are downstairs - that is,
 they're labels of pieces of $\bd M$.
 
