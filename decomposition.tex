@@ -187,19 +187,35 @@ Let M is compact orientable irreducible with incompressible boundary, and $f
 a properly embedded annulus which is essential - that is, incompressible,
 boundary incompressible, and not parallel to an annulus in bd M. Then f is
 homotopic to a map such that f(S) cap A is a union of multiples of the core
-curve of A. For a disjoint union of annuli, we have the same result.
+curve of A, each of which pulls back to an essential curve in S. For a disjoint
+union of annuli, we have the same result.
 
 end prop
 
 proof
 
 Homotope f to be transverse to A. As earlier, f-1(A) is a union of simple
-closed curves in S.
-%TODO
+closed curves in S. Each curve that bounds a disk in S is contractible in M,
+hence its image is contractible in A since A is essential. These two
+contractions, each of which is a singular map of a disk into M, together induce
+a map S2 to M. Since M is irreducible, it is aspherical. So this sphere is
+contractible, that is, there is a singular map B3 to X filling it. Homotoping
+across this sphere, we can remove this intersection between f(S) and A. Doing
+this repeatedly ensures that all intersection curves in f(S) cap A pull back to
+essential curves in S.
+
+Similarly, any component of f(S) cap A is either homotopic to a multiple of the
+core curve or to a contractible loop. We can locally homotope f such that f(S)
+intersects A in curves of this form. Then each contractible curve must
+correspond to a curve that's contractible in S as well, by pi1-injectivity. By
+the same ball argument as above, we can homotope to eliminate any such
+intersection. These homotopies are all local, so don't affect any other
+intersections between f(S) and A, or between f(S) and other annuli. Therefore
+we can do this for all intersections between f(S) and for a disjoint union of
+annuli. This completes the proof.
 
 end proof
 
-%TODO similar fact for pared structure + annuli -> must cross transversely
 
 We will need the following definition.
 
@@ -339,8 +355,10 @@ with the decomposition annuli. Note that our propositions above are not
 sufficient to push the pared structures repeatedly down the hierarchy, as after
 the first annular step in the decomposition the pared locus includes rectangles
 (intersecting the annulus cuts essentially) in addition to annuli and tori.
+This requires the notion of some kind of boundary pattern to keep track of
+where in the boundary we cut along annuli and disks at each inductive step.
 Therefore, to make this argument precise, we'll need to generalize the above
-propositions. But this ought to be straightforward.
+propositions. This ought to be straightforward.
 
 At the bottom of the hierarchy is a union of acylindrical 3-manifolds and
 balls. We make the following conjecture:
