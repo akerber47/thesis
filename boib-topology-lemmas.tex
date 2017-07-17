@@ -135,8 +135,10 @@ Finally, our definition does technically allow for $M$ to consist of a single
 page and no spines. Since $M$ is connected, this is the only case where $M$ can
 contain a page with closed base surface. In this case, the page's base surface
 obviously must have negative Euler characteristic in order for $M$ to be
-nonelementary hyperbolic.  Combining all these cases, we only want to consider
-base surfaces with negative Euler characteristic.
+nonelementary hyperbolic. (Note that a thickened torus is realized by
+a Kleinian group, but this group must be elementary). Combining all these
+cases, we only want to consider base surfaces with negative Euler
+characteristic.
 
 We make the following simple observation.
 
@@ -178,6 +180,123 @@ See \cite[Theorem 10.5]{He}.
 
 \end{proof}
 
+This fact reflects the origin of the book of $I$-bundles construction from
+a relative JSJ decomposition.
+
+To analyze the boundary components of a book of $I$-bundles, we'll need
+a couple more simple definitions.
+
+\begin{defn}
+
+Let $M$ be a book of $I$-bundles, and $C$ a spine in $M$.  The \emph{valence}
+$v(C)$ is the number of binding annuli that intersect $C$ or, equivalently,
+that are contained in $\bd C$.
+
+Let $A$ be a binding annulus in $M$. Note that $A$ lies in the boundary of
+exactly one spine $C_A$. The \emph{degree} of $A$ is the geometric intersection
+number $i(A,D)$, where $D$ is a meridian disk of $C_A$. That is, it's the
+minimal number of components of $A \cap D$ as we properly isotope $D \cin C_A$
+and $A \cin bd C_A$.
+
+In fact, note that all binding annuli in a given spine $C$ must have the same
+degree. This is because their core curves are curves on a torus, and any
+nontrivial curves with different slopes must intersect. However, by definition
+binding annuli are disjoint. Since they have the same slope, they intersect
+a meridian curve (slope $\infty$) the same number of times.  Therefore, we
+refer to this as the \emph{degree} $d(C)$ of the spine $C$.
+
+\end{defn}
+
+\begin{prop}\label{P:1ptcap}
+
+Let $M$ be a book of $I$-bundles. Recall that we require that $M$ has
+incompressible boundary. Then $M$ cannot have any spines $C$ such that
+$v(C)=0$, $d(C)=0$, or $v(C)=d(C)=1$. Furthermore, $M$ cannot have any leftover
+binding annuli.
+
+\end{prop}
+
+\begin{proof}
+
+Any spine $C$ with $v(C)=0$ forces $C$ to be a solid torus component. This does
+not have incompressible boundary (it also cannot be nonelementary hyperbolic).
+
+Any spine $C$ with $d(C)=0$ has a meridian disk that properly embeds in the
+resulting book of $I$-bundles, since it's disjoint from all the binding annuli.
+This is a boundary compressing disk.
+
+% The following case is my old nemesis, the "one-point intersection lemma"
+
+Let $C$ be a spine with $v(C)=d(C)=1$. Let $A$ be the sole binding annulus, $B$
+the attached page, and $\Si$ its base surface. Let $\beta$ be the projection of
+$A$ down to $\Si$. $\beta$ is a boundary component of $\Si$. Let $\alpha$ be an
+essential arc in $\Si$ with both (distinct) endpoints in $\beta$. Note that
+such an $\alpha$ must exist as $\Si$ has negative Euler characteristic. The
+preimage of $\alpha$ under the projection is a rectangle $R \cin B$ with two
+edges $\gamma_1$,$\gamma_2$ in the the side boundary of $B$, and two edges
+$\delta_1$,$\delta_2$ that are parallel proper essential arcs in $A$.  Since
+$A$ intersects each meridian disk of $C$ exactly once, and does so in a single
+essential arc, we can construct two meridian disks $D_1$, $D_2$ such that $D_1
+\cap R = \delta_1$, and $D_2 \cap R = \delta_2$.  Let $D = D_1 \cup_{\delta_1}
+R \cup_{\delta_2} D_2$.
+
+We claim that $D$ is a compression disk for $\bd M$. It is properly embedded:
+$D_1$ and $D_2$ are properly embedded in $C$, $R$ is properly embedded in $B$,
+and the union lines up the boundary components along $A$. It suffices to show
+that $\bd D$ does not bound a disk in $\bd M$. The options for such a disk $D'$
+are very limited.  $C \cap \bd M$ is an annulus, and $\bd D$ divides it into
+two disk regions. $D' \cap C$ must be one of these two regions, which implies
+it intersects $\bd A$ in two parallel boundary arcs, each with one endpoint in
+$\delta_1$ and one in $\delta_2$.  Call these arcs $\epsilon_1$ and
+$\epsilon_2$.  But now we can see that the only way to bound a disk in $\bd M$
+is if $\gamma_1 \cup \epsilon_1$ and $\gamma_2 \cup \epsilon_2$ bounded a disk.
+But if this disk were inside $B$, either of these would project down to $\Si$
+to contradict the assumption that $\alpha$ was essential. $\bd D \cin B \cup
+C$, so if $D'$ essentially intersected any other spine or page it would have to
+do so in an innermost disk. But $D' \cin \bd M$, so it can only essentially
+intersect a page in a surface of negative Euler characteristic and a spine in
+an annulus. So this is impossible, and $D'$ cannot intersect any spines or
+pages outside of $B$ and $C$. This proves that $D$ is a compression disk.
+
+Any leftover (un-glued) binding annulus on a page induces a compression disk as
+well. Let $B$ be a page with base surface $\Si$ and $A$ a binding annulus in
+$\bd B$ which is not glued. That is, $A \cin \bd M$. $A$ corresponds to
+a boundary curve $\beta \cin \Si$. Choose a proper essential arc $\alpha \cin
+\Si$ with both endpoints in $\beta$. The preimage of $\alpha$ under the bundle
+map is a properly embedded disk $D \cin M$. We claim that $D$ is a compression
+disk. To see this, observe that any boundary disk $D' \cin B \cap \bd M$ would
+contradict that $\alpha$ was essential, by the same argument as above. $D'$
+cannot intersect any other pages or spines for the same reason as well. This
+proves that $D$ is a compression disk, completing the proof.
+
+\end{proof}
+
+We make a few observations about the boundary of $M$. Each page contributes two
+(if it's a trivial $I$-bundle) or one (if it's a twisted $I$-bundle) side
+boundary pieces to the boundary of $M$. Each spine contributes a number of
+disjoint annuli equal to its valence, that is, the number of attached pages.
+These are the annuli in its boundary which lie in between the binding annuli.
+As these glue up to form the boundary components of $M$, each spine annulus
+connects two side boundaries of "adjacently glued" pages. This intuitive
+picture will be very important later as we construct quasi-Fuchsian surfaces.
+
+\begin{prop}
+
+Every book of $I$-bundles that does not violate Proposition~\ref{P:1ptcap} does
+in fact have incompressible boundary. (That is, our definitions are
+consistent).
+
+\end{prop}
+
+\begin{proof}
+
+%TODO
+\textbf{TODO}
+
+\end{proof}
+
+We now prove a few key facts about the binding annuli.
+
 \begin{prop}\label{P:pagespineII}
 
 Let $X$ be a page or spine in a book of $I$-bundles $M$. Then $X$ is
@@ -208,124 +327,15 @@ In fact, we have the following proposition:
 
 \begin{prop}
 
-Let $M$ be a book of $I$-bundles. Recall we assumed that $\bd M$ is
-incompressible. Then in fact all the binding annuli are incompressible (ie
-$\pi_1$-injective), boundary incompressible, and not boundary parallel in $M$.
+Let $M$ be a book of $I$-bundles. Recall that $\bd M$ is incompressible.  Then
+in fact all the binding annuli are incompressible (ie $\pi_1$-injective),
+boundary incompressible, and not boundary parallel in $M$.
 
 \end{prop}
 
 \begin{proof}
 
 %TODO
-
-\end{proof}
-
-This fact reflects the origin of the book of $I$-bundles construction from
-a relative JSJ decomposition.
-
-To analyze the boundary components of a book of $I$-bundles, we'll need
-a couple more simple definitions.
-
-\begin{defn}
-
-Let $M$ be a book of $I$-bundles, and $C$ a spine in $M$.  The \emph{valence}
-$v(C)$ is the number of binding annuli that intersect $C$ or, equivalently,
-that are contained in $\bd C$.
-
-Let $A$ be a binding annulus in $M$. Note that $A$ lies in the boundary of
-exactly one spine $C_A$. The \emph{degree} of $A$ is the geometric intersection
-number $i(A,D)$, where $D$ is a meridian disk of $C_A$. That is, it's the
-minimal number of components of $A \cap D$ as we properly isotope $D \cin C_A$
-and $A \cin bd C_A$.
-
-In fact, note that all binding annuli in a given spine $C$ must have the same
-degree. This is because their core curves are curves on a torus, and any curves
-with different slopes must intersect. However, by definition binding annuli are
-disjoint. Since they have the same slope, they intersect a meridian curve
-(slope $\infty$) the same number of times.  Therefore, we refer to this as the
-\emph{degree} $d(C)$ of the spine $C$.
-
-\end{defn}
-
-\begin{prop}\label{P:1ptcap}
-
-Let $M$ be a book of $I$-bundles. Recall that we require that $M$ has
-incompressible boundary. Then $M$ cannot have any spines $C$ such that
-$v(C)=0$, $d(C)=0$, or $v(C)=d(C)=1$.
-
-\end{prop}
-
-\begin{proof}
-
-Any spine $C$ with $v(C)=0$ forces $C$ to be a solid torus component. This does
-not have incompressible boundary (it's also not hyperbolic).
-
-Any spine $C$ with $d(C)=0$ has a meridian disk that properly embeds in the
-resulting book of $I$-bundles, since it's disjoint from all the binding annuli.
-This is a boundary compressing disk.
-
-% The following case is my old nemesis, the "one-point intersection lemma"
-
-Let $C$ be a spine with $v(C)=d(C)=1$. Let $A$ be the sole binding annulus, $B$
-the attached page, and $\Si$ its base surface. Let $\beta$ be the projection of
-$A$ down to $\Si$. $\beta$ is a boundary component of $\Si$. Let $\alpha$ be an
-essential arc in $\Si$ with both (distinct) endpoints in $\beta$. Note that
-such an $\alpha$ must exist as Si has negative Euler characteristic. The
-preimage of $\alpha$ under the projection is a rectangle $R \cin B$ with two
-edges $\gamma_1$,$\gamma_2$ in the the side boundary of $B$, and two edges
-$\delta_1$,$\delta_2$ that are parallel proper essential arcs in $A$.  Since
-$A$ intersects each meridian disk of $C$ exactly once, and does so in a single
-essential arc, we can construct two meridian disks $D_1$, $D_2$ such that $D_1
-\cap R = \delta_1$, and $D_2 \cap R = \delta_2$.  Let $D = D_1 \cup_{\delta_1}
-R \cup_{\delta_2} D_2$.
-
-We claim that $D$ is a compression disk for $\bd M$. It is properly embedded:
-$D_1$ and $D_2$ are properly embedded in $C$, $R$ is properly embedded in $B$,
-and the union lines up the boundary components along $A$. It suffices to show
-that $\bd D$ does not bound a disk in $\bd M$. The options for such a disk $D'$
-are very limited.  $C \cap \bd M$ is an annulus, and $\bd D$ divides it into
-two disk regions. $D' \cap C$ must be one of these two regions, which implies
-it intersects $A$ in two parallel boundary arcs, each with one endpoint in
-$\delta_1$ and one in $\delta_2$.  Call these arcs $\epsilon_1$ and
-$\epsilon_2$.  But now we can see that the only way to bound a disk in $\bd M$
-is if $\gamma_1 \cup \epsilon_1$ or $\gamma_2 \cup \epsilon_2$ bounded a disk.
-But if this disk were inside $B$, either of these would project down to $\Si$
-to contradict the assumption that $\alpha$ was essential. Note that the disk
-cannot intersect any spines or pages outside of $B$ and $C$, as its boundary is
-entirely contained within $B \cup C$ so we can use standard innermost
-disk/irreducibility arguments to push it out of anywhere else. This proves that
-$D$ is a compression disk.
-
-\end{proof}
-
-We make a few observations about the boundary of $M$. Each page contributes two
-(if it's a trivial $I$-bundle) or one (if it's a twisted $I$-bundle) side
-boundary pieces to the boundary of $M$. It also contributes any leftover
-binding annuli that are not glued. Each spine contributes a number of disjoint
-annuli equal to its valence, that is, the number of attached pages. These are
-the annuli in its boundary which lie in between the binding annuli. As these
-glue up to form the boundary components of $M$, each spine annulus connects two
-side boundaries of "adjacently glued" pages. This intuitive picture will be
-very important later as we construct quasi-Fuchsian surfaces.
-
-% TODO proof that boundary is incompressible goes here!
-
-\begin{prop}
-
-Every book of $I$-bundles that does not violate Proposition~\ref{P:1ptcap} does
-in fact have incompressible boundary. (That is, our definitions are
-consistent).
-
-% CAREFUL! not sure this is true. Need to finesse w one point intersection
-% lemma. I am pretty sure this is true IF I impose reduced condition. But I'm
-% not sure where to put this proposition.
-
-\end{prop}
-
-\begin{proof}
-
-% TODO figure out/throw in Ian's explanation of incompressible boundary.
-\textbf{TODO}
 
 \end{proof}
 
@@ -336,12 +346,15 @@ Recall that we refer to these as (QF) surfaces.
 
 Note that since every hyperbolic 3-manifold is aspherical, by elementary
 obstruction theory any injective map $\pi_1S \to \pi_1M$ is induced by
-a $\pi_1$-injective map $S \to M$. See discussion in \cite{LR}. % on p11
+a $\pi_1$-injective map $S \to M$. See discussion in \cite[Section 1.1]{LR}.
+% on p11
 
 Furthermore, by minimal surface theory, we can guarantee that any
 $\pi_1$-injective surface in a hyperbolic 3-manifold is homotopic to an
 immersed surface.  A surface which is not immersed will contradict minimality.
-See discussion in \cite{Neu}. %on p1
+This is due to Freedman, Hass, and Scott \cite{FreedmanHassScott}. See
+discussion in \cite[Section 1]{Neu}.
+%on p1
 
 In what follows we'll speak only of $\pi_1$-injective surfaces, or possibly
 surface subgroups. But it is important to note that in this situation those are
@@ -349,7 +362,7 @@ the same thing, and can be chosen to be immersed as well.
 
 \begin{lemma}[The Surface Covering Lemma]\label{L:covering}
 
-Let $\phi\colon S \to S'$ be a proper $\pi_1$-injective map of compact
+Let $\phi\colon S \to S'$ be a proper $\pi_1$-injective map between compact
 connected oriented surfaces with boundary, and suppose that $S$ is not
 a 2-sphere or an annulus.  Then $\phi$ is homotopic rel boundary to
 a finite-sheeted covering map.  Note that the converse holds more generally
@@ -359,34 +372,7 @@ a finite-sheeted covering map.  Note that the converse holds more generally
 
 \begin{proof}
 
-For the forward direction, we can apply minimal surface theory to perturb
-$\phi$ via homotopy rel boundary to an immersion. It's straightforward to
-ensure that $\phi$ is a local homeomorphism on boundary curves. Now think of
-$int(S')$ as being embedded as a totally geodesic core subsurface of a Fuchsian
-group quotient of hyperbolic 3-space. Note that since $\phi$ is
-$\pi_1$-injective and $S$ has negative Euler characteristic, $S'$ must have
-negative Euler characteristic as well. Then as we pull $\phi(int(S)) \cin
-int(S')$ to minimality its image will necessarily remain in $int(S')$, as it's
-totally geodesic.  Since it is connected and not a sphere, it can't shrink down
-to nothing. Since it's mapped in properly, the boundary components of $S$
-correspond to local maps of cusps into cusp tubes of the thickened $int(S')$
-and each must remain fixed on the same cusp as we pull $\phi(int(S))$ to
-a minimal surface.  Hence the boundary components of $S$ do not move under this
-homotopy.  Finally, since $S$ is not an annulus, the resulting homotopy cannot
-pull $\phi(int(S))$ out to infinity in a single cusp, as its $\pi_1$ contains
-at least one element that is not represented by a cusp neighborhood.  So the
-result is an immersed minimal surface inside $int(S')$.  Adding back the
-boundary curves of $S'$, we obtain a homotopy rel boundary to an immersion.
-
-Then since $\phi$ is a proper immersion between manifolds of the same
-dimension, it's a local homeomorphism on boundary and interior neighborhoods,
-and therefore a covering map. It must be finite-sheeted because preimages of
-points are discrete sets because it's a covering, and $S$ is compact, so it
-follows that point fibers are finite sets.
-
-The converse follows from elementary covering space theory. As in the above
-note, we can use minimal surface theory to make that proper $\pi_1$-injective
-map into an immersion.
+See \cite{Nielsen}, or \cite{GabaiKazez} for a modern discussion.
 
 \end{proof}
 
