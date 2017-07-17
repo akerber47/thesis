@@ -5,8 +5,8 @@
 In this section we establish basic definitions and facts about books of
 $I$-bundles and quasi-Fuchsian surfaces contained inside them. While the
 detailed arguments are new, these are basic applications of standard
-"cut-and-paste" techniques in 3-manifold topology. See \cite{He} or \cite{Ja}.
-\cite{Sch} is a gentler treatment.
+"cut-and-paste" techniques in 3-manifold topology. See Hempel \cite{He} or Jaco
+\cite{Ja}. Schultens \cite{Sch} is a gentler treatment.
 
 Recall that we are considering possible pared structures $P$ on $M$ a convex
 hyperbolic 3-manifold. Our goal is to find a surface map $\phi \colon S \to M$
@@ -18,7 +18,7 @@ Note that since we haven't fixed a basepoint, these subgroups are really only
 defined up to conjugacy (that is, they're sets of free homotopy classes) - what
 we're saying is they fail to intersect for an arbitrary choice of conjugacy
 class for each subgroup. This corresponds to multiples of the parabolic curves
-being freely homotopic into the immersed image of the given surface.
+not being freely homotopic into the immersed image of the given surface.
 
 \begin{defn}\label{D:boib}
 
@@ -26,17 +26,18 @@ An \emph{$I$-bundle} is a fiber bundle with fiber $I=[0,1]$, and base space
 a compact surface with boundary. We'll refer to this as its \emph{base
 surface}.  In this paper we adopt the convention that all $I$-bundles are
 oriented.  The boundary of an $I$-bundle $I \to B \to \Si$ decomposes into the
-\emph{side boundary} $\pi^{-1}(\bd \Si)$ and the \emph{binding boundary}
+\emph{binding boundary} $\pi^{-1}(\bd \Si)$ and the \emph{side boundary}
 $\bigcup \bd \pi^{-1}(x)$. Note that the binding boundary is a collection of
 disjoint annuli. The reason for these terms is the following definition.
 
 A \emph{book of $I$-bundles} is a 3-manifold obtained from the following
 construction. Let $\cB$ be a collection of $I$-bundles, and $\cC$ a collection
 of solid tori. Attach the $I$-bundles to the solid tori by attaching some (or
-all) of the binding boundary components to disjoint annuli in the boundaries of
-the solid tori.  If we let $\cA$ be the union of glued annuli in the resulting
-manifold, our manifold can be written as $M=\cB \cup_\cA \cC$. Note that by
-construction each component of $\cA$ is properly embedded and 2-sided in $M$.
+all) of the binding boundary components to disjoint nontrivial annuli in the
+boundaries of the solid tori.  If we let $\cA$ be the union of glued annuli in
+the resulting manifold, our manifold can be written as $M=\cB \cup_\cA \cC$.
+Note that by construction each component of $\cA$ is properly embedded and
+2-sided in $M$.
 
 In this paper we additionally impose the following conditions on a book of
 $I$-bundles, to avoid elementary or degenerate cases.
@@ -53,8 +54,9 @@ characteristic.
 
 \end{defn}
 
-This is a standard definition. See \cite{CS} and \cite{ACS} for the original
-definition and previous study of this special class of hyperbolic 3-manifolds.
+This is a standard definition. See \cite[pp286]{CS} and \cite[Definition
+2.1]{ACS} for the original definition and previous study of this special class
+  of hyperbolic 3-manifolds.
 
 Intuitively, if we take a physical book with thick pages and imagine bending it
 in a circle so its top and bottom are identified, the spine becomes a solid
@@ -77,11 +79,13 @@ $M$.
 \end{defn}
 
 For reasons we'll see later, the books of $I$-bundles that we want to consider
-will satisfy this criterion.
+should all be fully bound.
 
 Algebraically, a book of $I$-bundles corresponds to a particularly simple graph
-of groups. The graph is bipartitie, and one side of the partition (the spines)
-are just copies of $Z$.
+of groups. The graph is bipartite, and one side of the partition (the spines)
+are just copies of $\bZ$. The other side has noncyclic free groups,
+corresponding to surfaces of negative Euler characteristic. The edge groups are
+copies of $\bZ$ as well.
 
 Let's briefly explain why we impose the two conditions in
 Definition~\ref{D:boib}.  Obviously we want $M$ to be compact connected
@@ -90,46 +94,49 @@ manifolds). If $M$ were nonorientable we could reduce to the orientable double
 cover. Hyperbolic 3-manifolds must be irreducible.
 
 If $M$ had compressible boundary, let $D$ be a compressing disk for the
-boundary.  Any closed $\pi_1$-injective surface $S \cin M$ that intersects $D$
-must do so in a union of closed curves, since $S$ is properly embedded. Every
-such closed curve $\alpha$ is homotopically trivial in $M$, because it's
-a closed curve in the disk $D$.  But $S$ is $\pi_1$-injective, so $\alpha$ must
-be homotopically trivial in S as well. Since S is a surface, contracting the
-loop $\alpha$ yields a disk $D'\cin S$. Note that $D'$ may be immersed, but we
-can use it to produce a smaller disk $D''$ which is embedded and still bounded
-by $\alpha$.  Combining $D$ and $D'$ yields a sphere $S^2 \cin M$. By
-irreducibility of $M$, this bounds a ball.  Using a standard innermost disk
-argument, we can homotope $S$ across these balls (starting from the innermost
-and working our way out) until $S$ and $D$ are disjoint.  This proves that any
-quasi-Fuchsian surfaces are essentially disjoint from compression disks.
-Therefore, since we're interested in quasi-Fuchsian surfaces, we might as well
-compress as much as possible before looking for surfaces.
+boundary.  Consider a $\pi_1$-injective closed surface map $\phi \colon S \to
+M$ whose image intersects $D$. The preimage $\phi^{-1}(D)$ is a union of simple
+closed curves in $S$, since $D$ is properly embedded.  Every such closed curve
+$\alpha$ has homotopically trivial image in $M$, because it's a curve in the
+disk $D$.  But $S$ is $\pi_1$-injective, so $\alpha$ must be homotopically
+trivial in $S$ as well.  Since $S$ is a surface, contracting the loop $\alpha$
+yields a disk $D'\cin S$. Combining $\phi(D')$ and a contraction for
+$\phi(\alpha)$ in $D$ yields a sphere map $S^2 \to M$. $M$ is irreducible,
+hence aspherical, so this map is homotopically trivial. Using one hemisphere of
+this homotopy, we can homotope $\phi(D')$ across $D$ to remove the intersection
+curve $\phi(\alpha)$. Repeating this process, we can assume that $\phi(S)$ is
+disjoint from $D$. This proves that any quasi-Fuchsian surfaces are essentially
+disjoint from compression disks.  Therefore, since we're interested in
+quasi-Fuchsian surfaces, we might as well compress as much as possible before
+looking for surfaces. This also follows from the similar discussion in Chapter
+3.
 
 Ignoring for the moment the degenerate case of a single page and no spine, each
 page's base surface must have at least one boundary component to glue to in
 order for $M$ to be connected. We don't want to consider base surfaces which
 are disks.  Observe that each page which is a disk means that that page and its
-attached spine form a 3-manifold with a finite-sheeted cover by a ball (we can
+attached spine form a 3-manifold with a finite-sheeted cover by a $k$-puctured
+ball --- that is, a cover of a punctured lens space. This is because we can
 arrange things so that in the cover, the disk attaching map only traverses the
-longitude once, and we get a thickened disk).  This means that we'll have
-finite order summands in our group, which correspond to elliptic pieces, for
-instance lens spaces, in the JSJ decomposition. These cases are not hyperbolic.
+longitude once, and we get a thickened disk.  This means that we'll have finite
+order summands in our group, which correspond to elliptic pieces, for instance
+lens spaces, in the JSJ decomposition. These cases are not hyperbolic.
 
 Similarly, allowing annulus or Moebius strip base surfaces means that many
 books of $I$-bundles we build will not be hyperbolic. For instance, by chaining
 annulus pages together in a loop, we can construct a book of $I$-bundles
-containing a closed non-peripheral torus. In fact, in any case where there are
-no such loops, we can homotope away all the annulus pages (attaching the
-associated spines together, and possibly passing to a finite sheeted cover).
-The case of Moebius strips is identical once we pass to a double cover on each
-Moebius strip page. Therefore we will not consider these in the sequel.
+containing a closed non-peripheral immersed torus. In fact, in any case where
+there are no such loops, we can homotope away all the annulus pages (attaching
+the associated spines together, and possibly passing to a finite sheeted
+cover).  The case of Moebius strips is identical once we pass to a double cover
+on each Moebius strip page. Therefore we will not consider these in the sequel.
 
 Finally, our definition does technically allow for $M$ to consist of a single
 page and no spines. Since $M$ is connected, this is the only case where $M$ can
 contain a page with closed base surface. In this case, the page's base surface
 obviously must have negative Euler characteristic in order for $M$ to be
-hyperbolic.  Combining all these cases, we only want to consider base surfaces
-with negative Euler characteristic.
+nonelementary hyperbolic.  Combining all these cases, we only want to consider
+base surfaces with negative Euler characteristic.
 
 We make the following simple observation.
 
