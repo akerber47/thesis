@@ -415,13 +415,15 @@ in each page or spine of $M$. We first move $S$ into minimal position with
 respect to $\cA$.  For each page or spine $X \cin M$, $S \cap X$ is a union of
 properly immersed surfaces. Consider an arbitrary component $S'$ of $S \cap X$.
 
-If $\pi_1(S')=1$, then $S'$ must be a disk as $S$ is a connected surface and is
-not a sphere. First observe that $\bd S'$ is contained in one of the binding
-annuli $A \cin \bd X$. Since $A$ is incompressible, $\bd S'$ bounds a disk in
-$A$, that is, $S'$ cobounds a sphere. Since $X$ is irreducible, this sphere
-bounds a ball, giving a homotopy of $S'$ into $A$. To keep $S$ transverse to
-$\cA$, we will actually homotope it slightly past $A$ into whatever page or
-spine is glued to the other side of $A$.
+If $S'$ is a disk, its boundary is an (immersed) curve in some binding annulus
+$A \cin \bd X$. $\bd S'$ is contractible in $X$ as it bounds an immersed disk.
+Since $A$ is incompressible, $\bd S'$ must be contractible in $A$. Combine
+these two contractions to form a map $S^2 \to X$ where the equator maps along
+$\bd S'$ and each hemisphere maps along one of the contractions. Since $X$ is
+aspherical, this map is homotopically trivial. This yields a homotopy of $S'$
+into $A$.  To keep $S$ transverse to $\cA$, we will actually homotope it
+slightly past $A$ into whatever page or spine is glued to the other side of
+$A$.
 
 Now suppose that $S'$ is an annulus, and that both boundary curves of $S'$ lie
 in the same binding annulus $A$. We claim that $S'$ is homotopic rel boundary
@@ -447,22 +449,23 @@ after no more such moves can be made, the result satisfies (1) and (2).
 
 Again consider an arbitrary page or spine $X$, and an arbitrary component $S'$
 of $S \cap X$.  We know $\pi_1S' \neq 1$ by the above argument. We also know it
-cannot be an annulus. Annuli with both boundary components on the same binding
-annulus were removed above, and no other annuli can exist because they'd
-project down to give a $\pi_1$ conjugacy between two boundary classes in
-a surface with boundary, which is impossible as $\pi_1X$ is free. We claim it
-is $\pi_1$-injective as a map $S' \to X$ (abusing notation slightly - really
-this is asking about the preimage of $S'$ on the left-hand abstract surface
-$S$).  Suppose not. Then we have a nontrivial loop $\alpha \cin S'$, which is
-homotopically trivial in $X$.  Therefore $\alpha$ is homotopically trivial in
-$M$, using that same homotopy.  Since $S \to X$ is $\pi_1$-injective, $\alpha$
-must be homotopically trivial in $S$.  Since $S$ is an oriented surface, the
-only way $\alpha$ can be homotopically trivial in $S$ but not $S'$ is if one of
-the boundary components of $S'$ cuts off a disk $D \cin S$. If it cuts off
-a surface of any higher genus, we do not obtain any relations among elements of
-$\pi_1S'$.  But if we cut $D$ along $\cA$, we can see that at least one
-innermost piece of $D$ must be a disk, contradicting our minimality assumption.
-Hence each piece $S'$ is $\pi_1$-injective in $X$.
+cannot be an annulus if $X$ is a page. Annuli with both boundary components on
+the same binding annulus were removed above, and no other annuli can exist
+because they'd project down to give a $\pi_1$ conjugacy between two boundary
+classes in a surface with boundary, which is impossible as $\pi_1X$ is
+a noncyclic free group.  We claim it is $\pi_1$-injective as a map $S' \to X$
+(abusing notation slightly - really this is asking about the preimage of $S'$
+on the left-hand abstract surface $S$).  Suppose not. Then we have a nontrivial
+loop $\alpha \cin S'$, which is homotopically trivial in $X$.  Therefore
+$\alpha$ is homotopically trivial in $M$, using that same homotopy.  Since $S
+\to M$ is $\pi_1$-injective, $\alpha$ must be homotopically trivial in $S$.
+Since $S$ is an oriented surface, the only way $\alpha$ can be homotopically
+trivial in $S$ but not $S'$ is if one of the boundary components of $S'$ cuts
+off a disk $D \cin S$. If it cuts off a surface of any higher genus, we do not
+obtain any relations among elements of $\pi_1S'$.  But if we cut $D$ along
+$\cA$, we can see that at least one innermost piece of $D$ must be a disk,
+contradicting our minimality assumption.  Hence each piece $S'$ is
+$\pi_1$-injective in $X$.
 
 Let $B$ be a page. We know that each piece $S'$ of $S \cap B$ is
 $\pi_1$-injective and proper. Projecting $B$ to its base surface $\Si$, we know
@@ -516,15 +519,13 @@ can isotope $P$ within $\bd M$ such that:
 
 (1) For each page $B$, $P \cap B$ is a union of disjoint rectangles and annuli,
 each of which projects to a thickened arc or curve in the base surface $\Si$ of
-$B$.  Any such arc is essential in $\Si$. Any such curve is either essential or
-parallel to a boundary component of $\Si$ which does not lift to a binding
-annulus (that is, parallel to a "free binding boundary" of $B$).
+$B$.  Any such arc or curve is essential in $\Si$.
 
-(2) For each spine $C$, $P \cap C$ is a union of disjoint rectangles and
-annuli.  Each rectangle connects two adjacent binding annuli in $\bd C$ along
-a thickened arc that is essential in that component of $\bd M \cap C$ (the
-"intermediate annulus" between these two binding annuli). Each annulus is
-parallel to the binding annuli in $\bd C$.
+(2) For each spine $C$, $P \cap C$ is a union of disjoint rectangles and at
+most one annulus.  Each rectangle connects two adjacent binding annuli in $\bd
+C$ along a thickened arc that is essential in that component of $\bd M \cap C$
+(the "intermediate annulus" between these two binding annuli). The annulus
+component, if any, is parallel to the binding annuli in $\bd C$.
 
 (3) For each binding annulus $A$, $P \cap A$ is a union of disjoint arcs in
 $\bd A$.
@@ -574,7 +575,9 @@ To prove (2), let $C$ be a spine. Observe that $\bd M \cap C$ is a union of
 parallel annuli, each of which is parallel to the binding annuli in $\bd C$.
 Rectangles in $C$ are essential, as guaranteed earlier. Up to isotopy, the only
 embedded closed curve in an annulus is the core curve. So the only annuli in $P
-\cap C$ are parallel to the binding annuli. This completes the proof.
+\cap C$ are parallel to the binding annuli. Because the components of $P$ are
+nonparallel in $\pi_1M$, there is at most one annulus component of $P\cap C$.
+This completes the proof.
 
 \end{proof}
 
@@ -599,10 +602,10 @@ For each page $B$, a component $S'$ of $S \cap B$ is a finite-sheeted cover of
 the base surface $\Si$ of $B$. The side boundary $\bd M \cap B$ is either two
 copies of $\Si$ or an oriented double cover. In either case, we have
 a canonical covering map from $S'$ to each component of $\bd M \cap B$. We
-define the pared lifting pattern on $S'$ to be the preimages of $P \cap B$
-under these covering maps.  Note that if $B$ is a trivial $I$-bundle, these
-images may intersect (because they're coming from two different surfaces in
-$\bd M \cap B$).
+define the pared lifting pattern on $S'$ to be the preimages of the projection
+of $P \cap B$ to $\Si$ under these covering maps.  Note that these images may
+intersect even though they are disjoint in $P \cap B$, because pushing down to
+$\Si$ may cause overlaps.
 
 For each spine $C$, a component $S'$ of $S \cap C$ is an immersed annulus
 parallel to a multiple of the binding annuli.  The two components of $\bd S'$
@@ -694,7 +697,7 @@ individual pages and spines) a multiple of the original minimal position of
 $P_0$ within $(M,P)$. We know that $P_0$ began in minimal position, so any
 multiple is also in minimal position. Now reverse the moves we made to homotope
 $\alpha$ into $S$ originally. Because we're dividing $M$ along a union of
-$\pi_1$-injective disjoint annuli, he only possible moves $\alpha$ can make
+$\pi_1$-injective disjoint annuli, the only possible moves $\alpha$ can make
 between different pages and spines are the disk and annulus moves described
 above. So the reverse of our homotopy into $S$ is a homotopy toward minimal
 position of the form that we described in the previous paragraph. Hence we can
