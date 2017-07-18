@@ -322,81 +322,83 @@ our definitions are consistent).
 
 \begin{proof}
 
-Let M be a book of I-bundles constructed without violating
-Proposition~\ref{P:1ptcap}. Suppose it has compressible boundary, and let D be
-a compression disk. D is properly embedded in M, so it intersects the binding
-annuli cA in a disjoint union of properly embedded arcs and simple closed
-curves.  We first claim that we can isotope D rel boundary to remove all
-intersections that are closed curves.
+Let $M$ be a book of $I$-bundles constructed without violating
+Proposition~\ref{P:1ptcap}. Suppose it has compressible boundary, and let $D$
+be a compression disk. $D$ is properly embedded in $M$, so it intersects the
+binding annuli $\cA$ in a disjoint union of properly embedded arcs and simple
+closed curves.  We first claim that we can isotope $D$ rel boundary to remove
+all intersections that are closed curves.
 
-Let A be a binding annulus. Any closed curve in A is either homotopic to the
-core or bounds a disk in A. If D intersects A in a curve homotopic to the core,
-that curve has to bound a subdisk D' cin D. D' is a compression disk of A cin
-M. We claim that such a disk must be trivial --- that is, A is incompressible
-in M.  Look at D' cap cA, which is a disjoint union of simple closed curves in
-D', and consider an innermost curve alpha in D'.  alpha lies in some annulus A'
-cin cA.  By Proposition~\ref{P:pagespineII}, A' is incompressible in the page
-and spine on each side. But since alpha is innermost, it bounds a subdisk
-D'alpha of D' that's contained in a single page or spine X. By
-incompressibility, alpha must bound a disk D''alpha in A'. By irreducibility,
-D'alpha cup D''alpha bounds a ball in X, and we can isotope across this ball to
-remove the intersection curve alpha. Repeating this process, D' cannot
-intersect cA anywhere except on its boundary. But this implies that D' lies in
-a single page or spine. Therefore by Proposition~\ref{P:pagespineII} D' must be
-trivial.  Hence A is incompressible in M, and no core curve intersections are
-possible.
+Let $A$ be a binding annulus. Any closed curve in $A$ is either homotopic to
+the core or bounds a disk in $A$. If $D$ intersects $A$ in a curve homotopic to
+the core, that curve has to bound a subdisk $D' \cin D$. $D'$ is a compression
+disk of $A \cin M$. We claim that such a disk must be trivial --- that is, $A$
+is incompressible in $M$.  Look at $D' \cap \cA$, which is a disjoint union of
+simple closed curves in $D'$, and consider an innermost curve $\alpha$ in $D'$.
+$\alpha$ lies in some annulus $A' \cin \cA$.  By
+Proposition~\ref{P:pagespineII}, $A'$ is incompressible in the page and spine
+on each side. But since $\alpha$ is innermost, it bounds a subdisk $D'_\alpha$
+of $D'$ that's contained in a single page or spine $X$. By incompressibility,
+$\alpha$ must bound a disk $D''_\alpha$ in $A'$. By irreducibility, $D'_\alpha
+\cup D''_\alpha$ bounds a ball in $X$, and we can isotope across this ball to
+remove the intersection curve $\alpha$. Repeating this process, $D'$ cannot
+intersect $\cA$ anywhere except on its boundary. But this implies that $D'$
+lies in a single page or spine.  Therefore by Proposition~\ref{P:pagespineII}
+$D'$ must be trivial.  Hence $A$ is incompressible in $M$, and no core curve
+intersections are possible.
 
-We have shown that D can only intersect a binding annulug in curves that bound
-disks in that annulus.  We now isotope D rel boundary to remove all such
-intersections.  Take an innermost curve alpha in D cap cA, and say it lies in
-some binding annulus A. Since it's innermost, alpha bounds a subdisk D'alpha of
-D that is properly embedded in a single page or spine of M. But alpha also
-bounds a disk D''alpha cin A. By irreducibility, D'alpha cup D''alpha bounds
-a ball in X, and we can isotope across this ball to remove the intersection
-curve alpha. Repeating this process, D cap cA contains no closed curves.
+We have shown that $D$ can only intersect a binding annulus in curves that
+bound disks in that annulus.  We now isotope $D$ rel boundary to remove all
+such intersections.  Take an innermost curve $\alpha$ in $D \cap \cA$, and say
+it lies in some binding annulus $A$. Since it's innermost, $\alpha$ bounds
+a subdisk $D'_\alpha$ of $D$ that is properly embedded in a single page or
+spine of $M$. But $\alpha$ also bounds a disk $D''_\alpha \cin A$. By
+irreducibility, $D'_\alpha \cup D''_\alpha$ bounds a ball in $X$, and we can
+isotope across this ball to remove the intersection curve $\alpha$. Repeating
+this process, $D \cap \cA$ contains no closed curves.
 
-Let A be a binding annulus. Any properly embedded arc in A is homotopic to
-a standard transverse arc. If D intersects A in such an arc, that arc cuts off
-a subdisk D' cin D. D' is a boundary compression disk of A cin M. As above, we
-claim that such a disk must be trivial --- that is, A is boundary
-incompressible in M.  We make a similar argument. Look at D' cap cA, which is
-a disjoint union of properly embedded arcs in D', and consider an outermost arc
-alpha in D'.  alpha is a transverse arc of some annulus A' cin cA. alpha
-cobounds a disk D'alpha with an arc beta cin bd D'. Since alpha is outermost,
-D'alpha must be contained in a single page or spine X adjacent to A'. Note that
-beta cin X cap bd M, and the two endpoints of beta lie on the two boundary
-curves of A'.
+Let $A$ be a binding annulus. Any properly embedded arc in $A$ is homotopic to
+a standard transverse arc. If $D$ intersects $A$ in such an arc, that arc cuts
+off a subdisk $D' \cin D$. $D'$ is a boundary compression disk of $A \cin M$.
+As above, we claim that such a disk must be trivial --- that is, $A$ is
+boundary incompressible in $M$.  We make a similar argument. Look at $D' \cap
+\cA$, which is a disjoint union of properly embedded arcs in $D'$, and consider
+an outermost arc $\alpha$ in $D'$.  $\alpha$ is a transverse arc of some
+annulus $A' \cin \cA$. $\alpha$ cobounds a disk $D'_\alpha$ with an arc $\beta
+\cin \bd D'$.  Since $\alpha$ is outermost, $D'_\alpha$ must be contained in
+a single page or spine $X$ adjacent to $A'$. Note that $\beta \cin X \cap \bd
+M$, and the two endpoints of $\beta$ lie on the two boundary curves of $A'$.
 
-But if X is a spine, it must have d(X)>1 or v(X)>1. Either way it is impossible
-to construct such a beta connecting the endpoints of a transversal alpha such
-that alpha cup beta bounds a nontrivial disk. The only nontrivial embedded disk
-is a meridian disk, and if we try to bound that, beta will cross a different
-binding annulus (if v(X)>1) or a different part of the same binding annulus (if
-d(X)>1).
+But if $X$ is a spine, it must have $d(X)>1$ or $v(X)>1$. Either way it is
+impossible to construct such a $\beta$ connecting the endpoints of
+a transversal $\alpha$ such that $\alpha \cup \beta$ bounds a nontrivial disk.
+The only nontrivial embedded disk is a meridian disk, and if we try to bound
+that, $\beta$ will cross a different binding annulus (if $v(X)>1$) or
+a different part of the same binding annulus (if $d(X)>1$).
 
-If X is a page, it must be fully glued. Therefore, if X is a trivial I-bundle,
-X cap bd M has two components. The two endpoints of alpha lie in two different
-components, so an arc beta cin X cap bd M connecting them obviously cannot
-exist. If X is a twisted I-bundle, the same argument applies after lifting to
-a trivial I-bundle double cover.
+If $X$ is a page, it must be fully glued. Therefore, if $X$ is a trivial
+$I$-bundle, $X \cap \bd M$ has two components. The two endpoints of $\alpha$
+lie in two different components, so an arc $\beta \cin X \cap \bd M$ connecting
+them obviously cannot exist. If $X$ is a twisted $I$-bundle, the same argument
+applies after lifting to a trivial $I$-bundle double cover.
 
-Hence any such disk D' is trivial, and A is boundary incompressible. Since any
-such transverse arc in D cap cA corresponds to a trivial boundary compressing
-disk, we can isotope D such that the intersection contains no transverse arcs
-as well. But this implies that D is disjoint from cA. Hence D is contained in
-a single page or spine X, and bd D avoids all the binding annuli adjacent to X.
-Hence bd D is contained in a single component of X cap bd M. To prove D is
-a trivial compressing disk, We show that the components of X cap bd M map
-pi1-injectively to X.
+Hence any such disk $D'$ is trivial, and $A$ is boundary incompressible. Since
+any such transverse arc in $D \cap \cA$ corresponds to a trivial boundary
+compressing disk, we can isotope $D$ such that the intersection contains no
+transverse arcs as well. But this implies that $D$ is disjoint from $\cA$.
+Hence $D$ is contained in a single page or spine $X$, and $\bd D$ avoids all
+the binding annuli adjacent to $X$.  Also, $\bd D$ is contained in a single
+component of $X \cap \bd M$. To prove $D$ is a trivial compressing disk, we
+show that the components of $X \cap \bd M$ map $\pi_1$-injectively to $X$.
 
-If X is a spine, the components of X cap bd M are parallel to the binding
+If $X$ is a spine, the components of $X \cap \bd M$ are parallel to the binding
 annuli, so the proof is identical to the proof of
-Proposition~\ref{P:pagespineII}. If X is a page, since it's fully glued, the
-components of X cap bd M are either two disjoint copies of the base surface or
-an oriented double cover of the base surface. In either case they immediately
-map in pi1-injectively. This proves that X cap bd M is incompressible in X.
-Since D is a compression disk of X cap bd M in X, it must be trivial. This
-completes the proof.
+Proposition~\ref{P:pagespineII}. If $X$ is a page, since it's fully glued, the
+components of $X \cap \bd M$ are either two disjoint copies of the base surface
+or an oriented double cover of the base surface. In either case they
+immediately map in $\pi_1$-injectively. This proves that $X \cap \bd M$ is
+incompressible in $X$.  Since $D$ is a compression disk of $X \cap \bd M$ in
+$X$, it must be trivial. This completes the proof.
 
 \end{proof}
 
