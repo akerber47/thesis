@@ -314,9 +314,9 @@ $I$-bundles. First, we have the following proposition:
 
 \begin{prop}\label{P:boibincomp}
 
-Every book of $I$-bundles that does not violate Proposition~\ref{P:1ptcap} does
-in fact have incompressible boundary. (That is, our definitions are
-consistent).
+Every book of $I$-bundles that we construct without violating
+Proposition~\ref{P:1ptcap} does in fact have incompressible boundary. (That is,
+our definitions are consistent).
 
 \end{prop}
 
@@ -391,7 +391,7 @@ pi1-injectively to X.
 
 If X is a spine, the components of X cap bd M are parallel to the binding
 annuli, so the proof is identical to the proof of
-Proposition~\ref{pagespineII}. If X is a page, since it's fully glued, the
+Proposition~\ref{P:pagespineII}. If X is a page, since it's fully glued, the
 components of X cap bd M are either two disjoint copies of the base surface or
 an oriented double cover of the base surface. In either case they immediately
 map in pi1-injectively. This proves that X cap bd M is incompressible in X.
@@ -400,22 +400,14 @@ completes the proof.
 
 \end{proof}
 
-We can now prove a few key facts about the binding annuli.
+We highlight the key facts we've proven about the binding annuli.
 
-\begin{prop}
+\begin{cor}
 
-Let $M$ be a book of $I$-bundles. Recall that $\bd M$ is incompressible.  Then
-in fact all the binding annuli are incompressible (ie $\pi_1$-injective),
-boundary incompressible, and not boundary parallel in $M$.
+Let $M$ be a book of $I$-bundles. Then in fact all the binding annuli of $M$
+are incompressible and boundary incompressible in $M$.
 
-\end{prop}
-
-\begin{proof}
-
-%TODO
-\textbf{TODO}
-
-\end{proof}
+\end{cor}
 
 We now discuss the possible closed $\pi_1$-injective surfaces inside a book of
 $I$-bundles. These are the surfaces we'll need to consider in order to find
@@ -641,13 +633,13 @@ Suppose we've performed the above isotopy on $P$. Since we can preserve
 transversality, (3) still holds. We claim the result satisfies (1) and (2).
 
 To prove (1), let $B$ be a page. Observe that the rectangles and annuli in $P
-\cap B$ are thickenings of arcs and curves which are essential (or
-free-binding-boundary parallel in a special case) in $\bd M \cap B$. Let $\Si$
-be the base surface of $B$. As discussed above, $\bd M \cap B$ is either two
-copies of $\Si$ (if $B$ is a trivial $I$-bundle) or an orientable double cover
-of $\Si$ (if B is a twisted $I$-bundle). In either case the projection of each
-arc and curve must be essential in $\Si$, as otherwise we could lift
-a contracting or boundary-exiting isotopy to $\bd M \cap B$. This proves (1).
+\cap B$ are thickenings of arcs and curves which are essential  in $\bd M \cap
+B$. Let $\Si$ be the base surface of $B$. As discussed above, $\bd M \cap B$ is
+either two copies of $\Si$ (if $B$ is a trivial $I$-bundle) or an orientable
+double cover of $\Si$ (if B is a twisted $I$-bundle). In either case the
+projection of each arc and curve must be essential in $\Si$, as otherwise we
+could lift a contracting or boundary-exiting isotopy to $\bd M \cap B$. This
+proves (1).
 
 To prove (2), let $C$ be a spine. Observe that $\bd M \cap C$ is a union of
 parallel annuli, each of which is parallel to the binding annuli in $\bd C$.
