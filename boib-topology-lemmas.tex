@@ -280,22 +280,7 @@ As these glue up to form the boundary components of $M$, each spine annulus
 connects two side boundaries of "adjacently glued" pages. This intuitive
 picture will be very important later as we construct quasi-Fuchsian surfaces.
 
-\begin{prop}
-
-Every book of $I$-bundles that does not violate Proposition~\ref{P:1ptcap} does
-in fact have incompressible boundary. (That is, our definitions are
-consistent).
-
-\end{prop}
-
-\begin{proof}
-
-%TODO
-\textbf{TODO}
-
-\end{proof}
-
-We now prove a few key facts about the binding annuli.
+The following basic property will be useful later.
 
 \begin{prop}\label{P:pagespineII}
 
@@ -323,7 +308,60 @@ a boundary component of a compact surface. This completes the proof.
 
 \end{proof}
 
-In fact, we have the following proposition:
+In fact, we can extend this to a few key facts for the entire book of
+$I$-bundles. First, we have the following proposition:
+
+\begin{prop}\label{P:boibincomp}
+
+Every book of $I$-bundles that does not violate Proposition~\ref{P:1ptcap} does
+in fact have incompressible boundary. (That is, our definitions are
+consistent).
+
+\end{prop}
+
+\begin{proof}
+
+Let M be a book of I-bundles constructed without violating
+Proposition~\ref{P:1ptcap}. Suppose it has compressible boundary, and let D be
+a compression disk. D is properly embedded in M, so it intersects the binding
+annuli cA in a disjoint union of properly embedded arcs and simple closed
+curves.  We first claim that we can isotope D rel boundary to remove all
+intersections that are closed curves.
+
+Let A be a binding annulus. Any closed curve in A is either homotopic to the
+core or bounds a disk in A. If D intersects A in a curve homotopic to the core,
+that curve has to bound a subdisk D' cin D. D' is a compression disk of A cin
+M. We claim that such a disk cannot exist --- that is, A is incompressible in
+M. Look at D' cap cA, which is a disjoint union of simple closed curves in D',
+and consider an innermost curve alpha in D'.  alpha lies in some annulus A' cin
+cA.  By Proposition~\ref{P:pagespineII}, A' is incompressible in the page and
+spine on each side. But since alpha is innermost, it bounds a subdisk D'alpha
+of D' that's contained in a single page or spine X. By incompressibility, alpha
+must bound a disk D''alpha in A'. By irreducibility, D'alpha cup D''alpha
+bounds a ball in X, and we can isotope across this ball to remove the
+intersection curve alpha. Repeating this process, D' cannot intersect cA
+anywhere except on its boundary. But this implies that D' lies in a single page
+or spine, contradicting Proposition~\ref{P:pagespineII}. Hence A is
+incompressible in M.  That is, such a D' cannot exist.
+
+We have shown that D can only intersect a binding annulug in curves that bound
+disks in that annulus.  We now isotope D rel boundary to remove all such
+intersections.  Take an innermost curve alpha in D cap cA, and say it lies in
+some binding annulus A. Since it's innermost, alpha bounds a subdisk D'alpha of
+D that is properly embedded in a single page or spine of M. But alpha also
+bounds a disk D''alpha cin A. By irreducibility, D'alpha cup D''alpha bounds
+a ball in X, and we can isotope across this ball to remove the intersection
+curve alpha. Repeating this process, D cap cA contains no closed curves.
+
+Let A be a binding annulus. Any properly embedded arc in A is homotopic to
+a standard transverse arc. If D intersects A in such an arc, that arc cuts off
+a subdisk D' cin D. D' is a boundary compression disk of A cin M. As above, we
+claim that such a disj cannot exist --- that is, A is boundary incompressible
+in M.
+
+\end{proof}
+
+We can now prove a few key facts about the binding annuli.
 
 \begin{prop}
 
@@ -336,6 +374,7 @@ boundary incompressible, and not boundary parallel in $M$.
 \begin{proof}
 
 %TODO
+\textbf{TODO}
 
 \end{proof}
 
