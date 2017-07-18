@@ -19,8 +19,8 @@ it satisfies the following.
 \item A meridian disk of each spine intersects the union of all gluing annuli
 at least three times.
 
-\item All page boundary components are glued (there are no "free boundary
-components").
+\item All page boundary components are glued (there are no ``free boundary
+components'').
 
 \item Each component of $P$ (once placed in minimal position with respect to
 the gluing annuli) intersects at least one page $B$. Furthermore, if it
@@ -30,10 +30,8 @@ greater than one and $B$ is attached to $C$ along more than one boundary
 component.  If valence one, we require that $B$ is attached to $C$ along
 a gluing of degree at least 3.
 
-Note that any spines of valence one and degree one were eliminated by reduction
-(A2).
-
-Note that since it lies on a single boundary component of $M$, a parabolic
+Note that any spines of valence one and degree one are eliminated below.  Also
+note that since it lies on a single boundary component of $M$, a parabolic
 cannot enter and exit the same page gluing annulus at a spine unless that spine
 has valence one. Therefore, we can divide the cases with a parabolic that
 intersects a spine but only hits a single page into valence one spines, and
@@ -81,7 +79,7 @@ homeomorphic to one obtained from the following. Delete $C$ and glue two pages
 annuli.  Notice that this also matches up parabolics.
 
 Note: this is the only step that can produce a thickened closed surface
-(instead of a "proper" book of $I$-bundles).
+(instead of a true book of $I$-bundles).
 
 \end{enumerate}
 
@@ -113,10 +111,10 @@ original.
 \begin{thm}(Reduction Theorem)
 
 Let $(M,P)$ be a pared admissible book of $I$-bundles. Repeatedly reducing
-terminates after finitely many reductions in some $(M_r,P_r)$, with an associated
-pared embedding $\iota\colon (M_r,P_r) \to (M,P)$. Each resulting connected
-component is either a reduced book of $I$-bundles or a thickened closed surface
-with empty pared locus.
+terminates after finitely many reductions in some $(M_r,P_r)$, with an
+associated pared embedding $\iota\colon (M_r,P_r) \to (M,P)$. Each resulting
+connected component is either a reduced book of $I$-bundles or a thickened
+closed surface with empty pared locus.
 
 Furthermore, any (QF) surface in $(M,P)$ is contained in $iota(M_r,P_r)$. In
 particular, if $(M_r,P_r)=\emptyset$, $(M,P)$ does not contain a (QF) surface.
@@ -140,16 +138,13 @@ disjoint from all (QF) surfaces.
 We consider each possible reduction.
 
 Reduction (A1) removes spines without attached pages. No such spine can contain
-a $\pi_1$-injective closed surface, so it's clearly disjoint from (QF) surfaces.
+a $\pi_1$-injective closed surface, so it's clearly disjoint from (QF)
+surfaces.
 
 Reduction (A2) removes spines attached to a single page along a gluing
-intersecting a meridian disk only once. Again, no $\pi_1$-injective closed surface
-can cross this spine (if it enters from that page, it must leave again along
-that same page, violating $\pi_1$-injectivity).
-
-% XXX ^ above is slightly questionable. Why doesn't this argument work for
-% higher degree pages glued to single spine as well? I know it doesn't, but
-% argument above is sketch about it...
+intersecting a meridian disk only once. Again, no $\pi_1$-injective closed
+surface can cross this spine, as by Proposition~\ref{P:1ptcap} the boundary
+admits a compression which our surface can be made disjoint from.
 
 Reductions (A3) and (A4) do not actually delete anything. They produce
 a homeomorphic book of $I$-bundles (or possibly a thickened closed surface)
@@ -158,12 +153,17 @@ nothing to prove in this case.
 
 Reduction (B) removes a page with a boundary component that's not glued to
 a spine. By the surface decomposition lemma, any $\pi_1$-injective surface that
-intersects the page at all must be a cover of the that page cores surface.
+intersects the page at all must be a cover of the that page's core surface.
 Therefore it must have boundary components covering all boundary components of
 the page under consideration. This includes the free boundary component, but
 then by the surface decomposition lemma again, these have nothing they can glue
 to. So it is impossible to produce a closed $\pi_1$-injective surface (without
 boundary) that intersects this page.
+
+Alternatively, apply Proposition~\ref{P:1ptcap} to obtain a compression of the
+boundary, which we can make any $\pi_1$-injective surface disjoint from. By the
+surface decomposition lemma, this forces our surface to be disjoint from that
+page.
 
 Reduction (C1) removes a page $B$ which intersects a parabolic $P_0$. There are
 two cases to consider here.
