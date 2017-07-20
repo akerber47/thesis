@@ -15,7 +15,20 @@
 \newtheorem*{claim}{Claim}
 \newtheorem*{ntn}{Notation}
 
+% Make enumerate look pretty with (1), (2), etc
 \renewcommand\labelenumi{(\theenumi)}
+
+% Insert nice big pictures
+\newcommand{\myfig}[3]{
+  \afterpage{
+    \begin{figure}
+    \noindent
+    \includegraphics[width=\textwidth]{#1}
+    \caption{#3}
+    \label{#2}
+    \end{figure}
+  }
+}
 
 \newcommand{\x}{\times}
 \newcommand{\bd}{\partial}
