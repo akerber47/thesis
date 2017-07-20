@@ -302,7 +302,10 @@ of $F$ of degree $d$.
 Suppose that $F$ intersects the spines $C_1,\dots,C_r$ and pages
 $B_1,\dots,B_s$ of $M$.  Since $M$ is good, $F$ intersects each of these in
 a single component.  Denote the page intersections by $F_i = F \cap B_i$ and
-the spine intersectons by $F_j' = F \cap C_j$.
+the spine intersectons by $F_j' = F \cap C_j$. See Figure~\ref{F:bdcomponent}.
+
+\myfig{adjacentpolyhedra}{F:bdcomponent}{Intersections of $F$ with pages,
+spines, and binding annuli}
 
 Let $Q_0$ be the surface obtained by taking $d$ many disjoint copies of each of
 the $F_i$. $Q_0$ is obviously a jigsaw surface obtained by
@@ -346,7 +349,10 @@ attached in this way.  Each time we add an annulus copy of $F_j'$ to $Q_0$, we
 must attach it to two curves $\widetilde{\gamma_1}$ and $\widetilde{\gamma_2}$
 which are lifted copies of $\gamma_1$ and $\gamma_2$ in components of $Q_0 \cap
 B_{i_1}$ and $Q_0 \cap B_{i_2}$, respectively.  This is necessary to ensure
-that $Q_0$ remains a jigsaw surface that can be extended to a cover of $F$.
+that $Q_0$ remains a jigsaw surface that can be extended to a cover of $F$. See
+Figure~\ref{F:buildingQ1}.
+
+\myfig{adjacentpolyhedra}{F:buildingQ1}{Adding annuli to $Q_0$}
 
 We add annuli one at a time. Each time we add an annulus, we make sure to add
 in such a way that the resulting surface still has no protoloops. We also
@@ -532,13 +538,16 @@ By construction of the $Q_a$, there are $2d(C)M$ many components of
 $\bd(\bigsqcup_a Q_a) \cap C$. Attach them as follows. Let $A_{1,3}$ be an
 embedded valence 1 annulus in $C$ with one boundary component in $A_1$ and one
 in $A_3$. Define $A_{2,4},A_{3,5},\dots,A_{(d(C)-1),1},A_{d(C),2}$ similarly.
-Now construct the jigsaw surface $S$ by $M$ many copies of each $A_{i,i+2}$,
+Now construct the surface $S$ by taking $M$ many copies of each $A_{i,i+2}$,
 and attaching their boundary components to lifts of $\gamma_i^+$ and
-$\gamma_{i+2}^-$. By construction of the $Q_a$ there will be exactly $M$ many
-available lifts of each to attach to. Therefore, when we repeat this for each
-spine $C$, the result is a closed surface $S$. Note that since $M$ is reduced,
-we know that each spine has at least 3 annuli. This means we'll never attempt
-to attach an annulus with both boundary components in the same binding annulus.
+$\gamma_{i+2}^-$. See Figure~\ref{F:finalgluing}. By construction of the $Q_a$
+there will be exactly $M$ many available lifts of each to attach to. Therefore,
+when we repeat this for each spine $C$, the result is a closed surface $S$.
+Note that since $M$ is reduced, we know that each spine has at least 3 annuli.
+This means we'll never attempt to attach an annulus with both boundary
+components in the same binding annulus.
+
+\myfig{adjacentpolyhedra}{F:finalgluing}{Attaching the $Q_a$ at $C$}
 
 We claim that $S$ satisfies the pared lifting criterion.
 
