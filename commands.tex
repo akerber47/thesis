@@ -20,14 +20,12 @@
 
 % Insert nice big pictures
 \newcommand{\myfig}[3]{
-  \afterpage{
-    \begin{figure}
-    \noindent
-    \includegraphics[width=\textwidth]{#1}
-    \caption{#3}
-    \label{#2}
-    \end{figure}
-  }
+  \begin{figure}
+  \noindent
+  \includegraphics[width=\textwidth]{#1}
+  \caption{#3}
+  \label{#2}
+  \end{figure}
 }
 
 \newcommand{\x}{\times}
