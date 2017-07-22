@@ -104,55 +104,38 @@ completes the proof.
 
 We can reduce our main problem in the case where $M$ has compressible boundary.
 By \ref{P:avoiddisk}, any closed $\pi_1$-injective surface $S$ can be made to
-avoid any compression disks.:
-
-and all components of the pared structure can either be made to avoid the
-compression disks (case (1)) or are irrelevant because they cannot be homotoped
-into any closed $\pi_1$-injective surface (case (2)). We push the case (1)
-pared structure components away from the compression disks and discard the case
-(2) components. Note of course that no case (1) component can fail to be
-$\pi_1$-injective, as it'd already fail to be $\pi_1$-injective before the
-compression (by homotoping across the compression disk). In fact the result is
-a new (possibly disconnected) pared $3$-manifold.  The resulting (possibly
-disconnected) incompressible pared manifold contains a (QF) surface if and only
-if the original does.
-
-Therefore we can reduce to the case where $M$ is a pared $3$-manifold (compact
-orientable irreducible) with incompressible boundary. However, in order to
+avoid any compression disks. This motivates the idea that we should try to find
+(QF) surfaces by decomposing along compression disks first, and then trying to
+find (QF) surfaces in the pieces of this decomposition. However, manifolds with
+incompressible boundary can still be quite complicated to study. In order to
 understand the problem better, we want another type of decomposition, along
 disjoint properly embedded essential annuli. We obtain the following similar
 results for a decomposition along annuli.
 
 \begin{prop}
 
-Let $M$ is compact orientable irreducible with incompressible boundary, and $f
+Let $M$ be compact orientable irreducible with incompressible boundary, and $f
 \colon S \to M$ be a $\pi_1$-injective map of a closed surface. Let $A \cin M$
-be a properly embedded annulus which is essential --- that is, incompressible,
-boundary incompressible, and not parallel to an annulus in $\bd M$. Then $f$ is
-homotopic to a map such that $f(S) \cap A$ is a union of multiples of the core
-curve of $A$, each of which pulls back to an essential curve in $S$. For
-a disjoint union of annuli, we have the same result.
+be a properly embedded annulus which is essential --- that is, incompressible
+and boundary incompressible in $M$. Then $f$ is homotopic to a map such that
+$f(S) \cap A$ is a union of multiples of the core curve of $A$, each of which
+pulls back to an essential curve in $S$.  For a disjoint union of annuli, we
+have the same result.
 
 \end{prop}
 
 \begin{proof}
 
-Homotope $f$ to be transverse to $A$. As earlier, $f^{-1}(A)$ is a union of
-simple closed curves in $S$. Each curve that bounds a disk in $S$ is
-contractible in $M$, hence its image is contractible in $A$ since $A$ is
-essential.  These two contractions, each of which is a singular map of a disk
-into $M$, together induce a map $S^2 \to M$. Since $M$ is irreducible, it is
-aspherical. So this sphere is contractible, that is, there is a singular map
-$B^3 \to X$ filling it. Homotoping across this sphere, we can remove this
-intersection between $f(S)$ and $A$. Doing this repeatedly ensures that all
-intersection curves in $f(S) \cap A$ pull back to essential curves in $S$.
-
-Similarly, any component of $f(S) \cap A$ is either homotopic to a multiple of
-the core curve or to a contractible loop. We can locally homotope $f$ such that
-$f(S)$ intersects $A$ in curves of this form. Then each contractible curve must
+Homotope $f$ to be transverse to $A$. $A$ is an annulus, so any component of
+$f(S) \cap A$ is either homotopic to a multiple of the core curve of $A$ or to
+a contractible loop in $A$. We can locally homotope $f$ such that $f(S)$
+intersects $A$ in curves of this form.  Then each contractible curve must
 correspond to a curve that's contractible in $S$ as well, by
-$\pi_1$-injectivity.  By the same ball argument as above, we can homotope to
-eliminate any such intersection. These homotopies are all local, so don't
+$\pi_1$-injectivity. These two contractions, each of which is a singular map of
+a disk into $M$, together induce a map $S^2 \to M$. Since $M$ is irreducible,
+it is aspherical. So this sphere is contractible, that is, there is a singular
+map $B^3 \to X$ filling it. Homotoping across this sphere, we can remove this
+intersection between $f(S)$ and $A$. These homotopies are all local, so don't
 affect any other intersections between $f(S)$ and $A$, or between $f(S)$ and
 other annuli. Therefore we can do this for all intersections between $f(S)$ and
 for a disjoint union of annuli. This completes the proof.
