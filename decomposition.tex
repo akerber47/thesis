@@ -21,7 +21,7 @@ solid tori.  See Morgan \cite{Mo} or Thurston \cite{ThurstonIII} for details.
 
 First, a few simple propositions.
 
-\begin{prop}
+\begin{prop}\label{P:avoiddisk}
 
 Let $M$ be a compact orientable irreducible $3$-manifold. Let $f \colon S \to
 M$ be a $\pi_1$-injective map, where $S$ is a closed surface.  Let $D \cin M$
@@ -74,8 +74,9 @@ irreducible, and $D \cin M$ a compression disk for $\bd M$. Then we can isotope
 $P$ within $\bd M$ such that $P$ has minimal intersection with $\bd D$. In this
 minimal intersection, torus components of $P$ do not intersect $D$, and if we
 cut $M$ along $D$, all the resulting rectangles obtained by cutting annulus
-components of $P$ are essential.  We can perform a similar operation for any
-finite collection of disjoint compression disks.
+components of $P$ are essential --- that is, they're thickenings of essential
+curves in $\bd M - \bd D$.  We can perform a similar operation for any finite
+collection of disjoint compression disks.
 
 \end{prop}
 
@@ -101,85 +102,20 @@ completes the proof.
 
 \end{proof}
 
-\begin{cor}
+We can reduce our main problem in the case where $M$ has compressible boundary.
+By \ref{P:avoiddisk}, any closed $\pi_1$-injective surface $S$ can be made to
+avoid any compression disks.:
 
-Let $(M,P)$ be a pared $3$-manifold, and $f \colon S \to M$ a $\pi_1$-injective
-map of a closed surface. Suppose $P_0$ is a component of $P$ which has an
-essential intersection with a compression disk $D$. By abuse of notation, we'll
-refer to its core curve as $P_0$ as well. Then one of the following holds:
-
-\begin{enumerate}
-
-\item $P_0$ is homotopic in $M$ to a different curve in $\bd M$ that does not
-intersect $D$. That is, there are sufficiently many compression disks cobounded
-by arcs in $P_0$ with endpoints on $\bd D$ that ``transfer $P_0$ across $D$ to
-a different part of $\bd M$.''
-
-\item $f_*(\pi_1S)$ does not intersect any conjugates of $\pi_1 P_0$, that is,
-a multiple of $P_0$ is not freely homotopic in $M$ into any image of a loop in
-$S$.
-
-\end{enumerate}
-
-\end{cor}
-
-\begin{proof}
-
-Note that if the algebraic intersection number between $P_0$ and $D$ is
-nonzero, it immediately follows that $P_0$ cannot be homotoped in $M$ into the
-image of a loop in $S$ (which would have to be disjoint from $D$). The
-algebraic intersection number is a homotopy, indeed a homology invariant in
-$M$.  So we need only consider the case of zero algebraic intersection.
-
-Deformation retract $D$ to a point, and choose this as our basepoint for
-$\pi_1M$.  This yields an expression for $\pi_1M$ as either a free product
-$\pi_1M_1 * \pi_1M_2$ (if $M \setminus D$ is disconnected) or trivial HNN
-extension $\pi_1M_0 * = \langle\pi_1M_0,t\rangle$ (if $M \setminus D$ is
-connected).  Since $S$ can be homotped to be disjoint from $D$, $f_* (\pi_1S)$
-is contained in one of these subgroups $\pi_1M_1$,$\pi_1M_2$,$\pi_1M_0$.
-Cutting $P_0$ along $D$ breaks it into a union of arcs, and after the
-deformation retract this corresponds to a word in the free product / HNN with
-each arc inducing a single subgroup letter in the word (or pair of letter, in
-the HNN case when the arc connects between the two copies of $D$ in $M_0$).  In
-the HNN case, note that the zero algebraic intersection implies that the number
-of times the stable generator $t$ appears in such a word is the same as the
-number of times $t-1$ appears.
-
-But in the HNN case, $t$ does not appear in $f_*(\pi_1S)$.  Similarly, in the
-free product case, words from only one of $\pi_1M_1$ or $\pi_1M_2$ appear in
-$f_*(\pi_1S)$.  Without loss of generality say it's $\pi_1M_1$. That is, in
-order for (2) to be false, that is, for a multiple of $P_0$ to appear in
-$f_*(\pi_1S)$, we must have sufficient cancellation in the element $P_0$ to
-remove all powers of $t$, or all letters from $\pi_1M_2$. We claim that (1)
-holds in this case.
-
-To see this, observe that $\pi_1M$ is a \emph{trivial} free product or HNN, so
-there are no added relations. The only way to produce an element in a subgroup
-is if all the in-between letters are in fact trivial. For each letter in the
-word that is trivial in its subgroup ($\pi_1M_1$, $\pi_1M_2$, or $\pi_1M_0$),
-we have a basepointed closed curve in $M$, which corresponds to a contractible
-boundary arc in the original $M$ (before deformation retract) with both
-endpoints on $D$.  Connect the endpoints of this arc with a segment along $\bd
-D$ to produce a closed curve in $\bd M$. This is homotopically trivial, by the
-above word argument.  Therefore, by Dehn's lemma, it bounds a disk in $M$.
-Pushing $P_0$ along this disk and slightly outside it moves it to a new
-position in $\bd M$ with fewer intersections with $\bd D$. Using an innermost
-disk argument, we can do this isotopically to obtain (1).
-
-\end{proof}
-
-Together these demonstrate that we can reduce our main problem when $M$ admits
-boundary compressions. All closed $\pi_1$-injective surfaces can be made to
-avoid the compression disks, and all components of the pared structure can
-either be made to avoid the compression disks (case (1)) or are irrelevant
-because they cannot be homotoped into any closed $\pi_1$-injective surface
-(case (2)). We push the case (1) pared structure components away from the
-compression disks and discard the case (2) components. Note of course that no
-case (1) component can fail to be $\pi_1$-injective, as it'd already fail to be
-$\pi_1$-injective before the compression (by homotoping across the compression
-disk). In fact the result is a new (possibly disconnected) pared $3$-manifold.
-The resulting (possibly disconnected) incompressible pared manifold contains
-a (QF) surface if and only if the original does.
+and all components of the pared structure can either be made to avoid the
+compression disks (case (1)) or are irrelevant because they cannot be homotoped
+into any closed $\pi_1$-injective surface (case (2)). We push the case (1)
+pared structure components away from the compression disks and discard the case
+(2) components. Note of course that no case (1) component can fail to be
+$\pi_1$-injective, as it'd already fail to be $\pi_1$-injective before the
+compression (by homotoping across the compression disk). In fact the result is
+a new (possibly disconnected) pared $3$-manifold.  The resulting (possibly
+disconnected) incompressible pared manifold contains a (QF) surface if and only
+if the original does.
 
 Therefore we can reduce to the case where $M$ is a pared $3$-manifold (compact
 orientable irreducible) with incompressible boundary. However, in order to
@@ -247,9 +183,9 @@ We will need the following definition.
 
 \begin{defn}
 
-Let $M$ be a compact $3$-manifold with boundary which is not a 3-ball. $M$ is
-\emph{acylindrical} if every proper $\pi_1$-injective map $A^2 \to M$ is
-homotopic into $\bd M$.
+Let $M$ be a compact $3$-manifold with incompressible boundary which is not
+a 3-ball.  $M$ is \emph{acylindrical} if every proper $\pi_1$-injective map
+$A^2 \to M$ is homotopic rel boundary into $\bd M$.
 
 \end{defn}
 
@@ -284,9 +220,9 @@ follows:
 disks $D_{ik}$ for the boundary of $M_i$. Cut $M_i$ along these disks to obtain
 $M_{i+1}$.
 
-\item If $i$ is odd, choose a maximal set of disjoint non-parallel properly
-embedded essential annuli $A_{ik}$. Cut $M_i$ along these annuli to obtain
-$M_{i+1}$.
+\item If $i$ is odd, choose a maximal set of disjoint pairwise non-parallel
+properly embedded essential annuli $A_{ik}$. Cut $M_i$ along these annuli to
+obtain $M_{i+1}$.
 
 \end{enumerate}
 
@@ -295,14 +231,14 @@ components.
 
 \begin{defn}
 
-We refer to this as an \emph{alternating hierarchy} for $M$.
+We refer to this as an \emph{JSJ hierarchy} for $M$.
 
 \end{defn}
 
-\begin{lemma}[Alternating hierarchy lemma]
+\begin{lemma}[JSJ hierarchy lemma]
 
 Let $M$ be a compact orientable irreducible $3$-manifold with nonempty
-boundary.  Then the alternating hierarchy for $M$ has finite length $n$. Each
+boundary.  Then the JSJ hierarchy for $M$ has finite length $n$. Each
 component of $M_n$ is either a ball or an acylindrical $3$-manifold with
 incompressible boundary.
 
@@ -322,7 +258,7 @@ can embed each level of the hierarchy: $M_n \hookrightarrow M_{n-1}
 \hookrightarrow \dots \hookrightarrow M_0$. Furthermore, by isotoping along
 a small tubular neighborhood of the boundary, we can in fact embed each $M_i$
 into the interior of $M_{i-1}$. The hierarchy induces a hierarchy of nested
-disjoint embedded surfaces $\bd M_n, \bd M_{n-1}, dots, \bd M_0$. For odd $i$,
+disjoint embedded surfaces $\bd M_n, \bd M_{n-1}, \dots, \bd M_0$. For odd $i$,
 each $\bd M_i$ is incompressible in $M_{i-1}$, since we constructed $M_i$ from
 a maximal set of compression disks for $\bd M_{i-1}$.  We claim that each odd
 $\bd M_i$ is in fact incompressible in $M_{i-2}$.  Suppose not, and let $D \cin
@@ -338,8 +274,8 @@ $\alpha$ cannot be essential in $A$, as otherwise $D'$ would induce
 a compression of $A$, contradicting the assumption that $A$ was essential in
 $M_{i-2}$.  But $A$ is an annulus, so this implies $\alpha$ bounds a disk $D''$
 in $A$.  Since $M$ is irreducible, the $M_i$ are irreducible as well.  So $D'
-cup D''$ bounds a ball in $M_{i-2}$, and we can isotope $D$ across this ball to
-remove the intersection.  Repeating this process, we can remove all closed
+\cup D''$ bounds a ball in $M_{i-2}$, and we can isotope $D$ across this ball
+to remove the intersection.  Repeating this process, we can remove all closed
 curve intersections.
 
 We now claim that $A$ and $D$ cannot intersect in any arcs. If they do, choose
@@ -358,6 +294,18 @@ annuli intersect $D$.  No annuli can be contained in $D''$ as they wouldn't be
 essential (as $D''$ is a boundary disk). So no annuli can intersect $D''$.
 Therefore the disk $D''$ induces a boundary disk in $M_{i-2}$. This proves that
 $\bd M_i$ is incompressible in $M_{i-2}$.
+
+Furthermore, we now claim that $\bd M_i$ is incompressible in $M_0$. By
+construction $\bd M_1$ is incompressible in $M_0$. We proceed by induction.
+Assume $\bd M_{i-2}$ is incompressible in $M_0$. A compression disk $D$ for
+$\bd M_i$ intersects $\bd M_{i-2}$ in a union of disjoint simple closed curves
+in $D$. Any innermost disk $D'$ is a compression disk for $\bd M_{i-2}$ in
+$M_0$. Hence $\bd D'$ bounds a disk $D'' \cin \bd M_{i-2}$. By irreducibility,
+$D' \cap D''$ bounds a ball in $M_0$. Isotoping across this ball removes this
+intersection of $D$ with $\bd M_{i-2}$. Repeating this process we find that $D$
+is disjoint from $\bd M_{i-2}$. But this implies $D \cin M_{i-2}$ (we know $\bd
+D \cin \bd M_i \cin M_{i-2}$. Since $\bd M_i$ is incompressible in $M_{i-2}$,
+$\bd D$ bounds a disk in $\bd M_i$. This proves the claim.
 
 Furthermore, we claim that for odd $i$, unless the sequence has terminated
 (that is, $M_i=M_{i-1}=M_{i-2}$), $\bd M_i$ is not boundary parallel in
@@ -382,9 +330,17 @@ boundary components of $A_0$) cannot possibly be parallel to a closed curve in
 $\bd M_{i-2}$, as it'd have to cross the compression. This proves that $\bd
 M_i$ is not boundary parallel in $\bd M_{i-2}$.
 
-This means that considering only the odd terms in this alternating
-decomposition, we have a Haken hierarchy. Finite depth immediately follows from
-Haken finiteness. This completes the proof.
+We now claim that in facs all of the $\bd M_i$ are pairwise nonparallel in
+$M_0$.  Each is nonparallel to its neighbors in the sequence --- $\bd M_{i-2}$
+and $\bd M_{i+2}$.  If any two were parallel, because of the nesting, any
+parallelism homotopy between them would have to cause the surfaces in between
+to be parallel as well. This is impossible as we know a surface is not parallel
+to its neighbors in the sequence.
+
+This means that considering only the boundaries of odd terms in this
+alternating decomposition, we have a sequence of disjoint nonparallel
+incompressible surfaces in $M_0$. By Kneser--Haken finiteness, any such set of
+surfaces is finite. This completes the proof.
 
 \end{proof}
 
@@ -405,7 +361,8 @@ balls. We make the following conjecture:
 
 \begin{conj}
 
-Let $(M,P)$ be a pared acylindrical $3$-manifold. Then $M$ admits a (QF) surface.
+Let $(M,P)$ be a pared acylindrical $3$-manifold. Then $M$ admits a (QF)
+surface.
 
 \end{conj}
 
@@ -417,11 +374,11 @@ Baker--Cooper \cite{BCcombination} or Agol--Groves--Manning
 \cite{AGMcombination}, we can guarantee (under the right conditions) that this
 map is $\pi_1$-injective. This allows us to pull the problem back to $M'$,
 pulling the pared structure back and constructing a (QF) surface there. By
-$\pi_1$-injectivity, This will induce a (QF) surface in $M$.
+$\pi_1$-injectivity, this will induce a (QF) surface in $M$.
 
 We also believe that in \emph{most} cases with no acylindrical pieces (that is,
 manifolds where the bottom of the hierarchy is a union of balls), there should
-still be a (QF) surfaces. We hope the same book of $I$-bundlegs mapping
-argument should work in most cases. More work is needed.
+still be a (QF) surfaces. We hope the same book of $I$-bundles mapping argument
+should work in most cases. More work is needed.
 
-In the remainder of this paper, we address the case of books of $I$-bundlegs.
+In the remainder of this paper, we address the case of books of $I$-bundles.
