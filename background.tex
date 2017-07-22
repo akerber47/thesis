@@ -24,8 +24,8 @@ We first recall the following basic definitions.
 \begin{defn}
 
 A \emph{surface group} is a group isomorphic to the fundamental group of
-a closed surface of negative Euler characteristic. Such a group can be written
-with the finite presentation
+a closed connected surface of negative Euler characteristic. Such a group can
+be written with the finite presentation
 %
 $\pi_1 \Si_g = \langle a_1,b_1,\dots,a_g,b_g | a_1b_1a_1^{-1}b_1^{-1} \dots
 a_gb_ga_g^{-1}b_g^{-1} = 1\rangle$
@@ -35,16 +35,18 @@ where $g \geq 2$.
 \end{defn}
 
 Note that surface groups are not free. The fundamental group of a compact
-surface with boundary of negative Euler characteristic is $\Si_{g,b}$ is the
-free group on $2g + b - 1$ generators. We wish to consider surface subgroups of
-Kleinian groups which are quasi-Fuchsian.
+connected surface with non-empty boundary of negative Euler characteristic is
+$\Si_{g,b}$ is the free group on $2g + b - 1$ generators. We wish to consider
+surface subgroups of Kleinian groups which are quasi-Fuchsian.
 
 \begin{defn}
 
 A {quasi-Fuchsian group} is a Kleinian group $\Ga < \PSL_2\bC$ for which there
 exists a quasi-conformal homeomorphism $f \colon S^2_\infty \to S^2_\infty$
 which conjugates $\Ga$ to a Fuchsian group, that is, a discrete subgroup of
-$\PSL_2\bR$.
+$\PSL_2\bR$. In this paper we also require that a Fuchsian group have limit set
+$S^1$ --- in some sources, this is called a \emph{Fuchsian group of the first
+kind}.
 
 \end{defn}
 
@@ -103,8 +105,8 @@ isomorphism on $\pi_1$.  Given a Kleinian group $\Ga$, a quasi-Fuchsian surface
 subgroup $\phi(\pi_1S) < \Ga$ corresponds to a covering map $p \colon
 \bH^3/\phi(\pi_1S) \to \bH^3/\Ga$. This map is $\pi_1$-injective.  Projecting
 $i(S)$ downward into $\bH^3/\Ga$, we obtain a closed surface $p(i(S))$. $p
-\circ i \colon S to \bH^3/\Ga$ is $\pi_1$-injective. In fact, $(p \circ
-i)_\star(\pi_1S))) = \phi(\pi_1S)$.
+\circ i \colon S \to \bH^3/\Ga$ is $\pi_1$-injective. In fact, $(p \circ
+i)_\star(\pi_1S) = \phi(\pi_1S)$.
 
 We can therefore re-state our general problem as follows.
 
@@ -131,6 +133,13 @@ conditions to a purely topological conditions on $S$ and $f$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Pared $3$-manifolds and hyperbolization}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{ntn}
+
+We write $T^2$ for the standard $2$-torus and $A^2$ for the compact annulus
+$S^1 \times I$.
+
+\end{ntn}
 
 \begin{defn}
 
@@ -165,7 +174,7 @@ instance, see Canary--McCullough \cite[pp88]{CMc}.
 
 A pared manifold $(M,P)$ is \emph{elementary} if it is homeomorphic (as a pair)
 to one of the following: $(T^2\x I,T^2\x 0)$, $(A^2\x I,A^2\x 0)$, or $(A^2\x
-I,\emptyset)$, or $(S3,\emptyset)$.
+I,\emptyset)$, or $(B^3,\emptyset)$.
 
 \end{defn}
 
@@ -181,30 +190,39 @@ regions become cusps.
 To be precise, given a geometrically finite Kleinian group $\Ga$, we construct
 a pared $3$-manifold $(M,P)=(\cM(\Ga),\cP(\Ga))$ as follows.
 
+We first recall the definitions of thick and thin parts of a convex core. Let
+$\mu \colon N \to \bR^+$ be the map sending $x\in N$ to the length of the
+shortest nontrivial loop through $x$ in $N$. Now write
+$C(N)_{[\epsilon,\infty)} = C(N) \cap \mu^{-1}([\epsilon,\infty))$ and
+$C(N)_{(0,\epsilon]} = C(N) \cap \mu^{-1}((0,\epsilon])$. We refer to these as
+the \emph{thick part} and \emph{thin part} of $C(N)$, respectively.
+
 We know that the convex core $C(\Ga) \cin \bH^3/\Ga$ has finite volume. For
-epsilon sufficiently small, The thick part $C(\Ga)[\epsilon,\infty)$ is
-compact, and the thin part $C(\Ga)(0,\epsilon]$ is a union of small
+epsilon sufficiently small, the thick part $C(\Ga)_{[\epsilon,\infty)}$ is
+compact, and the thin part $C(\Ga)_{(0,\epsilon]}$ is a union of small
 neighborhoods of the cusps.  As long as epsilon is sufficiently small, the
 exact choice of $\epsilon$ is arbitrary, as the resulting thick and thin parts
-are homeomorphic.  Now let $\cM(\Ga) = C(\Ga)[\epsilon,\infty)$, and $\cP(\Ga)
-= C(\Ga)[\epsilon] = \bd C(\Ga)[\epsilon,\infty) \cap \bd C(\Ga)(0,\epsilon]$.
-That is, $\cP(\Ga)$ is the boundary locus along which we truncated to remove
-the thin part. We can rebuild the convex core from $(\cM(\Ga),\cP(\Ga))$ by
-gluing cusp neighborhoods onto each component of $\cP(\Ga)$.
+are homeomorphic.  Now let $\cM(\Ga) = C(\Ga)_{[\epsilon,\infty)}$, and
+$\cP(\Ga) = C(\Ga)_{[\epsilon]} = \bd C(\Ga)_{[\epsilon,\infty)} \cap \bd
+C(\Ga)_{(0,\epsilon]}$.  That is, $\cP(\Ga)$ is the boundary locus along which
+we truncated to remove the thin part. We can rebuild the convex core from
+$(\cM(\Ga),\cP(\Ga))$ by gluing cusp neighborhoods onto each component of
+$\cP(\Ga)$.
 
 \begin{prop}
 
 $(\cM(\Ga),\cP(\Ga))$ is a pared $3$-manifold. $\cM(\Ga)- \cP(\Ga)$ is
-homeomorphic to the convex core of $\Ga$, $C(\Ga)$. The parabolic elements of
-$\Ga$ precisely correspond to conjugates of the peripheral subgroups
-$\pi_1\cP(\Ga) \cin \pi_1\cM(\Ga)$ (really, the conjugates of the peripheral
-subgroups associated to each component of $\cP(\Ga)$).
+homeomorphic to the convex core of $\Ga$, $C(\Ga)$. There exists a deformation
+retraction from $\cM(\Ga)$ to $C(\Ga)$, the \emph{nearest point retraction}.
+The parabolic elements of $\Ga$ precisely correspond to conjugates of the
+peripheral subgroups $\pi_1\cP(\Ga) \cin \pi_1\cM(\Ga)$ (really, the conjugates
+of the peripheral subgroups associated to each component of $\cP(\Ga)$).
 
 \end{prop}
 
 \begin{proof}
 
-See Morgan \cite[Corollary 6.10]{Mo}. % Corollary 6.10
+See Morgan \cite[Lemma 6.1 and Corollary 6.10]{Mo}. % Corollary 6.10
 
 \end{proof}
 
@@ -219,14 +237,14 @@ Conversely, there is Thurston's famous hyperbolization theorem:
 
 Let $(M,P)$ be a pared $3$-manifold with $M$ Haken. Then there exists
 a geometrically finite hyperbolic $3$-manifold $N$ such that
-$\cM(\pi_1N),\cP(\pi_1N)$ is homeomorphic to $(M,P)$.
+$(\cM(\pi_1N),\cP(\pi_1N))$ is homeomorphic to $(M,P)$.
 
 \end{thm}
 
 \begin{proof}
 
-See surveys by Morgan \cite{Mo} and Scott \cite{ThurstonviaScott}, or work of
-Kapovich \cite{Kapovich} for a broad overview of the proof. Thurston first
+See surveys by Morgan \cite{Mo} and Scott \cite{ThurstonviaScott} or Kapovich's
+monograph \cite{Kapovich} for a broad overview of the proof. Thurston first
 announced the theorem in \cite{Thurston0}. Key details of the argument are
 presented in Thurston's 3-part paper (\cite{ThurstonI}, \cite{ThurstonII}, and
 \cite{ThurstonIII}).
@@ -279,9 +297,10 @@ quasi-Fuchsian, we know that the convex core $C(N')$ is homeomorphic to $S
 S \times \{1/2\} \cin S \times I$. This map is an isomorphism on $\pi_1$.
 Composing this with the covering map $N' \to N$, we obtain a $\pi_1$-injective
 map $\phi \colon S \to N$.  This corresponds to a $\pi_1$-injective map to
-$(M,P)$ by retracting.  Applying the theorem above, no element of
-$\Ga'=\phi(\pi_1S)$ is parabolic.  Because $(M,P)$ is a pared structure for
-$N$, this implies that no loop in $S$ is freely homotopic to a loop in $P$.
+$(M,P)$ by applying the nearest point retraction.  Applying the theorem above,
+no element of $\Ga'=\phi(\pi_1S)$ is parabolic.  Because $(M,P)$ is a pared
+structure for $N$, this implies that no loop in $S$ is freely homotopic to
+a loop in $P$.
 
 Conversely, suppose we are given a $\pi_1$-injective map $S \to M$ where $S$ is
 a closed surface.  Suppose further that no loop in $S$ is freely homotopic to
@@ -300,10 +319,11 @@ as follows.
 \begin{prop}
 
 Let $N$ be a geometrically finite hyperbolic $3$-manifold of infinite volume,
-and $(M,P)$ a pared $3$-manifold structure for $N$. Then quasi-Fuchsian surface
-subgroups of $\pi_1N$ precisely correspond to $\pi_1$-injective maps of
-a closed surface $S \to M$ such that no loops in $P$ are freely homotopic to
-images of loops in $S$.
+and $(M,P)$ a pared $3$-manifold structure for $N$. (In fact, it is sufficient
+to assume that $N$ is noncompact.) Then quasi-Fuchsian surface subgroups of
+$\pi_1N$ precisely correspond to $\pi_1$-injective maps of a closed surface $S
+\to M$ such that no loops in $P$ are freely homotopic to images of loops in
+$S$.
 
 \end{prop}
 
