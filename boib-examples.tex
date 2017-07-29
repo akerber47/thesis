@@ -109,13 +109,24 @@ $(M,P)$ contains a (QF) surface.
 
 \end{thm}
 
-Instead of using the full power of a general theorem, we'll solve this example
-explicitly. This will give an idea of the flavor of the general construction.
+Instead of giving a full proof, we'll solve this example explicitly in
+a special case.  This will give an idea of the flavor of the general
+construction. Theorem~\ref{T:ex1} will follow from the main theorem --- see
+Chapter 5.
+
+\begin{thm}\label{T:ex1'}
+
+Suppose that $P$ has no components contained in $C$, or in any of the $B_i$.
+Suppose further that every component of $P$ intersects each page $B_i$ in at
+most a single rectangle. Then $(M,P)$ contains a (QF) surface.
+
+\end{thm}
+
 Choose an arbitrary page boundary component $F=\bd_\pm B_i \cong \Si_{1,1}$.
 Since $P$ is in minimal position, $F \cap P$ is a thickened set of disjoint
 proper essential arcs in $F$ (there are no closed curves or non-essential
 arcs).  We now have the following elementary fact about curves on surfaces.
-The proof provided is new, but uses standard techniques. For an overview, see
+The proof provided is new, but uses standard techniques.  For an overview, see
 Farb--Margalit \cite{FM} or Fathi--Laudenbach--Poenaru \cite{FLP}.
 
 \begin{lemma}\label{L:ex1.1}
@@ -230,7 +241,7 @@ the three arcs trans and the third cis.
 
 \end{proof}
 
-\begin{proof}[Proof of Theorem~\ref{T:ex1}]
+\begin{proof}[Proof of Theorem~\ref{T:ex1'}]
 
 We begin with $P$ in minimal position. By assumption, each $P \cap \bd_\pm B_i$
 is a union of thickened arcs (that is, there are no annulus components in any
@@ -286,25 +297,44 @@ pattern must come from pieces of the same component of $P$, and any component
 of $P$ with pared lifting pieces in $F_1$ and $F_2$ has to lie on $\bd_{12}
 M = \bd_+ B_1 \cup A'_{12} \cup \bd_- B_2$.
 
-Instead, observe that there is at most one band of the three in $\bd_-B_2$
-containing arcs that, when lifted to $F_2$ and glued across $F'_{12}$, match up
-to arcs in the cis band of $\bd_+B_1$. This is because once one band has this
-matching behavior, by endpoint parity the vertices can't also match up for
-a different band. The arcs they have to match with on the other side are
-parallel. Looking at the boundary circle of $\Si_{1,1}$, non-parallel arcs have
-endpoints in cyclic order, but parallel arcs have endpoints adjacent.
+Instead, we proceed as follows. Recall that the core arcs of components of $P
+\cap \bd_+B_1$ and $P\cap \bd_- B_2$ must be contained in at most three
+``bands'' of parallel arcs. Now let $\alpha$ and $\beta$ be core curves of two
+components of $P$ contained in $\bd_{12}M$. By assumption, $\alpha_1 = \alpha
+\cap \bd_+B_1$ is a single properly embedded arc in $\bd_+B_1$.  Similarly for
+$\beta_1 = \beta \cap \bd_+B_1$.  Suppose that $\alpha_1$ and $\beta_1$ are
+both cis arcs in $F_1$.  By Lemma~\ref{L:ex1.1} and Lemma~\ref{L:ex1.2}, they
+must lie in the same band of $\bd_+B_1$.  Write $\alpha_2 = \alpha \cap
+\bd_-B_2$ and $\beta_2 = \beta \cap \bd_-B_2$. We claim that $\alpha_2$ and
+$\beta_2$ lie in the same band of $\bd_-B_2$.
 
-So, since there is only one such band on $\bd_-B_2$, we can choose $F_2$ such
-that this band is not cis.  Finally, for $F_3$ we have two such constraints.
-We have a cis band on $\bd_-B_1$ from our choice of $F_1$, and a cis band on
-$\bd_+B_2$ from our choice of $F_2$.  Applying the same argument, there is at
-most one band on $\bd_-B_3$ and one band on $\bd_+B_3$ that may connect across
-$F'_{23}$ or $F'_{31}$, respectively, to form closed curves. Choose $S_3$ such
-that both of these bands are trans. Note that this requires a slight
-modification to Lemma~\ref{L:ex1.2} --- since these bands are on different
-boundary surfaces, they may be parallel or non-disjoint.  If they aren't
-disjoint, we can tweak them by local modifications so they are, and then
-untweak them in the cover. If they are parallel, just ignore one set of bands.
+To see this, consider the standard set of 3 arcs again (see
+Figure~\ref{F:3arcs}). Any two distinct members of this standard set have
+endpoints which are interleaved. That is, if we look at a cyclic order on the
+boundary of this punctured torus, the endpoints of two distinct components of
+the set will alternate. However, if we consider two parallel copies of a single
+arc in this set, the endpoints of each component will be adjacent in the cyclic
+order. Applying a homeomorphism, this holds in general. Since $\alpha_1$ and
+$\beta_1$ are parallel, their endpoints must be adjacent, not alternating. But
+these are connected to the endpoints of $\alpha_2$ and $\beta_2$ by
+transversals in the annulus $A'_{12}$, which must be embedded. The cyclic order
+is preserved, so the endpoints of $\alpha_2$ and $\beta_2$ must be parallel as
+well. This proves the claim.
+
+So, there is only one band on $\bd_-B_2$ with arcs that match with the band of
+$\bd_+B_1$ that we chose to be cis. Therefore, we must choose $F_2$ such that
+this band is not cis.
+
+Similarly, for $F_3$ we have two such constraints.  We have a cis band on
+$\bd_-B_1$ from our choice of $F_1$, and a cis band on $\bd_+B_2$ from our
+choice of $F_2$.  Applying the same argument, there is at most one band on
+$\bd_-B_3$ and one band on $\bd_+B_3$ that may connect across $F'_{23}$ or
+$F'_{31}$, respectively, to form closed curves.  Choose $S_3$ such that both of
+these bands are trans. Note that this requires a slight modification to
+Lemma~\ref{L:ex1.2} --- since these bands are on different boundary surfaces,
+they may be parallel or non-disjoint.  If they aren't disjoint, we can still
+find a cover that makes both trans by a similar relative homology argument as
+Lemma~\ref{L:ex1.2}. If they are parallel, just ignore one set of bands.
 
 Glue the $F_i$ and $F'_{ij}$ as described to obtain $S$. We claim that $S$
 satisfies the pared lifting criterion. Suppose not, and let $\alpha$ be
