@@ -27,6 +27,32 @@
   \label{#2}
   \end{figure}
 }
+\newcommand{\mytallfig}[3]{
+  \begin{figure}
+  \noindent
+  \includegraphics[height=0.93\textheight]{#1}
+  \caption{#3}
+  \label{#2}
+  \end{figure}
+}
+% pictures in landscape. Note smaller width so caption fits.
+% This is ugly, so I decided not to use it.
+\newcommand{\myrotfig}[3]{
+  \begin{sidewaysfigure}
+  \centering
+  \includegraphics[height=0.75\textwidth]{#1}
+  \caption{#3}
+  \label{#2}
+  \end{sidewaysfigure}
+}
+\newcommand{\mytallrotfig}[3]{
+  \begin{sidewaysfigure}
+  \centering
+  \includegraphics[width=\textheight]{#1}
+  \caption{#3}
+  \label{#2}
+  \end{sidewaysfigure}
+}
 
 \newcommand{\x}{\times}
 \newcommand{\bd}{\partial}
