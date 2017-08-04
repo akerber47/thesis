@@ -218,19 +218,19 @@ of $\Si_{1,1}$.
 
 We consider connected double covers $\widetilde{F} \to F \cong \Si_{1,1}$.
 These covers have 2 boundary components. Any proper arc in $P \cap F$ lifts to
-2 arcs in $\widetilde{F}$.  We say an arc in $F$ is \emph{cis} for a given
-$\widetilde{F}$ if any (or, equivalently, all) lifts of that arc have both
-endpoints in the same boundary component of $\widetilde{F}$.  Otherwise, we
-say it's \emph{trans} for that cover. See Figure~\ref{F:3arcs}.
+2 arcs in $\widetilde{F}$.  We say an arc in $F$ is \emph{returning} for
+  a given $\widetilde{F}$ if any (or, equivalently, all) lifts of that arc have
+  both endpoints in the same boundary component of $\widetilde{F}$.  Otherwise,
+  we say it's \emph{non-returning} for that cover. See Figure~\ref{F:3arcs}.
 
 \mytallfig{fig-3arcs}{F:3arcs}{Lifting a standard set of 3 arcs in $\Si_{1,1}$}
 
 \begin{lemma}\label{L:ex1.2}
 
 Given any 3 disjoint non-parallel proper essential arcs in $\Si_{1,1}$, and any
-double cover of $\Si_{1,1}$, 2 of the 3 arcs are trans, and the 3rd is cis.
-Furthermore, we can choose any 2 of the 3 we wish to be trans with an
-appropriate cover.
+double cover of $\Si_{1,1}$, 2 of the 3 arcs are non-returning, and the 3rd is
+returning.  Furthermore, we can choose any 2 of the 3 we wish to be
+non-returning with an appropriate cover.
 
 \end{lemma}
 \begin{proof}
@@ -240,7 +240,7 @@ these arcs to the standard set of 3 disjoint non-parallel proper arcs. Now it
 suffices to observe, by looking at relative first homology or just by direct
 construction, that each of the three standard connected double covers
 (corresponding to nontrivial maps $\mathbb{Z}^2 \to \mathbb{Z}/2$) makes two of
-the three arcs trans and the third cis.
+the three arcs non-returning and the third returning.
 
 \end{proof}
 
@@ -287,18 +287,19 @@ Choose an arbitrary connected double cover for $F_1$. By definition, the pared
 lifting pattern on $F_1$ consists of lifts of (thickened) arcs on $\bd_+ B_1$
 and $\bd_- B_1$. The arcs on each form at most 3 bands, by Lemma~\ref{L:ex1.1}.
 $F_1$ is a double cover of each.  By Lemma~\ref{L:ex1.2}, two of the bands on
-$\bd_+B_1$ are trans, and the other is cis. The same holds for $\bd_-B_1$.
+$\bd_+B_1$ are non-returning, and the other is returning. The same holds for
+$\bd_-B_1$.
 
 We cannot choose $F_2$ arbitrarily and necessarily satisfy the pared lifting
-criterion. We may accidentally connect a cis arc in $F_1$ to two arcs in
-$F'_{12}$ which connect to a cis arc in $F_2$ in $\bd_-B_2$. This would yield
-a closed curve in the pared lifting pattern. But by definition of the pared
-lifting pattern, in order for this to occur, the cis arc in $F_1$ would have to
-be lifted from $\bd_+ B_1$, and the cis arc in $F_2$ would have to be lifted
-from $\bd_- B_2$. This is because arcs that connect in the pared lifting
-pattern must come from pieces of the same component of $P$, and any component
-of $P$ with pared lifting pieces in $F_1$ and $F_2$ has to lie on $\bd_{12}
-M = \bd_+ B_1 \cup A'_{12} \cup \bd_- B_2$.
+criterion. We may accidentally connect a returning arc in $F_1$ to two arcs in
+$F'_{12}$ which connect to a returning arc in $F_2$ in $\bd_-B_2$. This would
+yield a closed curve in the pared lifting pattern. But by definition of the
+pared lifting pattern, in order for this to occur, the returning arc in $F_1$
+would have to be lifted from $\bd_+ B_1$, and the returning arc in $F_2$ would
+have to be lifted from $\bd_- B_2$. This is because arcs that connect in the
+pared lifting pattern must come from pieces of the same component of $P$, and
+any component of $P$ with pared lifting pieces in $F_1$ and $F_2$ has to lie on
+$\bd_{12} M = \bd_+ B_1 \cup A'_{12} \cup \bd_- B_2$.
 
 Instead, we proceed as follows. Recall that the core arcs of components of $P
 \cap \bd_+B_1$ and $P\cap \bd_- B_2$ must be contained in at most three
@@ -306,8 +307,8 @@ Instead, we proceed as follows. Recall that the core arcs of components of $P
 components of $P$ contained in $\bd_{12}M$. By assumption, $\alpha_1 = \alpha
 \cap \bd_+B_1$ is a single properly embedded arc in $\bd_+B_1$.  Similarly for
 $\beta_1 = \beta \cap \bd_+B_1$.  Suppose that $\alpha_1$ and $\beta_1$ are
-both cis arcs in $F_1$.  By Lemma~\ref{L:ex1.1} and Lemma~\ref{L:ex1.2}, they
-must lie in the same band of $\bd_+B_1$.  Write $\alpha_2 = \alpha \cap
+both returning arcs in $F_1$.  By Lemma~\ref{L:ex1.1} and Lemma~\ref{L:ex1.2},
+they must lie in the same band of $\bd_+B_1$.  Write $\alpha_2 = \alpha \cap
 \bd_-B_2$ and $\beta_2 = \beta \cap \bd_-B_2$. We claim that $\alpha_2$ and
 $\beta_2$ lie in the same band of $\bd_-B_2$.
 
@@ -325,19 +326,20 @@ is preserved, so the endpoints of $\alpha_2$ and $\beta_2$ must be parallel as
 well. This proves the claim.
 
 So, there is only one band on $\bd_-B_2$ with arcs that match with the band of
-$\bd_+B_1$ that we chose to be cis. Therefore, we must choose $F_2$ such that
-this band is not cis.
+$\bd_+B_1$ that we chose to be returning. Therefore, we must choose $F_2$ such
+that this band is not returning.
 
-Similarly, for $F_3$ we have two such constraints.  We have a cis band on
-$\bd_-B_1$ from our choice of $F_1$, and a cis band on $\bd_+B_2$ from our
-choice of $F_2$.  Applying the same argument, there is at most one band on
+Similarly, for $F_3$ we have two such constraints.  We have a returning band on
+$\bd_-B_1$ from our choice of $F_1$, and a returning band on $\bd_+B_2$ from
+our choice of $F_2$.  Applying the same argument, there is at most one band on
 $\bd_-B_3$ and one band on $\bd_+B_3$ that may connect across $F'_{23}$ or
 $F'_{31}$, respectively, to form closed curves.  Choose $S_3$ such that both of
-these bands are trans. Note that this requires a slight modification to
+these bands are non-returning. Note that this requires a slight modification to
 Lemma~\ref{L:ex1.2} --- since these bands are on different boundary surfaces,
 they may be parallel or non-disjoint.  If they aren't disjoint, we can still
-find a cover that makes both trans by a similar relative homology argument as
-Lemma~\ref{L:ex1.2}. If they are parallel, just ignore one set of bands.
+find a cover that makes both non-returning by a similar relative homology
+argument as Lemma~\ref{L:ex1.2}. If they are parallel, just ignore one set of
+bands.
 
 Glue the $F_i$ and $F'_{ij}$ as described to obtain $S$. We claim that $S$
 satisfies the pared lifting criterion. Suppose not, and let $\alpha$ be
@@ -346,11 +348,12 @@ intersect at least two pages of $M$. Choose two such pieces of $\alpha$ that
 are adjacent, that is, $\alpha_i\cin F_i$, $\alpha_j \cin F_j$ that are
 directly joined in the pared lifting pattern by a single arc $\alpha_{ij} \cin
 F'_{ij}$.  By the construction of $S$, at least one of $\alpha_i$, $\alpha_j$
-is trans. We guaranteed above that two cis arcs were never directly connected.
+is non-returning. We guaranteed above that two returning arcs were never
+directly connected.
 
-Without loss of generality, let $\alpha_i$ be trans. This means that the other
-endpoint of $\alpha_i$ (the one not connected to $\alpha_{ij}$) lies in the
-other boundary component of $F_i$. By construction of $S$, this boundary
+Without loss of generality, let $\alpha_i$ be non-returning. This means that
+the other endpoint of $\alpha_i$ (the one not connected to $\alpha_{ij}$) lies
+in the other boundary component of $F_i$. By construction of $S$, this boundary
 component connects to a different annulus $F'_{ik}$ in $S\cap C$. This annulus
 cannot contain any lifts of components of $\alpha$, as its two boundary
 components are parallel to a different boundary annulus $F_{ik}$ of $C\cin M$.
@@ -366,7 +369,7 @@ eliminated by certain closed loops, and solving those. Then, for a more general
 pared structure, we constructed covers of the page base surfaces which behaved
 nicely with respect to arcs in the pared lifting pattern.  These properties
 will become more elaborate in the general case, but are analogous --- we want
-arcs to connect different boundary components as the trans arcs do.  We then
-derived a method for gluing that avoided creating closed loops, by taking
+arcs to connect different boundary components as the non-returning arcs do.  We
+then derived a method for gluing that avoided creating closed loops, by taking
 advantage of the ability to branch between different annuli at each spine. This
 is the trickiest part of the general proof.
