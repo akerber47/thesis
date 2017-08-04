@@ -2,10 +2,10 @@
 \section{Example}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We construct a book of $I$-bundles $M$ as follows. In the following we take
-$\Si_{1,1}$ to be the compact surface of genus 1 with a single boundary
-component. Let $B_1$,$B_2$,$B_3$ be 3 trivial $I$-bundles over $\Si_{1,1}$.
-$B_1=B_2=B_3=\Si_{1,1}\x I$. Each $B_i$ has a single binding boundary and two
+We construct a book of $I$-bundles $M$ as follows. Let $\Si_{1,1}$ be the
+compact surface of genus 1 with a single boundary component. Let $B_1$, $B_2$,
+and $B_3$ be 3 trivial $I$-bundles over $\Si_{1,1}$. That is,
+$B_1=B_2=B_3=\Si_{1,1}\x I$.  Each $B_i$ has a single binding boundary and two
 side boundaries. Denote the side boundaries by $\bd_+B_i$ and $\bd_-B_i$.
 Recall that each side boundary component of a trivial $I$-bundle is
 a homeomorphic copy of the base surface $\Si_{1,1}$.
@@ -19,9 +19,9 @@ $A_1$, $A_2$, and $A_3$ be the respective gluing annuli. Then $M=\cB\cup_\cA
 
 \mytallfig{fig-bookex}{F:bookex}{Example of a book of $I$-bundles}
 
-Now $\bd M \cap C$ is a union of 3 annuli. Let these annuli be $A_{12}'$,
+Now $\bd M \cap C$ is a union of 3 annuli. Denote these annuli by $A_{12}'$,
 $A_{23}'$, and $A_{31}'$, where each boundary annulus is labeled based on its
-adjacent gluing annuli. We choose orientations and a cyclic order for the
+adjacent binding annuli. We choose orientations and a cyclic order for the
 gluing such that the 3 boundary components of M are precisely $\bd_+B_1 \cup
 A_{12}' \cup \bd_-B_2$, $\bd_+B_2 \cup A_{23}' \cup \bd_-B_3$, and $\bd_+B_3
 \cup A_{31}' \cup \bd_-B_1$. We'll refer to these as $\bd_{12}M$, $\bd_{23}M$,
@@ -30,8 +30,8 @@ copies of $\Si_{1,1}$ glued along an annulus. Topologically, this forms a genus
 two surface.
 
 We know from Proposition~\ref{P:annuli} that any pared structure $P$ on $M$
-consists entirely of annuli. Furthermore, we can apply the Pared Decomposition
-Lemma to homotope $P$ to minimal position with respect to $\cA$. We then have
+consists entirely of annuli. Furthermore, we can apply the pared decomposition
+lemma to homotope $P$ to minimal position with respect to $\cA$. We then have
 the following consequences of the pared lifting criterion. (For all of the
 following, we assume $P$ is in minimal position).
 
@@ -45,12 +45,12 @@ contain a (QF) surface.
 \begin{proof}
 
 Suppose it does. Let $S$ be a (QF) surface, and homotope $S$ to minimal
-position with the surface decomposition lemma. Applying the pared lifting
+position using the surface decomposition lemma. Applying the pared lifting
 criterion, any annulus component $S \cap C$ will cover the binding annuli at
 $C$ and allow $P_0$ to lift to a closed curve in the pared lifting pattern.
 This would show $S$ is not (QF), by the pared lifting criterion. So $S$ must be
 disjoint from $C$.  The pages $B_i$ have free fundamental group, so none of
-them admits a $\pi_1$-injective map from a closed surface.  Therefore such an
+them admit a $\pi_1$-injective map from a closed surface.  Therefore such an
 $S$ cannot exist.
 
 \end{proof}
@@ -76,18 +76,18 @@ the surface $S$ won't be (QF) in this case.
 
 So $S$ cannot intersect $B_1$. Using the surface decomposition theorem, we can
 see that the components of $S \cap B_2$ and $S \cap B_3$ are covers of the base
-surfaces copies of $\Si_{1,1}$, and the components of $S \cap C$ are annuli.
-Consider the annulus pieces in $S \cap C$.  Since $S$ has no decomposition
-pieces in $B_1$, every annulus in $S \cap C$ must have one boundary component
-in $A_2$ and one boundary component in $A_3$ (otherwise it connects to $A_1$,
-which is impossible as $S$ is closed). Notice that these annuli locally cover
-$\bd_{23} M \cap C = A_{23}'$, and are attached at their boundaries to surfaces
-covering $\bd_{23} M \cap B_2$ and $\bd_{23} M \cap B_3$ (since these are both
-homeomorphic to the respective base surfaces by projecting down). Hence $S$
-covers $\bd_{23} M$.
+surfaces --- copies of $\Si_{1,1}$ --- and the components of $S \cap C$ are
+annuli.  Consider the annulus pieces in $S \cap C$.  Since $S$ has no
+decomposition pieces in $B_1$, every annulus in $S \cap C$ must have one
+boundary component in $A_2$ and one boundary component in $A_3$ (otherwise it
+connects to $A_1$, which is impossible as $S$ is closed). Notice that these
+annuli locally cover $\bd_{23} M \cap C = A_{23}'$, and are attached at their
+boundaries to surfaces covering $\bd_{23} M \cap B_2$ and $\bd_{23} M \cap B_3$
+(since these are both homeomorphic to the respective base surfaces by
+projecting down). Hence $S$ covers $\bd_{23} M$.
 
-It follows that $P$ cannot contain any components in $\bd- B_2$, $\bd+ B_3$, or
-$\bd_{23} M$.  Any such component corresponds to a closed curve in the pared
+It follows that $P$ cannot contain any components in $\bd_- B_2$, $\bd_+ B_3$,
+or $\bd_{23} M$.  Any such component corresponds to a closed curve in the pared
 lifting pattern for $\bd_{23} M \cin M$, which therefore lifts to a closed
 curve in the pared lifting pattern for $S$.
 
@@ -98,8 +98,8 @@ Therefore, the pared lifting pattern is empty, and $S$ is (QF).
 \end{proof}
 
 The proof above obviously generalizes to more complex books of $I$-bundles.
-Later we'll use it to generally simplify any pared structures containing annuli
-that fit in a single $I$-bundle.
+Later we'll use it to simplify any pared structures containing annuli that fit
+in a single $I$-bundle.
 
 The hardest case to consider (and the one we will devote much of this paper to
 generalizing) is when none of these simplifying assumptions hold:
@@ -134,10 +134,10 @@ Farb--Margalit \cite{FM} or Fathi--Laudenbach--Poenaru \cite{FLP}.
 \begin{lemma}\label{L:ex1.1}
 
 These arcs form at most 3 ``bands'' of parallel arcs. Furthermore, if we choose
-a representative arc from each band , there exists an automorphism of
+a representative arc from each band, there exists an automorphism of
 $\Si_{1,1}$ taking these arcs to a standard set of 3 disjoint non-parallel
 arcs. We can construct the standard set by drawing closed curves of slope 0, 1,
-and infinity through a point on the torus, and then deleting a small open
+and $\infty$ through a point on the torus, and then deleting a small open
 neighborhood of that point.
 
 \end{lemma}
@@ -153,9 +153,9 @@ we can describe each boundary component of the cut surfaces as a union of arcs,
 each labeled with $\gamma_1,...,\gamma_k,\alpha_1,...,\alpha_l$. We call this
 an \emph{arc pattern} for that boundary component of the new surface.
 
-We first show that $\Si_{1,1}$ admitts at most 3 disjoint essential
-non-parallel arcs, and the possible surfaces and arc patterns obtained by
-cutting along these arcs are very restricted.
+We first show that $\Si_{1,1}$ admits at most 3 disjoint essential non-parallel
+arcs, and the possible surfaces and arc patterns obtained by cutting along
+these arcs are very restricted.
 
 Label the boundary component of $\Si_{1,1}$ by $\gamma$. Consider a proper
 essential arc $\alpha_1 \cin \Si_{1,1}$. Fix an orientation for $\alpha_1$.
@@ -206,21 +206,22 @@ a small neighborhood of that arc in the disk, without intersecting any of the
 non-parallel arcs.
 
 We claim there exists an automorphism of $\Si_{1,1}$ taking any set of 3 such
-arcs to any other set (in particular, to the standard set, as illustrated).
-Since there is only one topological result of cutting along the arcs, choose
-a homeomorphism of the cut surfaces. Up to relabeling the arcs, we can choose
-a homeomorphism that identifies matching arcs in the arc patterns (as shown
-above, there is only one possible arc pattern up to relabeling). Glue both
-sides along the arcs to obtain the desired automorphism of $\Si_{1,1}$.
+arcs to any other set (in particular, to the standard set, as illustrated in
+Figure~\ref{F:3arcs}).  Since there is only one topological result of cutting
+along the arcs, choose a homeomorphism of the cut surfaces. Up to relabeling
+the arcs, we can choose a homeomorphism that identifies matching arcs in the
+arc patterns (as shown above, there is only one possible arc pattern up to
+relabeling). Glue both sides along the arcs to obtain the desired automorphism
+of $\Si_{1,1}$.
 
 \end{proof}
 
 We consider connected double covers $\widetilde{F} \to F \cong \Si_{1,1}$.
 These covers have 2 boundary components. Any proper arc in $P \cap F$ lifts to
 2 arcs in $\widetilde{F}$.  We say an arc in $F$ is \emph{cis} for a given
-$\widetilde{F}$ if any (ie all) lifts of that arc have both endpoints in the
-same boundary component of $\widetilde{F}$.  Otherwise, we say it's
-\emph{trans} for that cover. See Figure~\ref{F:3arcs}.
+$\widetilde{F}$ if any (or, equivalently, all) lifts of that arc have both
+endpoints in the same boundary component of $\widetilde{F}$.  Otherwise, we
+say it's \emph{trans} for that cover. See Figure~\ref{F:3arcs}.
 
 \mytallfig{fig-3arcs}{F:3arcs}{Lifting a standard set of 3 arcs in $\Si_{1,1}$}
 
@@ -228,7 +229,7 @@ same boundary component of $\widetilde{F}$.  Otherwise, we say it's
 
 Given any 3 disjoint non-parallel proper essential arcs in $\Si_{1,1}$, and any
 double cover of $\Si_{1,1}$, 2 of the 3 arcs are trans, and the 3rd is cis.
-Furthermore, we can choose any two of the three we wish to be trans with an
+Furthermore, we can choose any 2 of the 3 we wish to be trans with an
 appropriate cover.
 
 \end{lemma}
@@ -249,32 +250,32 @@ We begin with $P$ in minimal position. By assumption, each $P \cap \bd_\pm B_i$
 is a union of thickened arcs (that is, there are no annulus components in any
 $\bd_\pm B_i$). By Lemma~\ref{L:ex1.1}, these can be grouped into bands. The
 problem is most constrained when there are exactly 3 bands, so we'll consider
-that case (if there are fewer than 3, just draw some more arcs on that
-component arbitrarily, and carry out the proof).
+that case (if there are fewer than 3, just draw some more disjoint non-parallel
+proper arcs on that component arbitrarily, and carry out the proof).
 
 We build our surface $S$ as follows. Begin by taking copies of  $A_{12}'$,
 $A_{23}'$, and $A_{31}'$ in $C$. Isotope each as a properly embedded
-submanifold (in $(M,\cA)$) to bring the images into the interior of $C$ and
-make the boundary components on $\cA$ disjoint. We'll refer to the homeomorphic
+submanifold of $(M,\cA)$ to bring the images into the interior of $C$ and make
+the boundary components on $\cA$ disjoint. We'll refer to the homeomorphic
 copies we obtain from this as $F_{12}'$, $F_{23}'$, and $F_{31}'$. Let $S\cap
 C = F_{12}' \cup F_{23}' \cup F_{31}'$. Observe that $S\cap C$ intersects each
 binding annulus $A_i$ in two parallel embedded curves.
 
 Choose each $S \cap B_i$ to be a closed immersed $\pi_1$-injective surface
-corresponding (via the Covering Lemma) to a connected double cover of the base
-surface (we describe the exact choice of cover below). Call these covers $F_1$,
+corresponding (via the covering lemma) to a connected double cover of the base
+surface. We describe the exact choice of cover below. Call these covers $F_1$,
 $F_2$, and $F_3$.  Each of these has two boundary components. Construct $S$ by
 attaching the two boundary components of each $F_i$ to the two curves in the
 binding annulus $A_i$ described above. (Note that since every double cover we
 are considering is regular, it doesn't matter which boundary component of the
-two we connect to which curve). See Figure~\ref{F:ex1}. By the surface
+two we connect to which curve.) See Figure~\ref{F:ex1}. By the surface
 decomposition theorem and the covering lemma, $S$ is a closed immersed
 $\pi_1$-injective surface in $M$.  We claim that we can choose the $F_i$ so
 that $S$ satisfies the pared lifting criterion.
 
 \myrotfig{fig-boibexample}{F:ex1}{Construction of $S$}
 
-First observe that $S \cap C$ consists of a homeomorphic copies $F'_{12}$,
+First observe that $S \cap C$ consists of homeomorphic copies $F'_{12}$,
 $F'_{23}$, and $F'_{31}$ of each of $A'_{12}$, $A'_{23}$, and $A'_{31}$. By
 assumption, there are no annuli in $S \cap C$, so the pared lifting pattern on
 each $F'_{ij}$ is simply a homeomorphic copy of (the core of) $P \cap A'_{ij}$.
@@ -360,12 +361,12 @@ lifting criterion, and is (QF).
 \end{proof}
 
 We briefly summarize the salient features of this proof which we will
-generalize.  We begin by describing which cases would be simplified or
+generalize.  We began by describing which cases would be simplified or
 eliminated by certain closed loops, and solving those. Then, for a more general
-pared structure, we construct covers of the page base surfaces which behave
+pared structure, we constructed covers of the page base surfaces which behaved
 nicely with respect to arcs in the pared lifting pattern.  These properties
 will become more elaborate in the general case, but are analogous --- we want
 arcs to connect different boundary components as the trans arcs do.  We then
-derive a method for gluing that will avoid creating closed loops, by taking
+derived a method for gluing that avoided creating closed loops, by taking
 advantage of the ability to branch between different annuli at each spine. This
 is the trickiest part of the general proof.
