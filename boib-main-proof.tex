@@ -16,8 +16,8 @@ non-reduced case also. This is the main result of this paper.
 \begin{thm}[Main theorem]
 
 Let $M$ be a book of $I$-bundles. If the reduction theorem yields a nonempty
-set of reduced book of $I$-bundles in $M$, then $M$ contains a (QF) surface.
-Otherwise, it does not.
+set of reduced books of $I$-bundles and thickened closed surfaces in $M$, then
+$M$ contains a (QF) surface.  Otherwise, it does not.
 
 \end{thm}
 
@@ -25,7 +25,7 @@ Otherwise, it does not.
 \section{Simplification of main theorem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Now there are a number of topological simplifications we make, by passing to an
+We now make a number of topological simplifications by passing to an
 appropriate finite-sheeted cover of the book of $I$-bundles.  Once we can
 construct a surface satisfying (QF) inside this cover, we will push it down and
 perturb to obtain a surface satisfying (QF) downstairs (since it
@@ -40,7 +40,7 @@ satisfies the following additional conditions.
 \begin{enumerate}
 
 \item Each binding annulus on a spine intersects a meridian disk of that spine
-exactly once. That is, every spine has degree one.
+exactly once. That is, every spine has degree 1.
 
 \item Each page is glued to a given spine at most once. That is, for any page
 $B$ and spine $C$, $B \cap C$ is at most a single component of $\cA$.
@@ -52,8 +52,8 @@ oriented surface.
 \item Each spine intersects each boundary component of $M$ in at most a single
 annulus.
 
-\item Every arc of $P$ on a page connects two different binding annuli. That
-is, there are no essential arcs that begin and end at the same binding annulus.
+\item Each arc of $P$ on a page connects two different binding annuli. That is,
+there are no essential arcs that begin and end at the same binding annulus.
 
 \end{enumerate}
 
@@ -73,21 +73,22 @@ sheeted covers with nice properties. Note that (1), (2), (3), and (4) are all
 properties that once true, remain true when we lift to finite-sheeted covers.
 So it suffices to guarantee each property one at a time by lifting to
 finite-sheeted covers, because we can lift repeatedly and the old properties
-will still hold.
+will still hold. We also know that finite-sheeted covers of $M$ will be
+reduced.
 
 We first take care of condition (1). For each spine $C$, let $k=d(C)$.  Let
 $A_1,\dots,A_n$ be the binding annuli on $C$. These annuli must be parallel.
 Notice that $\pi_1C$ is infinite cyclic, as its only torsion could come from
 the identification with the binding annuli, but we've assumed that these are
 $\pi_1$-injective. Now if $\alpha$ is a generator for the infinite cyclic group
-$\pi_1C$, $\alpha^k$ is generates each $\pi_1A_i \cin \pi_1C$. Fix a point $x_0
+$\pi_1C$, $\alpha^k$ generates each $\pi_1A_i \cin \pi_1C$. Fix a point $x_0
 \in C$, and apply Proposition~\ref{P:lerf3} to $\alpha$ and $k$ to obtain
-a finite-sheeted regular cover $M' \to M$..  For any spine $C'$ covering $C$,
-we claim that $C'$ has degree 1. Observe that $C'\to C$ has degree $d$ by
-construction, with $k \mid d$. Therefore $\alpha^d$, which lifts to traverse
-$C'$ exactly once, is a power of $\alpha^k$, the generator of each binding
-annulus. Hence each binding annulus has preimage a union of components, each of
-which traverses $C'$ exactly once. Hence $C'$ has degree 1.
+a finite-sheeted regular cover $M' \to M$.  For any spine $C'$ covering $C$, we
+claim that $C'$ has degree 1. Observe that $C'\to C$ is a degree $d$ cover with
+$k$ dividing $d$.  Therefore $\alpha^d$, which lifts to traverse $C'$ exactly
+once, is a power of $\alpha^k$, the generator of each binding annulus. Hence
+each binding annulus has preimage a union of components, each of which
+traverses $C'$ exactly once.  Hence $C'$ has degree 1.
 
 We now produce a cover $M'$ that satisfies (1). Perform the above construction
 for each spine to produce generators $\alpha_1,\dots,\alpha_n$ and degrees
@@ -110,7 +111,7 @@ intersects each of the binding annuli $A_1$ and $A_2$ in a single point. Any
 homotopy of $\alpha$ to a curve in $\pi_1B$ would have to homotope $\alpha''$
 rel boundary into $B$, but this is clearly impossible. So $\alpha \notin
 \pi_1B$.  $\pi_1B$ is finitely generated. Apply Proposition~\ref{P:lerf1} to
-$\alpha$ and $B$, obtaining a finite-sheeted cover.
+$\alpha$ and $B$, obtaining a finite-sheeted cover $p\colon M'\to M$.
 
 Any lift of $\alpha$ to $\alpha'$ in this cover must connect two different
 components of $p^{-1}(B)$.  Any lift of $\alpha''$ still lies on a meridian
@@ -121,12 +122,12 @@ $\alpha''$ must have endpoints in different components of $p^{-1}(B)$.
 
 We now construct a cover $M'$ that satisfies (2). Repeat the above construction
 for each pair of binding annuli for each page with multiple attachments to
-a spine. This yields closed cuvres $\alpha_1,\dots,\alpha_n$ and corresponding
+a spine. This yields closed curves $\alpha_1,\dots,\alpha_n$ and corresponding
 pages $B_1,\dots,B_n$. Note that there may be duplicates in this list of pages,
 but the argument remains the same. Apply Proposition~\ref{P:lerf1'}. By
 following the above argument locally, we see that any page upstairs with
 multiple gluings to the same spine would correspond to a lift of some
-$\alpha_i''$ with endpoints in the same component of $p^{-1}(Bi)$,
+$\alpha_i''$ with endpoints in the same component of $p^{-1}(B_i)$,
 a contradiction.
 
 So we have a cover which satisfies (1) and (2). We now show that $M$ satisfying
@@ -135,29 +136,29 @@ So we have a cover which satisfies (1) and (2). We now show that $M$ satisfying
 $M$ is orientable by definition, so each page must be orientable as well. So
 the pages which are not trivial $I$-bundles over oriented pages must be twisted
 $I$-bundles over nonoriented pages (in order for the resulting page to be
-orientable). In particular, the endpoints of the $I$ fibers of a twisted
-$I$-bundle will connect globally to form a single side of the page. So if we
-look locally at an $I$ fiber, the two endpoints are guaranteed to be in the
-same boundary component of $M$ (since they're in the same boundary component
-even if we just look at that page). This explains why ensuring distinct
-boundary components for each fiber guarantees trivial $I$-bundles.
+orientable). In particular, the endpoints of the fibers of a twisted $I$-bundle
+will connect globally to form a single side of the page. So if we look locally
+at an fiber, the two endpoints are guaranteed to be in the same boundary
+component of $M$ (since they're in the same boundary component even if we just
+look at that page). This explains why ensuring distinct boundary components for
+each fiber guarantees trivial $I$-bundles.
 
 This argument is very similar to (2). Let $B$ be a page such that fibers have
-both endpoints on the same boundary component $\bd_i M \cin \bd M$.  Choose
-a binding annulus $A$ in $\bd B$, and an arbitrary transversal $\alpha'' \cin
+both endpoints on the same boundary component $\bd_a M \cin \bd M$.  Choose
+a binding annulus $A \cin \bd B$, and an arbitrary transversal $\alpha'' \cin
 A$.  Let $\alpha' \cin \bd_a M$ be an arc in the boundary connecting the
 endpoints of $\alpha''$. Such an $\alpha'$ must exist as the two endpoints are
 part of the same boundary component. $\alpha'$ and $\alpha''$ combine to form
 a closed curve $\alpha$.  Fix one endpoint of $\alpha'$ to be our basepoint.
-$\bd M$ is a compact surface, so $\pi_1 \bd_i M$ is finitely generated.
+$\bd M$ is a compact surface, so $\pi_1 \bd_a M$ is finitely generated.
 
-We claim that $\alpha \notin \pi_1 \bd_i M$. As above, any such homotopy would
-correspond to a homotopy rel boundary of $\alpha''$ into $\bd_i M$. Since
+We claim that $\alpha \notin \pi_1 \bd_a M$. As above, any such homotopy would
+correspond to a homotopy rel boundary of $\alpha''$ into $\bd_a M$. Since
 $\alpha''$ is a transversal of the binding annulus $A$, such a homotopy would
 correspond to a boundary compression of $A$, which is impossible as $A$ is
-boundary incompressible. Apply Proposition~\ref{P:lerf1} to $\alpha$ and $\bd_i
+boundary incompressible. Apply Proposition~\ref{P:lerf1} to $\alpha$ and $\bd_a
 M$, obtaining a finite-sheeted cover. By the same argument as in (2),
-$\alpha''$ must lift to connect two different components of p$^{-1}(\bd_i M).$
+$\alpha''$ must lift to connect two different components of $p^{-1}(\bd_a M)$.
 Since $\bd M' = p^{-1}(\bd M)$, this shows that the pages covering $B$ have
 fibers that connect two different boundary components. We can therefore
 construct $M'$ satisfying (3), by taking all such pages with both sides on the
@@ -186,14 +187,13 @@ argument used in (2) and (3).  This proves that $M$ has a cover satisfying
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 We've now reduced to the case of a good book of $I$-bundles. However, the
-remaining work is still quite involved.
-
-We proceed somewhat similarly to the first example.  We take covers over the
-pages and glue them together cleverly to construct our surface.  We check that
-the resulting surface satisfies the pared lifting criterion. As in the first
-example, this suffices to prove that our surface satisfies (QF).  We first need
-to take the correct cover over each page.  However, the details are more
-complex. We first will need the following important notion.
+remaining work is still quite involved. We proceed somewhat similarly to the
+first example.  We take covers over the pages and glue them together cleverly
+to construct our surface.  We check that the resulting surface satisfies the
+pared lifting criterion. As in the first example, this suffices to prove that
+our surface is (QF).  We first need to take the correct cover over each page.
+However, the details are more complex. We first will need the following
+important notion.
 
 \begin{defn}
 
@@ -277,20 +277,20 @@ page.
 \begin{lemma}\label{L:jigsaw}
 
 Let $M$ be a good book of $I$-bundles. Fix a boundary component $F$ of $M$.
-Then, for any sufficiently large $d$, there exists a jigsaw
-surface $Q$ in $M$ with the following properties:
+Then, for any sufficiently large $d$, there exists a jigsaw surface $Q \cin M$
+with the following properties:
 
 \begin{enumerate}
 
-\item $Q$ is obtained by removing spine components from a finite-sheeted cover
-of $F$ of degree $d$.
+\item $Q$ is obtained by removing spine components from (a surface homotopic
+to) a finite-sheeted cover of $F$ of degree $d$.
 
 \item $Q$ has no protoloops.
 
 \item $Q$ has sparse defect.
 
 \item $Q$ has defect bounded above by a constant $C$ depending only on $(M,P)$
-(ie, not depending on $d$)
+(i.e., not depending on $d$).
 
 \end{enumerate}
 
@@ -311,8 +311,8 @@ the $F_i$. $Q_0$ is obviously a jigsaw surface obtained by
 removing all spine components from the trivial $d$-fold cover of $F$ (that is,
 $d$ many disjoint copies of $F$), which is a closed $\pi_1$-injective surface
 in $M$.  The pared lifting pattern on each component of $Q_0$ is a homeomorphic
-copy of (the core of) $P \cap F_i$. Since $F$ is reduced, this pattern has no
-closed curves.  Since $F$ is good, every arc in the pattern connects two
+copy of (the core of) $P \cap F_i$. Since $M$ is reduced, this pattern has no
+closed curves.  Since $M$ is good, every arc in the pattern connects two
 different boundary curves of its component. Hence $Q_0$ has no protoloops.
 
 However, $Q_0$ obviously fails conditions (3) and (4) of the lemma. We need to
@@ -333,9 +333,9 @@ contains at most one component of $\cR$.
 
 \end{enumerate}
 
-This is possible as long as $d \geq C_0m$, where $C_0$ is the maximum number of
-boundary components of any $F_i$. $C_0$ is fixed and depends only on $(M,P)$.
-If $d\geq C_0m$,  each local cover $Q_0 \cap B_i$ has at least $C_0m$ many
+This is possible as long as $d \geq c_0m$, where $c_0$ is the maximum number of
+boundary components of any $F_i$. $c_0$ is fixed and depends only on $(M,P)$.
+If $d\geq c_0m$,  each local cover $Q_0 \cap B_i$ has at least $c_0m$ many
 disjoint copies above its respective boundary piece $F_i$.  So we have enough
 copies to make our choices above.
 
@@ -363,8 +363,8 @@ possible gluings to make.
 
 \begin{claim}
 
-We claim that $\#(\bd Q_1 \setminus \cR)$ is bounded by $C$, a constant
-depending only on $(M,P)$. In particular, $C$ is independent of the choice of
+We claim that $\#(\bd Q_1 \setminus \cR)$ is bounded by $c$, a constant
+depending only on $(M,P)$. In particular, $c$ is independent of the choice of
 $d$ and $m$ made earlier.
 
 \end{claim}
@@ -374,8 +374,8 @@ $d$ and $m$ made earlier.
 Consider an arbitrary boundary component $\widetilde{\gamma} \cin \bd Q_1
 \setminus \cR$.  It covers some boundary component $\gamma \cin F_i$. Look at
 the number of arcs of $P \cap F_i$ which are incident to $\gamma$. This number
-depends only on $(M,P)$. Let $C_1$ be the maximum such number of incident arcs
-of $P$ for any boundary component $\gamma$ of any $F_i \cin F$. Let $C_2$ be
+depends only on $(M,P)$. Let $c_1$ be the maximum such number of incident arcs
+of $P$ for any boundary component $\gamma$ of any $F_i \cin F$. Let $c_2$ be
 the total number of boundary components of the $F_i$. Let $\gamma' \cin F_{i'}$
 be the boundary component matching $\gamma$ --- that is, the boundary component
 that is attached to $\gamma$ in $F$ by some spine annulus. Let $F_j'= F \cap
@@ -403,8 +403,8 @@ can have both endpoints on the same boundary component. So there exists an arc
 in $Q_1$ connecting $\gamma$ to $\gamma'$.  (This is the reason for the second
 condition in our definition of a ``protoloop'').  The pared lifting pattern in
 $Q_1$ near $\gamma$ is a homeomorphic copy of (the core of) $P \cap F_i$, so
-the number of arcs incident to $\gamma$ is bounded by $C_1$.  Tracing these
-arcs through $Q_1$, they can hit at most $C_1$ other boundary components.
+the number of arcs incident to $\gamma$ is bounded by $c_1$.  Tracing these
+arcs through $Q_1$, they can hit at most $c_1$ other boundary components.
 These are the only boundary components we can attach our annulus to to produce
 a closed curve.
 
@@ -423,20 +423,20 @@ be different.  That is, either $\alpha_0$ ends on $\widetilde{\gamma}$ and
 $\alpha_1$ on $\widetilde{\gamma}'$, or vice versa.  This is the set of
 circumstances that leads to a returning arc.
 
-Now, as above, the arcs incident to $\widetilde{\gamma}$ hit at most $C_1$
+Now, as above, the arcs incident to $\widetilde{\gamma}$ hit at most $c_1$
 other boundary components. These are our possible $\widetilde{\delta}$. Each of
-these has at most $C_1$ incident arcs itself, one of which returns to
-$\widetilde{\gamma}$, leaving $C_1-1$ that we need to care about. We have
-a total of at most $C_1(C_1-1)$ many ``distance two'' available boundary
+these has at most $c_1$ incident arcs itself, one of which returns to
+$\widetilde{\gamma}$, leaving $c_1-1$ that we need to care about. We have
+a total of at most $c_1(c_1-1)$ many ``distance two'' available boundary
 components.  If we attach our annulus to one of these boundary components, we
 will produce a surface with protoloops.
 
 By construction of $Q_1$, there are no more legal gluings. So every remaining
 boundary component must be disallowed for one of the above reasons. So $Q_1$
-can have at most $C_1+(C_1*(C_1-1)) = C_1^2$ many leftover boundary components
+can have at most $c_1+(c_1(c_1-1)) = c_1^2$ many leftover boundary components
 (that is, components of $\bd Q_1 \setminus \cR$) above $\gamma'$.  Since our
 choice of $\widetilde{\gamma}$ was arbitrary, this implies that there are at
-most $C = C_1^2*C_2$ many leftover boundary components, that is, components of
+most $c = c_1^2c_2$ many leftover boundary components, that is, components of
 $\bd Q_1\setminus\cR$. This proves the claim.
 
 \end{proof}
@@ -449,15 +449,15 @@ reserve boundary components remain. All the remaining non-reserve boundary
 components will be attached to reserve boundary components by annuli.
 
 Construct $Q$ from $Q_1$ as follows.  For each boundary component $\gamma$
-downstairs, as discussed above, there are at most $C_1^2$ many components of
-$\bd Q_1 \setminus \cR$ above it.  For each of these, there are at most $C_1^2$
+downstairs, as discussed above, there are at most $c_1^2$ many components of
+$\bd Q_1 \setminus \cR$ above it.  For each of these, there are at most $c_1^2$
 we could glue to above $\gamma'$ that produce a surface with protoloops. We now
 allow ourselves to glue to the reserve boundary components. Assume that $m\geq
-2C_1^2$.  Then attach each leftover (non-reserve) lift $\widetilde{\gamma}$ of
+2c_1^2$.  Then attach each leftover (non-reserve) lift $\widetilde{\gamma}$ of
 $\gamma$ to a component of $\cR$ above $\gamma'$ with a copy of the annulus
-$F_j'$, one at a time.  At any point there will be at least $C_1^2+1$
+$F_j'$, one at a time.  At any point there will be at least $c_1^2+1$
 components of $\cR$ remaining above $\gamma'$. As in the proof of the claim, at
-most $C_1^2$ of these elements have arc connections with $\widetilde{\gamma}$
+most $c_1^2$ of these elements have arc connections with $\widetilde{\gamma}$
 that will cause that gluing to yield protoloops. So we'll always be able to
 choose one such that our surface still has no protoloops.  Repeat this process
 for each $\gamma$ to construct $Q$.  Since we glued all the leftovers, it
@@ -465,47 +465,46 @@ immediately follows that $\bd Q \cin \cR$, and therefore $Q$ satisfies (3).
 
 Let's analyze the possibilities for the defect of $Q$, that is, the number of
 boundary components.  Above each $\gamma \cin \bd F_i$, $\cR$ has $m$ elements.
-So $\bd Q$ has at most $m$ components above $\gamma$, or $C_2m$ many boundary
+So $\bd Q$ has at most $m$ components above $\gamma$, or $c_2m$ many boundary
 components in total. The lower bound is determined by the maximum number of
 leftovers, since the only way we'll remove reserve components from $\bd Q$ is
-by gluing them to non-reserve leftover components. There are at most $C_1^2$
+by gluing them to non-reserve leftover components. There are at most $c_1^2$
 leftover components above $\gamma$, and similarly above $\gamma'$, so there
-will be at least $m - C_1^2$ components remaining in $\bd Q$ above $\gamma$.
+will be at least $m - c_1^2$ components remaining in $\bd Q$ above $\gamma$.
 We find that
 
-\[ C_2(m-C_1^2) \leq \operatorname{defect}(Q) \leq C_2m \]
+\[ c_2(m-c_1^2) \leq \operatorname{defect}(Q) \leq c_2m \]
 
-Any choice of $m\geq 2C_1^2$ works, as long as $d$ is sufficiently large
+Any choice of $m\geq 2c_1^2$ works, as long as $d$ is sufficiently large
 relative to $m$.  This proves (4).
 
 \end{proof}
 
 \begin{proof}[Proof of Main Theorem]
 
-We want to use Lemma~\ref{L:jigsaw} to construct a jigsaw surface
-$Q_a$ for each boundary component $F_a$ of $M$. Now we want to glue these
-together, but they may have very different numbers of boundary components! So
-we'll need to normalize them so they all have the same number of boundary
-components near each spine, so we can do a local construction with annuli in
-each spine.
+We use Lemma~\ref{L:jigsaw} to construct a jigsaw surface $Q_a$ for each
+boundary component $F_a$ of $M$. Now we want to glue these together, but they
+may have very different numbers of boundary components! So we'll need to
+normalize them so they all have the same number of boundary components near
+each spine, so we can do a local construction with annuli in each spine.
 
-Let $C_a$ be the constant $C_1$ we computed above for each jigsaw surface
-$Q_a$.  Let $C_{\mathrm{max}} = \operatorname{max}_a C_a$, that is, the maximum
+Let $c_a$ be the constant $c_1$ we computed above for each jigsaw surface
+$Q_a$.  Let $c_{\mathrm{max}} = \operatorname{max}_a c_a$, that is, the maximum
 number of components of $P \cap B_i$ incident to a single boundary component of
 $\bd M \cap B_i$ for any spine $B_i$. By the inequality in
-Lemma~\ref{L:jigsaw}, for each $\gamma \cin \bd F_i$, $\#\{\bd F_i \text{ above
-} \gamma\} \geq m - C_{\mathrm{max}}^2$. We want to make this an equality for
-each $Q_a$ by adding some more annuli to $Q_a$ in the same way that we added
-annuli in Lemma~\ref{L:jigsaw}.
+Lemma~\ref{L:jigsaw}, for each $\gamma \cin \bd F_i$, $\#\{\text{components of
+} \bd F_i \text{ above } \gamma\} \geq m - c_{\mathrm{max}}^2$. We want to make
+this an equality for each $Q_a$ by adding some more annuli to $Q_a$ in the same
+way that we added annuli in Lemma~\ref{L:jigsaw}.
 
-Again, we use the size of the reserve to our advantage. Assuming $m\geq
-C_{\mathrm{max}}^2 + C_a^2$ for each $F_a$, by the same argument as the lemma,
-there will always be choices remaining from the reserve to make the gluing.
-Combining these all we need is $m\geq 2C_{\mathrm{max}}^2$.
+Again, we use the size of the reserve $\cR$ to our advantage. Assuming $m\geq
+c_{\mathrm{max}}^2 + c_a^2$ for each $F_a$, by the same argument as the lemma,
+there will always be choices remaining from the reserve $\cR$ to make the
+gluing.  Combining these all we need is $m\geq 2c_{\mathrm{max}}^2$.
 
 By abuse of notation, we'll call these normalized surfaces $Q_a$ also (the
-non-normalized ones will not come up again). Each has exactly $M
-= m - C_{\mathrm{max}}^2$ many boundary components above any $\gamma \cin \bd
+non-normalized ones will not come up again). Each has exactly $m'
+= m - c_{\mathrm{max}}^2$ many boundary components above any $\gamma \cin \bd
 F_i$.
 
 Build a single closed surface $S$ by attaching annuli to the $Q_a$ as follows.
@@ -530,21 +529,21 @@ binding annulus boundary components by $\gamma_1^-,\gamma_1^+,\dots,
 \gamma_{d(C)}^-,\gamma_{d(C)}^+$, where $\gamma_i^-$ and $\gamma_i^+$ are
 the two boundary components of the binding annulus for the $i$th page.
 Extend these labels to the corresponding boundary components of the page
-boundaries attached to the binding annuli.  Remember that all these labels
-are downstairs - that is, they're labels of pieces of $\bd M$.
+boundaries attached to the binding annuli.  Remember that all these labels are
+downstairs --- that is, they're labels of pieces of $\bd M$.
 
-By construction of the $Q_a$, there are $2d(C)M$ many components of
+By construction of the $Q_a$, there are $2d(C)m'$ many components of
 $\bd(\bigsqcup_a Q_a) \cap C$. Attach them as follows. Let $A_{1,3}$ be an
 embedded valence 1 annulus in $C$ with one boundary component in $A_1$ and one
 in $A_3$. Define $A_{2,4},A_{3,5},\dots,A_{(d(C)-1),1},A_{d(C),2}$ similarly.
-Now construct the surface $S$ by taking $M$ many copies of each $A_{i,i+2}$,
+Now construct the surface $S$ by taking $m'$ many copies of each $A_{i,i+2}$,
 and attaching their boundary components to lifts of $\gamma_i^+$ and
 $\gamma_{i+2}^-$. See Figure~\ref{F:finalgluing}. By construction of the $Q_a$
-there will be exactly $M$ many available lifts of each to attach to. Therefore,
-when we repeat this for each spine $C$, the result is a closed surface $S$.
-Note that since $M$ is reduced, we know that each spine has at least 3 annuli.
-This means we'll never attempt to attach an annulus with both boundary
-components in the same binding annulus.
+there will be exactly $m'$ many available lifts of each to attach to.
+Therefore, when we repeat this for each spine $C$, the result is a closed
+surface $S$.  Note that since $M$ is reduced, we know that each spine has at
+least 3 annuli.  This means we'll never attempt to attach an annulus with both
+boundary components in the same binding annulus.
 
 \myfig{fig-finalgluing}{F:finalgluing}{Attaching the $Q_a$ at $C$}
 
@@ -609,8 +608,8 @@ Q_b$, where $C$ is a spine adjacent to $B$.  That is, the endpoints of
 $\alpha'$ cannot both be free to attach to the annuli we added in the final
 step. But as shown above, $\alpha$ has no pattern components in $C \cap Q_b$,
 so this $\alpha'$ cannot possibly extend far enough to have both endpoints in
-$\bd Q_b$  Hence $\alpha'$ cannot be properly embedded, so cannot be part of
-a closed curve in $S$. So (3) also cannot occur.
+$\bd Q_b$.  Hence $\alpha'$ cannot be properly embedded, so it cannot be part
+of a closed curve in $S$. So (3) also cannot occur.
 
 Therefore $S$ satisfies the pared lifting criterion, and hence $S$ is (QF).
 This completes the proof.
