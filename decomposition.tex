@@ -6,18 +6,19 @@ In the geometrically finite case, we've reduced the quasi-Fuchsian surface
 subgroup question to a topological problem about $\pi_1$-injective maps of
 a surface into a pared $3$-manifold. However, infinite volume hyperbolic
 $3$-manifolds may have quite complex topology, so it is not immediately clear
-how to find such surfaces in the resulting pared $3$-manifolds. It is not clear
-how to find (QF) surfaces directly. Instead, we decompose the pared
-$3$-manifold along disks and annuli. While the precise statements and proofs
-that follow are new, these are standard techniques.
+how to find such surfaces in the resulting pared $3$-manifolds. Instead of
+finding (QF) surfaces directly, we decompose the pared $3$-manifold along disks
+and annuli.  While the precise statements and proofs that follow are new, these
+are standard techniques in $3$-manifold topology.
 
-See monographs by Jaco--Shalen \cite{JacoShalen} or Johannson \cite{Johannson}
-for an overview of the JSJ theory we will use. Also see Jaco's lectures
-\cite{Ja}. Canary--McCullough \cite{CMc} contains some discussion of JSJ theory
-for pared $3$-manifolds.  Note also that our choice of decomposition was
-inspired by the decomposition used by Thurston to prove geometrization of Haken
-manifolds.  This is a decomposition into acylindrical pieces, $I$-bundles, and
-solid tori.  See Morgan \cite{Mo} or Thurston \cite{ThurstonIII} for details.
+See monographs by Jaco and Shalen \cite{JacoShalen} or Johannson
+\cite{Johannson} for an overview of the JSJ theory we will use. Also see Jaco's
+lectures \cite{Ja}. Canary--McCullough \cite{CMc} contains some discussion of
+JSJ theory for pared $3$-manifolds.  Note also that our choice of decomposition
+was inspired by the decomposition used by Thurston to prove geometrization of
+Haken manifolds.  This is a decomposition into acylindrical pieces,
+$I$-bundles, and solid tori.  See Morgan \cite{Mo} or Thurston
+\cite{ThurstonIII} for details.
 
 First, a few simple propositions.
 
@@ -35,8 +36,8 @@ disks we can homotope f away from all of them.
 \begin{proof}
 
 Intuitively, $f$ is $\pi_1$-injective, so any loop where $S$ intersects $D$ is
-contractible in $D$, hence contractible in $S$. Then use irreducibility and an
-innermost disk argument.
+contractible in $D$, hence contractible in $S$. Then we can use irreducibility
+and an innermost disk argument.
 
 More precisely, we proceed as follows. Homotope $f$ locally so it's transverse
 to $D$. $D$ is compact and properly embedded, and $S$ is compact, so
@@ -46,7 +47,7 @@ $\alpha_1,\dots,\alpha_k$.  For each $\alpha_i$, $f(\alpha_i) \cin D$, so
 $f(\alpha_i)$ is homotopically trivial in $M$.  Since $f$ is $\pi_1$-injective,
 each $\alpha_i$ must be homotopically trivial in $S$.  Since $S$ is a closed
 surface, this means each $\alpha_i$ bounds a disk in $S$.  Choose an innermost
-such disk $D' \cin S$, that is, $D'$ is bounded by some $\alpha_i$ and doesn't
+such disk $D' \cin S$. That is, $D'$ is bounded by some $\alpha_i$ and doesn't
 contain any other $\alpha_j$ in its interior.
 
 Now construct a map $\phi \colon S^2 \to M$ as follows. The closed upper
@@ -70,13 +71,13 @@ We have a similar fact for the pared locus of a pared $3$-manifold.
 \begin{prop}\label{P:pared1}
 
 Let $(M,P)$ be a pared $3$-manifold where $M$ is compact orientable
-irreducible, and $D \cin M$ a compression disk for $\bd M$. Then we can isotope
-$P$ within $\bd M$ such that $P$ has minimal intersection with $\bd D$. In this
-minimal intersection, torus components of $P$ do not intersect $D$, and if we
-cut $M$ along $D$, all the resulting rectangles obtained by cutting annulus
-components of $P$ are essential --- that is, they're thickenings of essential
-curves in $\bd M - \bd D$.  We can perform a similar operation for any finite
-collection of disjoint compression disks.
+irreducible, and let $D \cin M$ be a compression disk for $\bd M$. Then we can
+isotope $P$ within $\bd M$ such that $P$ has minimal intersection with $\bd D$.
+In this minimal intersection, torus components of $P$ do not intersect $D$, and
+if we cut $M$ along $D$, all the resulting rectangles obtained by cutting
+annulus components of $P$ are essential --- that is, they're thickenings of
+essential curves in $\bd M - \bd D$.  We can perform a similar operation for
+any finite collection of disjoint compression disks.
 
 \end{prop}
 
@@ -103,24 +104,24 @@ completes the proof.
 \end{proof}
 
 We can reduce our main problem in the case where $M$ has compressible boundary.
-By \ref{P:avoiddisk}, any closed $\pi_1$-injective surface $S$ can be made to
-avoid any compression disks. This motivates the idea that we should try to find
-(QF) surfaces by decomposing along compression disks first, and then trying to
-find (QF) surfaces in the pieces of this decomposition. However, manifolds with
-incompressible boundary can still be quite complicated to study. In order to
-understand the problem better, we want another type of decomposition, along
-disjoint properly embedded essential annuli. We obtain the following similar
-results for a decomposition along annuli.
+By Proposition~\ref{P:avoiddisk}, any closed $\pi_1$-injective surface $S$ can
+be made to avoid any compression disks. This motivates the idea that we should
+try to find (QF) surfaces by decomposing along compression disks first, and
+then trying to find (QF) surfaces in the pieces of this decomposition. However,
+manifolds with incompressible boundary can still be quite complicated to study.
+In order to understand the problem better, we want another type of
+decomposition, along disjoint properly embedded essential annuli. We obtain the
+following similar results for a decomposition along annuli.
 
 \begin{prop}
 
-Let $M$ be compact orientable irreducible with incompressible boundary, and $f
-\colon S \to M$ be a $\pi_1$-injective map of a closed surface. Let $A \cin M$
-be a properly embedded annulus which is essential --- that is, incompressible
-and boundary incompressible in $M$. Then $f$ is homotopic to a map such that
-$f(S) \cap A$ is a union of multiples of the core curve of $A$, each of which
-pulls back to an essential curve in $S$.  For a disjoint union of annuli, we
-have the same result.
+Let $M$ be a compact orientable irreducible $3$-manifold with incompressible
+boundary, and let $f \colon S \to M$ be a $\pi_1$-injective map of a closed
+surface. Let $A \cin M$ be a properly embedded annulus which is essential ---
+that is, incompressible and boundary incompressible in $M$. Then $f$ is
+homotopic to a map such that $f(S) \cap A$ is a union of multiples of the core
+curve of $A$, each of which pulls back to an essential curve in $S$.  For
+a disjoint union of annuli, we have the same result.
 
 \end{prop}
 
@@ -134,11 +135,11 @@ correspond to a curve that's contractible in $S$ as well, by
 $\pi_1$-injectivity. These two contractions, each of which is a singular map of
 a disk into $M$, together induce a map $S^2 \to M$. Since $M$ is irreducible,
 it is aspherical. So this sphere is contractible, that is, there is a singular
-map $B^3 \to X$ filling it. Homotoping across this sphere, we can remove this
-intersection between $f(S)$ and $A$. These homotopies are all local, so don't
-affect any other intersections between $f(S)$ and $A$, or between $f(S)$ and
-other annuli. Therefore we can do this for all intersections between $f(S)$ and
-for a disjoint union of annuli. This completes the proof.
+map $B^3 \to X$ filling it. Homotoping across this ball, we can remove this
+intersection between $f(S)$ and $A$. These homotopies are all local, so they
+don't affect any other intersections between $f(S)$ and $A$, or between $f(S)$
+and other annuli. Therefore we can do this for all intersections between $f(S)$
+and a disjoint union of annuli. This completes the proof.
 
 \end{proof}
 
@@ -147,12 +148,12 @@ We also have a similar fact about the pared locus, but for annuli.
 \begin{prop}
 
 Let $(M,P)$ be a pared $3$-manifold where $M$ is compact oriented irreducible
-and $A \cin M$ is a properly embedded essential annulus. Then we can isotope
-$P$ within $\bd M$ such that $P$ has minimal intersection with $\bd A$.  In
-this minimal intersection, if we cut $M$ along $A$, all the resulting
-rectangles obtained by cutting annulus components of $P$ are essential.  We can
-perform a similar operation for any finite collection of disjoint properly
-embedded essential annuli.
+with incompressible boundary and $A \cin M$ is a properly embedded essential
+annulus.  Then we can isotope $P$ within $\bd M$ such that $P$ has minimal
+intersection with $\bd A$.  In this minimal intersection, if we cut $M$ along
+$A$, all the resulting rectangles obtained by cutting annulus components of $P$
+are essential.  We can perform a similar operation for any finite collection of
+disjoint properly embedded essential annuli.
 
 \end{prop}
 
@@ -175,7 +176,7 @@ $A^2 \to M$ is homotopic rel boundary into $\bd M$.
 Note that strictly speaking, balls have incompressible boundary and satisfy the
 acylindrical condition, but we will want to consider them as a separate case
 later in this chapter. We have the following key fact from the theory of JSJ
-decompositions.  Analogously to the Loop and Sphere Theorems, it allows us to
+decompositions.  Analogously to the loop and sphere theorems, it allows us to
 go from singular surfaces to embedded surfaces.
 
 \begin{thm}[Annulus theorem]
@@ -284,7 +285,7 @@ Assume $\bd M_{i-2}$ is incompressible in $M_0$. A compression disk $D$ for
 $\bd M_i$ intersects $\bd M_{i-2}$ in a union of disjoint simple closed curves
 in $D$. Any innermost disk $D'$ is a compression disk for $\bd M_{i-2}$ in
 $M_0$. Hence $\bd D'$ bounds a disk $D'' \cin \bd M_{i-2}$. By irreducibility,
-$D' \cap D''$ bounds a ball in $M_0$. Isotoping across this ball removes this
+$D' \cup D''$ bounds a ball in $M_0$. Isotoping across this ball removes this
 intersection of $D$ with $\bd M_{i-2}$. Repeating this process we find that $D$
 is disjoint from $\bd M_{i-2}$. But this implies $D \cin M_{i-2}$ (we know $\bd
 D \cin \bd M_i \cin M_{i-2}$. Since $\bd M_i$ is incompressible in $M_{i-2}$,
@@ -307,23 +308,23 @@ boundary parallel in $M_{i-2}$, contradicting the assumption that $A$ was
 essential in $M_{i-2}$.
 
 Now suppose there are cutting disks that essentially intersect $A_0$. Then it
-is immediately clear that $\bd M_i$ cannot be parallel to $\bd M_i$, as a curve
-following along one of the boundary components of $A$ (which induces one of the
-boundary components of $A_0$) cannot possibly be parallel to a closed curve in
-$\bd M_{i-2}$, as it'd have to cross the compression. This proves that $\bd
-M_i$ is not boundary parallel in $\bd M_{i-2}$.
+is immediately clear that $\bd M_i$ cannot be parallel to $\bd M_{i-2}$, as
+a curve following along one of the boundary components of $A$ (which induces
+one of the boundary components of $A_0$) cannot possibly be parallel to
+a closed curve in $\bd M_{i-2}$, as it'd have to cross the compression. This
+proves that $\bd M_i$ is not boundary parallel in $\bd M_{i-2}$.
 
-We now claim that in facs all of the $\bd M_i$ are pairwise nonparallel in
+We now claim that in fact all of the $\bd M_i$ are pairwise nonparallel in
 $M_0$.  Each is nonparallel to its neighbors in the sequence --- $\bd M_{i-2}$
 and $\bd M_{i+2}$.  If any two were parallel, because of the nesting, any
 parallelism homotopy between them would have to cause the surfaces in between
 to be parallel as well. This is impossible as we know a surface is not parallel
 to its neighbors in the sequence.
 
-This means that considering only the boundaries of odd terms in this
-alternating decomposition, we have a sequence of disjoint nonparallel
-incompressible surfaces in $M_0$. By Kneser--Haken finiteness, any such set of
-surfaces is finite. This completes the proof.
+This means that considering only the boundaries of odd terms in this JSJ
+hierarchy, we have a sequence of disjoint nonparallel incompressible surfaces
+in $M_0$. By Kneser--Haken finiteness, any such set of surfaces is finite. This
+completes the proof.
 
 \end{proof}
 
@@ -361,7 +362,7 @@ $\pi_1$-injectivity, this will induce a (QF) surface in $M$.
 
 We also believe that in \emph{most} cases with no acylindrical pieces (that is,
 manifolds where the bottom of the hierarchy is a union of balls), there should
-still be a (QF) surfaces. We hope the same book of $I$-bundles mapping argument
-should work in most cases. More work is needed.
+still be (QF) surfaces. We believe that the same book of $I$-bundles mapping
+argument should work in most cases. More work is needed.
 
 In the remainder of this paper, we address the case of books of $I$-bundles.
