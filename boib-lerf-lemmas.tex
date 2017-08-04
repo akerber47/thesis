@@ -10,10 +10,10 @@ topological constructions. These are standard definitions. See surveys by Agol
 \begin{defn}
 
 Let $G$ be a group. $G$ is \emph{residually finite}, or \emph{RF}, if for any
-$g \in G$, there exists a finite index subgroup $H<G$ such that $g \notin H$.
+$g \in G$, there exists a finite-index subgroup $H<G$ such that $g \notin H$.
 
 Let $G$ be a group, and $H$ a subgroup of $G$. $H$ is \emph{separable} in $G$
-if for any $g \in G$, $g \notin H$, there exists a finite index subgroup $H'<G$
+if for any $g \in G$, $g \notin H$, there exists a finite-index subgroup $H'<G$
 such that $H' \geq H$, and $g \notin H'$.
 
 $G$ is \emph{subgroup separable}, or \emph{LERF}, if all of its finitely
@@ -109,10 +109,10 @@ We apply Proposition~\ref{P:lerfmap}. Let $g = \alpha$ and $H = \pi_1Y \leq
 \pi_1X$.  By assumption, $H$ is finitely generated and $g \notin H$. Therefore
 there exists a map $\phi \colon G \to F$ such that $\phi(g) \notin \phi(H)$,
 where $F$ is a finite group.  Without loss of generality we can assume this map
-is surjective (take its image). Let $H' = ker \phi$. Now $H'$ is a finite index
-normal subgroup, so it induces a finite sheeted regular cover $p \colon X' \to
-X$.  Let $x_0'$ be an arbitrary lift of $x_0$ to $X'$. We claim that
-$(X',x_0')$ has the desired property.  $X'$ is a regular cover, so it has
+is surjective (take its image). Let $H' = \operatorname{ker} \phi$. Now $H'$ is
+a finite-index normal subgroup, so it induces a finite-sheeted regular cover $p
+\colon X' \to X$.  Let $x_0'$ be an arbitrary lift of $x_0$ to $X'$. We claim
+that $(X',x_0')$ has the desired property.  $X'$ is a regular cover, so it has
 covering transformation group $F$.  $F$ acts on the fiber $p^{-1}(x_0)$. We
 know that any loop $\gamma \cin X$ based at $x_0$ lifts to a loop $\gamma'$
 which starts at $x_0'$ and ends at $\phi(\gamma') \cdot x_0'$.  Since
@@ -128,9 +128,8 @@ Fix a basepoint $x_0 \in X$.  Suppose that $\alpha$ and $\beta$ are
 homotopically nontrivial loops at $x_0$ such that $\alpha$ is not homotopic
 (relative to the basepoint $x_0$) to a multiple of $\beta$.  Then there is
 a finite-sheeted regular cover $p \colon (X',x_0') \to (X,x_0)$ with the
-property that, when we consider the lift $\alpha'$ of $\alpha$ to $x_0'$ has
-its right endpoint at a point not reachable by lifting multiples of $\beta$ to
-$x_0'$.
+property that the lift $\alpha'$ of $\alpha$ to $x_0'$ has its right endpoint
+at a point not reachable by lifting multiples of $\beta$ to $x_0'$.
 
 \end{prop}
 
@@ -139,11 +138,11 @@ $x_0'$.
 Let $g = \alpha$ and $H = \langle\beta\rangle$. Since $\alpha$ is not homotopic
 to a multiple of $\beta$, $\alpha \notin H$. Apply Proposition~\ref{P:lerfmap}
 to find a map $\phi \colon G \to F$ such that $\phi(g) \notin \phi(H)$, where
-$F$ is a finite group.  Let $H' = ker \phi$, and $X'$ be the corresponding
-finite-sheeted regular cover of $X$. By the same argument as above, a lift
-$\alpha'$ of $\alpha$ to a lifted basepoint $x_0'$ cannot end at any point that
-is connected to $x_0'$ by a lift of a multiple of $\beta$. This completes the
-proof.
+$F$ is a finite group.  Let $H' = \operatorname{ker} \phi$, and $X'$ be the
+corresponding finite-sheeted regular cover of $X$. By the same argument as
+above, a lift $\alpha'$ of $\alpha$ to a lifted basepoint $x_0'$ cannot end at
+any point that is connected to $x_0'$ by a lift of a multiple of $\beta$. This
+completes the proof.
 
 \end{proof}
 
@@ -169,11 +168,11 @@ claim that $X'$ has the desired property. To see this, observe that $d$ is the
 smallest integer such that $\alpha^d$ lifts to a closed curve in $X'$. $C$ is
 a finite-sheeted cover of the loop $\alpha$, so it must be cyclic. Because $X'$
 is regular, this means $d$ is the smallest integer such that $\phi(\alpha)^d$
-is trivial, that is, the deck transformation induced by $\alpha$ has order $d$.
+is trivial. That is, the deck transformation induced by $\alpha$ has order $d$.
 
 We cannot have $d<k$, as $\phi(\alpha^d)=\phi(\alpha)^d=1 \in \phi(H)$
 contradicts the LERF assumption on $\phi$. Write $d = m_1k + m_2$, for some
-$m_1,m_2 \in Z, 0 \leq m_2 < k$.
+$m_1,m_2 \in \bZ, 0 \leq m_2 < k$.
 $\phi(\alpha^d)=1=\phi(\alpha^{m_1k})\phi(\alpha^{m_2})$.  That is,
 $\phi(\alpha^{m_2})=\phi(\alpha^k)^{-m_1}$. The right-hand side is in
 $\phi(H)$.  By the LERF assumption on $\phi$, this forces $m_2=0$. So $d \mid

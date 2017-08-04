@@ -8,10 +8,10 @@ detailed arguments are new, these are basic applications of standard
 ``cut-and-paste'' techniques in $3$-manifold topology. See Hempel \cite{He} or
 Jaco \cite{Ja}. Schultens \cite{Sch} is a gentler treatment.
 
-Recall that we are considering possible pared structures $P$ on $M$ a convex
+Recall that we are considering possible pared structures $P$ on $M$, a convex
 hyperbolic $3$-manifold. Our goal is to find a surface map $\phi \colon S \to
-M$ that is quasi-Fuchsian --- ie such that $S$ is a closed surface, $\phi$ is
-$\pi_1$-injective, and $\pi_1P_k \cap \phi_*(\pi_1S) = 1$ for each component
+M$ that is quasi-Fuchsian --- i.e., such that $S$ is a closed surface, $\phi$
+is $\pi_1$-injective, and $\pi_1P_k \cap \phi_*(\pi_1S) = 1$ for each component
 $P_k$ of $P$.
 
 Note that since we haven't fixed a basepoint, these subgroups are really only
@@ -69,8 +69,8 @@ in a circle so its top and bottom are identified, the spine becomes a solid
 torus.  If we also attach each page along its top and bottom, the pages become
 thickened annuli, attached to the spine at one end. This manifold can be built
 from the above construction. Take $\cC$ to be a single solid torus, and $\cB$
-to be a union of thickened annuli, one for each page of the book. Glue one
-gluing annulus of each component of $\cB$, and glue them all to parallel
+to be a union of thickened annuli, one for each page of the book. Choose one
+binding annulus for each component of $\cB$, and glue all these to parallel
 longitudinal annuli in $\bd \cC$.
 
 \begin{defn}
@@ -83,9 +83,6 @@ components of all pages are glued, that is, correspond to binding annuli in
 $M$.
 
 \end{defn}
-
-See Figures~\ref{F:page} and \ref{F:spine} for illustrations of a prototypical
-page and spine.
 
 % hax: two figures side by side. Captions line up by manually adjusting!
 \begin{figure}
@@ -104,8 +101,9 @@ page and spine.
     \end{minipage}
 \end{figure}
 
-For reasons we'll see later, the books of $I$-bundles that we want to consider
-should all be fully bound.
+See Figures~\ref{F:page} and \ref{F:spine} for illustrations of a prototypical
+page and spine. For reasons we'll see later, the books of $I$-bundles that we
+want to consider should all be fully bound.
 
 Algebraically, a book of $I$-bundles corresponds to a particularly simple graph
 of groups. The graph is bipartite, and one side of the partition (the spines)
@@ -113,7 +111,7 @@ are just copies of $\bZ$. The other side has noncyclic free groups,
 corresponding to surfaces of negative Euler characteristic. The edge groups are
 copies of $\bZ$ as well.
 
-Let's briefly explain why we impose the two conditions in
+Let us briefly explain why we impose the two conditions in
 Definition~\ref{D:boib}.  Obviously we want $M$ to be compact connected
 orientable hyperbolic, as this is the general case we're studying (Kleinian
 manifolds). If $M$ were nonorientable we could reduce to the orientable double
@@ -131,23 +129,22 @@ $\phi(\alpha)$ in $D$ yields a sphere map $S^2 \to M$. $M$ is irreducible,
 hence aspherical, so this map is homotopically trivial. Using one hemisphere of
 this homotopy, we can homotope $\phi(D')$ across $D$ to remove the intersection
 curve $\phi(\alpha)$. Repeating this process, we can assume that $\phi(S)$ is
-disjoint from $D$. This proves that any quasi-Fuchsian surfaces are essentially
+disjoint from $D$. This proves that any quasi-Fuchsian surface is essentially
 disjoint from compression disks.  Therefore, since we're interested in
 quasi-Fuchsian surfaces, we might as well compress as much as possible before
 looking for surfaces. This also follows from the similar discussion in Chapter
 3.
 
-Ignoring for the moment the degenerate case of a single page and no spine, each
-page's base surface must have at least one boundary component to glue to in
-order for $M$ to be connected. We don't want to consider base surfaces which
-are disks.  Observe that each page which is a disk means that that page and its
-attached spine form a $3$-manifold with a finite-sheeted cover by
-a $k$-puctured ball --- that is, a cover of a punctured lens space. This is
-because we can arrange things so that in the cover, the disk attaching map only
-traverses the longitude once, and we get a thickened disk.  This means that
-we'll have finite order summands in our group, which correspond to elliptic
-pieces, for instance lens spaces, in the JSJ decomposition. These cases are not
-hyperbolic.
+Ignoring for the moment the degenerate case of a single page and no spines,
+each page's base surface must have at least one boundary component to glue to
+in order for $M$ to be connected. We don't want to consider base surfaces which
+are disks.  If a page were a disk, this would cause that page and its attached
+spine to form a $3$-manifold with a finite-sheeted cover by a $k$-puctured ball
+--- that is, a cover of a punctured lens space. This is because we can arrange
+things so that in the cover, the disk attaching map only traverses the
+longitude once, and we get a thickened disk.  This means that we'll have finite
+order summands in our group, which correspond to elliptic pieces, for instance
+lens spaces, in the JSJ decomposition. These cases are not hyperbolic.
 
 Similarly, allowing annulus or Moebius strip base surfaces means that many
 books of $I$-bundles we build will not be hyperbolic. For instance, by chaining
@@ -163,7 +160,7 @@ page and no spines. Since $M$ is connected, this is the only case where $M$ can
 contain a page with closed base surface. In this case, the page's base surface
 obviously must have negative Euler characteristic in order for $M$ to be
 nonelementary hyperbolic. (Note that a thickened torus is realized by
-a Kleinian group, but this group must be elementary). Combining all these
+a Kleinian group, but this group must be elementary.) Combining all these
 cases, we only want to consider base surfaces with negative Euler
 characteristic.
 
@@ -171,15 +168,15 @@ We make the following simple observation.
 
 \begin{prop}
 
-Let $M$ be a book of $I$-bundles, and $M'$ to $M$ be a finite-sheeted covering
-space.  Then $M'$ is also a book of $I$-bundles.
+Let $M$ be a book of $I$-bundles, and let $M' \to M$ be a finite-sheeted
+covering space.  Then $M'$ is also a book of $I$-bundles.
 
 \end{prop}
 
 \begin{proof}
 
 This is straightforward. Lift the spines and pages of $M$ to obtain spines and
-pages of $M'$. Lift the gluing annuli of $M$ to gluing annuli of $M'$.
+pages of $M'$. Lift the binding annuli of $M$ to binding annuli of $M'$.
 
 \end{proof}
 
@@ -208,10 +205,8 @@ See Hempel \cite[Theorem 10.5]{He}.
 \end{proof}
 
 This fact reflects the origin of the book of $I$-bundles construction from
-a relative JSJ decomposition.
-
-To analyze the boundary components of a book of $I$-bundles, we'll need
-a couple more simple definitions.
+a relative JSJ decomposition. To analyze the boundary components of a book of
+$I$-bundles, we'll need a couple more simple definitions.
 
 \begin{defn}
 
@@ -221,9 +216,9 @@ that are contained in $\bd C$.
 
 Let $A$ be a binding annulus in $M$. Note that $A$ lies in the boundary of
 exactly one spine $C_A$. The \emph{degree} of $A$ is the geometric intersection
-number $i(A,D)$, where $D$ is a meridian disk of $C_A$. That is, it's the
-minimal number of components of $A \cap D$ as we properly isotope $D \cin C_A$
-and $A \cin \bd C_A$.
+number $i(A,D)$, where $D$ is a meridian disk of $C_A$. That is, the degree is
+the minimum number of components of $A \cap D$ under proper isotopy of $D \cin
+C_A$ and $A \cin \bd C_A$.
 
 In fact, note that all binding annuli in a given spine $C$ must have the same
 degree. This is because their core curves are curves on a torus, and any
@@ -238,7 +233,7 @@ refer to this as the \emph{degree} $d(C)$ of the spine $C$.
 
 Let $M$ be a book of $I$-bundles. Recall that we require that $M$ has
 incompressible boundary. Then $M$ cannot have any spines $C$ such that
-$v(C)=0$, $d(C)=0$, or $v(C)=d(C)=1$. Furthermore, $M$ must be fully glued ---
+$v(C)=0$, $d(C)=0$, or $v(C)=d(C)=1$. Furthermore, $M$ must be fully bound ---
 that is, it cannot have any leftover binding annuli of pages that are not
 attached to spines.
 
@@ -276,8 +271,8 @@ are very limited.  $C \cap \bd M$ is an annulus, and $\bd D$ divides it into
 two disk regions. $D' \cap C$ must be one of these two regions, which implies
 it intersects $\bd A$ in two parallel boundary arcs, each with one endpoint in
 $\delta_1$ and one in $\delta_2$.  Call these arcs $\epsilon_1$ and
-$\epsilon_2$.  But now we can see that the only way to bound a disk in $\bd M$
-is if $\gamma_1 \cup \epsilon_1$ and $\gamma_2 \cup \epsilon_2$ bounded a disk.
+$\epsilon_2$.  Now we can see that the only way to bound a disk in $\bd M$ is
+if $\gamma_1 \cup \epsilon_1$ and $\gamma_2 \cup \epsilon_2$ bounded a disk.
 But if this disk were inside $B$, either of these would project down to $\Si$
 to contradict the assumption that $\alpha$ was essential. $\bd D \cin B \cup
 C$, so if $D'$ essentially intersected any other spine or page it would have to
@@ -307,7 +302,7 @@ boundary pieces to the boundary of $M$. Each spine contributes a number of
 disjoint annuli equal to its valence, that is, the number of attached pages.
 These are the annuli in its boundary which lie in between the binding annuli.
 As these glue up to form the boundary components of $M$, each spine annulus
-connects two side boundaries of "adjacently glued" pages. This intuitive
+connects two side boundaries of ``adjacently glued'' pages. This intuitive
 picture will be very important later as we construct quasi-Fuchsian surfaces.
 
 The following basic property will be useful later.
@@ -345,7 +340,7 @@ $I$-bundles. First, we have the following proposition:
 
 Every book of $I$-bundles that we construct without violating
 Proposition~\ref{P:1ptcap} does in fact have incompressible boundary. (That is,
-our definitions are consistent).
+our definitions are consistent.)
 
 \end{prop}
 
@@ -493,8 +488,8 @@ can place $S$ in minimal position with respect to $M$ such that:
 \begin{enumerate}
 
 \item For each page $B$, $S \cap B$ is a finite-sheeted cover of the page's
-base surface (that is, to be more precise, the map $S|_{\phi^{-1}(B)} \to B \to
-\Si$ is a finite-sheeted cover).
+base surface (that is, to be more precise, the map $\phi^{-1}(B) \to B \to \Si$
+is a finite-sheeted cover).
 
 \item For each spine $C$, $S \cap C$ is a union of annuli parallel to multiples
 of the binding annuli in $\bd C$. The two boundary curves of each annulus lie
@@ -585,7 +580,7 @@ binding annuli.  This proves (2).
 
 To prove (3), look at the boundary curves of these annuli in the spines. Each
 boundary curve must be contained in a binding annulus $A \cin \bd C$. Therefore
-it must be a multiple of the cure curve of $A$. This proves the first statement
+it must be a multiple of the core curve of $A$. This proves the first statement
 in (3). The remainder of (3) follows directly from the fact that $S$ is
 a closed surface and that $M$ is a union of pages and spines along binding
 annuli.
@@ -615,7 +610,7 @@ a $\pi_1$-injective torus, and all pared locus components must be annuli.
 
 \end{proof}
 
-\begin{lemma}[Pared decomposition lemma]
+\begin{lemma}[Pared decomposition lemma]\label{L:pareddecomp}
 
 Let $(M,P)$ be a pared $3$-manifold, where $M$ is a book of $I$-bundles. Then we
 can isotope $P$ within $\bd M$ such that:
@@ -630,8 +625,7 @@ C$ along a thickened arc that is essential in that component of $\bd M \cap C$
 (the "intermediate annulus" between these two binding annuli). The annulus
 component, if any, is parallel to the binding annuli in $\bd C$.
 
-(3) For each binding annulus $A$, $P \cap A$ is a union of disjoint arcs in
-$\bd A$.
+(3) For each binding annulus $A$, $P \cap A$ is a union of points in $\bd A$.
 
 \end{lemma}
 
@@ -695,11 +689,11 @@ it satisfies the requirements of the surface decomposition lemma.
 \end{defn}
 
 Let $M$ be a book of $I$-bundles, and $S \to M$ be a $\pi_1$-injective map,
-where $S$ is a connected closed surface.  Place $S$ and $P$ in minimal position
-as above.  We have a constructive topological criterion for when $S$ is a (QF)
+where $S$ is a connected closed surface.  Place $S$ and $P$ in minimal
+position. We have a constructive topological criterion for when $S$ is a (QF)
 surface.
 
-Construct a "pared lifting pattern" on $S$ as follows. We build a pattern of
+Construct a ``pared lifting pattern'' on $S$ as follows. We build a pattern of
 arcs and curves on each component of $S \cap X$, where $X$ is a spine or page.
 For each page $B$, a component $S'$ of $S \cap B$ is a finite-sheeted cover of
 the base surface $\Si$ of $B$. The side boundary $\bd M \cap B$ is either two
@@ -714,17 +708,16 @@ For each spine $C$, a component $S'$ of $S \cap C$ is an immersed annulus
 parallel to a multiple of the binding annuli.  The two components of $\bd S'$
 lie on two distinct binding annuli. Now there may or may not be a component
 $A'$ of $\bd M \cap C$ with boundary components in these same two binding
-annuli.  (This is true when the two binding annuli are "adjacent" in $C$). If
+annuli.  (This is true when the two binding annuli are ``adjacent'' in $C$). If
 there is, we can homotope the boundary components of $S'$ to be multiples of
-the boundary components of $A'$, since they lie in the same boundary
-components.  This gives us a canonical covering map from $S'$ to $A'$. Begin by
-defining the pared lifting pattern on $S'$ to be the preimage of $P \cap A'$
-under this map. If there is no such component $A'$, define the pared lifting
-pattern to be empty.  Now, if there are any annulus components of $P \cap C$,
-these must be parallel to the binding annuli and contained in a component of
-$\bd M \cap C$.  Again, they have canonical preimages under the covering map
-from $S'$ to that component of $\bd M \cap C$. Add these to the pared lifting
-pattern for $S'$.
+the boundary components of $A'$, since they lie in the same binding annuli.
+This gives us a canonical covering map from $S'$ to $A'$. Begin by defining the
+pared lifting pattern on $S'$ to be the preimage of $P \cap A'$ under this map.
+If there is no such component $A'$, define the pared lifting pattern to be
+empty.  Now, if there are any annulus components of $P \cap C$, these must be
+parallel to the binding annuli and contained in a component of $\bd M \cap C$.
+Again, they have canonical preimages under the covering map from $S'$ to that
+component of $\bd M \cap C$. Add these to the pared lifting pattern for $S'$.
 
 We now construct the pared lifting pattern on $S$ by gluing these components of
 $S \cap X$ back together to form $S$. Whenever we glue, we guarantee that for
@@ -748,7 +741,7 @@ to obtain the original pared lifting pattern.
 
 We say that $S$ satisfies the \emph{pared lifting criterion} or \emph{parabolic
 lifting criterion} if the pared lifting pattern on $S$ contains no closed
-curves (equivalently, closed annuli if we view them as thickened).
+curves (equivalently, closed annuli, if we thicken them).
 
 \end{defn}
 
@@ -757,7 +750,7 @@ $P$, any $S$ that essentially intersects this page or spine will automatically
 fail the pared lifting criterion, because that will yield a closed curve in any
 overlapping pieces of $S$.
 
-\begin{theorem}[Pared/Parabolic lifting criterion]\label{T:lift}
+\begin{theorem}\label{T:lift}
 
 Let $M$ be a book of $I$-bundles, and $S \to M$ be a $\pi_1$-injective map,
 where $S$ is a connected closed surface.  Place $S$ and $P$ in minimal position
@@ -780,19 +773,20 @@ Now suppose that the pared lifting pattern contains no closed curves. We claim
 that $S$ is a (QF) surface. Suppose not. Let $\alpha$ be a multiple of the core
 curve of a component $P_0 \cin  P$ such that $\alpha$ is freely homotopic into
 $S$.  Homotope $\alpha$ into $S$. A priori $\alpha$ is no longer in minimal
-position with respect to the binding annuli. As we did with $P$, we can put now
+position with respect to the binding annuli. As we did with $P$, we can now put
 $\alpha$ into minimal position with respect to the binding annuli.  We claim
 that it's possible to homotope $\alpha$ to minimal position while keeping it
-within $S$.  To prove this, follow the procedure above to homotope $\alpha$ to
-minimal position.  $\alpha$ begins in $S$.  Since $S$ is transverse to $\cA$,
-we can obviously homotope $\alpha$ within $S$ to be transverse.  Observe that
-every homotopy of a part of $\alpha$ across a disk or annulus (as in the
-earlier proof of homotopy to minimal position), that same disk or annulus must
-be part of the local component of $S$ that this part of $\alpha$ is contained
-in.  We know this because we fully described the behavior of $S$ once we placed
-it in minimal position, in the surface decomposition lemma.  $S$ will locally
-cover any of the disks or annuli that we can homotope across, so the respective
-parts of $\alpha$ will have available parts of $S$ to homotope within.
+within $S$.  To prove this, follow the procedure in Lemma~\ref{L:pareddecomp}
+to homotope $\alpha$ to minimal position.  $\alpha$ begins in $S$.  Since $S$
+is transverse to $\cA$, we can obviously homotope $\alpha$ within $S$ to be
+transverse.  Observe that every homotopy of a part of $\alpha$ across a disk or
+annulus (as in the proof of Lemma~\ref{L:pareddecomp}), that same disk or
+annulus must be part of the local component of $S$ that this part of $\alpha$
+is contained in.  We know this because we fully described the behavior of $S$
+once we placed it in minimal position, in Lemma~\ref{L:sfcdecomp}.  $S$ will
+locally cover any of the disks or annuli that we can homotope across, so the
+respective parts of $\alpha$ will have available parts of $S$ to homotope
+within.
 
 So we can homotope $\alpha$ to minimal position within $S$. We now claim that
 we can choose this minimal position curve in $S$ to be (up to homotopy within
