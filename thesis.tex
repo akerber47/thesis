@@ -9,6 +9,7 @@
 \usepackage{hyperref}
 \usepackage{rotating}
 \usepackage{url}
+\usepackage{etoolbox}
 %\usepackage{biblatex}
 \usepackage{amsmath,amscd,amssymb,amsthm,amsfonts}
 
@@ -25,6 +26,15 @@
 % \usepackage{indentfirst}
 
 \input{commands}
+
+\newtoggle{paper}
+
+% Choose whether or not to include the "paper pages" (blank pages to force
+% certain pages to odd/even. I worked out where they go by hand, so it's
+% a bit messy...
+\togglefalse{paper}
+
+\newcommand{\paperpage}{\iftoggle{paper}{\newpage\null\thispagestyle{empty}\newpage}{}}
 
 \begin{document}
 
@@ -59,11 +69,17 @@
 \maketitle
 % Delete (or comment out) the \approvalpage line for the final version.
 %\approvalpage
+\paperpage
+
 \copyrightpage
+\paperpage
 
 \include{abstract}
+\paperpage
 
-\begin{frontmatter}
+\iftoggle{paper}{}{\begin{frontmatter}}
+
+\iftoggle{paper}{\thispagestyle{empty}}{}
 
 \begin{dedication}
 \null\vfil
@@ -72,6 +88,10 @@
 To Mommy and Daddy
 
 \end{center} \vfil\null \end{dedication}
+
+\paperpage
+
+\iftoggle{paper}{\begin{frontmatter}}{}
 
 % You can delete the \clearpage lines if you don't want these to start on
 % separate pages.
@@ -123,6 +143,8 @@ right way, and you were there for me when I needed you the most.
 Finally, thank you to Katharine, for everything. You're the best.
 
 \end{acknowledgements}
+
+\paperpage
 
 \end{frontmatter}
 
